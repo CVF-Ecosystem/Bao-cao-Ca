@@ -4,6 +4,7 @@
 - Bản 2: 2026-11-06, sửa theo [PHAN_BIEN_ROADMAP_SAU_V1_9.md](PHAN_BIEN_ROADMAP_SAU_V1_9.md) (Codex) và định hướng của chủ dự án về bản web.
 - Bản 2.1: 2026-11-06, sau khi làm Đợt 0: cập nhật trạng thái, **sửa một nhận định sai của bản 1** (lỗi `month`, xem mục 2) và thêm một lỗi mới tìm ra khi viết kiểm thử API (D1-1).
 - Bản 2.2: 2026-11-06, Codex điều phối/review, Terra 6.1 thực hiện D1-1…D1-3, Sol 6.1 Medium review phần khó và thực hiện D1-4. Kết quả/lệnh chạy: [BAO_CAO_CODEX_DOT1.md](BAO_CAO_CODEX_DOT1.md).
+- Bản 2.3: 2026-11-06, chốt yêu cầu bản in (Trưởng ca = Phụ trách chung, chỗ ký ở trang cuối), thêm danh sách **việc Codex kiểm chứng V1–V8**, ghi chú chuyển project vào CVF-Workspace (mục 10). Phản hồi người dùng thật: tính sau vì đang là bản MVP / protocol.
 
 Dùng file này làm cơ sở chia việc. Mỗi hạng mục có tiêu chí nghiệm thu; xong hạng mục nào thì đánh dấu và ghi số đo thật. Đợt 0 đã làm xong (chỉ thêm công cụ, tài liệu và kiểm thử; **chưa đổi mã trong `ma_nguon/` hay `giao_dien/`**).
 
@@ -181,7 +182,7 @@ Nguồn: [DANH_GIA_GIAO_DIEN_V1_9.md](DANH_GIA_GIAO_DIEN_V1_9.md) (đo và chạ
 | U3 | Chốt ca: kiểm tra điều kiện **trước** khi hỏi xác nhận và chuyển tới tab/ô còn thiếu; sửa câu "Chốt Ca ngày ngày". | Test JS: thiếu PHỤ TRÁCH CHUNG thì không hiện hộp xác nhận, chuyển sang tab Nhân sự; câu hỏi không lặp chữ |
 | U4 | Esc đóng hộp thoại; liên kết bỏ qua tới nội dung; phím tắt chuyển tab; hộp chọn tàu đưa con trỏ vào ô tìm. | Test JS: Esc đóng hộp; số lần Tab tới ô đầu tiên giảm rõ so với 22 |
 | U7 | Bỏ chữ "Phiên bản 1.9.0" cố định trong `giao_dien.html`. | Không còn chuỗi phiên bản cố định trong HTML |
-| U8 | Bản in: (a) ca thông thường (9 nhân sự, 6 công việc) vừa 1 trang; (b) dòng nhận diện ca, số trang "Trang x/y" và **ngày giờ in dạng `hh:mm dd/mm/yyyy`** ở lề mọi trang (lề trang CSS; JS gán biến lúc `beforeprint`, đã thử khả thi trên Chrome 156); (c) khối **chỗ ký Trưởng ca và Phụ trách chung** ở cuối báo cáo, không bị tách khỏi nội dung. Yêu cầu do chủ dự án chốt. | Xuất PDF ca mẫu: 1 trang, có chỗ ký; ca dài: mỗi trang có "ca/ngày · Trang x/y" và giờ in đúng giờ máy, chỗ ký ở trang cuối. Còn phải in thử ở hộp thoại in thật |
+| U8 | Bản in: (a) ca thông thường (9 nhân sự, 6 công việc) vừa 1 trang; (b) dòng nhận diện ca, số trang "Trang x/y" và **ngày giờ in dạng `hh:mm dd/mm/yyyy`** ở lề mọi trang (lề trang CSS; JS gán biến lúc `beforeprint`, đã thử khả thi trên Chrome 156); (c) **một khối chỗ ký "Trưởng ca (Phụ trách chung)" ở trang cuối**, tên in sẵn lấy từ vị trí PHỤ TRÁCH CHUNG của báo cáo (nhiều người thì mỗi người một ô ký), không bị tách khỏi nội dung. Yêu cầu do chủ dự án chốt. | Xuất PDF ca mẫu: 1 trang, có chỗ ký; ca dài: mỗi trang có "ca/ngày · Trang x/y" và giờ in đúng giờ máy, chỗ ký chỉ ở trang cuối. Kiểm chứng ở hộp thoại in thật: xem V1 |
 | U5 | Lịch sử sửa hiện khác biệt giữa hai phiên bản liền nhau. **Làm cùng Đợt 3.** | Ca đã chốt sửa 1 số liệu: lịch sử hiện đúng "trước → sau" |
 | U6 | Giải quyết xung đột: thêm lựa chọn giữ ghi chú đã gõ sau khi tải lại. Ưu tiên thấp, làm khi chạm vào. | — |
 | U9 | Danh sách tàu: thêm nút **Ẩn** từng tàu (hiện chỉ thêm được; tên tàu gõ sai trong báo cáo cũng tự vào danh sách và ở lại mãi). **Không đổi schema**: cột `ships.active` đã có. Cần một tuyến API mới. | Ẩn một tàu: biến khỏi hộp chọn, báo cáo cũ giữ tên; `API.md` và `KIEM_THU_API.py` cập nhật |
@@ -191,9 +192,26 @@ Nguồn: [DANH_GIA_GIAO_DIEN_V1_9.md](DANH_GIA_GIAO_DIEN_V1_9.md) (đo và chạ
 | U13 | Chữ giao diện xưng "anh" (3 chỗ) đổi sang cách nói trung tính. | Không còn "anh" trong chữ giao diện |
 | U14 | Thông báo nổi đặt ở góc dưới, đóng bằng một lần bấm (hiện che các nút phía trên trong 4,5–10 giây). | Thông báo không che nút thao tác |
 
-**Đã chốt (chủ dự án):** bản in có sẵn chỗ ký Trưởng ca và Phụ trách chung, và ngày giờ in dạng `hh:mm dd/mm/yyyy`. **Còn mở, không chặn việc làm:** "Trưởng ca" là ai (báo cáo hiện không có trường này; mặc định đề xuất in tên Phụ trách chung, để trống ô Trưởng ca cho ký tay), và chỗ ký chỉ ở trang cuối hay mọi trang. **Nên làm trước:** hỏi 1–2 người nhập ca thật để xếp lại thứ tự, và in thử một lần ra máy in thật (chưa kiểm chứng phần đầu/chân trang tự thêm của trình duyệt có chồng lên lề trang của ứng dụng không).
+**Đã chốt (chủ dự án, 2026-11-06):** bản in có sẵn chỗ ký và ngày giờ in dạng `hh:mm dd/mm/yyyy`. **"Trưởng ca" chính là người giữ vị trí PHỤ TRÁCH CHUNG**, nên bản in có một khối ký "Trưởng ca (Phụ trách chung)", **chỉ ở trang cuối**. **Phản hồi người dùng thật: tính sau** (đang là bản MVP / protocol), nên thứ tự ưu tiên U1–U14 hiện là nhận định kỹ thuật và không chặn việc làm.
 
-Phạm vi đánh giá đã phủ cả các màn hình phụ (tab Ảnh & biên bản, chọn tàu, danh sách tàu, mẫu phân công, bảo vệ dữ liệu, DB kiểm tra, đối chiếu bản bổ sung). Danh sách màn hình **vẫn chưa** đánh giá nằm ở mục 1 của tài liệu đánh giá giao diện.
+Phạm vi đánh giá đã phủ cả các màn hình phụ (tab Ảnh & biên bản, chọn tàu, danh sách tàu, mẫu phân công, bảo vệ dữ liệu, DB kiểm tra, đối chiếu bản bổ sung). Phần còn lại giao Codex kiểm chứng ở mục dưới.
+
+#### Việc Codex kiểm chứng (V1–V8)
+
+Đây là các phần **chưa được kiểm chứng** khi đánh giá giao diện ([DANH_GIA_GIAO_DIEN_V1_9.md](DANH_GIA_GIAO_DIEN_V1_9.md) mục 1). Chỉ **kiểm chứng và ghi nhận**, không sửa mã trong các việc này; chỗ nào phát hiện lỗi thì thêm hạng mục mới (U15 trở đi) vào tài liệu đánh giá. Quy tắc như [GIAO_VIEC_CODEX_DOT1.md](GIAO_VIEC_CODEX_DOT1.md) mục 0: chạy thật trên dữ liệu trong thư mục tạm, ghi lệnh và kết quả vào báo cáo, **không khẳng định điều chưa chạy được** (ghi "chưa kiểm chứng" và nêu lý do).
+
+| ID | Việc kiểm chứng | Cách làm | Kết quả cần ghi lại |
+|---|---|---|---|
+| V1 | **In ở hộp thoại in thật** (Chrome và Edge trên Windows) | Mở Xem / In một ca mẫu, in bằng nút "In / Lưu PDF" và bằng Ctrl+P; thử "Headers and footers" bật/tắt và "Background graphics" tắt (mặc định). In ra máy in nếu có, hoặc "Microsoft Print to PDF" qua hộp thoại thật. Chạy một lần trên bản in hiện tại làm mốc, và một lần sau khi làm U8. | Đầu/chân trang tự thêm của trình duyệt (URL `127.0.0.1:cổng`, ngày, số trang) có xuất hiện và có chồng lên lề trang CSS không; khổ giấy, giờ in đúng `hh:mm dd/mm/yyyy`, chỗ ký ở trang cuối. Lưu ảnh chụp hoặc PDF. Nếu không điều khiển được hộp thoại in (không có phiên có giao diện) thì ghi rõ "chưa kiểm chứng", **không suy từ PDF tạo bằng script** |
+| V2 | **"Nhập các ca đã chọn"** chạy đến cùng | Mở DB bổ sung bằng giao diện, chọn ca "Có thể nhập", bấm nhập | Ca vào DB chính; lịch sử của người kiểm tra giữ nguyên; có bản sao ở `TRUOC_KHI_NHAP_BO_SUNG`; ca "Xung đột" không bị ghi đè; thông báo kết quả đúng |
+| V3 | **"Bật chỉnh sửa / bổ sung"** và **"Xuất DB đã bổ sung"** qua giao diện | Từ chế độ chỉ xem: bật chỉnh sửa (nhập tên), sửa 1 ca kèm lý do, xuất DB đã bổ sung (không tạo bằng mã) | Tệp tải về nhập lại được ở V2; thông báo và nút ở mỗi bước đúng |
+| V4 | **"Sao lưu mang đi"** | Bấm ở menu Dữ liệu, tải tệp `.db`; thử cả DB cỡ `--profile vua` | Tên tệp; tệp mở được bằng "Mở DB kiểm tra"; thời gian chờ và giao diện có đứng không |
+| V5 | **"Xuất Excel cả tháng"** | Mở hộp chọn tháng, thử tháng có ca, tháng không có ca, tháng có cả ca nháp | Tệp XLSX tải về và mở được (Excel thật nếu có; nếu không, kiểm cấu trúc bằng thư viện và ghi rõ); thông báo ở tháng không có ca |
+| V6 | **"Tải tất cả tệp"** | Ca có tệp trùng tên, tên có ký tự đặc biệt, ca không có tệp | ZIP đúng số tệp, tên tệp, `GHI_CHU_DINH_KEM.txt`; thông báo khi ca không có tệp |
+| V7 | **"Lấy việc chưa xong từ ca trước"** | Ca trước có việc chưa xong, không có, và ca đầu tiên; bấm hai lần | Hành vi từng trường hợp; có trùng việc khi bấm hai lần không; hộp xác nhận đúng |
+| V8 | **Hiển thị khi dữ liệu lớn** | Dùng `cong_cu\DO_HIEU_NANG.py --profile lon` tạo dữ liệu; mở danh sách vài trăm báo cáo, tìm kiếm, tổng hợp một năm, tab Ảnh & biên bản với 40 tệp | Thời gian từ lúc bấm đến lúc hiện; phân trang và bộ lọc còn dùng được; giao diện có đứng không. Ghi số đo |
+
+V1 phần "sau khi làm U8" phụ thuộc U8; V2–V8 làm được ngay. Kết quả ghi thành "Lượt 3" trong [DANH_GIA_GIAO_DIEN_V1_9.md](DANH_GIA_GIAO_DIEN_V1_9.md), kèm danh sách hạng mục U mới nếu có.
 
 ### Đợt 2: Tối ưu sao lưu (dự kiến 1.9.2)
 
@@ -369,3 +387,21 @@ Mốc dung lượng ~3 GB chỉ là **tín hiệu để đo lại**, không ph�
 - Chưa chạy EXE Windows, hộp thoại tkinter, trình duyệt thật.
 - Chưa đọc các công cụ khác ở thư mục cha và dữ liệu thật trong `DU_LIEU/`.
 - Các yêu cầu pháp lý về dữ liệu cá nhân ở W0-1 cần bộ phận phụ trách của đơn vị xác nhận; tài liệu này không phải ý kiến pháp lý.
+
+
+## 10. Chuyển project vào CVF-Workspace
+
+Chủ dự án dự định chuyển project vào `D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace` để áp dụng chuẩn CVF. Đã thử và đọc mã để biết ảnh hưởng (2026-11-06):
+
+| Hạng mục | Ảnh hưởng khi đổi đường dẫn | Đã kiểm chứng |
+|---|---|---|
+| Dữ liệu `DU_LIEU` (DB, bản sao lưu) | Đi theo thư mục; nếu chuyển cả thư mục thì nguyên vẹn | Thử chuyển một project giả có 2 ca: khởi động ở vị trí mới, đủ 2 ca, thấy lại 2 bản sao cũ |
+| **Nơi dự phòng bên ngoài** | **Bị quên.** Tên `BAO_VE_DB_<mã>.json` và `KHOA_DB_<mã>.lock` lấy mã băm từ **đường dẫn tuyệt đối** của `DU_LIEU` ([BAO_VE_DU_LIEU.py](../ma_nguon/BAO_VE_DU_LIEU.py)). Đổi đường dẫn thì ứng dụng không thấy file cấu hình cũ, tạo file mới và báo "Chưa chọn nơi dự phòng bên ngoài" | Có: `external_directory` về rỗng, cảnh báo mức `info`, file cấu hình cũ còn nằm cạnh (vô hại, đừng xóa) |
+| Git | `.git` đi theo thư mục dự án; `CVF-Workspace` không phải kho git ở gốc nên không lồng kho. Dự án hiện không có remote | Đã kiểm tra |
+| EXE | `ROOT` lấy từ thư mục chứa EXE, không phụ thuộc đường dẫn cố định | Chỉ đọc mã, chưa chạy EXE ở vị trí mới |
+
+**Việc cần làm sau khi chuyển:** mở "Bảo vệ dữ liệu / Khôi phục", chọn lại thư mục dự phòng bên ngoài và bấm "Lưu nơi dự phòng"; kiểm tra "Bên ngoài" có thời gian thành công mới.
+
+**Chuẩn CVF chưa đọc.** `CVF-Workspace` có sẵn `AGENTS.md`, `AGENT_HANDOFF.md`, `CVF_WORKSPACE_MEMORY.md`, `CVF_RULE_PACKS`... Roadmap này chưa đối chiếu với các quy ước đó. Nên đọc chúng trước khi chuyển để biết project cần thêm hoặc đổi gì (vị trí tài liệu, quy ước bàn giao, nơi ghi bộ nhớ).
+
+**Bộ nhớ của trợ lý Claude không đi theo thư mục.** Bộ nhớ lưu theo **đường dẫn dự án**; đổi đường dẫn thì phiên mới bắt đầu với bộ nhớ trống. Các quyết định quan trọng đã nằm trong tài liệu của project (roadmap, `API.md`, đánh giá giao diện, `CATALOG_CAU_TRUC.md`), nên đi theo project.

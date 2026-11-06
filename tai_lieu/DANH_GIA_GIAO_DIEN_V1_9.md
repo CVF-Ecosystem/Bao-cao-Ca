@@ -9,8 +9,8 @@ Kết luận ngắn: **không cần làm lại giao diện và không cần đ�
 - Chạy máy chủ thật trên thư mục tạm với dữ liệu mẫu (14 ngày × 2 ca, có ca nháp, ca chốt, ca thiếu phụ trách chung), điều khiển Chrome bằng Playwright ở cỡ **1366×657** (vùng trình duyệt trên màn hình 1366×768). Không đụng vào `DU_LIEU` thật, không sửa mã.
 - Đã chạy thao tác thật: mở ca, đổi tab, mở hộp chọn người, gõ số sai, tạo xung đột hai cửa sổ, chốt ca thiếu phụ trách, xem lịch sử, xem tổng hợp, mở danh mục, tạo ca mới. Đã in thử bằng cách xuất PDF theo CSS in của ứng dụng (A4 ngang).
 - **Lượt 2 (cùng ngày) đã đánh giá thêm:** tab "Ảnh & biên bản" (tải 3 tệp thật: ảnh PNG, PDF, tệp nhị phân), hộp chọn người và chọn tàu, danh sách tàu, trình sửa mẫu phân công, hộp Bảo vệ dữ liệu và xem trước khôi phục, mở DB kiểm tra (chế độ chỉ xem), đối chiếu và so sánh bản bổ sung (tạo bản bổ sung có 1 ca nhập được và 1 ca xung đột).
-- **Vẫn chưa đánh giá:** bước "Nhập các ca đã chọn" chạy đến cùng; "Bật chỉnh sửa / bổ sung" và "Xuất DB đã bổ sung" qua giao diện (lượt 2 tạo bản bổ sung bằng mã); "Sao lưu mang đi"; hộp "Xuất Excel cả tháng"; "Tải tất cả tệp"; "Lấy việc chưa xong từ ca trước"; hiển thị khi dữ liệu rất lớn (hàng trăm báo cáo, 40 tệp trong một ca).
-- **Chưa kiểm chứng với người dùng thật.** Đây là điều quan trọng nhất còn thiếu: mức ưu tiên dưới đây là nhận định kỹ thuật, nên đối chiếu với 1–2 người nhập ca thật (bước nào mất thời gian nhất, chỗ nào hay nhập sai).
+- **Vẫn chưa đánh giá:** bước "Nhập các ca đã chọn" chạy đến cùng; "Bật chỉnh sửa / bổ sung" và "Xuất DB đã bổ sung" qua giao diện (lượt 2 tạo bản bổ sung bằng mã); "Sao lưu mang đi"; hộp "Xuất Excel cả tháng"; "Tải tất cả tệp"; "Lấy việc chưa xong từ ca trước"; hiển thị khi dữ liệu rất lớn (hàng trăm báo cáo, 40 tệp trong một ca). **Đã giao Codex kiểm chứng: V2–V8 trong roadmap.**
+- **Chưa lấy phản hồi người dùng thật: tính sau**, vì đang là bản MVP / protocol (chủ dự án quyết định 2026-11-06). Mức ưu tiên U1–U14 là nhận định kỹ thuật; khi có người dùng thật thì đối chiếu lại (bước nào mất thời gian nhất, chỗ nào hay nhập sai).
 - **Chưa in ra máy in thật**, chưa xem phần đầu/chân trang mà trình duyệt tự thêm.
 
 ## 2. Điểm tốt nên giữ
@@ -80,17 +80,15 @@ Khi hai cửa sổ cùng sửa một ca, giao diện báo rõ và giữ chữ đ
 
 **U8b. Từ trang 2 trở đi không có gì cho biết đây là ca nào.** Ca dài (24 dòng nhân sự, 30 công việc) in 5 trang; các trang sau chỉ có tiêu đề bảng, không có ngày/ca, không có số trang. Mục tiêu: dòng nhỏ lặp ở mỗi trang, ví dụ "Báo cáo ca đêm 06/11/2026 · Trang 2/5".
 
-**U8c. Chỗ ký tên và ngày giờ in (yêu cầu đã chốt, chủ dự án 2026-11-06).** Bản in phải có sẵn **chỗ ký của Trưởng ca và của Phụ trách chung**, và in **ngày giờ in theo dạng `hh:mm dd/mm/yyyy`** (24 giờ, ví dụ `22:50 06/11/2026`).
+**U8c. Chỗ ký tên và ngày giờ in (yêu cầu đã chốt, chủ dự án 2026-11-06).** Bản in phải có sẵn **chỗ ký**, và in **ngày giờ in theo dạng `hh:mm dd/mm/yyyy`** (24 giờ, ví dụ `22:50 06/11/2026`). Chủ dự án xác nhận **Trưởng ca chính là người giữ vị trí PHỤ TRÁCH CHUNG**: bản in có **một khối ký "Trưởng ca (Phụ trách chung)" chỉ ở trang cuối**, tên in sẵn lấy từ vị trí PHỤ TRÁCH CHUNG của báo cáo (nhiều người ở vị trí này thì mỗi người một ô ký).
 
 Cách làm đã thử khả thi trên Chrome 156 bằng PDF: dùng lề trang của CSS (`@page` với `@top-left`, `@bottom-left`, `@bottom-right`).
 - Số trang tự động: `"Trang " counter(page) "/" counter(pages)` hiện đúng ("Trang 2/4").
 - Ngày giờ in và dòng nhận diện ca: JS gán biến CSS trong sự kiện `beforeprint`, lề trang đọc `var(--in-luc)` và `var(--ca)`. Đã thử: kết quả đúng giờ máy lúc in, đúng định dạng yêu cầu, lặp ở **mọi trang**. Gán lúc `beforeprint` (không gán lúc mở bản xem trước) để Ctrl+P cũng ra giờ thật.
 - Khối chữ ký đặt ở cuối báo cáo, không bị tách rời khỏi nội dung (`break-inside: avoid`).
-- **Chưa kiểm chứng:** hộp thoại in thật. Chrome/Edge mặc định tự thêm đầu/chân trang riêng (URL, ngày); chưa biết có chồng lên lề trang của ứng dụng không. Cũng chưa thử trên phiên bản trình duyệt cũ hơn (lề trang cần trình duyệt Chrome/Edge đủ mới).
+- **Chưa kiểm chứng:** hộp thoại in thật. Chrome/Edge mặc định tự thêm đầu/chân trang riêng (URL, ngày); chưa biết có chồng lên lề trang của ứng dụng không. Cũng chưa thử trên phiên bản trình duyệt cũ hơn (lề trang cần trình duyệt Chrome/Edge đủ mới). **Đã giao Codex kiểm chứng: V1 trong roadmap.**
 
-Hai điểm còn mở, **không chặn việc làm** (có mặc định đề xuất):
-1. "Trưởng ca" là ai? Báo cáo hiện không có trường "trưởng ca" (danh mục vị trí có PHỤ TRÁCH CHUNG nhưng không có TRƯỞNG CA). Mặc định đề xuất: in tên Phụ trách chung (lấy từ báo cáo) dưới ô ký của Phụ trách chung; ô Trưởng ca để trống cho ký tay. Nếu Trưởng ca là người nhập (`actor`) thì in tên đó.
-2. Chỗ ký chỉ ở trang cuối (mặc định đề xuất) hay ở mọi trang.
+**Đã chốt, không còn câu hỏi mở:** Trưởng ca = Phụ trách chung; chỗ ký chỉ ở trang cuối. Còn lại là việc kiểm chứng ở hộp thoại in thật (V1 trong roadmap).
 
 ### U9 — Danh sách tàu chỉ thêm được, không sửa hay ẩn được (TB)
 
@@ -138,4 +136,4 @@ Thông báo hiện ở góc trên phải, che nút "Tải tất cả tệp" / "+
 | Cùng Đợt 3 | U5 và U11 | Chung một thành phần so sánh, phụ thuộc thiết kế bảng lịch sử mới |
 | Khi chạm vào | U6 | Ưu tiên thấp |
 
-Trước khi làm nên hỏi 1–2 người nhập ca thật để xếp lại thứ tự, và in thử một lần ra máy in thật để kiểm tra phần đầu/chân trang của trình duyệt có chồng lên lề trang của ứng dụng không.
+Phản hồi người dùng thật tính sau (bản MVP / protocol). Việc kiểm chứng còn lại (hộp thoại in thật, các màn hình chưa đánh giá) đã giao Codex: V1–V8 trong [roadmap](ROADMAP_SAU_V1_9.md).
