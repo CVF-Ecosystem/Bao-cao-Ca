@@ -10,7 +10,7 @@ const sandbox = {
   URLSearchParams, encodeURIComponent, setTimeout, clearTimeout,
 };
 vm.createContext(sandbox);
-vm.runInContext(fs.readFileSync(__dirname + '/tai_nguyen/ung_dung.js', 'utf8'), sandbox);
+vm.runInContext(fs.readFileSync(__dirname + '/../tai_nguyen/ung_dung.js', 'utf8'), sandbox);
 const run = code => vm.runInContext(code, sandbox);
 
 (async () => {

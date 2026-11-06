@@ -14,7 +14,7 @@ bản sao DB thật của 1.8.2 (3 báo cáo) bằng 1.9.0: không cần tiếp 
 4) Id báo cáo không còn được ghép vào chuỗi JavaScript trong onclick (dùng data-id).
 5) validate_templates không còn sửa dữ liệu đầu vào; việc thêm người của mẫu vào
    tổ nằm trong merge_team_members (trả về bản sao).
-6) CHAY_KIEM_THU.bat chạy cả Python lẫn các bộ KIEM_THU*.js; thiếu Node.js thì báo
+6) cong_cu\CHAY_KIEM_THU.bat chạy cả Python lẫn các bộ KIEM_THU*.js; thiếu Node.js thì báo
    rõ là giao diện chưa được kiểm thử thay vì im lặng.
 7) File nội bộ đọc/ghi đều chỉ định UTF-8.
 
@@ -29,7 +29,7 @@ bản sao DB thật của 1.8.2 (3 báo cáo) bằng 1.9.0: không cần tiếp 
 12) Bản sao danh mục (DANH_MUC/SAO_LUU) giữ 20 bản mới nhất.
 13) Nhật ký DU_LIEU/*.log xoay vòng khi quá 1 MB, giữ 3 bản cũ (.1 .2 .3).
 14) Thêm git (.gitignore bỏ DU_LIEU, DANH_MUC thực tế, khóa, cấu hình bảo vệ),
-    pyproject.toml cho ruff, và KIEM_THU_MA_NGUON.py (cú pháp + import thừa, chỉ
+    pyproject.toml cho ruff, và kiem_thu\KIEM_THU_MA_NGUON.py (cú pháp + import thừa, chỉ
     dùng thư viện chuẩn).
 
 KIỂM THỬ: 113 kiểm thử Python và 5 bộ JavaScript (Node VM) qua trên Windows. Đã
@@ -42,5 +42,5 @@ CHUYỂN TỪ 1.8.2 SANG 1.9.0
 - Khi thư mục đổi tên, file cấu hình BAO_VE_DB_*.json (đặt theo đường dẫn) là file
   mới: phải chọn lại thư mục dự phòng ngoài trong Bảo vệ dữ liệu / Khôi phục.
   Các bản sao đã có trong DU_LIEU/SAO_LUU_AN_TOAN được giữ.
-- Nếu dùng EXE: chạy TAO_FILE_EXE.bat để đóng gói lại.
+- Nếu dùng EXE: chạy cong_cu\TAO_FILE_EXE.bat để đóng gói lại.
 - Không chạy 1.8.2 và 1.9.0 cùng lúc trên cùng một DB.

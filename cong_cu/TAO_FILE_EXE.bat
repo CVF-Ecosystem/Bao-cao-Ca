@@ -1,6 +1,6 @@
 @echo off
 setlocal
-cd /d "%~dp0"
+cd /d "%~dp0.."
 echo Tao file EXE cho Windows. Buoc nay can Internet de cai PyInstaller neu chua co.
 echo Khong thay doi thu muc DU_LIEU.
 where py >nul 2>nul

@@ -1,6 +1,6 @@
 @echo off
 setlocal
-cd /d "%~dp0"
+cd /d "%~dp0.."
 set FAIL=0
 
 where py >nul 2>nul
@@ -18,7 +18,7 @@ if not errorlevel 1 (
 )
 
 echo === Kiem thu Python ===
-%PYTHON% -m unittest discover -p "KIEM_THU*.py" -v
+%PYTHON% -m unittest discover -s kiem_thu -t . -p "KIEM_THU*.py" -v
 if errorlevel 1 set FAIL=1
 
 echo.
@@ -29,7 +29,7 @@ if errorlevel 1 (
   echo Giao dien chua duoc kiem thu tren may nay.
   set FAIL=1
 ) else (
-  for %%f in (KIEM_THU*.js) do (
+  for %%f in (kiem_thu\KIEM_THU*.js) do (
     node "%%f"
     if errorlevel 1 (
       echo THAT BAI: %%f
