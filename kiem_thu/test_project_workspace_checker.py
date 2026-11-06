@@ -15,7 +15,16 @@ class CheckTests(unittest.TestCase):
     def setUpClass(cls):
         cls.actual = checker.run()
         assert cls.actual['status'] == 'COMPATIBLE_ASSESSED', cls.actual.get('error')
-        cls.output = cls.actual['legacyDoctor']['output']
+        cls.output = (ROOT / 'docs/reviews/activation-history/legacy-doctor-profile-schema.txt').read_text(encoding='utf-8-sig')
+
+    def test_assessed_packets_explicit_even_with_clean_git(self):
+        replies = [self.actual['activation'], self.actual['legacyDoctor'], self.actual['supplementalBootstrap']]
+        with patch.object(checker, 'invoke', side_effect=replies) as call:
+            self.assertEqual(checker.run()['status'], 'COMPATIBLE_ASSESSED')
+            args = call.call_args_list[-1].args[0]
+        receipt = json.loads((ROOT / '.cvf/workspace-activation.json').read_text(encoding='utf-8-sig'))
+        actual = [args[index + 1] for index, value in enumerate(args) if value == '--packet']
+        self.assertEqual(actual, [action['packet'] for action in receipt['actions']])
 
     def test_exact_legacy_and_variants(self):
         self.assertTrue(checker.legacy_compatible(self.output, 1))

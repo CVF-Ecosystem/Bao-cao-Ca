@@ -88,10 +88,15 @@ def run():
         report['legacyDoctor'] = invoke(['powershell', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', str(doctor), '-ProjectPath', str(ROOT)])
         if not legacy_compatible(report['legacyDoctor']['output'], report['legacyDoctor']['exitCode']):
             raise ValueError('Unexpected legacy doctor result; no compatibility disposition')
+        receipt = json.loads((ROOT / '.cvf/workspace-activation.json').read_text(encoding='utf-8-sig'))
+        packets = [action['packet'] for action in receipt['actions']]
+        if not packets or not all(isinstance(packet, str) and packet for packet in packets):
+            raise ValueError('Assessed action packets are missing')
+        packet_args = [arg for packet in packets for arg in ('--packet', packet)]
         bootstrap = invoke([sys.executable, '-B', str(runner), 'run', '--phase', 'bootstrap', '--project-root', str(ROOT),
                             '--trusted', '--expect-profile-sha256', expected['profileSha256'],
                             '--expect-runner-sha256', expected['runnerSha256'], '--expect-bundle-sha256', expected['bundleSha256'],
-                            '--no-receipt', '--json'])
+                            '--no-receipt', '--json'] + packet_args)
         report['supplementalBootstrap'] = bootstrap
         data = json.loads(bootstrap['output'])
         controls = data.get('results', [])
