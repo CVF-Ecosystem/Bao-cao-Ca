@@ -31,4 +31,4 @@ This acceptance is local mechanical development setup only. Application source a
 
 ## Commit disposition
 
-Material-SHA marker: pending final checked local governance commit.
+Material-SHA marker: 37c54af7fa6fd62339c26b786fa8bad27228bab9. Local governance material and evidence committed; this continuity record names the settled material commit.
