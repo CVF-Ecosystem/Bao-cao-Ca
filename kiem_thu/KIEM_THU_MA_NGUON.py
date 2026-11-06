@@ -5,7 +5,7 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCES = sorted(list(ROOT.glob('*.py')) + list(ROOT.glob('*.pyw')) + list((ROOT / 'kiem_thu').glob('*.py')))
+SOURCES = sorted(list(ROOT.glob('*.pyw')) + list((ROOT / 'ma_nguon').glob('*.py')) + list((ROOT / 'kiem_thu').glob('*.py')))
 
 
 def unused_imports(path):

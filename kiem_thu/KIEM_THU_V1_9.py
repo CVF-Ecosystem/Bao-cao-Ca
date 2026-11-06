@@ -138,6 +138,17 @@ class DeferredBackupTests(unittest.TestCase):
         self.assertFalse(app['backup_pending'])
 
 
+class ConsoleTests(unittest.TestCase):
+    def test_help_does_not_crash_on_a_legacy_windows_console_encoding(self):
+        import subprocess
+        import sys
+        script = Path(__file__).resolve().parent.parent / 'ma_nguon' / 'BAO_CAO_CA.py'
+        env = dict(os.environ, PYTHONIOENCODING='cp1252', PYTHONUTF8='0')
+        result = subprocess.run([sys.executable, str(script), '--help'], capture_output=True, env=env, timeout=30)
+        self.assertEqual(result.returncode, 0, result.stderr.decode('cp1252', 'replace'))
+        self.assertIn(b'--restore', result.stdout)
+
+
 class MaintenanceTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()

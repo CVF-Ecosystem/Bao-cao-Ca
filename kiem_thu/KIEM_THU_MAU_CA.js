@@ -4,9 +4,9 @@ const elements=new Map(),sessions=new Map();
 function el(id){if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',classList:{add(){},remove(){},toggle(){}}});return elements.get(id)}
 const sandbox={history:{replaceState(){}},window:{addEventListener(){}},document:{addEventListener(){},getElementById:el,querySelectorAll(){return []}},sessionStorage:{getItem:k=>sessions.get(k)||null,setItem:(k,v)=>sessions.set(k,v)},URLSearchParams,encodeURIComponent,setTimeout,clearTimeout};
 vm.createContext(sandbox);const run=code=>vm.runInContext(code,sandbox),copy=code=>JSON.parse(run('JSON.stringify('+code+')'));
-run(fs.readFileSync(__dirname+'/../tai_nguyen/ung_dung.js','utf8'));run('go=()=>{}');
-run(fs.readFileSync(__dirname+'/../tai_nguyen/phan_cong_mau.js','utf8'));
-run(fs.readFileSync(__dirname+'/../tai_nguyen/danh_muc.js','utf8'));
+run(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/ung_dung.js','utf8'));run('go=()=>{}');
+run(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/phan_cong_mau.js','utf8'));
+run(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/danh_muc.js','utf8'));
 function reset(){run(`info={context:'main',readonly:false,review:false,roles:['PHỤ TRÁCH CHUNG','GATE','TALLY TÀU'],teams:[{id:'team1',name:'Ca 1',people:['An']},{id:'team2',name:'Ca 2',people:['Bình']},{id:'team3',name:'Ca 3',people:[]}],staff_templates:{team1:[{role:'GATE',people:['An']}],team2:[{role:'GATE',people:['Bình']}],team3:[],day:[{role:'GATE',people:['Chi']}]}};
 report={date:'2026-11-05',shift:'DAY',status:'draft',actor:'An',staffing:[{role:'GATE',people:'Old'}],jobs:[],notes:'keep'};
 saving=false;uploading=false;conflict=false;pendingStaffPlan=null;collect=()=>{};renderStaff=()=>{};closeModal=()=>{};var touchCount=0;touch=()=>{touchCount++};var shown='';modal=html=>{shown=html};var messages=[];toast=s=>messages.push(s);error=e=>{throw e};`)}

@@ -15,7 +15,7 @@ from THIET_LAP import ASSETS
 from XUAT_EXCEL import REQUIRED_TEMPLATE_ROWS, Template, TemplateError
 
 NS = {'m': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
-TEMPLATE = ASSETS / 'MAU_BAO_CAO.xlsx'
+TEMPLATE = ASSETS / 'mau' / 'MAU_BAO_CAO.xlsx'
 
 
 def without_row(source, row_number, target):
@@ -53,8 +53,8 @@ class TemplateLayoutTests(unittest.TestCase):
 
     def test_missing_row_reaches_the_user_as_app_error(self):
         folder = self.root / 'assets_hong'
-        folder.mkdir()
-        without_row(TEMPLATE, 25, folder / 'MAU_BAO_CAO.xlsx')
+        (folder / 'mau').mkdir(parents=True)
+        without_row(TEMPLATE, 25, folder / 'mau' / 'MAU_BAO_CAO.xlsx')
         store = Store(self.root / 'DU_LIEU' / 'BAO_CAO_CA.db')
         report = store.save(self.report(), 0)
         with patch('BAO_CAO_EXCEL.ASSETS', folder), self.assertRaises(AppError) as raised:

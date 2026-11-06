@@ -67,6 +67,10 @@ def show_error(message):
 
 
 def main(argv=None):
+    # Console Windows cp1252 không in được tiếng Việt: thay ký tự lỗi thay vì dừng chương trình.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, 'reconfigure'):
+            stream.reconfigure(errors='replace')
     p = argparse.ArgumentParser()
     p.add_argument('--data-dir', default=str(ROOT / 'DU_LIEU'))
     p.add_argument('--no-browser', action='store_true')

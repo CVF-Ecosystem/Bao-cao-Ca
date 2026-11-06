@@ -102,7 +102,7 @@ def xlsx_bytes(tables):
 
 def styled_xlsx(tables, reports=None):
     from XUAT_EXCEL import export_workbook, TemplateError
-    template = ASSETS / 'MAU_BAO_CAO.xlsx'
+    template = ASSETS / 'mau' / 'MAU_BAO_CAO.xlsx'
     if not template.is_file():
         raise AppError('Thiếu MAU_BAO_CAO.xlsx. Chép đủ các file chương trình hoặc đóng gói EXE lại.')
     try:

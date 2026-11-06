@@ -3,7 +3,7 @@
 const assert=require('node:assert/strict'), fs=require('node:fs'), vm=require('node:vm');
 const sandbox={history:{replaceState(){}},window:{addEventListener(){}},document:{addEventListener(){},getElementById(){return {}}},URLSearchParams,encodeURIComponent,setTimeout,clearTimeout};
 vm.createContext(sandbox);
-vm.runInContext(fs.readFileSync(__dirname+'/../tai_nguyen/ung_dung.js','utf8'),sandbox);
+vm.runInContext(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/ung_dung.js','utf8'),sandbox);
 vm.runInContext(`
 info={context:'context-151',version:'1.5.1'}; report={id:'2026-11-02_DAY'}; dirty=false;
 var capturedURL=''; download=url=>{capturedURL=url};

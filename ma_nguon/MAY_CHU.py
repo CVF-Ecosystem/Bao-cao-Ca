@@ -93,7 +93,7 @@ class Handler(BaseHTTPRequestHandler):
         if u.path == '/' and secrets.compare_digest(q.get('launch', ''), self.app['token']):
             if self.headers.get('Host') != self.app['host']:
                 raise AppError('Địa chỉ truy cập không hợp lệ.', 403)
-            self.send_data((ASSETS / 'giao_dien.html').read_bytes(), 'text/html; charset=utf-8', cookie=True)
+            self.send_data((ASSETS / 'giao_dien' / 'giao_dien.html').read_bytes(), 'text/html; charset=utf-8', cookie=True)
             return
         self.authorize()
         store = self.app['store']
@@ -103,9 +103,9 @@ class Handler(BaseHTTPRequestHandler):
                   '/tai_nguyen/danh_muc.js': 'application/javascript; charset=utf-8',
                   '/tai_nguyen/phan_cong_mau.js': 'application/javascript; charset=utf-8'}
         if u.path in assets:
-            self.send_data((ASSETS / u.path.lstrip('/')).read_bytes(), assets[u.path])
+            self.send_data((ASSETS / 'giao_dien' / u.path.lstrip('/')).read_bytes(), assets[u.path])
         elif u.path == '/':
-            self.send_data((ASSETS / 'giao_dien.html').read_bytes(), 'text/html; charset=utf-8')
+            self.send_data((ASSETS / 'giao_dien' / 'giao_dien.html').read_bytes(), 'text/html; charset=utf-8')
         elif u.path == '/api/info':
             catalog = self.app['catalogs']
             data = catalog.sync() if store is self.app['main_store'] else catalog.snapshot(store)

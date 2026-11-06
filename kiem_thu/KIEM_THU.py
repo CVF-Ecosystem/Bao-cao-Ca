@@ -163,7 +163,7 @@ class Tests(unittest.TestCase):
         reports={tables[1][0]:self.store.get('2026-11-02_DAY'),tables[2][0]:self.store.get('2026-11-02_NIGHT')}
         output=styled_xlsx(tables,reports)
         n={'m':'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
-        with zipfile.ZipFile(io.BytesIO(output)) as z,zipfile.ZipFile(ASSETS/'MAU_BAO_CAO.xlsx') as original:
+        with zipfile.ZipFile(io.BytesIO(output)) as z,zipfile.ZipFile(ASSETS/'mau'/'MAU_BAO_CAO.xlsx') as original:
             for f in z.namelist():ET.fromstring(z.read(f))
             styles=ET.fromstring(z.read('xl/styles.xml'));old=ET.fromstring(original.read('xl/styles.xml'))
             for new_style,old_style in zip(styles.find('m:cellXfs',n),old.find('m:cellXfs',n)):

@@ -6,9 +6,9 @@ const element=id=>{if(!elements.has(id))elements.set(id,{value:'',textContent:''
 const sandbox={history:{replaceState(){}},window:{addEventListener(){}},document:{addEventListener(){},getElementById:element,querySelectorAll(){return []}},sessionStorage:{getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v)},URLSearchParams,encodeURIComponent,setTimeout,clearTimeout,confirm:()=>true};
 vm.createContext(sandbox);
 const run=code=>vm.runInContext(code,sandbox);
-run(fs.readFileSync(__dirname+'/../tai_nguyen/ung_dung.js','utf8'));
+run(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/ung_dung.js','utf8'));
 run('go=()=>{}'); // Do not trigger network startup when loading the directory functions.
-run(fs.readFileSync(__dirname+'/../tai_nguyen/danh_muc.js','utf8'));
+run(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/danh_muc.js','utf8'));
 run(`info={readonly:false,teams:[{id:'team1',name:'Ca 1',people:['An','Bình']},{id:'team2',name:'Ca 2',people:['Chi']},{id:'team3',name:'Ca 3',people:[]}],people:['An','Bình','Chi'],ships:['VESSEL A','VESSEL B','VESSEL C']};
  report={staffing:[{role:'TALLY TÀU',people:'An',ships:['VESSEL A']}],jobs:[]};
  var originalRenderStaff=renderStaff;collect=()=>{};renderStaff=()=>{};touch=()=>{};closeModal=()=>{};var messages=[];toast=(s)=>messages.push(s);

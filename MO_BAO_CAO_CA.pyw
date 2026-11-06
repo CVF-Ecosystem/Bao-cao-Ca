@@ -2,7 +2,11 @@
 """Bấm đúp để mở giao diện, không hiện cửa sổ CMD trên Windows."""
 import logging
 import sys
-import BAO_CAO_CA as app
+from pathlib import Path
+
+if not getattr(sys, 'frozen', False):
+    sys.path.insert(0, str(Path(__file__).resolve().parent / 'ma_nguon'))
+import BAO_CAO_CA as app  # noqa: E402
 
 if __name__ == '__main__':
     try:
