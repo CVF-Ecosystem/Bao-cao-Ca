@@ -6,7 +6,7 @@
   "completedCapabilities": [
     "Reviewed supplemental CVF profile1.4 installation",
     "Exact action-specific activation assessment",
-    "Fail-closed project compatibility doctor and five focused test groups",
+    "Fail-closed project compatibility doctor and six focused test groups with clean committed verification",
     "Project continuity, catalog and local learning intake"
   ],
   "activeWorkOrders": [],
@@ -19,7 +19,10 @@
   "evidence": [
     "docs/reviews/workspace-activation-review.md",
     "docs/reviews/activation-history/adapter-reviewed-full-flow.json",
-    "docs/reviews/activation-history/adapter-reviewed-tests.txt"
+    "docs/reviews/activation-history/adapter-reviewed-tests.txt",
+    "docs/reviews/workspace-activation-postcommit-review.md",
+    "docs/reviews/activation-history/clean-committed-full-flow.json",
+    "docs/reviews/activation-history/clean-committed-tests.txt"
   ],
-  "updatedAt": "2026-11-06"
+  "updatedAt": "2026-11-07"
 }

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "cvf.repairAttempt@1.0.0",
+  "milestoneId": "WSA",
+  "criterionIds": [
+    "WSA1",
+    "WSA2",
+    "WSA3",
+    "WSA4"
+  ],
+  "trancheId": "workspace-clean-committed-verified",
+  "activity": "REPAIR",
+  "result": "MET",
+  "proofState": "FULL_FLOW_VERIFIED",
+  "elapsedMinutes": "UNKNOWN",
+  "evidence": [
+    {
+      "path": "docs/reviews/activation-history/clean-committed-full-flow.json",
+      "sha256": "397ee478b073d6b9c6d1c8a0815e05d18ce0a2a7fff531a2db88835475d1c96b"
+    },
+    {
+      "path": "docs/reviews/activation-history/clean-committed-tests.txt",
+      "sha256": "41c9875353b31ed7b79211d256ebc882eb257cadd7285b6bddd9e3ac7f039416"
+    },
+    {
+      "path": "docs/reviews/workspace-activation-postcommit-review.md",
+      "sha256": "44bc553d2fbd3ba907793b9a1f36f5d4f536180ddddde535788e6c5a4593af4e"
+    }
+  ]
+}

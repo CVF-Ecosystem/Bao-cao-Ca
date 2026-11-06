@@ -15,9 +15,9 @@ Status: ACTIVE
 
 The authorized workspace setup is independently accepted against WSA1-WSA4. Core remains pinned at c4c8767ac8861854f40d466ba338ffd11eb9558e. Supplemental profile1.4, separate reviewed source/upgrade identity, exact action receipt, compatibility doctor, catalog and continuity are installed. Work order docs/work_orders/WO_WORKSPACE_ACTIVATION.md is a settled REVIEW record, not a pending implementation grant.
 
-Use `python -B scripts/check_project_workspace.py --json`; focused tests: `python -B -m unittest kiem_thu.test_project_workspace_checker -v`. The original public-Core doctor remains FAIL26/28 at the two explicitly reviewed version incompatibilities; project compatibility success is separate and requires all25 baseline checks, CONT, verified current bootstrap and assessed action. Any new failure or source/profile/policy drift blocks. Do not run repeated bootstrap to overwrite the reviewed bundle.
+Use `python -B scripts/check_project_workspace.py --json`; focused tests: `python -B -m unittest kiem_thu.test_project_workspace_checker -v`. The original public-Core doctor retains its reviewed version diagnostics (FAIL27/28 on a clean tree, or FAIL26/28 when the two setup documents enter discovery); project compatibility success is separate and requires all25 baseline checks, CONT, verified current bootstrap and assessed action. Any new failure or source/profile/policy drift blocks. Do not run repeated bootstrap to overwrite the reviewed bundle.
 
-Independent review: docs/reviews/workspace-activation-review.md; immutable positive/negative evidence and previous failures: docs/reviews/activation-history/. Five focused groups passed. Failed repair history is preserved, final local full-flow MET recorded, and resolved active audit cleared; historical cumulative time remains UNKNOWN. Prior active handoff and admitted packet snapshots are retained as text artifacts to avoid treating history as new dispatch or review.
+Independent review: docs/reviews/workspace-activation-review.md; immutable positive/negative evidence and previous failures: docs/reviews/activation-history/. Six focused groups passed, including the committed clean-tree regression. Failed repair history is preserved, final local full-flow MET recorded, and resolved active audit cleared; historical cumulative time remains UNKNOWN. Prior active handoff and admitted packet snapshots are retained as text artifacts to avoid treating history as new dispatch or review.
 
 ## Continuation
 
@@ -31,4 +31,8 @@ This acceptance is local mechanical development setup only. Application source a
 
 ## Commit disposition
 
-Material-SHA marker: 37c54af7fa6fd62339c26b786fa8bad27228bab9. Local governance material and evidence committed; this continuity record names the settled material commit.
+Material-SHA marker: 73c252a (final accepted adapter correction). Initial setup material: 37c54af7fa6fd62339c26b786fa8bad27228bab9. Clean committed source was independently reviewed and checked before this continuity update.
+
+## Post-commit acceptance 2026-11-07
+
+The initial adapter did not explicitly pass action packets after Git became clean; the observed N/A and original failure were preserved. Same-scope reviewer-local correction now passes all verified receipt packets to source bootstrap, keeping COV PASS required. Independent supplemental review: docs/reviews/workspace-activation-postcommit-review.md. Actual clean committed proof and six-test log: docs/reviews/activation-history/clean-committed-full-flow.json and clean-committed-tests.txt. Failed and successful projections appended without rewriting history; no pending action remains.

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "cvf.repairAttempt@1.0.0",
+  "milestoneId": "WSA",
+  "criterionIds": [
+    "WSA1",
+    "WSA2",
+    "WSA3",
+    "WSA4"
+  ],
+  "trancheId": "workspace-clean-tree-regression",
+  "activity": "REPAIR",
+  "result": "UNMET",
+  "proofState": "STATIC_FIX_VERIFIED",
+  "elapsedMinutes": "UNKNOWN",
+  "evidence": [
+    {
+      "path": "docs/reviews/activation-history/postcommit-unbound-bootstrap.json",
+      "sha256": "62376d7abb5419272f5d58a9a0bbe124b32edddc3f597c68e1f064dc63ae7798"
+    },
+    {
+      "path": "docs/reviews/workspace-activation-postcommit-review.md",
+      "sha256": "44bc553d2fbd3ba907793b9a1f36f5d4f536180ddddde535788e6c5a4593af4e"
+    }
+  ]
+}

@@ -48,3 +48,5 @@ Provider-local files may assist execution but are not project source authority.
 ## Accepted local setup
 
 Profile1.4 supplemental setup and project compatibility doctor are independently accepted. Use `python -B scripts/check_project_workspace.py --json`. See active handoff for action-specific receipt limits; future BUILD needs a new assessed action. Product authority remains tai_lieu/ROADMAP_SAU_V1_9.md. Read docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md before another profile/activation change.
+
+Final clean-tree acceptance (2026-11-07): six focused groups and explicit assessed-packet bootstrap pass at committed source73c252a; see postcommit review and clean-committed-full-flow proof in docs/reviews/. Historical failures remain preserved.

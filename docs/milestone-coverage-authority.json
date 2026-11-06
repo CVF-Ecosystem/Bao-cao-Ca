@@ -20,6 +20,14 @@
         {
           "path": "docs/reviews/activation-history/repair-attempt-3.json",
           "sha256": "79109d662756a5cb0a7b4670274451235c96813ef7e9c1a268848ed7f965e6e3"
+        },
+        {
+          "path": "docs/reviews/activation-history/repair-attempt-4.json",
+          "sha256": "4cb47fd1807cc3052e5374bdac1640eec4688a49cc908d4b08f5a0bad6cc2ab0"
+        },
+        {
+          "path": "docs/reviews/activation-history/repair-attempt-5.json",
+          "sha256": "fa4f65a442e0e09c58dbc93a2e3ec59d22d91b1dd11caef4c36c731e23541099"
         }
       ],
       "affectedCriteria": [
