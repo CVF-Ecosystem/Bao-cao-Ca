@@ -32,7 +32,7 @@ def int_param(query, name, default, low, high):
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = 'BaoCaoCa/1.0'
+    server_version = 'BaoCaoCa/' + VERSION
 
     def log_message(self, *_):
         pass

@@ -25,7 +25,7 @@ Cập nhật:
 Đã tái hiện Errno 9 ở code trước bằng kiểm thử mô phỏng fsync yêu cầu handle
 có quyền ghi; code sau sửa vượt qua kiểm thử này. Toàn bộ 93 kiểm thử Python
 qua. Đây là kiểm thử mô phỏng điều kiện Windows trên Linux, chưa phải chạy
-thực tế EXE Windows. Xem KET_QUA_KIEM_THU.txt.
+thực tế EXE Windows. Số kiểm thử hiện tại xem tai_lieu\THAY_DOI_V1_9.txt.
 
 ---------------- HƯỚNG DẪN TIẾP NHẬN VÀ SAO LƯU ----------------
 
@@ -104,11 +104,11 @@ C. KHÔI PHỤC
 D. GIỚI HẠN KIỂM TRA
 Đã chạy kiểm thử tự động trên môi trường Linux; chưa thao tác thực tế hộp
 thoại Windows, chưa đóng gói/chạy EXE Windows và chưa đo với DB hàng GB.
-Xem DANH_GIA_UNG_DUNG_V1_8_1.md và KET_QUA_KIEM_THU.txt trong gói.
+Xem tai_lieu\DANH_GIA_UNG_DUNG_V1_8_1.md trong gói.
 
 ---------------- HƯỚNG DẪN CÁC NGHIỆP VỤ ĐÃ CÓ ----------------
 
-SỔ BÁO CÁO CA 1.8 — 06/11/2026
+SỔ BÁO CÁO CA — NGHIỆP VỤ ĐÃ CÓ (viết theo 1.8; 1.9 đổi menu và tab nhập ca, xem tai_lieu\THAY_DOI_V1_9.txt)
 Phát triển bởi Mr Ân / Tân Thuận
 
 1. CẬP NHẬT — GIỮ NGUYÊN DB CŨ
@@ -197,9 +197,11 @@ Phát triển bởi Mr Ân / Tân Thuận
   container duy nhất.
 
 8. KIỂM THỬ VÀ GIỚI HẠN
-- CHAY_KIEM_THU.bat chạy 70 kiểm thử Python bằng dữ liệu tạm.
-- Nếu có Node.js: chạy KIEM_THU_GIAO_DIEN.js, KIEM_THU_PHAN_CONG.js và
-  KIEM_THU_MAU_CA.js. Không cần Node để sử dụng chương trình.
+- Cấu trúc mã nguồn, luồng dữ liệu và danh sách API: tai_lieu\CATALOG_CAU_TRUC.md.
+- CHAY_KIEM_THU.bat chạy 116 kiểm thử Python (9 file kiem_thu\KIEM_THU*.py) bằng dữ liệu tạm.
+  Kiểm chứng lần cuối 2026-11-06: 116 OK.
+- Nếu có Node.js: chạy thêm 5 bộ kiem_thu\KIEM_THU*.js (BAO_VE, GIAO_DIEN,
+  MAU_CA, PHAN_CONG, V1_9); kiểm chứng 2026-11-06: 5/5 OK. Không cần Node để sử dụng chương trình.
 - Đã kiểm tra DB thực sự được tạo bằng mã nguồn 1.6 mở trên 1.8, giữ
   báo cáo/lịch sử/tệp/nhân viên/tàu và schema. Bản chỉ xem giữ nguyên byte.
 - Chưa nghiệm thu Windows/EXE, hiển thị trình duyệt đồ họa hoặc in thực

@@ -100,7 +100,7 @@ class Store:
                 c.execute('SELECT id,day,shift,version,status,created_at,updated_at,actor,payload FROM reports LIMIT 1')
                 c.execute('SELECT report_id,version,saved_at,actor,reason,payload FROM revisions LIMIT 1')
         except (sqlite3.Error, ValueError, TypeError):
-            raise AppError('DB không đúng định dạng Sổ báo cáo ca 1.0 hoặc đã hỏng.')
+            raise AppError('DB không đúng định dạng Sổ báo cáo ca hoặc đã hỏng.')
 
     @staticmethod
     def decode(r):
@@ -253,7 +253,7 @@ class Store:
             raise AppError('Bản này đã cho phép chỉnh sửa.')
         # Only called on a copy created in DB_KIEM_TRA, never on the uploaded original.
         if not self.meta('database_id'):
-            raise AppError('DB từ bản 1.0 chưa có mã nguồn dữ liệu. Mở DB chính bằng bản 1.1 rồi Sao lưu mang đi lại trước khi bổ sung.')
+            raise AppError('DB từ bản rất cũ chưa có mã nguồn dữ liệu. Mở DB chính bằng bản Sổ báo cáo ca hiện tại rồi Sao lưu mang đi lại trước khi bổ sung.')
         writable = Store(self.path)
         reviewer = clean_text(reviewer, 100)
         if not reviewer:

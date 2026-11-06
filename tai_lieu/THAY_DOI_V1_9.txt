@@ -35,7 +35,10 @@ bản sao DB thật của 1.8.2 (3 báo cáo) bằng 1.9.0: không cần tiếp 
 ĐỢT 3 — CẤU TRÚC THƯ MỤC VÀ GIAO DIỆN (ứng dụng chưa triển khai nên đổi thẳng)
 15) Thư mục gọn: ma_nguon/ (module Python), giao_dien/ (HTML, JS, CSS), mau/ (file
     mẫu Excel, danh mục mặc định), kiem_thu/, tai_lieu/, cong_cu/. Thư mục gốc chỉ
-    còn MO_BAO_CAO_CA.pyw, KHOI_PHUC_DU_LIEU.pyw, CHAY_KIEM_TRA_LOI.bat, HUONG_DAN.txt.
+    còn MO_BAO_CAO_CA.pyw, KHOI_PHUC_DU_LIEU.pyw, CHAY_KIEM_TRA_LOI.bat, HUONG_DAN.txt
+    (file chạy và hướng dẫn). Thêm cấu hình repo/lint: .gitignore, .gitattributes, pyproject.toml.
+    File sinh ra khi chạy hoặc đóng gói, không đưa vào git: DU_LIEU, DANH_MUC (dữ liệu thật),
+    BAO_VE_DB_*.json, KHOA_DB_*.lock, SO_BAO_CAO_CA.exe, SO_BAO_CAO_CA.spec. Sơ đồ đầy đủ: tai_lieu\CATALOG_CAU_TRUC.md.
     DU_LIEU và DANH_MUC vẫn nằm cạnh file mở app. Lệnh đóng gói EXE đã đổi theo
     (--paths ma_nguon, giao_dien, mau) nhưng chưa chạy thử trên Windows thật.
 16) Menu trái gom 3 nhóm: hằng ngày (Tổng quan, Nhập ca mới, Xem báo cáo, Tổng hợp),
