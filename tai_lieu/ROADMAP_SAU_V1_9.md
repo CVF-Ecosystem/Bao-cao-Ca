@@ -179,13 +179,21 @@ Nguồn: [DANH_GIA_GIAO_DIEN_V1_9.md](DANH_GIA_GIAO_DIEN_V1_9.md) (đo và chạ
 | U1 | Gộp tiêu đề trang và thẻ thông tin ca thành một dải gọn; dải tab dính khi cuộn. Hiện ô nhập đầu tiên ở y = 704 px, ngoài vùng nhìn 657 px. | Đo lại ở 1366×657: ô nhập đầu tiên nằm trong vùng nhìn khi mở ca |
 | U2 | Ô số lượng sai: đánh dấu đỏ tại ô, chặn dấu thập phân, Tổng chỉ cộng giá trị hợp lệ, thông báo nêu tên công việc và cột. | Test JS: gõ `1.5` thì ô có `aria-invalid`, Tổng không đổi, thông báo nêu đúng dòng và cột |
 | U3 | Chốt ca: kiểm tra điều kiện **trước** khi hỏi xác nhận và chuyển tới tab/ô còn thiếu; sửa câu "Chốt Ca ngày ngày". | Test JS: thiếu PHỤ TRÁCH CHUNG thì không hiện hộp xác nhận, chuyển sang tab Nhân sự; câu hỏi không lặp chữ |
-| U4 | Esc đóng hộp thoại; liên kết bỏ qua tới nội dung; phím tắt chuyển tab. | Test JS: Esc đóng hộp; số lần Tab tới ô đầu tiên giảm rõ so với 22 |
+| U4 | Esc đóng hộp thoại; liên kết bỏ qua tới nội dung; phím tắt chuyển tab; hộp chọn tàu đưa con trỏ vào ô tìm. | Test JS: Esc đóng hộp; số lần Tab tới ô đầu tiên giảm rõ so với 22 |
 | U7 | Bỏ chữ "Phiên bản 1.9.0" cố định trong `giao_dien.html`. | Không còn chuỗi phiên bản cố định trong HTML |
-| U8 | Bản in: ca thông thường (9 nhân sự, 6 công việc) vừa 1 trang; dòng nhận diện ca và số trang lặp ở mỗi trang. | Xuất PDF ca mẫu: 1 trang; ca dài: mỗi trang có dòng "ca/ngày · Trang x/y" |
+| U8 | Bản in: (a) ca thông thường (9 nhân sự, 6 công việc) vừa 1 trang; (b) dòng nhận diện ca, số trang "Trang x/y" và **ngày giờ in dạng `hh:mm dd/mm/yyyy`** ở lề mọi trang (lề trang CSS; JS gán biến lúc `beforeprint`, đã thử khả thi trên Chrome 156); (c) khối **chỗ ký Trưởng ca và Phụ trách chung** ở cuối báo cáo, không bị tách khỏi nội dung. Yêu cầu do chủ dự án chốt. | Xuất PDF ca mẫu: 1 trang, có chỗ ký; ca dài: mỗi trang có "ca/ngày · Trang x/y" và giờ in đúng giờ máy, chỗ ký ở trang cuối. Còn phải in thử ở hộp thoại in thật |
 | U5 | Lịch sử sửa hiện khác biệt giữa hai phiên bản liền nhau. **Làm cùng Đợt 3.** | Ca đã chốt sửa 1 số liệu: lịch sử hiện đúng "trước → sau" |
 | U6 | Giải quyết xung đột: thêm lựa chọn giữ ghi chú đã gõ sau khi tải lại. Ưu tiên thấp, làm khi chạm vào. | — |
+| U9 | Danh sách tàu: thêm nút **Ẩn** từng tàu (hiện chỉ thêm được; tên tàu gõ sai trong báo cáo cũng tự vào danh sách và ở lại mãi). **Không đổi schema**: cột `ships.active` đã có. Cần một tuyến API mới. | Ẩn một tàu: biến khỏi hộp chọn, báo cáo cũ giữ tên; `API.md` và `KIEM_THU_API.py` cập nhật |
+| U10 | Hộp thoại dài (mẫu phân công cao 1307 px trong vùng nhìn 591 px; danh mục, bảo vệ dữ liệu): tiêu đề và hàng nút dính khi cuộn. | Đo lại: nút Lưu luôn trong vùng nhìn ở cả ba hộp |
+| U11 | So sánh bản bổ sung: tô nổi chỗ khác nhau, bỏ nút in/đóng dư thừa. **Làm cùng U5, chung một thành phần so sánh, cùng Đợt 3.** | Ca mẫu sửa 1 số liệu: hộp so sánh chỉ ra đúng chỗ đổi |
+| U12 | Xem trước khôi phục: hiện "Chưa có báo cáo nào" thay cho "Từ đến" trống khi bản sao 0 ca. | Test JS cho bản sao 0 ca |
+| U13 | Chữ giao diện xưng "anh" (3 chỗ) đổi sang cách nói trung tính. | Không còn "anh" trong chữ giao diện |
+| U14 | Thông báo nổi đặt ở góc dưới, đóng bằng một lần bấm (hiện che các nút phía trên trong 4,5–10 giây). | Thông báo không che nút thao tác |
 
-**Cần chủ dự án trả lời trước khi làm U8:** bản in có cần chỗ ký tên và ngày giờ in không. **Nên làm trước:** hỏi 1–2 người nhập ca thật để xếp lại thứ tự, và in thử một lần ra máy in thật (chưa kiểm chứng phần đầu/chân trang của trình duyệt).
+**Đã chốt (chủ dự án):** bản in có sẵn chỗ ký Trưởng ca và Phụ trách chung, và ngày giờ in dạng `hh:mm dd/mm/yyyy`. **Còn mở, không chặn việc làm:** "Trưởng ca" là ai (báo cáo hiện không có trường này; mặc định đề xuất in tên Phụ trách chung, để trống ô Trưởng ca cho ký tay), và chỗ ký chỉ ở trang cuối hay mọi trang. **Nên làm trước:** hỏi 1–2 người nhập ca thật để xếp lại thứ tự, và in thử một lần ra máy in thật (chưa kiểm chứng phần đầu/chân trang tự thêm của trình duyệt có chồng lên lề trang của ứng dụng không).
+
+Phạm vi đánh giá đã phủ cả các màn hình phụ (tab Ảnh & biên bản, chọn tàu, danh sách tàu, mẫu phân công, bảo vệ dữ liệu, DB kiểm tra, đối chiếu bản bổ sung). Danh sách màn hình **vẫn chưa** đánh giá nằm ở mục 1 của tài liệu đánh giá giao diện.
 
 ### Đợt 2: Tối ưu sao lưu (dự kiến 1.9.2)
 
@@ -349,7 +357,7 @@ Mốc dung lượng ~3 GB chỉ là **tín hiệu để đo lại**, không ph�
 |---|---|---|
 | 0 | D0-1…D0-4 (benchmark, K0, test hiện trạng) | Ngay |
 | 1 (1.9.1) | D1-1…D1-4 (bản vá ổn định) | Có baseline |
-| U (bản vá giao diện) | U1…U4, U7, U8 (U5 đi cùng Đợt 3; U6 khi chạm vào) | Chủ dự án trả lời câu hỏi chữ ký/ngày in; có thể xen kẽ Đợt 2 |
+| U (bản vá giao diện) | U1…U4, U7, U8, U10, U12…U14; U9 cần tuyến API mới; U5 và U11 đi cùng Đợt 3; U6 khi chạm vào | Yêu cầu bản in đã chốt; có thể xen kẽ Đợt 2 |
 | 2 (1.9.2) | D2-1 + K1/K2 phần sao lưu | Chính sách giữ bản đã thống nhất |
 | 3 (1.10) | D3-1, D3-2 + K1 phần lưu, K4 chừa cột | Ngữ nghĩa lịch sử đã thống nhất |
 | 4 (1.10.x) | D4-1…D4-3 (bảo trì dữ liệu) | Sau đợt 3 |
