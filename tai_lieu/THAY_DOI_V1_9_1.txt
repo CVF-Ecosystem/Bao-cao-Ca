@@ -1,0 +1,66 @@
+BẢN 1.9.1 — BẢN VÁ ỔN ĐỊNH, TRUY VẾT PHÁT HÀNH
+
+Ngày kiểm chứng: 2026-11-06. Phạm vi D1-1 đến D1-4 trong GIAO_VIEC_CODEX_DOT1.md.
+Giữ schema DB 3 và định dạng DB mang đi. Không giảm mức kiểm tra sao lưu,
+tiếp nhận hoặc khôi phục; không dọn DB kiểm tra, blob hay lịch sử.
+
+1) SỬA PHẢN HỒI HTTP KHI TỪ CHỐI REQUEST
+- Xả tối đa 4 MiB với hạn tổng 0,5 giây. Thân lớn hoặc Content-Length sai:
+  gửi/flush lỗi và đóng chiều ghi trước khi xả có giới hạn.
+- Kiểm thử Windows: 100 POST bị từ chối sớm nhận 403 JSON; thân 5 MiB
+  tới tuyến JSON nhận 400 JSON; GET có thân và độ dài sai có thân thật qua.
+- PUT/DELETE/HEAD giữ phản hồi 501 khi độ dài hợp lệ.
+
+2) KHỞI ĐỘNG BỎ KIỂM TRA TRÙNG
+- Chuyển kết quả kiểm tra đầy đủ cùng dấu DB/WAL/journal qua các bước.
+  Chỉ dùng lại khi dấu còn khớp; sau khôi phục/tiếp nhận kiểm tra lại.
+- Trường hợp ổn định: nguồn full một lần, snapshot đích full một lần,
+  tổng 2 inspect/3 quick_check thay vì 4 inspect/6 quick_check qua main.
+- SQLite có thể tạo WAL rỗng khi đọc: đúng trường hợp này cho phép full
+  lại một lần, phải ổn định sau đó; dữ liệu đổi khi quét thì báo dừng.
+- DB giả lập 125 MB: khởi động 3,1 s trước, 1,7 s sau D1-2; lượt cuối
+  1.9.1 đo 2,8 s. Điều kiện máy dao động; không cam kết mức giảm cố định.
+  Đối chiếu luân phiên ba cặp trên cùng DB: trung vị 3,797 -> 1,835 s,
+  giảm 51,7% (main thật, mock vòng phục vụ để tự thoát; chưa đo máy bãi).
+  Bảng và phép đối chiếu bổ sung: tai_lieu\BAO_CAO_CODEX_DOT1.md.
+
+3) KIỂM TRA DUNG LƯỢNG TRƯỚC SAO LƯU
+- Cần ceil(1,2 x max(DB+WAL, page_count x page_size)) byte tại đích.
+- Thiếu tại máy: báo rõ đích/cần/còn, giữ DB, bản sao cũ và mốc thành công,
+  không tạo snapshot dở, giữ trạng thái cần sao lưu lại.
+- Thiếu ở ngoài: giữ bản tại máy mới thành công và mốc ngoài cũ; cảnh báo error.
+- Có chặn trường hợp ổ đích biến mất để tránh vòng lặp tìm thư mục không dừng.
+- Dung lượng có thể đổi sau preflight; lỗi lúc ghi vẫn được xử lý như trước.
+
+4) TRUY VẾT PHÁT HÀNH VÀ KIỂM THỬ KHÓI
+- /api/info thêm build {commit, built_at UTC, version}; chân giao diện hiện mã build.
+- Chạy từ nguồn không có metadata ghi nguon; EXE thiếu/sai metadata ghi khong-ro.
+- TAO_FILE_EXE.bat gọi DONG_GOI.py: chặn Git bẩn/lỗi trước cài công cụ,
+  kiểm tra lại trước build; PHIEN_BAN.json chỉ sinh trong thư mục tạm để nhúng.
+- Launcher ghi log đúng --data-dir, trả exit code, --help an toàn cp1252;
+  --no-browser không mở hộp thoại lỗi.
+- KIEM_THU_KHOI.py thử launcher nguồn với dữ liệu tạm, info/cookie/build/log,
+  shutdown và thoát. EXE mới cần --exe <path> --commit <hash> --version 1.9.1.
+
+KIỂM CHỨNG
+- Sau D1-1: 10 lượt full liên tiếp, mỗi lượt 129/129 Python; 5 bộ JS qua.
+- Sau chốt VERSION 1.9.1: 3 lượt full liên tiếp, mỗi lượt 154/154 Python qua
+  (24,817 s; 27,059 s; 25,560 s), và 5/5 bộ JavaScript qua.
+- python -O cong_cu\KIEM_THU_KHOI.py qua: version=1.9.1, build=nguon.
+- Cổng Git bẩn đã thử, exit 1 đúng thông báo; cú pháp/import công cụ và
+  git diff --check qua. Lệnh/kết quả, kể cả lỗi lúc phát triển, nằm trong báo cáo.
+- Không đọc/ghi dữ liệu vận hành; mọi DB và cấu hình thử ở thư mục tạm.
+
+GIỚI HẠN
+- Chưa build/chạy EXE 1.9.1: cây Git đang có thay đổi chưa commit, bị chặn đúng.
+- Chưa thử ổ HDD/máy bãi, DB gần 1 GB, hộp thoại tkinter, trình duyệt thật
+  hoặc mở/in Excel thật trong đợt này. Không suy rộng test 5 MiB thành bảo đảm
+  client nhận JSON cho mọi request 100 MiB/8 GiB; việc xả có trần chủ đích.
+- Không làm CI, bản web, gộp lịch sử, giảm mức kiểm tra hay dọn dữ liệu.
+
+CẬP NHẬT TỪ 1.9.0
+- Bấm Thoát tool trong tab cũ trước khi mở mã 1.9.1. Nếu tiến trình nền còn
+  phiên bản khác, running_session báo yêu cầu thoát bản cũ; không xóa DB/khóa.
+- Giữ nguyên DU_LIEU, DANH_MUC và BAO_VE_DB_*.json. Bản này không nâng schema.
+- Dùng MO_BAO_CAO_CA.pyw với Python; EXE cũ vẫn là mã cũ. Sau khi mã được commit
+  và cây Git sạch mới build lại, rồi kiểm thử khói EXE với đúng mã commit.

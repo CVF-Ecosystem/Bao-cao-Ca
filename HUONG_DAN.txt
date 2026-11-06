@@ -1,6 +1,16 @@
-BẢN 1.9.0 — XEM tai_lieu\THAY_DOI_V1_9.txt
+BẢN 1.9.1 — XEM tai_lieu\THAY_DOI_V1_9_1.txt
 
-Thư mục này là bản sạch (không kèm DU_LIEU, DANH_MUC thực tế). Mã chương trình nằm trong
+Khởi động bỏ các lượt kiểm tra DB trùng, giữ nguyên kiểm tra đầy đủ khi sao lưu.
+Sửa trả lỗi HTTP khi request bị từ chối sớm; kiểm tra dung lượng trước sao lưu.
+Phiên bản có thêm mã build; đóng gói từ chối khi cây Git còn thay đổi chưa commit.
+Chi tiết lệnh và số đo: tai_lieu\BAO_CAO_CODEX_DOT1.md.
+
+Trước cập nhật: bấm Thoát tool trong tab cũ. Nếu tiến trình 1.9.0 còn chạy,
+1.9.1 sẽ báo yêu cầu thoát bản cũ. Giữ nguyên DU_LIEU, DANH_MUC, cấu hình bảo vệ
+và khóa DB. Schema vẫn là 3. EXE cũ không tự dùng mã mới; dùng MO_BAO_CAO_CA.pyw
+với Python hoặc build lại sau khi cây Git đã sạch. EXE 1.9.1 chưa được nghiệm thu.
+
+Mã chương trình nằm trong
 ma_nguon/, giao diện trong giao_dien/, file mẫu trong mau/; bấm đúp MO_BAO_CAO_CA.pyw để mở. Để dùng với dữ liệu hiện có,
 chép DU_LIEU và DANH_MUC từ bản cũ vào đây, mở MO_BAO_CAO_CA.pyw, rồi chọn lại thư mục
 dự phòng ngoài. Chạy cong_cu\CHAY_KIEM_THU.bat để kiểm thử (cần Python 3.9+; có Node.js để
@@ -25,7 +35,7 @@ Cập nhật:
 Đã tái hiện Errno 9 ở code trước bằng kiểm thử mô phỏng fsync yêu cầu handle
 có quyền ghi; code sau sửa vượt qua kiểm thử này. Toàn bộ 93 kiểm thử Python
 qua. Đây là kiểm thử mô phỏng điều kiện Windows trên Linux, chưa phải chạy
-thực tế EXE Windows. Số kiểm thử hiện tại xem tai_lieu\THAY_DOI_V1_9.txt.
+thực tế EXE Windows. Số kiểm thử hiện tại xem tai_lieu\THAY_DOI_V1_9_1.txt.
 
 ---------------- HƯỚNG DẪN TIẾP NHẬN VÀ SAO LƯU ----------------
 
@@ -198,14 +208,21 @@ Phát triển bởi Mr Ân / Tân Thuận
 
 8. KIỂM THỬ VÀ GIỚI HẠN
 - Cấu trúc mã nguồn, luồng dữ liệu và danh sách API: tai_lieu\CATALOG_CAU_TRUC.md.
-- CHAY_KIEM_THU.bat chạy 116 kiểm thử Python (9 file kiem_thu\KIEM_THU*.py) bằng dữ liệu tạm.
-  Kiểm chứng lần cuối 2026-11-06: 116 OK.
+- CHAY_KIEM_THU.bat chạy 154 kiểm thử Python (13 file kiem_thu\KIEM_THU*.py) bằng dữ liệu tạm.
+  Kiểm chứng 1.9.1 ngày 2026-11-06: 3 lượt liên tiếp 154/154 OK trên Windows.
+  Kết quả từng lần chạy: tai_lieu\BAO_CAO_CODEX_DOT1.md.
+- Hợp đồng API: tai_lieu\API.md. Đo hiệu năng trên DB giả lập: python cong_cu\DO_HIEU_NANG.py
+  (chỉ dùng thư mục tạm, không chạm DU_LIEU).
 - Nếu có Node.js: chạy thêm 5 bộ kiem_thu\KIEM_THU*.js (BAO_VE, GIAO_DIEN,
   MAU_CA, PHAN_CONG, V1_9); kiểm chứng 2026-11-06: 5/5 OK. Không cần Node để sử dụng chương trình.
 - Đã kiểm tra DB thực sự được tạo bằng mã nguồn 1.6 mở trên 1.8, giữ
   báo cáo/lịch sử/tệp/nhân viên/tàu và schema. Bản chỉ xem giữ nguyên byte.
-- Chưa nghiệm thu Windows/EXE, hiển thị trình duyệt đồ họa hoặc in thực
-  tế bằng Microsoft Excel; chưa có DB sản xuất thật của anh để đối chiếu.
+- Đã chạy kiểm thử tự động và launcher mã nguồn trên Windows. Chưa nghiệm thu
+  EXE 1.9.1, hộp thoại tkinter, hiển thị trình duyệt đồ họa hoặc in thực tế
+  bằng Microsoft Excel trong đợt này; không đọc DB vận hành để đối chiếu.
+- Kiểm thử khói nguồn: python cong_cu\KIEM_THU_KHOI.py (tự tạo/xóa thư mục tạm).
+  Với EXE mới đã build: python cong_cu\KIEM_THU_KHOI.py --exe <duong_dan_exe>
+  --commit <ma_Git_12_ky_tu> --version 1.9.1. Không dùng EXE cũ để thử mã mới.
 - Khi phục hồi: tắt tool và khôi phục chương trình từ bản dự phòng.
   Giữ riêng DB mới nhất, tránh ghi đè bằng DB sao lưu cũ gây mất lần nhập
   sau mốc sao lưu. Bản này không nâng schema DB.

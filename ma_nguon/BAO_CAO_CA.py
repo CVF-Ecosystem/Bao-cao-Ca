@@ -66,8 +66,8 @@ def show_error(message):
             ctypes.windll.user32.MessageBoxW(None, message, 'Sổ báo cáo ca', 16)
 
 
-def main(argv=None):
-    # Console Windows cp1252 không in được tiếng Việt: thay ký tự lỗi thay vì dừng chương trình.
+def parse_args(argv=None):
+    # Launcher cũng parse trước khi mở log; --help phải an toàn trên console cp1252.
     for stream in (sys.stdout, sys.stderr):
         if hasattr(stream, 'reconfigure'):
             stream.reconfigure(errors='replace')
@@ -76,7 +76,11 @@ def main(argv=None):
     p.add_argument('--no-browser', action='store_true')
     p.add_argument('--quiet', action='store_true')
     p.add_argument('--restore', action='store_true', help='Chọn bản sao để khôi phục trước khi mở ứng dụng')
-    args = p.parse_args(argv)
+    return p.parse_args(argv)
+
+
+def main(argv=None):
+    args = parse_args(argv)
     try:
         existing = running_session(args.data_dir)
         if existing:
@@ -89,19 +93,24 @@ def main(argv=None):
             if not recovery_dialog(args.data_dir):
                 return 1
         try:
-            Protection(args.data_dir).guard_startup()
+            protection = Protection(args.data_dir)
+            startup_check = protection.guard_startup()
         except Exception as e:
             if args.no_browser or not recovery_dialog(args.data_dir, str(e)):
                 raise
-        if Protection(args.data_dir).needs_adoption():
+            protection = Protection(args.data_dir)
+            startup_check = protection.guard_startup()
+        if protection.needs_adoption(startup_check):
             if args.no_browser:
                 raise AppError('DB vừa chép vào khác nguồn. Mở MO_BAO_CAO_CA.pyw để xác nhận Tiếp nhận DB đang có.')
             if not adoption_dialog(args.data_dir):
                 return 1
-        server = make_server(args.data_dir)
+            protection = Protection(args.data_dir)
+            startup_check = protection.guard_startup()
+        server = make_server(args.data_dir, startup_check=startup_check)
     except Exception as e:
         logging.exception('Khong mo duoc tool')
-        if args.quiet:
+        if args.quiet and not args.no_browser:
             show_error('Không mở được tool: ' + str(e) + '\nXem LOI_CHUONG_TRINH.log trong thư mục DU_LIEU.')
         else:
             print('Khong mo duoc tool:', e)

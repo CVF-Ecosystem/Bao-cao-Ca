@@ -1,8 +1,9 @@
-# Catalog cấu trúc — Sổ báo cáo ca 1.9.0
+# Catalog cấu trúc — Sổ báo cáo ca 1.9.1
 
 Dành cho agent/người mới đọc để nắm dự án nhanh. Đọc file này trước khi sửa mã.
 
 - Quét lần 1: 2026-11-06, commit `d14d902`.
+- Cập nhật 1.9.1: 2026-11-06, D1-1…D1-4; xem [BAO_CAO_CODEX_DOT1.md](BAO_CAO_CODEX_DOT1.md) để biết số đo, kiểm thử và giới hạn. Chưa phát hành EXE mới.
 - Phạm vi đã đọc toàn bộ: `ma_nguon/*.py`, `giao_dien/giao_dien.html`, `giao_dien/tai_nguyen/*.js`, `kiem_thu/*`, `cong_cu/*.bat`, `MO_BAO_CAO_CA.pyw`, `KHOI_PHUC_DU_LIEU.pyw`, `SO_BAO_CAO_CA.spec`, `pyproject.toml`, `.gitignore`, `tai_lieu/THAY_DOI_V1_9.txt`, `HUONG_DAN.txt`.
 - Chưa đọc chi tiết: `giao_dien/tai_nguyen/style.css` (81 dòng), `tai_lieu/` các bản 1.7–1.8.2 và `DANH_GIA_UNG_DUNG_V1_8_1.md`, nội dung `mau/MAU_BAO_CAO.xlsx` (chỉ biết có `sheet1`), dữ liệu trong `DU_LIEU/`.
 
@@ -33,19 +34,19 @@ BAO_CAO_CA         ← THIET_LAP, NGHIEP_VU, MAY_CHU, BAO_VE_DU_LIEU   (điểm 
 
 | File | Dòng | Vai trò | Hàm/lớp chính |
 |---|---|---|---|
-| `THIET_LAP.py` | 21 | Hằng số: `VERSION='1.9.0'`, giới hạn file (100 MB) và DB (8 GB), `ROOT`, múi giờ, `KEYS = f20,f40,e20,e40`. Nạp danh mục mặc định từ `mau/DANH_MUC_MAU/` | `PEOPLE, ROLES, JOBS, SHIPS` |
+| `THIET_LAP.py` | 42 | Hằng số: `VERSION='1.9.1'`, giới hạn file (100 MB) và DB (8 GB), `ROOT`, múi giờ, `KEYS = f20,f40,e20,e40`. Nạp danh mục mặc định và metadata build | `PEOPLE, ROLES, JOBS, SHIPS`, `build_info` |
 | `NGHIEP_VU.py` | 172 | Nghiệp vụ dùng chung: gợi ý ca theo giờ (`suggest`, ca ngày 06–18), làm sạch chữ, nhận dạng loại tệp (PNG/JPEG/WEBP/HEIC/PDF, còn lại là nhị phân), chuẩn hóa báo cáo, lỗi nghiệp vụ | `AppError`, `normalize`, `clean_text`, `file_type`, `ship_names`, `report_ships`, `chief_people`, `ClosingConnection`, `database_error` |
 | `LUU_TRU.py` | 400 | **Lớp dữ liệu.** Tạo/nâng schema, đọc/ghi báo cáo, lịch sử, tệp đính kèm, tàu, người; đối chiếu và nhập bổ sung | `Store` (`save`, `list`, `page`, `overview`, `history`, `add_attachment`, `enable_corrections`, `correction_plan`, `apply_corrections`, `backup`) |
-| `BAO_VE_DU_LIEU.py` | 427 | Sao lưu SQLite đã kiểm tra (WAL-safe), chính sách giữ bản, khôi phục có giữ DB cũ, khóa một phiên (khóa OS), hộp thoại tkinter | `snapshot`, `inspect_db`, `Protection`, `SessionLock`, `recovery_dialog`, `adoption_dialog`, `choose_directory` |
+| `BAO_VE_DU_LIEU.py` | 498 | Sao lưu SQLite đã kiểm tra (WAL-safe), kiểm tra dung lượng, kết quả kiểm tra khởi động có dấu thay đổi, chính sách giữ bản, khôi phục, khóa phiên và hộp thoại tkinter | `snapshot`, `inspect_db`, `Protection`, `SessionLock`, `recovery_dialog`, `adoption_dialog`, `choose_directory` |
 | `QUAN_LY_DANH_MUC.py` | 222 | Danh mục nhập liệu từ file `DANH_MUC/*.txt` và `*.json`; snapshot trong DB để khôi phục; kiểm tra digest khi ghi | `Catalogs` (`sync`, `read`, `save`, `editor_data`, `snapshot`) |
 | `MAU_PHAN_CONG.py` | 78 | Bốn mẫu phân công (`team1`, `team2`, `team3`, `day`); kiểm tra; gộp người của mẫu vào tổ (trả bản sao) | `parse_templates`, `validate_templates`, `merge_team_members` |
-| `MAY_CHU.py` | 409 | **Máy chủ HTTP nội bộ và toàn bộ API.** Kiểm Host/cookie/header; xuất ZIP đính kèm; sao lưu hằng ngày | `Handler`, `make_server`, `daily_backup`, `int_param` |
+| `MAY_CHU.py` | 495 | **Máy chủ HTTP nội bộ và toàn bộ API.** Kiểm Host/cookie/header, xả thân request từ chối có giới hạn, build metadata; xuất ZIP; lịch sao lưu | `Handler`, `make_server`, `daily_backup`, `int_param` |
 | `BAO_CAO_EXCEL.py` | 130 | Tổng hợp tháng, bảng dữ liệu báo cáo; bộ xuất XLSX tối giản (dùng khi không có khuôn) | `aggregate`, `monthly_tables`, `report_table`, `xlsx_bytes`, `styled_xlsx` |
 | `XUAT_EXCEL.py` | 304 | Xuất Excel **theo khuôn** `mau/MAU_BAO_CAO.xlsx`, giữ kiểu dáng; số dòng khuôn là hằng số | `Template`, `export_workbook`, `TemplateError` |
-| `BAO_CAO_CA.py` | 130 | Điểm vào: mở phiên, kiểm tra bảo vệ dữ liệu, chạy máy chủ, xoay log | `main`, `running_session`, `rotate_log`, `show_error` |
+| `BAO_CAO_CA.py` | 139 | Điểm vào: mở phiên, kiểm tra bảo vệ dữ liệu, chạy máy chủ, xoay log; parser chung với launcher | `main`, `parse_args`, `running_session`, `rotate_log`, `show_error` |
 
 Các file gốc chạy:
-- `MO_BAO_CAO_CA.pyw`: mở app, ghi log vào `DU_LIEU/`, gọi `main(['--quiet'])`.
+- `MO_BAO_CAO_CA.pyw`: mở app, ghi log vào `--data-dir` (mặc định `DU_LIEU/`), gọi `main(['--quiet'])` và truyền exit code.
 - `KHOI_PHUC_DU_LIEU.pyw`: gọi `main(['--restore','--quiet'])`.
 - `CHAY_KIEM_TRA_LOI.bat`: chạy `ma_nguon\BAO_CAO_CA.py` để xem lỗi trên console.
 
@@ -53,9 +54,9 @@ Các file gốc chạy:
 
 1. `main()` đọc `DU_LIEU/PHIEN_DANG_CHAY.json`. Nếu máy chủ cũ còn chạy: cùng version thì mở lại trình duyệt rồi thoát; khác version thì báo lỗi "Thoát tool trên bản cũ".
 2. Nếu `--restore`: hộp thoại chọn bản sao, xác nhận rồi khôi phục.
-3. `Protection.guard_startup()`: DB trống hoặc thiếu nhưng có dấu vết dữ liệu cũ thì **không tạo DB trắng**, báo cần khôi phục.
-4. `needs_adoption()`: DB được chép từ nguồn khác → hộp thoại "Tiếp nhận DB đang có" (sao lưu trước khi đổi).
-5. `make_server()`: khóa phiên (`KHOA_DB_<hash>.lock`), mở `Store` (nâng schema, seed người/tàu một lần), `Protection.initialize()`, `Catalogs.sync()`, sao lưu ban đầu.
+3. `Protection.guard_startup()`: DB trống hoặc thiếu nhưng có dấu vết dữ liệu cũ thì **không tạo DB trắng**, báo cần khôi phục. Trả kết quả kiểm tra đầy đủ cùng dấu DB/WAL/journal; nguồn đổi trong lúc kiểm tra thì chặn, riêng WAL tự tạo rỗng cho phép full lại một lần.
+4. `needs_adoption(startup_check)`: dùng kết quả còn khớp để đối chiếu nguồn → hộp thoại "Tiếp nhận DB đang có" nếu khác (sao lưu trước khi đổi). Sau khôi phục/tiếp nhận, nạp cấu hình và kiểm tra lại.
+5. `make_server(startup_check=...)`: thiếu hoặc dấu cũ thì guard đầy đủ như khi gọi trực tiếp; khóa phiên (`KHOA_DB_<hash>.lock`), mở `Store` (nâng schema, seed người/tàu một lần), `Protection.initialize(store)` dùng Store đã mở, `Catalogs.sync()`, sao lưu ban đầu đầy đủ. Trường hợp ổn định: nguồn full một lần và snapshot đích full một lần.
 6. Ghi `PHIEN_DANG_CHAY.json` (port + token), mở `http://127.0.0.1:<port>/?launch=<token>`.
 7. Thoát: nút "Thoát tool" → `/api/shutdown` → sao lưu bù → đóng server → xóa file phiên.
 
@@ -112,6 +113,8 @@ Giới hạn: 200 dòng mỗi phần; 40 tệp mỗi ca; số lượng 0–9.999
 
 ## 6. API HTTP (`MAY_CHU.Handler`)
 
+Bảng dưới là danh sách nhanh. **Hợp đồng đầy đủ** (tham số, hình dạng phản hồi, mã lỗi, phạm vi chung/desktop/quản trị, điểm chưa nhất quán): [API.md](API.md), được ghim bằng `kiem_thu/KIEM_THU_API.py`.
+
 **GET** (cần cookie; `context` là token đổi mỗi lần đổi nguồn DB, sai → 409):
 
 - `/` (có `?launch=`), `/tai_nguyen/{bao_ve,ung_dung,danh_muc,phan_cong_mau}.js`, `/tai_nguyen/style.css`
@@ -149,9 +152,11 @@ Giới hạn: 200 dòng mỗi phần; 40 tệp mỗi ca; số lượng 0–9.999
 
 Chạy: `cong_cu\CHAY_KIEM_THU.bat` (Python và, nếu có Node, các bộ JS).
 
-- **Python — 116 test, 9 file** (đếm `def test_`): `KIEM_THU.py` 31, `KIEM_THU_BAN_CHOT.py` 8, `KIEM_THU_BAO_VE.py` 23, `KIEM_THU_DANH_MUC.py` 6, `KIEM_THU_MAU_CA.py` 13, `KIEM_THU_MA_NGUON.py` 4 (kiểm cú pháp, import thừa), `KIEM_THU_PHAN_CONG.py` 12, `KIEM_THU_V1_9.py` 15, `KIEM_THU_XUAT_EXCEL.py` 4.
+- **Python — 154 test, 13 file** (đếm `def test_`): `KIEM_THU.py` 31, `KIEM_THU_API.py` 14 (hợp đồng API), `KIEM_THU_BAN_CHOT.py` 8, `KIEM_THU_BAO_VE.py` 23, `KIEM_THU_DANH_MUC.py` 6, `KIEM_THU_DUNG_LUONG.py` 5, `KIEM_THU_KHOI_DONG.py` 10, `KIEM_THU_MAU_CA.py` 13, `KIEM_THU_MA_NGUON.py` 4 (cú pháp, import thừa), `KIEM_THU_PHAN_CONG.py` 12, `KIEM_THU_PHAT_HANH.py` 9, `KIEM_THU_V1_9.py` 15, `KIEM_THU_XUAT_EXCEL.py` 4.
 - **JavaScript — 5 bộ** (Node VM, không cần trình duyệt): `KIEM_THU_BAO_VE.js`, `KIEM_THU_GIAO_DIEN.js`, `KIEM_THU_MAU_CA.js`, `KIEM_THU_PHAN_CONG.js`, `KIEM_THU_V1_9.js`.
-- **Kết quả kiểm chứng 2026-11-06:** Python 116/116 OK; JS 5/5 OK. Test dùng thư mục tạm, không chạm `DU_LIEU`.
+- **Kết quả 1.9.1 ngày 2026-11-06:** Python **154/154 OK, 3 lần liên tiếp**, JS **5/5 OK**, smoke launcher nguồn qua trên Windows. Chi tiết [BAO_CAO_CODEX_DOT1.md](BAO_CAO_CODEX_DOT1.md). Test dùng thư mục tạm, không chạm dữ liệu vận hành.
+- **Công cụ đo:** `cong_cu/DO_HIEU_NANG.py` (không phải kiểm thử): tạo DB giả lập qua `Store.save` trong thư mục tạm, đo sao lưu, khởi động và độ trễ HTTP. Kế hoạch dùng số đo: `ROADMAP_SAU_V1_9.md`.
+- **Công cụ phát hành:** `cong_cu/DONG_GOI.py` chặn Git bẩn/lỗi HEAD trước cài PyInstaller, tạo `PHIEN_BAN.json` trong thư mục tạm và nhúng vào EXE. `/api/info.build` là `{commit,built_at,version}`. `cong_cu/KIEM_THU_KHOI.py` thử launcher nguồn; EXE mới cần `--exe <path> --commit <hash> --version 1.9.1`. Launcher ghi log theo data-dir tạm; no-browser không mở hộp thoại lỗi.
 - **Chưa kiểm thử:** EXE Windows, hộp thoại tkinter, mở file xuất trong Excel thật, DB nhiều GB, ảnh/PDF lớn, trình duyệt thật (ngoài bộ JS giả lập).
 
 ## 9. Bất biến và quy ước (đọc trước khi sửa)
@@ -169,5 +174,6 @@ Chạy: `cong_cu\CHAY_KIEM_THU.bat` (Python và, nếu có Node, các bộ JS).
 
 - **Đã sửa (2026-11-06):** chuỗi phiên bản cũ trong `LUU_TRU.py` và `MAY_CHU.py` (`server_version` lấy từ `VERSION`); tiêu đề mục "Nghiệp vụ đã có" trong `HUONG_DAN.txt` nay ghi rõ viết theo 1.8.
 - **Khuôn Excel:** `XUAT_EXCEL.py` phụ thuộc số dòng cố định. Đổi file mẫu mà quên đổi hằng số thì xuất sai, dù đã có kiểm tra `TemplateError` cho dòng thiếu.
+- **Đã sửa từ chối sớm (1.9.1):** xả tối đa 4 MiB/0,5 giây, thân lớn gửi/flush lỗi và đóng chiều ghi trước khi xả; test Windows 100 POST, 5 MiB và 100 GET có body qua. Xem giới hạn tại `API.md` mục 7.
 - **`DU_LIEU/PHIEN_DANG_CHAY.json`** chứa token của phiên đang chạy. Không chia sẻ file này.
 - **Khóa DB:** khi quét, đọc `KHOA_DB_*.lock` báo *Device or resource busy*, nên có thể app đang mở. Đây chỉ là quan sát, chưa xác minh.

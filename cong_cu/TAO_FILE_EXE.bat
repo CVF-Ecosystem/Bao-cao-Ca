@@ -5,11 +5,7 @@ echo Tao file EXE cho Windows. Buoc nay can Internet de cai PyInstaller neu chua
 echo Khong thay doi thu muc DU_LIEU.
 where py >nul 2>nul
 if errorlevel 1 goto nopy
-py -3 -m pip install pyinstaller
-if errorlevel 1 goto failed
-py -3 -m PyInstaller --noconfirm --clean --onefile --windowed --name SO_BAO_CAO_CA --paths ma_nguon --add-data "giao_dien:giao_dien" --add-data "mau:mau" MO_BAO_CAO_CA.pyw
-if errorlevel 1 goto failed
-copy /Y "dist\SO_BAO_CAO_CA.exe" "SO_BAO_CAO_CA.exe"
+py -3 cong_cu\DONG_GOI.py
 if errorlevel 1 goto failed
 echo Da tao SO_BAO_CAO_CA.exe ngay trong thu muc nay.
 echo DB van nam o DU_LIEU ben canh EXE. Khong can chep DB vao ben trong EXE.

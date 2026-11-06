@@ -76,7 +76,7 @@ async function refreshInfo(){
   $('backupWarning').textContent=hardWarning;
   $('backupWarning').classList.toggle('hide',!hardWarning);
   $('navAlert').classList.toggle('hide',!info.backup_warning);
-  $('appVersion').textContent='Phiên bản '+info.version
+  $('appVersion').textContent='Phiên bản '+info.version+' · '+(info.build?.commit||'nguon')
 }
 function setPage(name){
   page=name;

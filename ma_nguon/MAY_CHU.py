@@ -11,9 +11,10 @@ import urllib.parse
 import urllib.request
 import logging
 import shutil
+import socket
 import zipfile
 from http.server import BaseHTTPRequestHandler
-from THIET_LAP import VERSION, MAX_FILE, MAX_DB, ASSETS, VN, KEYS
+from THIET_LAP import VERSION, MAX_FILE, MAX_DB, ASSETS, VN, KEYS, build_info
 from NGHIEP_VU import now, suggest, shift_label, AppError, file_type, database_error
 from LUU_TRU import Store
 from BAO_VE_DU_LIEU import Protection, SessionLock
@@ -78,8 +79,84 @@ class Handler(BaseHTTPRequestHandler):
         with path.open('rb') as stream:
             shutil.copyfileobj(stream, self.wfile, 1024 * 1024)
 
+    def request_length(self):
+        value = self.headers.get('Content-Length', '0')
+        if not value.isascii() or not value.isdigit():
+            raise AppError('Content-Length không hợp lệ.')
+        try:
+            return int(value)
+        except ValueError:
+            raise AppError('Content-Length không hợp lệ.')
+
+    def drain_body(self, length):
+        # Không chờ vô hạn hoặc đọc quá 4 MiB từ client gửi chậm.
+        previous = self.connection.gettimeout()
+        self.connection.settimeout(0.5)
+        try:
+            remaining = min(length, 4 * 1024 * 1024)
+            deadline = time.monotonic() + 0.5
+            while remaining and time.monotonic() < deadline:
+                self.connection.settimeout(max(0.001, deadline - time.monotonic()))
+                chunk = self.rfile.read1(min(remaining, 65536))
+                if not chunk:
+                    break
+                remaining -= len(chunk)
+        except (OSError, ValueError):
+            pass
+        finally:
+            self.connection.settimeout(previous)
+
+    def reject_unread(self, data, status):
+        try:
+            length = self.request_length()
+        except AppError:
+            length = None
+        if length is not None and length <= 4 * 1024 * 1024:
+            self.drain_body(length)
+            self.send_data(data, status=status)
+        else:
+            self.send_data(data, status=status)
+            self.wfile.flush()
+            try:
+                self.connection.shutdown(socket.SHUT_WR)
+            except OSError:
+                pass
+            self.drain_body(length if length is not None else 4 * 1024 * 1024)
+
+    def unsupported_method(self):
+        # Giữ phản hồi 501 mặc định, nhưng không bỏ lại thân nhỏ chưa đọc.
+        try:
+            length = self.request_length()
+        except AppError:
+            self.reject_unread({'error': 'Content-Length không hợp lệ.'}, 400)
+            return
+        if length <= 4 * 1024 * 1024:
+            self.drain_body(length)
+            self.send_error(501, "Unsupported method (%r)" % self.command)
+        else:
+            self.send_error(501, "Unsupported method (%r)" % self.command)
+            self.wfile.flush()
+            try:
+                self.connection.shutdown(socket.SHUT_WR)
+            except OSError:
+                pass
+            self.drain_body(length)
+
+    do_PUT = unsupported_method
+    do_DELETE = unsupported_method
+    do_HEAD = unsupported_method
+
     def do_GET(self):
         try:
+            length = self.request_length()
+        except AppError as e:
+            self.reject_unread({'error': str(e)}, e.status)
+            return
+        try:
+            if length > 4 * 1024 * 1024:
+                self.reject_unread({'error': 'Thân request quá lớn.'}, 400)
+                return
+            self.drain_body(length)
             self.get_route()
         except AppError as e:
             self.send_data({'error': str(e)}, status=e.status)
@@ -109,7 +186,7 @@ class Handler(BaseHTTPRequestHandler):
         elif u.path == '/api/info':
             catalog = self.app['catalogs']
             data = catalog.sync() if store is self.app['main_store'] else catalog.snapshot(store)
-            self.send_data(dict(suggestion=suggest(), jobs=data['jobs'], roles=data['roles'], version=VERSION,
+            self.send_data(dict(suggestion=suggest(), jobs=data['jobs'], roles=data['roles'], version=VERSION, build=build_info(),
                                 people=data['people'], teams=data['teams'], staff_templates=data['staff_templates'], ships=store.ships(), catalog_warning=catalog.warning if store is self.app['main_store'] else '',
                                 readonly=store.readonly, database=store.path.name, now=now(),
                                 context=self.app['context'],
@@ -188,6 +265,7 @@ class Handler(BaseHTTPRequestHandler):
             raise AppError('Không tìm thấy chức năng.', 404)
 
     def do_POST(self):
+        unread = True
         try:
             self.authorize()
             if self.headers.get('X-Ca-Request') != '1':
@@ -195,13 +273,14 @@ class Handler(BaseHTTPRequestHandler):
             origin = self.headers.get('Origin')
             if origin and origin != 'http://' + self.app['host']:
                 raise AppError('Nguồn yêu cầu không hợp lệ.', 403)
-            length = int(self.headers.get('Content-Length', '0'))
+            length = self.request_length()
             route = urllib.parse.urlsplit(self.path)
             query = dict(urllib.parse.parse_qsl(route.query))
             is_db = route.path in ('/api/open-viewer', '/api/corrections-preview')
             limit = MAX_DB if is_db else MAX_FILE if route.path == '/api/attachment-upload' else 4 * 1024 * 1024
             if not 0 <= length <= limit:
                 raise AppError('DB tối đa 8 GB; mỗi ảnh/PDF tối đa 100 MB.')
+            unread = False
             uploaded = None
             if is_db:
                 uploaded = self.app['data_dir'] / 'DB_KIEM_TRA' / ('ban_sao_' + secrets.token_hex(8) + '.db')
@@ -341,7 +420,10 @@ class Handler(BaseHTTPRequestHandler):
             else:
                 raise AppError('Không tìm thấy chức năng.', 404)
         except AppError as e:
-            self.send_data({'error': str(e)}, status=e.status)
+            if unread:
+                self.reject_unread({'error': str(e)}, e.status)
+            else:
+                self.send_data({'error': str(e)}, status=e.status)
         except (sqlite3.Error, OSError) as e:
             logging.exception('Loi tai tep / ghi DB: %s', urllib.parse.urlsplit(self.path).path)
             self.send_data({'error': database_error(e)}, status=503 if 'locked' in str(e).lower() else 500)
@@ -364,9 +446,12 @@ def daily_backup(app, force=True):
         protection = app['protection'] = Protection(app['data_dir'])
         protection.initialize()
     try:
-        protection.backup()
-        app['backup_tick'] = time.monotonic()
-        app['backup_pending'] = False
+        result = protection.backup()
+        if result is None:
+            app['backup_pending'] = True
+        else:
+            app['backup_tick'] = time.monotonic()
+            app['backup_pending'] = False
         app['backup_warning'] = protection.warning
         level = getattr(protection, 'warning_level', '')
         app['backup_level'] = level if isinstance(level, str) else ''
@@ -376,15 +461,16 @@ def daily_backup(app, force=True):
         protection.warning = app['backup_warning'] = 'Sao lưu tự động thất bại. Dữ liệu vừa lưu vẫn ở DB chính; kiểm tra dung lượng/quyền ghi và bấm Sao lưu ngay.'
 
 
-def make_server(directory, port=0):
+def make_server(directory, port=0, startup_check=None):
     directory = Path(directory).resolve()
     protection = Protection(directory)
-    protection.guard_startup()
+    if protection._checked_info(startup_check) is None:
+        protection.guard_startup()
     lock = SessionLock(directory)
     server = None
     try:
         store = Store(directory / 'BAO_CAO_CA.db')
-        protection.initialize()
+        protection.initialize(store)
         if store.meta('review_copy') == '1':
             raise AppError('Đây là DB bổ sung, không phải DB chính. Dùng Nhập bổ sung từ DB.')
         from http.server import HTTPServer

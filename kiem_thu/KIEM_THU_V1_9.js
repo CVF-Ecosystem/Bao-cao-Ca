@@ -73,6 +73,14 @@ const run = code => vm.runInContext(code, sandbox);
   assert.deepEqual(await level('info', 'Chưa chọn nơi dự phòng'), { banner: false, dot: true, text: '' });
   assert.deepEqual(await level('error', 'Sao lưu bên ngoài thất bại'), { banner: true, dot: true, text: 'Sao lưu bên ngoài thất bại' });
   assert.deepEqual(await level('', ''), { banner: false, dot: false, text: '' });
+  assert.equal(nodes.appVersion.textContent, 'Phiên bản 1.9.0 · nguon');
+  run(`api=async()=>({${infoBase},build:{commit:'abcdef123456'}})`);
+  await run('refreshInfo()');
+  assert.equal(nodes.appVersion.textContent, 'Phiên bản 1.9.0 · abcdef123456');
+  run(`api=async()=>({${infoBase},build:{commit:'<img src=x onerror=alert(1)>'}})`);
+  await run('refreshInfo()');
+  assert.equal(nodes.appVersion.textContent, 'Phiên bản 1.9.0 · <img src=x onerror=alert(1)>');
+  assert.equal(nodes.appVersion.innerHTML, undefined);
 
   // 6. Trang nhập ca: 4 tab, chỉ tab đang chọn hiện, số trên tab cập nhật khi sửa.
   run(`info={readonly:false,review:false,people:['An'],teams:[],ships:[],roles:[],jobs:[]};

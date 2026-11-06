@@ -80,6 +80,23 @@ def snapshot(source, dest):
         tmp.unlink(missing_ok=True)
 
 
+def _database_stamp(path):
+    """Dấu thay đổi nguồn và journal, không phải khóa chống sửa có chủ ý."""
+    result = []
+    for candidate in (path, Path(str(path) + '-wal'), Path(str(path) + '-journal')):
+        try:
+            stat = candidate.stat()
+            result.append((stat.st_dev, stat.st_ino, stat.st_size, stat.st_mtime_ns, stat.st_ctime_ns))
+        except FileNotFoundError:
+            result.append(None)
+    return tuple(result)
+
+
+class _StartupCheck:
+    def __init__(self, path, stamp, info):
+        self.path, self.stamp, self.info = path, stamp, info
+
+
 class Protection:
     def __init__(self, directory):
         self.directory = Path(directory).resolve()
@@ -115,10 +132,11 @@ class Protection:
         info['sha256'] = digest.hexdigest()
         return info
 
-    def needs_adoption(self):
+    def needs_adoption(self, startup_check=None):
         if not self.db.exists() or not self.config.get('database_id'):
             return False
-        return inspect_db(self.db)['database_id'] != self.config['database_id']
+        info = self._checked_info(startup_check)
+        return (info if info is not None else inspect_db(self.db))['database_id'] != self.config['database_id']
 
     def accept_installed(self, digest):
         """Chỉ gọi sau xác nhận tiếp nhận DB đã chép vào, không trộn các nguồn."""
@@ -144,6 +162,12 @@ class Protection:
         self.config = new
         return before
 
+    def _checked_info(self, startup_check):
+        if (isinstance(startup_check, _StartupCheck) and startup_check.path == self.db
+                and startup_check.stamp == _database_stamp(self.db)):
+            return startup_check.info
+        return None
+
     def guard_startup(self):
         evidence = self.config.get('initialized') or self.directory.exists() and any(
             (self.directory / name).exists() for name in
@@ -151,13 +175,26 @@ class Protection:
         if self.db.exists():
             if not self.db.stat().st_size:
                 raise AppError('DB chính rỗng. Không tạo lại DB trắng; hãy chọn bản sao để khôi phục.')
-            inspect_db(self.db)
+            before = _database_stamp(self.db)
+            info = inspect_db(self.db)
+            after = _database_stamp(self.db)
+            # SQLite may create an empty WAL on its first read; inspect again.
+            if (before[0] == after[0] and before[1] is None and after[1] is not None
+                    and after[1][2] == 0 and before[2] == after[2]):
+                before = after
+                info = inspect_db(self.db)
+                after = _database_stamp(self.db)
+            if before != after or after[0] is None:
+                raise AppError('DB thay đổi trong lúc kiểm tra. Hãy đóng chương trình khác và thử lại.')
+            return _StartupCheck(self.db, after, info)
         elif evidence:
             raise AppError('Không tìm thấy BAO_CAO_CA.db của bộ dữ liệu đã dùng. Không tạo DB trắng; hãy khôi phục bản sao.')
 
-    def initialize(self):
+    def initialize(self, store=None):
         from LUU_TRU import Store
-        identity = Store(self.db, readonly=True).meta('database_id')
+        if store is not None and (not isinstance(store, Store) or store.path != self.db):
+            raise AppError('Store không thuộc DB chính cần khởi tạo.')
+        identity = (store if store is not None else Store(self.db, readonly=True)).meta('database_id')
         if self.config.get('database_id') and identity != self.config['database_id']:
             raise AppError('DB vừa chép vào khác nguồn đã đăng ký. Mở bản 1.8.1 bình thường và xác nhận Tiếp nhận DB đang có; không cần xóa cấu hình hoặc DB.')
         self.config.update(initialized=True, database_id=identity)
@@ -213,9 +250,38 @@ class Protection:
                 if path not in keep:
                     path.unlink()
 
+    def _space_required(self):
+        # Use the logical SQLite size and the on-disk DB+WAL, whichever is larger.
+        with sqlite3.connect(self.db.as_uri() + '?mode=ro', uri=True, factory=ClosingConnection) as connection:
+            pages = connection.execute('PRAGMA page_count').fetchone()[0]
+            page_size = connection.execute('PRAGMA page_size').fetchone()[0]
+        wal = Path(str(self.db) + '-wal')
+        on_disk = self.db.stat().st_size + (wal.stat().st_size if wal.exists() else 0)
+        size = max(on_disk, pages * page_size)
+        return (size * 6 + 4) // 5
+
+    @staticmethod
+    def _space_warning(destination, required):
+        existing = destination
+        while not existing.exists():
+            parent = existing.parent
+            if parent == existing:
+                raise OSError('Không tìm thấy thư mục đích sao lưu: ' + str(destination))
+            existing = parent
+        free = shutil.disk_usage(existing).free
+        if free < required:
+            return ('Không đủ dung lượng để sao lưu tại ' + str(destination) +
+                    ': cần ít nhất ' + str(required) + ' byte, còn ' + str(free) + ' byte.')
+        return ''
+
     def backup(self):
         name = 'BAO_CAO_CA_' + dt.datetime.now(VN).strftime('%Y%m%d_%H%M%S_%f') + '_' + secrets.token_hex(3) + '.db'
         path = self.local / name
+        required = self._space_required()
+        warning = self._space_warning(path.parent, required)
+        if warning:
+            self.warning, self.warning_level = warning, 'error'
+            return None
         snapshot(self.db, path)
         # Không dọn các bản cũ trước khi snapshot mới đã được kiểm tra thành công.
         self.prune(self.local)
@@ -228,9 +294,14 @@ class Protection:
                 # Ổ rời mất kết nối: không tự tạo lại đường dẫn gốc.
                 if not Path(self.config['external_directory']).is_dir():
                     raise OSError('Thư mục dự phòng chưa sẵn sàng')
-                snapshot(path, outside / name)
-                self.prune(outside)
-                self.config['last_external'] = dict(at=dt.datetime.now(VN).isoformat(), name=name)
+                warning = self._space_warning(outside, required)
+                if warning:
+                    errors.append('Sao lưu tại máy thành công. ' + warning)
+                    level = 'error'
+                else:
+                    snapshot(path, outside / name)
+                    self.prune(outside)
+                    self.config['last_external'] = dict(at=dt.datetime.now(VN).isoformat(), name=name)
             except Exception:
                 logging.exception('Sao luu ben ngoai that bai')
                 errors.append('Sao lưu tại máy thành công; sao lưu bên ngoài thất bại. Kiểm tra ổ/thư mục dự phòng.')
