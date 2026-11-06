@@ -170,6 +170,23 @@ Không giảm mức kiểm tra, không đổi schema.
 | D1-3 | Kiểm tra dung lượng trống trước khi sao lưu (cần khoảng 1,2 × DB, chốt hệ số sau đo). Không đủ thì báo lỗi, không để bản dở làm đầy ổ. | Test giả lập ổ đầy: thông báo đúng, DB chính không đổi. |
 | D1-4 | Truy vết phát hành: nhúng mã commit và ngày build vào `/api/info`; `TAO_FILE_EXE.bat` từ chối build khi cây làm việc có thay đổi chưa commit; kiểm thử khói EXE (`--no-browser`, gọi `/api/info`, thoát). CI Windows là tùy chọn, tùy chính sách kho. | EXE hiển thị đúng commit; kiểm thử khói qua. |
 
+### Đợt giao diện (U): bản vá giao diện máy tính
+
+Nguồn: [DANH_GIA_GIAO_DIEN_V1_9.md](DANH_GIA_GIAO_DIEN_V1_9.md) (đo và chạy thao tác thật trên Chrome, cỡ 1366×657). **Chỉ máy tính**; chủ dự án xác nhận không cần tối ưu cho điện thoại. Không đổi API, dữ liệu hay framework; chỉ sửa `ung_dung.js`, `style.css`, `giao_dien.html`. Có thể làm xen kẽ với Đợt 2 vì không chạm sao lưu.
+
+| ID | Việc | Nghiệm thu |
+|---|---|---|
+| U1 | Gộp tiêu đề trang và thẻ thông tin ca thành một dải gọn; dải tab dính khi cuộn. Hiện ô nhập đầu tiên ở y = 704 px, ngoài vùng nhìn 657 px. | Đo lại ở 1366×657: ô nhập đầu tiên nằm trong vùng nhìn khi mở ca |
+| U2 | Ô số lượng sai: đánh dấu đỏ tại ô, chặn dấu thập phân, Tổng chỉ cộng giá trị hợp lệ, thông báo nêu tên công việc và cột. | Test JS: gõ `1.5` thì ô có `aria-invalid`, Tổng không đổi, thông báo nêu đúng dòng và cột |
+| U3 | Chốt ca: kiểm tra điều kiện **trước** khi hỏi xác nhận và chuyển tới tab/ô còn thiếu; sửa câu "Chốt Ca ngày ngày". | Test JS: thiếu PHỤ TRÁCH CHUNG thì không hiện hộp xác nhận, chuyển sang tab Nhân sự; câu hỏi không lặp chữ |
+| U4 | Esc đóng hộp thoại; liên kết bỏ qua tới nội dung; phím tắt chuyển tab. | Test JS: Esc đóng hộp; số lần Tab tới ô đầu tiên giảm rõ so với 22 |
+| U7 | Bỏ chữ "Phiên bản 1.9.0" cố định trong `giao_dien.html`. | Không còn chuỗi phiên bản cố định trong HTML |
+| U8 | Bản in: ca thông thường (9 nhân sự, 6 công việc) vừa 1 trang; dòng nhận diện ca và số trang lặp ở mỗi trang. | Xuất PDF ca mẫu: 1 trang; ca dài: mỗi trang có dòng "ca/ngày · Trang x/y" |
+| U5 | Lịch sử sửa hiện khác biệt giữa hai phiên bản liền nhau. **Làm cùng Đợt 3.** | Ca đã chốt sửa 1 số liệu: lịch sử hiện đúng "trước → sau" |
+| U6 | Giải quyết xung đột: thêm lựa chọn giữ ghi chú đã gõ sau khi tải lại. Ưu tiên thấp, làm khi chạm vào. | — |
+
+**Cần chủ dự án trả lời trước khi làm U8:** bản in có cần chỗ ký tên và ngày giờ in không. **Nên làm trước:** hỏi 1–2 người nhập ca thật để xếp lại thứ tự, và in thử một lần ra máy in thật (chưa kiểm chứng phần đầu/chân trang của trình duyệt).
+
 ### Đợt 2: Tối ưu sao lưu (dự kiến 1.9.2)
 
 **D2-1. Kiểm tra theo bậc, có ghim bản full tốt** (sửa P1-1 theo PB-02).
@@ -324,6 +341,7 @@ Mốc dung lượng ~3 GB chỉ là **tín hiệu để đo lại**, không ph�
 - Không thêm framework frontend; K3 làm dần theo phần được chạm.
 - Không gộp lịch sử cũ đã có; gộp chỉ áp dụng cho revision mới từ schema 4.
 - Không mở cổng ra LAN/Internet bằng cách đổi địa chỉ lắng nghe của bản hiện tại.
+- Không tối ưu giao diện cho điện thoại (chủ dự án xác nhận 2026-11-06); mọi đánh giá giao diện chỉ xét màn hình máy tính.
 
 ## 8. Tóm tắt thứ tự
 
@@ -331,6 +349,7 @@ Mốc dung lượng ~3 GB chỉ là **tín hiệu để đo lại**, không ph�
 |---|---|---|
 | 0 | D0-1…D0-4 (benchmark, K0, test hiện trạng) | Ngay |
 | 1 (1.9.1) | D1-1…D1-4 (bản vá ổn định) | Có baseline |
+| U (bản vá giao diện) | U1…U4, U7, U8 (U5 đi cùng Đợt 3; U6 khi chạm vào) | Chủ dự án trả lời câu hỏi chữ ký/ngày in; có thể xen kẽ Đợt 2 |
 | 2 (1.9.2) | D2-1 + K1/K2 phần sao lưu | Chính sách giữ bản đã thống nhất |
 | 3 (1.10) | D3-1, D3-2 + K1 phần lưu, K4 chừa cột | Ngữ nghĩa lịch sử đã thống nhất |
 | 4 (1.10.x) | D4-1…D4-3 (bảo trì dữ liệu) | Sau đợt 3 |
