@@ -402,6 +402,20 @@ Chủ dự án dự định chuyển project vào `D:\UNG DUNG AI\TOOL AI 2026\C
 
 **Việc cần làm sau khi chuyển:** mở "Bảo vệ dữ liệu / Khôi phục", chọn lại thư mục dự phòng bên ngoài và bấm "Lưu nơi dự phòng"; kiểm tra "Bên ngoài" có thời gian thành công mới.
 
-**Chuẩn CVF chưa đọc.** `CVF-Workspace` có sẵn `AGENTS.md`, `AGENT_HANDOFF.md`, `CVF_WORKSPACE_MEMORY.md`, `CVF_RULE_PACKS`... Roadmap này chưa đối chiếu với các quy ước đó. Nên đọc chúng trước khi chuyển để biết project cần thêm hoặc đổi gì (vị trí tài liệu, quy ước bàn giao, nơi ghi bộ nhớ).
+**Đối chiếu CVF ngày 2026-11-06:** xem `.cvf/manifest.json`, `.cvf/policy.json`, `AGENTS.md` và handoff đang hoạt động. Core công khai được ghim `c4c8767ac8861854f40d466ba338ffd11eb9558e`; nguồn bổ sung operator-local có source commit rút gọn `f8175616c`, standard `project-development-application-standard` SHA-256 `d06b62387e015160a77658f333882a2a316d54ffd0421071354cf63a3730dd7a`. Profile bổ sung 1.4 và thiết lập local đã được review độc lập, nghiệm thu theo bốn tiêu chí WSA trong `docs/roadmaps/WORKSPACE_ACTIVATION.md`; bản lock/workflow cũ và các lần thất bại được giữ tại `docs/reviews/activation-history/`. Lệnh `python -B scripts/check_project_workspace.py --json` trả `COMPATIBLE_ASSESSED`, kiểm tra kích hoạt trả `CURRENT_ASSESSED` cho hồ sơ REVIEW đã chốt. Doctor Core cũ vẫn giữ nguyên FAIL 26/28 vì hai điểm không tương thích phiên bản đã được review; lệnh của project đối chiếu riêng bằng nguồn bổ sung đã ghim và từ chối mọi lỗi khác. Năm nhóm kiểm thử adapter đạt. Đây là nghiệm thu thiết lập phát triển local; việc BUILD tiếp theo phải có action và receipt mới, còn nghiệm thu sản phẩm giữ nguyên các giới hạn ở mục 9.
+
+### Áp dụng quy tắc phát triển CVF
+
+Baseline chung: kế thừa Core và policy của project; dùng các pha INTAKE → DESIGN → SPEC → WORK_ORDER → BUILD → REVIEW → FREEZE, bằng chứng theo phạm vi, review độc lập khi rủi ro cao, nghiệm thu nội bộ trước khi yêu cầu người dùng đánh giá. Chọn lại các dòng liên quan khi mở từng việc; giữ nguyên tiêu chí, kết quả và giới hạn đã ghi ở roadmap và báo cáo. Không xem kiểm tra tĩnh là bằng chứng CVF điều khiển hành vi AI.
+
+| Nguồn / nguy cơ | Kiểm soát cụ thể, thời điểm và người chịu trách nhiệm | Bằng chứng / trạng thái |
+|---|---|---|
+| Mục 4: dữ liệu thật, transaction, DB bổ sung và bản full | Trước thay đổi lưu trữ, worker xác định bất biến và đường khôi phục; reviewer đối chiếu kiểm thử trên dữ liệu giả lập, không tự xóa bản có thể duy nhất. | Áp dụng theo từng work order; chưa nghiệm thu thay đổi mới. |
+| Mục 4 và các đợt 2–4: schema, backup và hiệu năng | Khi sửa, worker ghi migration, bản sao trước nâng cấp, tương thích và số đo tái lập; reviewer kiểm tra phục hồi và giới hạn phép đo. | Các kết quả Đợt 0–1 giữ nguyên giá trị và giới hạn đã ghi; chưa chứng minh các đợt sau. |
+| Mục 6, W0-1–W0-4: Internet và dữ liệu cá nhân | Orchestrator giữ cổng đưa lên Internet cho tới khi có quyết định/phê duyệt nghiệp vụ; nhóm phát triển kiểm thử phân quyền, cách ly phiên và khôi phục trước phát hành. | Các quyết định W0 còn mở; không suy diễn phê duyệt từ bootstrap. |
+| Mục 9 và 10: sử dụng thực tế sau di chuyển | Khi nghiệm thu phiên bản, nhóm phát triển kiểm tra EXE, trình duyệt và luồng phù hợp; người vận hành chọn lại nơi dự phòng ngoài và kiểm tra thời gian thành công. | Chưa kiểm chứng EXE và nơi dự phòng ngoài sau chuyển; không đọc hoặc thay dữ liệu thật trong đợt bootstrap. |
+| Kích hoạt workspace | Orchestrator dùng doctor của project, lập action và receipt có review trước BUILD hoặc dispatch mới; giữ pin và lịch sử. | Thiết lập local đã được review: COMPATIBLE_ASSESSED / CURRENT_ASSESSED cho hồ sơ REVIEW hiện tại; chưa có bằng chứng live. |
+
+Mỗi việc tiếp theo ghi phạm vi, tiêu chí, owner, kết quả thực tế, phiên bản và phần còn lại trong hồ sơ hiện hữu; cập nhật bảng khi phạm vi hoặc rủi ro thay đổi.
 
 **Bộ nhớ của trợ lý Claude không đi theo thư mục.** Bộ nhớ lưu theo **đường dẫn dự án**; đổi đường dẫn thì phiên mới bắt đầu với bộ nhớ trống. Các quyết định quan trọng đã nằm trong tài liệu của project (roadmap, `API.md`, đánh giá giao diện, `CATALOG_CAU_TRUC.md`), nên đi theo project.

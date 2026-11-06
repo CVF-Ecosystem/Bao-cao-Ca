@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "cvf.workspaceActivationUpgrade@1.0.0",
+  "decision": "ACCEPTED",
+  "reviewer": "Terra 6.1 independent reviewer",
+  "authority": "User requested resolution; project maintainer authorized local project upgrade",
+  "reviewEvidence": {
+    "path": "docs/reviews/activation-history/review-upgrade-1.4.md",
+    "sha256": "19dbbfe8ecb4eb8e9974b044704819c08d4dd7c331656f56bf0c261b618d877b"
+  },
+  "expected": {
+    "projectCoreCommit": "c4c8767ac8861854f40d466ba338ffd11eb9558e",
+    "deliveryManifestSha256": "2544c83270e18b1f61e48d9631d9df3c28e0159a14807835c4e4e0000f416ab5",
+    "profileSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+    "runnerSha256": "6b608a8a138f54b5dfc0462f5845fcf6a5bc916270ada5b0bf6d6909a153b3bd",
+    "bundleSha256": "234e1cccd3a5f69ce2809a515c802c67825cacefe92435290068b343f14901c3"
+  }
+}

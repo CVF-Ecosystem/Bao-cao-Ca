@@ -1,0 +1,21 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+    "sha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e",
+    "criteria": [
+      "WSA1",
+      "WSA2",
+      "WSA3",
+      "WSA4"
+    ]
+  },
+  "controlId": "SUPPLEMENTAL_ASSESSMENT",
+  "purpose": "SUPPLEMENTAL_ASSESSMENT",
+  "reviewer": "Sol activation_design_review",
+  "authority": "User-authorized bounded project workspace activation repair, independently reviewed under WO_WORKSPACE_ACTIVATION.md",
+  "decision": "ACCEPTED",
+  "explanation": "Independent comparison verifies all delivered file hashes and installed source mapping under the reviewed operator-local upgrade, yielding AUTHORIZED_SUPPLEMENTAL and manifest 2544c83270e18b1f61e48d9631d9df3c28e0159a14807835c4e4e0000f416ab5. Application is limited to this WSA action, its source assessment and local compatibility repair; no Core repin, shared-source change or provider effect is admitted.",
+  "observedEvidence": "docs/reviews/activation-history/predispatch-before-receipt.json",
+  "configuredInvocation": "docs/reviews/activation-history/configured-predispatch.json",
+  "limits": "The original invocation overall exitCode is 2: ACT alone failed because its receipt was missing. Reviewer independently repeated that result. This accepts individual observed mechanical scope only; it does not establish dispatch PASS, AI governance behavior, hosted CI or product acceptance."
+}

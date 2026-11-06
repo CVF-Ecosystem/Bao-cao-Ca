@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "cvf.repairAttempt@1.0.0",
+  "milestoneId": "WSA",
+  "criterionIds": [
+    "WSA1",
+    "WSA2",
+    "WSA3",
+    "WSA4"
+  ],
+  "trancheId": "workspace-profile-upgrade-incomplete",
+  "activity": "REPAIR",
+  "result": "UNMET",
+  "proofState": "STATIC_FIX_VERIFIED",
+  "elapsedMinutes": "UNKNOWN",
+  "evidence": [
+    {
+      "path": "docs/reviews/activation-history/prior-repair-outcome.md",
+      "sha256": "871af2d4c22f830e1e28c88a85c8803f149ee468fe0b79872095f4ac2333b596"
+    }
+  ]
+}

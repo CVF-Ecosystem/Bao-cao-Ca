@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "cvf.milestoneAuthority@1.1.0",
+  "milestones": {
+    "WSA": {
+      "path": "docs/roadmaps/WORKSPACE_ACTIVATION.md",
+      "heading": "## Acceptance criteria"
+    }
+  },
+  "repairControls": {
+    "WSA": {
+      "history": [
+        {
+          "path": "docs/reviews/activation-history/repair-attempt-1.json",
+          "sha256": "23546521bbfcdc90afce29175d537711e5b27fc43ed8bb08a507540e4776e161"
+        },
+        {
+          "path": "docs/reviews/activation-history/repair-attempt-2.json",
+          "sha256": "a2f2e545b2b3b69c373f787be5df8c31a34686640aa1d71616adfcfc478b57ec"
+        },
+        {
+          "path": "docs/reviews/activation-history/repair-attempt-3.json",
+          "sha256": "79109d662756a5cb0a7b4670274451235c96813ef7e9c1a268848ed7f965e6e3"
+        }
+      ],
+      "affectedCriteria": [
+        "WSA1",
+        "WSA2",
+        "WSA3",
+        "WSA4"
+      ],
+      "audit": null
+    }
+  }
+}

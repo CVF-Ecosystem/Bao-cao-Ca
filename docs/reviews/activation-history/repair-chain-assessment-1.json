@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "cvf.repairChainAssessment@1.0.0",
+  "milestoneId": "WSA",
+  "history": [
+    {
+      "path": "docs/reviews/activation-history/repair-attempt-1.json",
+      "sha256": "23546521bbfcdc90afce29175d537711e5b27fc43ed8bb08a507540e4776e161"
+    }
+  ],
+  "affectedCriteria": [
+    "WSA1",
+    "WSA2",
+    "WSA3",
+    "WSA4"
+  ],
+  "failureBoundary": "Previous repair did not complete project activation and compatible doctor verification",
+  "observedEvidence": [
+    {
+      "path": "docs/reviews/activation-history/prior-repair-outcome.md",
+      "sha256": "871af2d4c22f830e1e28c88a85c8803f149ee468fe0b79872095f4ac2333b596"
+    },
+    {
+      "path": "docs/reviews/activation-history/repair-causal-audit.md",
+      "sha256": "3caf5ec79c5586cdec8f8c7d7440e89d0211d3c889720dbd7f19c5d8adf56974"
+    }
+  ],
+  "causeStatus": "PROVEN",
+  "causeOrHypothesis": "Old doctor uses profile1.2 source while installed reviewed bundle is1.4; current action receipt was never prepared",
+  "remainingChain": [
+    "Bind reviewed real action and control inventory",
+    "Run exact pre-dispatch and review individual results",
+    "Create receipt and pass admission",
+    "Implement compatibility adapter without changing inherited controls",
+    "Verify positive and fail-closed paths and synchronize continuity"
+  ],
+  "discriminator": {
+    "question": "Does the legacy doctor fail only at its obsolete installation comparison while reviewed supplemental verification and action admission pass?",
+    "expected": "Exactly the known 27/28 legacy failure plus separate successful current verification; unexpected failures reject",
+    "budgetMinutes": 45
+  },
+  "correctiveAction": "Implement bounded project-owned compatibility doctor and complete exact activation evidence under independently reviewed work order",
+  "owner": "project orchestrator",
+  "cumulativeMinutes": "UNKNOWN",
+  "additionalCeilingMinutes": 45,
+  "stopCondition": "Unexpected source/authority drift, unrelated doctor failure or scope expansion",
+  "reopenCondition": "New concrete evidence and independent review within authorized setup scope",
+  "disposition": "REPAIR_ADMITTED",
+  "admittedAction": {
+    "kind": "IMPLEMENT",
+    "selected": [
+      "WSA1",
+      "WSA2",
+      "WSA3",
+      "WSA4"
+    ],
+    "owner": "Terra activation worker",
+    "output": "scripts/check_project_workspace.py and focused adapter verification plus synchronized setup records",
+    "packet": {
+      "path": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+      "sha256": "2e4f5a18ea84a145b2ea49cbfd20aef7af4d11b2f5c4d8392216a2fb5f350d07"
+    }
+  },
+  "review": {
+    "reviewer": "Sol activation_design_review",
+    "decision": "ACCEPTED",
+    "evidence": [
+      {
+        "path": "docs/reviews/activation-history/repair-design-review.md",
+        "sha256": "e6c646079a3adb2788568b4b414dcfc148566d1cf543c38277f84227bee5b91d"
+      }
+    ]
+  }
+}

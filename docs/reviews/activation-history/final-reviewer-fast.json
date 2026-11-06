@@ -1,0 +1,109 @@
+{
+  "exitCode": 0,
+  "phase": "reviewer-fast",
+  "range": "RANGE_RESOLVED mode=RANGE base=cc460d703401590ebac92ac9d0e4b8bc33fc4a9d head=cc460d703401590ebac92ac9d0e4b8bc33fc4a9d candidates=109 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "RANGE_RESOLVED mode=RANGE base=cc460d703401590ebac92ac9d0e4b8bc33fc4a9d head=cc460d703401590ebac92ac9d0e4b8bc33fc4a9d candidates=109 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "docs/work_orders/README.md: not a work-order candidate: no Status declaration, work-order name, docType or contract heading; unchecked=closeability_contract",
+        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md: status CLOSED_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract"
+      ],
+      "ok": true,
+      "outcome": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "every candidate is explicitly not active; closeability contract was not checked"
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROUTE-01"
+      ],
+      "controlId": "CVF-DG-ROUTE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROLE-01"
+      ],
+      "controlId": "CVF-DG-ROLE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/reviews/activation-history/repair-design-review-2.md, docs/reviews/activation-history/repair-design-review.md, docs/reviews/activation-history/review-upgrade-1.4.md, docs/reviews/workspace-activation-review.md",
+        "docs/reviews/README.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/activation-history/prior-repair-outcome.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/activation-history/repair-causal-audit.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/learnings/LEARNING_RECORD_TEMPLATE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/learnings/README.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-CLAIM-01"
+      ],
+      "controlId": "CVF-DG-CLAIM-01",
+      "findings": [],
+      "notes": [
+        "0 explicit claim line(s) and 12 document(s) scanned"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/roadmaps/WORKSPACE_ACTIVATION.md, docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+        "mechanical joins only; Local owns semantic acceptance"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    }
+  ]
+}

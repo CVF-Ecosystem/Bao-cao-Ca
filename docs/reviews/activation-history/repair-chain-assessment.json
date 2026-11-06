@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "cvf.repairChainAssessment@1.0.0",
+  "milestoneId": "WSA",
+  "history": [
+    {
+      "path": "docs/reviews/activation-history/repair-attempt-1.json",
+      "sha256": "23546521bbfcdc90afce29175d537711e5b27fc43ed8bb08a507540e4776e161"
+    },
+    {
+      "path": "docs/reviews/activation-history/repair-attempt-2.json",
+      "sha256": "a2f2e545b2b3b69c373f787be5df8c31a34686640aa1d71616adfcfc478b57ec"
+    }
+  ],
+  "affectedCriteria": [
+    "WSA1",
+    "WSA2",
+    "WSA3",
+    "WSA4"
+  ],
+  "failureBoundary": "Old doctor also rejects registry1.1 shape; first adapter correctly stopped at its narrower compatibility boundary",
+  "observedEvidence": [
+    {
+      "path": "docs/reviews/activation-history/prior-repair-outcome.md",
+      "sha256": "871af2d4c22f830e1e28c88a85c8803f149ee468fe0b79872095f4ac2333b596"
+    },
+    {
+      "path": "docs/reviews/activation-history/repair-causal-audit.md",
+      "sha256": "3caf5ec79c5586cdec8f8c7d7440e89d0211d3c889720dbd7f19c5d8adf56974"
+    },
+    {
+      "path": "docs/reviews/activation-history/legacy-doctor-profile-schema.txt",
+      "sha256": "909a5e2ce49e68e3d4e8bab99bd3498554682a470c7a28ecbd205e6eda0a7acb"
+    }
+  ],
+  "causeStatus": "PROVEN",
+  "causeOrHypothesis": "Core1.2 installation and milestone validators are source/schema incompatible with the reviewed1.4 bundle and project repair registry",
+  "remainingChain": [
+    "Bind reviewed real action and control inventory",
+    "Run exact pre-dispatch and review individual results",
+    "Create receipt and pass admission",
+    "Implement compatibility adapter without changing inherited controls",
+    "Verify positive and fail-closed paths and synchronize continuity"
+  ],
+  "discriminator": {
+    "question": "Does the complete28-row legacy doctor fail only at INST LOCK_INVALID, optionally plus the exact paired current WSA COV_OBJECT_SHAPE diagnostics, while all current1.4 bootstrap controls and bound action admission pass?",
+    "expected": "Legacy27/28 with INST alone, or26/28 with INST and exact COV_OBJECT_SHAPE on both named current WSA documents; no other failure or diagnostic; current1.4 bootstrap passes",
+    "budgetMinutes": 45
+  },
+  "correctiveAction": "Accept only independently observed two legacy version diagnostics, preserve all28 checks, verify full current1.4 bootstrap and exact action admission; all other failures reject",
+  "owner": "project orchestrator",
+  "cumulativeMinutes": "UNKNOWN",
+  "additionalCeilingMinutes": 45,
+  "stopCondition": "Unexpected source/authority drift, unrelated doctor failure or scope expansion",
+  "reopenCondition": "New concrete evidence and independent review within authorized setup scope",
+  "disposition": "REPAIR_ADMITTED",
+  "admittedAction": {
+    "kind": "IMPLEMENT",
+    "selected": [
+      "WSA1",
+      "WSA2",
+      "WSA3",
+      "WSA4"
+    ],
+    "owner": "Terra activation worker",
+    "output": "scripts/check_project_workspace.py and focused adapter verification plus synchronized setup records",
+    "packet": {
+      "path": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+      "sha256": "0f9fd037482f7819d11a4d2d7a2105c38e57654efbe2da5ff82679bbd3132146"
+    }
+  },
+  "review": {
+    "reviewer": "Sol activation_design_review",
+    "decision": "ACCEPTED",
+    "evidence": [
+      {
+        "path": "docs/reviews/activation-history/repair-design-review.md",
+        "sha256": "e6c646079a3adb2788568b4b414dcfc148566d1cf543c38277f84227bee5b91d"
+      },
+      {
+        "path": "docs/reviews/activation-history/repair-design-review-2.md",
+        "sha256": "3055f5233bed950106bf26fc988a2875519f6df00b60b88c1131036b9f7bab7b"
+      }
+    ]
+  }
+}

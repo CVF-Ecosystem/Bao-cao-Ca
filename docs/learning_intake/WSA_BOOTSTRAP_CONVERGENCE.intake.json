@@ -1,0 +1,47 @@
+{
+  "acceptance": "NOT_ACCEPTED_GENERATION_ONLY",
+  "candidateControl": "Existing downstream migration and project application standard, no new mechanism proposed",
+  "chainJoins": [
+    {
+      "earliestControlPoint": "Project intake and acceptance mapping before dependent build",
+      "gap": "Installation was treated as a stopping point without current action assessment and compatibility verification",
+      "join": "profile delivery to action-specific project adoption"
+    }
+  ],
+  "claimLimits": "Local mechanical evidence only; no parent acceptance, hosted CI, live provider proof or product acceptance; sourceSha is baseline and setup is current worktree.",
+  "contentSha256": "764119fd9e8559f1913c9e794d31941c44c12d467b12a6f083805bac964178f7",
+  "dedupCandidates": [
+    "docs/reference/downstream_gate_profile/CVF_DOWNSTREAM_GATE_PROFILE_MIGRATION.md",
+    "docs/reference/downstream_gate_profile/CVF_PROJECT_DEVELOPMENT_APPLICATION_STANDARD.md"
+  ],
+  "defectClass": "ORCHESTRATOR_PACKET_GAP",
+  "expected": "Apply existing migration and project-development standards through one bounded real action with independently reviewed control evidence and final local developer acceptance.",
+  "findingId": "WSA_BOOTSTRAP_CONVERGENCE",
+  "learningLane": "GOVERNANCE_CONTROL_PLANE",
+  "negativeEvidence": [
+    {
+      "description": "Prior incomplete repair and missing receipt retained",
+      "locator": "docs/reviews/activation-history/prior-repair-outcome.md"
+    },
+    {
+      "description": "Original old doctor failed at new lock and registry schema while baseline checks passed",
+      "locator": "docs/reviews/activation-history/legacy-doctor-profile-schema.txt"
+    }
+  ],
+  "observed": "Initial setup delivered files and upgraded the profile but left current action receipt and compatible doctor unresolved. Evidence belongs to worktree, not the baseline commit.",
+  "parentDisposition": "PENDING_PARENT_ADMISSION",
+  "parentLinks": {
+    "admissionRecord": null,
+    "checker": null,
+    "goldenProof": null,
+    "workOrder": null
+  },
+  "parentOwner": "docs/reference/CVF_FINDING_TO_GOVERNANCE_LEARNING_TRIGGER_STANDARD.md",
+  "profileId": "cvf.downstreamGateProfile@1.4.0",
+  "proposedDisposition": "RULE_EXISTS",
+  "schemaVersion": "cvf.downstreamFindingIntake@1.0.0",
+  "sourceClaimStatus": "UNVERIFIED_UNTIL_PROJECT_EVIDENCE_IS_SEPARATELY_ADMITTED",
+  "sourceProject": "SO_BAO_CAO_CA_V1_9",
+  "sourceSha": "cc460d703401590ebac92ac9d0e4b8bc33fc4a9d",
+  "title": "Complete action assessment and doctor compatibility before setup closure"
+}

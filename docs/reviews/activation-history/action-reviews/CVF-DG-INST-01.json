@@ -1,0 +1,21 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+    "sha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e",
+    "criteria": [
+      "WSA1",
+      "WSA2",
+      "WSA3",
+      "WSA4"
+    ]
+  },
+  "controlId": "CVF-DG-INST-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Sol activation_design_review",
+  "authority": "User-authorized bounded project workspace activation repair, independently reviewed under WO_WORKSPACE_ACTIVATION.md",
+  "decision": "ACCEPTED",
+  "explanation": "Observed PASS validates installed profile, runner, module bundle and reviewed workflow pins. Independent source comparison resolves AUTHORIZED_SUPPLEMENTAL while preserving the separate public Core pin.",
+  "observedEvidence": "docs/reviews/activation-history/predispatch-before-receipt.json",
+  "configuredInvocation": "docs/reviews/activation-history/configured-predispatch.json",
+  "limits": "The original invocation overall exitCode is 2: ACT alone failed because its receipt was missing. Reviewer independently repeated that result. This accepts individual observed mechanical scope only; it does not establish dispatch PASS, AI governance behavior, hosted CI or product acceptance."
+}

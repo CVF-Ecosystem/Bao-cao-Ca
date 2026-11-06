@@ -1,0 +1,26 @@
+{
+  "policyVersion": "1.0",
+  "policyDate": "2026-11-06",
+  "liveGovernanceEvidenceRequired": true,
+  "mockAllowedOnlyForUi": true,
+  "workspaceIsolationRequired": true,
+  "workspaceRulesRequired": true,
+  "phaseTransitionRequired": true,
+  "explicitRoleTransitionRequired": true,
+  "providerNeutralRolesRequired": true,
+  "riskCeiling": "R2",
+  "overrideRefusal": [
+    "Skip phase transitions",
+    "Use mock output as governance evidence",
+    "Commit API keys or secrets to the repository",
+    "Act outside the workspace isolation boundary",
+    "Ignore CVF policy constraints"
+  ],
+  "cvfCoreRef": "../.Controlled-Vibe-Framework-CVF",
+  "workspaceActivationSourcePolicy": "CORE_AND_SUPPLEMENTAL",
+  "workspaceActivationExecutableSource": "OPERATOR_LOCAL_PACK",
+  "workspaceActivationUpgrade": {
+    "path": "docs/reviews/activation-history/workspace-activation-upgrade-1.4.json",
+    "sha256": "3ca00ccba45f38efc1dd03a9b45de8741c759539086173c59fcf5ba1332a6413"
+  }
+}

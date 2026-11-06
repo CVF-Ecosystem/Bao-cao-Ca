@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "cvf.repairAttempt@1.0.0",
+  "milestoneId": "WSA",
+  "criterionIds": [
+    "WSA1",
+    "WSA2",
+    "WSA3",
+    "WSA4"
+  ],
+  "trancheId": "workspace-adapter-first-stop",
+  "activity": "REPAIR",
+  "result": "UNMET",
+  "proofState": "UNPROVED",
+  "elapsedMinutes": "UNKNOWN",
+  "evidence": [
+    {
+      "path": "docs/reviews/activation-history/legacy-doctor-profile-schema.txt",
+      "sha256": "909a5e2ce49e68e3d4e8bab99bd3498554682a470c7a28ecbd205e6eda0a7acb"
+    }
+  ]
+}

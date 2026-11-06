@@ -1,0 +1,23 @@
+{
+  "cwd": ".",
+  "command": [
+    "python",
+    "-B",
+    "scripts/cvf_gates/cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "pre-dispatch",
+    "--project-root",
+    ".",
+    "--packet",
+    "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+    "--json",
+    "--expect-profile-sha256",
+    "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+    "--expect-runner-sha256",
+    "6b608a8a138f54b5dfc0462f5845fcf6a5bc916270ada5b0bf6d6909a153b3bd",
+    "--expect-bundle-sha256",
+    "234e1cccd3a5f69ce2809a515c802c67825cacefe92435290068b343f14901c3"
+  ],
+  "purpose": "Exact pinned pre-dispatch command for this action; receipt absence is a failing assessment preview, never a dispatch pass"
+}

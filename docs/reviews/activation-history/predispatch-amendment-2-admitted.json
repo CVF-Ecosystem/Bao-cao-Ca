@@ -1,0 +1,89 @@
+{
+  "exitCode": 0,
+  "phase": "pre-dispatch",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=cc460d703401590ebac92ac9d0e4b8bc33fc4a9d candidates=85 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=cc460d703401590ebac92ac9d0e4b8bc33fc4a9d candidates=85 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar",
+        "closeability_contract"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+        "docs/work_orders/README.md: not a work-order candidate: no Status declaration, work-order name, docType or contract heading; unchecked=closeability_contract"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROUTE-01"
+      ],
+      "controlId": "CVF-DG-ROUTE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/reviews/activation-history/archive/admitted-work-order-1.md, docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/roadmaps/WORKSPACE_ACTIVATION.md, docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+        "mechanical joins only; Local owns semantic acceptance"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-ACT-01",
+      "findings": [],
+      "notes": [
+        "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    }
+  ]
+}

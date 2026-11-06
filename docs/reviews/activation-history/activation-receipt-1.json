@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "cvf.workspaceActivation@1.0.0",
+  "identity": {
+    "projectRootSha256": "320d7a94c6415c596972609e3ed4fc87cc3754f690b2640bc75bb444401f3fc7",
+    "manifestSha256": "79b52ce79a234c0a2f376a94168aedd7c7f4bf71ee2602fab3abc974cc07deab",
+    "policySha256": "309a92bc37799aa80bf7406067ef0157ca8d41dba9bc195deb0fb9c748915909",
+    "lockSha256": "f47471cb35d819cdfb88a736911bb6ded3096f4fa1194c5e2e97157cf30c8db7",
+    "coreCommit": "c4c8767ac8861854f40d466ba338ffd11eb9558e",
+    "profileId": "cvf.downstreamGateProfile@1.4.0",
+    "profileSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+    "deliveryFingerprint": "1af1a305518f3ec0af0b47d77c1dfe0d1fa7f72076cfaed252238a670b18d9a5",
+    "sourceRoute": "AUTHORIZED_SUPPLEMENTAL"
+  },
+  "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
+  "reviewer": "Sol activation_design_review",
+  "authority": "User request and independently reviewed project-owned upgrade and repair admission",
+  "actions": [
+    {
+      "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+      "sha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e",
+      "criteria": [
+        "WSA1",
+        "WSA2",
+        "WSA3",
+        "WSA4"
+      ]
+    }
+  ],
+  "supplemental": [
+    {
+      "id": "SUPPLEMENTAL_ASSESSMENT",
+      "mode": "INSPECTED",
+      "sourceSha256": "2544c83270e18b1f61e48d9631d9df3c28e0159a14807835c4e4e0000f416ab5",
+      "owner": "project orchestrator",
+      "actions": [
+        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+      ],
+      "disposition": "ASSESSED",
+      "reviewEvidence": [
+        {
+          "path": "docs/reviews/activation-history/action-reviews/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "3c4af234fe49d40b6059414f3145b4b6f3c1be7e5c7c485e59f66acd82fd94b9"
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "id": "CVF-DG-INST-01",
+      "owner": "project orchestrator",
+      "authority": "User-authorized work order and independent control review",
+      "reason": "Observed PASS validates installed profile, runner, module bundle and reviewed workflow pins. Independent source comparison resolves AUTHORIZED_SUPPLEMENTAL while preserving the separate public Core pin.",
+      "actions": [
+        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+      ],
+      "criteria": [
+        "WSA1",
+        "WSA2",
+        "WSA3",
+        "WSA4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/activation-history/predispatch-before-receipt.json",
+        "sha256": "7c1939efae36b00e8c8dd578f37c24a18ebb6b2b6d2e31f8c7319f42e9092f7a"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+          "sha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e",
+          "criteria": [
+            "WSA1",
+            "WSA2",
+            "WSA3",
+            "WSA4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/activation-history/configured-predispatch.json",
+        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/activation-history/action-reviews/CVF-DG-INST-01.json",
+          "sha256": "3e5f8e5427f6f7525be3e2ae5f4a96bd8701fea4c0b66dd832c9aa45af9c224c"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-CONT-01",
+      "owner": "project orchestrator",
+      "authority": "User-authorized work order and independent control review",
+      "reason": "Observed PASS joins current WORK_ORDER state, memory, handoff and implementation truth. This does not establish host loading or universal agent compliance.",
+      "actions": [
+        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+      ],
+      "criteria": [
+        "WSA1",
+        "WSA2",
+        "WSA3",
+        "WSA4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/activation-history/predispatch-before-receipt.json",
+        "sha256": "7c1939efae36b00e8c8dd578f37c24a18ebb6b2b6d2e31f8c7319f42e9092f7a"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+          "sha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e",
+          "criteria": [
+            "WSA1",
+            "WSA2",
+            "WSA3",
+            "WSA4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/activation-history/configured-predispatch.json",
+        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/activation-history/action-reviews/CVF-DG-CONT-01.json",
+          "sha256": "b4e45761affb0b6036ad3fb4ac642920d527e7618e10243ef9489c7c77f63815"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-RANGE-01",
+      "owner": "project orchestrator",
+      "authority": "User-authorized work order and independent control review",
+      "reason": "Observed PASS resolves genuine worktree scope against HEAD cc460d703401590ebac92ac9d0e4b8bc33fc4a9d with 61 candidates and no deletions; it is bounded invocation scope, not repository-wide continuous checking.",
+      "actions": [
+        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+      ],
+      "criteria": [
+        "WSA1",
+        "WSA2",
+        "WSA3",
+        "WSA4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/activation-history/predispatch-before-receipt.json",
+        "sha256": "7c1939efae36b00e8c8dd578f37c24a18ebb6b2b6d2e31f8c7319f42e9092f7a"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+          "sha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e",
+          "criteria": [
+            "WSA1",
+            "WSA2",
+            "WSA3",
+            "WSA4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/activation-history/configured-predispatch.json",
+        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/activation-history/action-reviews/CVF-DG-RANGE-01.json",
+          "sha256": "f207bc5674c36ac823f63ec138d6dee77edbe958ad077976605533285dddda22"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-APPL-01",
+      "owner": "project orchestrator",
+      "authority": "User-authorized work order and independent control review",
+      "reason": "Observed PASS checks this exact DISPATCH_READY work order status grammar and gate-to-role closeability contract. README was explicitly excluded as a non-work-order candidate.",
+      "actions": [
+        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+      ],
+      "criteria": [
+        "WSA1",
+        "WSA2",
+        "WSA3",
+        "WSA4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/activation-history/predispatch-before-receipt.json",
+        "sha256": "7c1939efae36b00e8c8dd578f37c24a18ebb6b2b6d2e31f8c7319f42e9092f7a"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+          "sha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e",
+          "criteria": [
+            "WSA1",
+            "WSA2",
+            "WSA3",
+            "WSA4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/activation-history/configured-predispatch.json",
+        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/activation-history/action-reviews/CVF-DG-APPL-01.json",
+          "sha256": "94d72cdf4c09bb75f764cbc6d47752f734345afedf9ce0542f82a05ec6072527"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-ROUTE-01",
+      "owner": "project orchestrator",
+      "authority": "User-authorized work order and independent control review",
+      "reason": "Observed PASS evaluates the exact INITIAL action; it is not a REWORK return and does not require a reviewer-local repair exception envelope. Future REWORK requires reassessment.",
+      "actions": [
+        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+      ],
+      "criteria": [
+        "WSA1",
+        "WSA2",
+        "WSA3",
+        "WSA4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/activation-history/predispatch-before-receipt.json",
+        "sha256": "7c1939efae36b00e8c8dd578f37c24a18ebb6b2b6d2e31f8c7319f42e9092f7a"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+          "sha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e",
+          "criteria": [
+            "WSA1",
+            "WSA2",
+            "WSA3",
+            "WSA4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/activation-history/configured-predispatch.json",
+        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/activation-history/action-reviews/CVF-DG-ROUTE-01.json",
+          "sha256": "f97d1e14b9534ec994edd9455e57b80662df567820d32ed209358dea14d3522b"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-COV-01",
+      "owner": "project orchestrator",
+      "authority": "User-authorized work order and independent control review",
+      "reason": "Observed PASS joins the four WSA criteria, full rows, authority section hash, registry1.1 failed-repair history and accepted exact corrective action. Semantic review accepts the bounded setup scope; application product readiness remains outside it.",
+      "actions": [
+        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+      ],
+      "criteria": [
+        "WSA1",
+        "WSA2",
+        "WSA3",
+        "WSA4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/activation-history/predispatch-before-receipt.json",
+        "sha256": "7c1939efae36b00e8c8dd578f37c24a18ebb6b2b6d2e31f8c7319f42e9092f7a"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+          "sha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e",
+          "criteria": [
+            "WSA1",
+            "WSA2",
+            "WSA3",
+            "WSA4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/activation-history/configured-predispatch.json",
+        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/activation-history/action-reviews/CVF-DG-COV-01.json",
+          "sha256": "f2d024c03ca48c343d5ad58d9790a1be8b2ce6a4d498d32f239dbdac9e3c0ccc"
+        }
+      ]
+    }
+  ]
+}

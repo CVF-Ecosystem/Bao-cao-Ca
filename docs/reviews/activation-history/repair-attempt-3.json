@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "cvf.repairAttempt@1.0.0",
+  "milestoneId": "WSA",
+  "criterionIds": [
+    "WSA1",
+    "WSA2",
+    "WSA3",
+    "WSA4"
+  ],
+  "trancheId": "workspace-local-setup-accepted",
+  "activity": "REPAIR",
+  "result": "MET",
+  "proofState": "FULL_FLOW_VERIFIED",
+  "elapsedMinutes": "UNKNOWN",
+  "evidence": [
+    {
+      "path": "docs/reviews/activation-history/adapter-reviewed-full-flow.json",
+      "sha256": "1a4fe15707dfd231dadf77a2035c0d3c2ac75fd8c80f6b719e4b9720a8cd9b6d"
+    },
+    {
+      "path": "docs/reviews/activation-history/adapter-reviewed-tests.txt",
+      "sha256": "d3865f0faae762337df504480fca945eeb18214a7fe1995eb3205f2a7c5edb73"
+    },
+    {
+      "path": "docs/reviews/workspace-activation-review.md",
+      "sha256": "549cfe8f4bcdd9a22846a3b0a9eece52caf4b77b46509d0c3a950602dfb9ece7"
+    }
+  ]
+}

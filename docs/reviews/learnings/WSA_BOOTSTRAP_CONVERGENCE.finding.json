@@ -1,0 +1,34 @@
+{
+  "findingId": "WSA_BOOTSTRAP_CONVERGENCE",
+  "title": "Complete action assessment and doctor compatibility before setup closure",
+  "sourceProject": "SO_BAO_CAO_CA_V1_9",
+  "sourceSha": "cc460d703401590ebac92ac9d0e4b8bc33fc4a9d",
+  "observed": "Initial setup delivered files and upgraded the profile but left current action receipt and compatible doctor unresolved. Evidence belongs to worktree, not the baseline commit.",
+  "expected": "Apply existing migration and project-development standards through one bounded real action with independently reviewed control evidence and final local developer acceptance.",
+  "negativeEvidence": [
+    {
+      "locator": "docs/reviews/activation-history/prior-repair-outcome.md",
+      "description": "Prior incomplete repair and missing receipt retained"
+    },
+    {
+      "locator": "docs/reviews/activation-history/legacy-doctor-profile-schema.txt",
+      "description": "Original old doctor failed at new lock and registry schema while baseline checks passed"
+    }
+  ],
+  "chainJoins": [
+    {
+      "join": "profile delivery to action-specific project adoption",
+      "gap": "Installation was treated as a stopping point without current action assessment and compatibility verification",
+      "earliestControlPoint": "Project intake and acceptance mapping before dependent build"
+    }
+  ],
+  "defectClass": "ORCHESTRATOR_PACKET_GAP",
+  "learningLane": "GOVERNANCE_CONTROL_PLANE",
+  "proposedDisposition": "RULE_EXISTS",
+  "candidateControl": "Existing downstream migration and project application standard, no new mechanism proposed",
+  "claimLimits": "Local mechanical evidence only; no parent acceptance, hosted CI, live provider proof or product acceptance; sourceSha is baseline and setup is current worktree.",
+  "dedupCandidates": [
+    "docs/reference/downstream_gate_profile/CVF_DOWNSTREAM_GATE_PROFILE_MIGRATION.md",
+    "docs/reference/downstream_gate_profile/CVF_PROJECT_DEVELOPMENT_APPLICATION_STANDARD.md"
+  ]
+}

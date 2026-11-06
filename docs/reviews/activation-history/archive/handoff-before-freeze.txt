@@ -1,0 +1,55 @@
+ÃƒÂ¯Ã‚Â»Ã‚Â¿# Agent Handoff V1
+
+Status: ACTIVE
+
+## Current State
+
+- Project: SO_BAO_CAO_CA_V1_9
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: ORCHESTRATOR
+- Next allowed move: Complete independent setup review and final action assessment, then freeze accepted local setup.
+- Parked operator checkpoint: none
+
+## Seven-Step Control Chain
+
+`INTAKE -> DESIGN -> SPEC -> WORK_ORDER -> BUILD -> REVIEW -> FREEZE`
+
+This chain preserves seven governed decisions. A roadmap tranche may inherit
+accepted evidence and enter at the earliest still-open stage; it does not need
+to recreate all seven artifacts from zero. Record the inheritance and require
+evidence for each applicable transition. A transition gate is not necessarily
+a standalone independent-review artifact. `REVIEW` is the formal result
+evaluation before `FREEZE`.
+
+## Role Assignment
+
+Roles are responsibilities, not provider names. One agent may hold several
+roles only when each transition is recorded. Available roles are ORCHESTRATOR,
+SPEC_AUTHOR, WORK_ORDER_AUTHOR, IMPLEMENTATION_WORKER, REVIEWER, REPAIR_WORKER,
+CLOSER, COMMIT_STEWARD, and SESSION_SYNC_STEWARD. High-risk work requires an
+independent reviewer.
+
+## Completed
+
+- Project governance bootstrap created the initial continuity surfaces.
+
+## Open Work
+
+- Request: apply workspace rules to this existing shift-report project. Bootstrap and a project-specific control mapping were prepared; see `tai_lieu/ROADMAP_SAU_V1_9.md` section 10. No application source or real data was changed.
+- Profile 1.4 was explicitly installed from the verified operator-local delivery. Independent bounded review and upgrade authority are in `docs/reviews/activation-history/`; original profile 1.2 lock and workflow are preserved there. Public Core pin remains unchanged. The policy selects the reviewed supplemental route.
+- Activation comparison now reaches `AUTHORIZED_SUPPLEMENTAL` and returns `REVIEW_REQUIRED`: `.cvf/workspace-activation.json` is absent. A real action-specific receipt requires an actual work-order packet, complete control assessments and reviewed invocation evidence. Do not fabricate one for hypothetical future work. Before dependent dispatch, create and review the appropriate action and receipt, and admit milestone coverage.
+- The old pinned public-Core doctor now fails 27/28 with `LOCK_INVALID` because it validates the prior 1.2 profile; this is an unresolved doctor compatibility limitation, not a pass. The supplemental trusted bootstrap runner passed installation and continuity; activation failed for the missing receipt, and coverage was not applicable. Hosted CI and live governance are not proven. Reconcile the doctor requirement under project authority before dependent material work.
+- Existing roadmap and prior product evidence remain authoritative; no application source or actual data was changed.
+- Startup read model absent: BOOTSTRAP_MIGRATION_PENDING (non-blocking).
+
+## Claim Boundary
+
+This handoff records initial project state only. It does not claim that any
+feature, test, release, deployment, or provider integration is complete.
+
+## Activation repair continuation
+
+User requested autonomous completion. INTAKE, DESIGN and SPEC are captured in docs/roadmaps/WORKSPACE_ACTIVATION.md; bounded WORK_ORDER is docs/work_orders/WO_WORKSPACE_ACTIVATION.md. Failed previous repair is enrolled with UNKNOWN prior elapsed effort. Independent causal design review is required before successor implementation.
+
+Dispatch acknowledgment: exact action admitted at pre-dispatch, all seven mapped controls PASS, immutable evidence docs/reviews/activation-history/predispatch-admitted.json. Worker may BUILD within the reviewed work order; orchestrator keeps control of admission and closure. Material-SHA marker: pending authorized local governance commit.

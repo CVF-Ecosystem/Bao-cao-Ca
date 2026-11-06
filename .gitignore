@@ -15,3 +15,5 @@ build/
 dist/
 *.spec
 SO_BAO_CAO_CA.exe
+.cvf/local-binding.json
+.cvf/runtime/

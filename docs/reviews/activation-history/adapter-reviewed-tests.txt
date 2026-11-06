@@ -1,0 +1,12 @@
+test_activation_receipt_and_source_fail_closed (kiem_thu.test_project_workspace_checker.CheckTests.test_activation_receipt_and_source_fail_closed) ... ok
+test_current_control_inventory_and_coherence (kiem_thu.test_project_workspace_checker.CheckTests.test_current_control_inventory_and_coherence) ... ok
+test_exact_legacy_and_variants (kiem_thu.test_project_workspace_checker.CheckTests.test_exact_legacy_and_variants) ... ok
+test_extra_status_rows_and_conflicting_summaries (kiem_thu.test_project_workspace_checker.CheckTests.test_extra_status_rows_and_conflicting_summaries) ... ok
+test_timeout_and_bootstrap_failure (kiem_thu.test_project_workspace_checker.CheckTests.test_timeout_and_bootstrap_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 4.007s
+
+OK
+
+Exit code: 0

@@ -1,3 +1,8 @@
 * text=auto eol=lf
 *.xlsx binary
 *.db binary
+
+# Activation pins bind raw bytes; preserve these records across Git checkout.
+.cvf/*.json -text
+docs/work_orders/*.md -text
+docs/reviews/activation-history/** -text

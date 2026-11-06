@@ -1,0 +1,119 @@
+# Workspace activation repair work order
+
+Status: DISPATCH_READY
+docType: work_order
+dispatchKind: INITIAL
+Risk: R2
+
+## Scope and acceptance
+
+User authorized applying workspace rules and resolving all remaining setup blockers. Inherit the reviewed 1.4 installation and four WSA criteria. Worker may add scripts/check_project_workspace.py and a focused verification script under kiem_thu/. Orchestrator owns .cvf receipts, policy, continuity, docs/ registries, and roadmap setup notes. Inherited scripts/cvf_gates, shared Core/workspace, application source and actual data are excluded. No network deployment or provider call is authorized by this work order.
+
+Keep original doctor output/exit and replace only the exact documented obsolete installation comparison after independently verifying the supplemental source. Fail on unexpected failures, missing checks, source/hash mismatches or missing action receipt. Preserve all original core freshness, pin, kit, catalog and continuity checks. Validate a positive path plus unrelated doctor failure, tampered source/receipt and unexpected legacy output without mutating protected files.
+
+Budget: 45 minutes. Stop on unexpected drift or unrelated failures; return to orchestrator with concrete evidence. No commit required from worker.
+
+## Gate-To-Role Closeability Contract
+
+closeabilityContractVersion: cvf.gate-role-closeability@1.0.0
+closeabilityDisposition: CLOSEABLE
+returnTimeRecheck: REQUIRED_BEFORE_REPAIR
+implementationTopologyPolicy: BOUNDED_PATH_FAMILIES
+foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
+
+| gateId | mustPassBy | repairOwner | repairPhase | mutationSurface | topology | commitOwner | commitPhase | dependsOn |
+|---|---|---|---|---|---|---|---|---|
+| authorization_review | PRE_DISPATCH | project-orchestrator | PRE_DISPATCH | project governance records and project doctor | BOUNDED_PATH_FAMILIES | project-orchestrator | MATERIAL_COMMIT | NONE |
+| pre_dispatch_gate | PRE_DISPATCH | project-orchestrator | PRE_DISPATCH | project governance records and project doctor | BOUNDED_PATH_FAMILIES | project-orchestrator | MATERIAL_COMMIT | authorization_review |
+| dispatch_continuity | IMPLEMENTATION | session-sync-steward | IMPLEMENTATION | CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md material-SHA marker | EXACT_PATHS | session-sync-steward | DISPATCH_CONTINUITY_COMMIT | pre_dispatch_gate |
+| focused_checker_tests | WORKER_RETURN | project-orchestrator | WORKER_RETURN | project governance records and project doctor | BOUNDED_PATH_FAMILIES | project-orchestrator | MATERIAL_COMMIT | dispatch_continuity |
+| adif_integrity | WORKER_RETURN | project-orchestrator | WORKER_RETURN | project governance records and project doctor | BOUNDED_PATH_FAMILIES | project-orchestrator | MATERIAL_COMMIT | focused_checker_tests |
+| pre_implementation_autorun | IMPLEMENTATION | project-orchestrator | IMPLEMENTATION | project governance records and project doctor | BOUNDED_PATH_FAMILIES | project-orchestrator | MATERIAL_COMMIT | dispatch_continuity |
+| worker_return_fast | WORKER_RETURN | project-orchestrator | WORKER_RETURN | project governance records and project doctor | BOUNDED_PATH_FAMILIES | project-orchestrator | MATERIAL_COMMIT | focused_checker_tests |
+| reviewer_fast | REVIEW | project-orchestrator | REVIEW | project governance records and project doctor | BOUNDED_PATH_FAMILIES | project-orchestrator | MATERIAL_COMMIT | worker_return_fast |
+| pre_commit | PRE_MATERIAL_COMMIT | project-orchestrator | PRE_MATERIAL_COMMIT | project governance records and project doctor | BOUNDED_PATH_FAMILIES | project-orchestrator | MATERIAL_COMMIT | reviewer_fast |
+| terminal_completion_review | POST_MATERIAL | project-orchestrator | POST_MATERIAL | project governance records and project doctor | BOUNDED_PATH_FAMILIES | project-orchestrator | MATERIAL_COMMIT | pre_commit |
+| continuity | CONTINUITY_COMMIT | session-sync-steward | CONTINUITY_COMMIT | project governance records and project doctor | BOUNDED_PATH_FAMILIES | session-sync-steward | CONTINUITY_COMMIT | terminal_completion_review |
+| committed_range_closure | POST_MATERIAL_CLOSURE | project-orchestrator | POST_MATERIAL_CLOSURE | project governance records and project doctor | BOUNDED_PATH_FAMILIES | project-orchestrator | MATERIAL_COMMIT | continuity |
+
+## Milestone contribution
+
+```cvf-milestone-coverage-json
+{
+  "schemaVersion": "cvf.milestoneCoverage@1.0.0",
+  "authority": {
+    "path": "docs/roadmaps/WORKSPACE_ACTIVATION.md",
+    "heading": "## Acceptance criteria",
+    "sha256": "873eb30fe2517fab1f15d033472dc34b19dd90d9fc4c67f9b4f548d3f55bc5cd"
+  },
+  "milestone": {
+    "id": "WSA",
+    "consumer": "Project development team",
+    "outcome": "Repeatable local mechanical workspace setup with honest action-specific activation",
+    "checkpoint": {
+      "trigger": "Before next application implementation dispatch",
+      "owner": "project orchestrator",
+      "decision": "Accept this bounded setup only after compatibility and activation checks pass"
+    }
+  },
+  "phase": "DISPATCH",
+  "action": {
+    "kind": "IMPLEMENT",
+    "selected": [
+      "WSA1",
+      "WSA2",
+      "WSA3",
+      "WSA4"
+    ],
+    "owner": "Terra activation worker",
+    "output": "scripts/check_project_workspace.py and focused adapter verification plus synchronized setup records",
+    "budgetMinutes": 45,
+    "stop": "Stop on unexpected Core/source/authority drift, unrelated doctor failures or scope expansion",
+    "next": "Independent review, exact action receipt, developer verification and continuation handoff"
+  },
+  "rows": [
+    {
+      "id": "WSA1",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Complete project activation repair and independently verify current evidence",
+      "owner": "project orchestrator",
+      "destination": "docs/reviews/workspace-activation-review.md",
+      "evidence": []
+    },
+    {
+      "id": "WSA2",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Complete project activation repair and independently verify current evidence",
+      "owner": "project orchestrator",
+      "destination": "docs/reviews/workspace-activation-review.md",
+      "evidence": []
+    },
+    {
+      "id": "WSA3",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Complete project activation repair and independently verify current evidence",
+      "owner": "project orchestrator",
+      "destination": "docs/reviews/workspace-activation-review.md",
+      "evidence": []
+    },
+    {
+      "id": "WSA4",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Complete project activation repair and independently verify current evidence",
+      "owner": "project orchestrator",
+      "destination": "docs/reviews/workspace-activation-review.md",
+      "evidence": []
+    }
+  ],
+  "supportingWork": [],
+  "conclusions": {
+    "tranche": "PENDING",
+    "trancheSummary": "Current repair requires implementation and independent verification",
+    "trancheEvidence": [],
+    "product": "PENDING",
+    "productSummary": "Application roadmap and product acceptance are outside this setup outcome",
+    "acceptance": [],
+    "owner": "project orchestrator"
+  }
+}
+```

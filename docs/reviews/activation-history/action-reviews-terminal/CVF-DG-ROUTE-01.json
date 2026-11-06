@@ -1,0 +1,21 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
+    "sha256": "96080f7e3f3946cd40c7a927d736db740f1dc17ab1c5531fbf36618db070ccc4",
+    "criteria": [
+      "WSA1",
+      "WSA2",
+      "WSA3",
+      "WSA4"
+    ]
+  },
+  "controlId": "CVF-DG-ROUTE-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Sol activation_design_review",
+  "authority": "User-authorized bounded WSA setup, independent implementation acceptance and settled terminal REVIEW assessment",
+  "decision": "ACCEPTED",
+  "explanation": "Actual terminal routing PASS checks settled original INITIAL order; no new REWORK dispatch or reviewer-local exception asserted.",
+  "observedEvidence": "docs/reviews/activation-history/predispatch-terminal-before-receipt.json",
+  "configuredInvocation": "docs/reviews/activation-history/configured-predispatch.json",
+  "limits": "Terminal preview overall exitCode2 retained: ACT alone fails stale old action binding. Reviewer independently repeated fivePASS, APPL explicitN/A and ACTFAIL. This accepts individual observed scope for settled REVIEW only. Require final receipt rebinding, successful mechanical reassessment and remaining closure checks; no future BUILD, live governance, hosted CI or application acceptance follows."
+}
