@@ -87,6 +87,8 @@ class Protection:
         suffix = hashlib.sha256(str(self.directory).encode()).hexdigest()[:10]
         self.config_path = self.directory.parent / ('BAO_VE_DB_' + suffix + '.json')
         self.warning = ''
+        # '' = ổn; 'info' = khuyến nghị (chưa chọn ổ dự phòng); 'error' = sao lưu thất bại.
+        self.warning_level = ''
         if self.config_path.exists():
             try:
                 self.config = json.loads(self.config_path.read_text(encoding='utf-8'))
@@ -219,6 +221,7 @@ class Protection:
         self.prune(self.local)
         self.config['last_local'] = dict(at=dt.datetime.now(VN).isoformat(), name=name)
         errors = []
+        level = ''
         outside = self.external()
         if outside:
             try:
@@ -231,9 +234,12 @@ class Protection:
             except Exception:
                 logging.exception('Sao luu ben ngoai that bai')
                 errors.append('Sao lưu tại máy thành công; sao lưu bên ngoài thất bại. Kiểm tra ổ/thư mục dự phòng.')
+                level = 'error'
         else:
             errors.append('Chưa chọn nơi dự phòng bên ngoài. Các bản sao hiện chỉ bảo vệ khi mất DB, chưa bảo vệ khi mất cả ổ máy.')
+            level = 'info'
         self.warning = ' '.join(errors)
+        self.warning_level = level
         atomic_json(self.config_path, self.config)
         return path
 
@@ -255,7 +261,7 @@ class Protection:
         return sorted(rows, key=lambda r: r['modified'], reverse=True)
 
     def status(self):
-        return dict(warning=self.warning, external_directory=self.config.get('external_directory', ''),
+        return dict(warning=self.warning, warning_level=self.warning_level, external_directory=self.config.get('external_directory', ''),
                     last_local=self.config.get('last_local'), last_external=self.config.get('last_external'),
                     local_directory=str(self.local), database_exists=self.db.is_file(), backups=self.candidates())
 

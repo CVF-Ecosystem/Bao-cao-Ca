@@ -2,8 +2,26 @@
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sổ báo cáo ca • Bãi Container</title>
 <link rel="stylesheet" href="/tai_nguyen/style.css"></head><body>
 <div class="layout"><aside><div class="brand"><span class="brand-mark">TT</span><div><small>TÂN THUẬN</small><br>Sổ báo cáo ca</div></div><nav>
-<button data-page="home" class="active" onclick="go('home')">Tổng quan</button><button data-page="edit" onclick="newShift()">＋ Nhập ca mới</button><button data-page="list" onclick="go('list')">Xem báo cáo</button><button data-page="summary" onclick="go('summary')">Tổng hợp số liệu</button>
-<button onclick="openProtection()">Bảo vệ dữ liệu / Khôi phục</button><button onclick="backup()">Sao lưu mang đi</button><button onclick="openViewer()">Mở DB kiểm tra / bổ sung</button><button onclick="openMonthExport()">Xuất Excel cả tháng</button><button onclick="manageStaffTemplates()">Mẫu phân công Ca 1–2–3 / ca ngày</button><button onclick="manageShips()">Danh sách tàu</button><button onclick="manageCatalogs()">Danh mục nhân sự / công việc</button><button onclick="openImport()">Nhập bổ sung từ DB</button><button onclick="exitTool()">Thoát tool</button></nav><div class="foot"><span class="credit-label">Phát triển bởi</span><strong class="credit-name">Mr Ân / Tân Thuận</strong><span class="app-release"><span class="status-dot"></span><span id="appVersion">Phiên bản 1.9.0</span></span></div></aside>
+<div class="navgroup">
+<button data-page="home" class="active" onclick="go('home')">Tổng quan</button>
+<button data-page="edit" class="navcta" onclick="newShift()">＋ Nhập ca mới</button>
+<button data-page="list" onclick="go('list')">Xem báo cáo</button>
+<button data-page="summary" onclick="go('summary')">Tổng hợp số liệu</button>
+</div>
+<details class="navgroup"><summary>Cài đặt</summary>
+<button onclick="manageCatalogs()">Danh mục nhân sự / công việc</button>
+<button onclick="manageStaffTemplates()">Mẫu phân công Ca 1–2–3 / ca ngày</button>
+<button onclick="manageShips()">Danh sách tàu</button>
+</details>
+<details class="navgroup"><summary>Dữ liệu <span id="navAlert" class="navdot hide" title="Cần xem lại sao lưu"></span></summary>
+<button onclick="openProtection()">Bảo vệ dữ liệu / Khôi phục</button>
+<button onclick="backup()">Sao lưu mang đi</button>
+<button onclick="openMonthExport()">Xuất Excel cả tháng</button>
+<button onclick="openViewer()">Mở DB kiểm tra / bổ sung</button>
+<button onclick="openImport()">Nhập bổ sung từ DB</button>
+</details>
+<button class="navexit" onclick="exitTool()">Thoát tool</button>
+</nav><div class="foot"><span class="credit-label">Phát triển bởi</span><strong class="credit-name">Mr Ân / Tân Thuận</strong><span class="app-release"><span class="status-dot"></span><span id="appVersion">Phiên bản 1.9.0</span></span></div></aside>
 <main class="content"><header><div><div class="muted subtle" id="today"></div><h1 id="title">Tổng quan báo cáo</h1></div><div id="mode"></div></header>
 <div id="viewerNote" class="note hide">Đang xem <strong>bản sao dữ liệu</strong>. Không thể nhập hoặc sửa. Dữ liệu mới sau thời điểm sao lưu chưa có trong bản này. <button class="small" onclick="returnMain()">Về DB chính của máy</button></div>
 <div id="backupWarning" class="note warn hide"></div><section id="home"></section><section id="edit" class="hide"></section>

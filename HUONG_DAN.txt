@@ -1,6 +1,7 @@
 BẢN 1.9.0 — XEM tai_lieu\THAY_DOI_V1_9.txt
 
-Thư mục này là bản sạch (không kèm DU_LIEU, DANH_MUC thực tế). Để dùng với dữ liệu hiện có,
+Thư mục này là bản sạch (không kèm DU_LIEU, DANH_MUC thực tế). Mã chương trình nằm trong
+ma_nguon/, giao diện trong giao_dien/, file mẫu trong mau/; bấm đúp MO_BAO_CAO_CA.pyw để mở. Để dùng với dữ liệu hiện có,
 chép DU_LIEU và DANH_MUC từ bản cũ vào đây, mở MO_BAO_CAO_CA.pyw, rồi chọn lại thư mục
 dự phòng ngoài. Chạy cong_cu\CHAY_KIEM_THU.bat để kiểm thử (cần Python 3.9+; có Node.js để
 kiểm thử giao diện).

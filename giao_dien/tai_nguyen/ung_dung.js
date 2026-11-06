@@ -72,8 +72,10 @@ async function refreshInfo(){
   $('viewerNote').classList.toggle('hide',!info.review);
   $('viewerNote').innerHTML=info.readonly?'Đang xem bản sao DB. Muốn sửa báo cáo ngày cũ, bấm <button class="small" onclick="enableCorrections()">Bật chỉnh sửa / bổ sung</button> <button class="small" onclick="returnMain()">Về DB chính của máy</button>':'Đang chỉnh sửa trên <strong>bản sao DB</strong>. Lưu từng ca kèm lý do, sau đó <button class="small" onclick="backup()">Xuất DB đã bổ sung</button> để mang về máy chính nhập lại. <button class="small" onclick="returnMain()">Về DB chính của máy</button>';
   $('today').textContent='Báo cáo sản xuất cuối ca · '+dateLabel(info.now.slice(0,10));
-  $('backupWarning').textContent=[info.backup_warning,info.catalog_warning].filter(Boolean).join(' ');
-  $('backupWarning').classList.toggle('hide',!info.backup_warning&&!info.catalog_warning);
+  const hardWarning=[info.backup_level==='info'?'':info.backup_warning,info.catalog_warning].filter(Boolean).join(' ');
+  $('backupWarning').textContent=hardWarning;
+  $('backupWarning').classList.toggle('hide',!hardWarning);
+  $('navAlert').classList.toggle('hide',!info.backup_warning);
   $('appVersion').textContent='Phiên bản '+info.version
 }
 function setPage(name){
@@ -108,6 +110,7 @@ async function renderHome(){
 <div class="grid"><div class="card metric"><span>CA ĐƯỢC GỢI Ý THEO GIỜ</span><strong style="font-size:24px">${shiftName(s.shift)}</strong><span>${dateLabel(s.date)} · ${current?(current==='closed'?'Đã chốt':'Đã có bản nháp'):'Chưa có báo cáo'}</span></div><div class="card metric"><span>BÁO CÁO THÁNG NÀY</span><strong>${ov.month_count}</strong><span>Số ca đã lưu, gồm cả nháp</span></div><div class="card metric"><span>BẢN NHÁP</span><strong>${ov.draft_count}</strong><span>Chưa chốt trong toàn bộ dữ liệu</span></div><div class="card metric"><span>BÀN GIAO CHƯA XỬ LÝ</span><strong>${tasks.length}</strong><span>Theo báo cáo gần nhất</span></div></div>
 <div class="two"><div class="card"><div class="sectionno">BẮT ĐẦU LÀM VIỆC</div><h2>Nhập gọn. Lưu rõ. Tìm lại dễ.</h2><p class="muted">Chọn đúng ngày và ca trước khi nhập. Nhập trễ vẫn có thể chọn ca trước hoặc nhập bù.</p><div class="row"><button class="primary" onclick="newShift()" ${info.readonly||info.review?'disabled':''}>＋ Nhập ca mới</button><button onclick="go('list')">Xem báo cáo</button></div></div><div class="card"><div class="sectionno">BÀN GIAO TỪ BÁO CÁO GẦN NHẤT</div><h2>${rows[0]?dateLabel(rows[0].date)+' · '+shiftName(rows[0].shift):'Chưa có báo cáo'}</h2>${tasks.length?tasks.map(t=>'<p>□ '+esc(t.text)+'</p>').join(''):'<p class="muted">Không có việc chưa xử lý được ghi nhận.</p>'}<p class="muted subtle">Các việc được theo dõi theo từng bản báo cáo; không phải trạng thái thời gian thực.</p></div></div>
 <div class="card"><div class="row between"><h2>Báo cáo gần đây</h2><button class="small" onclick="go('list')">Xem tất cả</button></div>${reportRows(rows.slice(0,6))}</div>
+${info.backup_level==='info'&&info.backup_warning?'<div class="note warn"><strong>Khuyến nghị:</strong> '+esc(info.backup_warning)+' <button class="small" onclick="openProtection()">Chọn nơi dự phòng</button></div>':''}
 <div class="note">DB đang mở: <strong>${esc(info.database)}</strong>. Số lượng trong báo cáo là <strong>lượt công việc</strong>, không phải số container duy nhất.</div>`
 }
 function chiefPeople(staffing){
@@ -145,6 +148,7 @@ async function beginShift(){
     report={date:day,shift,version:0,status:'draft',actor:sessionStorage.getItem('ca_actor')||'',notes:'',staffing:info.roles.map(role=>({role,people:''})),jobs:info.jobs.map(name=>({name,detail:'',xn:false,rtg:false,f20:null,f40:null,e20:null,e40:null})),handover:[]};
     dirty=false;
     conflict=false;
+    editTab='staff';
     closeModal();
     renderEditor()
   }catch(e){
@@ -158,25 +162,96 @@ async function loadReport(id){
     if(info.review&&!info.readonly)report.actor=info.reviewer||report.actor;
     dirty=false;
     conflict=false;
+    editTab='staff';
     renderEditor()
   }catch(e){
     error(e)
   }
 }
+// ---- Trang nhập ca: header, thanh tab, 4 khung nội dung và thanh lưu cố định ----
+let editTab='staff';
+const EDIT_TABS=[['staff','Nhân sự'],['jobs','Công việc'],['notes','Ghi chú & bàn giao'],['files','Ảnh & biên bản']];
+function tabBadges(){
+  const staff=report?.staffing||[],jobs=report?.jobs||[],tasks=report?.handover||[],files=report?.attachments||[];
+  const hasChief=staff.some(s=>String(s.role||'').trim().toUpperCase()==='PHỤ TRÁCH CHUNG'&&String(s.people||'').trim());
+  return {
+    staff:hasChief?{text:String(staff.filter(s=>String(s.people||'').trim()).length)}:{text:'!',warn:true,title:'Chưa điền PHỤ TRÁCH CHUNG (bắt buộc để chốt ca)'},
+    jobs:{text:String(jobs.filter(j=>keys.some(k=>Number(j[k])>0)).length)},
+    notes:{text:String(tasks.filter(t=>!t.done).length),title:'Việc bàn giao chưa xử lý'},
+    files:{text:String(files.length)}
+  }
+}
+function tabBadgeHTML(id){
+  const b=tabBadges()[id];
+  return '<span class="tabBadge'+(b.warn?' warn':'')+'" id="tabBadge_'+id+'"'+(b.title?' title="'+esc(b.title)+'"':'')+'>'+b.text+'</span>'
+}
+function refreshTabBadges(){
+  try{
+    const all=tabBadges();
+    for(const [id] of EDIT_TABS){
+      const el=$('tabBadge_'+id);
+      if(!el)continue;
+      el.textContent=all[id].text;
+      el.classList?.toggle('warn',!!all[id].warn)
+    }
+  }catch(e){}
+}
+function showEditTab(name){
+  if(!EDIT_TABS.some(t=>t[0]===name))name='staff';
+  editTab=name;
+  for(const [id] of EDIT_TABS){
+    $('panel_'+id)?.classList.toggle('hide',id!==name);
+    const tab=$('tab_'+id);
+    if(!tab)continue;
+    tab.classList.toggle('active',id===name);
+    tab.setAttribute('aria-selected',String(id===name))
+  }
+}
+function editorHeader(dis){
+  return `<div class="card"><div class="row between"><div><div class="sectionno">${dateLabel(report.date)} · ${shiftName(report.shift).toUpperCase()}</div><h2 style="margin-bottom:4px">${period(report)}</h2><span>${badge(report.status)} <span class="muted subtle">Phiên bản ${report.version||'chưa lưu'}</span></span></div><div class="row noprint"><button onclick="showHistory()" ${report.version?'':'disabled'}>Lịch sử sửa</button><button onclick="showPreview()" ${report.version?'':'disabled'}>Xem / In</button><button onclick="exportReport()" ${report.version?'':'disabled'}>Xuất Excel</button></div></div><div style="max-width:380px;margin-top:16px"><label>Người đang nhập / chỉnh sửa<select id="actor" ${dis} onchange="touch()">${personOptions(report.actor)}</select></label></div></div>`
+}
+function editorNotice(){
+  return (report.status==='closed'||info.review)&&!info.readonly?'<div class="note warn">Chỉnh sửa cần lưu thủ công kèm lý do. Nội dung cũ vẫn giữ trong lịch sử phiên bản.</div>':''
+}
+function editorTabs(){
+  return '<div class="tabs noprint" role="tablist">'+EDIT_TABS.map(([id,label])=>
+    `<button class="tab${id===editTab?' active':''}" id="tab_${id}" role="tab" aria-selected="${id===editTab}" onclick="showEditTab('${id}')">${label} ${tabBadgeHTML(id)}</button>`).join('')+'</div>'
+}
+function staffSection(dis){
+  const hasKHB=report.staffing.some(x=>/^KHB\b/i.test(x.role));
+  return `<div class="shipSummary"><strong>Tàu trong ca:</strong> <span id="reportShipNames">${esc(allReportShips(report).join('; '))||'Chưa chọn tàu'}</span></div>
+<div class="row between"><div><div class="sectionno">NHÂN SỰ</div><h2>Phân công trong ca</h2></div><div class="row">${hasKHB?'':'<button class="small" onclick="addKHB()" '+dis+'>＋ Thêm KHB</button>'}<button class="small" onclick="addStaff()" ${dis}>＋ Thêm vị trí</button></div></div>
+<div class="templateToolbar"><label>Điền mẫu phân công<select id="templateTeam" onchange="applyShiftTemplate(this.value)" ${dis}><option value="">— Chọn Ca 1 / Ca 2 / Ca 3 —</option>${(info.teams||[]).map(t=>`<option value="${esc(t.id)}">${esc(t.name)}</option>`).join('')}</select></label><button class="small" onclick="applyDayStaff()" ${dis}>＋ Thêm nhân sự ca ngày</button><label>Lọc người theo tổ<select id="staffTeam" onchange="setStaffTeam(this.value)">${staffTeamOptions(selectedStaffTeam())}</select></label><button class="small" onclick="manageStaffTemplates()">Cài mẫu phân công</button><span class="muted subtle">Mẫu chỉ điền sau khi xem trước và xác nhận. Lọc tổ chỉ thu hẹp danh sách khi bấm Chọn người, không tự đổi người đã lưu. Mỗi tàu một dòng TALLY TÀU / XUẤT TÀU.</span></div>
+<div id="staffRows"></div>`
+}
+function jobsSection(dis){
+  return `<div class="row between"><div><div class="sectionno">CÔNG VIỆC THỰC TẾ</div><h2>Số lượt theo từng loại container</h2></div><div class="row"><button class="small" onclick="updateJobsTemplate()" ${dis}>Cập nhật mẫu dời dọn</button><button class="small" onclick="addJob()" ${dis}>＋ Thêm công việc</button></div></div>
+<div class="scroll"><table class="worktable"><thead><tr><th>Công việc</th><th>Chi tiết / Tàu / Vị trí</th><th>XN</th><th>RTG</th><th>F20</th><th>F40</th><th>E20</th><th>E40</th><th></th></tr></thead><tbody id="jobRows"></tbody><tfoot id="jobTotal"></tfoot></table></div>
+<p class="muted subtle" style="margin-top:12px">XN / RTG giữ theo cột đánh dấu trong mẫu gốc. Tổng là lượt công việc, có thể có cùng cont qua nhiều công việc.</p>`
+}
+function notesSection(dis){
+  return `<div class="row between"><div><div class="sectionno">GHI CHÚ VÀ BÀN GIAO</div><h2>Để ca sau tiếp tục công việc</h2></div><button class="small" onclick="carry()" ${dis}>Lấy việc chưa xong từ ca trước</button></div>
+<label>Ghi chú chung<textarea id="notes" oninput="touch()" ${dis}>${esc(report.notes)}</textarea></label><div id="taskRows"></div><button class="small" onclick="addTask()" ${dis}>＋ Thêm việc bàn giao</button>`
+}
+function filesSection(dis){
+  return `<div class="row between"><div><div class="sectionno">ẢNH VÀ BIÊN BẢN</div><h2>Tệp đính kèm của ca ${dateLabel(report.date)} · ${shiftName(report.shift)}</h2></div><div class="row"><button class="small" onclick="exportAttachments()" ${report.version?'':'disabled'}>Tải tất cả tệp</button><button class="primary small" onclick="chooseAttachments()">＋ Thêm tệp</button></div></div>
+<p class="muted subtle">Tối đa 40 tệp/ca, 100 MB/tệp; nhận mọi loại tệp. Thêm tệp là lưu ngay, không cần bật chỉnh sửa hay nhập lý do.</p>
+<details class="fileOptions"><summary>Tùy chọn thu nhỏ ảnh</summary><label class="row" style="margin:10px 0;font-weight:500"><input type="checkbox" id="optimizePhotos" ${dis}>Thu nhỏ ảnh trước khi lưu (cạnh dài tối đa 2.560 px; tệp khác giữ nguyên)</label><p class="muted subtle">Mặc định giữ nguyên tệp gốc. Bật thu nhỏ sẽ lưu bản ảnh đã tối ưu, có thể giảm chi tiết và bỏ thông tin máy ảnh; ảnh/biên bản cần giữ làm bằng chứng nên để nguyên.</p></details>
+<input class="hide" type="file" multiple id="attachmentFiles" onchange="uploadAttachments(this)"><p id="uploadState" class="muted subtle"></p><div class="attachmentGrid" id="attachmentRows"></div>`
+}
+function editorToolbar(dis){
+  return `<div class="toolbar"><div id="saveState" class="muted subtle">${report.updated_at?'Đã lưu lúc '+timeLabel(report.updated_at):'Chưa lưu · điền người nhập để bật tự lưu'}</div><div class="row"><button onclick="manualSave()" ${dis}>${info.review?'Lưu bổ sung':report.status==='closed'?'Lưu chỉnh sửa':'Lưu nháp'}</button>${report.status!=='closed'&&!info.review?'<button class="primary" onclick="closeShift()" '+dis+'>Chốt ca</button>':''}</div></div>`
+}
 function renderEditor(){
   $('edit').inert=false;
   report.attachments=report.attachments||[];
   setPage('edit');
-  const ro=info.readonly;
-  let disabled=ro?'disabled':'';
-  $('edit').innerHTML=`
-<div class="card"><div class="row between"><div><div class="sectionno">${dateLabel(report.date)} · ${shiftName(report.shift).toUpperCase()}</div><h2 style="margin-bottom:4px">${period(report)}</h2><span>${badge(report.status)} <span class="muted subtle">Phiên bản ${report.version||'chưa lưu'}</span></span></div><div class="row noprint"><button onclick="showHistory()" ${report.version?'':'disabled'}>Lịch sử sửa</button><button onclick="showPreview()" ${report.version?'':'disabled'}>Xem / In</button><button onclick="exportReport()" ${report.version?'':'disabled'}>Xuất Excel</button></div></div><div style="max-width:380px;margin-top:16px"><label>Người đang nhập / chỉnh sửa<select id="actor" ${disabled} onchange="touch()">${personOptions(report.actor)}</select></label></div></div>
-${(report.status==='closed'||info.review)&&!ro?'<div class="note warn">Chỉnh sửa cần lưu thủ công kèm lý do. Nội dung cũ vẫn giữ trong lịch sử phiên bản.</div>':''}
-<div class="card"><h2>Tàu làm trong ca</h2><div id="reportShipNames">${esc(allReportShips(report).join('; '))||'Chưa chọn tàu'}</div><p class="muted subtle">Mỗi tàu một dòng TALLY TÀU / XUẤT TÀU và người riêng. Bấm “＋ Thêm tàu” trong cùng khung để phân công thêm.</p></div><div class="card"><div class="row between"><div><div class="sectionno">01 · NHÂN SỰ</div><h2>Phân công trong ca</h2></div><div class="row">${report.staffing.some(x=>/^KHB\b/i.test(x.role))?'':'<button class="small" onclick="addKHB()" '+disabled+'>＋ Thêm KHB</button>'}<button class="small" onclick="addStaff()" ${disabled}>＋ Thêm vị trí</button></div></div><div class="templateToolbar"><label>Điền mẫu phân công<select id="templateTeam" onchange="applyShiftTemplate(this.value)" ${disabled}><option value="">— Chọn Ca 1 / Ca 2 / Ca 3 —</option>${(info.teams||[]).map(t=>`<option value="${esc(t.id)}">${esc(t.name)}</option>`).join('')}</select></label><button class="small" onclick="applyDayStaff()" ${disabled}>＋ Thêm nhân sự ca ngày</button><button class="small" onclick="manageStaffTemplates()">Cài mẫu phân công</button><span class="muted subtle">Xem trước rồi xác nhận; báo cáo cũ chỉ đổi khi anh áp dụng và lưu.</span></div><div class="teamToolbar"><label>Lọc danh sách khi chọn người<select id="staffTeam" onchange="setStaffTeam(this.value)">${staffTeamOptions(selectedStaffTeam())}</select></label><span class="muted subtle">Chọn tổ rồi bấm Chọn người tại từng vị trí / tàu. Không tự thay người đã lưu.</span></div><div id="staffRows"></div></div>
-<div class="card"><div class="row between"><div><div class="sectionno">02 · CÔNG VIỆC THỰC TẾ</div><h2>Số lượt theo từng loại container</h2></div><div class="row"><button class="small" onclick="updateJobsTemplate()" ${disabled}>Cập nhật mẫu dời dọn</button><button class="small" onclick="addJob()" ${disabled}>＋ Thêm công việc</button></div></div><div class="scroll"><table class="worktable"><thead><tr><th>Công việc</th><th>Chi tiết / Tàu / Vị trí</th><th>XN</th><th>RTG</th><th>F20</th><th>F40</th><th>E20</th><th>E40</th><th></th></tr></thead><tbody id="jobRows"></tbody><tfoot id="jobTotal"></tfoot></table></div><p class="muted subtle" style="margin-top:12px">XN / RTG giữ theo cột đánh dấu trong mẫu gốc. Tổng là lượt công việc, có thể có cùng cont qua nhiều công việc.</p></div>
-<div class="card"><div class="row between"><div><div class="sectionno">03 · GHI CHÚ VÀ BÀN GIAO</div><h2>Để ca sau tiếp tục công việc</h2></div><button class="small" onclick="carry()" ${disabled}>Lấy việc chưa xong từ ca trước</button></div><label>Ghi chú chung<textarea id="notes" oninput="touch()" ${disabled}>${esc(report.notes)}</textarea></label><div id="taskRows"></div><button class="small" onclick="addTask()" ${disabled}>＋ Thêm việc bàn giao</button></div>
-<div class="card"><div class="row between"><div><div class="sectionno">04 · ẢNH VÀ BIÊN BẢN</div><h2>Tệp đính kèm của ca ${dateLabel(report.date)} · ${shiftName(report.shift)}</h2></div><div class="row"><button class="small" onclick="exportAttachments()" ${report.version?'':'disabled'}>Tải tất cả tệp</button><button class="primary small" onclick="chooseAttachments()">＋ Thêm tệp</button></div></div><p class="muted subtle">Chọn nhiều tệp · tối đa 40 tệp/ca, 100 MB/tệp. Nhận mọi đuôi tệp: ảnh, PDF, Word, Excel, ZIP, âm thanh, video… Tệp lưu trong DB và đi theo bản sao mang đi. Thêm tệp là lưu ngay, không cần bật chỉnh sửa hoặc nhập lý do.</p><label class="row" style="margin-bottom:12px;font-weight:500"><input type="checkbox" id="optimizePhotos" ${disabled}>Thu nhỏ ảnh trước khi lưu (tối đa cạnh 2.560 px; các tệp khác giữ nguyên)</label><p class="muted subtle">Mặc định giữ nguyên tệp gốc. Bật thu nhỏ sẽ lưu bản ảnh đã tối ưu, có thể giảm chi tiết và bỏ thông tin máy ảnh; ảnh/biên bản cần giữ làm bằng chứng nên để nguyên.</p><input class="hide" type="file" multiple id="attachmentFiles"  onchange="uploadAttachments(this)"><p id="uploadState" class="muted subtle"></p><div class="attachmentGrid" id="attachmentRows"></div></div>
-<div class="toolbar"><div id="saveState" class="muted subtle">${report.updated_at?'Đã lưu lúc '+timeLabel(report.updated_at):'Chưa lưu · điền người nhập để bật tự lưu'}</div><div class="row"><button onclick="manualSave()" ${disabled}>${info.review?'Lưu bổ sung':report.status==='closed'?'Lưu chỉnh sửa':'Lưu nháp'}</button>${report.status!=='closed'&&!info.review?'<button class="primary" onclick="closeShift()" '+disabled+'>Chốt ca</button>':''}</div></div>`;
+  if(!EDIT_TABS.some(t=>t[0]===editTab))editTab='staff';
+  const dis=info.readonly?'disabled':'';
+  const panel=(id,body)=>`<section class="tabPanel card${id===editTab?'':' hide'}" id="panel_${id}" role="tabpanel">${body}</section>`;
+  $('edit').innerHTML=editorHeader(dis)+editorNotice()+editorTabs()
+    +panel('staff',staffSection(dis))+panel('jobs',jobsSection(dis))+panel('notes',notesSection(dis))+panel('files',filesSection(dis))
+    +editorToolbar(dis);
   renderStaff();
   renderJobs();
   renderTasks();
@@ -302,6 +377,7 @@ function touch(){
   collect();
   dirty=true;
   totals();
+  refreshTabBadges();
   $('saveState').textContent=conflict?'Có xung đột · tải lại trước khi lưu':(report.status==='closed'||info.review)?'Có sửa đổi chưa lưu · cần ghi lý do':'Có thay đổi · đang chờ tự lưu';
   clearTimeout(timer);
   if(report.actor.trim()&&report.status==='draft'&&!info.review&&!uploading&&!conflict)timer=setTimeout(()=>save(false),1600)

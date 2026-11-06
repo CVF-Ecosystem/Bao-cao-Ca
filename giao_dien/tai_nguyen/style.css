@@ -53,3 +53,29 @@ input[type=radio]{width:18px;height:18px;accent-color:var(--teal);flex:0 0 18px}
 .templateToolbar label{min-width:240px}
 .templateToolbar .muted{width:100%}
 .templateEditorTable select{min-width:180px}
+
+/* Bản 1.9: menu theo nhóm, thanh tab trang nhập ca */
+aside nav{display:flex;flex-direction:column}
+.navgroup{margin-bottom:6px}
+.navgroup button{display:block;width:100%;text-align:left}
+details.navgroup>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:12px 12px 6px;color:#8fb6bd;font-size:11px;font-weight:650;letter-spacing:1.4px;text-transform:uppercase;user-select:none}
+details.navgroup>summary::-webkit-details-marker{display:none}
+details.navgroup>summary::after{content:'▾';font-size:12px}
+details.navgroup[open]>summary::after{content:'▴'}
+details.navgroup>summary:hover{color:#d9eeee}
+details.navgroup[open]{padding-bottom:4px}
+.navcta{font-weight:650;color:#e8f6f4}
+.navdot{display:inline-block;width:8px;height:8px;margin-left:8px;border-radius:50%;background:#e0a23a}
+.navdot.hide{display:none}
+.navexit{margin-top:auto;color:#e4b3ae}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0 14px;border-bottom:2px solid var(--line)}
+.tab{background:transparent;border:0;border-bottom:3px solid transparent;border-radius:8px 8px 0 0;padding:11px 16px;margin-bottom:-2px;font-weight:600;color:var(--muted);cursor:pointer}
+.tab:hover{background:#eef4f3;color:var(--ink)}
+.tab.active{color:var(--teal);border-bottom-color:var(--teal);background:#fff}
+.tabBadge{display:inline-block;min-width:22px;padding:1px 7px;margin-left:6px;border-radius:999px;background:#e4eeed;color:#35625e;font-size:12px;font-weight:700;text-align:center}
+.tabBadge.warn{background:#f6e2b8;color:#8c5b12}
+.tabPanel.hide{display:none}
+.shipSummary{margin-bottom:14px;padding:10px 12px;background:#edf5f8;border-radius:8px;font-size:13px}
+.fileOptions{margin:8px 0 14px}
+.fileOptions>summary{cursor:pointer;color:var(--teal);font-size:13px;font-weight:600}
+@media print{.tabs{display:none!important}.tabPanel.hide{display:block}}

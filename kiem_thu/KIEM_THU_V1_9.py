@@ -5,6 +5,7 @@ import http.cookiejar
 import json
 import os
 from pathlib import Path
+import shutil
 import tempfile
 import threading
 import time
@@ -14,6 +15,7 @@ import urllib.request
 from unittest.mock import Mock, patch
 
 from BAO_CAO_CA import rotate_log
+from BAO_VE_DU_LIEU import Protection
 from LUU_TRU import Store
 from MAU_PHAN_CONG import merge_team_members
 from MAY_CHU import daily_backup, int_param, make_server
@@ -115,6 +117,14 @@ class HttpTests(unittest.TestCase):
             opener.open(urllib.request.Request(base + '/api/save', data=report, headers={'X-Ca-Request': '1'})).read()
             self.assertEqual(calls, [False, True])
 
+    def test_info_reports_backup_level_for_the_ui(self):
+        server, base, opener = self.start()
+        info = json.loads(opener.open(base + '/api/info').read())
+        self.assertEqual(info['backup_level'], 'info')
+        self.assertIn('Chưa chọn nơi dự phòng', info['backup_warning'])
+        status = json.loads(opener.open(base + '/api/protection').read())
+        self.assertEqual(status['warning_level'], 'info')
+
     def test_deferred_backup_is_made_up_on_shutdown(self):
         server, base, opener = self.start()
         server.app['backup_pending'] = True
@@ -136,6 +146,30 @@ class DeferredBackupTests(unittest.TestCase):
         daily_backup(app, force=True)
         protection.backup.assert_called_once()
         self.assertFalse(app['backup_pending'])
+
+
+class WarningLevelTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+
+    def test_unconfigured_external_is_a_recommendation_and_failure_is_an_error(self):
+        protection = Protection(self.root / 'DU_LIEU')
+        protection.guard_startup()
+        Store(protection.db)
+        protection.initialize()
+        protection.backup()
+        self.assertEqual(protection.warning_level, 'info')
+        outside = self.root / 'o_ngoai'
+        outside.mkdir()
+        protection.set_external(str(outside))
+        protection.backup()
+        self.assertEqual((protection.warning, protection.warning_level), ('', ''))
+        shutil.rmtree(outside)
+        protection.backup()
+        self.assertEqual(protection.warning_level, 'error')
+        self.assertEqual(protection.status()['warning_level'], 'error')
 
 
 class ConsoleTests(unittest.TestCase):

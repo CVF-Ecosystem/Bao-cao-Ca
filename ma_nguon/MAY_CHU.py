@@ -115,7 +115,8 @@ class Handler(BaseHTTPRequestHandler):
                                 context=self.app['context'],
                                 review=store.path != self.app['main_store'].path,
                                 reviewer=store.meta('reviewer_name') if store.path != self.app['main_store'].path else '',
-                                backup_warning=self.app.get('backup_warning', '')))
+                                backup_warning=self.app.get('backup_warning', ''),
+                                backup_level=self.app.get('backup_level', '')))
         elif u.path == '/api/protection':
             self.send_data(self.app['protection'].status())
         elif u.path == '/api/catalogs':
@@ -367,8 +368,11 @@ def daily_backup(app, force=True):
         app['backup_tick'] = time.monotonic()
         app['backup_pending'] = False
         app['backup_warning'] = protection.warning
+        level = getattr(protection, 'warning_level', '')
+        app['backup_level'] = level if isinstance(level, str) else ''
     except Exception:
         logging.exception('Sao luu tu dong that bai')
+        app['backup_level'] = protection.warning_level = 'error'
         protection.warning = app['backup_warning'] = 'Sao lưu tự động thất bại. Dữ liệu vừa lưu vẫn ở DB chính; kiểm tra dung lượng/quyền ghi và bấm Sao lưu ngay.'
 
 

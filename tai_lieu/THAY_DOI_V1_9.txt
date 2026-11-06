@@ -32,9 +32,28 @@ bản sao DB thật của 1.8.2 (3 báo cáo) bằng 1.9.0: không cần tiếp 
     pyproject.toml cho ruff, và kiem_thu\KIEM_THU_MA_NGUON.py (cú pháp + import thừa, chỉ
     dùng thư viện chuẩn).
 
-KIỂM THỬ: 113 kiểm thử Python và 5 bộ JavaScript (Node VM) qua trên Windows. Đã
+ĐỢT 3 — CẤU TRÚC THƯ MỤC VÀ GIAO DIỆN (ứng dụng chưa triển khai nên đổi thẳng)
+15) Thư mục gọn: ma_nguon/ (module Python), giao_dien/ (HTML, JS, CSS), mau/ (file
+    mẫu Excel, danh mục mặc định), kiem_thu/, tai_lieu/, cong_cu/. Thư mục gốc chỉ
+    còn MO_BAO_CAO_CA.pyw, KHOI_PHUC_DU_LIEU.pyw, CHAY_KIEM_TRA_LOI.bat, HUONG_DAN.txt.
+    DU_LIEU và DANH_MUC vẫn nằm cạnh file mở app. Lệnh đóng gói EXE đã đổi theo
+    (--paths ma_nguon, giao_dien, mau) nhưng chưa chạy thử trên Windows thật.
+16) Menu trái gom 3 nhóm: hằng ngày (Tổng quan, Nhập ca mới, Xem báo cáo, Tổng hợp),
+    Cài đặt và Dữ liệu (thu gọn mặc định), Thoát tool ở cuối. Chấm vàng cạnh Dữ liệu
+    khi còn lưu ý về sao lưu.
+17) Trang nhập ca chia 4 tab: Nhân sự, Công việc, Ghi chú & bàn giao, Ảnh & biên bản.
+    Mỗi tab có số liệu nhanh; tab Nhân sự hiện dấu ! khi chưa có PHỤ TRÁCH CHUNG.
+    Mọi ô vẫn nằm trong trang nên lưu, tự lưu và chốt ca hoạt động như cũ.
+    Nút Lưu nháp / Chốt ca vẫn ghim ở đáy. renderEditor tách thành các hàm nhỏ.
+18) Cảnh báo sao lưu có mức độ: "Chưa chọn nơi dự phòng ngoài" chỉ là khuyến nghị
+    (chấm vàng ở menu + ghi chú ở trang chủ); dải cảnh báo trên cùng chỉ hiện khi
+    sao lưu thật sự thất bại hoặc danh mục lỗi. /api/info có backup_level.
+19) --help không còn lỗi mã hóa trên console Windows cp1252.
+
+KIỂM THỬ: 116 kiểm thử Python và 5 bộ JavaScript (Node VM) qua trên Windows. Đã
 chạy thật ứng dụng trong trình duyệt với 56 ca mẫu: trang chủ, danh sách 2 trang
-(50 + 6), mở báo cáo, thoát tool và bản sao lưu bù — không có lỗi console.
+(50 + 6), mở báo cáo, thoát tool và bản sao lưu bù — không có lỗi console. Menu nhóm,
+các tab nhập ca (đổi tab, số liệu trên tab, tự lưu) cũng đã thử trong trình duyệt.
 Chưa kiểm thử: EXE, hộp thoại tkinter, DB nhiều GB, tải ảnh/PDF lớn.
 
 CHUYỂN TỪ 1.8.2 SANG 1.9.0
