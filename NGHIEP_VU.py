@@ -1,0 +1,172 @@
+"""Kiểm tra và chuẩn hóa nghiệp vụ báo cáo ca."""
+import datetime as dt
+import re
+import sqlite3
+from THIET_LAP import VN, KEYS
+
+def now():
+    return dt.datetime.now(VN).isoformat(timespec='seconds')
+
+
+def suggest(moment=None):
+    moment = moment or dt.datetime.now(VN)
+    day = moment.date()
+    if moment.hour < 6:
+        day -= dt.timedelta(days=1)
+    return {'date': day.isoformat(), 'shift': 'DAY' if 6 <= moment.hour < 18 else 'NIGHT'}
+
+
+def shift_label(s):
+    return 'Ngày (06:00–18:00)' if s == 'DAY' else 'Đêm (18:00–06:00 hôm sau)'
+
+
+class AppError(Exception):
+    def __init__(self, message, status=400):
+        self.status = status
+        super().__init__(message)
+
+
+def clean_text(value, limit=2000):
+    if not isinstance(value, str) or len(value) > limit:
+        raise AppError('Nội dung sai kiểu hoặc quá dài.')
+    # XML 1.0 control characters must never enter an Excel export.
+    return re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', value).strip()
+
+
+def file_type(data):
+    if data.startswith(b'\x89PNG\r\n\x1a\n'):
+        return 'image/png', '.png'
+    if data.startswith(b'\xff\xd8\xff'):
+        return 'image/jpeg', '.jpg'
+    if data.startswith(b'RIFF') and data[8:12] == b'WEBP':
+        return 'image/webp', '.webp'
+    if data[4:8] == b'ftyp' and any(brand in data[8:48] for brand in (b'heic', b'heix', b'hevc', b'hevx')):
+        return 'image/heic', '.heic'
+    if data.startswith(b'%PDF-'):
+        return 'application/pdf', '.pdf'
+    # Other documents, archives, audio and unknown formats are retained as-is.
+    # They must always be downloaded, never executed or served as HTML.
+    return 'application/octet-stream', ''
+
+
+class ClosingConnection(sqlite3.Connection):
+    """Commit/rollback AND release OS file handles at every context exit."""
+    def __exit__(self, exc_type, exc, traceback):
+        try:
+            return super().__exit__(exc_type, exc, traceback)
+        finally:
+            self.close()
+
+
+def database_error(error):
+    text = str(error).lower()
+    if 'locked' in text or 'busy' in text:
+        return 'DB đang được một phiên khác sử dụng. Đóng các phiên tool cũ rồi mở lại bản mới và tải lại tệp.'
+    if 'readonly' in text or 'read-only' in text or isinstance(error, PermissionError):
+        return 'Không ghi được DB tại thư mục hiện tại. Đặt thư mục chương trình ở nơi tài khoản Windows có quyền ghi.'
+    if 'full' in text or getattr(error, 'errno', None) == 28:
+        return 'Ổ đĩa lưu DB không đủ chỗ để ghi tệp. Giải phóng dung lượng rồi thử lại.'
+    if 'no such table' in text or 'no column' in text or 'columns' in text:
+        return 'Cấu trúc DB đính kèm không khớp: ' + str(error) + '. Giữ nguyên DU_LIEU và gửi nhật ký lỗi để kiểm tra.'
+    return 'Không ghi được tệp vào DB: ' + str(error) + '. Xem DU_LIEU/LOI_CHUONG_TRINH.log.'
+
+
+def attachment_meta(a):
+    if not isinstance(a, dict) or not re.fullmatch(r'[a-f0-9]{64}', a.get('hash', '')):
+        raise AppError('Thông tin tệp đính kèm không hợp lệ.')
+    return dict(hash=a['hash'], name=clean_text(a.get('name', ''), 180),
+                caption=clean_text(a.get('caption', ''), 1000))
+
+
+def ship_names(value):
+    if not isinstance(value, list) or len(value) > 30:
+        raise AppError('Chọn tối đa 30 tàu mỗi mục.')
+    names = []
+    for item in value:
+        name = ' '.join(clean_text(item, 150).upper().split())
+        if name and name not in names:
+            names.append(name)
+    return names
+
+
+def report_ships(report):
+    names = list(report.get('ships', []))
+    for row in report.get('staffing', []) + report.get('jobs', []):
+        names.extend(row.get('ships', []))
+    return list(dict.fromkeys(names))
+
+
+def chief_people(staffing):
+    """Keep legacy rows intact; display every non-empty chief entry once."""
+    names = []
+    for row in staffing:
+        if row['role'].strip().upper() == 'PHỤ TRÁCH CHUNG':
+            people = row['people'].strip()
+            if people and people not in names:
+                names.append(people)
+    return '; '.join(names)
+
+
+def normalize(p):
+    if not isinstance(p, dict):
+        raise AppError('Báo cáo không hợp lệ.')
+    try:
+        day = dt.date.fromisoformat(p['date']).isoformat()
+    except (KeyError, ValueError, TypeError):
+        raise AppError('Chọn ngày báo cáo hợp lệ.')
+    if p.get('shift') not in ('DAY', 'NIGHT'):
+        raise AppError('Chọn ca ngày hoặc ca đêm.')
+    actor = clean_text(p.get('actor', ''), 100)
+    if not actor:
+        raise AppError('Điền người nhập để lưu lịch sử.')
+    status = p.get('status', 'draft')
+    if status not in ('draft', 'closed'):
+        raise AppError('Trạng thái không hợp lệ.')
+    result = dict(date=day, shift=p['shift'], actor=actor, status=status,
+                  notes=clean_text(p.get('notes', ''), 15000), staffing=[], jobs=[], handover=[])
+    selected = ship_names(p.get('ships', []))
+    if selected:
+        result['ships'] = selected
+    for group in ('staffing', 'jobs', 'handover'):
+        if not isinstance(p.get(group, []), list) or len(p.get(group, [])) > 200:
+            raise AppError('Tối đa 200 dòng mỗi phần.')
+    for r in p.get('staffing', []):
+        row = {'role': clean_text(r.get('role', ''), 150), 'people': clean_text(r.get('people', ''), 3000)}
+        selected = ship_names(r.get('ships', []))
+        if selected:
+            row['ships'] = selected
+        result['staffing'].append(row)
+    for r in p.get('jobs', []):
+        row = {'name': clean_text(r.get('name', ''), 200),
+               'detail': clean_text(r.get('detail', ''), 1000),
+               'xn': r.get('xn') is True, 'rtg': r.get('rtg') is True}
+        selected = ship_names(r.get('ships', []))
+        if selected:
+            row['ships'] = selected
+        for k in KEYS:
+            v = r.get(k)
+            if v in ('', None):
+                row[k] = None
+            elif isinstance(v, bool) or not re.fullmatch(r'\d{1,7}', str(v)):
+                raise AppError('Số lượng phải là số nguyên từ 0 đến 9.999.999.')
+            else:
+                row[k] = int(v)
+        if not row['name'] and (row['detail'] or row['xn'] or row['rtg'] or any(row[k] is not None for k in KEYS)):
+            raise AppError('Dòng có số liệu phải có tên công việc.')
+        result['jobs'].append(row)
+    for r in p.get('handover', []):
+        text = clean_text(r.get('text', ''), 2000)
+        if text:
+            result['handover'].append({'text': text, 'done': r.get('done') is True})
+    attachments = p.get('attachments', [])
+    if not isinstance(attachments, list) or len(attachments) > 40:
+        raise AppError('Mỗi báo cáo tối đa 40 tệp đính kèm.')
+    if attachments:
+        result['attachments'] = [attachment_meta(a) for a in attachments]
+        if len({a['hash'] for a in result['attachments']}) != len(attachments):
+            raise AppError('Một tệp không được đính kèm trùng trong cùng báo cáo.')
+    if status == 'closed':
+        chief = chief_people(result['staffing'])
+        if not chief:
+            raise AppError('Điền PHỤ TRÁCH CHUNG trước khi chốt ca.')
+    return result

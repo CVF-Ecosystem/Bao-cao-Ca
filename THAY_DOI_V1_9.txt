@@ -1,0 +1,46 @@
+BẢN 1.9.0 — DỌN MÃ NGUỒN VÀ GIẢM TẢI KHI DỮ LIỆU LỚN
+
+Giữ nguyên schema DB 3, quy trình tiếp nhận / sao lưu / khôi phục. Đã mở thử một
+bản sao DB thật của 1.8.2 (3 báo cáo) bằng 1.9.0: không cần tiếp nhận, đủ dữ liệu.
+
+ĐỢT 1 — HIỆU NĂNG VÀ AN TOÀN
+1) Sao lưu không còn chạy toàn phần sau mỗi lần tải tệp, thêm tàu, lưu danh mục.
+   Các thao tác này chỉ sao lưu nếu đã quá 5 phút kể từ lần trước; lần bị hoãn
+   được bù khi chốt ca, sao lưu tay hoặc bấm Thoát tool. Chốt ca, sửa ca đã chốt,
+   nhập bổ sung và khôi phục vẫn sao lưu ngay.
+2) Trang chủ dùng /api/overview (số đếm + 6 ca gần nhất) thay vì tải toàn bộ báo cáo.
+3) Xem báo cáo phân trang 50 ca/trang (/api/reports-page, limit tối đa 200).
+   Tổng hợp số liệu và xuất Excel vẫn quét đủ phạm vi lọc như cũ.
+4) Id báo cáo không còn được ghép vào chuỗi JavaScript trong onclick (dùng data-id).
+5) validate_templates không còn sửa dữ liệu đầu vào; việc thêm người của mẫu vào
+   tổ nằm trong merge_team_members (trả về bản sao).
+6) CHAY_KIEM_THU.bat chạy cả Python lẫn các bộ KIEM_THU*.js; thiếu Node.js thì báo
+   rõ là giao diện chưa được kiểm thử thay vì im lặng.
+7) File nội bộ đọc/ghi đều chỉ định UTF-8.
+
+ĐỢT 2 — BẢO TRÌ
+8) BAO_CAO_CA.py chỉ còn import đang dùng; kiểm thử import trực tiếp từ module gốc.
+9) Store.__init__ tách thành _preserve_before_upgrade, _ensure_schema, _seed_once.
+10) ung_dung.js, danh_muc.js định dạng lại: mỗi câu lệnh một dòng (815 dòng thay vì
+    219). Chỉ đổi khoảng trắng; đã kiểm chứng bằng so khớp văn bản đã bỏ khoảng
+    trắng và danh sách chuỗi/regex/chú thích. Các mẫu HTML dài vẫn nằm một dòng.
+11) XUAT_EXCEL.py: số dòng khuôn thành hằng số có tên; MAU_BAO_CAO.xlsx thiếu dòng
+    khuôn thì báo lỗi rõ (TemplateError → thông báo tiếng Việt) thay vì xuất sai.
+12) Bản sao danh mục (DANH_MUC/SAO_LUU) giữ 20 bản mới nhất.
+13) Nhật ký DU_LIEU/*.log xoay vòng khi quá 1 MB, giữ 3 bản cũ (.1 .2 .3).
+14) Thêm git (.gitignore bỏ DU_LIEU, DANH_MUC thực tế, khóa, cấu hình bảo vệ),
+    pyproject.toml cho ruff, và KIEM_THU_MA_NGUON.py (cú pháp + import thừa, chỉ
+    dùng thư viện chuẩn).
+
+KIỂM THỬ: 113 kiểm thử Python và 5 bộ JavaScript (Node VM) qua trên Windows. Đã
+chạy thật ứng dụng trong trình duyệt với 56 ca mẫu: trang chủ, danh sách 2 trang
+(50 + 6), mở báo cáo, thoát tool và bản sao lưu bù — không có lỗi console.
+Chưa kiểm thử: EXE, hộp thoại tkinter, DB nhiều GB, tải ảnh/PDF lớn.
+
+CHUYỂN TỪ 1.8.2 SANG 1.9.0
+- Chép thư mục DU_LIEU và DANH_MUC cũ vào thư mục 1.9 (bản 1.8.2 giữ nguyên làm dự phòng).
+- Khi thư mục đổi tên, file cấu hình BAO_VE_DB_*.json (đặt theo đường dẫn) là file
+  mới: phải chọn lại thư mục dự phòng ngoài trong Bảo vệ dữ liệu / Khôi phục.
+  Các bản sao đã có trong DU_LIEU/SAO_LUU_AN_TOAN được giữ.
+- Nếu dùng EXE: chạy TAO_FILE_EXE.bat để đóng gói lại.
+- Không chạy 1.8.2 và 1.9.0 cùng lúc trên cùng một DB.

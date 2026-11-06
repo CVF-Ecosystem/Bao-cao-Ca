@@ -1,0 +1,7 @@
+1.8.1 — Sửa lỗi tiếp nhận DB cũ sau khi thư mục đã đăng ký DB khác.
+- Thêm hộp xem trước Tiếp nhận DB đang có khi mở ứng dụng.
+- Sao lưu DB và cấu hình vào TRUOC_TIEP_NHAN trước khi thay mã đăng ký.
+- Tách thư mục snapshot theo mã DB; giữ bản sao nguồn trước.
+- Giữ chặn DB hỏng, DB bổ sung và phục hồi sai nguồn trong luồng khôi phục.
+- Không đổi schema hoặc tự gộp báo cáo giữa hai nguồn.
+- 92 kiểm thử Python qua; các kiểm thử JavaScript qua.

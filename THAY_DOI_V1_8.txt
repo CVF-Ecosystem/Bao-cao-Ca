@@ -1,0 +1,11 @@
+SỔ BÁO CÁO CA 1.8 — 06/11/2026
+Phát triển bởi Mr Ân / Tân Thuận
+
+- Sao lưu nhiều phiên bản bằng SQLite Backup API và kiểm tra bản sao.
+- Chọn nơi sao lưu bên ngoài; cảnh báo khi chưa chọn hoặc không ghi được.
+- Chặn tạo DB trắng khi phát hiện DB của bộ dữ liệu đã dùng bị mất/hỏng.
+- Khôi phục trong ứng dụng hoặc trước khởi động; giữ nguyên DB cũ.
+- Chặn DB sai nguồn, DB bổ sung, bản lỗi, bản thay đổi sau xem trước.
+- Chặn hai phiên ứng dụng cùng thư mục bằng khóa hệ điều hành.
+- Giãn sao lưu bản nháp 5 phút; chốt/sửa chốt sao lưu ngay.
+- Giữ schema 3 và các chức năng nhân sự/ca/tàu/xuất Excel hiện có.

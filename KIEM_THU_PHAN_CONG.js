@@ -1,0 +1,58 @@
+// Node-only behavior tests; does not claim to verify browser rendering.
+'use strict';
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const elements=new Map(), store=new Map();
+const element=id=>{if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',classList:{add(){},remove(){},toggle(){}}});return elements.get(id)};
+const sandbox={history:{replaceState(){}},window:{addEventListener(){}},document:{addEventListener(){},getElementById:element,querySelectorAll(){return []}},sessionStorage:{getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v)},URLSearchParams,encodeURIComponent,setTimeout,clearTimeout,confirm:()=>true};
+vm.createContext(sandbox);
+const run=code=>vm.runInContext(code,sandbox);
+run(fs.readFileSync(__dirname+'/tai_nguyen/ung_dung.js','utf8'));
+run('go=()=>{}'); // Do not trigger network startup when loading the directory functions.
+run(fs.readFileSync(__dirname+'/tai_nguyen/danh_muc.js','utf8'));
+run(`info={readonly:false,teams:[{id:'team1',name:'Ca 1',people:['An','Bình']},{id:'team2',name:'Ca 2',people:['Chi']},{id:'team3',name:'Ca 3',people:[]}],people:['An','Bình','Chi'],ships:['VESSEL A','VESSEL B','VESSEL C']};
+ report={staffing:[{role:'TALLY TÀU',people:'An',ships:['VESSEL A']}],jobs:[]};
+ var originalRenderStaff=renderStaff;collect=()=>{};renderStaff=()=>{};touch=()=>{};closeModal=()=>{};var messages=[];toast=(s)=>messages.push(s);
+ var chosenIndex=-1;const originalChooseShips=chooseShips;chooseShips=(kind,i)=>{chosenIndex=i};`);
+run('addShipStaff(0)');
+assert.equal(run('report.staffing.length'),2);
+assert.equal(run('report.staffing[1].people'),'');
+assert.equal(run('chosenIndex'),1);
+assert.deepEqual(JSON.parse(run('JSON.stringify(report.staffing[0])')),{role:'TALLY TÀU',people:'An',ships:['VESSEL A']});
+run(`report.staffing[1].people='Bình';shipTarget={kind:'staff',index:1};shipSelection=new Set(['VESSEL B']);applyShips()`);
+assert.equal(run('report.staffing[1].ships[0]'),'VESSEL B');
+assert.equal(run('report.staffing[0].ships[0]'),'VESSEL A');
+assert.equal(run('report.staffing[0].people'),'An');
+assert.equal(run('report.staffing[1].people'),'Bình');
+run(`shipSelection=new Set(['VESSEL B','VESSEL C']);applyShips()`);
+assert.equal(run('report.staffing[1].ships.length'),1);
+assert.ok(run('messages.at(-1).includes("1 tàu")'));
+run(`report.staffing.push({role:'XUẤT TÀU',people:'Chi',ships:['VESSEL C']});addShipStaff(2)`);
+assert.equal(run('report.staffing[3].role'),'XUẤT TÀU');
+assert.equal(run('report.staffing[3].people'),'');
+assert.equal(run("pickerPersonVisible('An',false,info.teams[0],'')"),true);
+assert.equal(run("pickerPersonVisible('Chi',false,info.teams[0],'')"),false);
+assert.equal(run("pickerPersonVisible('Chi',true,info.teams[0],'')"),true);
+assert.equal(run("pickerPersonVisible('Bình',false,info.teams[0],'binh')"),true);
+assert.equal(run("pickerPersonVisible('An',false,info.teams[2],'')"),false);
+assert.equal(run("pickerPersonVisible('An',false,null,'')"),true);
+run("setStaffTeam('team2')");assert.equal(run('selectedStaffTeam()'),'team2');
+assert.equal(element('staffTeam').value,'team2');
+store.set('ca_staff_team','unknown');assert.equal(run('selectedStaffTeam()'),'');
+run(`catalogEditor={teams:'invalid JSON'};`);
+assert.ok(run('teamEditorHTML()').includes('Ca 1'));
+// All checkboxes stay in the DOM while filtering; hidden selected names must survive Apply.
+sandbox.document.querySelectorAll=selector=>selector==='#peopleChoices input:checked'?[{value:'An'},{value:'Chi'}]:[];
+run('staffPickerIndex=0;applyPeople()');
+assert.equal(run('report.staffing[0].people'),'An; Chi');
+assert.equal(run('report.staffing[0].ships[0]'),'VESSEL A');
+// Readonly cannot insert a new assignment or change a selected ship.
+run("info.readonly=true;addShipStaff(0);shipSelection=new Set(['OTHER']);applyShips()");
+assert.equal(run('report.staffing.length'),4);
+assert.equal(run('report.staffing[1].ships[0]'),'VESSEL B');
+run(`info.readonly=false;report.staffing=[];for(const role of ['TALLY TÀU','XUẤT TÀU'])for(const [ship,person] of [['A','An'],['B','Bình'],['C','Chi']])report.staffing.push({role,ships:[ship],people:person});originalRenderStaff()`);
+const compact=element('staffRows').innerHTML;
+assert.equal((compact.match(/class="vesselStaffGroup"/g)||[]).length,2);
+assert.equal((compact.match(/class="vesselStaffRow"/g)||[]).length,6);
+assert.equal((compact.match(/＋ Thêm tàu/g)||[]).length,2);
+assert.equal((compact.match(/data-staff-people=/g)||[]).length,6);
+console.log('Personnel UI behavior tests passed: separate people/vessels, single selection, crew filtering, selected names preserved, legacy config fallback, readonly.');

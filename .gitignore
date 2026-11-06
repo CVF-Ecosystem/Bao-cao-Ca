@@ -1,0 +1,17 @@
+# Dữ liệu thật và bản sao lưu: không đưa vào kho mã nguồn.
+DU_LIEU/
+BAO_VE_DB_*.json
+KHOA_DB_*.lock
+
+# Danh mục thực tế của từng máy (chỉ giữ README.txt).
+DANH_MUC/*
+!DANH_MUC/README.txt
+
+# Sinh ra khi chạy / đóng gói.
+__pycache__/
+*.pyc
+*.tmp
+build/
+dist/
+*.spec
+SO_BAO_CAO_CA.exe

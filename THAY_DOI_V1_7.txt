@@ -1,0 +1,22 @@
+BẢN 1.7 — 05/11/2026 — Phát triển bởi Mr Ân / Tân Thuận
+
+Mới:
+- Bốn mẫu dùng chung: Ca 1, Ca 2, Ca 3 và nhân sự ca ngày.
+- Cài theo vị trí/người bằng danh sách chọn, không cần sửa code/JSON.
+- Chọn mẫu ca tự lập phân công, có bảng xem trước và xác nhận.
+- Nhân sự ca ngày chỉ bổ sung người còn thiếu, không thay người đang có.
+- Không tự gán mẫu vào các dòng nhiều tàu; giữ phân công riêng đã nhập.
+- Mẫu độc lập với báo cáo lịch sử, đi cùng DB mang đi, dùng schema cũ.
+- Khôi phục danh mục từ DB giữ cả vị trí/công việc tùy chỉnh khi thiếu
+  file cấu hình ngoài.
+
+File mới: MAU_PHAN_CONG.py, tai_nguyen/phan_cong_mau.js,
+KIEM_THU_MAU_CA.py, KIEM_THU_MAU_CA.js.
+File sửa: QUAN_LY_DANH_MUC.py, MAY_CHU.py, THIET_LAP.py, giao_dien.html,
+tai_nguyen/ung_dung.js, tai_nguyen/danh_muc.js, tai_nguyen/style.css,
+HUONG_DAN.txt, KET_QUA_KIEM_THU.txt.
+Các module tính số lượng, lưu report/revision/attachment và xuất Excel
+không sửa. Mẫu MAU_BAO_CAO.xlsx không thay đổi.
+
+Không tự suy đoán nhân viên của từng vị trí. Cần cài mẫu một lần.
+Chưa nghiệm thu Windows/EXE hoặc trình duyệt đồ họa thực tế.

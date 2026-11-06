@@ -1,0 +1,12 @@
+# Không bắt buộc để chạy ứng dụng (chỉ dùng thư viện chuẩn Python 3.9+).
+# Cấu hình này dành cho máy phát triển có cài ruff:  ruff check .
+# Nếu chưa cài ruff, KIEM_THU_MA_NGUON.py đã kiểm tra cú pháp và import thừa bằng thư viện chuẩn.
+
+[tool.ruff]
+line-length = 160
+target-version = "py39"
+extend-exclude = ["DU_LIEU", "DANH_MUC"]
+
+[tool.ruff.lint]
+# E9: lỗi cú pháp/runtime; F: pyflakes (import thừa, tên chưa định nghĩa...).
+select = ["E9", "F"]

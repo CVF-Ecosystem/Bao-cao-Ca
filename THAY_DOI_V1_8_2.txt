@@ -1,0 +1,4 @@
+1.8.2: Sửa [Errno 9] Bad file descriptor khi fsync snapshot trên Windows.
+Chỉ thay quyền mở file sao tạm từ rb thành r+b, không mở DB nguồn để ghi.
+Bổ sung kiểm thử hồi quy yêu cầu descriptor có quyền ghi; tổng 93 test qua.
+Giữ nguyên quy trình tiếp nhận, sao lưu, khôi phục và schema 3.
