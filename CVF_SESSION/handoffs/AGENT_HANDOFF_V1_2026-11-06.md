@@ -5,42 +5,30 @@ Status: ACTIVE
 ## Current State
 
 - Project: SO_BAO_CAO_CA_V1_9
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active role: ORCHESTRATOR
-- Next allowed move: Independent CRC implementation review, local material commit and clean-tree verification before terminal receipt/closure. Product work remains separate.
+- Next allowed move: Resume product roadmap through a fresh assessed work order; existing CRC terminal receipt grants no product BUILD.
 - Parked operator checkpoint: none
 
-## Historical accepted setup
+## Accepted current workspace
 
-The authorized workspace setup is independently accepted against WSA1-WSA4. Core remains pinned at c4c8767ac8861854f40d466ba338ffd11eb9558e. Supplemental profile1.4, separate reviewed source/upgrade identity, exact action receipt, compatibility doctor, catalog and continuity are installed. Work order docs/work_orders/WO_WORKSPACE_ACTIVATION.md is a settled REVIEW record, not a pending implementation grant.
+CRC1-CRC4 local Core recovery is settled under docs/work_orders/WO_CORE_RECONCILIATION.md and docs/roadmaps/CORE_RECONCILIATION.md. Core is68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6. Canonical explicit profile1.4 upgrade preserved17 normalized source identities and workflow bytes. Execution is PINNED_CORE; CORE_AND_SUPPLEMENTAL inspection remains separately reviewed. The obsolete active upgrade authority and legacy failure adapter were retired, with original bytes preserved.
 
-Use `python -B scripts/check_project_workspace.py --json`; focused tests: `python -B -m unittest kiem_thu.test_project_workspace_checker -v`. The original public-Core doctor retains its reviewed version diagnostics (FAIL27/28 on a clean tree, or FAIL26/28 when the two setup documents enter discovery); project compatibility success is separate and requires all25 baseline checks, CONT, verified current bootstrap and assessed action. Any new failure or source/profile/policy drift blocks. Do not run repeated bootstrap to overwrite the reviewed bundle.
+Current command: `python -B scripts/check_project_workspace.py --json`. Success is CORE_ASSESSED and requires current verified activation, exactly29 native PASS rows and explicit-packet trusted bootstrap INST/CONT/COV/ACT PASS. Focused tests: `python -B -m unittest kiem_thu.test_project_workspace_checker -v`.
 
-Independent review: docs/reviews/workspace-activation-review.md; immutable positive/negative evidence and previous failures: docs/reviews/activation-history/. Six focused groups passed, including the committed clean-tree regression. Failed repair history is preserved, final local full-flow MET recorded, and resolved active audit cleared; historical cumulative time remains UNKNOWN. Prior active handoff and admitted packet snapshots are retained as text artifacts to avoid treating history as new dispatch or review.
+## Evidence and role transitions
 
-## Continuation
+Root owned bounded INTAKE/DESIGN/SPEC/WORK_ORDER metadata recovery; Sol independently accepted exact non-ACT observations and supplemental source; fresh admission passed7/7 before Terra BUILD. Terra changed only checker/tests. Sol reviewed and disclosed localized parser corrections within those same paths. Root transitioned to REVIEW and commit steward after independent implementation acceptance. Material commit 5fec5a122339486f5a85afa4276362e76691d61b passed actual clean committed flow and four test groups with unchanged reviewed source hashes. Root then owns closer/session synchronization and terminal exact-action reassessment before commit.
 
-Future action bytes/selected criteria require fresh assessment and receipt; the settled REVIEW receipt grants no unknown future BUILD. Apply the seven-step chain INTAKE -> DESIGN -> SPEC -> WORK_ORDER -> BUILD -> REVIEW -> FREEZE with provider-neutral roles, Terra worker and independent reviewer as selected in this session. Read the product roadmap and existing catalog/API first; retain its acceptance gates, actual prior evidence and open work. Application implementation has not been reassessed here.
+See docs/reviews/core-reconciliation/implementation-review.md, clean-material-proof.json, negative-integration.json and final-preservation.json. Eleven disposable inherited negative cases were rejected.76 protected source/returned-evidence files and61 historical evidence files remain byte-identical;13 real-data/catalog files are unchanged within the explicitly recorded observation window. Shared Core stays clean and pack manifests unchanged since admission. No active Git pre-commit hook was found; actual canonical pre-commit is run explicitly. File delivery/workflow presence is not hosted execution.
 
-Read docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md before similar upgrades; local intake is generation-only and parent admission remains pending. No unresolved operator choice is needed for the accepted setup. Any later product/business choices remain with their existing owners.
+## Continuation and claim limits
 
-## Claim boundary
+The settled terminal REVIEW receipt grants no unknown future BUILD. Rehydrate current authority, declare roles and assess a new exact action before product implementation. Product authority is tai_lieu/ROADMAP_SAU_V1_9.md; application source/data were excluded from recovery changes. Antigravity's headless DOM/DB evidence and Addendum remain qualified receiving evidence, not headed/native Windows or full-product acceptance. Receiving records are in .cvf/runtime/project-resume-20261107/; both original bundles are preserved.
 
-This acceptance is local mechanical development setup only. Application source and real data were unchanged. Hosted CI, live provider/AI governance, EXE/product acceptance, recovery of real data and universal host loading were not proven. Whole-workspace failures of other projects remain outside scope.
+No provider call, live AI governance, deployment, hosted CI, universal agent compliance or host auto-loading is proven. No decision currently waits on the operator.
 
-## Commit disposition
+## Historical setup
 
-Material-SHA marker: 73c252a (final accepted adapter correction). Initial setup material: 37c54af7fa6fd62339c26b786fa8bad27228bab9. Clean committed source was independently reviewed and checked before this continuity update.
-
-## Post-commit acceptance 2026-11-07
-
-The initial adapter did not explicitly pass action packets after Git became clean; the observed N/A and original failure were preserved. Same-scope reviewer-local correction now passes all verified receipt packets to source bootstrap, keeping COV PASS required. Independent supplemental review: docs/reviews/workspace-activation-postcommit-review.md. Actual clean committed proof and six-test log: docs/reviews/activation-history/clean-committed-full-flow.json and clean-committed-tests.txt. Failed and successful projections appended without rewriting history; no pending action remains.
-
-## Current Core recovery
-
-Operator2026-11-07 authorizes docs/work_orders/WO_CORE_RECONCILIATION.md. Source changes from c4c8767 to68a7446; preserve CORE_AND_SUPPLEMENTAL guidance but execute PINNED_CORE. Prior accepted setup and receipts are historical. Current activation/readiness is pending fresh assessment; no prior PASS covers this migration. Root owns metadata/receipts and commit; Terra6.1High owns doctor/tests after admission, Sol6.1Medium independently reviews. No parked operator decision; product and Antigravity headed/native acceptance remain open.
-
-## CRC BUILD acknowledgment
-
-Root rehydrated current authority and independent Sol admission review. Fresh receipt is CURRENT_ASSESSED on PINNED_CORE and actual admitted pre-dispatch passes7/7 controls for exact CRC1-CRC4 IMPLEMENT packet. Terra owns only checker/tests; Root owns records and commit. No product implementation or native evidence claim.
+Previous c4c8767/supplemental compatibility acceptance remains historical in docs/reviews/activation-history/ and workspace-activation review records. Prior handoff/manifest/policy/receipt/adapter originals are in docs/reviews/core-reconciliation/history/. Read docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md before similar recovery. Source and acceptance history were retained rather than relabelled as current-Core proof.

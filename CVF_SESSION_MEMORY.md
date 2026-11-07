@@ -2,53 +2,25 @@
 
 Memory class: POINTER_RECORD
 
-This is the project continuity front door. It is CVF-governed project state,
-not provider-specific memory and not a chat transcript.
-
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md
 
-Update these four lines together with `CVF_SESSION/ACTIVE_SESSION_STATE.json`,
-the active handoff and `IMPLEMENTATION_STATUS.json`. The portable gate runner
-reports any disagreement with a field-specific locator.
+## Startup and continuation
 
-## Startup Order
+Rehydrate manifest/policy, active state, this memory, active handoff, implementation truth and docs/INDEX.md before material work at every new/resumed session, context loss, new tranche or role/authority transition. Emit a fresh CVF Agent Declaration. Disagreement is BLOCKED_CONTINUITY_DRIFT. Preserve INTAKE -> DESIGN -> SPEC -> WORK_ORDER -> BUILD -> REVIEW -> FREEZE and independent R2 review. Source/project records own authority; provider-local memory does not.
 
-1. Read `.cvf/manifest.json` and `.cvf/policy.json`.
-2. Read `CVF_SESSION/ACTIVE_SESSION_STATE.json`.
-3. Read the active handoff named by that state file.
-4. Read `IMPLEMENTATION_STATUS.json` and `docs/INDEX.md`.
-5. Read matching records from `docs/reviews/learnings/README.md` before similar work; the home indexes shared findings and parent feedback.
-6. State current mode, active handoff, next allowed move, parked checkpoint,
-   and active role before material work.
+## Current accepted workspace
 
-## Mandatory Continuity Rehydration
+Core68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6, profile1.4, PINNED_CORE execution and separately inspected CORE_AND_SUPPLEMENTAL guidance. Run `python -B scripts/check_project_workspace.py --json`; focused tests: `python -B -m unittest kiem_thu.test_project_workspace_checker -v`. The delegate requires current activation, all29 native PASS checks and four trusted bootstrap PASS results with every assessed packet explicit. No legacy failure exception remains.
 
-Repeat the startup order before material work at every new or resumed
-chat/session, after context loss or compaction, at the start of every new
-tranche or work order, and whenever responsibility or the active handoff
-changes. Read current files again; do not rely on chat history,
-provider-local memory, or a declaration from a previous session.
+CRC1-CRC4 implementation was independently accepted and actual clean committed source passed at 5fec5a122339486f5a85afa4276362e76691d61b. See docs/reviews/core-reconciliation/ and terminal work order. The current terminal REVIEW receipt grants no future BUILD; changed action bytes/criteria need fresh assessment. No operator checkpoint is parked.
 
-Emit a fresh `CVF Agent Declaration` before the first material action. At a
-tranche transition, also record the acknowledgment in the active handoff
-before BUILD. If continuity surfaces disagree, stop and report
-`BLOCKED_CONTINUITY_DRIFT`.
+## Product and preserved history
 
-Active state: `CVF_SESSION/ACTIVE_SESSION_STATE.json`
+Product authority remains tai_lieu/ROADMAP_SAU_V1_9.md. Application/EXE acceptance and headed/native UI proof remain open. Antigravity headless DOM/DB evidence and Addendum were received with qualifications in .cvf/runtime/project-resume-20261107/antigravity-addendum-review.json; both original bundles remain unchanged. Prior supplemental setup, receipts, failures and learning are historical: docs/reviews/activation-history/, docs/reviews/core-reconciliation/history/ and docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md.
 
-Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md`
-
-Provider-local files may assist execution but are not project source authority.
-
-## Historical accepted setup
-
-Previous supplemental profile1.4 setup and compatibility doctor were accepted at their recorded source identity. Their original review and six focused groups remain preserved in docs/reviews/activation-history/. They are historical evidence and do not authorize the current Core migration. Read docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md before similar recovery.
-
-## Current Core recovery
-
-Operator2026-11-07 authorizes docs/work_orders/WO_CORE_RECONCILIATION.md. Source changes from c4c8767 to68a7446; preserve CORE_AND_SUPPLEMENTAL guidance but execute PINNED_CORE. Prior accepted setup and receipts are historical. Current activation/readiness is pending fresh assessment; no prior PASS covers this migration. Root owns metadata/receipts and commit; Terra6.1High owns doctor/tests after admission, Sol6.1Medium independently reviews. No parked operator decision; product and Antigravity headed/native acceptance remain open.
+This local mechanical acceptance proves no provider governance, universal enforcement, host loading or hosted CI execution.

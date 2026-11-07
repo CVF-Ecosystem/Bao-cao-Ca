@@ -1,30 +1,30 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "overallStatus": "CORE_RECONCILIATION_IN_PROGRESS",
-  "currentPhase": "REVIEW",
+  "overallStatus": "CURRENT_CORE_WORKSPACE_ACCEPTED",
+  "currentPhase": "FREEZE",
   "completedCapabilities": [
-    "Historical reviewed supplemental profile1.4 setup retained with its original evidence",
-    "Current public Core68a7446 identity and canonical installed profile1.4",
-    "Exact CRC action activation admitted after actual non-ACT checks and independent review"
+    "Pinned public Core68a7446 and canonical profile1.4 install with preserved workflow",
+    "Current-Core project delegate with exact29 native checks and trusted explicit-packet bootstrap",
+    "Independent exact-action and implementation review; four focused groups and eleven disposable inherited negative cases",
+    "Actual clean committed local flow at 5fec5a122339486f5a85afa4276362e76691d61b",
+    "Synchronized active continuity/catalog and preserved historical source/evidence"
   ],
-  "activeWorkOrders": [
-    "docs/work_orders/WO_CORE_RECONCILIATION.md"
-  ],
+  "activeWorkOrders": [],
   "knownLimitations": [
     "Application implementation and EXE/product acceptance are not reassessed by Core recovery",
     "Antigravity returned headless DOM/DB evidence is qualified in runtime receiving reviews; headed/native UI proof remains open",
     "Future action bytes and selected criteria require their own current assessment",
     "No hosted CI, host auto-loading, universal agent compliance or live provider governance proof",
-    "Current Core checker implementation and final independent acceptance are in progress"
+    "No active Git pre-commit hook was found; the trusted canonical pre-commit gate is explicitly invoked and its actual output retained. Hosted workflow execution is unobserved."
   ],
   "evidence": [
-    "docs/reviews/workspace-activation-review.md",
-    "docs/reviews/activation-history/adapter-reviewed-full-flow.json",
-    "docs/reviews/activation-history/adapter-reviewed-tests.txt",
-    "docs/reviews/workspace-activation-postcommit-review.md",
-    "docs/reviews/activation-history/clean-committed-full-flow.json",
-    "docs/reviews/activation-history/clean-committed-tests.txt"
+    "docs/reviews/core-reconciliation/implementation-review.md",
+    "docs/reviews/core-reconciliation/clean-material-proof.json",
+    "docs/reviews/core-reconciliation/final-preservation.json",
+    "docs/reviews/core-reconciliation/negative-integration.json",
+    "docs/reviews/core-reconciliation/clean-material-full-flow.json",
+    "docs/reviews/core-reconciliation/clean-material-tests.txt"
   ],
   "updatedAt": "2026-11-07"
 }

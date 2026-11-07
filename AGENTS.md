@@ -23,12 +23,10 @@ Before performing ANY action on this project, you MUST:
    the public CVF remote, carries the public-safe workspace kit, and matches `origin/main`. On stale/unrelated    history, stop and reconcile with `scripts/update_cvf_workspace_public_core.ps1`.
 
    Current execution source is the manifest-pinned public Core and profile1.4. Rule-pack guidance remains separately
-   inspected under CORE_AND_SUPPLEMENTAL. Use `python -B scripts/check_project_workspace.py --json` after the
-   recovery action is admitted and its current delegate implemented. Require the original native doctor to pass
-   every baseline check, verified current activation and trusted bootstrap with explicit assessed packet scope.
-   No obsolete doctor failure is exempted. During this operator-authorized recovery, Root owns bounded diagnosis,
-   metadata/installer and receipt repair under docs/work_orders/WO_CORE_RECONCILIATION.md; dependent product BUILD
-   stays held. Preserve all actual failures and require independent action review before worker implementation.
+   inspected under CORE_AND_SUPPLEMENTAL. Run `python -B scripts/check_project_workspace.py --json` for current
+   readiness. Require every native doctor check, current activation and trusted bootstrap with explicit assessed
+   packet scope. No obsolete failure is exempted. Core recovery is settled in docs/work_orders/WO_CORE_RECONCILIATION.md;
+   its terminal REVIEW receipt grants no future product BUILD. New exact actions require independent assessment.
 
 3. Read `.cvf/policy.json`; `liveGovernanceEvidenceRequired` and `mockAllowedOnlyForUi` must both be `true`. Treat
    `requiredDocs` and state history as targeted authority inputs, not an unconditional full read.

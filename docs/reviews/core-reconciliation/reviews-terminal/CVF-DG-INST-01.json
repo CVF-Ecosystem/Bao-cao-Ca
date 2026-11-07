@@ -1,0 +1,49 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+    "sha256": "0883f3b29cc2fbd0475f25ee7243aa7ada7632adfb3d675c3bf2a3a08ac49be7",
+    "criteria": [
+      "CRC1",
+      "CRC2",
+      "CRC3",
+      "CRC4"
+    ]
+  },
+  "controlId": "CVF-DG-INST-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Sol 6.1 Medium / activation_design_review",
+  "authority": "Operator2026-11-07 authorized bounded Core recovery, independently accepted implementation and exact settled terminal REVIEW; Root owns final receipt/gates/commit",
+  "decision": "ACCEPTED",
+  "reason": "Actual terminal preview PASS. Current metadata/lock identities equal comparison-terminal, executable source is the clean public Core68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6. Prior admission independently verified17 installed files and unchanged workflow; clean committed material retains reviewed source identities.",
+  "evidence": [
+    {
+      "path": "docs/reviews/core-reconciliation/predispatch-terminal.json",
+      "sha256": "afb2039492e21ae467849fd00e05fc589e3299025db592fa27e6ee164db77b45"
+    },
+    {
+      "path": "docs/reviews/core-reconciliation/process-terminal.json",
+      "sha256": "ebb6fe17c95fea82e95a4a43e4f6266c47c89139f01f1fdcfd0f5d85e9687233"
+    },
+    {
+      "path": "docs/reviews/core-reconciliation/configured-terminal.json",
+      "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
+    },
+    {
+      "path": "docs/reviews/core-reconciliation/comparison-terminal.json",
+      "sha256": "2e99f4fff38107f05eb72cf31d7f97978ca1929ca9261be01370ecc732e84ef8"
+    },
+    {
+      "path": "docs/reviews/core-reconciliation/packet-terminal.original.txt",
+      "sha256": "0883f3b29cc2fbd0475f25ee7243aa7ada7632adfb3d675c3bf2a3a08ac49be7"
+    },
+    {
+      "path": "docs/reviews/core-reconciliation/clean-material-proof.json",
+      "sha256": "2bae2f5c85f85690908bd3fd1ebfe43e7b234bdc35afa31e25364e6b0a624084"
+    },
+    {
+      "path": "docs/reviews/core-reconciliation/implementation-review.md",
+      "sha256": "596ba059b759c87fdac4e3caae72afe62984c2def2fc467b84527a7ec9a39ffc"
+    }
+  ],
+  "limits": "Terminal preview overall exit2 remains retained: ACT_ACTION_STALE reflects old IMPLEMENT receipt. Five non-ACT PASS and APPL explicitN/A are individually accepted, not a fictional completed admission. Root must bind exact new receipt and require successful final checks. No product/nativeUI/hostedCI/provider governance acceptance or future BUILD grant."
+}

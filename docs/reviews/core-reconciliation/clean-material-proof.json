@@ -1,0 +1,32 @@
+{
+  "materialCommit": "5fec5a122339486f5a85afa4276362e76691d61b",
+  "gitStatusBefore": "",
+  "gitStatusAfter": "",
+  "doctorExitCode": 0,
+  "doctorStatus": "CORE_ASSESSED",
+  "testsExitCode": 0,
+  "bootstrapControls": [
+    [
+      "CVF-DG-INST-01",
+      "PASS"
+    ],
+    [
+      "CVF-DG-CONT-01",
+      "PASS"
+    ],
+    [
+      "CVF-DG-COV-01",
+      "PASS"
+    ],
+    [
+      "CVF-DG-ACT-01",
+      "PASS"
+    ]
+  ],
+  "explicitPacketCoverageOnCleanTree": true,
+  "sourceSha256LfNormalized": {
+    "scripts/check_project_workspace.py": "e52d495301123beab049d2edd308919045a48d18abf6aee484fb7c78684f147a",
+    "kiem_thu/test_project_workspace_checker.py": "0a7f2228a9df0ef34ff35115d193cc7166f227b5d9f187fb501129445cb947bb"
+  },
+  "claimBoundary": "Actual clean committed local flow only; no application/native/hosted CI/provider acceptance"
+}

@@ -1,6 +1,6 @@
 # Core identity reconciliation work order
 
-Status: READY
+Status: CLOSED_ACCEPTED
 docType: work_order
 dispatchKind: INITIAL
 Risk: R2
@@ -57,64 +57,170 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "decision": "Require actual current-source checks, assessed action and independent review"
     }
   },
-  "phase": "DISPATCH",
+  "phase": "REVIEW",
   "action": {
-    "kind": "IMPLEMENT",
+    "kind": "REVIEW",
     "selected": [
       "CRC1",
       "CRC2",
       "CRC3",
       "CRC4"
     ],
-    "owner": "Terra worker with Root-owned metadata/receipt recovery",
-    "output": "Current Core project doctor, focused regressions and reviewed activation/continuity evidence",
-    "budgetMinutes": 60,
-    "stop": "Stop on new source/authority drift, unexpected failures or budget; preserve findings before any dependent successor",
-    "next": "Independent review then terminal action assessment and local project commit; product work stays separate"
+    "owner": "Root closer with independent Sol review",
+    "output": "Terminal CRC local mechanical acceptance, current continuity and exact reviewed receipt",
+    "budgetMinutes": 15,
+    "stop": "Stop on unexpected source drift, failed checks or missing independent terminal review",
+    "next": "Commit terminal records after current exact-action assessment; future product work needs its own governed action"
   },
   "rows": [
     {
       "id": "CRC1",
-      "state": "NOT_STARTED",
-      "gap": "Bind the current clean public Core and verify the canonical installed profile/workflow; preserve prior identity and retained supplemental inspection.",
+      "state": "VERIFIED",
+      "gap": "",
       "owner": "Root orchestrator",
       "destination": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/implementation-review.md",
+          "sha256": "596ba059b759c87fdac4e3caae72afe62984c2def2fc467b84527a7ec9a39ffc"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/clean-material-proof.json",
+          "sha256": "2bae2f5c85f85690908bd3fd1ebfe43e7b234bdc35afa31e25364e6b0a624084"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/final-preservation.json",
+          "sha256": "6972c14fb40af91bc5b253a4ca6754bad2b1b8bc5a11d69e5fa3ddce0c2e811a"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/negative-integration.json",
+          "sha256": "d48800c2c812e6767e67c50544a8a38857e6d1c29315b98883c6d38826f1da7a"
+        }
+      ]
     },
     {
       "id": "CRC2",
-      "state": "NOT_STARTED",
-      "gap": "Delegate the project doctor to actual PINNED_CORE activation/native doctor and explicit-packet bootstrap; reject every unrelated or malformed failure.",
+      "state": "VERIFIED",
+      "gap": "",
       "owner": "Root orchestrator",
       "destination": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/implementation-review.md",
+          "sha256": "596ba059b759c87fdac4e3caae72afe62984c2def2fc467b84527a7ec9a39ffc"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/clean-material-proof.json",
+          "sha256": "2bae2f5c85f85690908bd3fd1ebfe43e7b234bdc35afa31e25364e6b0a624084"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/final-preservation.json",
+          "sha256": "6972c14fb40af91bc5b253a4ca6754bad2b1b8bc5a11d69e5fa3ddce0c2e811a"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/negative-integration.json",
+          "sha256": "d48800c2c812e6767e67c50544a8a38857e6d1c29315b98883c6d38826f1da7a"
+        }
+      ]
     },
     {
       "id": "CRC3",
-      "state": "NOT_STARTED",
-      "gap": "Assess exact recovery action, six mandatory controls and inspected supplemental delivery with real invocation evidence and independent review; prove fail-closed negatives.",
+      "state": "VERIFIED",
+      "gap": "",
       "owner": "Root orchestrator",
       "destination": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/implementation-review.md",
+          "sha256": "596ba059b759c87fdac4e3caae72afe62984c2def2fc467b84527a7ec9a39ffc"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/clean-material-proof.json",
+          "sha256": "2bae2f5c85f85690908bd3fd1ebfe43e7b234bdc35afa31e25364e6b0a624084"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/final-preservation.json",
+          "sha256": "6972c14fb40af91bc5b253a4ca6754bad2b1b8bc5a11d69e5fa3ddce0c2e811a"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/negative-integration.json",
+          "sha256": "d48800c2c812e6767e67c50544a8a38857e6d1c29315b98883c6d38826f1da7a"
+        }
+      ]
     },
     {
       "id": "CRC4",
-      "state": "NOT_STARTED",
-      "gap": "Synchronize active instructions, continuity, catalog and committed-tree evidence; preserve application source, real data, both Antigravity bundles and prior setup history.",
+      "state": "VERIFIED",
+      "gap": "",
       "owner": "Root orchestrator",
       "destination": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/implementation-review.md",
+          "sha256": "596ba059b759c87fdac4e3caae72afe62984c2def2fc467b84527a7ec9a39ffc"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/clean-material-proof.json",
+          "sha256": "2bae2f5c85f85690908bd3fd1ebfe43e7b234bdc35afa31e25364e6b0a624084"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/final-preservation.json",
+          "sha256": "6972c14fb40af91bc5b253a4ca6754bad2b1b8bc5a11d69e5fa3ddce0c2e811a"
+        },
+        {
+          "path": "docs/reviews/core-reconciliation/negative-integration.json",
+          "sha256": "d48800c2c812e6767e67c50544a8a38857e6d1c29315b98883c6d38826f1da7a"
+        }
+      ]
     }
   ],
   "supportingWork": [],
   "conclusions": {
-    "tranche": "PENDING",
-    "trancheSummary": "Recovery implementation and independent acceptance pending",
-    "trancheEvidence": [],
-    "product": "PENDING",
-    "productSummary": "Only local workspace recovery is selected; application roadmap and native UI proof remain open",
-    "acceptance": [],
-    "owner": "Root reviewer"
+    "tranche": "COMPLETE",
+    "trancheSummary": "Current-Core local recovery independently reviewed and verified on clean committed source",
+    "trancheEvidence": [
+      {
+        "path": "docs/reviews/core-reconciliation/implementation-review.md",
+        "sha256": "596ba059b759c87fdac4e3caae72afe62984c2def2fc467b84527a7ec9a39ffc"
+      },
+      {
+        "path": "docs/reviews/core-reconciliation/clean-material-proof.json",
+        "sha256": "2bae2f5c85f85690908bd3fd1ebfe43e7b234bdc35afa31e25364e6b0a624084"
+      },
+      {
+        "path": "docs/reviews/core-reconciliation/final-preservation.json",
+        "sha256": "6972c14fb40af91bc5b253a4ca6754bad2b1b8bc5a11d69e5fa3ddce0c2e811a"
+      },
+      {
+        "path": "docs/reviews/core-reconciliation/negative-integration.json",
+        "sha256": "d48800c2c812e6767e67c50544a8a38857e6d1c29315b98883c6d38826f1da7a"
+      }
+    ],
+    "product": "COMPLETE",
+    "productSummary": "Only CRC1-CRC4 workspace recovery criteria are accepted; application roadmap, EXE and headed/native UI acceptance remain separate",
+    "acceptance": [
+      {
+        "path": "docs/reviews/core-reconciliation/implementation-review.md",
+        "sha256": "596ba059b759c87fdac4e3caae72afe62984c2def2fc467b84527a7ec9a39ffc"
+      },
+      {
+        "path": "docs/reviews/core-reconciliation/clean-material-proof.json",
+        "sha256": "2bae2f5c85f85690908bd3fd1ebfe43e7b234bdc35afa31e25364e6b0a624084"
+      },
+      {
+        "path": "docs/reviews/core-reconciliation/final-preservation.json",
+        "sha256": "6972c14fb40af91bc5b253a4ca6754bad2b1b8bc5a11d69e5fa3ddce0c2e811a"
+      },
+      {
+        "path": "docs/reviews/core-reconciliation/negative-integration.json",
+        "sha256": "d48800c2c812e6767e67c50544a8a38857e6d1c29315b98883c6d38826f1da7a"
+      }
+    ],
+    "owner": "Root closer"
   }
 }
 ```
+
+## Terminal disposition
+
+Accepted implementation was committed at 5fec5a122339486f5a85afa4276362e76691d61b. The actual clean committed flow passed with explicit assessed packet coverage and matching reviewed source hashes. This settled REVIEW record grants no implementation action. Original IMPLEMENT packet/receipt and all initial failures remain in docs/reviews/core-reconciliation/. Exact terminal action assessment is refreshed before the terminal commit.

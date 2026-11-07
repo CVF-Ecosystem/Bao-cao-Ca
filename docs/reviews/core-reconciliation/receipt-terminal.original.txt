@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "cvf.workspaceActivation@1.0.0",
+  "identity": {
+    "projectRootSha256": "320d7a94c6415c596972609e3ed4fc87cc3754f690b2640bc75bb444401f3fc7",
+    "manifestSha256": "dd3e52630ef2ded2982569250516da5e96a8a32d7116e946ce2fb0d535ae7c12",
+    "policySha256": "4b0e460ace2337afcc7ad126f05f4e97571374303196e1851a758d34cdcc1dcc",
+    "lockSha256": "8d5b9561f8c97e4250fc9d06a7de851ade917a12f42d84efc2ea4325fa2ff936",
+    "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+    "profileId": "cvf.downstreamGateProfile@1.4.0",
+    "profileSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+    "deliveryFingerprint": "97c98cc51d571cdb928fa00a9a8380770bed27cc057e54067ffd6f4d6310bfd8",
+    "sourceRoute": "PINNED_CORE"
+  },
+  "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
+  "reviewer": "Sol activation_design_review",
+  "authority": "Operator recovery request; independently reviewed exact CRC action and actual control observations",
+  "actions": [
+    {
+      "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+      "sha256": "0883f3b29cc2fbd0475f25ee7243aa7ada7632adfb3d675c3bf2a3a08ac49be7",
+      "criteria": [
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
+      ]
+    }
+  ],
+  "supplemental": [
+    {
+      "id": "SUPPLEMENTAL_ASSESSMENT",
+      "mode": "INSPECTED",
+      "sourceSha256": "b2acf0b3d3bf52e6feb58fb71ac61227b71d29cc98d61f6781f4fbd71aea4125",
+      "owner": "Root orchestrator",
+      "actions": [
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
+      ],
+      "disposition": "ASSESSED",
+      "reviewEvidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "a85ff7b688555fd63783dc69207814e3aa040880239b710e7fb16be0168ebcbf"
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "id": "CVF-DG-INST-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual terminal observation: PASS; . Mechanical local assessment only; no provider or host enforcement claim.",
+      "actions": [
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
+      ],
+      "criteria": [
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/core-reconciliation/predispatch-terminal.json",
+        "sha256": "afb2039492e21ae467849fd00e05fc589e3299025db592fa27e6ee164db77b45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0883f3b29cc2fbd0475f25ee7243aa7ada7632adfb3d675c3bf2a3a08ac49be7",
+          "criteria": [
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/core-reconciliation/configured-terminal.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/reviews-terminal/CVF-DG-INST-01.json",
+          "sha256": "c4104e6b94e4e3d6ac8c4769e573ea6c02a6615d272fea771baa628b2f128340"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-CONT-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual terminal observation: PASS; . Mechanical local assessment only; no provider or host enforcement claim.",
+      "actions": [
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
+      ],
+      "criteria": [
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/core-reconciliation/predispatch-terminal.json",
+        "sha256": "afb2039492e21ae467849fd00e05fc589e3299025db592fa27e6ee164db77b45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0883f3b29cc2fbd0475f25ee7243aa7ada7632adfb3d675c3bf2a3a08ac49be7",
+          "criteria": [
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/core-reconciliation/configured-terminal.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/reviews-terminal/CVF-DG-CONT-01.json",
+          "sha256": "0dadbc4da250cef4c1acbc4bf42dd6e21f339367b2a6a3d4ef8242d169e11096"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-RANGE-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual terminal observation: PASS; WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=5fec5a122339486f5a85afa4276362e76691d61b candidates=14 deleted=0. Mechanical local assessment only; no provider or host enforcement claim.",
+      "actions": [
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
+      ],
+      "criteria": [
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/core-reconciliation/predispatch-terminal.json",
+        "sha256": "afb2039492e21ae467849fd00e05fc589e3299025db592fa27e6ee164db77b45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0883f3b29cc2fbd0475f25ee7243aa7ada7632adfb3d675c3bf2a3a08ac49be7",
+          "criteria": [
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/core-reconciliation/configured-terminal.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/reviews-terminal/CVF-DG-RANGE-01.json",
+          "sha256": "70620c13244e27cc6d4abd27c27e0fb7ace7c212bf9cdc675c2c77ee1d5a6320"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-APPL-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual terminal observation: NOT_APPLICABLE_WITH_REASON; docs/work_orders/WO_CORE_RECONCILIATION.md: status CLOSED_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract. Mechanical local assessment only; no provider or host enforcement claim.",
+      "actions": [
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
+      ],
+      "criteria": [
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
+      ],
+      "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+      "evidence": {
+        "path": "docs/reviews/core-reconciliation/predispatch-terminal.json",
+        "sha256": "afb2039492e21ae467849fd00e05fc589e3299025db592fa27e6ee164db77b45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0883f3b29cc2fbd0475f25ee7243aa7ada7632adfb3d675c3bf2a3a08ac49be7",
+          "criteria": [
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/core-reconciliation/configured-terminal.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/reviews-terminal/CVF-DG-APPL-01.json",
+          "sha256": "80afa8cab3aee071d2d3685c59fafb3c0a6f8d1bdc396c2caa53fb0fc9c7a165"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-ROUTE-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual terminal observation: PASS; checked: docs/work_orders/WO_CORE_RECONCILIATION.md. Mechanical local assessment only; no provider or host enforcement claim.",
+      "actions": [
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
+      ],
+      "criteria": [
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/core-reconciliation/predispatch-terminal.json",
+        "sha256": "afb2039492e21ae467849fd00e05fc589e3299025db592fa27e6ee164db77b45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0883f3b29cc2fbd0475f25ee7243aa7ada7632adfb3d675c3bf2a3a08ac49be7",
+          "criteria": [
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/core-reconciliation/configured-terminal.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/reviews-terminal/CVF-DG-ROUTE-01.json",
+          "sha256": "2e1d7c8f5e508f4f171bafb727853bcfc71ecd9a36046b30db5f3f80149eece9"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-COV-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual terminal observation: PASS; checked: docs/roadmaps/CORE_RECONCILIATION.md, docs/work_orders/WO_CORE_RECONCILIATION.md; mechanical joins only; Local owns semantic acceptance. Mechanical local assessment only; no provider or host enforcement claim.",
+      "actions": [
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
+      ],
+      "criteria": [
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/core-reconciliation/predispatch-terminal.json",
+        "sha256": "afb2039492e21ae467849fd00e05fc589e3299025db592fa27e6ee164db77b45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0883f3b29cc2fbd0475f25ee7243aa7ada7632adfb3d675c3bf2a3a08ac49be7",
+          "criteria": [
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/core-reconciliation/configured-terminal.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/core-reconciliation/reviews-terminal/CVF-DG-COV-01.json",
+          "sha256": "bf53e2ceb6fb267f5f06ea083af8fe56792e33ee8c47e18de64668b061b5f8ab"
+        }
+      ]
+    }
+  ]
+}

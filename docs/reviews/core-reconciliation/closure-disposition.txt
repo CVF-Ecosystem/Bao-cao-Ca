@@ -1,0 +1,10 @@
+Root closure disposition
+
+Local objective: remove stale Core identity/receipt and obsolete compatibility assumptions.
+Cause: shared public Core advanced while project manifest/receipt retained c4c8767; legacy adapter specifically required failures from that old source. Canonical profile byte identity already matched17/17 current files, so no inherited algorithm or parent-Core fix was needed.
+Disposition: reviewed implementation and clean material proof support CRC1-CRC4 local workspace recovery acceptance. Terminal packet binds the settled REVIEW record, with no future implementation grant. Independent terminal action review and fresh receipt are required before final metadata commit.
+Raw evidence: CRLF in process output/original snapshots is intentionally preserved. Ordinary git diff --check reports those raw carriage returns and two historical original EOF blank lines. Raw-preserving whitespace validation (cr-at-eol) passed for current changes excluding immutable original history; original hashes remain unchanged. No whitespace or source guard was disabled in the repository.
+Commit: 5fec5a122339486f5a85afa4276362e76691d61b is actual clean-tested material source. No active pre-commit hook found; canonical trusted pre-commit was actually invoked manually and passed before material commit. No push performed.
+Limits: local mechanical checks only; product/native/hosted CI/provider acceptance remains separate. Original history and Antigravity bundles are unchanged.
+
+Nonblocking upstream documentation limit: current public migration prose still names profile1.2.0, while the executable profile and verified17-file lock are1.4.0; generated workflow header also retains a historical version label. Actual source identity/pins, not those prose labels, determined this supported canonical upgrade. Upstream prose was not modified.
