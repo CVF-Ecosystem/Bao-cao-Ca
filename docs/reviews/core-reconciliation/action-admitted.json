@@ -1,0 +1,10 @@
+{
+  "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+  "sha256": "0ddcfc40294bb127056fb2fd6b7e694571011584c04c66b20f68357e1a627ff8",
+  "criteria": [
+    "CRC1",
+    "CRC2",
+    "CRC3",
+    "CRC4"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-B",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\.Controlled-Vibe-Framework-CVF\\scripts\\lib\\downstream_governance\\cvf_downstream_gate_runner.py",
+    "run",
+    "--phase",
+    "worker-return",
+    "--project-root",
+    "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9",
+    "--trusted",
+    "--expect-profile-sha256",
+    "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+    "--expect-runner-sha256",
+    "6b608a8a138f54b5dfc0462f5845fcf6a5bc916270ada5b0bf6d6909a153b3bd",
+    "--expect-bundle-sha256",
+    "234e1cccd3a5f69ce2809a515c802c67825cacefe92435290068b343f14901c3",
+    "--packet",
+    "docs/work_orders/WO_CORE_RECONCILIATION.md",
+    "--no-receipt",
+    "--json"
+  ],
+  "exitCode": 0
+}

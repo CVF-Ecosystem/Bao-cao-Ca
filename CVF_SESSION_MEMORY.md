@@ -8,8 +8,8 @@ not provider-specific memory and not a chat transcript.
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md
 
 Update these four lines together with `CVF_SESSION/ACTIVE_SESSION_STATE.json`,
@@ -45,8 +45,10 @@ Initial active handoff: `CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md`
 
 Provider-local files may assist execution but are not project source authority.
 
-## Accepted local setup
+## Historical accepted setup
 
-Profile1.4 supplemental setup and project compatibility doctor are independently accepted. Use `python -B scripts/check_project_workspace.py --json`. See active handoff for action-specific receipt limits; future BUILD needs a new assessed action. Product authority remains tai_lieu/ROADMAP_SAU_V1_9.md. Read docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md before another profile/activation change.
+Previous supplemental profile1.4 setup and compatibility doctor were accepted at their recorded source identity. Their original review and six focused groups remain preserved in docs/reviews/activation-history/. They are historical evidence and do not authorize the current Core migration. Read docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md before similar recovery.
 
-Final clean-tree acceptance (2026-11-07): six focused groups and explicit assessed-packet bootstrap pass at committed source73c252a; see postcommit review and clean-committed-full-flow proof in docs/reviews/. Historical failures remain preserved.
+## Current Core recovery
+
+Operator2026-11-07 authorizes docs/work_orders/WO_CORE_RECONCILIATION.md. Source changes from c4c8767 to68a7446; preserve CORE_AND_SUPPLEMENTAL guidance but execute PINNED_CORE. Prior accepted setup and receipts are historical. Current activation/readiness is pending fresh assessment; no prior PASS covers this migration. Root owns metadata/receipts and commit; Terra6.1High owns doctor/tests after admission, Sol6.1Medium independently reviews. No parked operator decision; product and Antigravity headed/native acceptance remain open.

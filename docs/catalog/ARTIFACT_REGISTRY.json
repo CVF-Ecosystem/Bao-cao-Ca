@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-07",
   "claimBoundary": "Registers project development and existing product-document entrypoints; capability acceptance remains bounded to separately reviewed evidence.",
   "artifacts": [
     {
@@ -135,7 +135,7 @@
       "family": "tool",
       "path": "scripts/check_project_workspace.py",
       "status": "ACTIVE",
-      "description": "Project compatibility doctor; preserves original legacy results and verifies reviewed supplemental setup."
+      "description": "Current pinned-Core doctor with strict native checks and explicit assessed-packet bootstrap."
     },
     {
       "id": "manifest-milestone-authority",
@@ -150,6 +150,13 @@
       "path": "tai_lieu",
       "status": "ACTIVE",
       "description": "Existing product roadmap, API, assessments and prior evidence; preserve as product authority."
+    },
+    {
+      "id": "family-core-reconciliation",
+      "family": "governed_artifact_family",
+      "path": "docs/reviews/core-reconciliation",
+      "status": "ACTIVE",
+      "description": "Current-Core recovery design, exact-action reviews, immutable observations and preserved prior authority."
     }
   ]
 }

@@ -1,0 +1,41 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+    "sha256": "0ddcfc40294bb127056fb2fd6b7e694571011584c04c66b20f68357e1a627ff8",
+    "criteria": [
+      "CRC1",
+      "CRC2",
+      "CRC3",
+      "CRC4"
+    ]
+  },
+  "controlId": "CVF-DG-INST-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Sol 6.1 Medium / activation_design_review",
+  "authority": "Operator2026-11-07 authorized bounded Core reconciliation under independently reviewed design and WO_CORE_RECONCILIATION.md; Root owns receipt and dispatch disposition",
+  "decision": "ACCEPTED",
+  "reason": "Actual trusted current-Core invocation reports PASS without findings. I independently compared all17 installed files with current pinned Core under canonical LF normalization and lock file hashes. Core HEAD68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6 is clean and origin matches manifest. This accepts installation identity only; modern doctor implementation is still pending.",
+  "evidence": [
+    {
+      "path": "docs/reviews/core-reconciliation/predispatch-admission.json",
+      "sha256": "9d6efa89a16210affe188650414ee78a33fc5f7acd589ce4450a108ec50f4294"
+    },
+    {
+      "path": "docs/reviews/core-reconciliation/configured-admission.json",
+      "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
+    },
+    {
+      "path": "docs/reviews/core-reconciliation/process-admission.json",
+      "sha256": "604f115872cabaf4f5deaff74c3c036e788dffde199df825d79360232702f4d6"
+    },
+    {
+      "path": "docs/reviews/core-reconciliation/comparison-admission.json",
+      "sha256": "2e99f4fff38107f05eb72cf31d7f97978ca1929ca9261be01370ecc732e84ef8"
+    },
+    {
+      "path": "docs/reviews/core-reconciliation/packet-admission.original.txt",
+      "sha256": "0ddcfc40294bb127056fb2fd6b7e694571011584c04c66b20f68357e1a627ff8"
+    }
+  ],
+  "limits": "Actual overall preview exitCode2 is preserved: ACT_ACTION_MISSING and ACT_IDENTITY_STALE fail ACT. This accepts individual actual mechanical results and exact action semantics only. Require fresh receipt and successful action admission before Terra BUILD. No product/Antigravity native acceptance, hostedCI or provider-backed AI governance claim."
+}

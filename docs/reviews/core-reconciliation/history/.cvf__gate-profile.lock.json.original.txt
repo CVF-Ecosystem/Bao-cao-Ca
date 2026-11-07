@@ -1,0 +1,36 @@
+{
+  "bundleSha256": "234e1cccd3a5f69ce2809a515c802c67825cacefe92435290068b343f14901c3",
+  "ciWorkflow": {
+    "disposition": "CREATED",
+    "ownerReconciliationRequired": false,
+    "path": ".github/workflows/cvf-downstream-gates.yml",
+    "renderedSha256": "4e849f03f0872d265ec17e5eaafcf91b111a838388eb6f5b3d0118c86e03697b"
+  },
+  "coreCommit": "UNKNOWN",
+  "files": {
+    "check_gate_to_role_closeability.py": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+    "cvf_dg_applicability.py": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+    "cvf_dg_common.py": "7591d2cbc928eb51dfd677c57951f540b29763446ca06e37f29066b5721b0614",
+    "cvf_dg_continuity.py": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+    "cvf_dg_coverage.py": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+    "cvf_dg_install.py": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+    "cvf_dg_intake.py": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+    "cvf_dg_review.py": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+    "cvf_dg_routing.py": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+    "cvf_downstream_gate_profile.json": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+    "cvf_downstream_gate_runner.py": "6b608a8a138f54b5dfc0462f5845fcf6a5bc916270ada5b0bf6d6909a153b3bd",
+    "cvf_milestone_coverage.py": "14e1efd0acbd54cc9b86f0b33060a6dd57764c16812a07df8e18bca68bfa141f",
+    "cvf_repair_convergence.py": "7c58133bc73af0b300cb2674768864c5c8ec6680cf7103905f705897faa8d03d",
+    "cvf_workspace_activation.py": "5000eb79b1ce7cc8c6c5d92c7c5691370225a2a9df36bc070773f05376583431",
+    "git-pre-commit.template": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+    "project_learning_home.template.md": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+    "project_learning_record.template.md": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6"
+  },
+  "gatesDir": "scripts/cvf_gates",
+  "hashAlgorithm": "sha256-lf-normalized",
+  "profileId": "cvf.downstreamGateProfile@1.4.0",
+  "profileSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+  "profileVersion": "1.4.0",
+  "runnerSha256": "6b608a8a138f54b5dfc0462f5845fcf6a5bc916270ada5b0bf6d6909a153b3bd",
+  "schemaVersion": "cvf.downstreamGateLock@1.0.0"
+}

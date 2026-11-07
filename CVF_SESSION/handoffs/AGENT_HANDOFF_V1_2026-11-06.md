@@ -5,13 +5,13 @@ Status: ACTIVE
 ## Current State
 
 - Project: SO_BAO_CAO_CA_V1_9
-- Current mode: FREEZE
-- Active phase: FREEZE
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active role: ORCHESTRATOR
-- Next allowed move: Read the existing product roadmap, select the next user-authorized work and admit a new exact action before BUILD.
+- Next allowed move: Independent CRC implementation review, local material commit and clean-tree verification before terminal receipt/closure. Product work remains separate.
 - Parked operator checkpoint: none
 
-## Accepted setup
+## Historical accepted setup
 
 The authorized workspace setup is independently accepted against WSA1-WSA4. Core remains pinned at c4c8767ac8861854f40d466ba338ffd11eb9558e. Supplemental profile1.4, separate reviewed source/upgrade identity, exact action receipt, compatibility doctor, catalog and continuity are installed. Work order docs/work_orders/WO_WORKSPACE_ACTIVATION.md is a settled REVIEW record, not a pending implementation grant.
 
@@ -36,3 +36,11 @@ Material-SHA marker: 73c252a (final accepted adapter correction). Initial setup 
 ## Post-commit acceptance 2026-11-07
 
 The initial adapter did not explicitly pass action packets after Git became clean; the observed N/A and original failure were preserved. Same-scope reviewer-local correction now passes all verified receipt packets to source bootstrap, keeping COV PASS required. Independent supplemental review: docs/reviews/workspace-activation-postcommit-review.md. Actual clean committed proof and six-test log: docs/reviews/activation-history/clean-committed-full-flow.json and clean-committed-tests.txt. Failed and successful projections appended without rewriting history; no pending action remains.
+
+## Current Core recovery
+
+Operator2026-11-07 authorizes docs/work_orders/WO_CORE_RECONCILIATION.md. Source changes from c4c8767 to68a7446; preserve CORE_AND_SUPPLEMENTAL guidance but execute PINNED_CORE. Prior accepted setup and receipts are historical. Current activation/readiness is pending fresh assessment; no prior PASS covers this migration. Root owns metadata/receipts and commit; Terra6.1High owns doctor/tests after admission, Sol6.1Medium independently reviews. No parked operator decision; product and Antigravity headed/native acceptance remain open.
+
+## CRC BUILD acknowledgment
+
+Root rehydrated current authority and independent Sol admission review. Fresh receipt is CURRENT_ASSESSED on PINNED_CORE and actual admitted pre-dispatch passes7/7 controls for exact CRC1-CRC4 IMPLEMENT packet. Terra owns only checker/tests; Root owns records and commit. No product implementation or native evidence claim.

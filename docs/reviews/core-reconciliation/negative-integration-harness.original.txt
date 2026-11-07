@@ -1,0 +1,103 @@
+"""Real Core checks on disposable file copies. No provider/agent behavior proof."""
+import hashlib
+import json
+import shutil
+import sys
+import tempfile
+from pathlib import Path
+
+root = Path.cwd().resolve()
+core = (root.parent / '.Controlled-Vibe-Framework-CVF').resolve()
+lib = core / 'scripts/lib/downstream_governance'
+sys.path.insert(0, str(lib))
+import cvf_workspace_activation as activation
+import cvf_dg_install as install
+
+runtime = (root / '.cvf/runtime/core-reconcile-20261107').resolve()
+out = root / 'docs/reviews/core-reconciliation'
+load = lambda p: json.loads(p.read_bytes())
+def write(path, value):
+    path.write_bytes((json.dumps(value, indent=2) + '\n').encode())
+profile = load(lib / 'cvf_downstream_gate_profile.json')
+packet = 'docs/work_orders/WO_CORE_RECONCILIATION.md'
+records = []
+with tempfile.TemporaryDirectory(prefix='negative-', dir=runtime) as temp:
+    workspace = Path(temp).resolve()
+    assert workspace.is_relative_to(runtime)
+    project = workspace / 'project'
+    project.mkdir()
+    for directory in ('docs', 'scripts/cvf_gates', 'CVF_SESSION', '.github'):
+        shutil.copytree(root / directory, project / directory)
+    (project / '.cvf').mkdir()
+    for file in ('manifest.json', 'policy.json', 'gate-profile.lock.json', 'workspace-activation.json'):
+        shutil.copy2(root / '.cvf' / file, project / '.cvf' / file)
+    for file in ('CVF_SESSION_MEMORY.md', 'IMPLEMENTATION_STATUS.json'):
+        shutil.copy2(root / file, project / file)
+    active_rel = 'CVF_RULE_PACKS/ACTIVE_RULE_PACK.json'
+    active = load(root.parent / active_rel)
+    pack_rel = active['activeProfilePath'].replace('\\', '/')
+    pack = load(root.parent / pack_rel)
+    for relative in [active_rel, pack_rel] + [i['targetPath'].replace('\\', '/') for i in pack['artifacts']]:
+        source, target = root.parent / relative, workspace / relative
+        if source.is_file():
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target)
+        else:
+            target.mkdir(parents=True, exist_ok=True)
+    manifest_path = project / '.cvf/manifest.json'
+    manifest = load(manifest_path)
+    manifest['cvfCoreRelativePath'] = str(core)
+    write(manifest_path, manifest)
+    receipt_path = project / '.cvf/workspace-activation.json'
+    receipt = load(receipt_path)
+    receipt['identity'] = activation.comparison(project, profile, trusted_core=core)['identity']
+    write(receipt_path, receipt)
+    def checked():
+        act = activation.check_activation(project, profile, [packet], 'pre-dispatch', core)
+        inst = install.verify_install(project, lib, core, True)
+        return {'activation': act.as_dict(), 'installation': inst.as_dict()}
+    baseline = checked()
+    assert baseline['activation']['ok'] and baseline['installation']['ok'], baseline
+    records.append({'case': 'relocated baseline', 'expected': 'PASS', 'actual': baseline})
+    originals = {p: p.read_bytes() for p in [receipt_path, manifest_path, project / '.cvf/policy.json',
+        project / '.cvf/gate-profile.lock.json', project / packet,
+        project / 'scripts/cvf_gates/cvf_dg_continuity.py']}
+    def case(name, path, data):
+        previous = path.read_bytes()
+        path.write_bytes(data)
+        actual = checked()
+        assert not actual['activation']['ok'], name
+        records.append({'case': name, 'expected': 'REJECT', 'actual': actual})
+        path.write_bytes(previous)
+    def changed_json(path, change):
+        value = load(path)
+        change(value)
+        return (json.dumps(value, indent=2) + '\n').encode()
+    case('wrong Core pin', manifest_path, changed_json(manifest_path, lambda v: v.update(cvfCoreCommit='0' * 40)))
+    case('wrong policy', project / '.cvf/policy.json', changed_json(project / '.cvf/policy.json', lambda v: v.update(workspaceActivationSourcePolicy='CORE_ONLY')))
+    lock_path = project / '.cvf/gate-profile.lock.json'
+    case('altered lock', lock_path, changed_json(lock_path, lambda v: v.update(bundleSha256='0' * 64)))
+    module = project / 'scripts/cvf_gates/cvf_dg_continuity.py'
+    case('altered inherited module', module, module.read_bytes() + b'\n# disposable mutation\n')
+    case('old receipt identity', receipt_path, (root / '.cvf/workspace-activation.json').read_bytes())
+    case('missing control', receipt_path, changed_json(receipt_path, lambda v: v['controls'].pop()))
+    case('held supplemental dependency', receipt_path, changed_json(receipt_path, lambda v: v['supplemental'][0].update(disposition='HELD')))
+    case('unreviewed supplemental', receipt_path, changed_json(receipt_path, lambda v: v['supplemental'][0].update(reviewEvidence=[])))
+    action_path = project / packet
+    case('changed output bytes', action_path, action_path.read_bytes().replace(b'Current Core project doctor, focused regressions', b'Changed output, focused regressions'))
+    original = action_path.read_bytes()
+    changed = original.replace(b'"budgetMinutes": 60', b'"budgetMinutes": 61')
+    assert changed != original
+    case('changed action budget', action_path, changed)
+    review_rel = receipt['controls'][0]['invocationEvidence'][0]['path']
+    evidence = project / review_rel
+    case('altered reviewed invocation', evidence, evidence.read_bytes() + b'\n')
+    assert checked()['activation']['ok']
+    assert all(p.read_bytes() == data for p, data in originals.items())
+report = {'scope': 'Disposable relocated mechanical fixture; receipt identity re-bound only to copied root/absolute Core path for baseline. Existing copied review semantics are fixture inputs, not a new real action approval.',
+          'coreCommit': load(root / '.cvf/manifest.json')['cvfCoreCommit'], 'providerCalls': 0,
+          'cases': records, 'result': 'PASS', 'negativeCount': len(records) - 1,
+          'sharedCoreOrPackMutated': False, 'applicationDataReadOrMutated': False}
+write(out / 'negative-integration.json', report)
+(out / 'negative-integration-harness.original.txt').write_bytes(Path(__file__).read_bytes())
+print('Baseline PASS; actual Core rejected', len(records) - 1, 'disposable negative cases')

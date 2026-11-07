@@ -6,3 +6,4 @@
 .cvf/*.json -text
 docs/work_orders/*.md -text
 docs/reviews/activation-history/** -text
+docs/reviews/core-reconciliation/** -text

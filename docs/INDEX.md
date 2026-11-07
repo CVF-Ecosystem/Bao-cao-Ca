@@ -14,13 +14,14 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Closed schema reference for the Module Registry.: `docs/catalog/schemas/MODULE_REGISTRY.schema.json`
 - Standard-library catalog validation and rendering functions.: `scripts/lib/downstream_catalog/CvfDownstreamCatalogLib.ps1`
 - Executable catalog manager (--check / --write).: `scripts/manage_cvf_downstream_catalog.ps1`
-- Project compatibility doctor; preserves original legacy results and verifies reviewed supplemental setup.: `scripts/check_project_workspace.py`
+- Current pinned-Core doctor with strict native checks and explicit assessed-packet bootstrap.: `scripts/check_project_workspace.py`
 - Machine implementation-truth surface.: `IMPLEMENTATION_STATUS.json`
 - Generated documentation index.: `docs/INDEX.md`
 - Generated human module catalog.: `docs/catalog/MODULE_CATALOG.md`
 
 ## Governed Artifact Families
 
+- Current-Core recovery design, exact-action reviews, immutable observations and preserved prior authority.: `docs/reviews/core-reconciliation/`
 - Decisions.: `docs/decisions/`
 - Shared project learning, value-filtered parent intake and returned adoption.: `docs/reviews/learnings/`
 - Existing product roadmap, API, assessments and prior evidence; preserve as product authority.: `tai_lieu/`

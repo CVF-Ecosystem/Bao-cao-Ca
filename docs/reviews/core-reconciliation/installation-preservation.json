@@ -1,0 +1,429 @@
+{
+  "canonicalInstall": {
+    "command": "cvf_downstream_gate_runner.py install --project-root . --core-root ../.Controlled-Vibe-Framework-CVF --core-commit 68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6 --upgrade",
+    "observedExitCode": 0,
+    "observedStdout": "GATE_PROFILE_STATUS: UPGRADED profile cef123ab02f3 runner 6b608a8a138f ci CREATED",
+    "recordType": "Root observation of actual preceding command; not a second installer invocation"
+  },
+  "installedFiles": {
+    "check_gate_to_role_closeability.py": {
+      "installedSha256": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+      "coreSha256": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e",
+      "lockSha256": "8f00c6421eebe3c1b237e5307ac6e2b0b0343c9a35cf635bbab17aa886e00e8e"
+    },
+    "cvf_dg_applicability.py": {
+      "installedSha256": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+      "coreSha256": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67",
+      "lockSha256": "bffde44fe38494b0dea9e658fb82eaaec31f3bd25c9964445fa837dd29b01c67"
+    },
+    "cvf_dg_common.py": {
+      "installedSha256": "7591d2cbc928eb51dfd677c57951f540b29763446ca06e37f29066b5721b0614",
+      "coreSha256": "7591d2cbc928eb51dfd677c57951f540b29763446ca06e37f29066b5721b0614",
+      "lockSha256": "7591d2cbc928eb51dfd677c57951f540b29763446ca06e37f29066b5721b0614"
+    },
+    "cvf_dg_continuity.py": {
+      "installedSha256": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+      "coreSha256": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571",
+      "lockSha256": "8ca92bd3c172638728e98f04ed652c32639280d236af5912ae479bb7c38fe571"
+    },
+    "cvf_dg_coverage.py": {
+      "installedSha256": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+      "coreSha256": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467",
+      "lockSha256": "d768e60435268da2c8609a928972d1912d369a67d4056924c515d552a4245467"
+    },
+    "cvf_dg_install.py": {
+      "installedSha256": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+      "coreSha256": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316",
+      "lockSha256": "4e96952ef312487e5999b0b0d4db85c2eda158e2ac1cbb336beeba6876ddc316"
+    },
+    "cvf_dg_intake.py": {
+      "installedSha256": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+      "coreSha256": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc",
+      "lockSha256": "204aacddb1d1b64439508bcfa73c8632842b0bc1f26dcdf3422d1404e1594efc"
+    },
+    "cvf_dg_review.py": {
+      "installedSha256": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+      "coreSha256": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d",
+      "lockSha256": "2558b7635646340a73cb124121802f2f6f123ef96e240146def3e874a002034d"
+    },
+    "cvf_dg_routing.py": {
+      "installedSha256": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+      "coreSha256": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf",
+      "lockSha256": "a39419336ea31ec155c285291f3d5684046e8b18d88dbf47c422b3c2c59632cf"
+    },
+    "cvf_downstream_gate_profile.json": {
+      "installedSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+      "coreSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+      "lockSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998"
+    },
+    "cvf_downstream_gate_runner.py": {
+      "installedSha256": "6b608a8a138f54b5dfc0462f5845fcf6a5bc916270ada5b0bf6d6909a153b3bd",
+      "coreSha256": "6b608a8a138f54b5dfc0462f5845fcf6a5bc916270ada5b0bf6d6909a153b3bd",
+      "lockSha256": "6b608a8a138f54b5dfc0462f5845fcf6a5bc916270ada5b0bf6d6909a153b3bd"
+    },
+    "cvf_milestone_coverage.py": {
+      "installedSha256": "14e1efd0acbd54cc9b86f0b33060a6dd57764c16812a07df8e18bca68bfa141f",
+      "coreSha256": "14e1efd0acbd54cc9b86f0b33060a6dd57764c16812a07df8e18bca68bfa141f",
+      "lockSha256": "14e1efd0acbd54cc9b86f0b33060a6dd57764c16812a07df8e18bca68bfa141f"
+    },
+    "cvf_repair_convergence.py": {
+      "installedSha256": "7c58133bc73af0b300cb2674768864c5c8ec6680cf7103905f705897faa8d03d",
+      "coreSha256": "7c58133bc73af0b300cb2674768864c5c8ec6680cf7103905f705897faa8d03d",
+      "lockSha256": "7c58133bc73af0b300cb2674768864c5c8ec6680cf7103905f705897faa8d03d"
+    },
+    "cvf_workspace_activation.py": {
+      "installedSha256": "5000eb79b1ce7cc8c6c5d92c7c5691370225a2a9df36bc070773f05376583431",
+      "coreSha256": "5000eb79b1ce7cc8c6c5d92c7c5691370225a2a9df36bc070773f05376583431",
+      "lockSha256": "5000eb79b1ce7cc8c6c5d92c7c5691370225a2a9df36bc070773f05376583431"
+    },
+    "git-pre-commit.template": {
+      "installedSha256": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+      "coreSha256": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b",
+      "lockSha256": "547c077163eb64259362a669d1fa6cca7cc4fe06090af3c9286f09557bcf937b"
+    },
+    "project_learning_home.template.md": {
+      "installedSha256": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+      "coreSha256": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f",
+      "lockSha256": "b2982c018baedca7f076526221ad6d5d0854dab2f029390d2c7f079ded05930f"
+    },
+    "project_learning_record.template.md": {
+      "installedSha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6",
+      "coreSha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6",
+      "lockSha256": "559d2d50c86fbfc72967d6af5b19df23c5001c48ddaca0a2b423fc574e7250d6"
+    }
+  },
+  "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+  "ciWorkflow": {
+    "disposition": "CREATED",
+    "ownerReconciliationRequired": false,
+    "path": ".github/workflows/cvf-downstream-gates.yml",
+    "renderedSha256": "4e849f03f0872d265ec17e5eaafcf91b111a838388eb6f5b3d0118c86e03697b"
+  },
+  "workflowByteUnchanged": true,
+  "protectedFiles": {
+    "ma_nguon/BAO_CAO_CA.py": "f0308fa259820fca8b5d3d1a436c7d424ec90a6bcbfacc7869bcaafd35dccc24",
+    "ma_nguon/BAO_CAO_EXCEL.py": "c5c2647a9ff81dfd68a0c3d7c24d5eecd1c2adebf2533c8ad9fcbe59bad5a4f8",
+    "ma_nguon/BAO_VE_DU_LIEU.py": "255e32dc6cc028fe6a5cb80c03343d2572949b98248a19af613789ca71905657",
+    "ma_nguon/LUU_TRU.py": "8b772c6f4f414f210c8326d3f2b862439f5f92642a11bdcf0c5e15ea46594052",
+    "ma_nguon/MAU_PHAN_CONG.py": "878a43dc745aab981e98fbac4b72e95a506aa1a99ee01f797f1f22f03e7a25b5",
+    "ma_nguon/MAY_CHU.py": "475ad258536b96e12aaa3669b0ce9703cad1731abb65e6298a0492b3769db11d",
+    "ma_nguon/NGHIEP_VU.py": "a695a9c2c6b0db27c078738af27f001b3f3218eaab06c7048a14d91f08be59d4",
+    "ma_nguon/QUAN_LY_DANH_MUC.py": "8dfedd445602b055e2023f1a45fbf29d79ba65423dd334cae2ac09d54356a5c9",
+    "ma_nguon/THIET_LAP.py": "dd2eb350b7d2b2d9573d3c59b2f8034812e9bf041636c80110a939f33d194d9a",
+    "ma_nguon/XUAT_EXCEL.py": "d53c06f790af041d987a092f6a483e267fe307088223ea90f0cb1617edd4cea6",
+    "giao_dien/giao_dien.html": "dc6c761db9b588e7fd25ab388bba38777c9bc8dfd25209ba7ea59b0bee449a84",
+    "giao_dien/tai_nguyen/bao_ve.js": "deeac34b91ca694e685ccae4ce6e2490ca78a89bbbf78ef085c6fbc1388a8523",
+    "giao_dien/tai_nguyen/danh_muc.js": "ab87dc169ee2fdf2bb55382ae10b8088c9e5dc2b33fb109abd2ee9c9cbfe333c",
+    "giao_dien/tai_nguyen/phan_cong_mau.js": "f89622b089f7567ef76d26e9b6e83762941cf11f0af501997c4f178e812149ac",
+    "giao_dien/tai_nguyen/style.css": "4ebf9950f2027d9d5177576f85a4eb0b0d63ddae7761b63776753c015a0f1dc7",
+    "giao_dien/tai_nguyen/ung_dung.js": "f5baeed01d47aef16edf13520963851cbc70923af706d491d1816fd312aa19b4",
+    ".cvf/runtime/antigravity-v2-v3-20261107/browser_console.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".cvf/runtime/antigravity-v2-v3-20261107/browser_dialogs.json": "76e72e1d2732e357807857b44af21168ebb78eaed0caa1fb478c530bf8e04ff4",
+    ".cvf/runtime/antigravity-v2-v3-20261107/environment.json": "7e52f6f15e7aef5a9cbba88d4c1ee076adc5e75fcdb7c13d911cd80e79239bb4",
+    ".cvf/runtime/antigravity-v2-v3-20261107/fixture_info.json": "74dde749c1e6c55060b6b523c2dfd81c25d832646fd4201ce69824d6dd7dd7d2",
+    ".cvf/runtime/antigravity-v2-v3-20261107/home_dom.html": "2ae598ff8431d35e5383fb7c6842f81d3b029d53ec78c2fa97fe7af73b25b1f4",
+    ".cvf/runtime/antigravity-v2-v3-20261107/inspect_db.py": "dea01baa056e2f5f51b0a0d933f2b5ad723138ed7eadaf4f4454d702d7e384f6",
+    ".cvf/runtime/antigravity-v2-v3-20261107/make_manifest.py": "eac8b8e001f80ec681007ce55902328960162ac1d16a0a9b74dcaa80022a8d30",
+    ".cvf/runtime/antigravity-v2-v3-20261107/manifest.json": "54e58f8bc2a65403475cc125a3575e5e02b40a91548d1908675490d8c92cf752",
+    ".cvf/runtime/antigravity-v2-v3-20261107/prepare_fixture.py": "d1161d62c68158c2221d8d948a5cb2f1a0b20da99f60e8530477dab7fe9c22ec",
+    ".cvf/runtime/antigravity-v2-v3-20261107/REPORT.md": "e36e355130a94fe3d004ebecc7df4e42c23a0515a3dfdbc7589b8331bc274c57",
+    ".cvf/runtime/antigravity-v2-v3-20261107/run_v2v3_ui.py": "0a6e57324e4c8c65a0c477c6c2292232dd720313a54e3570156c968176c7e90e",
+    ".cvf/runtime/antigravity-v2-v3-20261107/steps.json": "0901a8efc58fcfbe29764d62910a11cee6c459380ab954153b0e66c2fad624a8",
+    ".cvf/runtime/antigravity-v2-v3-20261107/v2_post_import_state.json": "2024a43e9fcff3be2aefb5fdb0795f1203e453726c001c424248f8d8d3dce0b9",
+    ".cvf/runtime/antigravity-v2-v3-20261107/v3_comparison.json": "c68bcb1e7abdd0fda49104b42b19f67d9f8149e11747efebca933eb23ba91bec",
+    ".cvf/runtime/antigravity-v2-v3-20261107/exported_db/DB_BO_SUNG_20261107_070148_0837.db": "80e3d636d92eb9feee78d167fdab9f053ac11e2a61939f4787b546fcfe0a81de",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/ban_sao_chi_xem.db": "2fc6b2017272072914f337da9566c2e6382be9ac5631e7d8c4800cee673c893f",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/BAO_VE_DB_d4fbbc7aa0.json": "0f3f0779e48ca6526e46e2d6c33958fe836fdaf144f978ea02a808701138fa16",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/KHOA_DB_d4fbbc7aa0.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DANH_MUC/CONG_VIEC.txt": "7f2de984f58f0f5b0ff1dd2480e1411089f1f82a03a59ca3596183ec71381470",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DANH_MUC/MAU_PHAN_CONG.json": "fa5d081a7627ed7b45efcf94f73596db737b4777e7a7dd096c7b67dcda280a19",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DANH_MUC/NHAN_VIEN.txt": "966278afa47f744055cfd8e9c24e560b577873860eb5052e57d6781e02269e00",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DANH_MUC/TO_NHAN_SU.json": "3037f3e626dcb2ba24af924e2c53ec11fc6422b43d89a0a7dea17a39c9681f35",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DANH_MUC/VI_TRI.txt": "287d14b1f9081624f83823f035e1f16e0a77b106770d1898c087b4fd669ca3c2",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/BAO_CAO_CA.db": "cf45a019aa81dbe862a4d9497a1306422f77c0dc75ae196922fa5168ac866f1a",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/LOI_CHUONG_TRINH.log": "f5f0b1445ab81c0bafa938349c18e5955eb5276f0b08a70ed2498cc7ef2ff8d7",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/NHAT_KY_CHAY.log": "791be15745729b3999f0793049281ed3340a00bccae305ea76e7a23481c71efc",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/PHIEN_DANG_CHAY.json": "28a649e3bdfefef73a58ccb80b4eb6e196f730a56d274b1718a0fa0f7b865bb6",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/DB_KIEM_TRA/ban_sao_4eccfcc0c7b4fa8c.db": "80e3d636d92eb9feee78d167fdab9f053ac11e2a61939f4787b546fcfe0a81de",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/DB_KIEM_TRA/ban_sao_9d605993a43ed478.db": "6fbded1c369247c71dd12b6bf9fe535f79fe7ec1dc4fb192c97830132bcc0043",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/SAO_LUU_AN_TOAN/41af03214e8b6bb86f0f0ec5b89cc957/BAO_CAO_CA_20261107_065959_922104_f41d1e.db": "c21563c99f40cbc0ace26307f30291e5e80cf3638eb20b9d3bf1f2f44df6b8f6",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/SAO_LUU_AN_TOAN/41af03214e8b6bb86f0f0ec5b89cc957/BAO_CAO_CA_20261107_070130_748644_e18f13.db": "c21563c99f40cbc0ace26307f30291e5e80cf3638eb20b9d3bf1f2f44df6b8f6",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/SAO_LUU_AN_TOAN/41af03214e8b6bb86f0f0ec5b89cc957/BAO_CAO_CA_20261107_070155_616115_9881fd.db": "47999a6a415d9f018041a953523702be08de0c5b8f47a168fe43eae013507079",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/SAO_LUU_AN_TOAN/be4a96868dd9131cc5620eb94f86c9f7/BAO_CAO_CA_20261107_012742_433508_aaf12d.db": "16cb92d0114934e3ee7345098038f885921f90d960c399939201ece0c710179b",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/SAO_LUU_AN_TOAN/be4a96868dd9131cc5620eb94f86c9f7/BAO_CAO_CA_20261107_013603_400572_d66a67.db": "16cb92d0114934e3ee7345098038f885921f90d960c399939201ece0c710179b",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/SAO_LUU_MANG_DI/DB_BO_SUNG_20261107_070148_0837.db": "80e3d636d92eb9feee78d167fdab9f053ac11e2a61939f4787b546fcfe0a81de",
+    ".cvf/runtime/antigravity-v2-v3-20261107/FIXTURE_TMP/DU_LIEU/TRUOC_KHI_NHAP_BO_SUNG/20261107_070155_b85ebe.db": "2becb11bf38673918cd743a1469e83c6b0d8842678b9fa154e1b62c2b30108be",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/00_home.png": "7a0393e0de74b96b9cdd4d6b99d5e1f50c6bc171565d3ee2701e0cab1e02b806",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/00_home_initial.png": "67869f3ee7aa4bb4b1fae565e930c78a86147bf1f0bf7b47b0de686b9a8bda5d",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v2_01_back_to_main_db.png": "4754b90177eb59838e88bc612d5d6d51c2aae206d1a688f03618af5a09dab4e4",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v2_02a_edit_B_at_main.png": "8a45ed2bd8a9c639562e5c95b83a0843693af5c23345a466fb09920641ca85c0",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v2_02b_saved_B_at_main.png": "d82ed76d4d649ba5784d2a168e691ed8a5b6167fe66ae299c0cbe96fd4552c81",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v2_04_import_comparison_modal.png": "1ecf80c55bb31c81dc72ad08a2a6421e4077012f08c9f7bb983e95a86b307e88",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v2_05_after_import_applied.png": "b0f6015d8e8a928fcbc6f886ddc4f44b6de46d356c0c2ce25fd6b8791bf505b1",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v3_01_no_btn.png": "7a0393e0de74b96b9cdd4d6b99d5e1f50c6bc171565d3ee2701e0cab1e02b806",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v3_01_readonly_state.png": "d168af9a1f1bf4d9b7c56c79f53c6489d4abca7a4262a3507a558cdf378c14b9",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v3_02a_enable_modal.png": "5b71a57214ad4df510fa89cf33ec29b26101b6e8f93f6bc0013b983092ad6922",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v3_02b_enabled_state.png": "2e8527fce9e03ab152d05137176501609fe3a63440040fbff5c0fe48fa53720b",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v3_03a_ca_A_edit.png": "908dd9472598643cf9c8be0693e2c5395c933038a7475af8f9b3be97bc8685bc",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v3_03a_ca_A_saved.png": "13f85ecf8964adf81a50570493f5fb5ea0633b84b2096b0dc23dce7af6c83360",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v3_03b_ca_B_edit.png": "d745719be7b59a5b994e934de7fdbf217f6f610e826e128c7113fbabacc0937d",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v3_03b_ca_B_saved.png": "da473ea7da9bcc47a9f8976769014f14b742f5286ead723c1082c7288888a939",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/v3_04_exported_download.png": "e737c9283376ae7a0ebc3534cfaea86b5be4148050ad4c79f4b0e50e9f7a6a6d",
+    ".cvf/runtime/antigravity-v2-v3-20261107/screenshots/zz_final_home.png": "e7c6e59039914ceff4ca369a1a1b811d41679aa3fe23699e1cb2c53477f7da24",
+    ".cvf/runtime/antigravity-v2-v3-addendum-20261107/ADDENDUM.md": "a2c4359e1fed2538bcad39148be4ec1943402c8094adbb9007ea4fa0675c5557",
+    ".cvf/runtime/antigravity-v2-v3-addendum-20261107/generate_addendum_manifest.py": "b815fbaa8f091dd7bd0286d3ed80a4ded392dc1a5e9194b72204e2030dda9dcb",
+    ".cvf/runtime/antigravity-v2-v3-addendum-20261107/make_addendum_manifest.py": "7fe7b1878f57bbcf10daafae7828ca87f871437225e8057eb78b1787763a1b0f",
+    ".cvf/runtime/antigravity-v2-v3-addendum-20261107/manifest_addendum.json": "18de61831ce7d106f2275fe6fac2d2a4e6bba0228621549d12c3c1df6db94fc8",
+    ".cvf/runtime/antigravity-v2-v3-addendum-20261107/manifest_original_current_bytes.json": "bc75d78786b825af71f9bc427aba73b61a15bbc3aa28f000da4f63994d41e49b",
+    ".cvf/runtime/antigravity-v2-v3-addendum-20261107/PROVENANCE_NOTES.md": "499d89a395f8d710f4bc61ed647d6229ae782746ea20e9fa52cf077be094259a",
+    ".cvf/runtime/antigravity-v2-v3-addendum-20261107/session_redacted.json": "bf94a3e36e714778a322953e3ec66b2b15aca3299d16d5f7a902b3f55f9fe1a0"
+  },
+  "protectedChanged": [],
+  "historicalEvidence": {
+    "docs/reviews/activation-history/activation-receipt-1.json": {
+      "baselineSha256": "7ac69c9fd54bef5886823bbe84eb3bd1cbed94fbd2eb1c83d74e89f159e557dd",
+      "currentSha256": "7ac69c9fd54bef5886823bbe84eb3bd1cbed94fbd2eb1c83d74e89f159e557dd"
+    },
+    "docs/reviews/activation-history/activation-receipt-2.json": {
+      "baselineSha256": "72b6d3e772d505bcc23e337170d4d5547a527193d8cf9fa8a23cf3cf95e724d8",
+      "currentSha256": "72b6d3e772d505bcc23e337170d4d5547a527193d8cf9fa8a23cf3cf95e724d8"
+    },
+    "docs/reviews/activation-history/adapter-first-full-flow.json": {
+      "baselineSha256": "bde171b6456fa7051c4cce90009d28c6ea996afb816a839b0b1462024a874229",
+      "currentSha256": "bde171b6456fa7051c4cce90009d28c6ea996afb816a839b0b1462024a874229"
+    },
+    "docs/reviews/activation-history/adapter-reviewed-full-flow.json": {
+      "baselineSha256": "a34d7ce37e0f39a80e31c3610e93f4909f98a9a89378dd8ffd5ee95b36523002",
+      "currentSha256": "a34d7ce37e0f39a80e31c3610e93f4909f98a9a89378dd8ffd5ee95b36523002"
+    },
+    "docs/reviews/activation-history/adapter-reviewed-tests.txt": {
+      "baselineSha256": "62285166a3c4b9a8866a052ce7d0f4c831f87d0f750d6e285a4aeb380d3ebd38",
+      "currentSha256": "62285166a3c4b9a8866a052ce7d0f4c831f87d0f750d6e285a4aeb380d3ebd38"
+    },
+    "docs/reviews/activation-history/adapter-terminal-full-flow.json": {
+      "baselineSha256": "9ef616d53e36c4f2a8a9c2baa684f3e51db10b4409ed019c672a04bf99d905ce",
+      "currentSha256": "9ef616d53e36c4f2a8a9c2baa684f3e51db10b4409ed019c672a04bf99d905ce"
+    },
+    "docs/reviews/activation-history/clean-committed-full-flow.json": {
+      "baselineSha256": "2c31affc9a00d48cdc959c910135eae1c9f323020e8fdbc55835ff3343f07877",
+      "currentSha256": "2c31affc9a00d48cdc959c910135eae1c9f323020e8fdbc55835ff3343f07877"
+    },
+    "docs/reviews/activation-history/clean-committed-tests.txt": {
+      "baselineSha256": "4cf9aa20fcd82bf8e0b6dbb25955343e24075e4ef3fe6682e297e90414185308",
+      "currentSha256": "4cf9aa20fcd82bf8e0b6dbb25955343e24075e4ef3fe6682e297e90414185308"
+    },
+    "docs/reviews/activation-history/configured-predispatch.json": {
+      "baselineSha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664",
+      "currentSha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+    },
+    "docs/reviews/activation-history/cvf-downstream-gates-1.2.0.yml": {
+      "baselineSha256": "5cf931e477bc85601030c85d2c3e7cf13f3a5e7181a9fc6f68932d4548763136",
+      "currentSha256": "5cf931e477bc85601030c85d2c3e7cf13f3a5e7181a9fc6f68932d4548763136"
+    },
+    "docs/reviews/activation-history/final-pr-ci.json": {
+      "baselineSha256": "2c444400f462db9d413cf15e1ccbeaf4fcbec921d3f9e56a3e3c97846736be96",
+      "currentSha256": "2c444400f462db9d413cf15e1ccbeaf4fcbec921d3f9e56a3e3c97846736be96"
+    },
+    "docs/reviews/activation-history/final-pre-commit.json": {
+      "baselineSha256": "bb7434e814235ccd0160974c02ae23176a8fe5a6e6a95f3992daa6a86119d331",
+      "currentSha256": "bb7434e814235ccd0160974c02ae23176a8fe5a6e6a95f3992daa6a86119d331"
+    },
+    "docs/reviews/activation-history/final-reviewer-fast.json": {
+      "baselineSha256": "6f851afd363a8f48c93b34930326ca514a90592d7786b7940e6f45624677400d",
+      "currentSha256": "6f851afd363a8f48c93b34930326ca514a90592d7786b7940e6f45624677400d"
+    },
+    "docs/reviews/activation-history/final-worker-return.json": {
+      "baselineSha256": "addf0cefc08218d0f83a37c0b3cb8e0f9083812d1b259c3eb0951d75c9ad9250",
+      "currentSha256": "addf0cefc08218d0f83a37c0b3cb8e0f9083812d1b259c3eb0951d75c9ad9250"
+    },
+    "docs/reviews/activation-history/gate-profile-1.2.0.lock.json": {
+      "baselineSha256": "f181e5d5d46ec3d5eb86d2693e2a818fff4a4571c308189856254e8896898298",
+      "currentSha256": "f181e5d5d46ec3d5eb86d2693e2a818fff4a4571c308189856254e8896898298"
+    },
+    "docs/reviews/activation-history/legacy-doctor-profile-schema.txt": {
+      "baselineSha256": "fbbc34fe0a3e3d0fe87c8c6d11cdfbdaa026cb8b2cfc755748560652d85ee91f",
+      "currentSha256": "fbbc34fe0a3e3d0fe87c8c6d11cdfbdaa026cb8b2cfc755748560652d85ee91f"
+    },
+    "docs/reviews/activation-history/postcommit-bound-bootstrap.json": {
+      "baselineSha256": "283e07f997ad939ffddcde1bb5738d2a148babc34f7f02250f6e30a81a4e73ea",
+      "currentSha256": "283e07f997ad939ffddcde1bb5738d2a148babc34f7f02250f6e30a81a4e73ea"
+    },
+    "docs/reviews/activation-history/postcommit-unbound-bootstrap.json": {
+      "baselineSha256": "d878c69f46b0f881df5ce4c1808471a594bc7c2bd8ff493f86849ebfaf2f0f64",
+      "currentSha256": "d878c69f46b0f881df5ce4c1808471a594bc7c2bd8ff493f86849ebfaf2f0f64"
+    },
+    "docs/reviews/activation-history/predispatch-admitted.json": {
+      "baselineSha256": "73d3ec2711ef00ac65d9e2e626d2a2464c8f3eea1ace561cd2b6c046cff87492",
+      "currentSha256": "73d3ec2711ef00ac65d9e2e626d2a2464c8f3eea1ace561cd2b6c046cff87492"
+    },
+    "docs/reviews/activation-history/predispatch-amendment-2-admitted.json": {
+      "baselineSha256": "e21b18f2bc1a601785bba650261189951ac56be350cfe08f923182eabc6aa5dd",
+      "currentSha256": "e21b18f2bc1a601785bba650261189951ac56be350cfe08f923182eabc6aa5dd"
+    },
+    "docs/reviews/activation-history/predispatch-amendment-2-before-receipt.json": {
+      "baselineSha256": "8012ef2838244b1e80d8bbfb4f86ae151122bf9311a709d4ce04c0431bfee214",
+      "currentSha256": "8012ef2838244b1e80d8bbfb4f86ae151122bf9311a709d4ce04c0431bfee214"
+    },
+    "docs/reviews/activation-history/predispatch-before-receipt.json": {
+      "baselineSha256": "7c1939efae36b00e8c8dd578f37c24a18ebb6b2b6d2e31f8c7319f42e9092f7a",
+      "currentSha256": "7c1939efae36b00e8c8dd578f37c24a18ebb6b2b6d2e31f8c7319f42e9092f7a"
+    },
+    "docs/reviews/activation-history/predispatch-terminal-before-receipt.json": {
+      "baselineSha256": "7b0040c01aa5bb63cf70ee2b872ab45c392ee9c9aa692046c7a39f9407614dd5",
+      "currentSha256": "7b0040c01aa5bb63cf70ee2b872ab45c392ee9c9aa692046c7a39f9407614dd5"
+    },
+    "docs/reviews/activation-history/prior-repair-outcome.md": {
+      "baselineSha256": "d87f840ef390ed97eeffe851e6afc81abdc58fcb897351f94f80b944929ad294",
+      "currentSha256": "d87f840ef390ed97eeffe851e6afc81abdc58fcb897351f94f80b944929ad294"
+    },
+    "docs/reviews/activation-history/repair-attempt-1.json": {
+      "baselineSha256": "c14dafd8a4002f9aa94212098926208b58f4c614345d67d1824fc76887b06c00",
+      "currentSha256": "c14dafd8a4002f9aa94212098926208b58f4c614345d67d1824fc76887b06c00"
+    },
+    "docs/reviews/activation-history/repair-attempt-2.json": {
+      "baselineSha256": "9aa072f4673fa7d3b52dc9897262c0b75ba8e914d7c2d72dd13e2fdd991b3213",
+      "currentSha256": "9aa072f4673fa7d3b52dc9897262c0b75ba8e914d7c2d72dd13e2fdd991b3213"
+    },
+    "docs/reviews/activation-history/repair-attempt-3.json": {
+      "baselineSha256": "d626ce527823caea047974d4e6545212f9e438c906d50fb7a30815b4dd4c810c",
+      "currentSha256": "d626ce527823caea047974d4e6545212f9e438c906d50fb7a30815b4dd4c810c"
+    },
+    "docs/reviews/activation-history/repair-attempt-4.json": {
+      "baselineSha256": "689f12875d6873daa6e016da2235a4a564dbe32d15e987d852819c4d88eb88dd",
+      "currentSha256": "689f12875d6873daa6e016da2235a4a564dbe32d15e987d852819c4d88eb88dd"
+    },
+    "docs/reviews/activation-history/repair-attempt-5.json": {
+      "baselineSha256": "7512cac729ae152cc99a5f42104184ded5f8c6e95a3ec506c445be84035b1ccf",
+      "currentSha256": "7512cac729ae152cc99a5f42104184ded5f8c6e95a3ec506c445be84035b1ccf"
+    },
+    "docs/reviews/activation-history/repair-causal-audit.md": {
+      "baselineSha256": "3caf5ec79c5586cdec8f8c7d7440e89d0211d3c889720dbd7f19c5d8adf56974",
+      "currentSha256": "3caf5ec79c5586cdec8f8c7d7440e89d0211d3c889720dbd7f19c5d8adf56974"
+    },
+    "docs/reviews/activation-history/repair-chain-assessment-1.json": {
+      "baselineSha256": "f0098670f2869d4ba47f2720b19fabd97748cb357d64ac22e971f6dd5a86029d",
+      "currentSha256": "f0098670f2869d4ba47f2720b19fabd97748cb357d64ac22e971f6dd5a86029d"
+    },
+    "docs/reviews/activation-history/repair-chain-assessment-2.json": {
+      "baselineSha256": "4b4bda6f0647d25a20f2d364163d20067a6bf02ce8b84d1f14a0b868f6a9d85f",
+      "currentSha256": "4b4bda6f0647d25a20f2d364163d20067a6bf02ce8b84d1f14a0b868f6a9d85f"
+    },
+    "docs/reviews/activation-history/repair-chain-assessment.json": {
+      "baselineSha256": "4b4bda6f0647d25a20f2d364163d20067a6bf02ce8b84d1f14a0b868f6a9d85f",
+      "currentSha256": "4b4bda6f0647d25a20f2d364163d20067a6bf02ce8b84d1f14a0b868f6a9d85f"
+    },
+    "docs/reviews/activation-history/repair-design-review-2.md": {
+      "baselineSha256": "3055f5233bed950106bf26fc988a2875519f6df00b60b88c1131036b9f7bab7b",
+      "currentSha256": "3055f5233bed950106bf26fc988a2875519f6df00b60b88c1131036b9f7bab7b"
+    },
+    "docs/reviews/activation-history/repair-design-review.md": {
+      "baselineSha256": "e6c646079a3adb2788568b4b414dcfc148566d1cf543c38277f84227bee5b91d",
+      "currentSha256": "e6c646079a3adb2788568b4b414dcfc148566d1cf543c38277f84227bee5b91d"
+    },
+    "docs/reviews/activation-history/review-upgrade-1.4.md": {
+      "baselineSha256": "19dbbfe8ecb4eb8e9974b044704819c08d4dd7c331656f56bf0c261b618d877b",
+      "currentSha256": "19dbbfe8ecb4eb8e9974b044704819c08d4dd7c331656f56bf0c261b618d877b"
+    },
+    "docs/reviews/activation-history/workspace-activation-upgrade-1.4.json": {
+      "baselineSha256": "3ca00ccba45f38efc1dd03a9b45de8741c759539086173c59fcf5ba1332a6413",
+      "currentSha256": "3ca00ccba45f38efc1dd03a9b45de8741c759539086173c59fcf5ba1332a6413"
+    },
+    "docs/reviews/activation-history/action-reviews/CVF-DG-APPL-01.json": {
+      "baselineSha256": "94d72cdf4c09bb75f764cbc6d47752f734345afedf9ce0542f82a05ec6072527",
+      "currentSha256": "94d72cdf4c09bb75f764cbc6d47752f734345afedf9ce0542f82a05ec6072527"
+    },
+    "docs/reviews/activation-history/action-reviews/CVF-DG-CONT-01.json": {
+      "baselineSha256": "b4e45761affb0b6036ad3fb4ac642920d527e7618e10243ef9489c7c77f63815",
+      "currentSha256": "b4e45761affb0b6036ad3fb4ac642920d527e7618e10243ef9489c7c77f63815"
+    },
+    "docs/reviews/activation-history/action-reviews/CVF-DG-COV-01.json": {
+      "baselineSha256": "f2d024c03ca48c343d5ad58d9790a1be8b2ce6a4d498d32f239dbdac9e3c0ccc",
+      "currentSha256": "f2d024c03ca48c343d5ad58d9790a1be8b2ce6a4d498d32f239dbdac9e3c0ccc"
+    },
+    "docs/reviews/activation-history/action-reviews/CVF-DG-INST-01.json": {
+      "baselineSha256": "3e5f8e5427f6f7525be3e2ae5f4a96bd8701fea4c0b66dd832c9aa45af9c224c",
+      "currentSha256": "3e5f8e5427f6f7525be3e2ae5f4a96bd8701fea4c0b66dd832c9aa45af9c224c"
+    },
+    "docs/reviews/activation-history/action-reviews/CVF-DG-RANGE-01.json": {
+      "baselineSha256": "f207bc5674c36ac823f63ec138d6dee77edbe958ad077976605533285dddda22",
+      "currentSha256": "f207bc5674c36ac823f63ec138d6dee77edbe958ad077976605533285dddda22"
+    },
+    "docs/reviews/activation-history/action-reviews/CVF-DG-ROUTE-01.json": {
+      "baselineSha256": "f97d1e14b9534ec994edd9455e57b80662df567820d32ed209358dea14d3522b",
+      "currentSha256": "f97d1e14b9534ec994edd9455e57b80662df567820d32ed209358dea14d3522b"
+    },
+    "docs/reviews/activation-history/action-reviews/SUPPLEMENTAL_ASSESSMENT.json": {
+      "baselineSha256": "3c4af234fe49d40b6059414f3145b4b6f3c1be7e5c7c485e59f66acd82fd94b9",
+      "currentSha256": "3c4af234fe49d40b6059414f3145b4b6f3c1be7e5c7c485e59f66acd82fd94b9"
+    },
+    "docs/reviews/activation-history/action-reviews-2/CVF-DG-APPL-01.json": {
+      "baselineSha256": "4dac249ebd343f9e64c028a15c3feb148371a48b049251ccde656364a96d9655",
+      "currentSha256": "4dac249ebd343f9e64c028a15c3feb148371a48b049251ccde656364a96d9655"
+    },
+    "docs/reviews/activation-history/action-reviews-2/CVF-DG-CONT-01.json": {
+      "baselineSha256": "aa30ed5a9ff007caf6bdc4fdc59c01fbec5129f899ef35e5260ac7f47b1fe538",
+      "currentSha256": "aa30ed5a9ff007caf6bdc4fdc59c01fbec5129f899ef35e5260ac7f47b1fe538"
+    },
+    "docs/reviews/activation-history/action-reviews-2/CVF-DG-COV-01.json": {
+      "baselineSha256": "ff4e1ff2fa443a3844855af0838ca87ff963e91ad2ec3c2b0a121a36ccc117b3",
+      "currentSha256": "ff4e1ff2fa443a3844855af0838ca87ff963e91ad2ec3c2b0a121a36ccc117b3"
+    },
+    "docs/reviews/activation-history/action-reviews-2/CVF-DG-INST-01.json": {
+      "baselineSha256": "0d97d25025149a3b5633e6e0603a41785a33da9f4768ba6adaeeb4a48a653a7c",
+      "currentSha256": "0d97d25025149a3b5633e6e0603a41785a33da9f4768ba6adaeeb4a48a653a7c"
+    },
+    "docs/reviews/activation-history/action-reviews-2/CVF-DG-RANGE-01.json": {
+      "baselineSha256": "dffad168f365dbeb6abd9df07d54888a328feddf2b3ee9a55234cc571a06137e",
+      "currentSha256": "dffad168f365dbeb6abd9df07d54888a328feddf2b3ee9a55234cc571a06137e"
+    },
+    "docs/reviews/activation-history/action-reviews-2/CVF-DG-ROUTE-01.json": {
+      "baselineSha256": "d6fe6a790cc75e9a949295f45978b3c10cafbbd0833322c32a35a1134af22219",
+      "currentSha256": "d6fe6a790cc75e9a949295f45978b3c10cafbbd0833322c32a35a1134af22219"
+    },
+    "docs/reviews/activation-history/action-reviews-2/SUPPLEMENTAL_ASSESSMENT.json": {
+      "baselineSha256": "7a6780fa9c786af8469cd834f5ba3939098452dec51f6bcb2ffa6a1de0b89ccc",
+      "currentSha256": "7a6780fa9c786af8469cd834f5ba3939098452dec51f6bcb2ffa6a1de0b89ccc"
+    },
+    "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-APPL-01.json": {
+      "baselineSha256": "11444f70d059f85212dc456d24ce25991f9688a1c98af0b12211c13e7832adaa",
+      "currentSha256": "11444f70d059f85212dc456d24ce25991f9688a1c98af0b12211c13e7832adaa"
+    },
+    "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-CONT-01.json": {
+      "baselineSha256": "851459d45e16c76096c6dfb487a6f1b2ee74d5640ac922ad842db2b7bd825210",
+      "currentSha256": "851459d45e16c76096c6dfb487a6f1b2ee74d5640ac922ad842db2b7bd825210"
+    },
+    "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-COV-01.json": {
+      "baselineSha256": "30d497a427948ec1f02066e0e34a4d59bb881240e3e6de90f8d8d76593412e20",
+      "currentSha256": "30d497a427948ec1f02066e0e34a4d59bb881240e3e6de90f8d8d76593412e20"
+    },
+    "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-INST-01.json": {
+      "baselineSha256": "b515146ab0aeb1a4f3c30348ca6db65828438093a44e6b1cac7990c112d04e75",
+      "currentSha256": "b515146ab0aeb1a4f3c30348ca6db65828438093a44e6b1cac7990c112d04e75"
+    },
+    "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-RANGE-01.json": {
+      "baselineSha256": "c062f4ca9c2737c613d372d1979f3aa8d3a00eb6b2b800c321655228a76eb60b",
+      "currentSha256": "c062f4ca9c2737c613d372d1979f3aa8d3a00eb6b2b800c321655228a76eb60b"
+    },
+    "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-ROUTE-01.json": {
+      "baselineSha256": "307dcf3f018d2637e909ccf9c6127b65754e3e04269de897f4aa1d2d684c245f",
+      "currentSha256": "307dcf3f018d2637e909ccf9c6127b65754e3e04269de897f4aa1d2d684c245f"
+    },
+    "docs/reviews/activation-history/action-reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json": {
+      "baselineSha256": "e573d9d12e852fcb4ad19e47eb2a148b7596d1f7370a498481997d2f9bcf9e66",
+      "currentSha256": "e573d9d12e852fcb4ad19e47eb2a148b7596d1f7370a498481997d2f9bcf9e66"
+    },
+    "docs/reviews/activation-history/archive/admitted-work-order-1.txt": {
+      "baselineSha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e",
+      "currentSha256": "0d61528540db32bd5ff12ca94232325424531c39e95f4fce8f4e240cbaefe20e"
+    },
+    "docs/reviews/activation-history/archive/admitted-work-order-2.txt": {
+      "baselineSha256": "5705b6c271d00febbc04971109caf89683f745487cc1916a87bad730d27ddbf9",
+      "currentSha256": "5705b6c271d00febbc04971109caf89683f745487cc1916a87bad730d27ddbf9"
+    },
+    "docs/reviews/activation-history/archive/handoff-before-freeze.txt": {
+      "baselineSha256": "b1799fa78c93682b5662c88c10e9ef1448fd5e27a49d3b9b7f645a998979dcea",
+      "currentSha256": "b1799fa78c93682b5662c88c10e9ef1448fd5e27a49d3b9b7f645a998979dcea"
+    }
+  },
+  "claimBoundary": "Byte/source preservation and local installation only; no product/native/live-provider acceptance"
+}

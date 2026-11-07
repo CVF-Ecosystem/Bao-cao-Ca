@@ -1,0 +1,14 @@
+Independent Core reconciliation admission review
+Date: 2026-11-07
+Risk: R2
+Worker: Root metadata recovery; Terra implementation awaiting admission
+Reviewer: Sol 6.1 Medium / activation_design_review
+Decision: ACCEPTED_BOUNDED_PER_CONTROL_ASSESSMENT
+
+Exact action equals action-admission.json and its retained original packet bytes: CRC1-CRC4, IMPLEMENT,60-minute ceiling. Current manifest/policy/lock digests equal the comparison snapshot. Independently verified clean Core68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6, correct public origin,17 installed files against that source, active pack identity and56 delivered file hashes. Supplemental guidance remains inspected; execution is PINNED_CORE.
+
+Retained configured actual invocation/process evidence reports six non-ACT mandatory controls PASS without findings. ACT remains FAIL for ACT_ACTION_MISSING and ACT_IDENTITY_STALE; overall exit2 remains visible. I inspected the existing source contract: ACT excludes itself from receipt input inventory, so these actual non-ACT observations can support the first independently reviewed receipt without fabricating a successful dispatch.
+
+Seven review JSONs were independently authored now with UTF-8 LF bytes. No receipt, action packet, source, policy, shared Core/pack or evidence input was changed by this reviewer. I did not rerun the provided scripts. Root must hash these reviews, bind fresh receipt and require actual successful admission before Terra doctor/tests BUILD. Subsequent closure needs exact terminal reassessment and clean committed proof.
+
+Nonblocking owned remainder: historical adapter command/index/limitation wording still points at the prior supplemental implementation; Root/worker must refresh it under CRC4 before closure. Prior accepted setup is historical, not current migration proof. Product implementation and Antigravity headed/native acceptance remain open. No provider call or runtime AI governance claim is made.

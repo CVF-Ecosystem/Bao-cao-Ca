@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "projectName": "SO_BAO_CAO_CA_V1_9",
+  "overallStatus": "LOCAL_WORKSPACE_SETUP_ACCEPTED",
+  "currentPhase": "FREEZE",
+  "completedCapabilities": [
+    "Reviewed supplemental CVF profile1.4 installation",
+    "Exact action-specific activation assessment",
+    "Fail-closed project compatibility doctor and six focused test groups with clean committed verification",
+    "Project continuity, catalog and local learning intake"
+  ],
+  "activeWorkOrders": [],
+  "knownLimitations": [
+    "Application implementation and product acceptance are not reassessed",
+    "Original public-Core doctor has two reviewed profile/schema incompatibilities; use project compatibility doctor",
+    "Future BUILD requires a newly assessed exact action",
+    "No hosted CI or live provider governance proof; whole-workspace aggregate not accepted"
+  ],
+  "evidence": [
+    "docs/reviews/workspace-activation-review.md",
+    "docs/reviews/activation-history/adapter-reviewed-full-flow.json",
+    "docs/reviews/activation-history/adapter-reviewed-tests.txt",
+    "docs/reviews/workspace-activation-postcommit-review.md",
+    "docs/reviews/activation-history/clean-committed-full-flow.json",
+    "docs/reviews/activation-history/clean-committed-tests.txt"
+  ],
+  "updatedAt": "2026-11-07"
+}

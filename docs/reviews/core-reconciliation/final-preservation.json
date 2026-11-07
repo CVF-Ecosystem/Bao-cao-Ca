@@ -1,0 +1,14 @@
+{
+  "protectedSourceAndReturnedEvidenceCount": 76,
+  "protectedChanged": [],
+  "historicalEvidenceCount": 61,
+  "historicalChanged": [],
+  "realDataAndCatalogFilesInObservationWindow": 13,
+  "dataChanged": [],
+  "dataObservationLimit": "Observation starts after canonical profile install and admission; excluded from all recovery mutation paths",
+  "sharedCoreHead": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+  "sharedCoreWorktreeClean": true,
+  "packManifestsUnchangedSinceAdmission": true,
+  "result": "PASS",
+  "claimBoundary": "Preservation/source identity only; no real-data recovery, product/native, hosted CI or provider claim"
+}

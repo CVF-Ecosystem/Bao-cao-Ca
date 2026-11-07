@@ -4,6 +4,10 @@
     "WSA": {
       "path": "docs/roadmaps/WORKSPACE_ACTIVATION.md",
       "heading": "## Acceptance criteria"
+    },
+    "CRC": {
+      "path": "docs/roadmaps/CORE_RECONCILIATION.md",
+      "heading": "## Acceptance criteria"
     }
   },
   "repairControls": {

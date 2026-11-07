@@ -2,27 +2,27 @@
   "schemaVersion": "cvf.workspaceActivation@1.0.0",
   "identity": {
     "projectRootSha256": "320d7a94c6415c596972609e3ed4fc87cc3754f690b2640bc75bb444401f3fc7",
-    "manifestSha256": "79b52ce79a234c0a2f376a94168aedd7c7f4bf71ee2602fab3abc974cc07deab",
-    "policySha256": "309a92bc37799aa80bf7406067ef0157ca8d41dba9bc195deb0fb9c748915909",
-    "lockSha256": "f47471cb35d819cdfb88a736911bb6ded3096f4fa1194c5e2e97157cf30c8db7",
-    "coreCommit": "c4c8767ac8861854f40d466ba338ffd11eb9558e",
+    "manifestSha256": "dd3e52630ef2ded2982569250516da5e96a8a32d7116e946ce2fb0d535ae7c12",
+    "policySha256": "4b0e460ace2337afcc7ad126f05f4e97571374303196e1851a758d34cdcc1dcc",
+    "lockSha256": "8d5b9561f8c97e4250fc9d06a7de851ade917a12f42d84efc2ea4325fa2ff936",
+    "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
     "profileId": "cvf.downstreamGateProfile@1.4.0",
     "profileSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
-    "deliveryFingerprint": "1af1a305518f3ec0af0b47d77c1dfe0d1fa7f72076cfaed252238a670b18d9a5",
-    "sourceRoute": "AUTHORIZED_SUPPLEMENTAL"
+    "deliveryFingerprint": "97c98cc51d571cdb928fa00a9a8380770bed27cc057e54067ffd6f4d6310bfd8",
+    "sourceRoute": "PINNED_CORE"
   },
   "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
   "reviewer": "Sol activation_design_review",
-  "authority": "User request and independently reviewed project-owned upgrade and repair admission",
+  "authority": "Operator recovery request; independently reviewed exact CRC action and actual control observations",
   "actions": [
     {
-      "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
-      "sha256": "96080f7e3f3946cd40c7a927d736db740f1dc17ab1c5531fbf36618db070ccc4",
+      "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+      "sha256": "0ddcfc40294bb127056fb2fd6b7e694571011584c04c66b20f68357e1a627ff8",
       "criteria": [
-        "WSA1",
-        "WSA2",
-        "WSA3",
-        "WSA4"
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
       ]
     }
   ],
@@ -30,16 +30,16 @@
     {
       "id": "SUPPLEMENTAL_ASSESSMENT",
       "mode": "INSPECTED",
-      "sourceSha256": "2544c83270e18b1f61e48d9631d9df3c28e0159a14807835c4e4e0000f416ab5",
-      "owner": "project orchestrator",
+      "sourceSha256": "b2acf0b3d3bf52e6feb58fb71ac61227b71d29cc98d61f6781f4fbd71aea4125",
+      "owner": "Root orchestrator",
       "actions": [
-        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
       ],
       "disposition": "ASSESSED",
       "reviewEvidence": [
         {
-          "path": "docs/reviews/activation-history/action-reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json",
-          "sha256": "e573d9d12e852fcb4ad19e47eb2a148b7596d1f7370a498481997d2f9bcf9e66"
+          "path": "docs/reviews/core-reconciliation/reviews-admission/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "b93fc7f9be12dabda0ae7b602bb21dc91bd551eb50a356b6357588a40f022259"
         }
       ]
     }
@@ -47,253 +47,253 @@
   "controls": [
     {
       "id": "CVF-DG-INST-01",
-      "owner": "project orchestrator",
-      "authority": "User-authorized work order and independent control review",
-      "reason": "Actual terminal invocation installation PASS checks the reviewed installed bundle and workflow pins; the public Core pin remains separate.",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual admission observation: PASS; . Mechanical local assessment only; no provider or host enforcement claim.",
       "actions": [
-        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
       ],
       "criteria": [
-        "WSA1",
-        "WSA2",
-        "WSA3",
-        "WSA4"
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/activation-history/predispatch-terminal-before-receipt.json",
-        "sha256": "7b0040c01aa5bb63cf70ee2b872ab45c392ee9c9aa692046c7a39f9407614dd5"
+        "path": "docs/reviews/core-reconciliation/predispatch-admission.json",
+        "sha256": "9d6efa89a16210affe188650414ee78a33fc5f7acd589ce4450a108ec50f4294"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
-          "sha256": "96080f7e3f3946cd40c7a927d736db740f1dc17ab1c5531fbf36618db070ccc4",
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0ddcfc40294bb127056fb2fd6b7e694571011584c04c66b20f68357e1a627ff8",
           "criteria": [
-            "WSA1",
-            "WSA2",
-            "WSA3",
-            "WSA4"
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/activation-history/configured-predispatch.json",
-        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+        "path": "docs/reviews/core-reconciliation/configured-admission.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-INST-01.json",
-          "sha256": "b515146ab0aeb1a4f3c30348ca6db65828438093a44e6b1cac7990c112d04e75"
+          "path": "docs/reviews/core-reconciliation/reviews-admission/CVF-DG-INST-01.json",
+          "sha256": "63efb8caf1b65a93463dfa078dee085ad289416ecd818284c3bbe2997ecddf0a"
         }
       ]
     },
     {
       "id": "CVF-DG-CONT-01",
-      "owner": "project orchestrator",
-      "authority": "User-authorized work order and independent control review",
-      "reason": "Actual terminal continuity PASS joins synchronized FREEZE memory, handoff, state and implementation truth. ActiveWorkOrders is empty; next move explicitly requires newly assessed action before BUILD.",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual admission observation: PASS; . Mechanical local assessment only; no provider or host enforcement claim.",
       "actions": [
-        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
       ],
       "criteria": [
-        "WSA1",
-        "WSA2",
-        "WSA3",
-        "WSA4"
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/activation-history/predispatch-terminal-before-receipt.json",
-        "sha256": "7b0040c01aa5bb63cf70ee2b872ab45c392ee9c9aa692046c7a39f9407614dd5"
+        "path": "docs/reviews/core-reconciliation/predispatch-admission.json",
+        "sha256": "9d6efa89a16210affe188650414ee78a33fc5f7acd589ce4450a108ec50f4294"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
-          "sha256": "96080f7e3f3946cd40c7a927d736db740f1dc17ab1c5531fbf36618db070ccc4",
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0ddcfc40294bb127056fb2fd6b7e694571011584c04c66b20f68357e1a627ff8",
           "criteria": [
-            "WSA1",
-            "WSA2",
-            "WSA3",
-            "WSA4"
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/activation-history/configured-predispatch.json",
-        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+        "path": "docs/reviews/core-reconciliation/configured-admission.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-CONT-01.json",
-          "sha256": "851459d45e16c76096c6dfb487a6f1b2ee74d5640ac922ad842db2b7bd825210"
+          "path": "docs/reviews/core-reconciliation/reviews-admission/CVF-DG-CONT-01.json",
+          "sha256": "a6f23d7fd13da512e6accdf469a1658b1964ee061c81f598c137e0c57a88bd75"
         }
       ]
     },
     {
       "id": "CVF-DG-RANGE-01",
-      "owner": "project orchestrator",
-      "authority": "User-authorized work order and independent control review",
-      "reason": "Actual terminal range PASS resolves worktree at genuine HEAD cc460d703401590ebac92ac9d0e4b8bc33fc4a9d; immutable preview99 candidates no deletions. This is invocation-scoped range assessment only.",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual admission observation: PASS; WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=74b71a3ba443e32dfe88dc4a844496f9de5f0c7e candidates=27 deleted=0. Mechanical local assessment only; no provider or host enforcement claim.",
       "actions": [
-        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
       ],
       "criteria": [
-        "WSA1",
-        "WSA2",
-        "WSA3",
-        "WSA4"
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/activation-history/predispatch-terminal-before-receipt.json",
-        "sha256": "7b0040c01aa5bb63cf70ee2b872ab45c392ee9c9aa692046c7a39f9407614dd5"
+        "path": "docs/reviews/core-reconciliation/predispatch-admission.json",
+        "sha256": "9d6efa89a16210affe188650414ee78a33fc5f7acd589ce4450a108ec50f4294"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
-          "sha256": "96080f7e3f3946cd40c7a927d736db740f1dc17ab1c5531fbf36618db070ccc4",
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0ddcfc40294bb127056fb2fd6b7e694571011584c04c66b20f68357e1a627ff8",
           "criteria": [
-            "WSA1",
-            "WSA2",
-            "WSA3",
-            "WSA4"
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/activation-history/configured-predispatch.json",
-        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+        "path": "docs/reviews/core-reconciliation/configured-admission.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-RANGE-01.json",
-          "sha256": "c062f4ca9c2737c613d372d1979f3aa8d3a00eb6b2b800c321655228a76eb60b"
+          "path": "docs/reviews/core-reconciliation/reviews-admission/CVF-DG-RANGE-01.json",
+          "sha256": "6a857761adea3144a611b3a9d787f2b453344283e8c8cc46fab1245688b91246"
         }
       ]
     },
     {
       "id": "CVF-DG-APPL-01",
-      "owner": "project orchestrator",
-      "authority": "User-authorized work order and independent control review",
-      "reason": "Actual outcome NOT_APPLICABLE_WITH_REASON: CLOSED_ACCEPTED is explicitly non-active. Status grammar observed; closeability contract NOT checked. Receipt disposition must be NOT_APPLICABLE_WITH_EVIDENCE, not APPLIED. This terminal REVIEW has no implementation grant.",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual admission observation: PASS; checked: docs/work_orders/WO_CORE_RECONCILIATION.md. Mechanical local assessment only; no provider or host enforcement claim.",
       "actions": [
-        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
       ],
       "criteria": [
-        "WSA1",
-        "WSA2",
-        "WSA3",
-        "WSA4"
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
       ],
-      "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
+      "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/activation-history/predispatch-terminal-before-receipt.json",
-        "sha256": "7b0040c01aa5bb63cf70ee2b872ab45c392ee9c9aa692046c7a39f9407614dd5"
+        "path": "docs/reviews/core-reconciliation/predispatch-admission.json",
+        "sha256": "9d6efa89a16210affe188650414ee78a33fc5f7acd589ce4450a108ec50f4294"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
-          "sha256": "96080f7e3f3946cd40c7a927d736db740f1dc17ab1c5531fbf36618db070ccc4",
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0ddcfc40294bb127056fb2fd6b7e694571011584c04c66b20f68357e1a627ff8",
           "criteria": [
-            "WSA1",
-            "WSA2",
-            "WSA3",
-            "WSA4"
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/activation-history/configured-predispatch.json",
-        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+        "path": "docs/reviews/core-reconciliation/configured-admission.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-APPL-01.json",
-          "sha256": "11444f70d059f85212dc456d24ce25991f9688a1c98af0b12211c13e7832adaa"
+          "path": "docs/reviews/core-reconciliation/reviews-admission/CVF-DG-APPL-01.json",
+          "sha256": "fd7e9047d0356bcd33c0ceab50e5c9e28dc9e49f724f64790506e8ca63c6774d"
         }
       ]
     },
     {
       "id": "CVF-DG-ROUTE-01",
-      "owner": "project orchestrator",
-      "authority": "User-authorized work order and independent control review",
-      "reason": "Actual terminal routing PASS checks settled original INITIAL order; no new REWORK dispatch or reviewer-local exception asserted.",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual admission observation: PASS; checked: docs/work_orders/WO_CORE_RECONCILIATION.md. Mechanical local assessment only; no provider or host enforcement claim.",
       "actions": [
-        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
       ],
       "criteria": [
-        "WSA1",
-        "WSA2",
-        "WSA3",
-        "WSA4"
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/activation-history/predispatch-terminal-before-receipt.json",
-        "sha256": "7b0040c01aa5bb63cf70ee2b872ab45c392ee9c9aa692046c7a39f9407614dd5"
+        "path": "docs/reviews/core-reconciliation/predispatch-admission.json",
+        "sha256": "9d6efa89a16210affe188650414ee78a33fc5f7acd589ce4450a108ec50f4294"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
-          "sha256": "96080f7e3f3946cd40c7a927d736db740f1dc17ab1c5531fbf36618db070ccc4",
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0ddcfc40294bb127056fb2fd6b7e694571011584c04c66b20f68357e1a627ff8",
           "criteria": [
-            "WSA1",
-            "WSA2",
-            "WSA3",
-            "WSA4"
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/activation-history/configured-predispatch.json",
-        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+        "path": "docs/reviews/core-reconciliation/configured-admission.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-ROUTE-01.json",
-          "sha256": "307dcf3f018d2637e909ccf9c6127b65754e3e04269de897f4aa1d2d684c245f"
+          "path": "docs/reviews/core-reconciliation/reviews-admission/CVF-DG-ROUTE-01.json",
+          "sha256": "007549f98445dde415fcd95f8520c40684fdcac06f15461fdc547a8f820c8855"
         }
       ]
     },
     {
       "id": "CVF-DG-COV-01",
-      "owner": "project orchestrator",
-      "authority": "User-authorized work order and independent control review",
-      "reason": "Actual terminal coverage PASS joins all four WSA VERIFIED rows to independent accepted review and immutable actual full-flow/test evidence. Scope is local setup milestone only. Prior failures preserved; later same-criteria MET/FULL_FLOW_VERIFIED supports clearing resolved audit. Terminal REVIEW conclusions do not accept application product.",
+      "owner": "Root orchestrator",
+      "authority": "Operator-authorized recovery action and independent Sol review",
+      "reason": "Actual admission observation: PASS; checked: docs/roadmaps/CORE_RECONCILIATION.md, docs/work_orders/WO_CORE_RECONCILIATION.md; mechanical joins only; Local owns semantic acceptance. Mechanical local assessment only; no provider or host enforcement claim.",
       "actions": [
-        "docs/work_orders/WO_WORKSPACE_ACTIVATION.md"
+        "docs/work_orders/WO_CORE_RECONCILIATION.md"
       ],
       "criteria": [
-        "WSA1",
-        "WSA2",
-        "WSA3",
-        "WSA4"
+        "CRC1",
+        "CRC2",
+        "CRC3",
+        "CRC4"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/activation-history/predispatch-terminal-before-receipt.json",
-        "sha256": "7b0040c01aa5bb63cf70ee2b872ab45c392ee9c9aa692046c7a39f9407614dd5"
+        "path": "docs/reviews/core-reconciliation/predispatch-admission.json",
+        "sha256": "9d6efa89a16210affe188650414ee78a33fc5f7acd589ce4450a108ec50f4294"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_WORKSPACE_ACTIVATION.md",
-          "sha256": "96080f7e3f3946cd40c7a927d736db740f1dc17ab1c5531fbf36618db070ccc4",
+          "packet": "docs/work_orders/WO_CORE_RECONCILIATION.md",
+          "sha256": "0ddcfc40294bb127056fb2fd6b7e694571011584c04c66b20f68357e1a627ff8",
           "criteria": [
-            "WSA1",
-            "WSA2",
-            "WSA3",
-            "WSA4"
+            "CRC1",
+            "CRC2",
+            "CRC3",
+            "CRC4"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/activation-history/configured-predispatch.json",
-        "sha256": "aeaa7c0fef3e59f135dfb7d017e99fbafb67b28ba4392cc9b146cb3a58a71664"
+        "path": "docs/reviews/core-reconciliation/configured-admission.json",
+        "sha256": "4fc6470c3fbd74e17228f0486ff469d7bf3733f5554113910cd0c4a933dbb3ff"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/activation-history/action-reviews-terminal/CVF-DG-COV-01.json",
-          "sha256": "30d497a427948ec1f02066e0e34a4d59bb881240e3e6de90f8d8d76593412e20"
+          "path": "docs/reviews/core-reconciliation/reviews-admission/CVF-DG-COV-01.json",
+          "sha256": "1b63782ad10e1f1dc76c73b24f35d0ccee0a88caa1759f11eb333e20aaaf4f32"
         }
       ]
     }

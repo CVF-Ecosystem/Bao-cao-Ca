@@ -1,20 +1,22 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "overallStatus": "LOCAL_WORKSPACE_SETUP_ACCEPTED",
-  "currentPhase": "FREEZE",
+  "overallStatus": "CORE_RECONCILIATION_IN_PROGRESS",
+  "currentPhase": "REVIEW",
   "completedCapabilities": [
-    "Reviewed supplemental CVF profile1.4 installation",
-    "Exact action-specific activation assessment",
-    "Fail-closed project compatibility doctor and six focused test groups with clean committed verification",
-    "Project continuity, catalog and local learning intake"
+    "Historical reviewed supplemental profile1.4 setup retained with its original evidence",
+    "Current public Core68a7446 identity and canonical installed profile1.4",
+    "Exact CRC action activation admitted after actual non-ACT checks and independent review"
   ],
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/WO_CORE_RECONCILIATION.md"
+  ],
   "knownLimitations": [
-    "Application implementation and product acceptance are not reassessed",
-    "Original public-Core doctor has two reviewed profile/schema incompatibilities; use project compatibility doctor",
-    "Future BUILD requires a newly assessed exact action",
-    "No hosted CI or live provider governance proof; whole-workspace aggregate not accepted"
+    "Application implementation and EXE/product acceptance are not reassessed by Core recovery",
+    "Antigravity returned headless DOM/DB evidence is qualified in runtime receiving reviews; headed/native UI proof remains open",
+    "Future action bytes and selected criteria require their own current assessment",
+    "No hosted CI, host auto-loading, universal agent compliance or live provider governance proof",
+    "Current Core checker implementation and final independent acceptance are in progress"
   ],
   "evidence": [
     "docs/reviews/workspace-activation-review.md",

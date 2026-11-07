@@ -1,0 +1,421 @@
+{
+  "scope": "Disposable relocated mechanical fixture; receipt identity re-bound only to copied root/absolute Core path for baseline. Existing copied review semantics are fixture inputs, not a new real action approval.",
+  "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+  "providerCalls": 0,
+  "cases": [
+    {
+      "case": "relocated baseline",
+      "expected": "PASS",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "wrong Core pin",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_CORE_INTEGRITY",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "ACT_CORE_INTEGRITY: Core HEAD, cleanliness or origin differs"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "wrong policy",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_IDENTITY_STALE",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "project, policy, source or installed bundle binding differs"
+            },
+            {
+              "code": "ACT_POLICY_CONFLICT",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "receipt source policy differs from project policy"
+            },
+            {
+              "code": "ACT_SUPPLEMENTAL_INVALID",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "ACT_SUPPLEMENTAL_INVALID: independently derived assessment identity differs"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "altered lock",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_SOURCE_INVENTORY",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "ACT_SOURCE_INVENTORY: installed bundle changed"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "BUNDLE_MISMATCH",
+              "locator": ".cvf/gate-profile.lock.json#/bundleSha256",
+              "message": "actual bytes of the inherited directory differ from the locked bundle digest"
+            }
+          ],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "altered inherited module",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_SOURCE_INVENTORY",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "ACT_SOURCE_INVENTORY: installed bundle changed"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "BUNDLE_MISMATCH",
+              "locator": ".cvf/gate-profile.lock.json#/bundleSha256",
+              "message": "actual bytes of the inherited directory differ from the locked bundle digest"
+            },
+            {
+              "code": "FILE_TAMPERED",
+              "locator": "scripts/cvf_gates/cvf_dg_continuity.py",
+              "message": "content identity differs from the lock pin"
+            },
+            {
+              "code": "TRUSTED_MISMATCH",
+              "locator": "scripts/cvf_gates/cvf_dg_continuity.py",
+              "message": "project copy differs from the trusted Core source"
+            }
+          ],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "old receipt identity",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_IDENTITY_STALE",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "project, policy, source or installed bundle binding differs"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "missing control",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_INVENTORY_MISMATCH",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "every independently verified source control required once"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "held supplemental dependency",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_SUPPLEMENTAL_HELD",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "selected action depends on held coverage"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "unreviewed supplemental",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_SUPPLEMENTAL_UNASSESSED",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "inspected manifest needs reviewed action-specific assessment"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "changed output bytes",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_ACTION_STALE",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "ACT_ACTION_STALE: exact action bytes/criteria differ or duplicated"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "changed action budget",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_ACTION_STALE",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "ACT_ACTION_STALE: exact action bytes/criteria differ or duplicated"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": []
+        }
+      }
+    },
+    {
+      "case": "altered reviewed invocation",
+      "expected": "REJECT",
+      "actual": {
+        "activation": {
+          "controlId": "CVF-DG-ACT-01",
+          "outcome": "FAIL",
+          "ok": false,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [
+            {
+              "code": "ACT_APPLIED_UNPROVED",
+              "locator": ".cvf/workspace-activation.json",
+              "message": "CVF-DG-INST-01"
+            }
+          ],
+          "notes": [
+            "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+          ]
+        },
+        "installation": {
+          "controlId": "CVF-DG-INST-01",
+          "outcome": "PASS",
+          "ok": true,
+          "reason": "",
+          "checkedControlIds": [],
+          "findings": [],
+          "notes": []
+        }
+      }
+    }
+  ],
+  "result": "PASS",
+  "negativeCount": 11,
+  "sharedCoreOrPackMutated": false,
+  "applicationDataReadOrMutated": false
+}
