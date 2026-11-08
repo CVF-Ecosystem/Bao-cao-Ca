@@ -10,6 +10,8 @@ Dùng file này làm cơ sở chia việc. Mỗi hạng mục có tiêu chí ngh
 
 ## 1. Định hướng đã chốt với chủ dự án
 
+**Quyết định 2026-11-08:** hoàn tất bản local trước, sau đó mới mở giai đoạn2web. Kế hoạch đầy đủ U1–U14/V1–V8/D2–D4: [LOCAL_COMPLETION](../docs/roadmaps/LOCAL_COMPLETION.md). Đang ở SPEC/work order, chưa nghiệm thu các phần mới. Chủ dự án xác nhận dùng máy bãi khác, nghiệm thu thiết bị sau.
+
 **Đợt bổ sung đã nghiệm thu kỹ thuật (2026-11-08):** [Đối chiếu tan-thuan-port và roadmap nhân sự](../docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md). PNI E1–E6 nhập danh mục nhân sự Excel có xem trước được giao Terra/Sol, Astra review độc lập; phiên bản ứng viên1.9.2. Nguồn/kiểm thử191Python và6JS, build/smoke và luồng Chrome có giao diện trên Windows của EXE1.9.2 từ7ce0305b6000 đã được Astra nghiệm thu độc lập bằng dữ liệu giả lập; hộp chọn file Windows, Python3.9, in và nghiệm thu nghiệp vụ vẫn chưa thử. Tái sử dụng bộ chọn người và tổ/mẫu hiện có; tự phân tổ, định danh mã nhân viên và đồng bộ nằm ngoài đợt này. D2–D5 giữ nguyên phần việc, chưa được đánh dấu xong.
 
 | Câu hỏi | Trả lời | Hệ quả cho roadmap |

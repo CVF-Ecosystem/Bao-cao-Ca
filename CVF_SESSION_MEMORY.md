@@ -5,8 +5,8 @@ Memory class: POINTER_RECORD
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md
 
 ## Startup and continuation
@@ -78,3 +78,21 @@ Astra independently accepted native-e6-review.json for exact1.9.2 EXE7ce0305b600
 
 
 Terminal handoff: Astra terminal-review.json accepts exact844b8966 REVIEW action and external docs. Refreshed activation and actual terminal pre-dispatch/worker-return/reviewer-fast exit0; doctor-terminal.json CORE_ASSESSED29/29+4. APPL explicitly N/A for closed dispatch; no invented closeability PASS. Root COMMIT_STEWARD performs final pre-commit and commits these terminal records. PNI is settled; next product action requires roadmap prioritization and separate assessed work order, with E7/original D2–D5 still open.
+
+
+## Local completion intake — 2026-11-08
+
+Operator approved the proposed local completion sequence and explicitly defers web tophase2afterlocal. Root rehydrated priorPNIFREEZE, doctorCORE_ASSESSED29/29+4, declares ORCHESTRATOR and opens only finite20min source/evidence audit before integratedSPEC/WOadmission. Astra independent reviewer, Terra storage/design, Sol UI/consumerproof; no productBUILD granted yet. Scope V1–V8/U1–U14/D2–D4 and packagedlocaldelivery; reusePNIproof, preserveoldAntigravityqualifications. Intake/cost/limits: docs/reviews/local-completion-20261108/intake.json. BOOTSTRAP_MIGRATION_PENDING remainsnonblocking.
+
+
+## Local DESIGN / SPEC / WORK_ORDER acknowledgment — 2026-11-08
+
+Finite source audits by Astra, Terra and Sol established real D2/D3/D4 and U gaps. Root resolved D2 to wall-clock24h including downtime, documented explicit migration as team safety choice, and locked shared1.10.0/schema4 SPEC. Operator confirmed another yard machine, device acceptance later. Whole LOCAL L1-L8 authority and integrated WO now await independent exact admission; no product BUILD yet. Root transitions DESIGN orchestrator -> SPEC/WORK_ORDER_AUTHOR -> ORCHESTRATOR/session sync. Sol owns all UI/native, Terra backend; native Windows control failure remains a required print-proof blocker, never headless PASS. Existing accepted PNI proof preserved. New action ceiling480min/support60min was defined before BUILD on independent whole-local audit, no repair reset.
+
+
+## LOCAL admitted BUILD acknowledgment — 2026-11-08
+
+Root rehydrated current WORK_ORDER continuity, received Astra independent acceptance of exact b153ee4956d7bb28533e1e42c0e2c8766a1b20913670f13fa9d0f7d47ff157b4 and SPEC6e0842af, and verified all45 baseline source files unchanged. Fresh pre-dispatch7/7 and doctor CORE_ASSESSED29/29 plus4 explicit LOCAL bootstrap checks passed. Root acknowledges BUILD as ORCHESTRATOR/SESSION_SYNC_STEWARD; Terra and Sol must acknowledge exact admitted packet before their assigned writes. Root alone owns commits; Astra remains independent. Newly verified full snapshot is mandatory before maintenance deletion; legacy upgrade preview covers1/2/3 with explicit ordered steps. Different yard-machine/device acceptance is deferred by operator. Print native-control failure remains unproved, all L1-L8 mandatory; no web grant.
+
+
+LOCAL r2 custody acknowledgment: one missing Worker label in the Terra design return was added, with original bytes/failure/r1 packet/receipt/reviews preserved in history. Astra independently verified the label-only delta and accepted exact586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57; SPEC and all product source remain unchanged. Root rebinds the receipt and reruns gates before actual worker dispatch; no design/effect/budget reset.

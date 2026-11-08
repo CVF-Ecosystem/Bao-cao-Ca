@@ -2,8 +2,8 @@
   "schemaVersion": "1.0",
   "continuityContract": "cvf.downstreamContinuityContract@1.0.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "currentMode": "FREEZE",
-  "activePhase": "FREEZE",
+  "currentMode": "BUILD",
+  "activePhase": "BUILD",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
-  "nextAllowedMove": "PNI E1-E6 settled. Next product move is roadmap prioritization and a separate assessed work order for E7 or original D2-D5; no current BUILD or operator checkpoint.",
+  "nextAllowedMove": "Terra backend and Sol UI/packaging implement exact admitted LOCAL action 586b44bf after rehydration; Astra independent source/product review. No web BUILD; native print remains mandatory.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "SESSION_SYNC_STEWARD",
+  "activeRole": "ORCHESTRATOR",
   "roleRoute": "INDEPENDENT_WORKER_AND_REVIEWER",
   "updatedAt": "2026-11-08"
 }

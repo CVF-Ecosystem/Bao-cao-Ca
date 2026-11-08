@@ -1,0 +1,32 @@
+{
+  "status": "NARROW_CONTRACT_CORRECTIONS_REQUIRED",
+  "risk": "R2",
+  "worker": "Terra SPEC author / Root exact work order",
+  "reviewer": "Astra independent REVIEWER",
+  "reviewedActionSha256": "28fc2923308a23db78682d09712c49af8e0883985eba5695268169e8921a602b",
+  "reviewedSpecSha256": "6b5e9218a731c6eee5c1ab255d13008cf6cc614fb6329f7cca0419f07953560b",
+  "acceptedDesign": [
+    "Complete LOCAL L1-L8 including U1-U14/V1-V8 and D2-D4 covered; prior PNI and qualified Antigravity evidence remain scope-limited",
+    "Wall elapsed24h including downtime/clockrollback forcesfull; cache cannot certify bitrot; full pins protect both destinations independently",
+    "Independent worker ownership and shared endpoint shapes; locked offline dependencies; no real-data/network/provider/web effects",
+    "480minute execution plus60support fixed before new implementation; original prior effort and unknown cumulative history retained; no repair reset",
+    "Native Chrome+Edge print evidence mandatory despite known control failure; independent source work allowed but no fullLOCAL closure if missing; operator-deferred other-yard device witness remains separately owned"
+  ],
+  "findings": [
+    {
+      "id": "LC-SPEC-01",
+      "severity": "ADMISSION_CORRECTION",
+      "source": "LOCAL_COMPLETION SPEC schema-upgrade-preview",
+      "finding": "Response hardcodes sourceSchema3 but migration outcome includes1/2/3 without automatic upgrade.",
+      "required": "Return actual supported source schema and explicit ordered migration steps/recovery copy names, or consistent equivalent legacy contract; all consent precedes changes."
+    },
+    {
+      "id": "LC-SPEC-02",
+      "severity": "ADMISSION_CORRECTION",
+      "source": "LOCAL_COMPLETION SPEC D4 orphan maintenance recent full prerequisite",
+      "finding": "Recent full is undefined and may not cover soon-to-delete bytes.",
+      "required": "At confirm obtain and retain newly full-verified same-dataset snapshot including deletion candidates, or exact verified fingerprint freshness equivalent; failed backup blocks all deletion."
+    }
+  ],
+  "limits": "No application writes, admission receipt or implementation acceptance. Root owns exact source amendments and fresh observation; reviewer must assess final hashes before7action-bound records."
+}

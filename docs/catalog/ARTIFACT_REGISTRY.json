@@ -171,6 +171,13 @@
       "path": "docs/reviews/personnel-import-20261108",
       "status": "ACTIVE",
       "description": "Independent personnel-import design/action reviews, dependency source records and exact implementation/consumer evidence."
+    },
+    {
+      "id": "family-local-completion",
+      "family": "governed_artifact_family",
+      "path": "docs/reviews/local-completion-20261108",
+      "status": "ACTIVE",
+      "description": "Whole-local design, independent action/source/product review and exact packaged synthetic consumer evidence; yard-device acceptance deferred and web phase2 held."
     }
   ]
 }

@@ -1,0 +1,73 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+    "sha256": "b153ee4956d7bb28533e1e42c0e2c8766a1b20913670f13fa9d0f7d47ff157b4",
+    "criteria": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "L8"
+    ]
+  },
+  "controlId": "CVF-DG-RANGE-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Astra 6 Medium / independent REVIEWER",
+  "authority": "Operator approved entire local sequence before web and deferred separate yard-device acceptance; Root bounded LOCAL work order; independent reviewer audit/design assessment.",
+  "decision": "ACCEPTED",
+  "reason": "Complete L1-L8 engineering design and owned remainder reviewed. Two initial contract findings resolved in final SPEC: actual1/2/3 migration path/copy names precede consent; destructive blob maintenance requires newly full-verified retained same-dataset snapshot and source recheck. Frozen wall24h backup rules, recovery/migration/correction invariants, explicit defaults and independent backend/UI ownership coherent.480execution+60support defined before BUILD; no network/new dependency/realdata/Core effects. Known native-control failure permits independent source work, never wholeLOCAL closure without true Chrome+Edge V1 and required runtime proof. Actual corrected trusted pre-dispatch records PASS for this control; evidence is mechanical invocation, not provider-governance behavior.",
+  "evidence": [
+    {
+      "path": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "sha256": "b153ee4956d7bb28533e1e42c0e2c8766a1b20913670f13fa9d0f7d47ff157b4"
+    },
+    {
+      "path": "docs/specs/LOCAL_COMPLETION.md",
+      "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+    },
+    {
+      "path": "docs/roadmaps/LOCAL_COMPLETION.md",
+      "sha256": "cb6c8707749fe8e8d5c40c33b4209da9076f2797cea44e1e53f769f8fba9694f"
+    },
+    {
+      "path": "docs/milestone-coverage-authority.json",
+      "sha256": "eb8c7f602a0061df6b1510af64f06b10ccba284fbc576d61b2dd825db3fd8f2e"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/predispatch-corrected-refs-before-receipt.json",
+      "sha256": "811620621660c9cf7d2979dd7a3acf163c452dd87ad7f95b1c4f7b03f166d249"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/configured-admission.json",
+      "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/audit-astra.json",
+      "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/design-review-astra.json",
+      "sha256": "6140abfc4ce3a92b6661423227c2cfa5e9558085d2fdc32341435a5f8fecd2f7"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/design-terra.md",
+      "sha256": "eb0784bbb47818c54d72759b48d4fc1c75cbe1720122e9a3fbd8606ac62f0d2d"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-baseline.json",
+      "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/comparison-admission.json",
+      "sha256": "19c4d882360a626cec8068b0b768f5cda39b29805d524dbbd9f67879a7c6fe88"
+    },
+    {
+      "path": ".cvf/runtime/local-completion-intake-doctor.json",
+      "sha256": "697f26496d23e6f7c68f2930b860fee92c0dcbe44b8edbd26a5132d933624cd8"
+    }
+  ],
+  "limits": "Overall preadmission exit2 ACT_ACTION_MISSING and intermediate staleSPECref failure retained. Root must bind new exact receipt and obtain fresh successful full pre-dispatch/doctor before product writes. No implementation/product acceptance or phase2web grant. Native print/runtime unavailable means OPEN/BLOCKED criterion; deferred yard device/real-data witnesses remain explicitly unproved. No unsupported budget-total, speed or live governance claim."
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "overallStatus": "PNI_E1_E6_ACCEPTED",
-  "currentPhase": "FREEZE",
+  "overallStatus": "LOCAL_COMPLETION_BUILD_PNI_ACCEPTED",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "Pinned public Core68a7446 and canonical profile1.4 install with preserved workflow",
     "Current-Core project delegate with exact29 native checks and trusted explicit-packet bootstrap",
@@ -11,7 +11,9 @@
     "Synchronized active continuity/catalog and preserved historical source/evidence",
     "PNI E1-E6 name-only additive flat-XLSX import,191Python0skip/6JS/4workspace and independent exact1.9.2 EXE headed flow acceptance at7ce0305b6000"
   ],
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/WO_LOCAL_COMPLETION.md"
+  ],
   "knownLimitations": [
     "PNI only E1-E6 accepted. Native Windows file dialog, Python3.9 execution, default-browser auto-opening and printing NOT_TESTED; no business/full-product acceptance or human speed claim. E7/identity/team mapping/sync and original D2-D5 remain separate.",
     "Application implementation and EXE/product acceptance are not reassessed by Core recovery",
@@ -35,7 +37,10 @@
     "docs/reviews/personnel-import-20261108/build-failure-round1.json",
     "docs/reviews/personnel-import-20261108/native-e6-review.json",
     "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
-    "docs/reviews/personnel-import-20261108/committed-candidate-r3.json"
+    "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+    "docs/reviews/local-completion-20261108/audit-astra.json",
+    "docs/reviews/local-completion-20261108/design-terra.md",
+    "docs/reviews/local-completion-20261108/design-sol.md"
   ],
   "updatedAt": "2026-11-08"
 }

@@ -11,7 +11,11 @@
     },
     "PNI": {
       "path": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
-      "heading": "## Acceptance criteria \u2014 PNI"
+      "heading": "## Acceptance criteria — PNI"
+    },
+    "LOCAL": {
+      "path": "docs/roadmaps/LOCAL_COMPLETION.md",
+      "heading": "## Acceptance criteria — LOCAL"
     }
   },
   "repairControls": {

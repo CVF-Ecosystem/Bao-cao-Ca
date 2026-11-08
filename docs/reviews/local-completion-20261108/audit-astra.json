@@ -1,0 +1,259 @@
+{
+  "status": "DESIGN_AUDIT_COMPLETE_NOT_IMPLEMENTATION_ACCEPTANCE",
+  "risk": "R2",
+  "worker": "Root orchestration; prospective Terra/Sol workers",
+  "reviewer": "Astra independent REVIEWER",
+  "date": "2026-11-08",
+  "scope": "Entire approved local desktop roadmap before phase2web; read-only audit20minute ceiling; only this review artifact written. No app/core/policy/receipt mutation, commits or native UI control.",
+  "context": {
+    "canonicalModeAtRead": "FREEZE",
+    "core": "../.Controlled-Vibe-Framework-CVF@68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+    "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
+    "readiness": ".cvf/runtime/local-completion-intake-doctor.json CORE_ASSESSED native29/29 plus trustedbootstrap4",
+    "authority": "New operator entire-local objective permits ordinary approved-roadmap technical decisions; prior PNI terminal receipt grants no BUILD."
+  },
+  "mandatoryCriteria": [
+    {
+      "id": "L1",
+      "outcome": "Local report/edit/correction lifecycle",
+      "reuse": "Existing transaction/version409 tests and qualified Antigravity merge/conflict/history observations; PNI old-report oracle.",
+      "missing": "Exact final EXE headed V2/V3: UI backup/export viewer -> enable correction/name/reason -> export actual downloaded DB -> preview/select/apply safe rows; preimport full backup, preserve original reviewer history, conflicts not overwritten, pending context invalidation. Include readonly badge truth and capabilities."
+    },
+    {
+      "id": "L2",
+      "outcome": "Exports/attachments/carry-forward",
+      "reuse": "Existing Excel/ZIP/API tests; PNI single report export.",
+      "missing": "Headed V4 portablebackup including medium fixture; V5 month with drafts/empty month; V6 duplicate/special filenames/no attachments ZIP+note oracle; V7 first/no-unfinished/unfinished previous shift and repeat-click behavior; record actual wait/response."
+    },
+    {
+      "id": "L3",
+      "outcome": "All local U1-U14 and native print acceptance",
+      "reuse": "Historical source/UI assessment defines requirements, not current pass.",
+      "missing": "Implement named gaps; U5/U11 coupled to D3; actual target desktop viewport measurements and real Chrome+Edge print dialog matrix V1 before/after U8. No native tool availability waiver."
+    },
+    {
+      "id": "L4",
+      "outcome": "Tiered backup/recovery D2 and D4-3",
+      "reuse": "Atomic snapshot/temp+fsync/replace, startup adoption, full inspection, restore ownership, directory chooser and source tests.",
+      "missing": "Quick/full decision service, full-good pin/db identity, safe cache invalidation, independent full deadlines/force, failure truth, retention tests, exact EXE external destination/restore/recovery drill in disposable roots and operational quarterly instructions."
+    },
+    {
+      "id": "L5",
+      "outcome": "Schema4 save semantics/history D3 with K0/K1/K4",
+      "reuse": "Existing BEGIN IMMEDIATE/version CAS and normalization/business rules.",
+      "missing": "Migration3to4 protected preupgrade copy, legacy preservation, save_kind server validation, six-revision oracle, os_user server-owned/auth_user null, capabilities, correction import gaps/old schema, shared history diff. Never derive authenticated identity from actor."
+    },
+    {
+      "id": "L6",
+      "outcome": "Safe local maintenance D4-1/D4-2",
+      "reuse": "Review-copy metadata, pending_import context, blob hash owner; no existing GC assumed.",
+      "missing": "Read-only-cache cleanup by safe classification, permanent exclusion of correction copies from automatic cleanup, pending source protection; manual confirmed orphan maintenance after verified full backup, age refresh on reupload, all3reference roots checked/deleted atomically; separate space-checked VACUUM and recoverability oracle."
+    },
+    {
+      "id": "L7",
+      "outcome": "Reproducible larger-data readiness V8/D2 measurements",
+      "reuse": "D0 medium125MB/4800distinct payload baseline and benchmark script.",
+      "missing": "Bounded large fixture with persisted deterministic generator seed/hash, report list/filter/year summary/40attachments timings and UI responsiveness; backup quick/full timings and correctness. Compare same machine/fixture, no imported unreproducible1.15GB claims or invented yard-machine result."
+    },
+    {
+      "id": "L8",
+      "outcome": "Final local EXE/package/runtime/handover",
+      "reuse": "Pinned offline isolated build,191Python+6JS+4workspace history and PNI exact EXE/native workflow; earlier evidence historical if bytes change.",
+      "missing": "Version1.10 candidate appropriate schema4; full applicable tests/zero skips disclosure; new clean reviewed commit+EXE hash+metadata; final headed integrated flows including PNI regression, native runtime directory/adoption/restore dialogs, defaultbrowser auto-open, startup/exit/portability, guide/recovery/compatibility and known deployment witnesses."
+    }
+  ],
+  "uiFindings": [
+    {
+      "id": "U1",
+      "state": "OPEN_IMPLEMENTATION_AND_NATIVE_MEASUREMENT",
+      "source": "ung_dung.js renderEditor and style.css header/card/tab layout; PNI screenshots show tall stacked header",
+      "acceptance": "Compact report header, sticky tabs; measure first editable control inside1366x657 viewport, not screenshot scaling."
+    },
+    {
+      "id": "U2",
+      "state": "OPEN_IMPLEMENTATION",
+      "source": "giao_dien/tai_nguyen/ung_dung.js:370 totals sums Number(value), with no aria-invalid validator",
+      "acceptance": "Reject fractional/noninteger/out-of-range cells locally; invalid cells excluded from totals; row+column error, server validation retained."
+    },
+    {
+      "id": "U3",
+      "state": "OPEN_IMPLEMENTATION",
+      "source": "giao_dien/tai_nguyen/ung_dung.js:503 closeShift confirms before save validation",
+      "acceptance": "Validate required chief/actor and cell values before confirm; focus missing control/tab, no duplicate ngay phrase."
+    },
+    {
+      "id": "U4",
+      "state": "OPEN_IMPLEMENTATION",
+      "source": "giao_dien/tai_nguyen/ung_dung.js:44,49,884 only Ctrl+S, no Escape/Alt tabs; danh_muc.js ship modal",
+      "acceptance": "Escape routes through context-specific cancel and refuses during save/import confirm; skip link, tab shortcuts, ship search focus. Preserve PNI generation/nonce busy guard."
+    },
+    {
+      "id": "U5",
+      "state": "OPEN_WITH_D3",
+      "source": "giao_dien/tai_nguyen/ung_dung.js:691 history displays individual revisions",
+      "acceptance": "Shared escaped semantic diff of adjacent stored revisions including gapped version numbers, identity/reason/kind and changed attachment metadata."
+    },
+    {
+      "id": "U6",
+      "state": "OPEN_LOCAL_SCOPE",
+      "source": "giao_dien/tai_nguyen/ung_dung.js:487-488 conflict offers reload only",
+      "acceptance": "Whole-local scope should include explicit preserve-notes-on-reload choice, preserving latest server version and avoiding silent overwrite; no automatic merge of other fields."
+    },
+    {
+      "id": "U7",
+      "state": "OPEN_IMPLEMENTATION",
+      "source": "giao_dien/giao_dien.html:24 static Phien ban1.9.0",
+      "acceptance": "Remove stale hardcoded version; server/build metadata owns displayed version."
+    },
+    {
+      "id": "U8",
+      "state": "OPEN_IMPLEMENTATION_AND_NATIVE_PRINT",
+      "source": "style.css print section lacks page margin counters/time/signature; ung_dung.js has no beforeprint hook",
+      "acceptance": "Normal9staff/6jobs onepage; long report identification/page x/y/print timestamp everypage, signature block only finalpage with chief names, no split. V1 actual Chrome AND Edge dialog button/Ctrl+P, headersfooters on/off and backgrounds off; real Print to PDF acceptable, scripted PDF insufficient."
+    },
+    {
+      "id": "U9",
+      "state": "OPEN_IMPLEMENTATION",
+      "source": "danh_muc.js:130/137 add-only; MAY_CHU.py:451 ships-add; LUU_TRU.py:175/181 active filter and reactivation already exist",
+      "acceptance": "Add hide API+UI with context/read-only guards; preserve historical report ship strings; tests prove hidden ship stays hidden on old-report save and explicit re-add restores."
+    },
+    {
+      "id": "U10",
+      "state": "OPEN_IMPLEMENTATION_AND_LAYOUT_MEASUREMENT",
+      "source": "style.css modal overflow auto; danh_muc.js:163 and phan_cong_mau.js modal entire content scrolls",
+      "acceptance": "Sticky dialog header/actions and scrollable body for catalog/templates/protection including keyboard access; preserve nested import dialog controls."
+    },
+    {
+      "id": "U11",
+      "state": "OPEN_WITH_D3",
+      "source": "ung_dung.js corrections preview renders whole reports and history separate",
+      "acceptance": "Reuse U5 semantic diff for correction comparison; remove misleading extra print/close controls, preserve return-to-comparison."
+    },
+    {
+      "id": "U12",
+      "state": "OPEN_IMPLEMENTATION",
+      "source": "roadmap U12 plus protection restore preview UI",
+      "acceptance": "Zero-report backup must say no reports, not empty date range; source regression plus headed backup preview."
+    },
+    {
+      "id": "U13",
+      "state": "OPEN_IMPLEMENTATION",
+      "source": "danh_muc.js, phan_cong_mau.js:16/65/105 and ung_dung.js contain gendered anh text",
+      "acceptance": "Neutral visible UI language; scope all touched dialogs and external guide, not identifiers/data."
+    },
+    {
+      "id": "U14",
+      "state": "OPEN_IMPLEMENTATION",
+      "source": "ung_dung.js:25 toast timeout only; style.css .toast top22px",
+      "acceptance": "Bottom toast with one-click dismissal and accessible status; does not cover save actions at target viewport."
+    }
+  ],
+  "sourceFindings": [
+    {
+      "id": "D2",
+      "source": "BAO_VE_DU_LIEU.py:29/59/228/277; MAY_CHU.py daily_backup",
+      "finding": "Current snapshot always full-inspects; retention age/daily policy has no explicit last-full-good pin; handler owns five-minute scheduling. D2 not implemented.",
+      "design": "Extract policy/service returning quick/full reason and result. Persist last successful full timestamp, database_id and artifact name only after verified full success; keep pinned full until replacement succeeds, including external retention. Define overdue as24h wall elapsed since success, trigger next startup/operation after downtime; no background SLA. Required full overrides throttle; failed full never advances marker. Cache keyed database_id+verified blob hash and reset on adopt/restore/source change; full bypasses cache. Quick success never labeled full."
+    },
+    {
+      "id": "D3",
+      "source": "LUU_TRU.py:11/33/64/120-166/293; MAY_CHU.py save path",
+      "finding": "Supported schemas1-3; every changed save appends revision; unchanged save returns early. No kind/os_user/auth_user/capabilities.",
+      "design": "Single schema4 migration with preserved schema3 copy; explicit SQL column lists and rollback/integrity checks. Save service accepts source and server identity; validate enum/state combinations. Only consecutive sameactor/os/auth draft-auto revision coalesces. Manual unchanged seals preceding auto without version increment; otherwise reports.version remains monotonic. Preserve legacy and closed/correction revisions. Import schema3 correction metadata deliberately without destructively migrating readonly external source. Implement exact6row v10/v11/v16/v19/v20/v21 oracle,409,identity-switch,legacy and correction-gap tests."
+    },
+    {
+      "id": "D4",
+      "source": "MAY_CHU.py:389 DB_KIEM_TRA upload; LUU_TRU.py:206 blob INSERT OR IGNORE; roadmap:296-317",
+      "finding": "Review uploads accumulate; reupload samehash does not refresh age. No safe maintenance operation is evidenced.",
+      "design": "Choose conservative30day readonly-cache retention and24h orphan grace as documented technical defaults (not existing authority values). Unknown/corrupt/correction-copy/current/pending files must fail closed and remain. Correction-copy manual cleanup requires verified export or successful import receipt; never infer safety from age/closedprocess. GC previews candidates, requires explicit maintenance action+verified full backup, performs reference query and delete in one BEGIN IMMEDIATE across reports/revisions/correction_base, updates uploaded_at on reupload. VACUUM separate command with disk budget; never in routine full or autosave."
+    }
+  ],
+  "reuseQualifications": {
+    "PNI": "Accepted only E1-E6 exact1.9.2/7ce0305b6000 EXE; new app/source change requires new reviewed clean candidate and affected native reruns. Windowsfiledialog/Python3.9/printing/defaultbrowser absent from PNI proof.",
+    "Antigravity": "Receiver qualifications retained at .cvf/runtime/project-resume-20261107/antigravity-addendum-review.json: bounded small-fixture merge/conflict/preservation/export identity accepted; headless/programmatic chooser, unbound executed source, badge contradiction, writable inspection and residual cleanup limitations. Cannot close V2/V3 or final native runtime with that packet.",
+    "roadmap": "Historical Core/pin and global untested lines must be qualified in new current-truth block, preserving old records. D0/D1 reuse valid only for unchanged paths/contracts; do not relabel whole product complete."
+  },
+  "designSequence": [
+    "Root records whole-local L1-L8 coverage and explicit requirement/proof rows, source-backed SPEC/ADR and exact WO; independent admission+fresh controls/doctor before any BUILD.",
+    "First establish true native print/control capability and baseline V1; keep required outcomes OPEN if unavailable. This is finite evidence-feasibility work, not permission to downgrade acceptance.",
+    "One source owner for schema/save/backup/maintenance server contracts; separate UI worker consumes locked API/contracts. Implement D2/D3/D4 and U changes in dependency order, preserve PNI guards.",
+    "Consolidate review once, reviewer-local determined fixes first; worker repair only on real evidence/design boundary. Full suite after settled changes, then reviewed clean candidate build and Sol sole headed controller.",
+    "Review exact final native matrix/oracles and portability/runtime; freeze only covered outcomes, keep named external deployment/business witnesses separately unproved."
+  ],
+  "decisionsWithoutOperatorWait": [
+    "Roadmap print signature/time format and chief identity already approved.",
+    "D2 schedule/full pin and D3 save-kind/coalescing semantics already explicit; specify engineering details, do not reopen business consent.",
+    "Conservative maintenance thresholds, deterministic fixture sizes, version1.10, adapters/module split, escaped shared diffs and test allocation are ordinary technical decisions within the forthcoming bounded WO.",
+    "Do not add web login, remote server, HRM identity/group import or external provider/network access."
+  ],
+  "realAcceptanceBoundaries": [
+    "Native Chrome+Edge print dialog V1 cannot be substituted by headless/PDF script. If inaccessible, report unresolved local acceptance criterion, not DONE.",
+    "Real runtime directory/adoption/recovery dialogs and defaultbrowser behavior need actual finalEXE proof; unavailable tools do not erase requirements.",
+    "Roadmap asks migration on a copy of realDB and D2 timing on yard machine. No real operational DB was inspected here. Synthetic migration proves local engineering only; document those as distinct deployment witnesses with owner/source-access need, never claim literal realDB/site-machine acceptance. Do not silently remove these rows to claim all original acceptance.",
+    "Physical printer may be replaced by actual Microsoft Print to PDF as roadmap explicitly permits; Excel desktop may be unavailable if file structures validated and limitation stated.",
+    "Python3.9 target needs actual runtime proof if retained; alternatively explicitly revise support matrix in design, not silently count syntax review as execution."
+  ],
+  "budgetAndStop": {
+    "auditMinutesCeiling": 20,
+    "suggestedWholeLocalAdditionalCeilingMinutes": 480,
+    "suggestedAllocation": "60 design/admission +210implementation/focusedtests +60independentreview/repairs +120finalbuild/native/performance +30terminalhandover, one cumulative ledger from first new-scope action; estimates are not elapsed measurements. Root chooses exact bound before dispatch.",
+    "priorPNI": "Retain original PNI180/45 budget and UNKNOWN earlier planning total as history; new whole-local scope is distinct, not renamed PNI repair reset.",
+    "stop": [
+      "Budget ceiling or third same-root repair without independent new cause",
+      "Missing nativeprint/runtime environment leaves criterion OPEN; continue independent authorized work only",
+      "Failed required gate, unexpected schema/backup data loss or recovery invariant",
+      "Scope/effect expansion into real operational mutation, Internet/auth/HRM, secret/provider use or Core edits"
+    ]
+  },
+  "conclusion": "Whole-local objective is feasible as one covered milestone with staged dependencies, but materially larger than finishing PNI. No implementation accepted or dispatched by this audit. Root owns exact admission and eventual scoped terminal disposition.",
+  "sources": [
+    {
+      "path": "tai_lieu/ROADMAP_SAU_V1_9.md",
+      "sha256": "042e35819bed94e7b640ea7ac9f76033e0208126f15a2c4da2db3e3bbf71124a"
+    },
+    {
+      "path": "tai_lieu/DANH_GIA_GIAO_DIEN_V1_9.md",
+      "sha256": "bba529e6679595ad9176051a57226c6198a06a864c6a1856c0e625375074226d"
+    },
+    {
+      "path": "ma_nguon/LUU_TRU.py",
+      "sha256": "8b772c6f4f414f210c8326d3f2b862439f5f92642a11bdcf0c5e15ea46594052"
+    },
+    {
+      "path": "ma_nguon/BAO_VE_DU_LIEU.py",
+      "sha256": "255e32dc6cc028fe6a5cb80c03343d2572949b98248a19af613789ca71905657"
+    },
+    {
+      "path": "ma_nguon/MAY_CHU.py",
+      "sha256": "ca55728d8dc6e7204a5fdcdcbd5b29d16276b49fce334318f87324bf5e74d1c9"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/ung_dung.js",
+      "sha256": "f5baeed01d47aef16edf13520963851cbc70923af706d491d1816fd312aa19b4"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "sha256": "8bb55f2045c4d8ce1b603075da076f6fb7c7774f2c807bb5a2693990d118a097"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/style.css",
+      "sha256": "4ebf9950f2027d9d5177576f85a4eb0b0d63ddae7761b63776753c015a0f1dc7"
+    },
+    {
+      "path": "giao_dien/giao_dien.html",
+      "sha256": "dc6c761db9b588e7fd25ab388bba38777c9bc8dfd25209ba7ea59b0bee449a84"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+      "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+    },
+    {
+      "path": ".cvf/runtime/project-resume-20261107/antigravity-addendum-review.json",
+      "sha256": "801e03b47c79b170e0e7b47ed8561f05a9807d2b6df4fbfee9394300681e4140"
+    },
+    {
+      "path": ".cvf/runtime/local-completion-intake-doctor.json",
+      "sha256": "697f26496d23e6f7c68f2930b860fee92c0dcbe44b8edbd26a5132d933624cd8"
+    }
+  ]
+}

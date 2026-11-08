@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: SO_BAO_CAO_CA_V1_9
-- Current mode: FREEZE
-- Active phase: FREEZE
-- Active role: SESSION_SYNC_STEWARD
-- Next allowed move: PNI E1-E6 settled. Next product move is roadmap prioritization and a separate assessed work order for E7 or original D2-D5; no current BUILD or operator checkpoint.
+- Current mode: BUILD
+- Active phase: BUILD
+- Active role: ORCHESTRATOR
+- Next allowed move: Terra backend and Sol UI/packaging implement exact admitted LOCAL action 586b44bf after rehydration; Astra independent source/product review. No web BUILD; native print remains mandatory.
 - Parked operator checkpoint: none
 
 ## Accepted current workspace
@@ -111,3 +111,21 @@ FREEZE records the settled PNI product slice; Root SESSION_SYNC_STEWARD/COMMIT_S
 
 
 Terminal gate receipt: Astra terminal-review.json independently accepts exact844b8966 REVIEW action and two external-doc updates. Current activation binds that exact action; fresh pre-dispatch, worker-return and reviewer-fast exit0. APPL is explicitly NOT_APPLICABLE_WITH_REASON for CLOSED_ACCEPTED, not a closeability PASS. doctor-terminal.json is CORE_ASSESSED29/29 plus4explicitbootstrapPASS. Root COMMIT_STEWARD runs final pre-commit before the local terminal records commit; no future BUILD grant, public release or deployment. Source/binary custody is in terminal-preservation.json. This records commit is the closure artifact; subsequent source remains the accepted7ce0305b6000 binary.
+
+
+## Local completion INTAKE acknowledgment — 2026-11-08
+
+User authorizes the recommended complete local sequence before phase2web. Root rehydrated allcanonicalfrontdoors and freshdoctor, acknowledgesINTAKE asORCHESTRATOR. Newfinite20minaudit assigned toAstraindependentreviewer,TerraSPEC_AUTHORandSoldeliverydesigner; no applicationeffects untilnewexactadmittedWO. PriorPNIterminalreceipt is preserved authorityonlyforitsclosedaction. Root ownscompletecriterioncoverage, ordinarytechnicalchoices, currentmetadata/receipts/commits. Totalnewboundedexecution360min/support60minafteraudit, withpriorPNI106minreused and unmeasuredpriorcostUNKNOWN; noresetonrepair. Auditrecord:docs/reviews/local-completion-20261108/intake.json. Web/realoperationaldata/newHRM/sync remainoutside.
+
+
+## LOCAL DESIGN / SPEC / WORK_ORDER acknowledgment — 2026-11-08
+
+Root received three finite source/design audits, resolved wall-clock24h backup semantics and locked integrated1.10.0/schema4 SPEC before exact WO. The operator separately deferred actual device acceptance to another yard machine. L1-L8 includes all U1-U14/V1-V8/D2-D4 engineering outcomes; true Chrome/Edge print remains mandatory and currently blocked by native-control initialization. Other source work is independent; whole product stays pending until required proof. Role route: Root DESIGN/WORK_ORDER_AUTHOR -> ORCHESTRATOR/SESSION_SYNC_STEWARD; Terra backend, Sol sole frontend/native controller, Astra independent reviewer. No source BUILD until fresh exact action receipt and pre-dispatch/doctor. Local roadmap/WO and source-baseline preserve prior PNI and old1.9.2 EXE.
+
+
+## LOCAL admitted BUILD acknowledgment — 2026-11-08
+
+Root rehydrated current WORK_ORDER continuity, received Astra independent acceptance of exact b153ee4956d7bb28533e1e42c0e2c8766a1b20913670f13fa9d0f7d47ff157b4 and SPEC6e0842af, and verified all45 baseline source files unchanged. Fresh pre-dispatch7/7 and doctor CORE_ASSESSED29/29 plus4 explicit LOCAL bootstrap checks passed. Root acknowledges BUILD as ORCHESTRATOR/SESSION_SYNC_STEWARD; Terra and Sol must acknowledge exact admitted packet before their assigned writes. Root alone owns commits; Astra remains independent. Newly verified full snapshot is mandatory before maintenance deletion; legacy upgrade preview covers1/2/3 with explicit ordered steps. Different yard-machine/device acceptance is deferred by operator. Print native-control failure remains unproved, all L1-L8 mandatory; no web grant.
+
+
+LOCAL r2 custody acknowledgment: one missing Worker label in the Terra design return was added, with original bytes/failure/r1 packet/receipt/reviews preserved in history. Astra independently verified the label-only delta and accepted exact586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57; SPEC and all product source remain unchanged. Root rebinds the receipt and reruns gates before actual worker dispatch; no design/effect/budget reset.
