@@ -1,0 +1,28 @@
+         253542714 function calls (253542690 primitive calls) in 100.189 seconds
+
+   Ordered by: cumulative time
+   List reduced from 226 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    2.782    2.782  100.189  100.189 BAO_VE_DU_LIEU.py:31(inspect_db)
+    89793    0.434    0.000   95.521    0.001 BAO_VE_DU_LIEU.py:42(checked_payload)
+    89793   22.977    0.000   89.055    0.001 NGHIEP_VU.py:110(normalize)
+ 16081707   13.334    0.000   38.637    0.000 NGHIEP_VU.py:29(clean_text)
+ 16081707    7.503    0.000   20.933    0.000 __init__.py:178(sub)
+  6465096    6.681    0.000   15.638    0.000 NGHIEP_VU.py:81(ship_names)
+ 25514557    9.040    0.000   12.546    0.000 __init__.py:272(_compile)
+  9432850    4.544    0.000   11.942    0.000 __init__.py:168(fullmatch)
+ 58295877    6.255    0.000    6.255    0.000 {built-in method builtins.isinstance}
+    89793    0.121    0.000    5.934    0.000 __init__.py:299(loads)
+    89793    0.200    0.000    5.776    0.000 decoder.py:332(decode)
+ 16081707    5.543    0.000    5.543    0.000 {method 'sub' of 're.Pattern' objects}
+    89793    5.460    0.000    5.460    0.000 decoder.py:343(raw_decode)
+ 37816020    4.219    0.000    4.219    0.000 {method 'get' of 'dict' objects}
+  9432850    2.739    0.000    2.739    0.000 {method 'fullmatch' of 're.Pattern' objects}
+23004746/23004741    1.961    0.000    1.961    0.000 {built-in method builtins.len}
+ 16265751    1.845    0.000    1.845    0.000 {method 'strip' of 'str' objects}
+       20    1.556    0.078    1.556    0.078 {method 'execute' of 'sqlite3.Connection' objects}
+  9522634    1.069    0.000    1.069    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.789    0.789 LUU_TRU.py:39(__init__)
+
+

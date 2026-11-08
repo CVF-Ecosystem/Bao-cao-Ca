@@ -1,0 +1,87 @@
+{
+  "version": "1.10.0",
+  "profile": {
+    "days": 1095,
+    "saves": 40,
+    "blobs": 200,
+    "blob_mb": 2
+  },
+  "disk_label": "D: local NVMe; synthetic",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "work": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\fixtures-terra\\benchmark\\do_hieu_nang_k2rzn8ud",
+  "started_at": "2026-11-08T15:23:00.681286+07:00",
+  "attachment_semantics": "Synthetic JPEG-header/random bytes for storage/hash only, not image rendering",
+  "retained_workload": "Changed manual saves then close; HTTP auto saves measured separately",
+  "free_bytes_before": 25025445888,
+  "seed_s": 603.9,
+  "data": {
+    "reports": 2190,
+    "revisions": 87600,
+    "blobs": 200,
+    "avg_payload_kb": 7.9,
+    "revisions_mb": 666,
+    "blobs_mb": 400,
+    "distinct_revision_payloads": 87600,
+    "db_mb": 1194,
+    "db_bytes": 1251647488,
+    "blobs_bytes": 419431000,
+    "target_1GB_reached": true
+  },
+  "free_bytes_after_seed": 23718764544,
+  "parts": {
+    "Chép DB bằng SQLite Backup API (không kiểm tra)": {
+      "first_s": 11.06,
+      "later_median_s": 11.06
+    },
+    "quick_check": {
+      "first_s": 12.42,
+      "later_median_s": 2.69
+    },
+    "integrity_check": {
+      "first_s": 2.83,
+      "later_median_s": 2.55
+    },
+    "Duyệt JSON (reports + revisions)": {
+      "first_s": 19.04,
+      "later_median_s": 17.09
+    },
+    "Hash SHA-256 mọi tệp đính kèm": {
+      "first_s": 2.11,
+      "later_median_s": 2.06
+    },
+    "Chép file DB sang ổ ngoài (chỉ chép byte)": {
+      "first_s": 3.47,
+      "later_median_s": 4.09
+    },
+    "snapshot() đầy đủ = chép + kiểm tra + fsync": {
+      "first_s": 91.38,
+      "later_median_s": 98.63
+    }
+  },
+  "protection_backup": {
+    "external": false,
+    "first_s": 58.93,
+    "later_median_s": 35.3
+  },
+  "startup": {
+    "guard_startup (main)": 51.0,
+    "needs_adoption (main)": 0.0,
+    "make_server (mở Store, sao lưu đầu)": 56.5,
+    "TỔNG": 107.5
+  },
+  "after_http": {
+    "reports": 2191,
+    "revisions": 87602
+  },
+  "http_save_s": {
+    "auto_median": 0.03,
+    "auto_max": 0.03,
+    "close_median": 49.18,
+    "close_max": 49.18
+  },
+  "search_s": {
+    "seconds": 1.17,
+    "matches": 2098
+  }
+}

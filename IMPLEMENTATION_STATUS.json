@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "overallStatus": "LOCAL_SOURCE_ACCEPTED_PACKAGED_PRODUCT_PENDING",
+  "overallStatus": "LOCAL_FINAL_SOURCE_ACCEPTED_NEW_EXE_PENDING",
   "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Pinned public Core68a7446 and canonical profile1.4 install with preserved workflow",
@@ -10,7 +10,9 @@
     "Actual clean committed local flow at 5fec5a122339486f5a85afa4276362e76691d61b",
     "Synchronized active continuity/catalog and preserved historical source/evidence",
     "PNI E1-E6 name-only additive flat-XLSX import,191Python0skip/6JS/4workspace and independent exact1.9.2 EXE headed flow acceptance at7ce0305b6000",
-    "LOCAL1.10.0/schema4 exact23source independently accepted;210Python0skip,7JSgroups incl21LOCALchecks,4workspace and actual source launcher smoke passed. Packaged/fullproduct pending."
+    "LOCAL1.10.0/schema4 exact23source independently accepted;210Python0skip,7JSgroups incl21LOCALchecks,4workspace and actual source launcher smoke passed. Packaged/fullproduct pending.",
+    "Exact clean0f6ed11 source offline1.10.0 EXE build and metadata-matched packaged smoke passed; full native consumer acceptance pending.",
+    "Merged previewCtrlP/source accepted with24-file manifest; final exactproduction/test bytes passed211Python0skip43.059s and7JS29checks; unsuccessfulregex optimization reverted. NewEXE/native pending."
   ],
   "activeWorkOrders": [
     "docs/work_orders/WO_LOCAL_COMPLETION.md"
@@ -48,7 +50,16 @@
     "docs/reviews/local-completion-20261108/worker-sol.md",
     "docs/reviews/local-completion-20261108/source-candidate-review.json",
     "docs/reviews/local-completion-20261108/baseline-print-review.json",
-    "docs/reviews/local-completion-20261108/technical/release-source.json"
+    "docs/reviews/local-completion-20261108/technical/release-source.json",
+    "docs/reviews/local-completion-20261108/packaged/candidate.json",
+    "docs/reviews/local-completion-20261108/preview-print-shortcut-assessment.json",
+    "docs/reviews/local-completion-20261108/preview-shortcut/source-manifest.json",
+    "docs/reviews/local-completion-20261108/preview-shortcut-review.json",
+    "docs/reviews/local-completion-20261108/validation-hotpath-assessment.json",
+    "docs/reviews/local-completion-20261108/benchmark/artifact-manifest.json",
+    "docs/reviews/local-completion-20261108/validation-hotpath-worker.md",
+    "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+    "docs/reviews/local-completion-20261108/technical/release-final.json"
   ],
   "updatedAt": "2026-11-08"
 }

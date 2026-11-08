@@ -1,0 +1,39 @@
+{
+  "status": "EARLY_TWO_CASES_NO_LAYOUT_DEFECT_FOUND",
+  "risk": "R2",
+  "worker": "Sol sole native controller",
+  "reviewer": "Astra independent REVIEWER",
+  "exeSha256": "2d3b9787eaf9198eb56b3e1c1f1975c248b9cb32a125c37b1ab48af89ddad3e8",
+  "cases": [
+    {
+      "case": "short",
+      "result": {
+        "path": ".cvf/runtime/local-completion-20261108/final-print-1794126685/result.json",
+        "sha256": "8c923d882938ecad32c71246f17165a116e9e18b01d0bc0371e079b8398cd485"
+      },
+      "pdf": {
+        "path": ".cvf/runtime/local-completion-20261108/final-print-1794126685/chrome-short-native-saved.pdf",
+        "sha256": "5511aeeca7523ee45165eb2a94eb9e90e780877e76dd0415dc665b5661678bfd"
+      },
+      "pages": 1
+    },
+    {
+      "case": "long",
+      "result": {
+        "path": ".cvf/runtime/local-completion-20261108/final-print-1794126771/result.json",
+        "sha256": "6dc87949827426e01d145821313d38d59044a9bbff00ae6df3cde11c6f3221bd"
+      },
+      "pdf": {
+        "path": ".cvf/runtime/local-completion-20261108/final-print-1794126771/chrome-long-native-saved.pdf",
+        "sha256": "5fedd11a2fa09e78af4f64c1ed478b285eee61920c892e91d236d3b448e2592b"
+      },
+      "pages": 2
+    }
+  ],
+  "independentObservations": [
+    "Parsed both actual completed PDFs; hashes match worker. Identity/date/ca, Inluc timestamp and Trangx/y present on each page.",
+    "Inspected both all-pages QA renders and both actual print dialogs. All3pages readable, no visible overlap/clipping; long job table continues with repeated heading, final two-chief signature block unsplit and only on last page; short one-chief signature on its single page.",
+    "Dialogs visibly show SaveasPDF and backgroundgraphics unchecked; header/footer checkbox absent in visible screenshots. Final matrix needs actual DOM setting evidence for ON/OFF, not requested profile values alone."
+  ],
+  "limits": "Early Chrome short/long OFF button cases only. No V1 closure, no full16matrix or Edge/keyboard/ON acceptance; runtime references must be frozen into final evidence custody."
+}

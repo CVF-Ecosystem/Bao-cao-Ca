@@ -3,7 +3,7 @@
 history.replaceState(null,'','/');
 const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const keys=['f20','f40','e20','e40'];
-let uploading=false;
+let uploading=false,printBusy=false;
 let info,report=null,page='home',dirty=false,saving=false,conflict=false,timer=null,toastTimer=null,listRows=[];
 function dateLabel(s){
   return s?.split('-').reverse().join('/')||''
@@ -843,8 +843,16 @@ function attachmentPreview(r){
   return '<h3 style="margin-top:18px">Ảnh / Biên bản đính kèm ('+r.attachments.length+')</h3>'+r.attachments.map(a=>'<div class="printAttachment">'+(isPreviewImage(a)?'<img src="'+esc(attachmentURL(a))+'" alt="'+esc(a.name)+'">':'')+'<p><strong>'+esc(a.name)+'</strong><br>'+esc(a.caption||'')+' <a class="noprint" href="'+esc(attachmentURL(a,true))+'" download>Tải tệp gốc</a></p></div>').join('')
 }
 async function printReport(){
-  await Promise.all([...document.querySelectorAll('#modal img')].map(img=>img.decode().catch(()=>{})));
-  window.print()
+  const previewNode=$('modalBody').querySelector('.preview[data-print-ca]');
+  const stillVisible=()=>!$('modal').classList.contains('hide')&&previewNode&&previewNode.getClientRects().length&&$('modalBody').querySelector('.preview[data-print-ca]')===previewNode;
+  if(printBusy||!stillVisible())return false;
+  printBusy=true;
+  try{
+    await Promise.all([...document.querySelectorAll('#modal img')].map(img=>img.decode().catch(()=>{})));
+    if(!stillVisible())return false;
+    window.print();
+    return true
+  }finally{printBusy=false}
 }
 async function exitTool(){
   if(!leave())return;

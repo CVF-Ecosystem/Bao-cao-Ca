@@ -1,0 +1,21 @@
+{
+  "level": "quick",
+  "prior_full_pin": {
+    "at": "2026-11-08T15:42:10.465252+07:00",
+    "name": "BAO_CAO_CA_20261108_154135_164142_7e8183.db",
+    "database_id": "1fffcce2400d0fc79f09cd85c076151f"
+  },
+  "times_s": [
+    44.6,
+    36.02
+  ],
+  "free_before_each": [
+    16988094464,
+    16033538048
+  ],
+  "dataset_bytes": 1251680256,
+  "names": [
+    "BAO_CAO_CA_20261108_155532_360215_5d0e98.db",
+    "BAO_CAO_CA_20261108_155616_956145_cedbad.db"
+  ]
+}

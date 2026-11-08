@@ -1,0 +1,190 @@
+[
+  {
+    "event": "launch",
+    "pid": 43240,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "2d3b9787eaf9198eb56b3e1c1f1975c248b9cb32a125c37b1ab48af89ddad3e8"
+  },
+  {
+    "event": "click-start",
+    "text": "Chốt ca"
+  },
+  {
+    "event": "click-done",
+    "text": "Chốt ca"
+  },
+  {
+    "event": "click-start",
+    "text": "Chốt ca"
+  },
+  {
+    "event": "click-done",
+    "text": "Chốt ca"
+  },
+  {
+    "event": "download-start",
+    "target": "main-portable.db"
+  },
+  {
+    "event": "menu-start",
+    "text": "Sao lưu mang đi"
+  },
+  {
+    "event": "menu-done",
+    "text": "Sao lưu mang đi"
+  },
+  {
+    "event": "download",
+    "file": "main-portable.db",
+    "suggested": "BAO_CAO_CA_20261108_154051_645a.db",
+    "bytes": 94208,
+    "sha256": "116eba0cb016024cbbbf8345db3f74c6df6d6ff043814eb59ee2476b8cae7870"
+  },
+  {
+    "event": "menu-start",
+    "text": "Mở DB kiểm tra / bổ sung"
+  },
+  {
+    "event": "menu-done",
+    "text": "Mở DB kiểm tra / bổ sung"
+  },
+  {
+    "event": "click-start",
+    "text": "Bật chỉnh sửa / bổ sung"
+  },
+  {
+    "event": "click-done",
+    "text": "Bật chỉnh sửa / bổ sung"
+  },
+  {
+    "event": "click-start",
+    "text": "Chọn tên này"
+  },
+  {
+    "event": "click-done",
+    "text": "Chọn tên này"
+  },
+  {
+    "event": "screenshot",
+    "file": "viewer-corrected.png"
+  },
+  {
+    "event": "download-start",
+    "target": "reviewer-export.db"
+  },
+  {
+    "event": "click-start",
+    "text": "Xuất DB đã bổ sung"
+  },
+  {
+    "event": "click-done",
+    "text": "Xuất DB đã bổ sung"
+  },
+  {
+    "event": "download",
+    "file": "reviewer-export.db",
+    "suggested": "DB_BO_SUNG_20261108_154053_9c16.db",
+    "bytes": 106496,
+    "sha256": "4bae3b304b5981dff86b1aef8359ad072587c987a15a954605e5a84d381c36e5"
+  },
+  {
+    "event": "click-start",
+    "text": "Về DB chính của máy"
+  },
+  {
+    "event": "click-done",
+    "text": "Về DB chính của máy"
+  },
+  {
+    "event": "menu-start",
+    "text": "Nhập bổ sung từ DB"
+  },
+  {
+    "event": "menu-done",
+    "text": "Nhập bổ sung từ DB"
+  },
+  {
+    "event": "screenshot",
+    "file": "correction-ready-conflict.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Nhập các ca đã chọn"
+  },
+  {
+    "event": "click-done",
+    "text": "Nhập các ca đã chọn"
+  },
+  {
+    "event": "screenshot",
+    "file": "correction-applied.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Xuất Excel cả tháng"
+  },
+  {
+    "event": "menu-done",
+    "text": "Xuất Excel cả tháng"
+  },
+  {
+    "event": "download-start",
+    "target": "month-mixed.xlsx"
+  },
+  {
+    "event": "click-start",
+    "text": "Xuất cả tháng"
+  },
+  {
+    "event": "click-done",
+    "text": "Xuất cả tháng"
+  },
+  {
+    "event": "download",
+    "file": "month-mixed.xlsx",
+    "suggested": "BAO_CAO_THANG_2026-10.xlsx",
+    "bytes": 23611,
+    "sha256": "d78e88f885a3a47e1e1895eebf9bd3d3a7c1262cca21b9c8b4c813c1805709e8"
+  },
+  {
+    "event": "menu-start",
+    "text": "Xuất Excel cả tháng"
+  },
+  {
+    "event": "menu-done",
+    "text": "Xuất Excel cả tháng"
+  },
+  {
+    "event": "click-start",
+    "text": "Xuất cả tháng"
+  },
+  {
+    "event": "click-done",
+    "text": "Xuất cả tháng"
+  },
+  {
+    "event": "screenshot",
+    "file": "empty-month-observation.png"
+  },
+  {
+    "event": "download-start",
+    "target": "attachments-empty.zip"
+  },
+  {
+    "event": "click-start",
+    "text": "Tải tất cả tệp"
+  },
+  {
+    "event": "screenshot",
+    "file": "failure.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  }
+]

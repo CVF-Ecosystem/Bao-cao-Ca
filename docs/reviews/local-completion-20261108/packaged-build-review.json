@@ -1,0 +1,44 @@
+{
+  "status": "PACKAGED_BUILD_PROVENANCE_ACCEPTED_PRODUCT_REVIEW_PENDING",
+  "risk": "R2",
+  "worker": "Sol packaging / Terra and Sol source",
+  "reviewer": "Astra independent REVIEWER",
+  "action": {
+    "path": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+    "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57"
+  },
+  "candidate": {
+    "path": "docs/reviews/local-completion-20261108/packaged/candidate.json",
+    "sha256": "e227ba195ca1716f5790fa6b51abe08eea03e16d425f20ddf82ec8297f7b7ce6"
+  },
+  "technicalAggregate": {
+    "path": "docs/reviews/local-completion-20261108/technical/release-source.json",
+    "sha256": "ddb3890d743241e426759084c667f8b32fb17174bfc305392d413cd8111ade0c"
+  },
+  "acceptedSource": {
+    "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+    "sha256": "437492d087b6ba4d85332c61c4968d78c5ad74a053ff7204e55ae11da0815635"
+  },
+  "independentChecks": {
+    "sourceCommit": "0f6ed11f3ea7ab80b3f3f850a10a87fcf6ce6cff",
+    "sourceFiles": 23,
+    "allWorkingAndGitBlobHashesEqualAccepted": true,
+    "exe": {
+      "path": "dist/SO_BAO_CAO_CA.exe",
+      "sha256": "2d3b9787eaf9198eb56b3e1c1f1975c248b9cb32a125c37b1ab48af89ddad3e8"
+    },
+    "exeBytes": 13192359,
+    "buildAndSmokeLogHashesVerified": true,
+    "technicalThreeLogHashesVerified": true,
+    "smokeObserved": "OK launcher: version=1.10.0, build=0f6ed11f3ea7",
+    "testsObserved": "210Python0skip; final7JSgroups including21LOCALchecks;4workspace. No duplicate full suite run."
+  },
+  "limits": [
+    "Clean-before/after build is supported by worker/Root custody records, not recreated by reviewer. Current metadata edits do not change the23accepted source blobs.",
+    "Build and smoke establish executable provenance, not all consumer flows. Root launcher remains prior baseline until accepted delivery.",
+    "L1-L8 remain pending complete returned native/workflow/performance evidence; retain prior source-review obligations including supported interrupted migration recovery and no broad corrupt-main browser claim.",
+    "Printing batch must bind each browser/report/header/background/trigger case to genuine dialog settings, completed native output, hashes, pages, identity/time/signatures; no isolated case closesV1.",
+    "Yard-device/OSdialog/Tk/physical printer/Python3.9 remain unproved unless separately witnessed; no web or provider-governance acceptance."
+  ],
+  "next": "Read-only batch review of returned exact-EXE artifacts; Sol sole UI controller, Root commit owner; no source edits or suite repetition without new finding."
+}

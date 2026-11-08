@@ -14,7 +14,7 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
-  "nextAllowedMove": "Root commits independently accepted23-file source after final gates; Sol then builds exact clean HEAD offline and executes full packaged V1-V8/U/migration/recovery proof. Terra runtime-only large benchmark continues. No web BUILD; yard-device acceptance deferred.",
+  "nextAllowedMove": "Root commits accepted24-file mergedsource after currentgates; Sol builds exactnewcleanHEAD offline/smoke then completes requirednative V1-L8 including appownedtrustedCtrlP, recovery/maintenance/PNI/fresh/upgrade/quietlargeUI. No furtheroptimizer/webBUILD; yard-device deferred.",
   "parkedOperatorCheckpoint": null,
   "activeRole": "COMMIT_STEWARD",
   "roleRoute": "INDEPENDENT_WORKER_AND_REVIEWER",

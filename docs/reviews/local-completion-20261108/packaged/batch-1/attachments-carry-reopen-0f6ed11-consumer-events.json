@@ -1,0 +1,134 @@
+[
+  {
+    "event": "launch",
+    "pid": 31952,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "2d3b9787eaf9198eb56b3e1c1f1975c248b9cb32a125c37b1ab48af89ddad3e8"
+  },
+  {
+    "event": "screenshot",
+    "file": "persisted40-reopened.png"
+  },
+  {
+    "event": "download-start",
+    "target": "forty-attachments.zip"
+  },
+  {
+    "event": "click-start",
+    "text": "Tải tất cả tệp"
+  },
+  {
+    "event": "click-done",
+    "text": "Tải tất cả tệp"
+  },
+  {
+    "event": "download",
+    "file": "forty-attachments.zip",
+    "suggested": "DINH_KEM_2026-10-01_DAY.zip",
+    "bytes": 66943,
+    "sha256": "88ada537cec7bcaeb3a1c0f2cc8ffc05bee1af603c5a32a60d8492aa001886f0"
+  },
+  {
+    "event": "screenshot",
+    "file": "all40-images.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Vào ca này"
+  },
+  {
+    "event": "click-done",
+    "text": "Vào ca này"
+  },
+  {
+    "event": "click-start",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "click-done",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "click-start",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "click-done",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "screenshot",
+    "file": "carry-first.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Vào ca này"
+  },
+  {
+    "event": "click-done",
+    "text": "Vào ca này"
+  },
+  {
+    "event": "click-start",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "click-done",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "click-start",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "click-done",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "screenshot",
+    "file": "carry-empty.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Vào ca này"
+  },
+  {
+    "event": "click-done",
+    "text": "Vào ca này"
+  },
+  {
+    "event": "click-start",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "click-done",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "click-start",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "click-done",
+    "text": "Lấy việc chưa xong từ ca trước"
+  },
+  {
+    "event": "screenshot",
+    "file": "carry-unfinished.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 31952,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  }
+]

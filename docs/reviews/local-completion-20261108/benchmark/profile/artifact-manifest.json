@@ -1,0 +1,42 @@
+{
+  "purpose": "Read-only cProfile attribution, not operational latency or product acceptance.",
+  "sourceCommit": "0f6ed11f3ea7ab80b3f3f850a10a87fcf6ce6cff",
+  "databaseUnchanged": true,
+  "totalProfiledSeconds": 211.839,
+  "files": [
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/profile/full-top20.txt",
+      "path": "docs/reviews/local-completion-20261108/benchmark/profile/full-top20.txt",
+      "sha256": "653c154d1b34a839e4f2f21735d17209fd1f00563892d50022bddac58336e806"
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/profile/quick-top20.txt",
+      "path": "docs/reviews/local-completion-20261108/benchmark/profile/quick-top20.txt",
+      "sha256": "deeecab9a6e8d0dadbb309af0726e00de08960564d249315e67c0e95ed48b320"
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/profile/full.prof",
+      "path": "docs/reviews/local-completion-20261108/benchmark/profile/full.prof",
+      "sha256": "1cc7d0a34c501b04f936c9bd0955782d09b479be50dcd5de5ad6261d19ee9fe9"
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/profile/quick.prof",
+      "path": "docs/reviews/local-completion-20261108/benchmark/profile/quick.prof",
+      "sha256": "fcda66f8226df58341c48bffde63bff0066608604d692778f0948b589f08c8b6"
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/profile/partial.json",
+      "path": "docs/reviews/local-completion-20261108/benchmark/profile/partial.json",
+      "sha256": "8bb617d690d570648eac8b47d759c77a5513a64ffb1ca0cb93a0f8e6ca67c44f"
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/profile/result.json",
+      "path": "docs/reviews/local-completion-20261108/benchmark/profile/result.json",
+      "sha256": "01edcec428de1d271e9195a3fba5de62e9d7b56ca0b43d934e010418a94063ac"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/benchmark/profile/profile_inspect.py",
+      "sha256": "68daa4891aad4669f19cbe3a004e68e519c6cc8601c2dad04861d95cfe9fb97a"
+    }
+  ]
+}

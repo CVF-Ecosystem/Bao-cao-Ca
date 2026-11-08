@@ -1,0 +1,23 @@
+{
+  "status": "PARTIAL_PRODUCT_ACCEPTANCE_PENDING",
+  "batches": [
+    {
+      "manifest": {
+        "path": "docs/reviews/local-completion-20261108/packaged/batch-1/artifact-manifest.json",
+        "sha256": "41bba3f14dc0d6c4ef2bc9b247320e92de49c8851433c194a39152349b147227"
+      },
+      "files": 21,
+      "allRawHashesMatched": true
+    },
+    {
+      "manifest": {
+        "path": "docs/reviews/local-completion-20261108/packaged/batch-1-supplement/artifact-manifest.json",
+        "sha256": "8bbb0f3959c5cab8bb4671d5303869ae5ef1b85b728aa47d6c9273437da9e9e3"
+      },
+      "files": 4,
+      "allRawHashesMatched": true
+    }
+  ],
+  "candidate": "0f6ed11f3ea7ab80b3f3f850a10a87fcf6ce6cff",
+  "exeSha256": "2d3b9787eaf9198eb56b3e1c1f1975c248b9cb32a125c37b1ab48af89ddad3e8"
+}

@@ -8,7 +8,7 @@ Status: ACTIVE
 - Current mode: REVIEW
 - Active phase: REVIEW
 - Active role: COMMIT_STEWARD
-- Next allowed move: Root commits independently accepted23-file source after final gates; Sol then builds exact clean HEAD offline and executes full packaged V1-V8/U/migration/recovery proof. Terra runtime-only large benchmark continues. No web BUILD; yard-device acceptance deferred.
+- Next allowed move: Root commits accepted24-file mergedsource after currentgates; Sol builds exactnewcleanHEAD offline/smoke then completes requirednative V1-L8 including appownedtrustedCtrlP, recovery/maintenance/PNI/fresh/upgrade/quietlargeUI. No furtheroptimizer/webBUILD; yard-device deferred.
 - Parked operator checkpoint: none
 
 ## Accepted current workspace
@@ -145,3 +145,39 @@ Root rehydrated canonical front doors and doctor-review-intake.json CORE_ASSESSE
 ## LOCAL accepted source / candidate stewardship — 2026-11-08
 
 Root rehydrated canonical REVIEW and verified all23 final source hashes in Astra source-candidate-review.json (437492d0). Reviewer-local quarterly restore reminder changed only bao_ve.js and LOCAL_UI tests; all7JSgroups rerunPASS including21LOCALchecks.210Python0skip/4workspace/actualsource-smoke remain valid unchanged Python bytes; durable technical/release-source.json binds logs and preserved failures. Root transitions COMMIT_STEWARD/SESSION_SYNC_STEWARD for clean reviewed source commit, then Orchestrator for Sol exact1.10.0 build/fullnative acceptance. Baseline route eligibility accepted only; no V1/wholeLOCAL closure. L1-L8 remain pending consumerproof, near1GB seeding runs runtime-only. Arbitrary corrupt/absentmain failsclosed; supported interrupted legacy recovery stillrequiresheadedEXE proof. Exact586b44bf and SPEC unchanged, nobudgetreset/webgrant/operatorcheckpoint.
+
+
+## LOCAL exact packaged build return / consumer proof acknowledgment — 2026-11-08
+
+Source commit0f6ed11f3ea7ab80b3f3f850a10a87fcf6ce6cff was clean before/after offline build. Sol rehydrated and acknowledged exact586b44bf/candidate before packaging. dist/SO_BAO_CAO_CA.exe1.10.0 has13192359bytes SHA2d3b9787eaf9198eb56b3e1c1f1975c248b9cb32a125c37b1ab48af89ddad3e8, independently rehashedRoot; exactmetadata/smokeexit0. Durable packaged/candidate.json andlogs bindthis build. Root rehydrates REVIEW and resumes ORCHESTRATOR/SESSION_SYNC_STEWARD; Sol executes full16finalnativeprintcases and V1-V8/U/migration/recovery/maintenance/PNI/portable matrices onthisEXE, Terra benchmarkparallel, Astra independentproductreview. No sourcechangeswithoutacceptedfinding, no productclosure/web/deviceacceptance. Rootlauncherstilloldbaselineuntilacceptedfinaldelivery.
+
+
+## LOCAL preview CtrlP bounded BUILD acknowledgment — 2026-11-08
+
+Two actual browser-key accelerator attempts opened no native target; original failures remain tool-gap NOT_TESTED, neverPASS. Astra independently accepted same-scope app-owned preview shortcut in preview-print-shortcut-assessment.json26b0bc8d: visible preview/trustedCtrlP only, busy/hidden/repeat/reentry guards, reuse existingprintReport waitimages/window.print andnative before/afterprint, no PDF/OShelpers. OriginalV1 requires key action/nativeoutput, notbrowseracceleratorownership; locked586b44bf/SPEC andallboundariesunchangedYES. NEW_EVIDENCE_REQUIRED routes SolREPAIR_WORKER; Root rehydrated and acknowledges boundedBUILD beforewrites, original480/60budgetnoreset. Only existingfrontend/JS test paths as needed; no backend/pins change. Freeze then Astra independently reviews; Rootnewcleancandidate/offlinebuild/smoke andaffectednative16matrixrerun. Unaffected0f6ed11 productproof retained only with finalsource/effectimpactargument; wholeL1-L8pending.
+
+Root predispatch continuity correction: compact extra local facts were mistakenly placed inside the closed Current Truth schema. Original gate/doctor failure retained; moved those same facts into a separate Current local release section, preserving canonical fields and all authority. No product change or gate bypass.
+
+Sol repair acknowledgment: rehydrated canonical BUILD/front doors and independent26b0bc8d assessment, declared REPAIR_WORKER and acknowledged exact586b44bf before preview-keyboard source writes. Root records the same-scope dispatch; prior EXE/accelerator failures retained, no backend/pins/prose edits, original budget unchanged.
+
+
+## LOCAL preview shortcut return / REVIEW acknowledgment — 2026-11-08
+
+Sol returned3frozenUTF8LFfiles983159fe manifest; Root verifiedallrawhashes.7JSgroupsPASS incl28LOCAL(7new) guard/image/reentry/error/afterprint checks; no Python/backend/build/guidechanges. Root rehydratedcanonicalBUILDfrontdoors and returnsREVIEW for Astra independentpatchreview. Originalfailedbrowseraccelerator remainsNOT_TESTED; no nativekeyproof/newEXEyet. Terra matching1.25GBbaseline/currentmeasurements andexplicitquickfinished withuncontrolledcache/backgroundlimits; finalusability/tradeoffassessmentpending. Same586bWO/SPEC/480+60budget, no scopeoroperatorcheckpointchange. Root ownsnewcleancommit afteracceptedsource/evidence; affectednativeprinting reruns.
+
+
+## LOCAL profile-driven minimal validation BUILD acknowledgment — 2026-11-08
+
+Read-only profile completed within5min, DB51757e7c hash unchanged/no sidecars, normalization/text cleaning dominates; hashing and Store.validate minor. Astra validation-hotpath-assessment.json092f2be5 accepts only compiling exactexistingXMLcontrolpatternonce and usingcompiled.sub inclean_text, defaultflags/replacement/strip/type/length/errors/fullvalidation allunchanged. Avoid repeated re.sub dispatch/cachelookup, notclaimingPythonrecompiled eachcall. Root rehydrated and acknowledgesBUILD before TerraREPAIR_WORKER writes under same586b44bf allowedNGHIEP_VU/testpaths. Require C0/type/limit/Unicode differential, fullPython, oneunprofiled sameDBfull/quick pairbeforeafter <=5mintimings, rawhash/result/sidecar equality; thenindependentreview/newcleanEXE. No othermicrochange/cache/architecture/threshold, no budgetreset. Sol UI/sourcepaused, acceptedCtrlP delta29checks retained; quietnativeV1-L8proofstillpending.
+
+Terra validation repair acknowledgment: rehydrated canonical BUILD/frontdoors, declared REPAIR_WORKER and acknowledged exact586b44bf plus independent092f2be5 assessment before writes. Unprofiled beforepair precedes only approvedregex change; originalbudget and allfullvalidation remain.
+
+
+## LOCAL regex experiment return / REVIEW acknowledgment — 2026-11-08
+
+Root rehydratedBUILD and receives frozen2-fileTerra return validation-hotpath-worker.md:211PythonPASS0skip40.897s, differentialinputs/outputs/errors identical, sameDBhash51757e7c/no sidecarchange, unprofiled beforefull/quick28.896/28.465s vsafter33.331/30.200s, total120.892swithin5min. No operational speedgain demonstrated. Root returnsREVIEW for Astra disposition: keep orrevertminimalhypothesiswithoutfalseperformanceclaim; no furtherunboundedoptimizer. AcceptedCtrlP29/sourcefiles retained, backend/sourceexperimentfrozen; Solpauseduntilnewmergedcandidate. Same586b44bf/lockedSPEC/budgets/commitowner/risks, no sourceprotection weakened or nativecriterionwaived.
+
+
+## LOCAL merged final source / new candidate stewardship — 2026-11-08
+
+Astra source-candidate-final-review.json03032280 accepts24-file mergedsource, restoresNGHIEPexact0fGitblob, preserves unsuccessfulregexexperiment source/test snapshots andretainsindependentvalidationcontracttest. Root verifiedall24rawhashes andranrequired fullsuiteafterrevert:211PASS0skip43.059s inclactualsource launcher; current7JSgroups29LOCALacceptedbytesunchanged, checker4valid. technical/release-final.json bindsfinalevidence; no runtime speedimprovementclaimed. Only2productJS+2tests differ0f6ed11. Root rehydratedREVIEW and assumesCOMMIT_STEWARD/SESSION_SYNC_STEWARD fornewcleanreviewedcandidate, thensameofflinebuild/smoke/newnativeproof. Prior0fEXE/eligibleV2-V7proof andallfailedattempts preserved; affectedprint16mustnewEXE, supportedlegacy/recovery/maintenance/PNI/quietlargeUIstillrequired. Same586b44bf/SPEC/budgets/risks/effects/owner, nowebgrant/checkpoint.

@@ -1,0 +1,24 @@
+{
+  "role": "ORCHESTRATOR",
+  "check": "Named gap: first actual native DOM paper select reports Letter while CSS setsA4; determine actual emitted size before interpreting proof.",
+  "method": "Existing globalPython3.11 PyMuPDF read-only page.rect, no generation/mutation",
+  "short": {
+    "path": ".cvf/runtime/local-completion-20261108/final-print-1794126685/chrome-short-native-saved.pdf",
+    "sha256": "5511aeeca7523ee45165eb2a94eb9e90e780877e76dd0415dc665b5661678bfd",
+    "pages": 1,
+    "rectPoints": [
+      841.9199829101562,
+      594.9599609375
+    ]
+  },
+  "long": {
+    "path": ".cvf/runtime/local-completion-20261108/final-print-1794126771/chrome-long-native-saved.pdf",
+    "sha256": "5fedd11a2fa09e78af4f64c1ed478b285eee61920c892e91d236d3b448e2592b",
+    "pages": 2,
+    "allPagesRectPoints": [
+      841.9199829101562,
+      594.9599609375
+    ]
+  },
+  "disposition": "Actual completed PDFs areA4landscape despite nativepaperselect defaultLetter. No source defect; Sol notified to bind actual dialog choice/state and PDF dimensions forfinalmatrix. Only firsttwo cases, no V1 acceptance."
+}

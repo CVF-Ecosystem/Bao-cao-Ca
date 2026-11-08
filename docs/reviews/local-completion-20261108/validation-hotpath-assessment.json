@@ -1,0 +1,37 @@
+{
+  "status": "ACCEPTED_SAME_SCOPE_MINIMAL_PROFILE_DRIVEN_REPAIR_DESIGN",
+  "risk": "R2",
+  "worker": "Terra REPAIR_WORKER after Root dispatch",
+  "reviewer": "Astra independent REVIEWER",
+  "actionSha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+  "profile": {
+    "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/profile/result.json",
+    "sha256": "01edcec428de1d271e9195a3fba5de62e9d7b56ca0b43d934e010418a94063ac"
+  },
+  "basis": "Exact WO explicitly owns ma_nguon/NGHIEP_VU.py and Python tests. Profile shows16,081,707 clean_text/re.sub calls; module re.sub dispatch/cache lookup costs materially exceed pattern.sub execution. Python already caches compiled regex, so this is avoiding repeated dispatch/cache lookup, not a claim every call recompiles. Full/quick profiled100/112s are instrumentation measurements, not operational latency.",
+  "allowedDelta": [
+    "Create one module-private compiled regex with exactly existing pattern and defaultflags.",
+    "Replace only clean_text module re.sub call with compiledPattern.sub using identical replacement/value and trailing strip.",
+    "Keep type/length guards, error types/messages/status, normalization traversal and all full/quick validation intact. No other regex, caching, blob, scheduling, schema or dependency change."
+  ],
+  "requiredEvidence": [
+    "Meaningful old-expression differential probes: all C0controls individually/combined, embedded tab/LF/CR versus strippededges, empty/boundary/overlimit strings, nonstring inputs, Vietnamese/combining/astralUnicode, representative explicitlimits; identical output or failure type/message/status.",
+    "Full applicable Python release in reviewed isolated environment plus unchanged JS evidence argument.",
+    "One unprofiled before/after full and explicitquick inspection on same existing1.25GB readonlyDB, same legitimate200hashcache; record exact source hashes/result equality/environment/timing and beforeafter DB hash/sidecars. No seed rerun and no causal certainty from onepair/cacheuncontrolled.",
+    "Independent source/evidence review before clean newcandidate/build/smoke; newexactEXE quietlargeUI still mandatory."
+  ],
+  "budget": "Bounded minimal code/equivalence/fullrelease plus <=5min timed inspections (four scans) or stop/report actualoverrun; all within original cumulative480/60budget, no reset. Root may set tighter subbudget.",
+  "boundary": {
+    "reviewerLocalRepairBoundary": "NEW_EVIDENCE_REQUIRED",
+    "reviewerLocalRepairBasis": "Requires backend equivalence/fullregression and unprofiled large-data evidence; Terra owns implementation, reviewer staysindependent.",
+    "unchangedObjective": "YES",
+    "unchangedDesign": "YES",
+    "unchangedPaths": "YES",
+    "unchangedAuthority": "YES",
+    "unchangedEffects": "YES",
+    "unchangedCommitOwner": "YES",
+    "evidenceDetermined": "NO"
+  },
+  "claims": "May report measured pair and semantics-preserving change if proven; cannot claim quickuniversallyfaster, D2generalperformanceimprovement or usablelargedataproduct until actualnativewait/completion evidence. No performance threshold invented.",
+  "limits": "Design assessment only, no backend edit or newdispatch performed by reviewer. Root acknowledgments/gates and workerreturn required."
+}

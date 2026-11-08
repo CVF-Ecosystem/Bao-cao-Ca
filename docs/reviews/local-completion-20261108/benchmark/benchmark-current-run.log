@@ -1,0 +1,95 @@
+Thư mục làm việc (xóa sau khi chạy nếu không dùng --keep): D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\.cvf\runtime\local-completion-20261108\fixtures-terra\benchmark\do_hieu_nang_k2rzn8ud
+Tạo dữ liệu qua Store.save: 2190 ca x 40 lần lưu, 200 tệp x 2 MB...
+  seed 40/2190 ca
+  seed 80/2190 ca
+  seed 120/2190 ca
+  seed 160/2190 ca
+  seed 200/2190 ca
+  seed 240/2190 ca
+  seed 280/2190 ca
+  seed 320/2190 ca
+  seed 360/2190 ca
+  seed 400/2190 ca
+  seed 440/2190 ca
+  seed 480/2190 ca
+  seed 520/2190 ca
+  seed 560/2190 ca
+  seed 600/2190 ca
+  seed 640/2190 ca
+  seed 680/2190 ca
+  seed 720/2190 ca
+  seed 760/2190 ca
+  seed 800/2190 ca
+  seed 840/2190 ca
+  seed 880/2190 ca
+  seed 920/2190 ca
+  seed 960/2190 ca
+  seed 1000/2190 ca
+  seed 1040/2190 ca
+  seed 1080/2190 ca
+  seed 1120/2190 ca
+  seed 1160/2190 ca
+  seed 1200/2190 ca
+  seed 1240/2190 ca
+  seed 1280/2190 ca
+  seed 1320/2190 ca
+  seed 1360/2190 ca
+  seed 1400/2190 ca
+  seed 1440/2190 ca
+  seed 1480/2190 ca
+  seed 1520/2190 ca
+  seed 1560/2190 ca
+  seed 1600/2190 ca
+  seed 1640/2190 ca
+  seed 1680/2190 ca
+  seed 1720/2190 ca
+  seed 1760/2190 ca
+  seed 1800/2190 ca
+  seed 1840/2190 ca
+  seed 1880/2190 ca
+  seed 1920/2190 ca
+  seed 1960/2190 ca
+  seed 2000/2190 ca
+  seed 2040/2190 ca
+  seed 2080/2190 ca
+  seed 2120/2190 ca
+  seed 2160/2190 ca
+Đo từng thành phần (lặp 2 lần)...
+Đo Protection.backup() (có KHÔNG dự phòng ngoài)...
+Đo khởi động theo đường gọi của main()...
+Đo độ trễ HTTP /api/save (1 ca)...
+
+==============================================================================
+KẾT QUẢ ĐO — Sổ báo cáo ca 1.10.0
+==============================================================================
+Máy: Windows-10-10.0.26200-SP0 | Python 3.11.9 | CPU 16 luồng
+Loại ổ đĩa (do người chạy khai): D: local NVMe; synthetic | 17 GB trống / 201 GB
+Dự phòng ngoài: không | Lặp mỗi phép đo: 2 | seed ngẫu nhiên: 20261106
+Dữ liệu: 2190 ca, 87600 revision (87600 payload khác nhau), 200 tệp duy nhất, DB 1194 MB
+  revisions 666 MB | tệp đính kèm 400 MB | payload trung bình 7.9 KB/ca | tạo dữ liệu 604 s
+
+Thành phần                                                    Lần 1  Các lần sau
+Chép DB bằng SQLite Backup API (không kiểm tra)             11.06 s      11.06 s
+quick_check                                                 12.42 s       2.69 s
+integrity_check                                              2.83 s       2.55 s
+Duyệt JSON (reports + revisions)                            19.04 s      17.09 s
+Hash SHA-256 mọi tệp đính kèm                                2.11 s       2.06 s
+Chép file DB sang ổ ngoài (chỉ chép byte)                    3.47 s       4.09 s
+snapshot() đầy đủ = chép + kiểm tra + fsync                 91.38 s      98.63 s
+Protection.backup() toàn bộ                                 58.93 s      35.30 s
+
+Khởi động (theo đường gọi của main):
+  guard_startup (main)                                             51.0 s
+  needs_adoption (main)                                             0.0 s
+  make_server (mở Store, sao lưu đầu)                              56.5 s
+  TỔNG                                                            107.5 s
+
+Độ trễ HTTP /api/save (từ lúc gửi đến lúc nhận phản hồi):
+  Lưu thường (sao lưu bị hoãn): trung vị 0.03 s, lớn nhất 0.03 s
+  Chốt ca (sao lưu ngay)      : trung vị 49.18 s, lớn nhất 49.18 s
+Tìm kiếm toàn văn "tau 3": 1.17 s, 2098 ca
+
+Lưu ý: lần 1 chỉ gần với trạng thái "nguội", không xóa được bộ nhớ đệm hệ điều hành.
+Số đo chỉ có giá trị so sánh trước/sau trên cùng máy, cùng tham số và cùng loại ổ.
+Đã ghi JSON: .cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/current-result.json
+Giữ lại: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\.cvf\runtime\local-completion-20261108\fixtures-terra\benchmark\do_hieu_nang_k2rzn8ud

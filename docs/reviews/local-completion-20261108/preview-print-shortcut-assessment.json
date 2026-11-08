@@ -1,0 +1,38 @@
+{
+  "status": "ACCEPTED_SAME_SCOPE_REPAIR_DESIGN_NOT_DISPATCH",
+  "risk": "R2",
+  "worker": "Sol frontend / Root commit stewardship",
+  "reviewer": "Astra independent REVIEWER",
+  "actionSha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+  "sourceBefore": "0f6ed11f3ea7ab80b3f3f850a10a87fcf6ce6cff",
+  "basis": "OriginalV1 requires Ctrl+P from Xem/In and U4/U8 admit keyboard/print behavior. Two real-key browser-accelerator attempts failed to open native target. A real app-owned preview Ctrl+P shortcut reusing existing printReport is a legitimate implementation of the same user action and native-output contract, not relabeling a failed accelerator or generating proof. No locked requirement demands browser-internal accelerator ownership.",
+  "requiredGuards": [
+    "Handle trusted Ctrl+P only while actual visible report preview is present; no off-preview interception, no hidden stale preview, no synthetic dispatchEvent proof.",
+    "Do not trigger during save/upload/local confirmation or pending effect; ignore repeated keydown/reentrant print. Prevent default only when accepting the preview shortcut; avoid duplicate browser/app dialog.",
+    "Reuse existing printReport image-decode wait/window.print and beforeprint identity/time/afterprint lifecycle; no PDF generator, preview-byte extraction, custom fake print dialog or OS helper.",
+    "Preserve button behavior and Escape/PNI cancellation; do not globally hijack unrelated browser shortcuts or mutate report data."
+  ],
+  "focusedTests": [
+    "Visible preview acceptedCtrlP invokes existing owner once; hidden/nonpreview/synthetic/repeat/othermodifiers and busy states do not.",
+    "Deferred image decode and repeated trigger cannot duplicate print; error/afterprint leaves next deliberate print usable.",
+    "Existing7JSgroups plus source hygiene if applicable; no backend/fullPython rerun absent changed dependency."
+  ],
+  "requiredNativeProof": [
+    "New clean independently reviewed candidate/build/smoke/hash before final proof.",
+    "Actual trusted browser key event -> app handler -> true Chrome/Edge native dialog and completed nativeoutput, each required short/long/header/background case.",
+    "Record exact candidate and app-owned shortcut provenance; browser/OS accelerator remainsNOT_TESTED after original failures, no relabeling.",
+    "Preserve original failures and oldcandidate evidence; unaffected workflows may be inherited only with exactsource/effect impact argument; affected printing/smoke must rerun."
+  ],
+  "boundary": {
+    "unchangedObjective": "YES",
+    "unchangedDesign": "YES",
+    "unchangedPaths": "YES",
+    "unchangedAuthority": "YES",
+    "unchangedEffects": "YES",
+    "unchangedCommitOwner": "YES",
+    "evidenceDetermined": "NO",
+    "reviewerLocalRepairBoundary": "NEW_EVIDENCE_REQUIRED",
+    "reviewerLocalRepairBasis": "Requires real native keyboard behavior and rebuilt candidate beyond a purely local determined text correction. Sol owns sole UI execution; Root acknowledges bounded repair and originalbudget."
+  },
+  "limits": "No app/source writes in this assessment. Root dispatch required; no V1 acceptance, no native waiver or new business approval needed."
+}

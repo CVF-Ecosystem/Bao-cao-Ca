@@ -1,0 +1,37 @@
+{
+  "status": "MEASUREMENTS_REVIEWED_USABILITY_PENDING_FINITE_PROFILE_RECOMMENDED",
+  "risk": "R2",
+  "worker": "Terra benchmark / Sol native usability",
+  "reviewer": "Astra independent REVIEWER",
+  "evidence": [
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/worker-benchmark-return.md",
+      "sha256": "285024c0fe556e618a6c894ea3fd25ceaee23711a97014c9c0ca816679d48363"
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/current-result.json",
+      "sha256": "0286c06cd28c4a8e07e9507bfa92d354d018ecba1703d731e5f09a6177afdb32"
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/quick-result.json",
+      "sha256": "fd2ed35eaa4f565df4f399d9d810f107d10094eb234ed1cc469e389a25a0895f"
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/baseline-data/result.json",
+      "sha256": "a30b1cbef570973069bfe61e2540a1752e45d145075d26a1909b434d826cae95"
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/host.json",
+      "sha256": "26583535da61dbb2da4306f2d76654e6fc38f56248adc3d7dda156a0b6602367"
+    }
+  ],
+  "finding": "No D2 speed improvement established. Current full91.38/98.63s vs baseline21.35/23.76s; current explicitquick44.60/36.02s, startup107.5s and close49.18s are material waits. Matched2190reports/87600revisions/200blobs about1.25GB establishes workload size; cache/background uncontrolled prevents causal ratio or stable latency claims.",
+  "contractAssessment": "L7 requires measurement and usable local flows, not an invented numeric threshold. Stronger full payload validation is required and cannot be removed to meet a speed claim. Numeric evidence alone neither closes usability nor demands speculative architecture changes. Quiet exactEXE UI must show truthful pending state, eventual completion, no duplicate save/destructive effect, safe recovery after delay, and measured startup/search/history/40attachment interaction.",
+  "sourceObservations": [
+    "inspect_db constructs Store(readonly), whose validate runs quick_check, then runs another quick/full PRAGMA and full payload normalization. Startup guard full-checks main then make_server backs up; these are distinct purposes, not automatically redundant proofs.",
+    "Quick iterates SELECT hash,data for all blobs even cached hashes, skipping hashing but still reading bytes. Avoidable data-read hypothesis is source-backed; actual cost attribution is needed before optimization.",
+    "Current phase breakdown JSON traversal17-19s, rawhash2s, rawbackup11s does not explain all91-99s fullsnapshot time; normalization plus repeated checks/cache/I/O need attribution."
+  ],
+  "boundedNext": "Recommend one read-only cProfile current inspect_db full and quick, <=5min cumulative, separate fixture copy/no product writes, categorize normalize/json/SQLite/blob costs; stop after attribution. Root owns dispatch. Preserve full validation and exact source before any proposed repair.",
+  "limits": "Synthetic storage blobs are not image-render proof. No near1GB consumer acceptance yet, no causal quick-versus-full performance claim, no criterion waived; original480minute budget continues."
+}

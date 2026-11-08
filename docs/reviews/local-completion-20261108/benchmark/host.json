@@ -1,0 +1,23 @@
+{
+  "cpu": {
+    "Name": "12th Gen Intel(R) Core(TM) i5-1240P",
+    "NumberOfCores": 12,
+    "NumberOfLogicalProcessors": 16
+  },
+  "note": "C and D map to same physical NVMe; OS cache not controlled; other browser/build tasks ran during current measurements.",
+  "ramBytes": 16849293312,
+  "os": {
+    "Caption": "Microsoft Windows 11 Home Single Language",
+    "Version": "10.0.26200",
+    "OSArchitecture": "64-bit"
+  },
+  "observed": "2026-11-08T15:47:38.9936065+07:00",
+  "disks": [
+    {
+      "Number": 0,
+      "FriendlyName": "NVMe KBG50ZNS512G NVMe KIOXIA 512GB",
+      "BusType": "NVMe",
+      "Size": 512110190592
+    }
+  ]
+}

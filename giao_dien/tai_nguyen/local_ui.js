@@ -36,7 +36,7 @@ function updatePrintIdentity(){
  document.documentElement.style.setProperty('--print-time',quote('In lúc '+printStamp()));
 }
 window.addEventListener('beforeprint',updatePrintIdentity);
-window.addEventListener('afterprint',()=>{$('keyboardPrint')?.remove();document.body.classList.remove('printingReport')});
+window.addEventListener('afterprint',()=>{printBusy=false;$('keyboardPrint')?.remove();document.body.classList.remove('printingReport')});
 function decorateLocalModal(){
  const body=$('modalBody'),root=$('personnelRoot')||body;
  const heading=root.querySelector?.('h2');
@@ -50,7 +50,17 @@ function safeEscape(){
  if(localPlan||localPending){cancelLocalOperation();return}
  localGeneration++;closeModal();
 }
+function previewPrintShortcut(event){
+ if(event.isTrusted!==true||!event.ctrlKey||event.metaKey||event.altKey||event.shiftKey||event.repeat||String(event.key).toLowerCase()!=='p')return false;
+ if(saving||uploading||localBusy||localPending||localPlan||printBusy)return false;
+ const dialog=$('modal'),node=$('modalBody').querySelector('.preview[data-print-ca]');
+ if(!dialog||dialog.classList.contains('hide')||!node||!node.getClientRects().length)return false;
+ event.preventDefault();
+ printReport().catch(error);
+ return true;
+}
 document.addEventListener('keydown',event=>{
+ if(previewPrintShortcut(event))return;
  if(event.key==='Escape'&&(!$('modal').classList.contains('hide')||localPending)){event.preventDefault();safeEscape()}
  if(event.altKey&&/^[1-4]$/.test(event.key)&&page==='edit'){event.preventDefault();showEditTab(EDIT_TABS[Number(event.key)-1][0]);$('tab_'+EDIT_TABS[Number(event.key)-1][0])?.focus()}
  if((event.key==='Enter'||event.key===' ')&&document.activeElement===$('toast'))$('toast').classList.add('hide');

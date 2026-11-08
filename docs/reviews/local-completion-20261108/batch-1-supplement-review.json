@@ -1,0 +1,24 @@
+{
+  "status": "V2_V3_SYNTHETIC_ROUNDTRIP_ACCEPTED",
+  "risk": "R2",
+  "worker": "Sol",
+  "reviewer": "Astra independent REVIEWER",
+  "manifest": {
+    "path": "docs/reviews/local-completion-20261108/packaged/batch-1-supplement/artifact-manifest.json",
+    "sha256": "8bbb0f3959c5cab8bb4671d5303869ae5ef1b85b728aa47d6c9273437da9e9e3"
+  },
+  "independentReadonlyAssertions": {
+    "changedReportIDs": [
+      "2026-10-03_DAY"
+    ],
+    "conflictingBAndAllUnrelatedReportsExact": true,
+    "allNonARevisionsExact": true,
+    "oldARevisionsExact": true,
+    "oneImportedARevision": true,
+    "incomingAFinalPayloadExact": true,
+    "metaAndBlobsUnchanged": true,
+    "allThreeDBIntegrityOK": true
+  },
+  "identity": "Imported A actor SYNTH REVIEWER, kind correction, original os_user preserved, auth_user null; reason retains original plus import context. This is local provenance, not real-user authentication.",
+  "scope": "Supplement closes prior batch1 target-preservation evidence gap. Genuine UI screenshots/events already reviewed; no consumer rerun. Exact0f6ed11 EXE synthetic cases only; wholeLOCAL/native matrix remains pending."
+}

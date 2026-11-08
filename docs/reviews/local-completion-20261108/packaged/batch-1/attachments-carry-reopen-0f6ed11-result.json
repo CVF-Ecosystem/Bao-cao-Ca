@@ -1,0 +1,61 @@
+{
+  "status": "OBSERVED_PENDING_REVIEW",
+  "emptyCaseEvidence": "Priorattemptattachments-carry-0f6ed11/empty-attachments.zip contains onlyGHI_CHU_DINH_KEM.txt",
+  "zipEntries": {
+    "01_trùng tên.png": "df8843edc12c3a5120b909598133afe0764bb302da6859fc333f47c8c4a1238e",
+    "02_trùng tên.png": "902cb8637a3ba7671caf44dbe7d663f87beed6e62b83304c87a7645a47eae6c1",
+    "03_ký tự đặc biệt & (ảnh) 02.png": "81b0cf3d1adc07e55e89506305e2e18d8ffb3c2f7f8ac03c49f585560f11e3ed",
+    "04_ký tự đặc biệt & (ảnh) 03.png": "e06863dfe8fe9722e844b633df8b92ac1fe4328864b2a11745129418ea726079",
+    "05_ký tự đặc biệt & (ảnh) 04.png": "032d1e99510c99f344de3d984c3d32c6628592e5d32a7a9bf041ceebe7c19e08",
+    "06_ký tự đặc biệt & (ảnh) 05.png": "df05e64b5da5cf9fd1813c0494d1d080eab175d76a3d64477db9630a189c45f6",
+    "07_ký tự đặc biệt & (ảnh) 06.png": "e0c1a9a98768f991591ec7891fa112b6b4241fdb24d25f2d7f5445ee53c9857c",
+    "08_ký tự đặc biệt & (ảnh) 07.png": "f2a0ddaab2e52a038875973848cf375f25193ebd4fe7d90fb8fa5953572e6673",
+    "09_ký tự đặc biệt & (ảnh) 08.png": "b7c163bee284d2add49d581bf96b133d4f8949ed13e506d26b3f04d75941317b",
+    "10_ký tự đặc biệt & (ảnh) 09.png": "85c11856cc7ef159023e6da3bbc54717f8e2cdf9b84c69886296632223896dd5",
+    "11_ký tự đặc biệt & (ảnh) 10.png": "7919270c6ea8599e96ed31e484be7f8f1cb1a3f6e14430b0fb3e64fab6d88173",
+    "12_ký tự đặc biệt & (ảnh) 11.png": "4d8dfbdc5c85cbc10e2de53fe8ac20789a2df8a5f27a6763d73b4cc4e500d933",
+    "13_ký tự đặc biệt & (ảnh) 12.png": "720e2e4fa12c95e55258b15f9c1ccf3dea12634dcaea177204a63f3b87b04d07",
+    "14_ký tự đặc biệt & (ảnh) 13.png": "4999f2cb17b01b7d016dba9555b5ca03c25bb2bbd29a0abdafd83e9796b4ec2f",
+    "15_ký tự đặc biệt & (ảnh) 14.png": "2596f8e8c7a267e0bc0f673665fe2e01057bbeb6aeedb1b960fd9ca7f4d22d4e",
+    "16_ký tự đặc biệt & (ảnh) 15.png": "3c9741d1da3b94e798189b4b0bc1c84914cff0d9fa2c1346ab48cca7bd9d8261",
+    "17_ký tự đặc biệt & (ảnh) 16.png": "f9dd1996fc47d43a27342e0d31b89f837457caf595c55c30c52b55db0a5723f5",
+    "18_ký tự đặc biệt & (ảnh) 17.png": "5fe25aafad3a0e1898ac1d527a9ed753f389f1ba7f386661606ee63f1be63fce",
+    "19_ký tự đặc biệt & (ảnh) 18.png": "2d63279725261977f46de203d0f608bee9eabfaf8f2bcd5c645580aa7d453a13",
+    "20_ký tự đặc biệt & (ảnh) 19.png": "97b56850b0b2cef65df74179289bbf45286db5eb8df6f0d74c00884f8326a516",
+    "21_ký tự đặc biệt & (ảnh) 20.png": "69de688870dc277dc3ee7c7463244944230ad855bc6e022866eb9a98e0c78069",
+    "22_ký tự đặc biệt & (ảnh) 21.png": "538fefafefcbe6c152f0d82339a897a3e5cec82d03859830648e434130dfdc48",
+    "23_ký tự đặc biệt & (ảnh) 22.png": "ef050981ecfbd2ef68822b5bba830d09fc89d9b25e7767e77273c675708a181a",
+    "24_ký tự đặc biệt & (ảnh) 23.png": "e3c241a9402765d4909535bf8f816c92d7f7788d260e31ab1b31a78b6d78a320",
+    "25_ký tự đặc biệt & (ảnh) 24.png": "f751bba5085e709c1a610489474209fa850eff11352c61137d305277ee465245",
+    "26_ký tự đặc biệt & (ảnh) 25.png": "67728580ddf823b7b00a2ab495788eda8f38f278e0f487edf0c95ca82e631ae3",
+    "27_ký tự đặc biệt & (ảnh) 26.png": "cc07170602cde6cd8f14253026f4fb01f810495f585c17f102d35fde0e30ef6b",
+    "28_ký tự đặc biệt & (ảnh) 27.png": "5490d61e5da5ec4cbea4a8295c0635334b021af1279b75eb8b2c12950a6680ff",
+    "29_ký tự đặc biệt & (ảnh) 28.png": "2aadc6423f382374f1b6ef0d2990e27a420230401153166550ba02e21c1c070e",
+    "30_ký tự đặc biệt & (ảnh) 29.png": "b5b92899f62ac173fc381c4392a5073b4ef8a9a1f932559532b0b0308c85ebb3",
+    "31_ký tự đặc biệt & (ảnh) 30.png": "a5057486a2dbb37e2745d7da3c4005b5a29a3e74e130b611919e51f7cece2c3d",
+    "32_ký tự đặc biệt & (ảnh) 31.png": "9b02122d49a3518df07d013f8b1d4b4f1c71a5c26e0f5806b529c647531f3db7",
+    "33_ký tự đặc biệt & (ảnh) 32.png": "69eafb1ffece73f718b901845d260f422f1114159689d060b3fa9724a993361d",
+    "34_ký tự đặc biệt & (ảnh) 33.png": "6c2d4fae27a6449bf5339fd0bb5f58ea5486b38197cefd7c14861a324b0da4be",
+    "35_ký tự đặc biệt & (ảnh) 34.png": "f8c90acf26c04550ca95c384eef62c9906d3afaf2712e15ec453d4ca8d77686b",
+    "36_ký tự đặc biệt & (ảnh) 35.png": "337d60eeb54362e0fbea6dbf12970c286872427569e498e3324f6f3f1e025b25",
+    "37_ký tự đặc biệt & (ảnh) 36.png": "a382432b109580b86c27a71cdfb20f266f0122917b71aad60fb1b86b1db0c915",
+    "38_ký tự đặc biệt & (ảnh) 37.png": "ca7d3affca8fce958e20f9351bd243f0952700ebfb417f819061ec580ed7d8da",
+    "39_ký tự đặc biệt & (ảnh) 38.png": "de9247a2aa1b3989f7503c2d8bab109efda7b2ed701974e2693aff839b34e328",
+    "40_ký tự đặc biệt & (ảnh) 39.png": "23220458c4bafb3b458040207bbf4eeb992bb1e71382302dce8782c5a9ecbcef"
+  },
+  "imagesDecoded": 40,
+  "carry": [
+    {
+      "case": "first",
+      "countAfterTwoClicks": 0
+    },
+    {
+      "case": "empty",
+      "countAfterTwoClicks": 0
+    },
+    {
+      "case": "unfinished",
+      "countAfterTwoClicks": 1
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "baseline_commit": "7ce0305b6000f4895be4910a93d9bf9d9a01ad95",
+  "baseline_tool_sha256": "4738aa51f3ca12caf6751614e9150e97e32e4a891c9eeadfe1d9d62ecd646ff8",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "seed": 20261106,
+  "started_at": "2026-11-08T15:46:31.146191+07:00",
+  "profile": {
+    "days": 1095,
+    "saves": 40,
+    "blobs": 200,
+    "blob_mb": 2
+  },
+  "free_before": 18339082240,
+  "attachment_semantics": "synthetic JPEG headers and random bytes only; not decodable-image proof",
+  "seed_s": 477.81,
+  "counts": {
+    "reports": 2190,
+    "revisions": 87600,
+    "blobs": 200,
+    "blob_bytes": 419431000,
+    "db_bytes": 1251184640
+  },
+  "free_after_seed": 16988102656,
+  "target_1GB_reached": true,
+  "snapshot_s": [
+    21.35,
+    23.76
+  ],
+  "free_before_snapshot": [
+    16988102656,
+    16988102656
+  ],
+  "finished_at": "2026-11-08T15:55:14.434798+07:00"
+}

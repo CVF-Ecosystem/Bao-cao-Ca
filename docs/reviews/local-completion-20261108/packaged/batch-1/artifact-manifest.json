@@ -1,0 +1,111 @@
+{
+  "candidate": "0f6ed11f3ea7ab80b3f3f850a10a87fcf6ce6cff",
+  "exeSha256": "2d3b9787eaf9198eb56b3e1c1f1975c248b9cb32a125c37b1ab48af89ddad3e8",
+  "files": [
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/attachment-oracle.json",
+      "sha256": "0258f8300c894baa2cc93c4485cfd3f79eb4ffa233fa4589c4cc1ccae944784b",
+      "bytes": 18935
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/attachments-carry-reopen-0f6ed11-all40-images.png",
+      "sha256": "1a577c10fc4501c1d5d51d78024cb5410909b893e3a92fee392ae90b47d1befd",
+      "bytes": 136641
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/attachments-carry-reopen-0f6ed11-carry-empty.png",
+      "sha256": "6b488f1a247d1ae6e1fe3a3fd95edc3fe17df5becabfe8664669c8bbb0565ea4",
+      "bytes": 119345
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/attachments-carry-reopen-0f6ed11-carry-first.png",
+      "sha256": "5a174e419022b551dfe7492141f2d55b1e3bd8027f83340569c93800d96d371f",
+      "bytes": 117354
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/attachments-carry-reopen-0f6ed11-carry-unfinished.png",
+      "sha256": "7934103a2f199355a57ef2d56a49f7b4f73a1bd1f0cddd68347af3c540a47106",
+      "bytes": 119323
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/attachments-carry-reopen-0f6ed11-consumer-events.json",
+      "sha256": "6118cb568326d4c3bf23b388d476f109007db08592edb81e9a30bf94e3bdbe81",
+      "bytes": 2816
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/attachments-carry-reopen-0f6ed11-forty-attachments.zip",
+      "sha256": "88ada537cec7bcaeb3a1c0f2cc8ffc05bee1af603c5a32a60d8492aa001886f0",
+      "bytes": 66943
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/attachments-carry-reopen-0f6ed11-persisted40-reopened.png",
+      "sha256": "5b9cebb3865a28586a0a68abd3b41fb3ba84479d352482c1b26a555453650ab2",
+      "bytes": 142150
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/attachments-carry-reopen-0f6ed11-result.json",
+      "sha256": "c0c3fa4c82c013c0be5d4df7e4ce8a627caeef4afaa025d7eff9fdc78da8411c",
+      "bytes": 5163
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/core-consumer-r3-0f6ed11-consumer-events.json",
+      "sha256": "99aa697d394f1fd70bee6ca7ba2a792ae5dbcd5925a56999998fa07900207c51",
+      "bytes": 3925
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/core-consumer-r3-0f6ed11-core-result.json",
+      "sha256": "89d0b048551fe3f002cb9586cce47ac783d8583b71ddba8bf2f14fefecfb9f0c",
+      "bytes": 1648
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/core-consumer-r3-0f6ed11-correction-applied.png",
+      "sha256": "3d8b9dc0f3f5514e90a6b49db7237e24b2a28992f63cd6a680ca3b1574aa5604",
+      "bytes": 108951
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/core-consumer-r3-0f6ed11-correction-ready-conflict.png",
+      "sha256": "7486f078e4551b048dd7c38060b3d7a34ca8ffe78752afcaa6b0456ccfd9d6ed",
+      "bytes": 98242
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/core-consumer-r3-0f6ed11-empty-month-observation.png",
+      "sha256": "f1168a27c8c26203c293ca077bdc4e668369cbaf07717ec250c5f402a6539680",
+      "bytes": 109107
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/core-consumer-r3-0f6ed11-main-portable.db",
+      "sha256": "116eba0cb016024cbbbf8345db3f74c6df6d6ff043814eb59ee2476b8cae7870",
+      "bytes": 94208
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/core-consumer-r3-0f6ed11-month-empty.xlsx",
+      "sha256": "d48bc27661e3c27229f265ebee3e4a059871a1c430a54f2a911adfc30e78172c",
+      "bytes": 5935
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/core-consumer-r3-0f6ed11-month-mixed.xlsx",
+      "sha256": "d78e88f885a3a47e1e1895eebf9bd3d3a7c1262cca21b9c8b4c813c1805709e8",
+      "bytes": 23611
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/core-consumer-r3-0f6ed11-reviewer-export.db",
+      "sha256": "4bae3b304b5981dff86b1aef8359ad072587c987a15a954605e5a84d381c36e5",
+      "bytes": 106496
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/core-consumer-r3-0f6ed11-viewer-corrected.png",
+      "sha256": "2543ea30c745bf5e50bb2e2dd4e2bee3e12d19949152a001ccfc4d5701c73664",
+      "bytes": 119700
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/empty-attachments.zip",
+      "sha256": "64e6f1e072406945ebd99268e548f4b46b60d68d7f29e2ff0a19c1a18101455e",
+      "bytes": 173
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1/readonly-qa.json",
+      "sha256": "8aeb72acb7c25ab937d68ff4e63c61c9e0c384d76ffee1ed3bbdcd51908c252d",
+      "bytes": 1792
+    }
+  ]
+}

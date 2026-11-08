@@ -1,0 +1,16 @@
+{
+  "stagedFiles": 94,
+  "source24RawMatchesAccepted": true,
+  "localReviewRawWorkingEqualsStaged": true,
+  "sourceWhitespaceExit": 0,
+  "secretPatternSuspicions": [],
+  "sourceReview": {
+    "path": "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+    "sha256": "030322809aa72923b62d6228eaa448281d62e895ce9774f1605ece7b639f9637"
+  },
+  "technical": {
+    "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+    "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+  },
+  "intent": "Reviewed mergedsource candidate only, product/native acceptance stillpending."
+}

@@ -37,5 +37,33 @@ function check(name,fn){fn();passed++;console.log('PASS '+name)}
  await run('openProtection()');check('quarterly restore reminder renders due state and action',()=>{assert.match(box.protectionHTML,/Chưa thực hiện/);assert.match(box.protectionHTML,/Đã đến hạn kiểm tra khôi phục định kỳ 90 ngày/);assert.match(box.protectionHTML,/openMaintenance.*restore_drill/)});
  run("api=async()=>({backups:[],external_directory:'',restore_drill_due:false,last_restore_drill:'2026-11-08T12:00:00+07:00'})");
  await run('openProtection()');check('recent successful drill shows date without overdue warning',()=>{assert.match(box.protectionHTML,/Chưa đến hạn kiểm tra định kỳ 90 ngày/);assert.doesNotMatch(box.protectionHTML,/Đã đến hạn kiểm tra khôi phục/);assert.doesNotMatch(box.protectionHTML,/Khôi phục thử gần nhất: Chưa thực hiện/)});
+ // Unit fixtures exercise the event contract; only subsequent headed proof asserts real trusted keys.
+ const originalPreview={getClientRects(){return [{}]}};element('modalBody').querySelector=()=>originalPreview;element('modal').classList.contains=()=>false;
+ let prints=0;box.window.print=()=>{prints++};let resolveImage;doc.querySelectorAll=selector=>selector==='#modal img'?[{decode:()=>new Promise(resolve=>{resolveImage=resolve})}]:[];
+ const firstPrint=run('printReport()');assert.equal(run('printBusy'),true);assert.equal(await run('printReport()'),false);resolveImage();await firstPrint;
+ check('deferred image decode owns print once and blocks reentry',()=>{assert.equal(prints,1);assert.equal(run('printBusy'),false)});
+ for(const mode of ['closed','replaced']){
+  element('modalBody').querySelector=()=>originalPreview;element('modal').classList.contains=()=>false;
+  const deferred=run('printReport()');
+  if(mode==='closed')element('modal').classList.contains=()=>true;else element('modalBody').querySelector=()=>({getClientRects(){return [{}]}});
+  resolveImage();assert.equal(await deferred,false);assert.equal(prints,1);assert.equal(run('printBusy'),false);
+ }
+ check('closed or replaced preview during image decode aborts print safely',()=>assert.equal(prints,1));
+ element('modalBody').querySelector=()=>originalPreview;element('modal').classList.contains=()=>false;
+ doc.querySelectorAll=()=>[];box.window.print=()=>{throw new Error('printer rejected')};await assert.rejects(run('printReport()'),/printer rejected/);box.window.print=()=>{prints++};await run('printReport()');
+ check('print error releases owner for next deliberate print',()=>{assert.equal(prints,2);assert.equal(run('printBusy'),false)});
+ const visiblePreview={getClientRects(){return [{}]}};element('modalBody').querySelector=()=>visiblePreview;element('modal').classList.contains=()=>false;
+ run('saving=false;uploading=false;localBusy=false;localPending=null;localPlan=null;printBusy=false');
+ const key=(overrides={})=>({key:'p',isTrusted:true,ctrlKey:true,metaKey:false,altKey:false,shiftKey:false,repeat:false,prevented:false,preventDefault(){this.prevented=true},...overrides});
+ const accepted=key();box.shortcutEvent=accepted;assert.equal(run('previewPrintShortcut(shortcutEvent)'),true);await new Promise(resolve=>setImmediate(resolve));
+ check('visible trusted preview CtrlP invokes existing print owner',()=>{assert.equal(accepted.prevented,true);assert.equal(prints,3)});
+ for(const override of [{isTrusted:false},{repeat:true},{ctrlKey:false},{metaKey:true},{altKey:true},{shiftKey:true},{key:'s'}]){const event=key(override);box.shortcutEvent=event;assert.equal(run('previewPrintShortcut(shortcutEvent)'),false);assert.equal(event.prevented,false)}
+ check('synthetic repeat and other modifiers preserve browser default',()=>assert.equal(prints,3));
+ for(const [name,value] of [['saving','true'],['uploading','true'],['localBusy','true'],['localPending','{}'],['localPlan','{}'],['printBusy','true']]){run(name+'='+value);const event=key();box.shortcutEvent=event;assert.equal(run('previewPrintShortcut(shortcutEvent)'),false);assert.equal(event.prevented,false);run(name+'='+(['localPending','localPlan'].includes(name)?'null':'false'))}
+ check('save upload pending confirmation and print busy reject shortcut',()=>assert.equal(prints,3));
+ for(const mode of ['closed','nonpreview','hidden']){element('modal').classList.contains=()=>mode==='closed';element('modalBody').querySelector=()=>mode==='nonpreview'?null:{getClientRects(){return mode==='hidden'?[]:[{}]}};const event=key();box.shortcutEvent=event;assert.equal(run('previewPrintShortcut(shortcutEvent)'),false);assert.equal(event.prevented,false)}
+ check('hidden stale and unrelated dialogs never intercept CtrlP',()=>assert.equal(prints,3));
+ element('keyboardPrint').remove=()=>{};run('printBusy=true');events.afterprint();
+ check('afterprint lifecycle releases print guard',()=>assert.equal(run('printBusy'),false));
  console.log(passed+' local UI behavioral checks passed.');
 })().catch(e=>{console.error(e);process.exitCode=1});

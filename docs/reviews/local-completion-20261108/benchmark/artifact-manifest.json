@@ -1,0 +1,67 @@
+{
+  "sourceCommit": "0f6ed11f3ea7ab80b3f3f850a10a87fcf6ce6cff",
+  "baselineCommit": "7ce0305b6000f4895be4910a93d9bf9d9a01ad95",
+  "purpose": "Durable byte-identical copies of completed synthetic benchmark/host/run-attempt evidence. Profile and developer-product acceptance still pending.",
+  "files": [
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/worker-benchmark-return.md",
+      "path": "docs/reviews/local-completion-20261108/benchmark/worker-benchmark-return.md",
+      "sha256": "285024c0fe556e618a6c894ea3fd25ceaee23711a97014c9c0ca816679d48363",
+      "bytes": 2401
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/host.json",
+      "path": "docs/reviews/local-completion-20261108/benchmark/host.json",
+      "sha256": "26583535da61dbb2da4306f2d76654e6fc38f56248adc3d7dda156a0b6602367",
+      "bytes": 661
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/baseline_adapter.py",
+      "path": "docs/reviews/local-completion-20261108/benchmark/baseline_adapter.py",
+      "sha256": "8e01986154a951408030a1187cdc213d9b1ab1a82564500e0e75432a35ad58e4",
+      "bytes": 2392
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/baseline-run-initial.log",
+      "path": "docs/reviews/local-completion-20261108/benchmark/baseline-run-initial.log",
+      "sha256": "f1e97a4370180ad1b1a5ae16d32b910be3545e653166de3dfb9510a22a0d533e",
+      "bytes": 2853
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/baseline-run.log",
+      "path": "docs/reviews/local-completion-20261108/benchmark/baseline-run.log",
+      "sha256": "bbfa0200ab90b51273a96cdb15fc7e7a6a99cfaf517c8cd3b1e2f77641ecc660",
+      "bytes": 2048
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/baseline-data/result.json",
+      "path": "docs/reviews/local-completion-20261108/benchmark/baseline-data-result.json",
+      "sha256": "a30b1cbef570973069bfe61e2540a1752e45d145075d26a1909b434d826cae95",
+      "bytes": 938
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/current-result.json",
+      "path": "docs/reviews/local-completion-20261108/benchmark/benchmark-current-result.json",
+      "sha256": "0286c06cd28c4a8e07e9507bfa92d354d018ecba1703d731e5f09a6177afdb32",
+      "bytes": 2402
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/current-run.log",
+      "path": "docs/reviews/local-completion-20261108/benchmark/benchmark-current-run.log",
+      "sha256": "bfe788e11530a3729c4ac1222fb1181d255f25d7d48c405cbc33e43d383f828e",
+      "bytes": 4193
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/quick-result.json",
+      "path": "docs/reviews/local-completion-20261108/benchmark/benchmark-quick-result.json",
+      "sha256": "fd2ed35eaa4f565df4f399d9d810f107d10094eb234ed1cc469e389a25a0895f",
+      "bytes": 480
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/quick-run.log",
+      "path": "docs/reviews/local-completion-20261108/benchmark/benchmark-quick-run.log",
+      "sha256": "696f5735b30c42ff3329d6880699382d6ea4838ce013a494455efb56e5d82829",
+      "bytes": 482
+    }
+  ]
+}

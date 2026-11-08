@@ -1,0 +1,53 @@
+{
+  "status": "FAILED",
+  "steps": [
+    "V2/V3 ready applied/conflict winner preserved, viewer export generated through UI"
+  ],
+  "beforeCorrections": {
+    "reports": {
+      "count": 7,
+      "rowsSha256": "e06278f4b22bfcd000d0438403fac3d41995d836b3f9f51bc432fe4aa6808d16"
+    },
+    "revisions": {
+      "count": 9,
+      "rowsSha256": "1cdf6cd079465ebbdb5f753ae327c33e129f82f51ec6ef4060f6fda33888e2e3"
+    },
+    "attachment_blobs": {
+      "count": 0,
+      "rowsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "meta": {
+      "count": 9,
+      "rowsSha256": "f867ced2d347778ed6627489c99a23243a24db5eab2fc3bafef85afebe98734d"
+    }
+  },
+  "afterCorrections": {
+    "reports": {
+      "count": 7,
+      "rowsSha256": "d918fa8a21b8aeedf541d4ca48fc405f6a1c095694b807889a68b46044c0aa0d"
+    },
+    "revisions": {
+      "count": 11,
+      "rowsSha256": "8185b4af80f2fd97ca67fcdbe04bef4ba6ac404e3c517f577d5bba9ede3f1ec3"
+    },
+    "attachment_blobs": {
+      "count": 0,
+      "rowsSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "meta": {
+      "count": 9,
+      "rowsSha256": "f867ced2d347778ed6627489c99a23243a24db5eab2fc3bafef85afebe98734d"
+    }
+  },
+  "monthSheets": [
+    "Tong_hop_thang",
+    "01-10_Ngay",
+    "02-10_Ngay",
+    "03-10_Ngay",
+    "04-10_Ngay",
+    "05-10_Ngay",
+    "06-10_Ngay"
+  ],
+  "emptyMonthDownloadFailure": null,
+  "error": "TimeoutError: Locator.click: Timeout 15000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"Tải tất cả tệp\", exact=True)\n"
+}

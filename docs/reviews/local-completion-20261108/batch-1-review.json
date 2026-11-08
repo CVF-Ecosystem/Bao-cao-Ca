@@ -1,0 +1,28 @@
+{
+  "status": "BATCH_REVIEW_PARTIAL_ACCEPTANCE_PENDING_CORRECTION_ORACLE",
+  "risk": "R2",
+  "worker": "Sol",
+  "reviewer": "Astra independent REVIEWER",
+  "manifest": {
+    "path": "docs/reviews/local-completion-20261108/packaged/batch-1/artifact-manifest.json",
+    "sha256": "41bba3f14dc0d6c4ef2bc9b247320e92de49c8851433c194a39152349b147227"
+  },
+  "exeSha256": "2d3b9787eaf9198eb56b3e1c1f1975c248b9cb32a125c37b1ab48af89ddad3e8",
+  "independentChecks": [
+    "All21 frozen artifact hashes verified.",
+    "Readonly SQLite integrity_check passes main-portable/reviewer-export;7reports each,9/11revisions respectively. These are pre-import main and edited review source, not final target.",
+    "Forty ZIP PNG members independently decoded and exact SHA set equals40fixture oracle; duplicate and nonASCII names remain distinct. EmptyZIP contains only GHI_CHU_DINH_KEM.txt.",
+    "Monthly XLSX independently opened/read: mixed summary6reports2closed4draft with6daily sheets; empty summary0/0/0 with onlysummary sheet. NativeExcel rendering not tested. First parser output hit cp1252 consoleencoding only; reran UTF8 successfully without file changes.",
+    "Inspected correction ready/conflict and importtoast screenshots,40image screen, carry unfinishedscreen. Consumer trace shows two carryclicks each with0/0/1 outcomes and ownedPID31952exit0/sessionremoved."
+  ],
+  "disposition": {
+    "V2_V3": "UI path observed; final target row/history/pre-import-backup preservation oracle requested read-only before accepting full roundtrip/conflict claims. Aggregate row hashes alone insufficient.",
+    "V4": "Small portable export integrity/reviewed reopening evidence only; large/portable final obligations remain.",
+    "V5": "Mixed/empty XLSX artifacts and corresponding consumer download observations accepted within synthetic case scope.",
+    "V6": "Forty valid decodedPNG+ZIP exactbytes and emptyZIP behavior accepted within fixture scope.",
+    "V7": "First/no-prior,emptyprior,unfinishedprior two-click outcomes0/0/1 accepted as observed; no duplicate unfinished item.",
+    "V1": "No acceptance in this batch. CtrlP remains unproved independently of button route."
+  },
+  "failureHandling": "Core driver overallFAILED after completed earlier steps due later attachment-tab wait. Preserved asFAILED; only individually supported prior outcomes reused, not blanketdriverPASS.",
+  "remaining": "Sol asked for readonly final target/pre-import backup row oracle; no consumer rerun requested. WholeL1-L8/native/performance acceptance pending."
+}

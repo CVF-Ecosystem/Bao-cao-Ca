@@ -1,0 +1,79 @@
+{
+  "month-mixed": {
+    "sheets": [
+      "Tong_hop_thang",
+      "01-10_Ngay",
+      "02-10_Ngay",
+      "03-10_Ngay",
+      "04-10_Ngay",
+      "05-10_Ngay",
+      "06-10_Ngay"
+    ],
+    "rows": [
+      {
+        "sheet": "Tong_hop_thang",
+        "rows": null,
+        "cols": null
+      },
+      {
+        "sheet": "01-10_Ngay",
+        "rows": null,
+        "cols": null
+      },
+      {
+        "sheet": "02-10_Ngay",
+        "rows": null,
+        "cols": null
+      },
+      {
+        "sheet": "03-10_Ngay",
+        "rows": null,
+        "cols": null
+      },
+      {
+        "sheet": "04-10_Ngay",
+        "rows": null,
+        "cols": null
+      },
+      {
+        "sheet": "05-10_Ngay",
+        "rows": null,
+        "cols": null
+      },
+      {
+        "sheet": "06-10_Ngay",
+        "rows": null,
+        "cols": null
+      }
+    ]
+  },
+  "month-empty": {
+    "sheets": [
+      "Tong_hop_thang"
+    ],
+    "rows": [
+      {
+        "sheet": "Tong_hop_thang",
+        "rows": null,
+        "cols": null
+      }
+    ]
+  },
+  "main-portable.db": {
+    "integrity": "ok",
+    "reports": 7,
+    "revisions": 9
+  },
+  "reviewer-export.db": {
+    "integrity": "ok",
+    "reports": 7,
+    "revisions": 11
+  },
+  "limits": [
+    "Actual browser file-input/file-chooser proxy used; nativeOSdialog NOT_TESTED",
+    "Excel nativeapplication NOT_TESTED; XLSXvalidatedread-onlywithopenpyxl",
+    "V8largeUI pendingquietwindow;40validimageportion observed",
+    "Failed wait helper attempt preserved inruntime, underlying40uploadscompleted; reopenedactualUI+ZIPallhashesverified",
+    "Mixed coredriverFAILED overall only because laterunreadyAlt4; earlierV2/V3/V4small/V5partialrecords retained accurately"
+  ]
+}

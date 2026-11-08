@@ -1,0 +1,89 @@
+  seed 40/2190 ca
+  seed 80/2190 ca
+  seed 120/2190 ca
+  seed 160/2190 ca
+  seed 200/2190 ca
+  seed 240/2190 ca
+  seed 280/2190 ca
+  seed 320/2190 ca
+  seed 360/2190 ca
+  seed 400/2190 ca
+  seed 440/2190 ca
+  seed 480/2190 ca
+  seed 520/2190 ca
+  seed 560/2190 ca
+  seed 600/2190 ca
+  seed 640/2190 ca
+  seed 680/2190 ca
+  seed 720/2190 ca
+  seed 760/2190 ca
+  seed 800/2190 ca
+  seed 840/2190 ca
+  seed 880/2190 ca
+  seed 920/2190 ca
+  seed 960/2190 ca
+  seed 1000/2190 ca
+  seed 1040/2190 ca
+  seed 1080/2190 ca
+  seed 1120/2190 ca
+  seed 1160/2190 ca
+  seed 1200/2190 ca
+  seed 1240/2190 ca
+  seed 1280/2190 ca
+  seed 1320/2190 ca
+  seed 1360/2190 ca
+  seed 1400/2190 ca
+  seed 1440/2190 ca
+  seed 1480/2190 ca
+  seed 1520/2190 ca
+  seed 1560/2190 ca
+  seed 1600/2190 ca
+  seed 1640/2190 ca
+  seed 1680/2190 ca
+  seed 1720/2190 ca
+  seed 1760/2190 ca
+  seed 1800/2190 ca
+  seed 1840/2190 ca
+  seed 1880/2190 ca
+  seed 1920/2190 ca
+  seed 1960/2190 ca
+  seed 2000/2190 ca
+  seed 2040/2190 ca
+  seed 2080/2190 ca
+  seed 2120/2190 ca
+  seed 2160/2190 ca
+{
+  "baseline_commit": "7ce0305b6000f4895be4910a93d9bf9d9a01ad95",
+  "baseline_tool_sha256": "4738aa51f3ca12caf6751614e9150e97e32e4a891c9eeadfe1d9d62ecd646ff8",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "seed": 20261106,
+  "started_at": "2026-11-08T15:46:31.146191+07:00",
+  "profile": {
+    "days": 1095,
+    "saves": 40,
+    "blobs": 200,
+    "blob_mb": 2
+  },
+  "free_before": 18339082240,
+  "attachment_semantics": "synthetic JPEG headers and random bytes only; not decodable-image proof",
+  "seed_s": 477.81,
+  "counts": {
+    "reports": 2190,
+    "revisions": 87600,
+    "blobs": 200,
+    "blob_bytes": 419431000,
+    "db_bytes": 1251184640
+  },
+  "free_after_seed": 16988102656,
+  "target_1GB_reached": true,
+  "snapshot_s": [
+    21.35,
+    23.76
+  ],
+  "free_before_snapshot": [
+    16988102656,
+    16988102656
+  ],
+  "finished_at": "2026-11-08T15:55:14.434798+07:00"
+}

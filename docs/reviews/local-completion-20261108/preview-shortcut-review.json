@@ -1,0 +1,182 @@
+{
+  "status": "PREVIEW_SHORTCUT_SOURCE_DELTA_ACCEPTED_L7_ASSESSMENT_PENDING",
+  "risk": "R2",
+  "worker": "Sol bounded frontend repair",
+  "reviewer": "Astra independent REVIEWER",
+  "action": {
+    "path": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+    "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57"
+  },
+  "priorSourceReview": {
+    "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+    "sha256": "437492d087b6ba4d85332c61c4968d78c5ad74a053ff7204e55ae11da0815635"
+  },
+  "workerManifest": {
+    "path": "docs/reviews/local-completion-20261108/preview-shortcut/source-manifest.json",
+    "sha256": "983159fe6705b9abf3716bb2b1c4aefd5c02fd83a95f2aa3d98d8513c4090fb2"
+  },
+  "files": [
+    {
+      "path": "ma_nguon/BAO_VE_DU_LIEU.py",
+      "sha256": "99cd19b28c051b0f0302dc8f984adfa57ea774908fda0fc78ae2fe768428ab64"
+    },
+    {
+      "path": "ma_nguon/LUU_TRU.py",
+      "sha256": "17ba6d6cb64677ef9bffd48b41b5b562bdbbb0a556522684f0fd5f86dad498ab"
+    },
+    {
+      "path": "ma_nguon/MAY_CHU.py",
+      "sha256": "929f263a00025f4b22f6436dc6c18473c181b4e53e4e8c445c58e656dd9350f7"
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "sha256": "628e0ed165749760adca22ab5cb9c1f751aed181389c2871ae7e39b0ff12da0e"
+    },
+    {
+      "path": "ma_nguon/BAO_TRI_CSDL.py",
+      "sha256": "902f231f59f0d2fe151588c9501d5f5b18cd80722e24c537f1500d5608f0084a"
+    },
+    {
+      "path": "ma_nguon/NANG_CAP_CSDL.py",
+      "sha256": "7cc26e6abffb46ebaef702c4bbaa7dda5a07413e2f43d7a8339d676b4a113f99"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU.py",
+      "sha256": "e83634b4ba55421b47ec4fab97a4aee29139f7c06e128dd7725cbd1baac48b4d"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_API.py",
+      "sha256": "6065b3c30f83b73ccc1b5c608db963b3da65d678484911ca5f5c0a3018d97fd1"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_V1_9.py",
+      "sha256": "a12622df1027ac2edc006056deb06381aa52d24a5f8af12727209dad2270f27c"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_KHOI_DONG.py",
+      "sha256": "d22c31a41ecb56e28a48132a16815e1d2a52c1ac343e55108f339d4902b6e425"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_COMPLETION.py",
+      "sha256": "255e0915c818355bf303e69beb376ad97dfa76ffaa6cf6beb605a0584e6d1b68"
+    },
+    {
+      "path": "tai_lieu/API.md",
+      "sha256": "d19e0850e52ba8be10260b2c992460b95b30d929a06a466f2f57c6c4ebcd525b"
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "37b9310d5db4dc6b08899f54b8ec236053746881e48ae8a09ee43504c59df30d"
+    },
+    {
+      "path": "cong_cu/DO_HIEU_NANG.py",
+      "sha256": "42c76d60ab359cbcd6926336840894088624a0a661adf82380e05849f2bc473a"
+    },
+    {
+      "path": "giao_dien/giao_dien.html",
+      "sha256": "ebcad7a5fd7af90bf7d666b9378735af2cd9915ecc8858885cd56e4d2a992870"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/bao_ve.js",
+      "sha256": "f4c7b642ae4e3a2060cb6973898b405bcc86c2a274e8a0aed873fb5a7cbd882b"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "sha256": "7fd1578b8e590ac57c454e163bb77c105f633cf538b29b83efc6b58645e76b3a"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/phan_cong_mau.js",
+      "sha256": "ac8b6a5fd7fed07ad93cfdc9f2490dde93a4120fc0ab3d06b095d3fa2fa66268"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/style.css",
+      "sha256": "b7e255c4e5587caa31fdc8e56f89293dce6e2cc5947a724572f287464ec3dbce"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/ung_dung.js",
+      "sha256": "6aac02f9968ff116fd8623badf85f65c2d3842b6dc1d57884e14478715c54853"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/local_ui.js",
+      "sha256": "20359ad8d340df6b9c48f1c7c303c513d1d29be364cc4fe707ac0f7811c67c14"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+      "sha256": "0af1085d492f7e0a6bea309932223cfd08f351eea5ffe81e5eef250247d4b8db"
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_10_0.txt",
+      "sha256": "e99a62468b56fb8903e2bcfb1928139dbb60b735853b313406dbe15e8d83cc36"
+    }
+  ],
+  "deltaFiles": [
+    {
+      "path": "giao_dien/tai_nguyen/local_ui.js",
+      "sha256": "20359ad8d340df6b9c48f1c7c303c513d1d29be364cc4fe707ac0f7811c67c14"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/ung_dung.js",
+      "sha256": "6aac02f9968ff116fd8623badf85f65c2d3842b6dc1d57884e14478715c54853"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+      "sha256": "0af1085d492f7e0a6bea309932223cfd08f351eea5ffe81e5eef250247d4b8db"
+    }
+  ],
+  "independentFinding": {
+    "id": "PRINT_STALE_PREVIEW_AFTER_DECODE",
+    "disposition": "RESOLVED_REVIEWER_LOCAL",
+    "basis": "Async decode allowed modal close/replacement before window.print. Captured original preview node and rechecked same visible node after await; aborts without print and finally releases guard. Focused deferred-close and deferred-replacement regression passes."
+  },
+  "tests": {
+    "groups": [
+      {
+        "path": "kiem_thu/KIEM_THU_BAO_VE.js",
+        "exitCode": 0
+      },
+      {
+        "path": "kiem_thu/KIEM_THU_GIAO_DIEN.js",
+        "exitCode": 0
+      },
+      {
+        "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+        "exitCode": 0
+      },
+      {
+        "path": "kiem_thu/KIEM_THU_MAU_CA.js",
+        "exitCode": 0
+      },
+      {
+        "path": "kiem_thu/KIEM_THU_PERSONNEL_UI.js",
+        "exitCode": 0
+      },
+      {
+        "path": "kiem_thu/KIEM_THU_PHAN_CONG.js",
+        "exitCode": 0
+      },
+      {
+        "path": "kiem_thu/KIEM_THU_V1_9.js",
+        "exitCode": 0
+      }
+    ],
+    "localBehaviorChecks": 29,
+    "skipped": 0,
+    "log": {
+      "path": "docs/reviews/local-completion-20261108/preview-shortcut/reviewer-local-js-tests.txt",
+      "sha256": "e0490ab27e2f51e4a5feb0e8563eacdda9764be780993313c524ae78b0fd925c"
+    }
+  },
+  "repairBoundary": {
+    "unchangedObjective": "YES",
+    "unchangedDesign": "YES",
+    "unchangedPaths": "YES",
+    "unchangedAuthority": "YES",
+    "unchangedEffects": "YES",
+    "unchangedCommitOwner": "YES",
+    "evidenceDetermined": "YES"
+  },
+  "assessment": "TrustedCtrlP visible-preview guard, repeat/modifier/busy rejection, shared imagewait/window.print owner and error/afterprint cleanup fit accepted design. Realtrustedkeyboard/nativeproof remains unexecuted; unit event fixtures are not native proof.",
+  "inheritance": "PriorV2-V7 synthetic workflow/row/export proofs remain historical exact0f6ed11 evidence. Their backend/functions and paths unchanged, new handler acts only on previewCtrlP and print owner. Eligible for scoped inheritance, not relabeled as newEXE execution. Newcandidate freshstartup/exit/restart and representativeupgrade still required.",
+  "next": "Root resolves finiteL7profile assessment then clean accepted candidate/build/smoke; rerun all affected nativeprintcases on newbinary. No Python/backend edits or fullPython rerun.",
+  "limits": "No wholeLOCAL/V1/performance acceptance; original browseraccelerator failures retainedNOT_TESTED; source delta acceptance does not settle pending large-data usability."
+}

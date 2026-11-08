@@ -21,7 +21,7 @@ from LUU_TRU import Store, SCHEMA
 from MAY_CHU import make_server
 from NANG_CAP_CSDL import plan_upgrade, upgrade
 import NANG_CAP_CSDL
-from NGHIEP_VU import AppError, ClosingConnection
+from NGHIEP_VU import AppError, ClosingConnection, clean_text
 
 
 def report(actor='Tester', status='draft', notes=''):
@@ -42,6 +42,24 @@ def legacy(path,version):
 class LocalCompletionTests(unittest.TestCase):
     def setUp(self): self.tmp=tempfile.TemporaryDirectory(); self.root=Path(self.tmp.name)
     def tearDown(self): self.tmp.cleanup()
+
+    def test_clean_text_validation_contract(self):
+        for code in range(32):
+            with self.subTest(control=code):
+                expected = 'a' + chr(code) + 'b' if code in (9, 10, 13) else 'ab'
+                self.assertEqual(clean_text('a' + chr(code) + 'b'), expected)
+        for value, limit, expected in [('', 0, ''), ('abc', 3, 'abc'),
+                ('a\tb\nc\rd', 30, 'a\tb\nc\rd'), ('\t hi \r\n', 20, 'hi'),
+                ('Tiếng Việt a\u0301 😀', 100, 'Tiếng Việt a\u0301 😀')]:
+            with self.subTest(value=value, limit=limit):
+                self.assertEqual(clean_text(value, limit), expected)
+        for value, limit in [(None, 10), (3, 10), (True, 10), (['x'], 10),
+                             ('abcd', 3), ('x', 0), ('', -1)]:
+            with self.subTest(value=value, limit=limit):
+                with self.assertRaises(AppError) as caught:
+                    clean_text(value, limit)
+                self.assertEqual(caught.exception.status, 400)
+                self.assertEqual(str(caught.exception), 'Nội dung sai kiểu hoặc quá dài.')
 
     def test_revision_six_row_oracle_and_conflict(self):
         store=Store(self.root/'main.db'); version=0

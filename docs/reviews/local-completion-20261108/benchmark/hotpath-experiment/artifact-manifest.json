@@ -1,0 +1,24 @@
+{
+  "purpose": "Preserved compiled-regex experiment, semantically equivalent211PASS but no demonstrated operational speed gain; product change reverted by independent reviewer. These are not final-candidate release logs.",
+  "files": [
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/profile/before-unprofiled.json",
+      "path": "docs/reviews/local-completion-20261108/benchmark/hotpath-experiment/before-unprofiled.json",
+      "sha256": "79bba3fd5be7ef07b1d21ab3adbabd9bec7f5d53438318d5d0aebef9328d6845"
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/profile/after-unprofiled.json",
+      "path": "docs/reviews/local-completion-20261108/benchmark/hotpath-experiment/after-unprofiled.json",
+      "sha256": "bec61f5f3e271a016e64bcecfe358b23384d4034387020a8640d5e5dfb13736a"
+    },
+    {
+      "sourcePath": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/profile/hotpath-full-python.log",
+      "path": "docs/reviews/local-completion-20261108/benchmark/hotpath-experiment/hotpath-full-python.log",
+      "sha256": "c7a1658b1c316ef9036f485af39eac626d60cc90d605276529da13a772795adc"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/benchmark/hotpath-experiment/inspect_unprofiled.py",
+      "sha256": "4adccba67b7f6af8e4e7707a06c1a67e2f95a4090ba3849819793bbcd7d6b229"
+    }
+  ]
+}

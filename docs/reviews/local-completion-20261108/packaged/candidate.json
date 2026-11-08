@@ -1,0 +1,26 @@
+{
+  "sourceCommit": "0f6ed11f3ea7ab80b3f3f850a10a87fcf6ce6cff",
+  "metadataCommit": "0f6ed11f3ea7",
+  "version": "1.10.0",
+  "exe": {
+    "path": "dist/SO_BAO_CAO_CA.exe",
+    "sha256": "2d3b9787eaf9198eb56b3e1c1f1975c248b9cb32a125c37b1ab48af89ddad3e8"
+  },
+  "bytes": 13192359,
+  "offlineBuildExitCode": 0,
+  "cleanGitBeforeAfterReported": true,
+  "rootObservedCleanAfterCommit": true,
+  "packagedSmokeExitCode": 0,
+  "logs": [
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/build-0f6ed11.txt",
+      "sha256": "918fa996422535a4966f44b9f061838daa8a2d6a4f95d4b36b704207c13214bb"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/smoke-0f6ed11.txt",
+      "sha256": "0c8c976513bedc075d28f90a5754a1eb8cc0362e1f81d7ebac523befa4d9dcae"
+    }
+  ],
+  "status": "BUILD_SMOKE_PASS_PRODUCT_ACCEPTANCE_PENDING",
+  "rootLauncher": "Root SO_BAO_CAO_CA.exe remains1.9.2 baseline until accepted1.10.0 delivery. Do not infer root launcher updated."
+}

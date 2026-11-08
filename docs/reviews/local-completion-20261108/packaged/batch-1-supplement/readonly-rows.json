@@ -1,0 +1,651 @@
+{
+  "final_main": {
+    "sha256": "b1c568a753eb8fb9f64bf89c2298a5951793dc21cbb483017cbe783de0700c81",
+    "integrity": "ok",
+    "reports": {
+      "2026-09-01_DAY": {
+        "id": "2026-09-01_DAY",
+        "day": "2026-09-01",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-09-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE first\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-01_DAY": {
+        "id": "2026-10-01_DAY",
+        "day": "2026-10-01",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE short\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-02_DAY": {
+        "id": "2026-10-02_DAY",
+        "day": "2026-10-02",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-02\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE long\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1; SYNTH CHIEF 2\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}, {\"role\": \"SYNTH POSITION 8\", \"people\": \"SYNTH PERSON 08\"}, {\"role\": \"SYNTH POSITION 9\", \"people\": \"SYNTH PERSON 09\"}, {\"role\": \"SYNTH POSITION 10\", \"people\": \"SYNTH PERSON 10\"}, {\"role\": \"SYNTH POSITION 11\", \"people\": \"SYNTH PERSON 11\"}, {\"role\": \"SYNTH POSITION 12\", \"people\": \"SYNTH PERSON 12\"}, {\"role\": \"SYNTH POSITION 13\", \"people\": \"SYNTH PERSON 13\"}, {\"role\": \"SYNTH POSITION 14\", \"people\": \"SYNTH PERSON 14\"}, {\"role\": \"SYNTH POSITION 15\", \"people\": \"SYNTH PERSON 15\"}, {\"role\": \"SYNTH POSITION 16\", \"people\": \"SYNTH PERSON 16\"}, {\"role\": \"SYNTH POSITION 17\", \"people\": \"SYNTH PERSON 17\"}, {\"role\": \"SYNTH POSITION 18\", \"people\": \"SYNTH PERSON 18\"}, {\"role\": \"SYNTH POSITION 19\", \"people\": \"SYNTH PERSON 19\"}, {\"role\": \"SYNTH POSITION 20\", \"people\": \"SYNTH PERSON 20\"}, {\"role\": \"SYNTH POSITION 21\", \"people\": \"SYNTH PERSON 21\"}, {\"role\": \"SYNTH POSITION 22\", \"people\": \"SYNTH PERSON 22\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 6\", \"detail\": \"YARD 6\", \"xn\": true, \"rtg\": false, \"f20\": 7, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 7\", \"detail\": \"YARD 7\", \"xn\": true, \"rtg\": false, \"f20\": 8, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 8\", \"detail\": \"YARD 8\", \"xn\": true, \"rtg\": false, \"f20\": 9, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 9\", \"detail\": \"YARD 9\", \"xn\": true, \"rtg\": false, \"f20\": 10, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 10\", \"detail\": \"YARD 10\", \"xn\": true, \"rtg\": false, \"f20\": 11, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 11\", \"detail\": \"YARD 11\", \"xn\": true, \"rtg\": false, \"f20\": 12, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 12\", \"detail\": \"YARD 12\", \"xn\": true, \"rtg\": false, \"f20\": 13, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 13\", \"detail\": \"YARD 13\", \"xn\": true, \"rtg\": false, \"f20\": 14, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 14\", \"detail\": \"YARD 14\", \"xn\": true, \"rtg\": false, \"f20\": 15, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 15\", \"detail\": \"YARD 15\", \"xn\": true, \"rtg\": false, \"f20\": 16, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 16\", \"detail\": \"YARD 16\", \"xn\": true, \"rtg\": false, \"f20\": 17, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 17\", \"detail\": \"YARD 17\", \"xn\": true, \"rtg\": false, \"f20\": 18, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 18\", \"detail\": \"YARD 18\", \"xn\": true, \"rtg\": false, \"f20\": 19, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 19\", \"detail\": \"YARD 19\", \"xn\": true, \"rtg\": false, \"f20\": 20, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 20\", \"detail\": \"YARD 20\", \"xn\": true, \"rtg\": false, \"f20\": 21, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 21\", \"detail\": \"YARD 21\", \"xn\": true, \"rtg\": false, \"f20\": 22, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 22\", \"detail\": \"YARD 22\", \"xn\": true, \"rtg\": false, \"f20\": 23, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 23\", \"detail\": \"YARD 23\", \"xn\": true, \"rtg\": false, \"f20\": 24, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 24\", \"detail\": \"YARD 24\", \"xn\": true, \"rtg\": false, \"f20\": 25, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 25\", \"detail\": \"YARD 25\", \"xn\": true, \"rtg\": false, \"f20\": 26, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 26\", \"detail\": \"YARD 26\", \"xn\": true, \"rtg\": false, \"f20\": 27, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 27\", \"detail\": \"YARD 27\", \"xn\": true, \"rtg\": false, \"f20\": 28, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 28\", \"detail\": \"YARD 28\", \"xn\": true, \"rtg\": false, \"f20\": 29, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 29\", \"detail\": \"YARD 29\", \"xn\": true, \"rtg\": false, \"f20\": 30, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-03_DAY": {
+        "id": "2026-10-03_DAY",
+        "day": "2026-10-03",
+        "shift": "DAY",
+        "version": 3,
+        "status": "closed",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:40:54+07:00",
+        "actor": "SYNTH REVIEWER",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH REVIEWER\", \"status\": \"closed\", \"notes\": \"SYNTH REVIEWER READY CHANGE\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-04_DAY": {
+        "id": "2026-10-04_DAY",
+        "day": "2026-10-04",
+        "shift": "DAY",
+        "version": 3,
+        "status": "closed",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:40:53+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"SYNTH MAIN WINNER\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-05_DAY": {
+        "id": "2026-10-05_DAY",
+        "day": "2026-10-05",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-05\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-empty\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-06_DAY": {
+        "id": "2026-10-06_DAY",
+        "day": "2026-10-06",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-06\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-open\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": [{\"text\": \"SYNTH UNFINISHED\", \"done\": false}, {\"text\": \"SYNTH DONE\", \"done\": true}]}"
+      }
+    },
+    "revisions": [
+      {
+        "id": 5,
+        "report_id": "2026-09-01_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-09-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE first\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 1,
+        "report_id": "2026-10-01_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE short\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 2,
+        "report_id": "2026-10-02_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-02\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE long\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1; SYNTH CHIEF 2\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}, {\"role\": \"SYNTH POSITION 8\", \"people\": \"SYNTH PERSON 08\"}, {\"role\": \"SYNTH POSITION 9\", \"people\": \"SYNTH PERSON 09\"}, {\"role\": \"SYNTH POSITION 10\", \"people\": \"SYNTH PERSON 10\"}, {\"role\": \"SYNTH POSITION 11\", \"people\": \"SYNTH PERSON 11\"}, {\"role\": \"SYNTH POSITION 12\", \"people\": \"SYNTH PERSON 12\"}, {\"role\": \"SYNTH POSITION 13\", \"people\": \"SYNTH PERSON 13\"}, {\"role\": \"SYNTH POSITION 14\", \"people\": \"SYNTH PERSON 14\"}, {\"role\": \"SYNTH POSITION 15\", \"people\": \"SYNTH PERSON 15\"}, {\"role\": \"SYNTH POSITION 16\", \"people\": \"SYNTH PERSON 16\"}, {\"role\": \"SYNTH POSITION 17\", \"people\": \"SYNTH PERSON 17\"}, {\"role\": \"SYNTH POSITION 18\", \"people\": \"SYNTH PERSON 18\"}, {\"role\": \"SYNTH POSITION 19\", \"people\": \"SYNTH PERSON 19\"}, {\"role\": \"SYNTH POSITION 20\", \"people\": \"SYNTH PERSON 20\"}, {\"role\": \"SYNTH POSITION 21\", \"people\": \"SYNTH PERSON 21\"}, {\"role\": \"SYNTH POSITION 22\", \"people\": \"SYNTH PERSON 22\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 6\", \"detail\": \"YARD 6\", \"xn\": true, \"rtg\": false, \"f20\": 7, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 7\", \"detail\": \"YARD 7\", \"xn\": true, \"rtg\": false, \"f20\": 8, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 8\", \"detail\": \"YARD 8\", \"xn\": true, \"rtg\": false, \"f20\": 9, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 9\", \"detail\": \"YARD 9\", \"xn\": true, \"rtg\": false, \"f20\": 10, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 10\", \"detail\": \"YARD 10\", \"xn\": true, \"rtg\": false, \"f20\": 11, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 11\", \"detail\": \"YARD 11\", \"xn\": true, \"rtg\": false, \"f20\": 12, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 12\", \"detail\": \"YARD 12\", \"xn\": true, \"rtg\": false, \"f20\": 13, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 13\", \"detail\": \"YARD 13\", \"xn\": true, \"rtg\": false, \"f20\": 14, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 14\", \"detail\": \"YARD 14\", \"xn\": true, \"rtg\": false, \"f20\": 15, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 15\", \"detail\": \"YARD 15\", \"xn\": true, \"rtg\": false, \"f20\": 16, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 16\", \"detail\": \"YARD 16\", \"xn\": true, \"rtg\": false, \"f20\": 17, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 17\", \"detail\": \"YARD 17\", \"xn\": true, \"rtg\": false, \"f20\": 18, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 18\", \"detail\": \"YARD 18\", \"xn\": true, \"rtg\": false, \"f20\": 19, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 19\", \"detail\": \"YARD 19\", \"xn\": true, \"rtg\": false, \"f20\": 20, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 20\", \"detail\": \"YARD 20\", \"xn\": true, \"rtg\": false, \"f20\": 21, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 21\", \"detail\": \"YARD 21\", \"xn\": true, \"rtg\": false, \"f20\": 22, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 22\", \"detail\": \"YARD 22\", \"xn\": true, \"rtg\": false, \"f20\": 23, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 23\", \"detail\": \"YARD 23\", \"xn\": true, \"rtg\": false, \"f20\": 24, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 24\", \"detail\": \"YARD 24\", \"xn\": true, \"rtg\": false, \"f20\": 25, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 25\", \"detail\": \"YARD 25\", \"xn\": true, \"rtg\": false, \"f20\": 26, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 26\", \"detail\": \"YARD 26\", \"xn\": true, \"rtg\": false, \"f20\": 27, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 27\", \"detail\": \"YARD 27\", \"xn\": true, \"rtg\": false, \"f20\": 28, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 28\", \"detail\": \"YARD 28\", \"xn\": true, \"rtg\": false, \"f20\": 29, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 29\", \"detail\": \"YARD 29\", \"xn\": true, \"rtg\": false, \"f20\": 30, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 3,
+        "report_id": "2026-10-03_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE ready\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 8,
+        "report_id": "2026-10-03_DAY",
+        "version": 2,
+        "saved_at": "2026-11-08T15:40:50+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Chốt ca",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"LOCAL ORACLE ready\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "close",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 11,
+        "report_id": "2026-10-03_DAY",
+        "version": 3,
+        "saved_at": "2026-11-08T15:40:52+07:00",
+        "actor": "SYNTH REVIEWER",
+        "reason": "Bổ sung từ DB • SYNTHETIC CORRECTION REASON • Nhập về máy chính 2026-11-08T15:40:54+07:00",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH REVIEWER\", \"status\": \"closed\", \"notes\": \"SYNTH REVIEWER READY CHANGE\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "correction",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 4,
+        "report_id": "2026-10-04_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE conflict\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 9,
+        "report_id": "2026-10-04_DAY",
+        "version": 2,
+        "saved_at": "2026-11-08T15:40:51+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Chốt ca",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"LOCAL ORACLE conflict\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "close",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 10,
+        "report_id": "2026-10-04_DAY",
+        "version": 3,
+        "saved_at": "2026-11-08T15:40:53+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "SYNTHETIC CORRECTION REASON",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"SYNTH MAIN WINNER\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 6,
+        "report_id": "2026-10-05_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-05\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-empty\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 7,
+        "report_id": "2026-10-06_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-06\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-open\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": [{\"text\": \"SYNTH UNFINISHED\", \"done\": false}, {\"text\": \"SYNTH DONE\", \"done\": true}]}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      }
+    ]
+  },
+  "pre_import": {
+    "sha256": "61e2b9ff6536566d51c4979639472c10d876d88ff201c684aebf6a32c7abf2e2",
+    "integrity": "ok",
+    "reports": {
+      "2026-09-01_DAY": {
+        "id": "2026-09-01_DAY",
+        "day": "2026-09-01",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-09-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE first\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-01_DAY": {
+        "id": "2026-10-01_DAY",
+        "day": "2026-10-01",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE short\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-02_DAY": {
+        "id": "2026-10-02_DAY",
+        "day": "2026-10-02",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-02\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE long\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1; SYNTH CHIEF 2\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}, {\"role\": \"SYNTH POSITION 8\", \"people\": \"SYNTH PERSON 08\"}, {\"role\": \"SYNTH POSITION 9\", \"people\": \"SYNTH PERSON 09\"}, {\"role\": \"SYNTH POSITION 10\", \"people\": \"SYNTH PERSON 10\"}, {\"role\": \"SYNTH POSITION 11\", \"people\": \"SYNTH PERSON 11\"}, {\"role\": \"SYNTH POSITION 12\", \"people\": \"SYNTH PERSON 12\"}, {\"role\": \"SYNTH POSITION 13\", \"people\": \"SYNTH PERSON 13\"}, {\"role\": \"SYNTH POSITION 14\", \"people\": \"SYNTH PERSON 14\"}, {\"role\": \"SYNTH POSITION 15\", \"people\": \"SYNTH PERSON 15\"}, {\"role\": \"SYNTH POSITION 16\", \"people\": \"SYNTH PERSON 16\"}, {\"role\": \"SYNTH POSITION 17\", \"people\": \"SYNTH PERSON 17\"}, {\"role\": \"SYNTH POSITION 18\", \"people\": \"SYNTH PERSON 18\"}, {\"role\": \"SYNTH POSITION 19\", \"people\": \"SYNTH PERSON 19\"}, {\"role\": \"SYNTH POSITION 20\", \"people\": \"SYNTH PERSON 20\"}, {\"role\": \"SYNTH POSITION 21\", \"people\": \"SYNTH PERSON 21\"}, {\"role\": \"SYNTH POSITION 22\", \"people\": \"SYNTH PERSON 22\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 6\", \"detail\": \"YARD 6\", \"xn\": true, \"rtg\": false, \"f20\": 7, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 7\", \"detail\": \"YARD 7\", \"xn\": true, \"rtg\": false, \"f20\": 8, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 8\", \"detail\": \"YARD 8\", \"xn\": true, \"rtg\": false, \"f20\": 9, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 9\", \"detail\": \"YARD 9\", \"xn\": true, \"rtg\": false, \"f20\": 10, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 10\", \"detail\": \"YARD 10\", \"xn\": true, \"rtg\": false, \"f20\": 11, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 11\", \"detail\": \"YARD 11\", \"xn\": true, \"rtg\": false, \"f20\": 12, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 12\", \"detail\": \"YARD 12\", \"xn\": true, \"rtg\": false, \"f20\": 13, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 13\", \"detail\": \"YARD 13\", \"xn\": true, \"rtg\": false, \"f20\": 14, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 14\", \"detail\": \"YARD 14\", \"xn\": true, \"rtg\": false, \"f20\": 15, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 15\", \"detail\": \"YARD 15\", \"xn\": true, \"rtg\": false, \"f20\": 16, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 16\", \"detail\": \"YARD 16\", \"xn\": true, \"rtg\": false, \"f20\": 17, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 17\", \"detail\": \"YARD 17\", \"xn\": true, \"rtg\": false, \"f20\": 18, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 18\", \"detail\": \"YARD 18\", \"xn\": true, \"rtg\": false, \"f20\": 19, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 19\", \"detail\": \"YARD 19\", \"xn\": true, \"rtg\": false, \"f20\": 20, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 20\", \"detail\": \"YARD 20\", \"xn\": true, \"rtg\": false, \"f20\": 21, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 21\", \"detail\": \"YARD 21\", \"xn\": true, \"rtg\": false, \"f20\": 22, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 22\", \"detail\": \"YARD 22\", \"xn\": true, \"rtg\": false, \"f20\": 23, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 23\", \"detail\": \"YARD 23\", \"xn\": true, \"rtg\": false, \"f20\": 24, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 24\", \"detail\": \"YARD 24\", \"xn\": true, \"rtg\": false, \"f20\": 25, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 25\", \"detail\": \"YARD 25\", \"xn\": true, \"rtg\": false, \"f20\": 26, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 26\", \"detail\": \"YARD 26\", \"xn\": true, \"rtg\": false, \"f20\": 27, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 27\", \"detail\": \"YARD 27\", \"xn\": true, \"rtg\": false, \"f20\": 28, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 28\", \"detail\": \"YARD 28\", \"xn\": true, \"rtg\": false, \"f20\": 29, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 29\", \"detail\": \"YARD 29\", \"xn\": true, \"rtg\": false, \"f20\": 30, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-03_DAY": {
+        "id": "2026-10-03_DAY",
+        "day": "2026-10-03",
+        "shift": "DAY",
+        "version": 2,
+        "status": "closed",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:40:50+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"LOCAL ORACLE ready\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-04_DAY": {
+        "id": "2026-10-04_DAY",
+        "day": "2026-10-04",
+        "shift": "DAY",
+        "version": 3,
+        "status": "closed",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:40:53+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"SYNTH MAIN WINNER\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-05_DAY": {
+        "id": "2026-10-05_DAY",
+        "day": "2026-10-05",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-05\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-empty\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-06_DAY": {
+        "id": "2026-10-06_DAY",
+        "day": "2026-10-06",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-06\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-open\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": [{\"text\": \"SYNTH UNFINISHED\", \"done\": false}, {\"text\": \"SYNTH DONE\", \"done\": true}]}"
+      }
+    },
+    "revisions": [
+      {
+        "id": 5,
+        "report_id": "2026-09-01_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-09-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE first\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 1,
+        "report_id": "2026-10-01_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE short\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 2,
+        "report_id": "2026-10-02_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-02\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE long\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1; SYNTH CHIEF 2\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}, {\"role\": \"SYNTH POSITION 8\", \"people\": \"SYNTH PERSON 08\"}, {\"role\": \"SYNTH POSITION 9\", \"people\": \"SYNTH PERSON 09\"}, {\"role\": \"SYNTH POSITION 10\", \"people\": \"SYNTH PERSON 10\"}, {\"role\": \"SYNTH POSITION 11\", \"people\": \"SYNTH PERSON 11\"}, {\"role\": \"SYNTH POSITION 12\", \"people\": \"SYNTH PERSON 12\"}, {\"role\": \"SYNTH POSITION 13\", \"people\": \"SYNTH PERSON 13\"}, {\"role\": \"SYNTH POSITION 14\", \"people\": \"SYNTH PERSON 14\"}, {\"role\": \"SYNTH POSITION 15\", \"people\": \"SYNTH PERSON 15\"}, {\"role\": \"SYNTH POSITION 16\", \"people\": \"SYNTH PERSON 16\"}, {\"role\": \"SYNTH POSITION 17\", \"people\": \"SYNTH PERSON 17\"}, {\"role\": \"SYNTH POSITION 18\", \"people\": \"SYNTH PERSON 18\"}, {\"role\": \"SYNTH POSITION 19\", \"people\": \"SYNTH PERSON 19\"}, {\"role\": \"SYNTH POSITION 20\", \"people\": \"SYNTH PERSON 20\"}, {\"role\": \"SYNTH POSITION 21\", \"people\": \"SYNTH PERSON 21\"}, {\"role\": \"SYNTH POSITION 22\", \"people\": \"SYNTH PERSON 22\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 6\", \"detail\": \"YARD 6\", \"xn\": true, \"rtg\": false, \"f20\": 7, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 7\", \"detail\": \"YARD 7\", \"xn\": true, \"rtg\": false, \"f20\": 8, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 8\", \"detail\": \"YARD 8\", \"xn\": true, \"rtg\": false, \"f20\": 9, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 9\", \"detail\": \"YARD 9\", \"xn\": true, \"rtg\": false, \"f20\": 10, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 10\", \"detail\": \"YARD 10\", \"xn\": true, \"rtg\": false, \"f20\": 11, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 11\", \"detail\": \"YARD 11\", \"xn\": true, \"rtg\": false, \"f20\": 12, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 12\", \"detail\": \"YARD 12\", \"xn\": true, \"rtg\": false, \"f20\": 13, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 13\", \"detail\": \"YARD 13\", \"xn\": true, \"rtg\": false, \"f20\": 14, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 14\", \"detail\": \"YARD 14\", \"xn\": true, \"rtg\": false, \"f20\": 15, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 15\", \"detail\": \"YARD 15\", \"xn\": true, \"rtg\": false, \"f20\": 16, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 16\", \"detail\": \"YARD 16\", \"xn\": true, \"rtg\": false, \"f20\": 17, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 17\", \"detail\": \"YARD 17\", \"xn\": true, \"rtg\": false, \"f20\": 18, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 18\", \"detail\": \"YARD 18\", \"xn\": true, \"rtg\": false, \"f20\": 19, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 19\", \"detail\": \"YARD 19\", \"xn\": true, \"rtg\": false, \"f20\": 20, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 20\", \"detail\": \"YARD 20\", \"xn\": true, \"rtg\": false, \"f20\": 21, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 21\", \"detail\": \"YARD 21\", \"xn\": true, \"rtg\": false, \"f20\": 22, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 22\", \"detail\": \"YARD 22\", \"xn\": true, \"rtg\": false, \"f20\": 23, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 23\", \"detail\": \"YARD 23\", \"xn\": true, \"rtg\": false, \"f20\": 24, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 24\", \"detail\": \"YARD 24\", \"xn\": true, \"rtg\": false, \"f20\": 25, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 25\", \"detail\": \"YARD 25\", \"xn\": true, \"rtg\": false, \"f20\": 26, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 26\", \"detail\": \"YARD 26\", \"xn\": true, \"rtg\": false, \"f20\": 27, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 27\", \"detail\": \"YARD 27\", \"xn\": true, \"rtg\": false, \"f20\": 28, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 28\", \"detail\": \"YARD 28\", \"xn\": true, \"rtg\": false, \"f20\": 29, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 29\", \"detail\": \"YARD 29\", \"xn\": true, \"rtg\": false, \"f20\": 30, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 3,
+        "report_id": "2026-10-03_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE ready\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 8,
+        "report_id": "2026-10-03_DAY",
+        "version": 2,
+        "saved_at": "2026-11-08T15:40:50+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Chốt ca",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"LOCAL ORACLE ready\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "close",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 4,
+        "report_id": "2026-10-04_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE conflict\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 9,
+        "report_id": "2026-10-04_DAY",
+        "version": 2,
+        "saved_at": "2026-11-08T15:40:51+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Chốt ca",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"LOCAL ORACLE conflict\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "close",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 10,
+        "report_id": "2026-10-04_DAY",
+        "version": 3,
+        "saved_at": "2026-11-08T15:40:53+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "SYNTHETIC CORRECTION REASON",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"SYNTH MAIN WINNER\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 6,
+        "report_id": "2026-10-05_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-05\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-empty\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 7,
+        "report_id": "2026-10-06_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-06\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-open\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": [{\"text\": \"SYNTH UNFINISHED\", \"done\": false}, {\"text\": \"SYNTH DONE\", \"done\": true}]}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      }
+    ]
+  },
+  "reviewer_export": {
+    "sha256": "4bae3b304b5981dff86b1aef8359ad072587c987a15a954605e5a84d381c36e5",
+    "integrity": "ok",
+    "reports": {
+      "2026-09-01_DAY": {
+        "id": "2026-09-01_DAY",
+        "day": "2026-09-01",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-09-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE first\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-01_DAY": {
+        "id": "2026-10-01_DAY",
+        "day": "2026-10-01",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE short\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-02_DAY": {
+        "id": "2026-10-02_DAY",
+        "day": "2026-10-02",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-02\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE long\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1; SYNTH CHIEF 2\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}, {\"role\": \"SYNTH POSITION 8\", \"people\": \"SYNTH PERSON 08\"}, {\"role\": \"SYNTH POSITION 9\", \"people\": \"SYNTH PERSON 09\"}, {\"role\": \"SYNTH POSITION 10\", \"people\": \"SYNTH PERSON 10\"}, {\"role\": \"SYNTH POSITION 11\", \"people\": \"SYNTH PERSON 11\"}, {\"role\": \"SYNTH POSITION 12\", \"people\": \"SYNTH PERSON 12\"}, {\"role\": \"SYNTH POSITION 13\", \"people\": \"SYNTH PERSON 13\"}, {\"role\": \"SYNTH POSITION 14\", \"people\": \"SYNTH PERSON 14\"}, {\"role\": \"SYNTH POSITION 15\", \"people\": \"SYNTH PERSON 15\"}, {\"role\": \"SYNTH POSITION 16\", \"people\": \"SYNTH PERSON 16\"}, {\"role\": \"SYNTH POSITION 17\", \"people\": \"SYNTH PERSON 17\"}, {\"role\": \"SYNTH POSITION 18\", \"people\": \"SYNTH PERSON 18\"}, {\"role\": \"SYNTH POSITION 19\", \"people\": \"SYNTH PERSON 19\"}, {\"role\": \"SYNTH POSITION 20\", \"people\": \"SYNTH PERSON 20\"}, {\"role\": \"SYNTH POSITION 21\", \"people\": \"SYNTH PERSON 21\"}, {\"role\": \"SYNTH POSITION 22\", \"people\": \"SYNTH PERSON 22\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 6\", \"detail\": \"YARD 6\", \"xn\": true, \"rtg\": false, \"f20\": 7, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 7\", \"detail\": \"YARD 7\", \"xn\": true, \"rtg\": false, \"f20\": 8, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 8\", \"detail\": \"YARD 8\", \"xn\": true, \"rtg\": false, \"f20\": 9, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 9\", \"detail\": \"YARD 9\", \"xn\": true, \"rtg\": false, \"f20\": 10, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 10\", \"detail\": \"YARD 10\", \"xn\": true, \"rtg\": false, \"f20\": 11, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 11\", \"detail\": \"YARD 11\", \"xn\": true, \"rtg\": false, \"f20\": 12, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 12\", \"detail\": \"YARD 12\", \"xn\": true, \"rtg\": false, \"f20\": 13, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 13\", \"detail\": \"YARD 13\", \"xn\": true, \"rtg\": false, \"f20\": 14, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 14\", \"detail\": \"YARD 14\", \"xn\": true, \"rtg\": false, \"f20\": 15, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 15\", \"detail\": \"YARD 15\", \"xn\": true, \"rtg\": false, \"f20\": 16, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 16\", \"detail\": \"YARD 16\", \"xn\": true, \"rtg\": false, \"f20\": 17, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 17\", \"detail\": \"YARD 17\", \"xn\": true, \"rtg\": false, \"f20\": 18, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 18\", \"detail\": \"YARD 18\", \"xn\": true, \"rtg\": false, \"f20\": 19, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 19\", \"detail\": \"YARD 19\", \"xn\": true, \"rtg\": false, \"f20\": 20, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 20\", \"detail\": \"YARD 20\", \"xn\": true, \"rtg\": false, \"f20\": 21, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 21\", \"detail\": \"YARD 21\", \"xn\": true, \"rtg\": false, \"f20\": 22, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 22\", \"detail\": \"YARD 22\", \"xn\": true, \"rtg\": false, \"f20\": 23, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 23\", \"detail\": \"YARD 23\", \"xn\": true, \"rtg\": false, \"f20\": 24, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 24\", \"detail\": \"YARD 24\", \"xn\": true, \"rtg\": false, \"f20\": 25, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 25\", \"detail\": \"YARD 25\", \"xn\": true, \"rtg\": false, \"f20\": 26, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 26\", \"detail\": \"YARD 26\", \"xn\": true, \"rtg\": false, \"f20\": 27, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 27\", \"detail\": \"YARD 27\", \"xn\": true, \"rtg\": false, \"f20\": 28, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 28\", \"detail\": \"YARD 28\", \"xn\": true, \"rtg\": false, \"f20\": 29, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 29\", \"detail\": \"YARD 29\", \"xn\": true, \"rtg\": false, \"f20\": 30, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-03_DAY": {
+        "id": "2026-10-03_DAY",
+        "day": "2026-10-03",
+        "shift": "DAY",
+        "version": 3,
+        "status": "closed",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:40:52+07:00",
+        "actor": "SYNTH REVIEWER",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH REVIEWER\", \"status\": \"closed\", \"notes\": \"SYNTH REVIEWER READY CHANGE\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-04_DAY": {
+        "id": "2026-10-04_DAY",
+        "day": "2026-10-04",
+        "shift": "DAY",
+        "version": 3,
+        "status": "closed",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:40:52+07:00",
+        "actor": "SYNTH REVIEWER",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH REVIEWER\", \"status\": \"closed\", \"notes\": \"SYNTH REVIEWER CONFLICT CHANGE\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-05_DAY": {
+        "id": "2026-10-05_DAY",
+        "day": "2026-10-05",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-05\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-empty\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}"
+      },
+      "2026-10-06_DAY": {
+        "id": "2026-10-06_DAY",
+        "day": "2026-10-06",
+        "shift": "DAY",
+        "version": 1,
+        "status": "draft",
+        "created_at": "2026-11-08T15:31:08+07:00",
+        "updated_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "payload": "{\"date\": \"2026-10-06\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-open\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": [{\"text\": \"SYNTH UNFINISHED\", \"done\": false}, {\"text\": \"SYNTH DONE\", \"done\": true}]}"
+      }
+    },
+    "revisions": [
+      {
+        "id": 5,
+        "report_id": "2026-09-01_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-09-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE first\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 1,
+        "report_id": "2026-10-01_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-01\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE short\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 2,
+        "report_id": "2026-10-02_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-02\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE long\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1; SYNTH CHIEF 2\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}, {\"role\": \"SYNTH POSITION 2\", \"people\": \"SYNTH PERSON 02\"}, {\"role\": \"SYNTH POSITION 3\", \"people\": \"SYNTH PERSON 03\"}, {\"role\": \"SYNTH POSITION 4\", \"people\": \"SYNTH PERSON 04\"}, {\"role\": \"SYNTH POSITION 5\", \"people\": \"SYNTH PERSON 05\"}, {\"role\": \"SYNTH POSITION 6\", \"people\": \"SYNTH PERSON 06\"}, {\"role\": \"SYNTH POSITION 7\", \"people\": \"SYNTH PERSON 07\"}, {\"role\": \"SYNTH POSITION 8\", \"people\": \"SYNTH PERSON 08\"}, {\"role\": \"SYNTH POSITION 9\", \"people\": \"SYNTH PERSON 09\"}, {\"role\": \"SYNTH POSITION 10\", \"people\": \"SYNTH PERSON 10\"}, {\"role\": \"SYNTH POSITION 11\", \"people\": \"SYNTH PERSON 11\"}, {\"role\": \"SYNTH POSITION 12\", \"people\": \"SYNTH PERSON 12\"}, {\"role\": \"SYNTH POSITION 13\", \"people\": \"SYNTH PERSON 13\"}, {\"role\": \"SYNTH POSITION 14\", \"people\": \"SYNTH PERSON 14\"}, {\"role\": \"SYNTH POSITION 15\", \"people\": \"SYNTH PERSON 15\"}, {\"role\": \"SYNTH POSITION 16\", \"people\": \"SYNTH PERSON 16\"}, {\"role\": \"SYNTH POSITION 17\", \"people\": \"SYNTH PERSON 17\"}, {\"role\": \"SYNTH POSITION 18\", \"people\": \"SYNTH PERSON 18\"}, {\"role\": \"SYNTH POSITION 19\", \"people\": \"SYNTH PERSON 19\"}, {\"role\": \"SYNTH POSITION 20\", \"people\": \"SYNTH PERSON 20\"}, {\"role\": \"SYNTH POSITION 21\", \"people\": \"SYNTH PERSON 21\"}, {\"role\": \"SYNTH POSITION 22\", \"people\": \"SYNTH PERSON 22\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 2\", \"detail\": \"YARD 2\", \"xn\": true, \"rtg\": false, \"f20\": 3, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 3\", \"detail\": \"YARD 3\", \"xn\": true, \"rtg\": false, \"f20\": 4, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 4\", \"detail\": \"YARD 4\", \"xn\": true, \"rtg\": false, \"f20\": 5, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 5\", \"detail\": \"YARD 5\", \"xn\": true, \"rtg\": false, \"f20\": 6, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 6\", \"detail\": \"YARD 6\", \"xn\": true, \"rtg\": false, \"f20\": 7, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 7\", \"detail\": \"YARD 7\", \"xn\": true, \"rtg\": false, \"f20\": 8, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 8\", \"detail\": \"YARD 8\", \"xn\": true, \"rtg\": false, \"f20\": 9, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 9\", \"detail\": \"YARD 9\", \"xn\": true, \"rtg\": false, \"f20\": 10, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 10\", \"detail\": \"YARD 10\", \"xn\": true, \"rtg\": false, \"f20\": 11, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 11\", \"detail\": \"YARD 11\", \"xn\": true, \"rtg\": false, \"f20\": 12, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 12\", \"detail\": \"YARD 12\", \"xn\": true, \"rtg\": false, \"f20\": 13, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 13\", \"detail\": \"YARD 13\", \"xn\": true, \"rtg\": false, \"f20\": 14, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 14\", \"detail\": \"YARD 14\", \"xn\": true, \"rtg\": false, \"f20\": 15, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 15\", \"detail\": \"YARD 15\", \"xn\": true, \"rtg\": false, \"f20\": 16, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 16\", \"detail\": \"YARD 16\", \"xn\": true, \"rtg\": false, \"f20\": 17, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 17\", \"detail\": \"YARD 17\", \"xn\": true, \"rtg\": false, \"f20\": 18, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 18\", \"detail\": \"YARD 18\", \"xn\": true, \"rtg\": false, \"f20\": 19, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 19\", \"detail\": \"YARD 19\", \"xn\": true, \"rtg\": false, \"f20\": 20, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 20\", \"detail\": \"YARD 20\", \"xn\": true, \"rtg\": false, \"f20\": 21, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 21\", \"detail\": \"YARD 21\", \"xn\": true, \"rtg\": false, \"f20\": 22, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 22\", \"detail\": \"YARD 22\", \"xn\": true, \"rtg\": false, \"f20\": 23, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 23\", \"detail\": \"YARD 23\", \"xn\": true, \"rtg\": false, \"f20\": 24, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 24\", \"detail\": \"YARD 24\", \"xn\": true, \"rtg\": false, \"f20\": 25, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 25\", \"detail\": \"YARD 25\", \"xn\": true, \"rtg\": false, \"f20\": 26, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 26\", \"detail\": \"YARD 26\", \"xn\": true, \"rtg\": false, \"f20\": 27, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 27\", \"detail\": \"YARD 27\", \"xn\": true, \"rtg\": false, \"f20\": 28, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 28\", \"detail\": \"YARD 28\", \"xn\": true, \"rtg\": false, \"f20\": 29, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 29\", \"detail\": \"YARD 29\", \"xn\": true, \"rtg\": false, \"f20\": 30, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 3,
+        "report_id": "2026-10-03_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE ready\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 8,
+        "report_id": "2026-10-03_DAY",
+        "version": 2,
+        "saved_at": "2026-11-08T15:40:50+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Chốt ca",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"LOCAL ORACLE ready\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "close",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 10,
+        "report_id": "2026-10-03_DAY",
+        "version": 3,
+        "saved_at": "2026-11-08T15:40:52+07:00",
+        "actor": "SYNTH REVIEWER",
+        "reason": "SYNTHETIC CORRECTION REASON",
+        "payload": "{\"date\": \"2026-10-03\", \"shift\": \"DAY\", \"actor\": \"SYNTH REVIEWER\", \"status\": \"closed\", \"notes\": \"SYNTH REVIEWER READY CHANGE\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "correction",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 4,
+        "report_id": "2026-10-04_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE conflict\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 9,
+        "report_id": "2026-10-04_DAY",
+        "version": 2,
+        "saved_at": "2026-11-08T15:40:51+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Chốt ca",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"closed\", \"notes\": \"LOCAL ORACLE conflict\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "close",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 11,
+        "report_id": "2026-10-04_DAY",
+        "version": 3,
+        "saved_at": "2026-11-08T15:40:52+07:00",
+        "actor": "SYNTH REVIEWER",
+        "reason": "SYNTHETIC CORRECTION REASON",
+        "payload": "{\"date\": \"2026-10-04\", \"shift\": \"DAY\", \"actor\": \"SYNTH REVIEWER\", \"status\": \"closed\", \"notes\": \"SYNTH REVIEWER CONFLICT CHANGE\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}, {\"role\": \"SYNTH POSITION 0\", \"people\": \"SYNTH PERSON 00\"}, {\"role\": \"SYNTH POSITION 1\", \"people\": \"SYNTH PERSON 01\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}, {\"name\": \"SYNTH JOB 1\", \"detail\": \"YARD 1\", \"xn\": true, \"rtg\": false, \"f20\": 2, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "correction",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 6,
+        "report_id": "2026-10-05_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-05\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-empty\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": []}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      },
+      {
+        "id": 7,
+        "report_id": "2026-10-06_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T15:31:08+07:00",
+        "actor": "SYNTH ACTOR",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-10-06\", \"shift\": \"DAY\", \"actor\": \"SYNTH ACTOR\", \"status\": \"draft\", \"notes\": \"LOCAL ORACLE handover-open\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"SYNTH CHIEF 1\"}], \"jobs\": [{\"name\": \"SYNTH JOB 0\", \"detail\": \"YARD 0\", \"xn\": true, \"rtg\": false, \"f20\": 1, \"f40\": 2, \"e20\": 0, \"e40\": 1}], \"handover\": [{\"text\": \"SYNTH UNFINISHED\", \"done\": false}, {\"text\": \"SYNTH DONE\", \"done\": true}]}",
+        "kind": "manual",
+        "os_user": "DELL",
+        "auth_user": null
+      }
+    ]
+  },
+  "assertions": {
+    "changedReportIDs": [
+      "2026-10-03_DAY"
+    ],
+    "conflictBExactUnchanged": true,
+    "unrelatedReportsExactUnchanged": true,
+    "AIncomingNotes": "SYNTH REVIEWER READY CHANGE",
+    "BWinnerNotes": "SYNTH MAIN WINNER",
+    "nonARevisionsExactUnchanged": true
+  }
+}

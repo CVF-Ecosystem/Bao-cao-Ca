@@ -1,0 +1,21 @@
+{
+  "action": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+  "beforeCandidate": "0f6ed11f3ea7ab80b3f3f850a10a87fcf6ce6cff",
+  "files": [
+    {
+      "path": "giao_dien/tai_nguyen/ung_dung.js",
+      "sha256": "8c2b4e6d86b2c495f79831234965ca00143f1630d10d120bde4e86e1e864f0b3",
+      "LF": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/local_ui.js",
+      "sha256": "20359ad8d340df6b9c48f1c7c303c513d1d29be364cc4fe707ac0f7811c67c14",
+      "LF": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+      "sha256": "a1307894c956a9194a95c8ea709c0c503de4529c47677eb37c28b8c41facbfff",
+      "LF": true
+    }
+  ]
+}

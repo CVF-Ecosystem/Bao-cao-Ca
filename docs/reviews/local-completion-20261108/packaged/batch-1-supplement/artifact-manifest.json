@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1-supplement/final_main.db",
+      "sha256": "b1c568a753eb8fb9f64bf89c2298a5951793dc21cbb483017cbe783de0700c81",
+      "bytes": 94208
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1-supplement/pre_import.db",
+      "sha256": "61e2b9ff6536566d51c4979639472c10d876d88ff201c684aebf6a32c7abf2e2",
+      "bytes": 94208
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1-supplement/readonly-rows.json",
+      "sha256": "e79843c3fdff95001932f7104947e6186200f9d46d99912ebce76eab5ee48def",
+      "bytes": 84919
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/batch-1-supplement/reviewer_export.db",
+      "sha256": "4bae3b304b5981dff86b1aef8359ad072587c987a15a954605e5a84d381c36e5",
+      "bytes": 106496
+    }
+  ]
+}
