@@ -5,8 +5,8 @@ Memory class: POINTER_RECORD
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: DESIGN
-- Active phase: DESIGN
+- Current mode: BUILD
+- Active phase: BUILD
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md
 
 ## Startup and continuation
@@ -26,3 +26,11 @@ The operator requested a suitability comparison and roadmap before implementatio
 Product authority remains tai_lieu/ROADMAP_SAU_V1_9.md. Application/EXE acceptance and headed/native UI proof remain open. Antigravity headless DOM/DB evidence and Addendum were received with qualifications in .cvf/runtime/project-resume-20261107/antigravity-addendum-review.json; both original bundles remain unchanged. Prior supplemental setup, receipts, failures and learning are historical: docs/reviews/activation-history/, docs/reviews/core-reconciliation/history/ and docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md.
 
 This local mechanical acceptance proves no provider governance, universal enforcement, host loading or hosted CI execution.
+
+## PNI implementation intake — 2026-11-08
+
+Operator authorized orchestrated audit and implementation, Astra independent reviewer, Terra integration worker and Sol reader/packaging worker. Audit resolved ordinary technical choices without new business consent. Current first scope is PNI E1-E6, admitted criterion section in docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md, exact packet docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md. SPEC/ADR are in final independent review; no product code written yet. Root owns metadata/receipts/commit; workers do not commit. Next is independent exact action/control/supplemental assessment and successful fresh pre-dispatch before BUILD. Build uses isolated reviewed wheel-only dependencies; no global upgrade or real operational data. Later E7/identity/multi-department/sync and original product gaps remain separate. The earlier draft description above is preserved as planning history, not current execution authority.
+
+## PNI admitted BUILD — 2026-11-08
+
+Exact packet972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973 received independent Astra acceptance; fresh trusted pre-dispatch7/7 and restored-process doctor29/29 plus explicit PNI bootstrap passed. .cvf/workspace-activation.json now binds only this action; prior CRC receipt retained as history. Workers may execute only assigned E1-E6 scope, with Root commit owner and Astra independent review. Evidence: docs/reviews/personnel-import-20261108/. Tool environment failures and cache residue are preserved; process-local PATHEXT/ComSpec resolution was restored, no inherited source or policy bypass. Implementation/native proof remains pending.

@@ -1,0 +1,115 @@
+{
+  "exitCode": 2,
+  "phase": "pre-dispatch",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=eef6734ba0ff52cc8217de99814dc5b0a082f789 candidates=30 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [
+        {
+          "code": "BUNDLE_MISMATCH",
+          "locator": ".cvf/gate-profile.lock.json#/bundleSha256",
+          "message": "actual bytes of the inherited directory differ from the locked bundle digest"
+        },
+        {
+          "code": "BUNDLE_PIN_MISMATCH",
+          "locator": "scripts/cvf_gates",
+          "message": "actual inherited bytes differ from the expected CI pin"
+        },
+        {
+          "code": "UNEXPECTED_FILE",
+          "locator": "scripts/cvf_gates/__pycache__/cvf_dg_common.cpython-311.pyc",
+          "message": "file is not part of the pinned inherited set (a shadow module or cache would be imported or trusted)"
+        },
+        {
+          "code": "UNEXPECTED_FILE",
+          "locator": "scripts/cvf_gates/__pycache__/cvf_workspace_activation.cpython-311.pyc",
+          "message": "file is not part of the pinned inherited set (a shadow module or cache would be imported or trusted)"
+        }
+      ],
+      "notes": [],
+      "ok": false,
+      "outcome": "FAIL",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=eef6734ba0ff52cc8217de99814dc5b0a082f789 candidates=30 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar",
+        "closeability_contract"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROUTE-01"
+      ],
+      "controlId": "CVF-DG-ROUTE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md, docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+        "mechanical joins only; Local owns semantic acceptance"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-ACT-01",
+      "findings": [
+        {
+          "code": "ACT_SOURCE_INVENTORY",
+          "locator": ".cvf/workspace-activation.json",
+          "message": "ACT_SOURCE_INVENTORY: installed bundle changed"
+        }
+      ],
+      "notes": [
+        "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+      ],
+      "ok": false,
+      "outcome": "FAIL",
+      "reason": ""
+    }
+  ]
+}

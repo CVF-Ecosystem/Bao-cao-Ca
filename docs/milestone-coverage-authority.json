@@ -8,6 +8,10 @@
     "CRC": {
       "path": "docs/roadmaps/CORE_RECONCILIATION.md",
       "heading": "## Acceptance criteria"
+    },
+    "PNI": {
+      "path": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
+      "heading": "## Acceptance criteria \u2014 PNI"
     }
   },
   "repairControls": {

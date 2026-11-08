@@ -1,0 +1,12 @@
+{
+  "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+  "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973",
+  "criteria": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+  ]
+}

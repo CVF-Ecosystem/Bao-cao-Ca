@@ -25,9 +25,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Decisions.: `docs/decisions/`
 - Shared project learning, value-filtered parent intake and returned adoption.: `docs/reviews/learnings/`
 - Source and workbook-structure observations for the draft tan-thuan-port adoption assessment; no runtime or product acceptance.: `docs/reviews/tan-thuan-port-fit/`
+- Independent personnel-import design/action reviews, dependency source records and exact implementation/consumer evidence.: `docs/reviews/personnel-import-20261108/`
 - Existing product roadmap, API, assessments and prior evidence; preserve as product authority.: `tai_lieu/`
 - Reviews and evidence.: `docs/reviews/`
-- Roadmaps, including the draft tan-thuan-port suitability and personnel-import proposal; no implementation grant.: `docs/roadmaps/`
+- Roadmaps, including audited PNI personnel-import scope and separately owned future adoption proposals.: `docs/roadmaps/`
 - Specifications.: `docs/specs/`
 - Work orders.: `docs/work_orders/`
 

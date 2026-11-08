@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "overallStatus": "CURRENT_CORE_WORKSPACE_ACCEPTED",
-  "currentPhase": "DESIGN",
+  "overallStatus": "PNI_IMPLEMENTATION_IN_PROGRESS",
+  "currentPhase": "BUILD",
   "completedCapabilities": [
     "Pinned public Core68a7446 and canonical profile1.4 install with preserved workflow",
     "Current-Core project delegate with exact29 native checks and trusted explicit-packet bootstrap",
@@ -10,9 +10,11 @@
     "Actual clean committed local flow at 5fec5a122339486f5a85afa4276362e76691d61b",
     "Synchronized active continuity/catalog and preserved historical source/evidence"
   ],
-  "activeWorkOrders": [],
+  "activeWorkOrders": [
+    "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+  ],
   "knownLimitations": [
-    "tan-thuan-port suitability/Excel-personnel adoption roadmap is DRAFT in docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md; proposed criteria are not admitted and no Excel import, dependency, schema change or product BUILD is accepted",
+    "PNI E1-E6 exact action independently admitted; implementation, full release and exact Windows EXE/native acceptance are pending. E7 and later adoption remain out of scope.",
     "Application implementation and EXE/product acceptance are not reassessed by Core recovery",
     "Antigravity returned headless DOM/DB evidence is qualified in runtime receiving reviews; headed/native UI proof remains open",
     "Future action bytes and selected criteria require their own current assessment",

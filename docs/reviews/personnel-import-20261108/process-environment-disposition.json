@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-08",
+  "diagnosticMissingEnvironment": {
+    "PATHEXT": null,
+    "COMSPEC": null
+  },
+  "repair": "Process-local PATHEXT/ComSpec and explicit Git/Python Path; no policy/source/config edits",
+  "exitCode": 0,
+  "startedAt": "2026-11-08T05:32:36.196Z",
+  "endedAt": "2026-11-08T05:32:43.696Z",
+  "evidence": "docs/reviews/personnel-import-20261108/doctor-admitted-restored-environment.json",
+  "limits": "No global environment, policy, inherited code or offline-doctor override changed; native source and failures retained"
+}

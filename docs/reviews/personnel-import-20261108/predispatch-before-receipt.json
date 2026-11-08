@@ -1,0 +1,128 @@
+{
+  "exitCode": 2,
+  "phase": "pre-dispatch",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=eef6734ba0ff52cc8217de99814dc5b0a082f789 candidates=16 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=eef6734ba0ff52cc8217de99814dc5b0a082f789 candidates=16 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar",
+        "closeability_contract"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [
+        {
+          "code": "dispatch_continuity_bypassed",
+          "locator": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "message": "focused_checker_tests must depend on dispatch_continuity before implementation proof proceeds"
+        },
+        {
+          "code": "dispatch_continuity_invalid",
+          "locator": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "message": "dispatch_continuity commitOwner must be session-sync-steward"
+        },
+        {
+          "code": "dispatch_continuity_invalid",
+          "locator": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "message": "dispatch_continuity mutationSurface must name an exact AGENT_HANDOFF material-SHA marker"
+        },
+        {
+          "code": "dispatch_continuity_invalid",
+          "locator": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "message": "dispatch_continuity repairOwner must be session-sync-steward"
+        },
+        {
+          "code": "dispatch_continuity_invalid",
+          "locator": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "message": "dispatch_continuity topology must be EXACT_PATHS"
+        },
+        {
+          "code": "terminal_continuity_invalid",
+          "locator": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "message": "continuity commitOwner must be session-sync-steward"
+        },
+        {
+          "code": "terminal_continuity_invalid",
+          "locator": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "message": "continuity repairOwner must be session-sync-steward"
+        }
+      ],
+      "notes": [],
+      "ok": false,
+      "outcome": "FAIL",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROUTE-01"
+      ],
+      "controlId": "CVF-DG-ROUTE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md, docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+        "mechanical joins only; Local owns semantic acceptance"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-ACT-01",
+      "findings": [
+        {
+          "code": "ACT_ACTION_MISSING",
+          "locator": ".cvf/workspace-activation.json",
+          "message": "ACT_ACTION_MISSING: current action bindings required"
+        }
+      ],
+      "notes": [
+        "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+      ],
+      "ok": false,
+      "outcome": "FAIL",
+      "reason": ""
+    }
+  ]
+}

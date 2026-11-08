@@ -1,8 +1,14 @@
 # Đối chiếu tan-thuan-port và roadmap bổ sung nhân sự
 
-Status: DRAFT
+Status: DESIGN_REVIEW
 
 Ngày: 2026-11-08. Phạm vi hiện tại: đánh giá và thiết kế trước triển khai theo yêu cầu của chủ dự án. Roadmap sản phẩm gốc vẫn là [ROADMAP_SAU_V1_9.md](../../tai_lieu/ROADMAP_SAU_V1_9.md). Tài liệu này là đề xuất bổ sung, chưa cấp quyền BUILD và chưa chốt phiên bản phát hành.
+
+## Tiếp tục được yêu cầu — 2026-11-08
+
+Chủ dự án đã yêu cầu orchestrator audit và tiến hành làm, cho phép Terra triển khai, Sol xử lý phần khó và Astra review độc lập. Phạm vi PNI được Local chọn là E1–E6 nhập danh mục người dạng phẳng, giữ nguyên các bước xem trước/xác nhận và nghiệm thu EXE. Các câu mô tả chưa có quyền triển khai trong khảo sát ban đầu ở các mục sau là lịch sử thiết kế; quyền thực thi hiện tại chỉ có khi SPEC/work order mới và exact-action assessment được chấp nhận. E7, định danh, bảng phân ca và đồng bộ vẫn chưa được mở. Phiên bản ứng viên1.9.2 dùng cho đợt nhập này; D2 tối ưu sao lưu vẫn là việc riêng, số1.9.2 trước đó chỉ dự kiến và cần đặt lại khi đợt D2 được giao.
+
+Căn cứ độc lập: `docs/reviews/personnel-import-20261108/audit-astra.md`; SPEC và ADR tại `docs/specs/PERSONNEL_EXCEL_IMPORT.md`, `docs/decisions/ADR_PERSONNEL_EXCEL_READER.md`. Gói thực thi: `docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md`. Những quy tắc bảo toàn/khôi phục còn chưa chắc ở khảo sát được cụ thể hóa bằng phép thêm có giới hạn trong owner: chỉ ghi file người, từ chối trạng thái inactive/không nhất quán, không đè thay đổi ngoài khi rollback và kiểm tra thực tế các giới hạn reader.
 
 ## 1. Kết luận về tính phù hợp
 
@@ -119,44 +125,115 @@ Chi phí khảo sát hiện tại: thời gian chuẩn bị/review toàn phiên 
 
 Phần nhập Excel, gợi ý tổ, mã nhân viên và nhập bảng phân ca đều chưa được triển khai/nghiệm thu. EXE/UI và các đợt D2–D5 của roadmap gốc giữ phần tồn đọng riêng. Chưa có review độc lập R2 cho triển khai, chưa có quyền BUILD/dependency/migration/network hoặc đồng bộ hai dự án từ tài liệu này. Trạng thái sản phẩm không được nâng bằng kết quả kiểm tra tài liệu.
 
-### Machine coverage: finite planning/discovery only
+## Acceptance criteria — PNI
+
+Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết luận của toàn bộ roadmap sản phẩm. Các tiêu chí bắt buộc được ghi theo SPEC hiện hành; reviewer không hạ E6 thành headless/source-only để đóng việc.
+
+| ID | Required observable result |
+|---|---|
+| E1 | Flat personnel XLSX inspect, sheet/header/column selection and positive four-header eligibility work; unsupported formats and the three report-shaped inputs are refused without writes. |
+| E2 | Source-row preview, exact counts, exclusions, ambiguity/errors, transient fields and name-only limitation are visible and correct; inspect/cancel are write-free. |
+| E3 | Additive owner saves only selected new names, repeated input is no-op, inactive/inconsistent state refuses safely, unrelated catalog bytes/team/template semantics and historical report/revisions are preserved. |
+| E4 | Main-store/auth/context/digest/single-use300s plan checks hold; backup/write/DB/restore/concurrent-edit failures report honest verified recovery or recovery-required state with retained backup. |
+| E5 | Bounded actual ZIP/XML and transport parsing, strict relationships/formulas/types/physical limits and escaped rendering are verified, including actual hardened parser provenance in packaged runtime. |
+| E6 | Applicable full release groups and real exact clean committed Windows EXE headed import/picker/report/save/restart/export flow pass against synthetic oracle, with old-report preservation, artifact hashes, skips disclosed and independent reviewer acceptance; manual/import time and steps compared without invented threshold. |
+
+## Current PNI coverage
 
 ```cvf-milestone-coverage-json
 {
   "schemaVersion": "cvf.milestoneCoverage@1.0.0",
-  "authority": null,
+  "authority": {
+    "path": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
+    "heading": "## Acceptance criteria — PNI",
+    "sha256": "4ecc56d72ee80a5c2b3af7be5e4a41bf1e54cda5d3f292d3150c4441f33f4008"
+  },
   "milestone": {
-    "id": "TTP_FIT",
-    "consumer": "Project owner and development team",
-    "outcome": "A source-grounded suitability assessment and proposed adoption roadmap before implementation",
+    "id": "PNI",
+    "consumer": "Bai-container shift-report operator",
+    "outcome": "Safely add selected people from flat Excel and use them in a persisted/exported shift report",
     "checkpoint": {
-      "trigger": "Before promoting the proposal to a locked SPEC or dispatching implementation",
-      "owner": "Project orchestrator",
-      "decision": "Resolve source format and business scope, admit complete criterion authority and exact bounded work order; draft is not BUILD authority"
+      "trigger": "Before independent implementation dispatch and before exact Windows EXE acceptance",
+      "owner": "Root orchestrator with independent Astra review",
+      "decision": "Require all E1-E6 scope/evidence and exact admission; keep E7 and unrelated product gaps open"
     }
   },
   "phase": "PLAN",
   "action": {
-    "kind": "VERIFY",
-    "selected": [],
+    "kind": "PLAN",
+    "selected": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ],
     "owner": "Root orchestrator",
-    "output": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md and docs/reviews/tan-thuan-port-fit/source-observations.json",
-    "budgetMinutes": 45,
-    "stop": "Stop after the listed 20 source files and four workbook structures; no application replay, installation or implementation",
-    "next": "Review the draft, resolve the stated business-source gaps and author a bounded SPEC before any implementation work order",
-    "question": "Which personnel/reporting patterns are useful without duplicating existing capability or assuming incompatible source formats and identity semantics?",
-    "sourceBoundary": "The existing product roadmap, selected project catalog/staffing source and selected tan-thuan-port source plus four workbook structures captured in the local observation artifact; no operational report DB, raw personnel values or external services"
+    "output": "docs/specs/PERSONNEL_EXCEL_IMPORT.md and docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+    "budgetMinutes": 30,
+    "stop": "Stop on changed business/data/effect boundary or unresolved independent design blocker",
+    "next": "Independently assess exact implementation packet and require successful fresh pre-dispatch"
   },
-  "rows": [],
+  "rows": [
+    {
+      "id": "E1",
+      "state": "NOT_STARTED",
+      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
+      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "evidence": []
+    },
+    {
+      "id": "E2",
+      "state": "NOT_STARTED",
+      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
+      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "evidence": []
+    },
+    {
+      "id": "E3",
+      "state": "NOT_STARTED",
+      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
+      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "evidence": []
+    },
+    {
+      "id": "E4",
+      "state": "NOT_STARTED",
+      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
+      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "evidence": []
+    },
+    {
+      "id": "E5",
+      "state": "NOT_STARTED",
+      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
+      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "evidence": []
+    },
+    {
+      "id": "E6",
+      "state": "NOT_STARTED",
+      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
+      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "evidence": []
+    }
+  ],
   "supportingWork": [],
   "conclusions": {
     "tranche": "PENDING",
-    "trancheSummary": "Draft assessment delivered for design continuation; no terminal milestone acceptance claimed",
+    "trancheSummary": "Audited design and first implementation packet being admitted; no product acceptance yet",
     "trancheEvidence": [],
     "product": "PENDING",
-    "productSummary": "Adoption criteria E1-E7 are proposed and not admitted; existing product, EXE and UI gaps remain open",
+    "productSummary": "PNI E1-E6 pending; E7 and original product roadmap gaps separately owned",
     "acceptance": [],
-    "owner": "Project orchestrator"
+    "owner": "Root orchestrator"
   }
 }
 ```

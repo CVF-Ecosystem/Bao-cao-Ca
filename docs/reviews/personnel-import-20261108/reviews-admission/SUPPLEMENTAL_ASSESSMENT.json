@@ -1,0 +1,59 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+    "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973",
+    "criteria": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ]
+  },
+  "controlId": "SUPPLEMENTAL_ASSESSMENT",
+  "purpose": "SUPPLEMENTAL_ASSESSMENT",
+  "reviewer": "Astra 6 Medium / independent REVIEWER",
+  "authority": "Operator2026-11-08 authorized orchestrated audit and implementation; Root admitted bounded PNI E1-E6 and owns receipt/commit; Astra independently assessed exact contracts, effects and observed controls before worker BUILD.",
+  "decision": "ACCEPTED",
+  "reason": "Inspected active operator-local pack manifest identity reported by verified CORE_AND_SUPPLEMENTAL comparison: source manifest b2acf0b3d3bf52e6feb58fb71ac61227b71d29cc98d61f6781f4fbd71aea4125, active source662cc1f61. Read project-development application artifact d06b62387e015160a77658f333882a2a316d54ffd0421071354cf63a3730dd7a and applied lifecycle/milestone/native-reuse/readiness duties to PNI. PINNED_CORE remains executable source; no pack code substitution or delivery-as-acceptance claim. Missing referenced acceptance addendum is disclosed; installed controls and explicit requirement/proof table remain intact.",
+  "evidence": [
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-corrected-before-receipt.json",
+      "sha256": "ec8811a932a7f5815afd99d1c39dcca8f68c7388f96c1891075ceff37b69677b"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-corrected-process.json",
+      "sha256": "1a4699598850906037e474d9edc8d7cbb586e9dbd99ebd7c30e4877108e95366"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/configured-admission.json",
+      "sha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/comparison-admission.json",
+      "sha256": "19c4d882360a626cec8068b0b768f5cda39b29805d524dbbd9f67879a7c6fe88"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/audit-astra.md",
+      "sha256": "0057d88436f99cab011f1c37123c189f2561bf81a9cf889b4e26a5bfd10a0586"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/dependency-source-review.json",
+      "sha256": "8629e7ef690311b6603625280a52ecaa11519e04c4dc98362205ce61df45c545"
+    },
+    {
+      "path": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973"
+    },
+    {
+      "path": "docs/specs/PERSONNEL_EXCEL_IMPORT.md",
+      "sha256": "521f14e93ddf0b6d0db873f791138d544df3eb0ac832be6edad09081991b28a7"
+    },
+    {
+      "path": "docs/decisions/ADR_PERSONNEL_EXCEL_READER.md",
+      "sha256": "fb6811f2e41a54c714d4eead7ae2fafc4a7df8eafd84b3d572d58f9aecafb57c"
+    }
+  ],
+  "limits": "The observed pre-dispatch overall exit2 is retained because ACT_ACTION_MISSING reflects the old CRC receipt; six individual non-ACT PASS results are accepted, not a completed admission. Root must write the exact fresh receipt and obtain successful full pre-dispatch plus doctor before BUILD. No product/EXE acceptance, live provider governance, hosted CI, operational-data effect or public release is proven or granted. Wheel installation is limited to the reviewed set and isolated environment; empty advisory metadata does not certify security. Any changed contract/action bytes require reassessment."
+}

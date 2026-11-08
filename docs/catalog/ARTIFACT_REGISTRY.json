@@ -100,7 +100,7 @@
       "family": "governed_artifact_family",
       "path": "docs/roadmaps",
       "status": "ACTIVE",
-      "description": "Roadmaps, including the draft tan-thuan-port suitability and personnel-import proposal; no implementation grant."
+      "description": "Roadmaps, including audited PNI personnel-import scope and separately owned future adoption proposals."
     },
     {
       "id": "family-specs",
@@ -164,6 +164,13 @@
       "path": "docs/reviews/core-reconciliation",
       "status": "ACTIVE",
       "description": "Current-Core recovery design, exact-action reviews, immutable observations and preserved prior authority."
+    },
+    {
+      "id": "family-personnel-import-execution",
+      "family": "governed_artifact_family",
+      "path": "docs/reviews/personnel-import-20261108",
+      "status": "ACTIVE",
+      "description": "Independent personnel-import design/action reviews, dependency source records and exact implementation/consumer evidence."
     }
   ]
 }

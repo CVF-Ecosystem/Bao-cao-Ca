@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: SO_BAO_CAO_CA_V1_9
-- Current mode: DESIGN
-- Active phase: DESIGN
+- Current mode: BUILD
+- Active phase: BUILD
 - Active role: ORCHESTRATOR
-- Next allowed move: Review the draft tan-thuan-port adoption roadmap, resolve source/business scope and author a bounded SPEC; no product BUILD is admitted.
+- Next allowed move: Execute admitted PNI E1-E6 work order with Terra integration and Sol reader-packaging; return evidence to independent Astra review before candidate commit and exact Windows EXE proof.
 - Parked operator checkpoint: none
 
 ## Accepted current workspace
@@ -42,3 +42,13 @@ Role receipt: Root rehydrated DESIGN continuity and transitioned to REVIEWER for
 ## Historical setup
 
 Previous c4c8767/supplemental compatibility acceptance remains historical in docs/reviews/activation-history/ and workspace-activation review records. Prior handoff/manifest/policy/receipt/adapter originals are in docs/reviews/core-reconciliation/history/. Read docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md before similar recovery. Source and acceptance history were retained rather than relabelled as current-Core proof.
+
+## PNI work-order intake acknowledgment — 2026-11-08
+
+Root rehydrated continuity on the user-authorized audit/implementation request and recorded the role route before material BUILD: ORCHESTRATOR -> WORK_ORDER_AUTHOR for the exact joint packet, then ORCHESTRATOR/SESSION_SYNC_STEWARD for admission. Astra independently audited the first useful flat XLSX additive scope; Terra authored SPEC/ADR and Sol documented reader/build/native feasibility. No product code has been dispatched. DESIGN -> SPEC -> WORK_ORDER records now bind all E1-E6; authority registry PNI does not include the future E7 group mapping. Workers must rehydrate and acknowledge the finally admitted packet/handoff before implementation.
+
+Packet: docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md. Candidate1.9.2; Terra server/catalog/UI, Sol pure reader/dependencies/offline builder and sole headed-UI controller, Astra independent review, Root commit owner. Local metadata+wheel download/install effects will be limited to the reviewed packet after admission; no raw personnel/operational data or Core/rule-pack/gate mutation. Prior CRC receipt is preserved under docs/reviews/personnel-import-20261108/history/. Required next step is exact action review and fresh pre-dispatch, not reliance on prior doctor PASS. No operator checkpoint is parked.
+
+## PNI BUILD acknowledgment — 2026-11-08
+
+Root acknowledged current canonical continuity and the independently accepted exact packet before BUILD. Admission: docs/reviews/personnel-import-20261108/predispatch-admitted-clean.json (7/7), doctor-admitted-restored-environment.json (29/29 with explicit PNI bootstrap), action-admitted.json and Astra reviews-admission/. New receipt is action-specific; no future unknown action grant. Material-SHA baseline: eef6734ba0ff52cc8217de99814dc5b0a082f789 (unchanged application source before this tranche). Root records admission commit after committing; workers rehydrate and declare IMPLEMENTATION_WORKER before writes. Terra owns integration/version/API/user docs; Sol owns pure reader/dependencies/offline build and sole native UI; Astra remains independent. No operational data or inherited source edits.
