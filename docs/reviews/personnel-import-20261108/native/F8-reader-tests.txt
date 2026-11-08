@@ -1,0 +1,22 @@
+test_actual_expansion_members_and_cell_limits (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_actual_expansion_members_and_cell_limits) ... ok
+test_all_sheet_preflight_finishes_before_library_loader (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_all_sheet_preflight_finishes_before_library_loader) ... ok
+test_conflicting_codes_invalid_names_types_and_near_warning (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_conflicting_codes_invalid_names_types_and_near_warning) ... ok
+test_format_zip_traversal_duplicate_macro_relationship_entities (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_format_zip_traversal_duplicate_macro_relationship_entities) ... ok
+test_inspect_and_transient_mapping_oracle (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_inspect_and_transient_mapping_oracle) ... ok
+test_line_separators_and_locked_near_name_policy (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_line_separators_and_locked_near_name_policy) ... ok
+test_many_sheets_and_unsafe_merged_metadata (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_many_sheets_and_unsafe_merged_metadata) ... ok
+test_member_and_total_actual_byte_limits_without_large_library_parse (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_member_and_total_actual_byte_limits_without_large_library_parse) ... ok
+test_merged_range_and_unselected_sheet_physical_limits (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_merged_range_and_unselected_sheet_physical_limits) ... ok
+test_parser_provenance_and_unsafe_ambient_fail_closed (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_parser_provenance_and_unsafe_ambient_fail_closed) ... ok
+test_physical_coordinate_boundaries_and_metadata_dimension_ignored (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_physical_coordinate_boundaries_and_metadata_dimension_ignored) ... ok
+test_plain_header_profile_optional_name_only_and_error_locations (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_plain_header_profile_optional_name_only_and_error_locations) ... ok
+test_relationship_target_cannot_bypass_sheet_preflight (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_relationship_target_cannot_bypass_sheet_preflight) ... ok
+test_report_headers_and_mapping_refused (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_report_headers_and_mapping_refused) ... ok
+test_selected_formula_is_fatal_even_when_excluded (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_selected_formula_is_fatal_even_when_excluded) ... ok
+test_three_distinct_observed_report_structures_are_not_personnel_tables (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_three_distinct_observed_report_structures_are_not_personnel_tables) ... ok
+test_unicode_duplicates_and_exclusion (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_unicode_duplicates_and_exclusion) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.087s
+
+OK

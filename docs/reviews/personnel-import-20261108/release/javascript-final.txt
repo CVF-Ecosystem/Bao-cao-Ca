@@ -1,0 +1,19 @@
+6 protection UI behavior checks passed: state, escaping, preview, restore/context, directory picker, review/unsaved guard.
+4 JavaScript checks passed: chief, report export, summary export, backup context.
+OK preview and cancel never mutate report
+OK confirm replaces only configured positions and preserves other data
+OK switch rotating crew then append day staff without duplication
+OK day append preserves manual people and uses exact name deduplication
+OK multiple ship assignments remain separate for both rotating and day templates
+OK single ship keeps its vessel while receiving people
+OK explicit empty slot clears only after confirmation
+OK changed report or DB after preview blocks application
+OK readonly and in-flight save block application
+OK closed report stays closed and preview requires reason at save
+OK empty crew template cannot clear report
+OK template editor groups multiple people per position and preserves blank positions
+OK plan is a copy and rejects exceeding staff capacity
+13 template behavior tests passed (Node VM).
+Personnel UI: escaping, invalid replacement, deferred ordering, confirmation busy guard and failure recovery OK
+Personnel UI behavior tests passed: separate people/vessels, single selection, crew filtering, selected names preserved, legacy config fallback, readonly.
+6 kiểm tra giao diện 1.9 đạt: escape id, thanh trang, loadList, trang chủ, cảnh báo theo mức độ, tab nhập ca.

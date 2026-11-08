@@ -1,0 +1,12 @@
+{
+  "check": "git diff --cached --check with CR-at-EOL recognized",
+  "result": "NONZERO_KNOWN_LITERAL_WHITESPACE",
+  "paths": [
+    "THIRD_PARTY_NOTICES.md",
+    "docs/reviews/personnel-import-20261108/release/python-initial-failed.txt",
+    "docs/reviews/personnel-import-20261108/release/python-repair1-failed.txt"
+  ],
+  "basis": "Copied third-party license text and preserved historical failed-test output contain original trailing whitespace/EOF blank. Keep accepted raw source/license hash and historical evidence; no application code whitespace finding.",
+  "exceptionScope": "Manual advisory whitespace check only; inherited gates/tests unchanged and must pass",
+  "owner": "Root COMMIT_STEWARD"
+}

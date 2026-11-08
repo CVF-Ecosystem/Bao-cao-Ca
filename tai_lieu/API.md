@@ -140,3 +140,9 @@ Ghi lại để quyết định ở các đợt sau; không phải lỗi cần s
 1. Cập nhật tài liệu này và `kiem_thu/KIEM_THU_API.py` trong cùng thay đổi.
 2. Tuyến mới ghi dữ liệu cần chọn rõ: dùng `context` hay `version`, phạm vi (chung, desktop, quản trị) và mã lỗi.
 3. Giao diện gọi qua hàm `api()` trong `ung_dung.js` cho JSON; các lần tải lên/tải xuống dùng `fetch` riêng và cần tự xử lý lỗi theo bảng ở mục 1.
+
+## 9. Nhập danh mục nhân viên Excel (1.9.2)
+
+Bốn tuyến POST JSON `/api/personnel-xlsx-inspect`, `/api/personnel-xlsx-preview`, `/api/personnel-xlsx-confirm`, `/api/personnel-xlsx-cancel` yêu cầu phiên chính có quyền ghi, `context`, cookie và `X-Ca-Request`. Inspect nhận `{context,fileBase64}`; preview nhận thêm `expectedFileSha256`, `sheet`, `headerRow`, `columns:{name,code,title,group}` và `excludedRows`. Chỉ số hàng/cột bắt đầu từ 1. Confirm nhận `{context,nonce}`; cancel nhận `{context}`. Preview trả từng dòng, đếm kết quả, `canConfirm`, `nonce` có hiệu lực 300 giây và chỉ dùng một lần. Inspect/preview/cancel không ghi danh mục.
+
+Chỉ chấp nhận bảng nhân viên phẳng `.xlsx` trong giới hạn nén 2 MiB. Máy chủ đọc và kiểm tra lại dữ liệu, từ chối công thức tại cột được chọn, file mã hóa/macro, bảng báo cáo và cấu trúc không hỗ trợ. Chỉ họ tên được thêm; mã/chức danh/nhóm không được lưu hoặc dùng phân tổ. Xung đột context/digest hoặc danh mục chưa đồng bộ trả 409; lỗi phục hồi trả mã `RECOVERY_REQUIRED` cùng `backupId` để xử lý. Xem hợp đồng chi tiết `docs/specs/PERSONNEL_EXCEL_IMPORT.md`.

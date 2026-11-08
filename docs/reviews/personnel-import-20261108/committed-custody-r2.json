@@ -1,0 +1,66 @@
+{
+  "commit": "c855598",
+  "files": [
+    {
+      "path": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "commitSha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+      "workingSha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+      "equal": true
+    },
+    {
+      "path": "docs/specs/PERSONNEL_EXCEL_IMPORT.md",
+      "commitSha256": "521f14e93ddf0b6d0db873f791138d544df3eb0ac832be6edad09081991b28a7",
+      "workingSha256": "521f14e93ddf0b6d0db873f791138d544df3eb0ac832be6edad09081991b28a7",
+      "equal": true
+    },
+    {
+      "path": "docs/decisions/ADR_PERSONNEL_EXCEL_READER.md",
+      "commitSha256": "fb6811f2e41a54c714d4eead7ae2fafc4a7df8eafd84b3d572d58f9aecafb57c",
+      "workingSha256": "fb6811f2e41a54c714d4eead7ae2fafc4a7df8eafd84b3d572d58f9aecafb57c",
+      "equal": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-INST-01.json",
+      "commitSha256": "82ad2711e994e4687602ebf926b20dfa8315b607440f08f5f6e077661c3093d4",
+      "workingSha256": "82ad2711e994e4687602ebf926b20dfa8315b607440f08f5f6e077661c3093d4",
+      "equal": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-CONT-01.json",
+      "commitSha256": "745c85d50c9cc7dcacf01a831d88a547739bfccb1899e0cfe00664e1f38638c5",
+      "workingSha256": "745c85d50c9cc7dcacf01a831d88a547739bfccb1899e0cfe00664e1f38638c5",
+      "equal": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-RANGE-01.json",
+      "commitSha256": "1822c22521fa732433214b57c551b14a5d8336e41cce62fa3814503ac0517889",
+      "workingSha256": "1822c22521fa732433214b57c551b14a5d8336e41cce62fa3814503ac0517889",
+      "equal": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-APPL-01.json",
+      "commitSha256": "33a018ddf5d2d2940df7f2965d614313e0be17187f751dd5af3e1ca36419a5e6",
+      "workingSha256": "33a018ddf5d2d2940df7f2965d614313e0be17187f751dd5af3e1ca36419a5e6",
+      "equal": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-ROUTE-01.json",
+      "commitSha256": "f40a05fc651ac47a6c087f323ab192a8f6979e2f14094bbe6efff87c4c76db21",
+      "workingSha256": "f40a05fc651ac47a6c087f323ab192a8f6979e2f14094bbe6efff87c4c76db21",
+      "equal": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-COV-01.json",
+      "commitSha256": "46a8a090c5716ac7507f965d0b9f98a241c8f87ce7f02cedda178eab2e3dc303",
+      "workingSha256": "46a8a090c5716ac7507f965d0b9f98a241c8f87ce7f02cedda178eab2e3dc303",
+      "equal": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/SUPPLEMENTAL_ASSESSMENT.json",
+      "commitSha256": "344df634e3a9637c77dae1dcaf5ea13ee55027d856236d4859649d92577884f4",
+      "workingSha256": "344df634e3a9637c77dae1dcaf5ea13ee55027d856236d4859649d92577884f4",
+      "equal": true
+    }
+  ],
+  "allExact": true
+}

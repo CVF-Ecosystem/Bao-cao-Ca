@@ -1,0 +1,68 @@
+{
+  "observedAt": "2026-11-08T06:09:39.378Z",
+  "platform": "Windows; Python3.11.9 isolated reviewed build-venv",
+  "python": {
+    "command": "-B -m unittest discover -s kiem_thu -t . -p KIEM_THU*.py -v",
+    "ran": 189,
+    "exitCode": 0,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 38.621,
+    "log": {
+      "path": "docs/reviews/personnel-import-20261108/release/python-final.txt",
+      "sha256": "2594b192360d3546b64ed003350db3c4324fe65824be8d82c57d6c6e49ae92c2"
+    }
+  },
+  "javascript": {
+    "command": "node each kiem_thu/KIEM_THU*.js",
+    "files": [
+      "KIEM_THU_BAO_VE.js",
+      "KIEM_THU_GIAO_DIEN.js",
+      "KIEM_THU_MAU_CA.js",
+      "KIEM_THU_PERSONNEL_UI.js",
+      "KIEM_THU_PHAN_CONG.js",
+      "KIEM_THU_V1_9.js"
+    ],
+    "groups": 6,
+    "exitCode": 0,
+    "skips": 0,
+    "log": {
+      "path": "docs/reviews/personnel-import-20261108/release/javascript-final.txt",
+      "sha256": "04a1cb2dbdb913b072a0f8e1637e77114d2bba73f41cf651240bc4c393224f56"
+    }
+  },
+  "workspaceTests": {
+    "ran": 4,
+    "exitCode": 0,
+    "log": {
+      "path": "docs/reviews/personnel-import-20261108/release/workspace-tests.txt",
+      "sha256": "b5de7d51f995aae77c6bd1e69d9b16a983b319fd6ac344a198714251193a8112"
+    }
+  },
+  "sourceSmoke": {
+    "version": "1.9.2",
+    "build": "nguon",
+    "exitCode": 0,
+    "log": {
+      "path": "docs/reviews/personnel-import-20261108/release/source-smoke.txt",
+      "sha256": "57807186c01c7f69b288cf683d2066610776c7fc372cb74e10798dea3477c0d3"
+    }
+  },
+  "dependencies": {
+    "path": "docs/reviews/personnel-import-20261108/verified-wheels.json",
+    "sha256": "d8effd800a1d2355288c1ba933d9aa16c641692742f037ba9e2cad73f00852d5"
+  },
+  "failureHistory": [
+    {
+      "path": "docs/reviews/personnel-import-20261108/release/python-initial-failed.txt",
+      "sha256": "0286f45b7777b6d00af55696fd6c8d1c98a42d8fb6a7d66778ba32aab77b53da"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/release/python-repair1-failed.txt",
+      "sha256": "be6e141a804046bf8ddcdae73811d9d223551c12bbe72061e9daa8f2bd511898"
+    }
+  ],
+  "remaining": "Independent exact source-candidate acceptance, clean committed EXE build and E6 headed/native consumer proof",
+  "claimBoundary": "Technical suite only, no product completion/liveAI governance/hostedCI/deployment claim"
+}

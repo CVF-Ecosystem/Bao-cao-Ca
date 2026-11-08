@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: SO_BAO_CAO_CA_V1_9
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active role: ORCHESTRATOR
-- Next allowed move: Execute admitted PNI E1-E6 work order with Terra integration and Sol reader-packaging; return evidence to independent Astra review before candidate commit and exact Windows EXE proof.
+- Next allowed move: Root commits exact independently accepted clean source candidate; Sol builds that HEAD and completes E6 headed Windows import/picker/report/save/restart/export proof, then Astra reviews terminal evidence before closure.
 - Parked operator checkpoint: none
 
 ## Accepted current workspace
@@ -58,3 +58,25 @@ Root acknowledged current canonical continuity and the independently accepted ex
 Root rehydrated BUILD continuity. Exact packet fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20 independently accepted by Astra; r1 packet/receipt retained in history. Minimal PNI .gitattributes rules preserve review records and the exact SPEC/ADR raw bytes across checkout; staged25 records differ from prior Git only in line endings and match original working raw hashes. Fresh pre-dispatch7/7 and doctor29/29 plus explicit PNI bootstrap4/4 pass (predispatch-admitted-r2.json, doctor-admitted-r2.json). Root remains ORCHESTRATOR/SESSION_SYNC_STEWARD/COMMIT_STEWARD for admission, then dispatches bounded implementation. No product change or native acceptance yet.
 
 Worker acknowledgment: Terra rehydrated BUILD canonical continuity and declared IMPLEMENTATION_WORKER for exact fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20 before source writes. Root actual dispatch time is recorded in dispatch-start.json. Historical raw r1 packet is preserved as .snapshot to avoid classifying an archive as a current review; Astra made the path-only repair and updated its own r2 references. Fresh pre-dispatch/pre-commit after repair both7/7.
+
+Worker acknowledgment: Sol rehydrated BUILD canonical continuity, declared IMPLEMENTATION_WORKER and acknowledged exact fbc560 packet before assigned reader/dependency/tooling writes. Admission metadata commit c855598; implementation start bound by dispatch-start.json. Sol alone owns headed/native UI after clean independently reviewed candidate commit.
+
+## PNI source return / REVIEW acknowledgment — 2026-11-08
+
+Root rehydrated current continuity and transitions orchestration to REVIEW after Terra/Sol source returns. Astra stays independent reviewer; no worker changes beyond accepted bounded findings. Both focused returns received, initial full release179 Python fails one unused-import check; sixJS groups, checker4 and source launcher pass. Root owns aggregate proof and final clean candidate commit; Sol awaits candidate before EXE/native. E1-E5 unproved, E6pending, no closure. Active work order bytes remain fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20.
+
+## PNI consolidated repair round1 acknowledgment — 2026-11-08
+
+Root accepts Astra source-review-round1.json F1-F5 reviewer-local corrections with32targetedPASS and routes F6/F7 to Terra, F8 to Sol under unchanged exact packet fbc560. Reviewer-local boundary NEW_EVIDENCE_REQUIRED, all objective/design/paths/authority/effects/commit owner unchanged YES; no business or scope amendment. BUILD resumes only bounded remaining findings and LF source custody; workers declare REPAIR_WORKER and preserve prior failures. Return once to independent Astra review; E6 stays pending, no candidate/product acceptance. Root rehydrated current state/memory/handoff/implementation/index before repair dispatch.
+
+Repair worker acknowledgment: Terra rehydrated BUILD frontdoors, reviewed consolidated F6/F7, declared REPAIR_WORKER and acknowledged exact fbc560 action before repair source writes. Root owns this record.
+
+Repair worker acknowledgment/return: Sol records REPAIR_WORKER rehydration and exact fbc560 handoff acknowledgment before F8 in worker-sol.md. All three actual reference input hashes were unchanged after bounded in-memory refusal checks; no personal values retained.17reader testsPASS0skip. F8 evidence awaits Astra independent disposition; E6nativepending.
+
+## PNI repair round1 return / REVIEW acknowledgment — 2026-11-08
+
+Terra returned F6/F7 with23focusedPythonPASS0skip and deterministic deferred UI ordering checks; Sol returned F8 with17readerPASS0skip and actual3reference refusals. Root received current LF source hashes and preserved initial histories, rehydrated frontdoors, transitions to REVIEW for Astra independent re-review. Aggregate fullrelease repair1 is running; source smoke and all6JS groups alreadyPASS. No new action bytes, scope or product acceptance; Root sourcecandidate/ Sol E6 stillpending.
+
+## PNI accepted source candidate / commit stewardship — 2026-11-08
+
+Astra independently accepted the exact18-file LF source manifest source-candidate-review.json; Root verified every raw SHA. Full technical release189Python,6JSgroups,4workspace and source launcher1.9.2 passed with0skips; durable release-final.json/logs bind results and prior failures remain retained. Doctor-source-candidate.json CORE_ASSESSED29/29 plus4explicitbootstrap passes. Root assumes COMMIT_STEWARD for the reviewed local candidate commit, retaining ORCHESTRATOR/session sync responsibility. Native build/consumer E6 has not executed; no milestone/product closure. Module registry is PARTIAL until exact packaged proof. Root records candidate SHA to Sol immediately after commit; no new tracked edits before Sol clean build.

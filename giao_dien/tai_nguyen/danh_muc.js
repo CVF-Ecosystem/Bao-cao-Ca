@@ -160,7 +160,7 @@ async function manageCatalogs(){
   if(info.review)return toast('Về DB chính của máy để sửa danh mục.',true);
   try{
     catalogEditor=await api('/api/catalogs');
-    modal('<div class="row between"><div><div class="sectionno">CÀI ĐẶT DÙNG CHUNG</div><h2>Danh mục nhập báo cáo</h2></div><button onclick="closeModal()">Đóng</button></div><p class="muted">Mỗi dòng một tên. Áp dụng cho lần chọn tên và ca mới; báo cáo cũ giữ nguyên. Cũng có thể mở các file trong thư mục DANH_MUC để sửa bằng Notepad, lưu UTF-8.</p><div class="catalogColumns">'+[['people','Nhân viên','NHAN_VIEN.txt'],['roles','Vị trí phân công','VI_TRI.txt'],['jobs','Công việc','CONG_VIEC.txt']].map(([key,label,file])=>'<label class="input">'+label+'<span class="muted subtle">'+file+'</span><textarea id="catalog_'+key+'" rows="15">'+esc(catalogEditor[key])+'</textarea></label>').join('')+'</div>'+teamEditorHTML()+'<div class="note" style="margin-top:16px">Giữ vị trí PHỤ TRÁCH CHUNG để chốt ca. Không nhập trùng tên; không dùng dấu chấm phẩy trong tên. Tàu vẫn quản lý tại nút Danh sách tàu.</div><div class="row" style="justify-content:flex-end"><button onclick="closeModal()">Hủy</button><button class="primary" onclick="saveCatalogs()">Lưu danh mục</button></div>',true)
+    modal('<div class="row between"><div><div class="sectionno">CÀI ĐẶT DÙNG CHUNG</div><h2>Danh mục nhập báo cáo</h2></div><button onclick="closeModal()">Đóng</button></div><p class="muted">Mỗi dòng một tên. Áp dụng cho lần chọn tên và ca mới; báo cáo cũ giữ nguyên. Cũng có thể mở các file trong thư mục DANH_MUC để sửa bằng Notepad, lưu UTF-8.</p><div class="catalogColumns">'+[['people','Nhân viên','NHAN_VIEN.txt'],['roles','Vị trí phân công','VI_TRI.txt'],['jobs','Công việc','CONG_VIEC.txt']].map(([key,label,file])=>'<label class="input">'+label+'<span class="muted subtle">'+file+'</span><textarea id="catalog_'+key+'" rows="15">'+esc(catalogEditor[key])+'</textarea></label>').join('')+'</div>'+teamEditorHTML()+'<div class="note" style="margin-top:16px">Giữ vị trí PHỤ TRÁCH CHUNG để chốt ca. Không nhập trùng tên; không dùng dấu chấm phẩy trong tên. Tàu vẫn quản lý tại nút Danh sách tàu.</div><div class="row" style="justify-content:flex-end"><button onclick="closeModal()">Hủy</button><button onclick="personnelImportStart()">Nhập nhân viên Excel</button><button class="primary" onclick="saveCatalogs()">Lưu danh mục</button></div>',true)
   }catch(e){
     error(e)
   }
@@ -176,5 +176,106 @@ async function saveCatalogs(){
   }catch(e){
     error(e)
   }
+}
+let personnelImport=null;
+function personnelCurrent(state,generation){
+ return !!state && personnelImport===state && state.generation===generation && info?.context===state.context && !!$('personnelRoot') && !$('modal').classList.contains('hide');
+}
+async function personnelApi(path,body){
+ const res=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json','X-Ca-Request':'1'},body:JSON.stringify(body)});
+ const data=await res.json();
+ if(!res.ok){
+  const location=data.sheet?' (Sheet '+data.sheet+(data.row?', hàng '+data.row:'')+(data.column?', cột '+data.column:'')+')':'';
+  throw Error((data.error||'Chưa hoàn tất thao tác.')+location+(data.backupId?' Mã bản sao: '+data.backupId:''));
+ }
+ return data
+}
+async function personnelImportStart(){
+  personnelImport={file:null, hash:null, sheets:[], excluded:new Set(), nonce:null, generation:0, context:info.context};
+  modal('<div id="personnelRoot"><h2>Nhập nhân viên từ Excel</h2><p>Chỉ lưu họ tên; mã, chức danh và nhóm chỉ dùng xem trước. Danh mục nhận diện theo tên; không tự phân tổ.</p><label class="input">Chọn file .xlsx (tối đa 2 MiB)<input type="file" id="personnelFile" accept=".xlsx" onchange="personnelInspect()"></label><div id="personnelContent"></div><div class="row" style="justify-content:flex-end"><button onclick="personnelCancel()">Hủy</button></div></div>',true)
+}
+async function personnelInspect(){
+ const state=personnelImport;if(!state||state.confirming)return;
+ personnelInvalidate();
+ const generation=state.generation;
+ state.file=null;state.hash=null;state.sheets=[];state.excluded=new Set();
+ if($('personnelContent'))$('personnelContent').innerHTML='';
+ try{
+  const file=$('personnelFile').files[0];
+  if(!file||file.size>2*1024*1024)throw Error('Chọn file .xlsx tối đa 2 MiB.');
+  const bytes=new Uint8Array(await file.arrayBuffer());
+  if(!personnelCurrent(state,generation))return;
+  let binary=''; for(let i=0;i<bytes.length;i+=32768)binary+=String.fromCharCode(...bytes.subarray(i,i+32768));
+  const encoded=btoa(binary);
+  const d=await personnelApi('/api/personnel-xlsx-inspect',{context:state.context,fileBase64:encoded});
+  if(!personnelCurrent(state,generation))return;
+  state.file=encoded;state.hash=d.fileSha256;state.sheets=d.sheets;
+  personnelMapping();
+ }catch(e){if(personnelCurrent(state,generation))error(e)}
+}
+function personnelMapping(){
+ const state=personnelImport;
+ if(!state.sheets.length){$('personnelContent').textContent='Không có sheet được hỗ trợ.';return}
+ const opts=state.sheets.map((s,i)=>'<option value="'+i+'">'+esc(s.name)+'</option>').join('');
+ const cols=['name','code','title','group'].map((key,i)=>'<label class="input">'+['Họ tên (bắt buộc)','Mã nhân viên','Chức danh','Nhóm/Ca'][i]+'<input type="number" id="personnelCol_'+key+'" min="1" max="64" oninput="personnelInvalidate()" '+(i===0?'required value="2"':'value="'+(i===1?1:i===2?3:4)+'"')+'></label>').join('');
+ $('personnelContent').innerHTML='<div class="row"><label class="input">Sheet<select id="personnelSheet" onchange="personnelSample()">'+opts+'</select></label><label class="input">Hàng tiêu đề<input id="personnelHeader" oninput="personnelInvalidate()" type="number" min="1" max="2000" value="1"></label></div><p>Chọn số cột theo bảng mẫu; để trống cột không dùng. Hàng và cột bắt đầu từ 1.</p><div class="row">'+cols+'</div><div id="personnelSample"></div><button onclick="personnelPreview()">Xem trước</button><div id="personnelPlan"></div>';
+ personnelSample()
+}
+function personnelInvalidate(){
+ if(personnelImport?.confirming)return;
+ if(personnelImport){personnelImport.nonce=null;personnelImport.generation++;}
+ if($('personnelPlan'))$('personnelPlan').innerHTML='';
+}
+function personnelSample(){
+ if(personnelImport?.confirming)return;
+ const s=personnelImport.sheets[Number($('personnelSheet').value)];
+ $('personnelSample').innerHTML='<p class="muted">Mẫu tối đa 20 hàng đầu (số cột: nội dung)</p><div class="scroll">'+s.sample.map(r=>'<p>Hàng '+r.row+': '+r.cells.map(c=>c.column+': '+esc(c.value)).join(' | ')+'</p>').join('')+'</div>';
+ personnelInvalidate(); personnelImport.excluded=new Set();
+}
+async function personnelPreview(){
+ const state=personnelImport;if(!state||state.confirming)return;
+ personnelInvalidate();const generation=state.generation;
+ try{
+  const sheet=state.sheets[Number($('personnelSheet').value)].name;
+  const columns=Object.fromEntries(['name','code','title','group'].map(k=>[k,$('personnelCol_'+k).value===''?null:Number($('personnelCol_'+k).value)]));
+  state.nonce=null;
+  const d=await personnelApi('/api/personnel-xlsx-preview',{context:state.context,fileBase64:state.file,expectedFileSha256:state.hash,sheet,headerRow:Number($('personnelHeader').value),columns,excludedRows:[...state.excluded].sort((a,b)=>a-b)});
+  if(!personnelCurrent(state,generation))return;
+  state.nonce=d.nonce;
+  $('personnelPlan').innerHTML='<p>Mới: '+d.counts.new+' · Đã có: '+d.counts.existing+' · Lỗi: '+d.counts.error+' · Đã loại: '+d.counts.excluded+'</p><div class="scroll"><table><thead><tr><th>Loại</th><th>Hàng</th><th>Họ tên</th><th>Mã</th><th>Chức danh</th><th>Nhóm/Ca</th><th>Kết quả</th></tr></thead><tbody>'+d.rows.map(r=>'<tr><td><input type="checkbox" '+(r.status==='EXCLUDED'?'checked':'')+' onchange="personnelExclude('+r.row+',this.checked)"></td><td>'+r.row+'</td><td>'+esc(r.name)+'</td><td>'+esc(r.code)+'</td><td>'+esc(r.title)+'</td><td>'+esc(r.group)+'</td><td>'+esc(r.status)+' '+esc(r.messages.join('; '))+'</td></tr>').join('')+'</tbody></table></div>'+(d.canConfirm?'<button class="primary" onclick="personnelConfirm()">Xác nhận thêm nhân viên</button>':'<p>Chưa thể xác nhận; sửa file hoặc loại dòng lỗi rồi xem trước lại. Nếu không có người mới thì không cần nhập.</p>');
+ }catch(e){if(personnelCurrent(state,generation))error(e)}
+}
+function personnelExclude(row,exclude){
+ if(!personnelImport||personnelImport.confirming)return;
+ personnelImport.nonce=null; if(exclude)personnelImport.excluded.add(row);else personnelImport.excluded.delete(row);
+ personnelPreview()
+}
+async function personnelConfirm(){
+ const state=personnelImport;if(!state||state.confirming)return;
+ const generation=state.generation;
+ try{
+  if(!state.nonce)throw Error('Hãy xem trước lại.');
+  const nonce=state.nonce;state.nonce=null;
+  state.confirming=true;
+  document.querySelectorAll('#personnelRoot input, #personnelRoot select, #personnelRoot button').forEach(control=>{control.disabled=true});
+  const status=document.createElement('p');status.id='personnelBusy';status.textContent='Đang lưu nhân viên. Vui lòng chờ kết quả.';$('personnelRoot').appendChild(status);
+  const d=await personnelApi('/api/personnel-xlsx-confirm',{context:state.context,nonce});
+  if(!personnelCurrent(state,generation))return;
+  await refreshInfo();
+  if(!personnelCurrent(state,generation))return;
+  personnelImport=null;closeModal();toast('Đã thêm '+d.added+' nhân viên.');
+ }catch(e){if(personnelCurrent(state,generation))error(e)}
+ finally{
+  state.confirming=false;
+  if(personnelImport===state){
+   document.querySelectorAll('#personnelRoot input, #personnelRoot select, #personnelRoot button').forEach(control=>{control.disabled=false});
+   $('personnelBusy')?.remove();
+  }
+ }
+}
+async function personnelCancel(){
+ const state=personnelImport;if(!state||state.confirming)return;
+ state.generation++;personnelImport=null;closeModal();
+ try{await personnelApi('/api/personnel-xlsx-cancel',{context:state.context})}catch(e){/* Closed dialog: a later dialog must not be changed. */}
 }
 go('home');

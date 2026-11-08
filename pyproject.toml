@@ -1,4 +1,6 @@
-# Không bắt buộc để chạy ứng dụng (chỉ dùng thư viện chuẩn Python 3.9+).
+# Ứng dụng nhắm Python3.9+; nhập Excel cần requirements.txt (openpyxl/defusedxml/et-xmlfile).
+# Cài bằng pip --require-hashes --only-binary=:all: -r requirements.txt trong môi trường riêng.
+# Đóng gói Windows: Python>=3.10 và requirements-build.txt; builder không tự cài thư viện.
 # Cấu hình này dành cho máy phát triển có cài ruff:  ruff check .
 # Nếu chưa cài ruff, KIEM_THU_MA_NGUON.py đã kiểm tra cú pháp và import thừa bằng thư viện chuẩn.
 

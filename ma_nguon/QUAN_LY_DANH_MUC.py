@@ -95,6 +95,12 @@ def validate_team_members(data):
                 raise AppError(team['name']+': '+person+' chưa có trong danh mục Nhân viên. Thêm đúng họ tên ở Nhân viên trước.')
 
 
+class PersonnelSaveError(Exception):
+    def __init__(self, message, code, status, backup_id=None):
+        super().__init__(message)
+        self.code, self.status, self.backup_id = code, status, backup_id
+
+
 class Catalogs:
     def __init__(self, directory, main_store):
         self.directory = Path(directory)
@@ -183,6 +189,87 @@ class Catalogs:
                 shutil.rmtree(old, ignore_errors=True)
         except OSError:
             pass
+
+    def personnel_safe_snapshot(self, expected):
+        if self.raw_digest() != expected:
+            raise PersonnelSaveError('Danh mục đã thay đổi; xem trước lại.', 'STALE', 409)
+        try:
+            data = self.read()
+            snapshot = self.snapshot()
+            with self.store.connect() as conn:
+                rows = [(row['name'], row['active']) for row in conn.execute('SELECT name,active FROM people')]
+            if (any(active != 1 for _, active in rows) or
+                    sorted(name for name, _ in rows) != sorted(data['people']) or
+                    any(snapshot[key] != data[key] for key in ('roles', 'jobs', 'teams', 'staff_templates')) or
+                    snapshot['digest'] != data['digest']):
+                raise PersonnelSaveError('Danh mục hoặc DB chưa đồng bộ / có người ngừng hoạt động. Hãy đối chiếu danh mục trước.', 'CATALOG_UNSAFE', 409)
+            return data
+        except PersonnelSaveError:
+            raise
+        except (AppError, OSError, ValueError, TypeError) as exc:
+            raise PersonnelSaveError('Danh mục không an toàn để nhập; hãy đối chiếu danh mục.', 'CATALOG_UNSAFE', 409) from exc
+
+    def add_personnel(self, names, expected):
+        current = self.personnel_safe_snapshot(expected)
+        people = parse_lines('\n'.join(current['people'] + list(names)), 'people')
+        if not names or people != current['people'] + list(names):
+            raise PersonnelSaveError('Kế hoạch nhập không hợp lệ.', 'CATALOG_UNSAFE', 409)
+        originals = {}
+        backup_id = secrets.token_hex(8)
+        backup = self.directory / 'SAO_LUU' / backup_id
+        try:
+            for filename in FILES.values():
+                originals[filename] = (self.directory / filename).read_bytes()
+            backup.mkdir(parents=True)
+            for filename, content in originals.items():
+                (backup / filename).write_bytes(content)
+                if (backup / filename).read_bytes() != content:
+                    raise OSError('backup verification failed')
+        except OSError as exc:
+            raise PersonnelSaveError('Không tạo được bản sao danh mục; chưa nhập.', 'SAVE_FAILED', 500) from exc
+        self.personnel_safe_snapshot(expected)
+        people_path = self.directory / FILES['people']
+        temp = self.directory / (FILES['people'] + '.personnel.tmp')
+        written = serialize_catalog(people, 'people').encode('utf-8')
+        replaced = False
+        try:
+            with temp.open('wb') as f:
+                f.write(written)
+                f.flush()
+                os.fsync(f.fileno())
+            self.personnel_safe_snapshot(expected)
+            os.replace(temp, people_path)
+            replaced = True
+            result = self.sync()
+            if self.warning or sorted(result['people']) != sorted(people):
+                raise RuntimeError('catalog synchronization failed')
+            self.personnel_safe_snapshot(self.raw_digest())
+            if any((self.directory / filename).read_bytes() != content for filename, content in originals.items() if filename != FILES['people']):
+                raise RuntimeError('other catalog changed')
+            return result
+        except Exception as exc:
+            if not replaced:
+                if isinstance(exc, PersonnelSaveError):
+                    raise
+                raise PersonnelSaveError('Không thể nhập; danh mục chưa thay đổi.', 'SAVE_FAILED', 500, backup_id) from exc
+            try:
+                if people_path.read_bytes() != written:
+                    raise RuntimeError('people file changed externally')
+                restore = self.directory / (FILES['people'] + '.personnel.restore.tmp')
+                restore.write_bytes((backup / FILES['people']).read_bytes())
+                os.replace(restore, people_path)
+                self.sync()
+                if self.warning or any((self.directory / filename).read_bytes() != content for filename, content in originals.items()):
+                    raise RuntimeError('restore verification failed')
+                self.personnel_safe_snapshot(expected)
+            except Exception as restore_error:
+                raise PersonnelSaveError('Khôi phục chưa xác minh. Dừng chỉnh sửa và dùng bản sao danh mục.', 'RECOVERY_REQUIRED', 500, backup_id) from restore_error
+            raise PersonnelSaveError('Nhập thất bại; đã xác minh khôi phục danh mục.', 'SAVE_FAILED', 500, backup_id) from exc
+        finally:
+            try:
+                temp.unlink(missing_ok=True)
+            except OSError:
+                pass
 
     def save(self, text, expected):
         if not isinstance(text, dict):

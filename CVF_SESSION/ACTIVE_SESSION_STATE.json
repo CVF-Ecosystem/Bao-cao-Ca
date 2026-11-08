@@ -2,8 +2,8 @@
   "schemaVersion": "1.0",
   "continuityContract": "cvf.downstreamContinuityContract@1.0.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,7 +14,7 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
-  "nextAllowedMove": "Execute admitted PNI E1-E6 work order with Terra integration and Sol reader-packaging; return evidence to independent Astra review before candidate commit and exact Windows EXE proof.",
+  "nextAllowedMove": "Root commits exact independently accepted clean source candidate; Sol builds that HEAD and completes E6 headed Windows import/picker/report/save/restart/export proof, then Astra reviews terminal evidence before closure.",
   "parkedOperatorCheckpoint": null,
   "activeRole": "ORCHESTRATOR",
   "roleRoute": "INDEPENDENT_WORKER_AND_REVIEWER",

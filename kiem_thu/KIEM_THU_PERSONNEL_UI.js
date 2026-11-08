@@ -1,0 +1,45 @@
+'use strict';
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const elements=new Map();function el(id){if(!elements.has(id))elements.set(id,{value:'',innerHTML:'',textContent:'',files:[],classList:{add(){},remove(){},contains(){return false}}});return elements.get(id)}
+const controls=[{disabled:false},{disabled:false},{disabled:false}];
+const ctx={history:{replaceState(){}},document:{getElementById:el,addEventListener(){},querySelectorAll(){return []}},window:{addEventListener(){}},setTimeout,clearTimeout,URLSearchParams,encodeURIComponent,Uint8Array,btoa:s=>Buffer.from(s,'binary').toString('base64')};
+vm.createContext(ctx);const run=s=>vm.runInContext(s,ctx);
+ctx.document.querySelectorAll=selector=>selector.startsWith('#personnelRoot ')?controls:[];
+ctx.document.createElement=()=>({remove(){}});
+el('personnelRoot').appendChild=child=>elements.set(child.id,child);
+run(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/ung_dung.js','utf8'));run('go=()=>{}');
+run(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/danh_muc.js','utf8'));
+async function main(){
+ run("info={context:'main',readonly:false,review:false}; personnelImport={context:'main',generation:0,sheets:[{name:'<img>',sample:[{row:1,cells:[{column:1,value:'<script>'}]}]}],excluded:new Set(),nonce:'old'}");
+ el('personnelSheet').value='0';run('personnelSample()');
+ assert.match(el('personnelSample').innerHTML,/&lt;script&gt;/);assert.doesNotMatch(el('personnelSample').innerHTML,/<script>/);
+ assert.equal(run('personnelImport.nonce'),null);
+ for(const [id,value] of Object.entries({personnelHeader:'1',personnelCol_name:'2',personnelCol_code:'1',personnelCol_title:'3',personnelCol_group:'4'}))el(id).value=value;
+ run("personnelImport.file='blob';personnelImport.hash='hash'; var resolvePreview; personnelApi=()=>new Promise(r=>resolvePreview=r); var p=personnelPreview(); personnelInvalidate(); resolvePreview({nonce:'STALE_PLAN',canConfirm:true,counts:{new:1,existing:0,error:0,excluded:0},rows:[]})");
+ await run('p'); assert.equal(run('personnelImport.nonce'),null);assert.doesNotMatch(el('personnelPlan').innerHTML,/Xác nhận thêm/);
+ run("personnelImport.file='old';personnelImport.hash='old';personnelImport.sheets=[{name:'old'}];personnelImport.nonce='old';error=()=>{};");
+ el('personnelFile').files=[{size:3*1024*1024}];await run('personnelInspect()');
+ assert.equal(run('personnelImport.file'),null);assert.equal(run('personnelImport.hash'),null);assert.equal(run('personnelImport.sheets.length'),0);
+ run("var closeCount=0;closeModal=()=>{closeCount++};var resolveCancel;personnelApi=()=>new Promise(r=>resolveCancel=r);var c=personnelCancel(); personnelImport={context:'main',generation:0,nonce:null};resolveCancel({cancelled:true})");
+ await run('c'); assert.equal(run('closeCount'),1);assert.notEqual(run('personnelImport'),null);
+ run("var resolveInspect; personnelApi=()=>new Promise(r=>resolveInspect=r);personnelImport={context:'main',generation:0,file:null,hash:null,sheets:[],excluded:new Set(),nonce:null}");
+ el('personnelFile').files=[{size:1,arrayBuffer:async()=>new Uint8Array([1]).buffer}];
+ const inspect=run('personnelInspect()');await new Promise(resolve=>setImmediate(resolve));
+ run("personnelInvalidate();resolveInspect({fileSha256:'old',sheets:[{name:'old',sample:[]}]})");await inspect;
+ assert.equal(run('personnelImport.hash'),null);
+ run("personnelImport={context:'main',generation:0,file:'b',hash:'h',sheets:[{name:'s',sample:[]}],excluded:new Set(),nonce:null};var resolveContext;personnelApi=()=>new Promise(r=>resolveContext=r);var cp=personnelPreview();info.context='other';resolveContext({nonce:'stale',canConfirm:true,counts:{new:1,existing:0,error:0,excluded:0},rows:[]})");
+ await run('cp');assert.equal(run('personnelImport.nonce'),null);run("info.context='main'");
+ run("personnelImport={context:'main',generation:0,nonce:'valid'};var resolveConfirm;personnelApi=()=>new Promise(r=>resolveConfirm=r);var confirm=personnelConfirm();");
+ el('modal').classList.contains=()=>true;run("resolveConfirm({added:1})");await run('confirm');assert.equal(run('closeCount'),1);el('modal').classList.contains=()=>false;
+ run("personnelImport={context:'main',generation:0,nonce:'valid',excluded:new Set()};var calls=0;var resolveBusy;personnelApi=()=>{calls++;return new Promise(r=>resolveBusy=r)};refreshInfo=async()=>{};var toastText='';toast=t=>{toastText=t};var busy=personnelConfirm();");
+ assert.equal(run('personnelImport.confirming'),true);assert.ok(controls.every(c=>c.disabled));
+ await run('personnelCancel()');await run('personnelInspect()');await run('personnelPreview()');await run('personnelConfirm()');
+ run('personnelInvalidate();personnelSample();personnelExclude(2,true)');
+ assert.equal(run('personnelImport.generation'),0);assert.equal(run('calls'),1);assert.equal(run('closeCount'),1);
+ run('resolveBusy({added:2})');await run('busy');
+ assert.equal(run('personnelImport'),null);assert.equal(run('closeCount'),2);assert.match(run('toastText'),/2/);
+ run("personnelImport={context:'main',generation:0,nonce:'valid'};var rejectBusy;personnelApi=()=>new Promise((r,j)=>rejectBusy=j);var failed=personnelConfirm();rejectBusy(Error('save failed'))");
+ await run('failed');assert.equal(run('personnelImport.confirming'),false);assert.equal(run('personnelImport.nonce'),null);assert.ok(controls.every(c=>!c.disabled));assert.equal(run('closeCount'),2);
+ console.log('Personnel UI: escaping, invalid replacement, deferred ordering, confirmation busy guard and failure recovery OK');
+}
+main().catch(e=>{console.error(e);process.exitCode=1});

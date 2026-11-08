@@ -1,0 +1,96 @@
+{
+  "reviewer": "Astra independent REVIEWER",
+  "actionSha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+  "localRepairs": [
+    {
+      "id": "F1",
+      "criterion": "E5",
+      "before": "Worksheet relationship redirected to custom/sheet.xml containing row2001 was accepted by inspect_workbook.",
+      "fix": "Stream-preflight every resolved worksheet target, not only xl/worksheets paths.",
+      "regression": "test_relationship_target_cannot_bypass_sheet_preflight"
+    },
+    {
+      "id": "F2",
+      "criterion": "E3/E4",
+      "before": "Injected inactive DB row during temporary-file fsync; add_personnel accepted and inactive count became0.",
+      "fix": "Recheck full DB/catalog safety immediately before replacement.",
+      "regression": "test_db_precondition_rechecked_immediately_before_replace"
+    },
+    {
+      "id": "F3",
+      "criterion": "E2/E3",
+      "before": "Alpha U+2028 Beta preview counted1new but persisted Alpha and Beta separately.",
+      "fix": "Reject Unicode line separators in names and require owner parsed union to equal the exact confirmed names.",
+      "regression": "test_line_separators_and_locked_near_name_policy / test_owner_refuses_a_name_that_catalog_parsing_would_split"
+    },
+    {
+      "id": "F4",
+      "criterion": "E2",
+      "before": "_near(Alpha,Alphb) returned true despite locked combining-mark-only warning rule; special d mapping also exceeded contract.",
+      "fix": "Use exact locked NFD combining-mark equivalence only.",
+      "regression": "test_line_separators_and_locked_near_name_policy"
+    },
+    {
+      "id": "F5",
+      "criterion": "E6 source release",
+      "before": "Full suite source hygiene failed unused Catalogs/Store imports.",
+      "fix": "Remove unused imports only.",
+      "regression": "KIEM_THU_MA_NGUON.SourceTests"
+    }
+  ],
+  "openFindings": [
+    {
+      "id": "F6",
+      "criteria": [
+        "E2",
+        "E4"
+      ],
+      "evidence": "Deferred preview resolved after personnelInvalidate: staleNonceRestored=STALE_PLAN and confirmButtonRendered=true. File selection failure also leaves old file/hash/sheets; cancel response can close a later dialog.",
+      "required": "Generation/state/context guards and immediate input reset; handle explicit cancellation/close and in-flight response ordering; deterministic deferred-promise regression evidence."
+    },
+    {
+      "id": "F7",
+      "criteria": [
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "evidence": "Worker16tests do not exercise backup read/verification, temp write/fsync, replacement, real SQLite transaction failure, post-sync verification and restore write/replacement boundaries; header/origin/viewer/review-copy full API matrix absent.",
+      "required": "Bounded tests at missing actual owner and HTTP boundaries; record every outcome and backup/state checks; preserve failures."
+    },
+    {
+      "id": "F8",
+      "criteria": [
+        "E1"
+      ],
+      "evidence": "Reader suite substitutes a single changed-header fixture for all three observed report structures; no returned evidence each required report input is refused.",
+      "required": "Sol provide no-personal-values rejection results for three required reference workbooks or faithful structural fixtures tied to their observed structures; no source values committed."
+    }
+  ],
+  "focusedValidation": {
+    "tests": 32,
+    "skips": 0,
+    "result": "PASS",
+    "log": "astra-local-regressions.txt"
+  },
+  "reviewerLocalDecision": {
+    "unchangedObjective": "YES",
+    "unchangedDesign": "YES",
+    "unchangedPaths": "YES",
+    "unchangedAuthority": "YES",
+    "unchangedEffects": "YES",
+    "unchangedCommitOwner": "YES",
+    "evidenceDetermined": "YES"
+  },
+  "reworkEnvelope": {
+    "reviewerLocalRepairBoundary": "NEW_EVIDENCE_REQUIRED",
+    "reviewerLocalRepairBasis": "Reader/owner policy deviations with determined narrow fixes were repaired locally and32targetedtests pass. Async UI lifecycle needs a coherent ordering fix plus missing deferred-response/close and owner fault-boundary evidence before acceptance; asking worker once avoids broad reviewer implementation/self-review.",
+    "unchangedObjective": "YES",
+    "unchangedDesign": "YES",
+    "unchangedPaths": "YES",
+    "unchangedAuthority": "YES",
+    "unchangedEffects": "YES",
+    "unchangedCommitOwner": "YES",
+    "evidenceDetermined": "NO"
+  }
+}

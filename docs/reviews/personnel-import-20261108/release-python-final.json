@@ -1,0 +1,26 @@
+{
+  "observedAt": "2026-11-08T06:07:17.170Z",
+  "command": "build-venv/Scripts/python.exe -B -m unittest discover -s kiem_thu -t . -p KIEM_THU*.py -v",
+  "interpreter": "Python3.11.9 isolated reviewed build-venv",
+  "exitCode": 0,
+  "ran": 189,
+  "skipped": 0,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 38.621,
+  "log": {
+    "path": ".cvf/runtime/personnel-import-20261108/root-full-python-final.txt",
+    "sha256": "626e89c8dc15eeced2694aacd6fc53755bb8b5f9a23f33db10c115de49dc9d1d"
+  },
+  "priorFailuresRetained": [
+    {
+      "path": ".cvf/runtime/personnel-import-20261108/root-full-python.txt",
+      "sha256": "fd830269822c6531c7f6b8b567b30d2a18f860ee5466981f37305a9d21093e62"
+    },
+    {
+      "path": ".cvf/runtime/personnel-import-20261108/root-full-python-repair1.txt",
+      "sha256": "ef44f5fc6a71b87e6ef2ceccd1812b2f7c50b2b4a36ca44363ac8f093b41be41"
+    }
+  ],
+  "claimBoundary": "Full applicable Python release suite only; final UI reviewer change/EXE/native acceptance separately required"
+}

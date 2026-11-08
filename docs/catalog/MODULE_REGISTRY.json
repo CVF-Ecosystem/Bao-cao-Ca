@@ -1,9 +1,16 @@
-﻿{
-    "schemaVersion":  "1.0",
-    "projectName":  "SO_BAO_CAO_CA_V1_9",
-    "updatedAt":  "2026-11-06",
-    "claimBoundary":  "Empty initial registry; add only source-verified modules with evidence. No status may represent plan-only intent.",
-    "modules":  [
-
-                ]
+{
+  "schemaVersion": "1.0",
+  "projectName": "SO_BAO_CAO_CA_V1_9",
+  "updatedAt": "2026-11-08",
+  "claimBoundary": "Source-verified runtime entries only; PNI source accepted with technical tests, exact packaged consumer proof remains pending.",
+  "modules": [
+    {
+      "id": "personnel-excel-import",
+      "name": "Flat personnel Excel import",
+      "path": "ma_nguon/PERSONNEL_XLSX.py",
+      "status": "PARTIAL",
+      "description": "Bounded XLSX reader, server preview/confirm/cancel, additive catalog owner and UI implemented and independently source-reviewed. Exact packaged E6 consumer proof pending; no employee-ID or team mapping migration.",
+      "evidence": "docs/reviews/personnel-import-20261108/source-candidate-review.json; release-final.json:189 Python,6 JavaScript groups,4 workspace tests and source smoke passed with zero skips."
+    }
+  ]
 }

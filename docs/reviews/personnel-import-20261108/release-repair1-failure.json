@@ -1,0 +1,12 @@
+{
+  "ran": 189,
+  "exitCode": 1,
+  "failures": 1,
+  "skipped": 0,
+  "cause": "KIEM_THU_PERSONNEL_API.py unused sqlite3 import introduced in additional tests",
+  "repair": "Astra reviewer-local import removal; SourceTests4PASS; final189PASS",
+  "log": {
+    "path": ".cvf/runtime/personnel-import-20261108/root-full-python-repair1.txt",
+    "sha256": "ef44f5fc6a71b87e6ef2ceccd1812b2f7c50b2b4a36ca44363ac8f093b41be41"
+  }
+}

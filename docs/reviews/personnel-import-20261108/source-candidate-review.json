@@ -1,0 +1,118 @@
+{
+  "status": "SOURCE_CANDIDATE_ACCEPTED",
+  "risk": "R2",
+  "worker": "Terra / Sol",
+  "reviewer": "Astra independent REVIEWER",
+  "action": {
+    "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+    "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20"
+  },
+  "source": [
+    {
+      "path": "ma_nguon/MAY_CHU.py",
+      "sha256": "ca55728d8dc6e7204a5fdcdcbd5b29d16276b49fce334318f87324bf5e74d1c9",
+      "containsCRLF": false
+    },
+    {
+      "path": "ma_nguon/QUAN_LY_DANH_MUC.py",
+      "sha256": "681a3c102d8155bfb6d676c615e6b9d09e37e6e7411089ce9b2e41c412e75924",
+      "containsCRLF": false
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "sha256": "bf5164a7a8bfe6736c4cd12f550579beb4d2716853ea12a9b6d3cc90976fdeaf",
+      "containsCRLF": false
+    },
+    {
+      "path": "ma_nguon/PERSONNEL_XLSX.py",
+      "sha256": "58f083074587553f3d62e66ba01105143c9e5576dc0ff397245d53bd23d563d2",
+      "containsCRLF": false
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "sha256": "8bb55f2045c4d8ce1b603075da076f6fb7c7774f2c807bb5a2693990d118a097",
+      "containsCRLF": false
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_API.py",
+      "sha256": "87b25e55b88606f3dc34b1669f09532770a2f97e78bdf7b0101a33709054d798",
+      "containsCRLF": false
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_UI.js",
+      "sha256": "5b69324837679c73ab47e882498e10cf4ee848354f548433d53989a7ca4efd0a",
+      "containsCRLF": false
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_XLSX.py",
+      "sha256": "c37e4499ed5b28863e2088fa1366c1f58a1f4ea23d1cdff02e4b61bce1e6ede9",
+      "containsCRLF": false
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PHAT_HANH.py",
+      "sha256": "1dc57cd6908acffb08decdc6aa3a57e3674868b3512ef70061d6d221145994fe",
+      "containsCRLF": false
+    },
+    {
+      "path": "cong_cu/DONG_GOI.py",
+      "sha256": "8da6cb1953d5fc2aae035f60a1b2863d977b2c481c4232aef3c37b9b0d839159",
+      "containsCRLF": false
+    },
+    {
+      "path": "cong_cu/TAO_FILE_EXE.bat",
+      "sha256": "823e72787bf8a61fabd41798425e8f0f601865f720a37ebd6077242c42af82b4",
+      "containsCRLF": false
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "6277d17aa658a18f49d19ef8e43b8a5be0477a072ae19bf52e0613fec23b74e9",
+      "containsCRLF": false
+    },
+    {
+      "path": "requirements-build.txt",
+      "sha256": "81acdaa00dfe39a7beb2c7c5e04c609ab4befc66a02ff566579360959d87e8b3",
+      "containsCRLF": false
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "56d1d2fcdeb4683a870c822f02564ca44926564d524d5994d8d5f14fbbf02fdb",
+      "containsCRLF": false
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "0e1f9df3707ec1a335d1ceb30829c9ef63a49f4c5cab9972bb92456625fb481e",
+      "containsCRLF": false
+    },
+    {
+      "path": "tai_lieu/API.md",
+      "sha256": "9b2550f3efc92b82fa6ba093dba61bac3a2919eb774457661c1868aaae535ecd",
+      "containsCRLF": false
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_9_2.txt",
+      "sha256": "57bacd1f3022728e56e464a329727f4d373bdd414a15ddfa72652c8feccee3c4",
+      "containsCRLF": false
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "637b764ab56acacfb6c5c8b89c78425c5f2163f6d3ef18f0e27e370f86aa1bac",
+      "containsCRLF": false
+    }
+  ],
+  "findings": {
+    "F1-F5": "Resolved by disclosed reviewer-local fixes and 32 targeted tests",
+    "F6": "Resolved by worker response-generation guards plus reviewer confirmation busy guard and deferred success/failure tests",
+    "F7": "Accepted actual backup/temp/sync/postverify/restore faults and HTTP authorization guards; 23 focused tests; final aggregate 189 PASS, zero skips",
+    "F8": "Accepted exact three-source hash-bound refusal observation; no retained personal values; 17 reader tests"
+  },
+  "remaining": [
+    "Root required precommit/doctor checks and exact candidate commit",
+    "E6 exact clean Windows EXE build and headed native workflow before terminal acceptance"
+  ],
+  "claimBoundary": "Source-candidate acceptance only; no E6, product closure, release, production readiness or provider-governance claim. Initial failed evidence and frozen reviews retained.",
+  "aggregateEvidence": {
+    "path": "docs/reviews/personnel-import-20261108/release-final.json",
+    "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2",
+    "result": "189 Python, 6 JavaScript groups, 4 workspace tests and source smoke PASS; zero reported skips; referenced log hashes verified"
+  }
+}

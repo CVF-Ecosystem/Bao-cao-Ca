@@ -102,7 +102,12 @@ class ReleaseTests(unittest.TestCase):
             seen = []
 
             def run(command, **kwargs):
+                self.assertNotIn('pip', command)
                 if 'PyInstaller' in command:
+                    self.assertIn('lxml', command)
+                    self.assertIn('defusedxml.ElementTree', command)
+                    self.assertEqual(command.count('--copy-metadata'), 3)
+                    self.assertIn('THIRD_PARTY_NOTICES.md:.', command)
                     argument = next(value for value in command if value.endswith('PHIEN_BAN.json:.'))
                     path = Path(argument[:-2])
                     value = json.loads(path.read_text(encoding='utf-8'))
@@ -113,6 +118,7 @@ class ReleaseTests(unittest.TestCase):
                     seen.append(path)
 
             with patch.object(DONG_GOI, 'clean_commit', return_value='abcdef123456') as gate, \
+                    patch.object(DONG_GOI, 'check_toolchain'), \
                     patch.object(DONG_GOI.subprocess, 'run', side_effect=run), \
                     patch.object(DONG_GOI.shutil, 'copy2'):
                 DONG_GOI.package(root)
@@ -120,6 +126,20 @@ class ReleaseTests(unittest.TestCase):
             self.assertEqual(len(seen), 1)
             self.assertFalse(seen[0].exists())
             self.assertFalse((root / 'PHIEN_BAN.json').exists())
+
+    def test_offline_toolchain_missing_wrong_version_and_no_install(self):
+        from importlib.metadata import PackageNotFoundError
+        with patch.object(DONG_GOI, 'version', side_effect=PackageNotFoundError()), self.assertRaises(RuntimeError):
+            DONG_GOI.check_toolchain()
+        with patch.object(DONG_GOI, 'version', return_value='wrong'), self.assertRaises(RuntimeError):
+            DONG_GOI.check_toolchain()
+        with patch.object(DONG_GOI, 'version', side_effect=lambda name: DONG_GOI.BUILD_PINS[name]):
+            DONG_GOI.check_toolchain()
+        with patch.object(DONG_GOI, 'clean_commit', return_value='abcdef123456'), \
+                patch.object(DONG_GOI, 'check_toolchain', side_effect=RuntimeError('missing')), \
+                patch.object(DONG_GOI.subprocess, 'run') as run, self.assertRaises(RuntimeError):
+            DONG_GOI.package(Path('.'))
+        run.assert_not_called()
 
     def test_source_launcher_smoke_and_logs(self):
         self.assertEqual(smoke()['build']['commit'], 'nguon')

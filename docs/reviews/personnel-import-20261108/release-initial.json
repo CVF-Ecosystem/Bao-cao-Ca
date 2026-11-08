@@ -1,0 +1,43 @@
+{
+  "observedAt": "2026-11-08T05:52:06.813Z",
+  "python": {
+    "command": "build-venv/Scripts/python.exe -B -m unittest discover -s kiem_thu -t . -p KIEM_THU*.py -v",
+    "exitCode": 1,
+    "ran": 179,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "knownFailure": "test_no_unused_imports: KIEM_THU_PERSONNEL_API.py imports Catalogs and Store unused",
+    "log": {
+      "path": ".cvf/runtime/personnel-import-20261108/root-full-python.txt",
+      "sha256": "fd830269822c6531c7f6b8b567b30d2a18f860ee5466981f37305a9d21093e62"
+    }
+  },
+  "javascript": {
+    "groups": 6,
+    "exitCode": 0,
+    "skipped": 0,
+    "log": {
+      "path": ".cvf/runtime/personnel-import-20261108/root-full-js.txt",
+      "sha256": "3ae4943571ffdc17a3a33e7d8fbf460f825a429bd908cbd4ede3d8e199e15e82"
+    }
+  },
+  "workspaceTests": {
+    "ran": 4,
+    "exitCode": 0,
+    "log": {
+      "path": ".cvf/runtime/personnel-import-20261108/root-workspace-tests.txt",
+      "sha256": "5ef22b1aba2f35b82987340b523902bc339e82f0c8b232abef53a2cbde8bc9e3"
+    }
+  },
+  "sourceSmoke": {
+    "exitCode": 0,
+    "version": "1.9.2",
+    "build": "nguon",
+    "log": {
+      "path": ".cvf/runtime/personnel-import-20261108/root-source-smoke.txt",
+      "sha256": "763b88463af5feb049139a76487f72bade9ba18f8e8470d75a5f8a0de3c8ad86"
+    }
+  },
+  "claimBoundary": "Initial aggregate result is FAILED pending reviewer-local repair; no product/EXE or AI governance acceptance."
+}

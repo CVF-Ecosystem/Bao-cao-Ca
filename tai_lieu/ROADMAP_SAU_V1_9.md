@@ -10,7 +10,7 @@ Dùng file này làm cơ sở chia việc. Mỗi hạng mục có tiêu chí ngh
 
 ## 1. Định hướng đã chốt với chủ dự án
 
-**Đề xuất bổ sung đang đánh giá (2026-11-08):** [Đối chiếu tan-thuan-port và roadmap nhân sự](../docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md). Ưu tiên đề xuất là nhập danh mục nhân sự Excel có xem trước, tái sử dụng tổ/mẫu hiện có. Tài liệu ở trạng thái DRAFT; chưa thêm quyền BUILD, phiên bản cam kết hoặc mở rộng phạm vi nghiệp vụ của roadmap này.
+**Đợt bổ sung đã audit, đang triển khai (2026-11-08):** [Đối chiếu tan-thuan-port và roadmap nhân sự](../docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md). PNI E1–E6 nhập danh mục nhân sự Excel có xem trước được giao Terra/Sol, Astra review độc lập; phiên bản ứng viên1.9.2. Nguồn và kiểm thử đã hoàn tất, Astra chấp nhận nguồn; EXE và luồng người dùng Windows chờ nghiệm thu. Tái sử dụng bộ chọn người và tổ/mẫu hiện có; tự phân tổ, định danh mã nhân viên và đồng bộ nằm ngoài đợt này. D2–D5 giữ nguyên phần việc, chưa được đánh dấu xong.
 
 | Câu hỏi | Trả lời | Hệ quả cho roadmap |
 |---|---|---|
@@ -215,7 +215,7 @@ Phạm vi đánh giá đã phủ cả các màn hình phụ (tab Ảnh & biên b
 
 V1 phần "sau khi làm U8" phụ thuộc U8; V2–V8 làm được ngay. Kết quả ghi thành "Lượt 3" trong [DANH_GIA_GIAO_DIEN_V1_9.md](DANH_GIA_GIAO_DIEN_V1_9.md), kèm danh sách hạng mục U mới nếu có.
 
-### Đợt 2: Tối ưu sao lưu (dự kiến 1.9.2)
+### Đợt 2: Tối ưu sao lưu (đặt lại phiên bản khi giao việc)
 
 **D2-1. Kiểm tra theo bậc, có ghim bản full tốt** (sửa P1-1 theo PB-02).
 
@@ -378,7 +378,7 @@ Mốc dung lượng ~3 GB chỉ là **tín hiệu để đo lại**, không ph�
 | 0 | D0-1…D0-4 (benchmark, K0, test hiện trạng) | Ngay |
 | 1 (1.9.1) | D1-1…D1-4 (bản vá ổn định) | Có baseline |
 | U (bản vá giao diện) | U1…U4, U7, U8, U10, U12…U14; U9 cần tuyến API mới; U5 và U11 đi cùng Đợt 3; U6 khi chạm vào | Yêu cầu bản in đã chốt; có thể xen kẽ Đợt 2 |
-| 2 (1.9.2) | D2-1 + K1/K2 phần sao lưu | Chính sách giữ bản đã thống nhất |
+| 2 (phiên bản chưa chốt) | D2-1 + K1/K2 phần sao lưu | Chính sách giữ bản đã thống nhất |
 | 3 (1.10) | D3-1, D3-2 + K1 phần lưu, K4 chừa cột | Ngữ nghĩa lịch sử đã thống nhất |
 | 4 (1.10.x) | D4-1…D4-3 (bảo trì dữ liệu) | Sau đợt 3 |
 | 5 (2.0) | Bản web Internet | W0-1…W0-4 có quyết định |

@@ -1,0 +1,50 @@
+{
+  "logs": [
+    {
+      "source": "root-full-python.txt",
+      "rawSourceSha256": "fd830269822c6531c7f6b8b567b30d2a18f860ee5466981f37305a9d21093e62",
+      "durable": {
+        "path": "docs/reviews/personnel-import-20261108/release/python-initial-failed.txt",
+        "sha256": "0286f45b7777b6d00af55696fd6c8d1c98a42d8fb6a7d66778ba32aab77b53da"
+      },
+      "sanitization": "Project/interpreter/temp paths replaced; CRLF normalized; no credential patterns found"
+    },
+    {
+      "source": "root-full-python-repair1.txt",
+      "rawSourceSha256": "ef44f5fc6a71b87e6ef2ceccd1812b2f7c50b2b4a36ca44363ac8f093b41be41",
+      "durable": {
+        "path": "docs/reviews/personnel-import-20261108/release/python-repair1-failed.txt",
+        "sha256": "be6e141a804046bf8ddcdae73811d9d223551c12bbe72061e9daa8f2bd511898"
+      },
+      "sanitization": "Project/interpreter/temp paths replaced; CRLF normalized; no credential patterns found"
+    },
+    {
+      "source": "root-full-python-final.txt",
+      "rawSourceSha256": "626e89c8dc15eeced2694aacd6fc53755bb8b5f9a23f33db10c115de49dc9d1d",
+      "durable": {
+        "path": "docs/reviews/personnel-import-20261108/release/python-final.txt",
+        "sha256": "2594b192360d3546b64ed003350db3c4324fe65824be8d82c57d6c6e49ae92c2"
+      },
+      "sanitization": "Project/interpreter/temp paths replaced; CRLF normalized; no credential patterns found"
+    },
+    {
+      "source": "root-workspace-tests.txt",
+      "rawSourceSha256": "5ef22b1aba2f35b82987340b523902bc339e82f0c8b232abef53a2cbde8bc9e3",
+      "durable": {
+        "path": "docs/reviews/personnel-import-20261108/release/workspace-tests.txt",
+        "sha256": "b5de7d51f995aae77c6bd1e69d9b16a983b319fd6ac344a198714251193a8112"
+      },
+      "sanitization": "Project/interpreter/temp paths replaced; CRLF normalized; no credential patterns found"
+    },
+    {
+      "source": "root-source-smoke-repair1.txt",
+      "rawSourceSha256": "763b88463af5feb049139a76487f72bade9ba18f8e8470d75a5f8a0de3c8ad86",
+      "durable": {
+        "path": "docs/reviews/personnel-import-20261108/release/source-smoke.txt",
+        "sha256": "57807186c01c7f69b288cf683d2066610776c7fc372cb74e10798dea3477c0d3"
+      },
+      "sanitization": "Project/interpreter/temp paths replaced; CRLF normalized; no credential patterns found"
+    }
+  ],
+  "scope": "Technical application/mechanical checks; no AI-provider governance proof"
+}

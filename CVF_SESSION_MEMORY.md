@@ -5,8 +5,8 @@ Memory class: POINTER_RECORD
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md
 
 ## Startup and continuation
@@ -38,3 +38,19 @@ Exact packet972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973 rec
 ## PNI raw-byte custody admission r2 — 2026-11-08
 
 Root rehydrated BUILD continuity. Exact packet fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20 independently accepted by Astra; r1 packet/receipt retained in history. Minimal PNI .gitattributes rules preserve review records and the exact SPEC/ADR raw bytes across checkout; staged25 records differ from prior Git only in line endings and match original working raw hashes. Fresh pre-dispatch7/7 and doctor29/29 plus explicit PNI bootstrap4/4 pass (predispatch-admitted-r2.json, doctor-admitted-r2.json). Root remains ORCHESTRATOR/SESSION_SYNC_STEWARD/COMMIT_STEWARD for admission, then dispatches bounded implementation. No product change or native acceptance yet.
+
+## PNI source review — 2026-11-08
+
+Both workers returned source/focused evidence. Canonical phase is REVIEW with Root ORCHESTRATOR/SESSION_SYNC_STEWARD, Astra independent REVIEWER. E1-E5 IMPLEMENTED_UNPROVED; E6 pending. Initial aggregate179 Python has one source-hygiene failure, all6JS groups/checker4/source smoke passed. Reviewer consolidates source/fault/lifecycle findings before bounded repairs; no clean candidate/EXE or product acceptance yet. Root corrected roadmap evidence refs to required path+LFsha objects after initial COV shape failure; original failure preserved, worker-return corrected7/7.
+
+## PNI consolidated repair round1 acknowledgment — 2026-11-08
+
+Root accepts Astra source-review-round1.json F1-F5 reviewer-local corrections with32targetedPASS and routes F6/F7 to Terra, F8 to Sol under unchanged exact packet fbc560. Reviewer-local boundary NEW_EVIDENCE_REQUIRED, all objective/design/paths/authority/effects/commit owner unchanged YES; no business or scope amendment. BUILD resumes only bounded remaining findings and LF source custody; workers declare REPAIR_WORKER and preserve prior failures. Return once to independent Astra review; E6 stays pending, no candidate/product acceptance. Root rehydrated current state/memory/handoff/implementation/index before repair dispatch.
+
+## PNI repair round1 return / REVIEW acknowledgment — 2026-11-08
+
+Terra returned F6/F7 with23focusedPythonPASS0skip and deterministic deferred UI ordering checks; Sol returned F8 with17readerPASS0skip and actual3reference refusals. Root received current LF source hashes and preserved initial histories, rehydrated frontdoors, transitions to REVIEW for Astra independent re-review. Aggregate fullrelease repair1 is running; source smoke and all6JS groups alreadyPASS. No new action bytes, scope or product acceptance; Root sourcecandidate/ Sol E6 stillpending.
+
+## PNI accepted source candidate / commit stewardship — 2026-11-08
+
+Astra independently accepted the exact18-file LF source manifest source-candidate-review.json; Root verified every raw SHA. Full technical release189Python,6JSgroups,4workspace and source launcher1.9.2 passed with0skips; durable release-final.json/logs bind results and prior failures remain retained. Doctor-source-candidate.json CORE_ASSESSED29/29 plus4explicitbootstrap passes. Root assumes COMMIT_STEWARD for the reviewed local candidate commit, retaining ORCHESTRATOR/session sync responsibility. Native build/consumer E6 has not executed; no milestone/product closure. Module registry is PARTIAL until exact packaged proof. Root records candidate SHA to Sol immediately after commit; no new tracked edits before Sol clean build.

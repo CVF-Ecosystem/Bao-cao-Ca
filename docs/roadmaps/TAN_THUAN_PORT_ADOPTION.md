@@ -1,8 +1,8 @@
 # Đối chiếu tan-thuan-port và roadmap bổ sung nhân sự
 
-Status: DESIGN_REVIEW
+Status: SOURCE_ACCEPTED_NATIVE_PENDING
 
-Ngày: 2026-11-08. Phạm vi hiện tại: đánh giá và thiết kế trước triển khai theo yêu cầu của chủ dự án. Roadmap sản phẩm gốc vẫn là [ROADMAP_SAU_V1_9.md](../../tai_lieu/ROADMAP_SAU_V1_9.md). Tài liệu này là đề xuất bổ sung, chưa cấp quyền BUILD và chưa chốt phiên bản phát hành.
+Ngày: 2026-11-08. Đối chiếu/thiết kế đã được audit độc lập; PNI E1–E6 đang triển khai theo work order được chấp nhận. Roadmap sản phẩm gốc vẫn là [ROADMAP_SAU_V1_9.md](../../tai_lieu/ROADMAP_SAU_V1_9.md). Phiên bản ứng viên1.9.2 chưa được nghiệm thu/phát hành. Các phần khảo sát bên dưới giữ lại quyết định và giới hạn quan sát ban đầu.
 
 ## Tiếp tục được yêu cầu — 2026-11-08
 
@@ -119,11 +119,13 @@ Giá trị cần đo tại R2: số thao tác và thời gian đưa cùng một 
 
 Chi phí khảo sát hiện tại: thời gian chuẩn bị/review toàn phiên chưa đo đầy đủ, giữ UNKNOWN; không quy đổi ra tiền. Dừng khảo sát sau 20 tệp nguồn và bốn workbook trong snapshot, không khảo sát toàn bộ hệ thống cảng. Không viết thêm trình đọc thử hoặc benchmark chỉ để hoàn thiện đánh giá; bước tiếp theo là SPEC có giới hạn. Nếu SPEC phát hiện phải đổi mô hình người/lịch sử mới giải quyết được yêu cầu, dừng phần ghi danh mục và đưa quyết định vào R4 thay vì vá tiếp theo tên.
 
-## 7. Trạng thái, quyền tiếp tục và phần chưa biết
+## 7. Trạng thái khảo sát ban đầu và phần chưa biết
 
 Đã có bản đối chiếu và roadmap nháp để xem xét. Chưa chốt nhu cầu cập nhật danh sách thực tế/tần suất, file nào là nguồn nhân sự chuẩn, phạm vi bộ phận của đầu vào và các ca không rõ có cần đưa vào tổ nào. Đây là các đầu vào nghiệp vụ cần xác định trước khi khóa SPEC tương ứng, không chặn việc lập kế hoạch từ các file đã có. Đội phát triển tự chốt cách đọc file, API, lỗi và test trong phạm vi được duyệt; không chuyển lựa chọn kỹ thuật sang người dùng.
 
 Phần nhập Excel, gợi ý tổ, mã nhân viên và nhập bảng phân ca đều chưa được triển khai/nghiệm thu. EXE/UI và các đợt D2–D5 của roadmap gốc giữ phần tồn đọng riêng. Chưa có review độc lập R2 cho triển khai, chưa có quyền BUILD/dependency/migration/network hoặc đồng bộ hai dự án từ tài liệu này. Trạng thái sản phẩm không được nâng bằng kết quả kiểm tra tài liệu.
+
+Cập nhật thực thi: WO exact SHA fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20 đã được Astra chấp nhận; pre-dispatch7/7 và doctor29/29 đạt, Terra/Sol đã nhận BUILD. Hồ sơ giao việc tại commit c855598. Chưa tiêu chí E1–E6 nào được tính hoàn tất trước khi nhận bằng chứng triển khai và E6 Windows. Phần khảo sát mục7 ở trên là lịch sử, không phải quyền thực thi hiện tại.
 
 ## Acceptance criteria — PNI
 
@@ -178,60 +180,114 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
   "rows": [
     {
       "id": "E1",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source independently accepted and full technical suite passed; packaged/native E6 corroboration and product criterion disposition pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     },
     {
       "id": "E2",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source independently accepted and full technical suite passed; packaged/native E6 corroboration and product criterion disposition pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     },
     {
       "id": "E3",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source independently accepted and full technical suite passed; packaged/native E6 corroboration and product criterion disposition pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     },
     {
       "id": "E4",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source independently accepted and full technical suite passed; packaged/native E6 corroboration and product criterion disposition pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     },
     {
       "id": "E5",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source independently accepted and full technical suite passed; packaged/native E6 corroboration and product criterion disposition pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     },
     {
       "id": "E6",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Build tooling/source accepted; exact clean committed Windows EXE and headed consumer/persistence/export/time evidence not yet executed",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     }
   ],
   "supportingWork": [],
   "conclusions": {
     "tranche": "PENDING",
-    "trancheSummary": "Audited design and first implementation packet being admitted; no product acceptance yet",
+    "trancheSummary": "Source candidate independently accepted; clean commit, exact EXE and E6 native evidence remain required before terminal disposition",
     "trancheEvidence": [],
     "product": "PENDING",
-    "productSummary": "PNI E1-E6 pending; E7 and original product roadmap gaps separately owned",
+    "productSummary": "PNI first slice not yet product-accepted; E7 and original roadmap gaps separately owned",
     "acceptance": [],
     "owner": "Root orchestrator"
   }

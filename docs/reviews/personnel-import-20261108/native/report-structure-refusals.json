@@ -1,0 +1,177 @@
+{
+  "method": "Bounded in-memory read of exactly three already-authorized reference workbooks; hash equality to prior observations required; no files written from workbook values, samples discarded, only refusal locations and prior public structural observations retained.",
+  "observationSha256": "c0724cd337007586f1d9d2cf751ff732ef0655bcb48d054347475d8b254a62b3",
+  "readerSha256": "58f083074587553f3d62e66ba01105143c9e5576dc0ff397245d53bd23d563d2",
+  "records": [
+    {
+      "file": "Bai cont ca.xlsx",
+      "sha256": "03040121312fd75cbd1032a60e769d68b70c23af8df3fd884eee2f35181a6fb3",
+      "size": 10705,
+      "structure": [
+        {
+          "sheet": "N09-9",
+          "range": "A1:I27",
+          "headerCandidates": [],
+          "rowCount": 26,
+          "mergedRanges": [
+            "A2:I2",
+            "A5:H5",
+            "A22:A23"
+          ],
+          "formulaCount": 0
+        }
+      ],
+      "personalValuesRetained": false,
+      "inspect": {
+        "outcome": "INSPECTION_ONLY"
+      },
+      "plan": {
+        "outcome": "REFUSED",
+        "code": "INVALID_INPUT",
+        "sheet": "N09-9",
+        "row": 1,
+        "column": 2
+      },
+      "planSelection": {
+        "sheet": "N09-9",
+        "headerRow": 1,
+        "columns": {
+          "name": 2,
+          "code": 1,
+          "title": 3,
+          "group": null
+        },
+        "excludedRows": [],
+        "existingNames": []
+      },
+      "sourceHashAfterReadUnchanged": true
+    },
+    {
+      "file": "Thu tuc ca.xlsx",
+      "sha256": "96c5f7e44bf0b078402df2d903f4cd7a211a73bba1f94ac6ba1d3f5724584b76",
+      "size": 28696,
+      "structure": [
+        {
+          "sheet": "T10",
+          "range": "A3:F581",
+          "headerCandidates": [
+            {
+              "cell": "A6",
+              "text": "STT"
+            },
+            {
+              "cell": "F6",
+              "text": "GHI CHÚ"
+            }
+          ],
+          "rowCount": 578,
+          "mergedRanges": [
+            "A553:B553",
+            "A560:B560",
+            "A567:B567",
+            "A574:B574",
+            "A581:B581",
+            "A511:B511",
+            "A518:B518",
+            "A525:B525",
+            "A532:B532",
+            "A539:B539",
+            "A546:B546",
+            "A469:B469",
+            "A476:B476",
+            "A483:B483",
+            "A490:B490"
+          ],
+          "formulaCount": 151
+        }
+      ],
+      "personalValuesRetained": false,
+      "inspect": {
+        "outcome": "REFUSED",
+        "code": "INVALID_INPUT",
+        "sheet": null,
+        "row": null,
+        "column": null,
+        "safeReason": "Workbook chứa quan hệ không được hỗ trợ."
+      },
+      "plan": {
+        "outcome": "REFUSED",
+        "code": "INVALID_INPUT",
+        "sheet": null,
+        "row": null,
+        "column": null
+      },
+      "planSelection": {
+        "sheet": "T10",
+        "headerRow": 6,
+        "columns": {
+          "name": 2,
+          "code": 1,
+          "title": 3,
+          "group": null
+        },
+        "excludedRows": [],
+        "existingNames": []
+      },
+      "sourceHashAfterReadUnchanged": true
+    },
+    {
+      "file": "Dieu hanh ca.xlsx",
+      "sha256": "2586a272a55186bb1e9d92fefb8bb4335d123e28a5b098a9a5169b10295853a2",
+      "size": 17632,
+      "structure": [
+        {
+          "sheet": "10.2025",
+          "range": "A1:G77",
+          "headerCandidates": [
+            {
+              "cell": "A4",
+              "text": "STT"
+            },
+            {
+              "cell": "B4",
+              "text": "CA"
+            }
+          ],
+          "rowCount": 67,
+          "mergedRanges": [
+            "A1:F1",
+            "A2:F2",
+            "A3:F3"
+          ],
+          "formulaCount": 0
+        }
+      ],
+      "personalValuesRetained": false,
+      "inspect": {
+        "outcome": "REFUSED",
+        "code": "INVALID_INPUT",
+        "sheet": null,
+        "row": null,
+        "column": null,
+        "safeReason": "Workbook chứa thành phần không được hỗ trợ."
+      },
+      "plan": {
+        "outcome": "REFUSED",
+        "code": "INVALID_INPUT",
+        "sheet": null,
+        "row": null,
+        "column": null
+      },
+      "planSelection": {
+        "sheet": "10.2025",
+        "headerRow": 4,
+        "columns": {
+          "name": 2,
+          "code": 1,
+          "title": 3,
+          "group": null
+        },
+        "excludedRows": [],
+        "existingNames": []
+      },
+      "sourceHashAfterReadUnchanged": true
+    }
+  ],
+  "providerGovernanceClaim": false
+}

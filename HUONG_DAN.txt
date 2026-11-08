@@ -226,3 +226,6 @@ Phát triển bởi Mr Ân / Tân Thuận
 - Khi phục hồi: tắt tool và khôi phục chương trình từ bản dự phòng.
   Giữ riêng DB mới nhất, tránh ghi đè bằng DB sao lưu cũ gây mất lần nhập
   sau mốc sao lưu. Bản này không nâng schema DB.
+
+NHẬP NHÂN VIÊN TỪ EXCEL (1.9.2)
+Mở Danh mục nhân sự / công việc, chọn Nhập nhân viên Excel. Chọn file .xlsx danh sách phẳng tối đa 2 MiB, chọn sheet, hàng tiêu đề, số cột họ tên và các cột mã/chức danh/nhóm nếu có. Xem từng dòng, bỏ chọn dòng không muốn nhập rồi xem trước lại; xác nhận khi không còn lỗi. Chỉ tên được lưu, không tự gán tổ. File báo cáo ca, file mã hóa, macro và công thức trong cột chọn không được hỗ trợ. Nếu xuất hiện cảnh báo cần phục hồi, dừng sửa danh mục và giữ mã bản sao được thông báo.

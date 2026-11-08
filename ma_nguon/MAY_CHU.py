@@ -1,5 +1,8 @@
 """Giao tiếp nội bộ giữa giao diện và dữ liệu của máy."""
 import datetime as dt
+import base64
+import binascii
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -18,7 +21,7 @@ from THIET_LAP import VERSION, MAX_FILE, MAX_DB, ASSETS, VN, KEYS, build_info
 from NGHIEP_VU import now, suggest, shift_label, AppError, file_type, database_error
 from LUU_TRU import Store
 from BAO_VE_DU_LIEU import Protection, SessionLock
-from QUAN_LY_DANH_MUC import Catalogs
+from QUAN_LY_DANH_MUC import Catalogs, PersonnelSaveError
 from BAO_CAO_EXCEL import aggregate, monthly_tables, styled_xlsx, report_table
 
 def int_param(query, name, default, low, high):
@@ -264,7 +267,107 @@ class Handler(BaseHTTPRequestHandler):
         else:
             raise AppError('Không tìm thấy chức năng.', 404)
 
+    def personnel_post(self):
+        from PERSONNEL_XLSX import inspect_workbook, build_plan, PersonnelXlsxError
+        path = urllib.parse.urlsplit(self.path).path
+        names = {'/api/personnel-xlsx-inspect': {'context', 'fileBase64'},
+                 '/api/personnel-xlsx-preview': {'context', 'fileBase64', 'expectedFileSha256', 'sheet', 'headerRow', 'columns', 'excludedRows'},
+                 '/api/personnel-xlsx-confirm': {'context', 'nonce'},
+                 '/api/personnel-xlsx-cancel': {'context'}}
+        unread = True
+        def fail(message, code, status=400, sheet=None, row=None, column=None, backup_id=None):
+            result = dict(error=message, code=code, sheet=sheet, row=row, column=column)
+            if backup_id is not None: result['backupId'] = backup_id
+            if unread: self.reject_unread(result, status)
+            else: self.send_data(result, status=status)
+        try:
+            self.authorize()
+            if self.headers.get('X-Ca-Request') != '1' or (self.headers.get('Origin') and self.headers['Origin'] != 'http://' + self.app['host']):
+                raise AppError('Yêu cầu không hợp lệ.', 403)
+            if path == '/api/personnel-xlsx-preview':
+                self.app.pop('pending_personnel', None)
+            if path not in names:
+                fail('Không tìm thấy chức năng.', 'INVALID_INPUT', 404); return
+            length = self.request_length()
+            if length > 3 * 1024 * 1024:
+                fail('Yêu cầu quá lớn.', 'LIMIT_EXCEEDED', 413); return
+            if self.headers.get_content_type() != 'application/json':
+                fail('Cần dữ liệu JSON.', 'INVALID_INPUT'); return
+            raw = self.rfile.read(length)
+            unread = False
+            if len(raw) != length: raise ValueError('short body')
+            def unique(pairs):
+                result = {}
+                for key, value in pairs:
+                    if key in result: raise ValueError('duplicate key')
+                    result[key] = value
+                return result
+            p = json.loads(raw, object_pairs_hook=unique)
+            if not isinstance(p, dict) or set(p) != names[path] or not isinstance(p.get('context'), str):
+                raise ValueError('invalid fields')
+            if path == '/api/personnel-xlsx-preview':
+                self.app.pop('pending_personnel', None)
+            if (p['context'] != self.app['context'] or self.app['store'] is not self.app['main_store'] or
+                    self.app['store'].readonly or self.app['store'].meta('review_copy') == '1'):
+                self.app.pop('pending_personnel', None)
+                fail('DB đã đổi hoặc không phải DB chính; tải lại.', 'STALE', 409); return
+            if path == '/api/personnel-xlsx-cancel':
+                self.app.pop('pending_personnel', None); self.send_data(dict(cancelled=True)); return
+            if path == '/api/personnel-xlsx-confirm':
+                pending = self.app.pop('pending_personnel', None)
+                if (not isinstance(p['nonce'], str) or not pending or
+                    not secrets.compare_digest(p['nonce'], pending['nonce']) or
+                    pending['context'] != p['context'] or time.monotonic() >= pending['expires']):
+                    fail('Phiên xem trước hết hạn hoặc đã sử dụng.', 'STALE', 409); return
+                self.app['catalogs'].add_personnel(pending['names'], pending['digest'])
+                self.send_data(dict(added=len(pending['names']), existing=pending['existing'], fileSha256=pending['hash']))
+                return
+            encoded = p['fileBase64']
+            if not isinstance(encoded, str):
+                raise ValueError('invalid file')
+            if len(encoded) > 2796204:
+                fail('File vượt giới hạn 2 MiB.', 'LIMIT_EXCEEDED', 413); return
+            blob = base64.b64decode(encoded, validate=True)
+            if not 0 < len(blob) <= 2 * 1024 * 1024:
+                fail('File vượt giới hạn 2 MiB hoặc rỗng.', 'LIMIT_EXCEEDED', 413); return
+            digest = hashlib.sha256(blob).hexdigest()
+            if path == '/api/personnel-xlsx-inspect':
+                response = inspect_workbook(blob)
+                response['fileSha256'] = digest
+                self.send_data(response); return
+            if (not isinstance(p['expectedFileSha256'], str) or p['expectedFileSha256'] != digest or
+                not isinstance(p['sheet'], str) or type(p['headerRow']) is not int or
+                not isinstance(p['columns'], dict) or set(p['columns']) != {'name','code','title','group'} or
+                type(p['columns']['name']) is not int or
+                any(v is not None and type(v) is not int for v in p['columns'].values()) or
+                not isinstance(p['excludedRows'], list) or any(type(v) is not int for v in p['excludedRows'])):
+                raise ValueError('invalid mapping')
+            catalog = self.app['catalogs']
+            catalog_digest = catalog.raw_digest()
+            data = catalog.personnel_safe_snapshot(catalog_digest)
+            plan = build_plan(blob, p['sheet'], p['headerRow'], p['columns'], p['excludedRows'], data['people'])
+            additions = plan.pop('newNames')
+            plan.update(fileSha256=digest, nonce=None, expiresInSeconds=None)
+            if plan['canConfirm']:
+                nonce = secrets.token_hex(16)
+                self.app['pending_personnel'] = dict(nonce=nonce, expires=time.monotonic()+300, context=p['context'],
+                    digest=catalog_digest, names=tuple(additions), existing=plan['counts']['existing'], hash=digest)
+                plan.update(nonce=nonce, expiresInSeconds=300)
+            self.send_data(plan)
+        except AppError as exc:
+            fail(str(exc), 'FORBIDDEN' if exc.status == 403 else 'INVALID_INPUT', exc.status)
+        except PersonnelSaveError as exc:
+            fail(str(exc), exc.code, exc.status, backup_id=exc.backup_id)
+        except PersonnelXlsxError as exc:
+            fail(exc.message, exc.code, 413 if exc.code == 'LIMIT_EXCEEDED' else 400, exc.sheet, exc.row, exc.column)
+        except (ValueError, TypeError, KeyError, UnicodeError, binascii.Error):
+            fail('Dữ liệu nhập không hợp lệ.', 'INVALID_INPUT')
+        except (OSError, sqlite3.Error):
+            fail('Không thể đọc hoặc ghi danh mục.', 'SAVE_FAILED', 500)
+
     def do_POST(self):
+        if urllib.parse.urlsplit(self.path).path.startswith('/api/personnel-xlsx-'):
+            return self.personnel_post()
         unread = True
         try:
             self.authorize()
@@ -323,6 +426,7 @@ class Handler(BaseHTTPRequestHandler):
                     result = protection.restore(protection.selected(p.get('id')), p.get('sha256', ''))
                     store = Store(protection.db)
                     self.app['store'] = self.app['main_store'] = store
+                    self.app.pop('pending_personnel', None)
                     self.app['context'] = secrets.token_hex(16)
                     self.app['catalogs'] = Catalogs(self.app['data_dir'].parent / 'DANH_MUC', store)
                     daily_backup(self.app)
@@ -364,10 +468,12 @@ class Handler(BaseHTTPRequestHandler):
                     path.unlink(missing_ok=True)
                     raise
                 self.app['store'] = newstore
+                self.app.pop('pending_personnel', None)
                 self.app['context'] = secrets.token_hex(16)
                 self.send_data({'ok': True})
             elif self.path == '/api/main-db':
                 self.app['store'] = self.app['main_store']
+                self.app.pop('pending_personnel', None)
                 self.app['context'] = secrets.token_hex(16)
                 self.send_data({'ok': True})
             elif self.path == '/api/enable-corrections':
@@ -377,6 +483,7 @@ class Handler(BaseHTTPRequestHandler):
                 if self.app['store'].path.parent != (self.app['data_dir'] / 'DB_KIEM_TRA').resolve():
                     raise AppError('Chức năng này chỉ dùng trên bản sao DB kiểm tra.')
                 self.app['store'] = self.app['store'].enable_corrections(p.get('reviewer', ''))
+                self.app.pop('pending_personnel', None)
                 self.app['context'] = secrets.token_hex(16)
                 self.send_data({'ok': True})
             elif self.path == '/api/corrections-preview':

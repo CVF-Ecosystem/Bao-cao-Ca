@@ -1,0 +1,10 @@
+{
+  "owner": "Root SESSION_SYNC_STEWARD",
+  "change": "Worker-Sol repair narrative repeated Risk field; changed only second narrative label to Repair risk remains R2, top-level authoritative Risk line unchanged",
+  "unchangedMeaning": true,
+  "failuresRetained": [
+    "worker-return-repair1.json",
+    "reviewer-fast-repair1.json"
+  ],
+  "scope": "Existing admitted PNI evidence metadata only"
+}

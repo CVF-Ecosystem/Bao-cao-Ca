@@ -1,0 +1,136 @@
+{
+  "baseline": "c85559870090f7f5ad5280b7f1e8ae7ed88e8e95",
+  "observedAt": "2026-11-08T05:54:11.057Z",
+  "paths": [
+    {
+      "path": "CVF_SESSION/ACTIVE_SESSION_STATE.json",
+      "owner": "Root"
+    },
+    {
+      "path": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
+      "owner": "Root"
+    },
+    {
+      "path": "CVF_SESSION_MEMORY.md",
+      "owner": "Root"
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "owner": "Terra"
+    },
+    {
+      "path": "IMPLEMENTATION_STATUS.json",
+      "owner": "Root"
+    },
+    {
+      "path": "cong_cu/DONG_GOI.py",
+      "owner": "Sol"
+    },
+    {
+      "path": "cong_cu/TAO_FILE_EXE.bat",
+      "owner": "Sol"
+    },
+    {
+      "path": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
+      "owner": "Root"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "owner": "Terra"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PHAT_HANH.py",
+      "owner": "Sol"
+    },
+    {
+      "path": "ma_nguon/MAY_CHU.py",
+      "owner": "Terra"
+    },
+    {
+      "path": "ma_nguon/QUAN_LY_DANH_MUC.py",
+      "owner": "Terra"
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "owner": "Terra"
+    },
+    {
+      "path": "pyproject.toml",
+      "owner": "Sol"
+    },
+    {
+      "path": "tai_lieu/API.md",
+      "owner": "Terra"
+    },
+    {
+      "path": "tai_lieu/ROADMAP_SAU_V1_9.md",
+      "owner": "Root"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "owner": "Sol"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/committed-custody-r2.json",
+      "owner": "Root/Astra/worker evidence"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/implementation-review.md",
+      "owner": "Root/Astra/worker evidence"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/release-initial.json",
+      "owner": "Root/Astra/worker evidence"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/verified-wheels.json",
+      "owner": "Root/Astra/worker evidence"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/worker-return-initial.json",
+      "owner": "Root/Astra/worker evidence"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/worker-return-metadata-corrected.json",
+      "owner": "Root/Astra/worker evidence"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/worker-sol.md",
+      "owner": "Root/Astra/worker evidence"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/worker-terra.md",
+      "owner": "Root/Astra/worker evidence"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_API.py",
+      "owner": "Terra"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_UI.js",
+      "owner": "Terra"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_XLSX.py",
+      "owner": "Sol"
+    },
+    {
+      "path": "ma_nguon/PERSONNEL_XLSX.py",
+      "owner": "Sol"
+    },
+    {
+      "path": "requirements-build.txt",
+      "owner": "Sol"
+    },
+    {
+      "path": "requirements.txt",
+      "owner": "Sol"
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_9_2.txt",
+      "owner": "Terra"
+    }
+  ],
+  "noOperationalOrCorePathChanges": true,
+  "scope": "Current Git changed names only; does not scan real data contents"
+}

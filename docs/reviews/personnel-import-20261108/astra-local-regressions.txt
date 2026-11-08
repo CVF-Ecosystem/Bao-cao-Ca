@@ -1,0 +1,37 @@
+test_actual_expansion_members_and_cell_limits (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_actual_expansion_members_and_cell_limits) ... ok
+test_all_sheet_preflight_finishes_before_library_loader (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_all_sheet_preflight_finishes_before_library_loader) ... ok
+test_conflicting_codes_invalid_names_types_and_near_warning (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_conflicting_codes_invalid_names_types_and_near_warning) ... ok
+test_format_zip_traversal_duplicate_macro_relationship_entities (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_format_zip_traversal_duplicate_macro_relationship_entities) ... ok
+test_inspect_and_transient_mapping_oracle (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_inspect_and_transient_mapping_oracle) ... ok
+test_line_separators_and_locked_near_name_policy (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_line_separators_and_locked_near_name_policy) ... ok
+test_many_sheets_and_unsafe_merged_metadata (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_many_sheets_and_unsafe_merged_metadata) ... ok
+test_member_and_total_actual_byte_limits_without_large_library_parse (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_member_and_total_actual_byte_limits_without_large_library_parse) ... ok
+test_merged_range_and_unselected_sheet_physical_limits (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_merged_range_and_unselected_sheet_physical_limits) ... ok
+test_parser_provenance_and_unsafe_ambient_fail_closed (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_parser_provenance_and_unsafe_ambient_fail_closed) ... ok
+test_physical_coordinate_boundaries_and_metadata_dimension_ignored (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_physical_coordinate_boundaries_and_metadata_dimension_ignored) ... ok
+test_plain_header_profile_optional_name_only_and_error_locations (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_plain_header_profile_optional_name_only_and_error_locations) ... ok
+test_relationship_target_cannot_bypass_sheet_preflight (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_relationship_target_cannot_bypass_sheet_preflight) ... ok
+test_report_headers_and_mapping_refused (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_report_headers_and_mapping_refused) ... ok
+test_selected_formula_is_fatal_even_when_excluded (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_selected_formula_is_fatal_even_when_excluded) ... ok
+test_unicode_duplicates_and_exclusion (kiem_thu.KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_unicode_duplicates_and_exclusion) ... ok
+test_add_preserves_other_bytes_and_replay_noop (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_add_preserves_other_bytes_and_replay_noop) ... ok
+test_backup_failure_has_no_mutation (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_backup_failure_has_no_mutation) ... ok
+test_db_precondition_rechecked_immediately_before_replace (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_db_precondition_rechecked_immediately_before_replace) ... ok
+test_external_edit_during_failure_is_not_overwritten (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_external_edit_during_failure_is_not_overwritten) ... ok
+test_failed_save_consumes_nonce (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_failed_save_consumes_nonce) ... ok
+test_inactive_refusal_no_write (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_inactive_refusal_no_write) ... ok
+test_invalid_preview_clears_nonce_and_bad_index (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_invalid_preview_clears_nonce_and_bad_index) ... ok
+test_owner_refuses_a_name_that_catalog_parsing_would_split (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_owner_refuses_a_name_that_catalog_parsing_would_split) ... ok
+test_owner_sync_failure_restores (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_owner_sync_failure_restores) ... ok
+test_report_revision_and_noop_do_not_change (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_report_revision_and_noop_do_not_change) ... ok
+test_restore_failure_reports_backup (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_restore_failure_reports_backup) ... ok
+test_stale_expired_cancel_and_context (kiem_thu.KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_stale_expired_cancel_and_context) ... ok
+test_detector_catches_an_unused_import (kiem_thu.KIEM_THU_MA_NGUON.SourceTests.test_detector_catches_an_unused_import) ... ok
+test_every_source_parses_as_utf8 (kiem_thu.KIEM_THU_MA_NGUON.SourceTests.test_every_source_parses_as_utf8) ... ok
+test_no_unused_imports (kiem_thu.KIEM_THU_MA_NGUON.SourceTests.test_no_unused_imports) ... ok
+test_sources_exist (kiem_thu.KIEM_THU_MA_NGUON.SourceTests.test_sources_exist) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 8.091s
+
+OK
