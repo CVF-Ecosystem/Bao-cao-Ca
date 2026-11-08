@@ -1,0 +1,10 @@
+{
+  "plan": {
+    "path": "docs/reviews/import-flex-20261108/profile-cleanup-plan.json",
+    "sha256": "0c02d16dd1d75f31810fe15c4a6b17342fbee41586d7b41916a8a11ae8bbc77e"
+  },
+  "profiles": 44,
+  "files": 10322,
+  "bytes": 1077402818,
+  "keep": "All nonprofile content, build-venv/wheels, scripts/logs/docs evidence, EXEs, real data and user workbook; no active process termination"
+}

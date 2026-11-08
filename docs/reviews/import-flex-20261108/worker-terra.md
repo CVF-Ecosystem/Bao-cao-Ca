@@ -1,0 +1,10 @@
+# Terra worker acknowledgment
+
+CVF Agent Declaration: SO_BAO_CAO_CA_V1_9; Core ../.Controlled-Vibe-Framework-CVF@68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6; BUILD/R2/live YES; IMPLEMENTATION_WORKER; active handoff CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md; next assigned parser/UI/focused tests; no parked checkpoint. Compact bootstrap absent; canonical state used (BOOTSTRAP_MIGRATION_PENDING). Rehydrated state/memory/handoff/status/index, exact WO e79b2ee573bfa39338bdd50f445268dfa70ec1d07bcd5837bc7bb9506702dda5 and SPEC c6ab54b760cc8002e87de81ad7d38e1d4073c8e85af08040693b0293b3c943c6; Root records Astra admission c8c7e9bc and pre-dispatch PASS. No commit, network, production DB or workbook mutation. Original budget unchanged.
+
+## Implementation return (frozen for independent review)
+
+- Reader SHA256 `98a08e6a073485ef48f378736acf80cb445dc98abcb2260344f8bab0179d4697`; UI SHA256 `afefdcc9d13384b9b5931b1f925a0fff8e64554afe9015196ace510ac5e2cb3d`; reader tests SHA256 `4be92eceafa5b55383c3e527aa638401b814f50db407adcc2daa44760d1adbd1`; UI tests SHA256 `0c4cfa19bb53dfa5241d9ebcc6a68cc5c1d7286137abb62e13cd63cf357124a7`. Paths respectively `ma_nguon/PERSONNEL_XLSX.py`, `giao_dien/tai_nguyen/danh_muc.js`, `kiem_thu/KIEM_THU_PERSONNEL_XLSX.py`, `kiem_thu/KIEM_THU_PERSONNEL_UI.js`.
+- `python -B -m unittest kiem_thu.KIEM_THU_PERSONNEL_XLSX -v`: exit 0, 19 tests, no skips. `node kiem_thu/KIEM_THU_PERSONNEL_UI.js`: exit 0. `python -B -m unittest kiem_thu.KIEM_THU_PERSONNEL_API -q`: exit 0, 17 tests, no skips. `git diff --check` on four files exit 0.
+- Actual authorized workbook read-only inspect and preview with header 2, columns name2/code3/title4/group6 and empty existing list: 63 new, 0 existing/error/excluded, 14 conversion notes, canConfirm true. SHA256 before and after `db6016eb65f728916c028601cb8dfd9ebad45d94ced00c343eed79fef346af7e`. No employee values recorded. No database write or confirm performed by worker.
+- Retains existing report guards and explicit confirmation. No packaged/native claim; independent review and clean build pending. No source changes after this return absent further acknowledged repair authority.

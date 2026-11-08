@@ -1,0 +1,25 @@
+{
+  "source": "Readonly user-owned workbook; no workbook rows/bytes retained here",
+  "fileSha256": "db6016eb65f728916c028601cb8dfd9ebad45d94ced00c343eed79fef346af7e",
+  "sheetCount": 1,
+  "headerRow": 2,
+  "columns": {
+    "name": 2,
+    "code": 3,
+    "title": 4,
+    "group": 6
+  },
+  "personRows": 63,
+  "numericCodeCells": 14,
+  "numericCodeFormats": {
+    "General": 11,
+    "@": 3
+  },
+  "stringCodeCells": 49,
+  "formulaCells": 0,
+  "emptyFixtureCatalogExpected": {
+    "new": 63,
+    "error": 0
+  },
+  "note": "Structural expected oracle from source audit before implementation; not yet new reader PASS."
+}

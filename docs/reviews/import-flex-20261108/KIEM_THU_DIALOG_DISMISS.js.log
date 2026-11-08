@@ -1,0 +1,21 @@
+PASS one accessible X, duplicate decoration avoided
+PASS X immediately closes unchanged temporary chooser
+PASS Escape uses dismissal and closes chooser
+PASS backdrop down and up closes
+PASS inside-to-backdrop drag does not close
+PASS backdrop-to-inside drag does not close
+PASS different pointer does not close
+PASS cancelled pointer does not close
+PASS save upload local-confirm and print busy block dismissal
+PASS personnel confirm cannot be cancelled
+PASS actual catalog edit asks discard, decline preserves DOM, accept closes
+PASS default programmatic and reverted values do not prompt
+PASS search choice does not become business edit
+PASS template edits retain original baseline across rerender
+PASS opener captured before mount and retained through nested render
+PASS disconnected opener returns focus to main content
+PASS single-person promise resolves null through actual owner
+PASS PNI owner invalidates generation and closes
+PASS local owner clears nonce plan and advances generation
+PASS close control scoped sticky reserved heading and hidden for print
+20 focused dialog-dismiss checks PASS

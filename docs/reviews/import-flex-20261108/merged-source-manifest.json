@@ -1,0 +1,71 @@
+{
+  "version": "1.10.1",
+  "schema": 4,
+  "action": {
+    "path": "docs/work_orders/WO_IMPORT_FLEX.md",
+    "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696"
+  },
+  "readerSpec": {
+    "path": "docs/specs/PERSONNEL_EXCEL_FLEX.md",
+    "sha256": "c6ab54b760cc8002e87de81ad7d38e1d4073c8e85af08040693b0293b3c943c6"
+  },
+  "dialogSpec": {
+    "path": "docs/specs/DIALOG_DISMISS.md",
+    "sha256": "1d8c99ef3c1e04516a3e062dae18e59612e4f1e50a73e58229bd1146dfd10182"
+  },
+  "files": [
+    {
+      "path": "ma_nguon/PERSONNEL_XLSX.py",
+      "sha256": "98a08e6a073485ef48f378736acf80cb445dc98abcb2260344f8bab0179d4697"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "sha256": "afefdcc9d13384b9b5931b1f925a0fff8e64554afe9015196ace510ac5e2cb3d"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_XLSX.py",
+      "sha256": "4be92eceafa5b55383c3e527aa638401b814f50db407adcc2daa44760d1adbd1"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_UI.js",
+      "sha256": "0c4cfa19bb53dfa5241d9ebcc6a68cc5c1d7286137abb62e13cd63cf357124a7"
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "sha256": "31c2b94ca64816ae8d7ad11cad9ada41fe214ecf1e236faabd7c3685526e7f6a"
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "3dfe13c87f11204b9e04da60e9f3b0befda93ac2c779f07ba0662804959c6fbd"
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_10_1.txt",
+      "sha256": "c5d047df375a1885158316fc0e15fccc9ac863ca44c5fb4e891f326511dbdc4a"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/local_ui.js",
+      "sha256": "6b78117c8b35e1fad859698003d50ed4cd3d26fd947d59cf89cc4594564338ab"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/ung_dung.js",
+      "sha256": "f3b57682a966a9d671c285d3ce8cf4decfff4f2b9cab004ebdd52167920dd096"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/style.css",
+      "sha256": "15544f66ee08ff1195ddebafc845affc09b3f3359080ed926958c7cdebcbcdf4"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_DIALOG_DISMISS.js",
+      "sha256": "3bc6244d35c799a0f897d344c37dfdd8c1f90882914e3f74e63b11960e134a47"
+    }
+  ],
+  "tests": {
+    "reader": 19,
+    "personnelApi": 17,
+    "personnelUi": "PASS",
+    "existingLocalUi": 39,
+    "dialogDismiss": 20,
+    "scope": "Actual focused worker commands/logs; unrelated full211 suite inherited only for unchanged paths, not rerun."
+  },
+  "privateWorkbook": "Read-only actual63rows14numeric0errors; sourcehash preserved, no personal rows in proof."
+}

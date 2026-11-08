@@ -1,0 +1,61 @@
+{
+  "status": "FLEX_F1_F2_SOURCE_ACCEPTED_F3_CLEANUP_ACCEPTED_F4_PENDING",
+  "risk": "R2",
+  "worker": "Terra reader/UI; Sol version/docs; Root cleanup",
+  "reviewer": "Astra independent REVIEWER",
+  "actionSha256": "e79b2ee573bfa39338bdd50f445268dfa70ec1d07bcd5837bc7bb9506702dda5",
+  "source": [
+    {
+      "path": "ma_nguon/PERSONNEL_XLSX.py",
+      "sha256": "98a08e6a073485ef48f378736acf80cb445dc98abcb2260344f8bab0179d4697"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "sha256": "afefdcc9d13384b9b5931b1f925a0fff8e64554afe9015196ace510ac5e2cb3d"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_XLSX.py",
+      "sha256": "4be92eceafa5b55383c3e527aa638401b814f50db407adcc2daa44760d1adbd1"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_UI.js",
+      "sha256": "0c4cfa19bb53dfa5241d9ebcc6a68cc5c1d7286137abb62e13cd63cf357124a7"
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "sha256": "31c2b94ca64816ae8d7ad11cad9ada41fe214ecf1e236faabd7c3685526e7f6a"
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "f65b7948bc287f970bc26bd9bdf33febe489b89bf99b993cd7bd38ac12a50a04"
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_10_1.txt",
+      "sha256": "caa6250a8b40c4fa24e481222703709c9934aaaa017277cc4ad64f320a7374a5"
+    }
+  ],
+  "findings": "No blocking defect found in frozen parser/suggestion delta. Reviewed source and focused-test additions: inert canonical printer part ownership/type/size, safe numeric formats/precision and conversion note, matching closed aliases, unique suggestion ambiguity refusal and existing nonce invalidation preserved. Version-only config delta; no schema/server/catalog-owner/dependency changes. Worker reports19reader/17API and UI pass, aggregate actual workbook63NEW/14conversion/0error with unchanged source hash. No independent test rerun; packaged/nativeF4 still pending. New F5 dialog request is outside this source acceptance until exact amendment.",
+  "cleanup": {
+    "decision": "ACCEPTED",
+    "profiles": 44,
+    "deletedBytes": 1077402818,
+    "freeDeltaObserved": 1082585088,
+    "remaining": 0,
+    "basis": "Every deleted root/size matched plan and independently confirmed absent, zero skips. Free-space delta includes ambient activity, not additional attributed deletion. Nonprofile preservation follows reviewed restricted execution scope."
+  },
+  "evidence": [
+    {
+      "path": "docs/reviews/import-flex-20261108/worker-terra.md",
+      "sha256": "58502a03389a134042ac3b5cb82400e1ed947a0ad17d08cb6d79a7371cd0576d"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/worker-sol.md",
+      "sha256": "efea4a8d9805f000041520a299d749986152101b33d1d41b3b5d9b3099d5d26f"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/profile-cleanup-result.json",
+      "sha256": "410a6b06083e612e190fcd9c25491beda05754cf5bac58c132243e5df1339e84"
+    }
+  ],
+  "dialogDesign": "One dismissal dispatcher for X/backdrop/Esc; existing PNI/local cancellation owners and async generation guards; block saving/uploading/localBusy/PNIconfirming/printBusy. Require pointerdown and pointerup on backdrop, not inner click/drag. Dirty dialog-local controls need discard consent, denial retains state/nonce. Preserve explicit action buttons, type=button and accessible name, capture/restore connected usable opener focus. Do not trigger print on dismissal. Focused behavioral cases plus one small native consumer flow; no broad matrix."
+}

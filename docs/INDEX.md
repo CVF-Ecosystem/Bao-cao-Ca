@@ -27,6 +27,7 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Whole-local design, independent action/source/product review and exact packaged synthetic consumer evidence; yard-device acceptance deferred and web phase2 held.: `docs/reviews/local-completion-20261108/`
 - Source and workbook-structure observations for the draft tan-thuan-port adoption assessment; no runtime or product acceptance.: `docs/reviews/tan-thuan-port-fit/`
 - Independent personnel-import design/action reviews, dependency source records and exact implementation/consumer evidence.: `docs/reviews/personnel-import-20261108/`
+- Bounded ordinary-XLSX acceptance amendment, stopped browser-cache cleanup, independent exact action/source and sanitized packaged consumer evidence.: `docs/reviews/import-flex-20261108/`
 - Existing product roadmap, API, assessments and prior evidence; preserve as product authority.: `tai_lieu/`
 - Reviews and evidence.: `docs/reviews/`
 - Roadmaps, including audited PNI personnel-import scope and separately owned future adoption proposals.: `docs/roadmaps/`

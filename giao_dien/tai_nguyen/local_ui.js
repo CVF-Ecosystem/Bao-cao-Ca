@@ -37,19 +37,66 @@ function updatePrintIdentity(){
 }
 window.addEventListener('beforeprint',updatePrintIdentity);
 window.addEventListener('afterprint',()=>{printBusy=false;$('keyboardPrint')?.remove();document.body.classList.remove('printingReport')});
+let dialogSession=null,backdropPointer=null;
+const dialogBusinessFields='[id^="catalog_"],[id^="team_name_"],[id^="team_people_"],#catalogShipName';
+function prepareLocalModal(){
+ if(!dialogSession||$('modal').classList.contains('hide'))dialogSession={opener:document.activeElement,kind:null,baseline:null,touched:false};
+}
+function dialogBusinessState(){
+ const body=$('modalBody');
+ if(body.querySelector?.('#staffingProfile')&&typeof staffingDraft!=='undefined'&&staffingDraft){
+  const draft=JSON.parse(JSON.stringify(staffingDraft));
+  body.querySelectorAll?.('[data-template-role]').forEach(e=>{if(draft[staffingProfile]?.[+e.dataset.templateRole])draft[staffingProfile][+e.dataset.templateRole].role=e.value});
+  body.querySelectorAll?.('[data-template-person]').forEach(e=>{if(draft[staffingProfile]?.[+e.dataset.templatePerson])draft[staffingProfile][+e.dataset.templatePerson].person=e.value});
+  return {kind:'templates',value:JSON.stringify(draft)};
+ }
+ const fields=[...(body.querySelectorAll?.(dialogBusinessFields)||[])];
+ return fields.length?{kind:'catalog',value:JSON.stringify(fields.map(e=>[e.id,e.value]))}:{kind:null,value:null};
+}
+function markDialogBusinessEdit(event){
+ if(event.isTrusted!==true||!dialogSession||!$('modalBody').contains?.(event.target))return;
+ const field=event.type!=='click'&&event.target.matches?.(dialogBusinessFields+', [data-template-role], [data-template-person]');
+ const action=event.type==='click'&&event.target.closest?.('[onclick^="addTemplatePerson("],[onclick^="removeTemplatePerson("]');
+ if(field||action)dialogSession.touched=true;
+}
+function finishLocalModal(){
+ const opener=dialogSession?.opener;dialogSession=null;backdropPointer=null;
+ if(opener?.isConnected&&!opener.disabled&&!opener.closest?.('[inert]')&&opener.getClientRects?.().length)opener.focus?.();
+ else $('mainContent')?.focus?.();
+}
+function dialogDismissBusy(){
+ return saving||uploading||localBusy||printBusy||typeof personnelImport!=='undefined'&&!!personnelImport?.confirming;
+}
+function requestDialogDismiss(){
+ if(dialogDismissBusy())return false;
+ const current=dialogBusinessState();
+ if(dialogSession?.touched&&current.kind===dialogSession.kind&&current.value!==dialogSession.baseline&&!confirm('Bỏ các thay đổi chưa lưu trong hộp thoại này?'))return false;
+ if(typeof personnelImport!=='undefined'&&personnelImport){personnelCancel();return true}
+ if(localPlan||localPending){cancelLocalOperation();return true}
+ if(typeof personResolver!=='undefined'&&personResolver&&typeof finishPerson==='function'){finishPerson(null);return true}
+ localGeneration++;closeModal();return true;
+}
 function decorateLocalModal(){
  const body=$('modalBody'),root=$('personnelRoot')||body;
  const heading=root.querySelector?.('h2');
  if(heading)(heading.closest('.row')||heading).classList.add('modalHead');
  const rows=[...(root.children||[])].filter(n=>n.classList?.contains('row')&&n.querySelector('button'));
  if(rows.length)rows[rows.length-1].classList.add('modalActions');
+ if(!body.querySelector?.('.modalClose')&&document.createElement){
+  const button=document.createElement('button');button.type='button';button.className='modalClose noprint';button.textContent='×';button.setAttribute('aria-label','Đóng hộp thoại');button.title='Đóng hộp thoại';button.onclick=requestDialogDismiss;body.prepend(button);
+ }
+ const button=body.querySelector?.('.modalClose');if(button)button.disabled=!!dialogDismissBusy();
+ const current=dialogBusinessState();
+ if(dialogSession&&dialogSession.kind!==current.kind){dialogSession.kind=current.kind;dialogSession.baseline=current.value;dialogSession.touched=false}
+ else if(dialogSession&&dialogSession.baseline===null)dialogSession.baseline=current.value;
 }
-function safeEscape(){
- if(saving||uploading||localBusy||typeof personnelImport!=='undefined'&&personnelImport?.confirming)return;
- if(typeof personnelImport!=='undefined'&&personnelImport){personnelCancel();return}
- if(localPlan||localPending){cancelLocalOperation();return}
- localGeneration++;closeModal();
-}
+function safeEscape(){return requestDialogDismiss()}
+document.addEventListener('input',markDialogBusinessEdit,true);
+document.addEventListener('change',markDialogBusinessEdit,true);
+document.addEventListener('click',markDialogBusinessEdit,true);
+document.addEventListener('pointerdown',event=>{backdropPointer=event.target===$('modal')&&event.button===0?event.pointerId:null});
+document.addEventListener('pointerup',event=>{const start=backdropPointer;backdropPointer=null;if(start!==null&&start===event.pointerId&&event.target===$('modal'))requestDialogDismiss()});
+document.addEventListener('pointercancel',()=>{backdropPointer=null});
 function previewPrintShortcut(event){
  if(event.isTrusted!==true||!event.ctrlKey||event.metaKey||event.altKey||event.shiftKey||event.repeat||String(event.key).toLowerCase()!=='p')return false;
  if(saving||uploading||localBusy||localPending||localPlan||printBusy)return false;

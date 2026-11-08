@@ -1,5 +1,6 @@
 """Bounded, read-only flat personnel XLSX inspection and import planning."""
 import io
+import math
 import os
 import posixpath
 import re
@@ -15,14 +16,18 @@ from defusedxml.common import DefusedXmlException
 MAX_UPLOAD = 2 * 1024 * 1024
 MAX_TOTAL = 16 * 1024 * 1024
 MAX_MEMBER = 4 * 1024 * 1024
-ALIASES = {'name': {'họ và tên', 'họ tên', 'tên nhân viên'}, 'code': {'mscđ', 'mã nhân viên'},
-           'title': {'chức danh'}, 'group': {'nhóm/ca', 'tổ nhân sự'}}
+ALIASES = {'name': {'họ và tên', 'họ tên', 'tên nhân viên', 'ho va ten', 'ho ten', 'ten nhan vien', 'ho ten nhan vien', 'ho va ten nhan vien', 'họ tên nhân viên', 'họ và tên nhân viên', 'full name', 'employee name'},
+           'code': {'mscđ', 'mã nhân viên', 'mscd', 'msnv', 'mã nv', 'ma nv', 'ma nhan vien', 'employee id', 'employee code'},
+           'title': {'chức danh', 'chuc danh', 'chức vụ', 'chuc vu', 'vị trí', 'vi tri', 'job title'},
+           'group': {'nhóm/ca', 'tổ nhân sự', 'nhom/ca', 'to nhan su', 'tổ', 'to', 'nhóm', 'nhom', 'ca', 'thời gian làm việc', 'thoi gian lam viec', 'shift', 'team'}}
 MAIN = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'
 REL = 'http://schemas.openxmlformats.org/package/2006/relationships'
 OFFICE_REL = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/'
 ALLOWED_RELS = {'officeDocument', 'worksheet', 'styles', 'theme', 'sharedStrings',
                 'core-properties', 'extended-properties', 'custom-properties'}
 PINS = {'openpyxl': '3.1.5', 'defusedxml': '0.7.1', 'et_xmlfile': '2.0.0'}
+PRINTER_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings'
+PRINTER_PATH = re.compile(r'xl/printerSettings/printerSettings[1-9][0-9]*\.bin\Z')
 
 
 class PersonnelXlsxError(ValueError):
@@ -111,7 +116,13 @@ def _preflight(blob):
         if not required.issubset(members):
             _bad('Không phải workbook XLSX được hỗ trợ.')
         roots = {}
+        printer_parts = set()
         for name, data in members.items():
+            if PRINTER_PATH.fullmatch(name):
+                if len(data) > 65536:
+                    _bad('Thiết lập máy in vượt giới hạn.', limit=True)
+                printer_parts.add(name)
+                continue
             if not (name.endswith('.xml') or name.endswith('.rels')):
                 _bad('Workbook chứa thành phần không được hỗ trợ.')
             if name.startswith('xl/worksheets/') and name.endswith('.xml'):
@@ -122,6 +133,12 @@ def _preflight(blob):
             content = item.get('ContentType', '')
             if any(part in content.lower() for part in ('macro', 'vba', 'activex', 'oleobject', 'externallink')):
                 _bad('Không hỗ trợ macro, đối tượng hoặc liên kết ngoài.')
+        defaults = [x.get('ContentType') for x in roots['[Content_Types].xml'] if _tag(x) == 'Default' and x.get('Extension', '').casefold() == 'bin']
+        for part in printer_parts:
+            overrides = [x.get('ContentType') for x in roots['[Content_Types].xml'] if _tag(x) == 'Override' and x.get('PartName') == '/'+part]
+            if len(overrides) > 1 or (overrides and overrides[0] != PRINTER_TYPE) or (not overrides and defaults != [PRINTER_TYPE]):
+                _bad('Kiểu thiết lập máy in không hợp lệ.')
+        printer_owners = {}
         for name, root in roots.items():
             if not name.endswith('.rels'):
                 continue
@@ -135,11 +152,20 @@ def _preflight(blob):
                     _bad('Quan hệ workbook không được hỗ trợ.')
                 ids.add(identifier)
                 suffix = kind.rsplit('/', 1)[-1]
-                if suffix not in ALLOWED_RELS or not kind.startswith('http://schemas.openxmlformats.org/'):
+                if suffix not in ALLOWED_RELS and kind != OFFICE_REL+'printerSettings':
+                    _bad('Workbook chứa quan hệ không được hỗ trợ.')
+                if not kind.startswith('http://schemas.openxmlformats.org/'):
                     _bad('Workbook chứa quan hệ không được hỗ trợ.')
                 resolved = posixpath.normpath(target.lstrip('/') if target.startswith('/') else posixpath.join(source_dir, target))
                 if resolved.startswith('../') or resolved not in members:
                     _bad('Đích quan hệ workbook không hợp lệ.')
+                if kind == OFFICE_REL+'printerSettings':
+                    owner = name.replace('/_rels/', '/').removesuffix('.rels')
+                    if resolved not in printer_parts or not re.fullmatch(r'xl/worksheets/sheet[1-9][0-9]*\.xml', owner):
+                        _bad('Quan hệ thiết lập máy in không hợp lệ.')
+                    printer_owners.setdefault(resolved, []).append(owner)
+                elif resolved in printer_parts:
+                    _bad('Quan hệ thiết lập máy in không hợp lệ.')
         book = roots['xl/workbook.xml']
         sheets = book.find('{'+MAIN+'}sheets')
         if sheets is None or not 1 <= len(sheets) <= 10:
@@ -160,6 +186,8 @@ def _preflight(blob):
             if path in sheet_paths:
                 _bad('Nhiều trang tính cùng tham chiếu một nguồn XML.')
             sheet_paths[path] = name
+        if set(printer_owners) != printer_parts or any(len(owners) != 1 or owners[0] not in sheet_paths for owners in printer_owners.values()):
+            _bad('Thiết lập máy in không gắn với trang tính hợp lệ.')
         for path, root in roots.items():
             if path in sheet_paths or (path.startswith('xl/worksheets/') and path.endswith('.xml')):
                 sheet_name = sheet_paths.get(path)
@@ -303,9 +331,18 @@ def build_plan(blob, sheet, header_row, columns, excluded_rows, existing_names):
             if all(cell.value is None or (isinstance(cell.value, str) and not cell.value.strip()) for cell in cells.values()):
                 continue
             result = dict(row=rownum, name=None, code=None, title=None, group=None, status='NEW', messages=[])
+            converted_code = False
             for key, cell in cells.items():
                 if isinstance(cell.value, str):
                     result[key] = _normalize(cell.value)
+                elif key == 'code' and type(cell.value) in (int, float):
+                    value, fmt = cell.value, cell.number_format
+                    if (math.isfinite(value) and 0 <= value <= 999999999999999 and value == int(value) and
+                            (fmt in ('General', '@') or re.fullmatch(r'0{1,32}', fmt))):
+                        result[key] = str(int(value)).zfill(len(fmt) if fmt not in ('General', '@') else 0)
+                        converted_code = True
+                    else:
+                        result['messages'].append('Mã số hoặc định dạng mã không được hỗ trợ (cột '+str(cell.column)+').')
                 elif cell.value is not None:
                     result['messages'].append('Cột '+key+' phải là văn bản (cột '+str(cell.column)+').')
             name = result['name']
@@ -316,6 +353,8 @@ def build_plan(blob, sheet, header_row, columns, excluded_rows, existing_names):
                 result['messages'].append('Mã nhân viên phải là văn bản không rỗng; không suy đoán số 0 đầu.')
             if result['messages']:
                 result['status'] = 'ERROR'
+            if converted_code:
+                result['messages'].append('Mã số đã chuyển thành văn bản theo định dạng ô.')
             if rownum in excluded_rows:
                 result['status'] = 'EXCLUDED'
             rows.append(result)

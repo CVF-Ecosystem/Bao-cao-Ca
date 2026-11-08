@@ -2,15 +2,15 @@
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
   "updatedAt": "2026-11-08",
-  "claimBoundary": "Revised LOCAL1.10.0/schema4 internal engineering delivery independently accepted, exact8e EXE10aaf. Fine V8 timings NOT_MEASURED/operator deferred; device/business/web and live AI governance not accepted.",
+  "claimBoundary": "Accepted LOCAL1.10.0 retained. FLEX1.10.1 parser/mapping source and stopped-profile cleanup accepted; new shared dialog source/exact EXE consumer proof pending. No operational/business/web or provider-governance acceptance.",
   "modules": [
     {
       "id": "personnel-excel-import",
       "name": "Flat personnel Excel import",
       "path": "ma_nguon/PERSONNEL_XLSX.py",
-      "status": "ENFORCED",
-      "description": "Bounded flat-XLSX name-only additive catalog import with inspect/preview/exclude/confirm/cancel and preserved existing-owner semantics; independent exact EXE headed consumer proof accepted. No identity/team mapping migration.",
-      "evidence": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json; release-r3-final.json:191Python0skip,6JS/4workspace; native-e6-review.json: exact1.9.2 EXE7ce0305b6000 headed import/picker/save/restart/export accepted; scope limits retained."
+      "status": "PARTIAL",
+      "description": "Additive personnel XLSX names import reuses existing preview/nonce/catalog owner; source now accepts narrowly validated ordinary print metadata, safe numeric codes and unique editable mapping suggestions. Final1.10.1 packaged acceptance pending.",
+      "evidence": "docs/reviews/import-flex-20261108/source-review-before-dialog-amendment.json; docs/reviews/import-flex-20261108/worker-terra.md; prior PNI owner/native proof retained with unchanged-effect limits."
     },
     {
       "id": "local-storage-history",

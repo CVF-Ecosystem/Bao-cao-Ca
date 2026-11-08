@@ -109,7 +109,7 @@ class PersonnelReaderTests(unittest.TestCase):
     def test_conflicting_codes_invalid_names_types_and_near_warning(self):
         rows = [['001', 'Alpha', '', ''], ['001', 'Beta', '', ''], [2, 'Gamma', '', ''],
                 ['003', 'bad;name', '', ''], ['004', None, 'x', '']]
-        self.assertEqual(self.plan(fixture(rows))['counts']['error'], 5)
+        self.assertEqual(self.plan(fixture(rows))['counts']['error'], 4)
         for name in ('#comment', 'a\nb', 'x'*121):
             with self.subTest(name=name):
                 self.assertEqual(self.plan(fixture([['1', name, '', '']]))['counts']['error'], 1)
@@ -308,6 +308,37 @@ class PersonnelReaderTests(unittest.TestCase):
                 self.assertEqual(plan['rows'][0]['messages'], [])
         plan = self.plan(fixture([['1', 'Nguyen', '', '']]), existing=['Nguyễn'])
         self.assertTrue(plan['rows'][0]['messages'])
+
+    def test_numeric_codes_and_safe_formats(self):
+        book = _library().Workbook(); sheet = book.active; sheet.title = 'Nhân sự'
+        sheet.append(['MSCĐ', 'Họ và Tên', 'Chức danh', 'Nhóm/Ca'])
+        for value, fmt in [(42, 'General'), (43, '@'), (7, '0000'), (1.5, 'General'), (-1, 'General'), (10, '0.0'), (10**15, 'General')]:
+            sheet.append([value, 'Name '+str(sheet.max_row), '', '']); sheet.cell(sheet.max_row, 1).number_format = fmt
+        output = io.BytesIO(); book.save(output); book.close()
+        plan = self.plan(output.getvalue())
+        self.assertEqual(plan['counts']['error'], 4)
+        self.assertEqual([r['code'] for r in plan['rows'][:3]], ['42', '43', '0007'])
+        self.assertTrue(all(r['messages'] and r['status'] == 'NEW' for r in plan['rows'][:3]))
+
+    def test_bounded_printer_settings_relationship(self):
+        def printer(target='../printerSettings/printerSettings1.bin', kind='printerSettings', content='application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings', name='xl/printerSettings/printerSettings1.bin', data=b'printer'):
+            output = io.BytesIO()
+            with zipfile.ZipFile(io.BytesIO(fixture())) as source, zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as dest:
+                for item in source.infolist():
+                    value = source.read(item.filename)
+                    if item.filename == '[Content_Types].xml':
+                        value = value.replace(b'</Types>', ('<Default Extension="bin" ContentType="'+content+'"/></Types>').encode())
+                    dest.writestr(item.filename, value)
+                rel = ('<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/'+kind+'" Target="'+target+'"/></Relationships>')
+                dest.writestr('xl/worksheets/_rels/sheet1.xml.rels', rel)
+                dest.writestr(name, data)
+            return output.getvalue()
+        self.assertTrue(self.plan(printer())['canConfirm'])
+        for blob in (printer(kind='styles'), printer(content='application/octet-stream'),
+                     printer(name='xl/printerSettings/other.bin'), printer(data=b'x'*65537),
+                     printer(target='https://example.invalid/a')):
+            with self.subTest(size=len(blob)), self.assertRaises(PersonnelXlsxError):
+                inspect_workbook(blob)
 
 
 if __name__ == '__main__':

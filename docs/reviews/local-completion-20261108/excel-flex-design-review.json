@@ -1,0 +1,36 @@
+{
+  "status": "DESIGN_REVIEW_RECOMMENDATIONS_NO_BUILD_GRANT",
+  "risk": "R2",
+  "worker": "Root design/work order; implementation owner to be assigned",
+  "reviewer": "Astra independent REVIEWER",
+  "source": {
+    "path": "ma_nguon/PERSONNEL_XLSX.py",
+    "sha256": "58f083074587553f3d62e66ba01105143c9e5576dc0ff397245d53bd23d563d2"
+  },
+  "scope": "Finite read-only assessment of practical flat personnel XLSX flexibility; actual user workbook contents not read or retained by reviewer. No network, source edits or product tests.",
+  "findings": [
+    {
+      "id": "FLEX1",
+      "cause": "_preflight permits only XML/.rels members and relation suffix whitelist omits printerSettings, rejecting ordinary Excel print metadata.",
+      "recommendation": "Allow only canonical xl/printerSettings/printerSettingsN.bin as bounded inert bytes with expected application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings content type and exact official printerSettings relationship from a worksheet relationship part to the contained member. Preserve archive member/count/expanded-byte/ratio/path checks; do not parse or execute binary. Reject arbitrary .bin, VBA, OLE, ActiveX, external relationships and embedded content. Do not broaden every relationship simply because print metadata is permitted."
+    },
+    {
+      "id": "FLEX2",
+      "cause": "build_plan treats every non-string mapped code as ERROR.",
+      "recommendation": "For code field only, accept finite nonnegative integral numeric values with at most15 decimal digits; reject bool/date/time/fraction/nonfinite/negative or potentially precision-lost values. General or simple0 format becomes exact decimal text; a pure zero mask such as000000 preserves explicit width by left padding. Bound mask/output length. Reject unsupported custom/scientific/decimal/date formats rather than guess display. Preserve original text codes exactly after existing trim/NFC. Preview must visibly disclose numeric-code conversion/zero-padding; code is diagnostic only and not persisted as identity."
+    },
+    {
+      "id": "FLEX3",
+      "cause": "Small closed aliases reject reasonable labels; minimum two mapped columns rejects legitimate names-only list.",
+      "recommendation": "Expand closed unambiguous aliases after whitespace/NFC/case normalization: name Họ và tên/Họ tên/Tên nhân viên/Họ và tên nhân viên/Full name; code MSCĐ/MSCD/Mã NV/Mã nhân viên/Mã số nhân viên/Mã số công đoàn; title Chức danh/Chức vụ; group Tổ/Nhóm/Tổ nhân sự/Nhóm nhân sự/Nhóm/ca. Do not use unconstrained fuzzy matching or generic Tên/Mã as auto-detection. Exact approved alias list belongs in SPEC. Name-only mode can be explicit mapping with recognized name header and visible note that only names are added; retain row validation/duplicate/existing-name checks and explicit preview confirmation. No automatic group assignment or identity invention."
+    },
+    {
+      "id": "FLEX4",
+      "cause": "Merged decorative title above header is already supported by current merged.max_row >= header_row check.",
+      "recommendation": "Retain existing header-row selection; allow title wholly above selected header without new code. Keep merged selected table/header rejected. Formatting already ignored should remain ignored. No expansion into report/formula ingestion, drawing/table/embedded support merely under the label formatting."
+    }
+  ],
+  "acceptance": "Use small synthetic fixtures for printer metadata, mixed string/integer/zero-mask codes, name-only and aliases; preserve malicious-bin/macro/external/formula/ZIP/merged-table negatives. One bounded read-only actual workbook preview with explicit selected sheet/header2/nameB/codeC/titleD and no real catalog mutation can prove practical fit; retain only counts/error coordinates/structural observations, not personal row values. Exact EXE smoke plus one synthetic UI preview-confirm/repeat sufficient for new behavior; no broad benchmark or print matrix. Existing additive owner/nonce/context/cancel and backup guarantees must stay unchanged.",
+  "cleanupBoundary": "Separate exact allowlist of generated browser profiles/cache only after controller sessions ended; do not infer all runtime disposable. Preserve reviewed wheel cache/venv, fixture generators/logs/durable evidence, executable, real-data backups and user workbook. Resolved/reparse/tracked guards and explicit lost-replay disclosure remain necessary; no process termination.",
+  "decision": "Suitable narrow SPEC amendment and combined work order; numeric conversion and name-only acceptance change locked PNI behavior, so bind exact amended contract before BUILD. Ordinary technical choices need no additional business approval."
+}

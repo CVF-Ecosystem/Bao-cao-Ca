@@ -5,15 +5,15 @@ Memory class: POINTER_RECORD
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md
 
 ## Current local release
 
-- Current LOCAL authority: terminal CLOSED_ACCEPTED REVIEW packet with explicit operator-reduced QA; immutable SPEC6e0842af and original586b action/receipt preserved. No future BUILD.
-- Current delivery state: Independently accepted revised LOCAL L1-L8 engineering delivery; exact8e641d315258 EXE10aaf013 delivered as SO_BAO_CAO_CA_1_10_0.exe beside existing data. Fine V8 times deferred NOT_MEASURED; exact terminal receipt and required mechanical gates recorded.
-- Current owner/next move: Root COMMIT_STEWARD/session sync; revised local engineering FREEZE. Target-device/operational witnesses later; new work requires separate scoped assessment.
+- Current LOCAL authority: accepted1.10.0 is retained baseline. Active FLEX F1-F5 packetf937aa36 and locked readerSPECc6ab54b7/dialogSPEC1d8c99ef admit only bounded1.10.1 repair/cleanup; no web BUILD.
+- Current delivery state:1.10.1 merged11-file source independently accepted b2906666,19reader/17API/personnelUI/39LOCAL/20dialog focusedPASS;44profiles removed. Exact newEXE/native F4/F5 remains pending;1.10.0 baseline retained.
+- Current owner/next move: Root COMMIT_STEWARD/session sync for accepted11-file source candidate, then Sol exact offlinebuild/onecombinednative proof.
 - Deferred by operator: another yard-machine/device acceptance later. No parked operator checkpoint.
 - Earlier dated sections below are preserved history; current state and active handoff own next-action truth.
 
@@ -222,3 +222,23 @@ CLN REVIEW acknowledgment: Root transitions IMPLEMENTATION_WORKER->CLOSER after 
 
 
 CLN FREEZE/commit stewardship: independent cleanup-terminal-reviewa74d9a30 accepts exact1a9dc06d/C1 and actual16-file result4c43df8b. RootCLOSER->SESSION_SYNC_STEWARD/COMMIT_STEWARD,Core68a7446/R2/liveYES,activehandoffV1,checkpointnone.20,028,223,488bytes synthetic payloads removed; Dfree27,361,681,408B. Durable evidence/generators/logs and exact releasedEXE10aaf retained; raw deleted bulk fixtures no longer retained for replay. No real data/user workbook/true backups/process touched. Only terminal mechanical checks/authorized records commit, no more delete/tests. LOCAL engineering outcome and deferred operational/web limits unchanged.
+
+
+## FLEX intake/design/work-order acknowledgment — 2026-11-08
+
+Operator explicitly asks furthercleanup/flexibleExcel. RootrehydratedFREEZE,doctorCORE_ASSESSED29+4,BOOTSTRAP_MIGRATION_PENDING. CVF Agent Declaration: SO_BAO_CAO_CA_V1_9/Core68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6,WORK_ORDER/R2/liveYES,ORCHESTRATOR,activehandoffV1,checkpointnone. Read-only actualfile structure63rows/14numericcodes/noformulas, row2B/C/D/F; original parser rejects normal printersettings, numericcodes and UIhardcodes row1. DESIGN narrow typedprintmetadata/integercodes/closedaliases+uniqueeditablesuggestions; retain2recognizedcolumns/reportguard and existingpreview/nonce. Cleanup44exact stopped profiles1.077GB only, preservebuildtools/logs/nonprofile/realdata/EXE. Lockedamendment/WO awaitingAstraindependentadmission; noBUILDyet. Budget60execution/15support since intake, no reset; no bigdata/fullmatrix/provider/network.
+
+
+FLEX BUILD acknowledgment: independent admissionc8c7e9bc accepts exacte79b2ee5/SPECc6ab54b7 incl11General/3@numericcodes; fresh pre-dispatch exit0. RootrehydratedcanonicalWORK_ORDER and acknowledgesBUILD before source/cleanup. Roles TerraIMPLEMENTATION_WORKER(parser/UI/tests),SolIMPLEMENTATION_WORKER(version/docs/package/native),RootORCHESTRATOR/cleanupworker/commitowner,independentAstraREVIEWER. Eachworkerrehydrates/acknowledges exact action before writes. Originalbudget60+15fromintake2026-11-08T11:21:48Z unchanged; no producttestmatrix/privateevidencerows.
+
+
+FLEX F5 amendment acknowledgment: user explicitly requests top-rightX/backdrop dismissal, same1.10.1 delivery. Terra/Sol source/doc workers frozen; independent source-reviewb74684f7 acceptsF1/F2/F3, F4pending. RootrehydratesBUILD->WORK_ORDER/ORCHESTRATOR before scope/path amendment; noF5BUILDyet. Originale79/receipt preserved, readerSPECc6ab54b7 unchanged, standaloneDIALOG_DISMISS locks shared guarded cancellation. Exactnewassessmentrequired beforeSol edits. Same60+15budget/noreset; one combinedsmallnative session/noextra matrix.
+
+
+FLEX F5 BUILD acknowledgment: RootrehydratesWORK_ORDER,independentAstra baaabcb2 accepts exactf937aa36/DIALOG_SPEC1d8c99ef, freshdialog-admitted pre-dispatch0. SolIMPLEMENTATION_WORKER may changeonlyassignedsharedmodal/style/focusedtests; priorTerra/sourceF1/F2/F3remainfrozen. No further scope/design expansion; original60+15budget unchanged, no extra testmatrix. RootORCHESTRATOR/SESSION_SYNC_STEWARD,Core68a7446/R2/liveYES,activehandoffV1,checkpointnone.
+
+
+FLEX merged-source REVIEW acknowledgment: Terra4sourcefiles frozen andindependentlyaccepted, Sol7version/docs/modal/testfiles nowfrozen; Rootverifiedall11rawhashes inmerged-source-manifest. Actual19reader/17API/personnelUI/39LOCAL/20dialogfocusedPASS; initialdialogharnessDOMstubfailurepreserved, no source-defectwaiver. RootrehydratesBUILD->REVIEW ORCHESTRATOR/SESSION_SYNC_STEWARD,Core68a7446/R2/liveYES,activehandoffV1,checkpointnone. Astraindependentmergedsource thenRootcandidatecommit/Solcleanofflinebuild/onecombinednativeflow. Originalbudgetunchanged; no broadtestmatrix.
+
+
+FLEX source-candidate COMMIT_STEWARD acknowledgment: rehydrated currentREVIEW; independent source-candidate-reviewb2906666 accepts frozen11ownedinputs plusunchangedLOCALtest. Rootrawhashcustody verifiedmergedmanifest, actualworker-return/reviewer-fast exit0 afterpreservedRisk-headingannotation inreadonlyTerraaudit (no sourcechange). CVF Agent Declaration: SO_BAO_CAO_CA_V1_9/Core68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6,REVIEW/R2/liveYES,COMMIT_STEWARD,activehandoffV1,checkpointnone. Commitreviewedcandidateonly thenSolexactcleanproducerbuild andonesmallcombinednativeproof; no wholeFLEX/productclosureyet, no further broadtests. User workbook/newoldEXEs remainuntrackedandunstaged.

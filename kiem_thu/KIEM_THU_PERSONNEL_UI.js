@@ -10,6 +10,14 @@ el('personnelRoot').appendChild=child=>elements.set(child.id,child);
 run(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/ung_dung.js','utf8'));run('go=()=>{}');
 run(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/danh_muc.js','utf8'));
 async function main(){
+ run("var suggestionSheet={sample:[{row:2,cells:[{column:2,value:'Họ và Tên'},{column:3,value:'MSCĐ'},{column:4,value:'Chức danh'},{column:5,value:'Bộ phận'},{column:6,value:'Thời gian làm việc'}]}]}");
+ assert.equal(run('personnelSuggest(suggestionSheet).row'),2);
+ assert.equal(run('personnelSuggest(suggestionSheet).found.name[0]'),2);
+ assert.equal(run('personnelSuggest(suggestionSheet).found.code[0]'),3);
+ assert.equal(run('personnelSuggest(suggestionSheet).found.title[0]'),4);
+ assert.equal(run('personnelSuggest(suggestionSheet).found.group[0]'),6);
+ assert.equal(run('personnelSuggest({sample:[...suggestionSheet.sample,...suggestionSheet.sample]})'),null);
+ assert.equal(run("personnelSuggest({sample:[{row:2,cells:[...suggestionSheet.sample[0].cells,{column:7,value:'Full name'}]}]})"),null);
  run("info={context:'main',readonly:false,review:false}; personnelImport={context:'main',generation:0,sheets:[{name:'<img>',sample:[{row:1,cells:[{column:1,value:'<script>'}]}]}],excluded:new Set(),nonce:'old'}");
  el('personnelSheet').value='0';run('personnelSample()');
  assert.match(el('personnelSample').innerHTML,/&lt;script&gt;/);assert.doesNotMatch(el('personnelSample').innerHTML,/<script>/);

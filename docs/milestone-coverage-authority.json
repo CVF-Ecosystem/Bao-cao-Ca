@@ -20,6 +20,10 @@
     "CLN": {
       "path": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
       "heading": "## Acceptance criteria — CLN"
+    },
+    "FLEX": {
+      "path": "docs/work_orders/WO_IMPORT_FLEX.md",
+      "heading": "## Acceptance criteria — FLEX"
     }
   },
   "repairControls": {

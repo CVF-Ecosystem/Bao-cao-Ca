@@ -1,15 +1,15 @@
-SỔ BÁO CÁO CA — HƯỚNG DẪN HIỆN HÀNH 1.10.0 / SCHEMA 4
+SỔ BÁO CÁO CA — HƯỚNG DẪN HIỆN HÀNH 1.10.1 / SCHEMA 4
 Phát triển bởi Mr Ân / Tân Thuận
-Cập nhật ngày 08/11/2026. Các hướng dẫn thao tác bên dưới áp dụng cho 1.10.0.
+Cập nhật ngày 08/11/2026. Các hướng dẫn thao tác bên dưới áp dụng cho 1.10.1.
 Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu và lịch sử Git.
 
 1. MỞ VÀ CẬP NHẬT CHƯƠNG TRÌNH
 - Bấm Thoát tool ở phiên đang dùng trước khi cập nhật. Giữ bản sao thư mục cũ.
-- Bản bàn giao lần này: mở SO_BAO_CAO_CA_1_10_0.exe ngay ở thư mục dự án.
+- Bản bàn giao lần này: mở SO_BAO_CAO_CA_1_10_1.exe ngay ở thư mục dự án.
   Đóng bản cũ SO_BAO_CAO_CA.exe trước. Bản cũ đang chạy được giữ nguyên.
   Giữ EXE mới cạnh DU_LIEU và DANH_MUC; không mở bản trong dist để dùng dữ liệu hiện có.
   Khi cập nhật tên thông thường là SO_BAO_CAO_CA.exe; bản nguồn dùng MO_BAO_CAO_CA.pyw.
-  Kiểm tra góc dưới giao diện hiện 1.10.0 và mã build tương ứng.
+  Kiểm tra góc dưới giao diện hiện 1.10.1 và mã build tương ứng.
 - Giữ nguyên DU_LIEU, DANH_MUC và các tệp BAO_VE_DB_*.json cạnh thư mục dữ liệu.
   Không chép DB trắng lên DB đang dùng. EXE cũ không tự cập nhật theo mã nguồn.
 - Chỉ một phiên ứng dụng dùng một thư mục dữ liệu. Dùng Thoát tool và đợi hoàn tất.
@@ -19,6 +19,13 @@ Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu
 - Schema 4 cần chương trình mới trên mọi máy sử dụng. Bản 1.9.x không mở được nó.
   Muốn quay về chương trình cũ, dùng đúng bản sao trước nâng cấp và giữ riêng DB mới
   để không bỏ mất nội dung nhập sau thời điểm bản sao.
+
+HỘP THOẠI
+- Bấm × ở góc trên phải, bấm vùng nền bên ngoài hoặc nhấn Esc để đóng/hủy.
+  Chọn ngày/ca mới chưa bấm Vào ca này có thể đóng ngay, không tạo báo cáo.
+- Đang lưu, tải tệp, xác nhận nhập/nâng cấp hoặc chuẩn bị in thì đợi hoàn tất.
+  Biểu mẫu danh mục/tổ/mẫu phân công đã sửa sẽ hỏi trước khi bỏ thay đổi;
+  chọn không bỏ để tiếp tục sửa. Hủy nhập Excel cần xem trước lại trước khi xác nhận.
 
 2. NHẬP VÀ CHỐT MỘT CA
 1) Nhập ca mới, kiểm tra ngày bắt đầu và ca ngày/ca đêm rồi Vào ca này.
@@ -58,8 +65,15 @@ Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu
 
 4. NHẬP DANH MỤC NHÂN VIÊN TỪ EXCEL
 - Danh mục nhân sự / công việc → Nhập nhân viên Excel. Chọn .xlsx danh sách phẳng,
-  tối đa 2 MiB; chọn sheet, hàng tiêu đề và số cột. Hàng/cột bắt đầu từ 1.
-- Họ tên bắt buộc; mã, chức danh, nhóm/ca chỉ để đối chiếu khi xem trước.
+  tối đa 2 MiB. Chương trình gợi ý sheet, hàng tiêu đề và cột khi nhận diện duy nhất;
+  kiểm tra lại rồi sửa nếu cần. Hàng/cột bắt đầu từ 1, có thể để trống cột không dùng.
+  Có tiêu đề phía trên bảng vẫn chọn được hàng tiêu đề thực tế. Gợi ý mơ hồ cần chọn tay.
+- Họ tên bắt buộc cùng ít nhất một cột nhân sự được nhận diện khác; mã, chức danh,
+  nhóm/ca chỉ để đối chiếu khi xem trước. Cột Bộ phận không tự coi là nhóm/ca.
+- Mã nhân viên dạng số nguyên không âm có thể chuyển sang chữ để xem trước.
+  Định dạng General, văn bản hoặc mặt nạ toàn số 0 được hỗ trợ; giữ số 0 đầu theo mặt nạ.
+  Mã có số lẻ, quá dài, định dạng khó xác định hoặc công thức vẫn bị từ chối.
+  Thiết lập in thông thường trong file được chấp nhận; không thực thi macro hay dữ liệu máy in.
 - Xem trước, đánh dấu Loại ở dòng không muốn nhập rồi xem lại kết quả.
   Khi hợp lệ, Xác nhận thêm nhân viên. Hủy/Esc trước xác nhận không thêm tên.
 - Chỉ thêm tên chưa có, không tự phân tổ, điền phân công hay đổi ca ngày/đêm.
@@ -141,7 +155,9 @@ Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu
   không tạo DB trắng thay DB hỏng, không xóa -wal/-shm/-journal để lách kiểm tra.
 
 10. KẾT QUẢ VÀ GIỚI HẠN HIỆN TẠI
-- Mã 8e641d315258, EXE 1.10.0 SHA-256
+- Bản 1.10.1 dùng schema 4; xem tai_lieu/THAY_DOI_V1_10_1.txt.
+  Mã/hash EXE 1.10.1 sẽ được ghi sau kiểm chứng bản đóng gói.
+- Bằng chứng bản nền đã nghiệm thu: mã 8e641d315258, EXE 1.10.0 SHA-256
   10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917.
   Bằng chứng và đánh giá độc lập: docs/reviews/local-completion-20261108/.
 - Đã thao tác EXE có giao diện Chrome/Edge trên Windows bằng dữ liệu tổng hợp, gồm
@@ -167,4 +183,4 @@ Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu
 - Đóng gói kiểm tra Git sạch trên bản checkout nguồn riêng đúng commit, dùng công cụ offline;
   không coi thư mục làm việc gốc có tệp ngoài mã là sạch, không tự nâng thư viện toàn máy.
   Kiểm thử khói EXE: python -B cong_cu/KIEM_THU_KHOI.py --exe <đường_dẫn_EXE>
-  --commit 8e641d315258 --version 1.10.0. EXE được nhận diện bằng cả commit/phiên bản/hash.
+  --commit <mã_build_đang_dùng> --version 1.10.1. EXE được nhận diện bằng cả commit/phiên bản/hash.

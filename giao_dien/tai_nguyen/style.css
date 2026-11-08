@@ -106,3 +106,7 @@ details.navgroup[open]{padding-bottom:4px}
 }
 @media screen and (max-width:1000px){.toast{margin-left:203px}}
 @media screen and (max-width:650px){body{height:auto;overflow:auto}.layout{overflow:visible}.toast{margin-left:12px}.modalback{bottom:0!important}}
+
+/* Shared close control is scoped to dialogs and reserves header space. */
+.modalClose{display:block;position:sticky;top:8px;z-index:10;width:40px;height:40px;margin:8px 0 -48px auto;padding:0;font-size:26px;line-height:1;background:white}.modalClose:focus-visible{outline:3px solid var(--teal);outline-offset:2px}.modal .modalHead{padding-right:52px!important}
+@media print{.modalClose{display:none!important}}

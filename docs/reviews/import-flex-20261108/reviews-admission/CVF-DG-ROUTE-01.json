@@ -1,0 +1,57 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+    "sha256": "e79b2ee573bfa39338bdd50f445268dfa70ec1d07bcd5837bc7bb9506702dda5",
+    "criteria": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+    ]
+  },
+  "controlId": "CVF-DG-ROUTE-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Astra 6 Medium / independent REVIEWER",
+  "authority": "Explicit operator further cleanup and flexible Excel import request; bounded locked FLEX amendment, Root commit owner.",
+  "decision": "ACCEPTED",
+  "reason": "Exact F1-F4 design and action accepted under explicit operator request. Narrow inert printerSettings path/type/internal worksheet ownership and64KiB bounds preserve existing archive/XML/macro/external/embedded/formula guards. Finite nonnegative integral <=15-digit code conversion accepts General, @ or bounded pure-zero masks with visible preview notice, not invented precision. Closed aliases, minimum name plus one recognized supporting field, unique editable20x20 suggestions and ambiguity refusal retain report-list boundary; no name-only/general fuzzy acceptance. Existing server/additive owner/nonce/context unchanged. Actual readonly oracle63rows/14numeric (11General,3@)/49text and zero formulas resolves prior format mismatch. One disposable exactEXE flow with aggregate-only private evidence is authorized, no operational mutation. Root44-profile cleanup limited to exact stopped generated trees, reviewed inventory/process/reparse/tracked guards; dry44eligible/0skips,10322files1077402818bytes. Partial rmtree errors must be reported as potentially partially removed, not untouched skipped. Root owns commits/cleanup, Terra reader/UI, Sol version/build/sole native controller; independent reviewer and60+15minute ceilings maintained. No new dependencies/network or broad benchmark/print/product test matrices. Actual trusted non-ACT observation PASS; fresh exact activation/pre-dispatch remains required.",
+  "evidence": [
+    {
+      "path": "docs/work_orders/WO_IMPORT_FLEX.md",
+      "sha256": "e79b2ee573bfa39338bdd50f445268dfa70ec1d07bcd5837bc7bb9506702dda5"
+    },
+    {
+      "path": "docs/specs/PERSONNEL_EXCEL_FLEX.md",
+      "sha256": "c6ab54b760cc8002e87de81ad7d38e1d4073c8e85af08040693b0293b3c943c6"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/profile-cleanup-plan.json",
+      "sha256": "0c02d16dd1d75f31810fe15c4a6b17342fbee41586d7b41916a8a11ae8bbc77e"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/profile-cleanup-precheck.json",
+      "sha256": "f7d203b3f1900014fd5611efd459c23c2e74ade896aac0c8d39871bf00e327ac"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/cleanup-profiles.py",
+      "sha256": "f4dd7d903f838404caa70449be01fdbfa00a83ea54fbb190ad48ba960b1b9da9"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/actual-workbook-structural-oracle.json",
+      "sha256": "d549054abec10ef850b652dcadd5400a792a52ad413fcf40e8857f91e573270c"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/before-receipt-final.json",
+      "sha256": "96eec07f70c00136bd907414cc9e51a62ae5b6f8578506b77349036b5d6fc14d"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/configured.json",
+      "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json",
+      "sha256": "d8acf3709161ef9bca51e987bdbae358d7bd88d268326db3b3821de9ac89c539"
+    }
+  ],
+  "limits": "Design/admission acceptance only, no implementation/security-negative/native outcome PASS yet. Exact source and actual effects need independent return review. Prior LOCAL/PNI and operational limits remain; no future web grant."
+}

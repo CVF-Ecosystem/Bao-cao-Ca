@@ -1,0 +1,27 @@
+CẬP NHẬT 1.10.1 — NHẬP EXCEL THÔNG THƯỜNG LINH HOẠT HƠN
+Ngày 08/11/2026. Schema 4 không đổi; giữ nguyên DU_LIEU và DANH_MUC đang dùng.
+Bản bàn giao: SO_BAO_CAO_CA_1_10_1.exe cạnh DU_LIEU/DANH_MUC sau khi được nghiệm thu.
+Đóng phiên bản cũ trước khi mở bản mới; không lấy DB thử thay dữ liệu đang sử dụng.
+
+- Thêm nút × ở góc phải hộp thoại; bấm nền ngoài hoặc Esc cũng đóng/hủy.
+  Chọn ngày/ca mới đóng ngay khi chưa vào ca. Biểu mẫu danh mục/tổ/mẫu đã sửa
+  hỏi xác nhận bỏ thay đổi; đang lưu/tải/xác nhận/in thì không đóng giữa chừng.
+- Nhận các thiết lập in thông thường, đúng cấu trúc của file Excel; không thực thi dữ liệu máy in.
+- Nhận thêm cách đặt tên tiêu đề tiếng Việt không dấu và tiếng Anh đã quy định.
+- Gợi ý hàng tiêu đề/cột khi nhận diện duy nhất; có thể sửa, xóa cột tùy chọn trước Xem trước.
+  Tiêu đề trang phía trên bảng không buộc bảng phải bắt đầu ở hàng 1.
+  Khi mơ hồ, người dùng chọn rõ hàng/cột; không tự đoán nhập dữ liệu.
+- Mã số nguyên không âm tối đa 15 chữ số được chuyển thành chữ để xem trước;
+  hỗ trợ General, định dạng văn bản và mặt nạ toàn số 0 (giữ số 0 đầu theo mặt nạ).
+  Mã số lẻ, âm, quá dài, ngày tháng hay định dạng mơ hồ vẫn bị từ chối.
+- Vẫn cần cột họ tên cùng ít nhất một cột nhân sự được nhận diện khác.
+  Bộ phận không tự chuyển thành nhóm/ca. Chỉ tên mới được lưu, không tự phân tổ.
+- Vẫn xem trước, loại dòng và xác nhận chủ động; thay đổi lựa chọn cần xem trước lại.
+  Nhập lại không thêm trùng; báo cáo cũ và phân công hiện tại được giữ nguyên.
+- Giữ giới hạn .xlsx 2 MiB và các kiểm tra archive/XML/công thức/macro/liên kết ngoài.
+  Đây không phải chức năng đọc mọi file Excel hoặc nhập biểu báo cáo ca thành nhân viên.
+
+Đợt này chỉ kiểm tra reader/UI liên quan và một luồng file thật trên dữ liệu tạm.
+Không chạy lại ma trận in, dữ liệu lớn hay toàn bộ sản phẩm; không sửa dữ liệu vận hành.
+Nội dung nhân sự thật không được đưa vào gói bằng chứng. Hướng dẫn: HUONG_DAN.txt.
+Mã build/hash và kết quả đóng gói được bổ sung sau rà soát độc lập.

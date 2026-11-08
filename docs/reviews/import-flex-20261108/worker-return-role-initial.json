@@ -1,0 +1,96 @@
+{
+  "exitCode": 2,
+  "phase": "worker-return",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=51cd85639f359a96ddf3d88670c0f0ad7455183f candidates=72 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=51cd85639f359a96ddf3d88670c0f0ad7455183f candidates=72 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar",
+        "closeability_contract"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/WO_IMPORT_FLEX.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROLE-01"
+      ],
+      "controlId": "CVF-DG-ROLE-01",
+      "findings": [
+        {
+          "code": "RISK_MISSING",
+          "locator": "docs/reviews/import-flex-20261108/terra-design.md#Risk",
+          "message": "a review that names a Worker or Reviewer must declare `Risk: R0|R1|R2|R3`; independence cannot be graded without it"
+        }
+      ],
+      "notes": [
+        "docs/reviews/import-flex-20261108/worker-terra.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)"
+      ],
+      "ok": false,
+      "outcome": "FAIL",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-CLAIM-01"
+      ],
+      "controlId": "CVF-DG-CLAIM-01",
+      "findings": [],
+      "notes": [
+        "0 explicit claim line(s) and 4 document(s) scanned"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/WO_IMPORT_FLEX.md",
+        "mechanical joins only; Local owns semantic acceptance"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    }
+  ]
+}

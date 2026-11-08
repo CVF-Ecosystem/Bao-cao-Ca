@@ -15,3 +15,9 @@ docs/decisions/ADR_PERSONNEL_EXCEL_BUILD_COMPATIBILITY.md -text
 # Whole-local action/source evidence raw custody.
 docs/reviews/local-completion-20261108/** -text
 docs/specs/LOCAL_COMPLETION.md -text
+
+# FLEX exact raw action/spec/review custody
+docs/reviews/import-flex-20261108/** -text
+docs/specs/PERSONNEL_EXCEL_FLEX.md -text
+docs/work_orders/WO_IMPORT_FLEX.md -text
+docs/specs/DIALOG_DISMISS.md -text

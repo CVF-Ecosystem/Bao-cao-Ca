@@ -1,0 +1,237 @@
+{
+  "mode": "PRECHECK",
+  "planSha256": "0c02d16dd1d75f31810fe15c4a6b17342fbee41586d7b41916a8a11ae8bbc77e",
+  "profilesPlanned": 44,
+  "bytesPlanned": 1077402818,
+  "freeBefore": 27360559104,
+  "eligible": [
+    {
+      "path": ".cvf/runtime/local-completion-20261108/baseline-button-chrome-short-headers0-button-1794130943/chrome-profile",
+      "bytes": 24824838
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/baseline-button-msedge-short-headers0-button-1794130982/msedge-profile",
+      "bytes": 25175100
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/baseline-key-chrome-short-headers0-ctrlp-1794130825/chrome-profile",
+      "bytes": 20243036
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/baseline-key-msedge-short-headers0-ctrlp-1794130837/msedge-profile",
+      "bytes": 19142590
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers0-button-1794131364/msedge-profile",
+      "bytes": 25192289
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers1-button-1794131092/msedge-profile",
+      "bytes": 25174228
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers1-button-1794131160/msedge-profile",
+      "bytes": 25175104
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers1-button-1794131206/msedge-profile",
+      "bytes": 25295563
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers1-button-1794131300/msedge-profile",
+      "bytes": 25192367
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers1-button-1794131338/msedge-profile",
+      "bytes": 25196626
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/final-default-ticket-msedge-short-headers0-button-1794132472/msedge-profile",
+      "bytes": 25194838
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/final-default-ticket-msedge-short-headers1-button-1794132514/msedge-profile",
+      "bytes": 25194818
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/final-print-1794126685/chrome-profile",
+      "bytes": 24819126
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/final-print-1794126771/chrome-profile",
+      "bytes": 24049588
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-long-headers0-button-1794130328/chrome-profile",
+      "bytes": 24055295
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-long-headers0-ctrlp-1794130341/chrome-profile",
+      "bytes": 24055264
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-long-headers1-button-1794130353/chrome-profile",
+      "bytes": 25103896
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-long-headers1-ctrlp-1794130365/chrome-profile",
+      "bytes": 24055263
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-button-1794127616/chrome-profile",
+      "bytes": 24824991
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-button-1794130290/chrome-profile",
+      "bytes": 24824791
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-ctrlp-1794127629/chrome-profile",
+      "bytes": 20240337
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-ctrlp-1794127729/chrome-profile",
+      "bytes": 20240332
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-ctrlp-1794129818/chrome-profile",
+      "bytes": 20512060
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-ctrlp-1794129928/chrome-profile",
+      "bytes": 24824763
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-ctrlp-1794132530/chrome-profile",
+      "bytes": 24824769
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers1-button-1794127470/chrome-profile",
+      "bytes": 24824992
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers1-button-1794130303/chrome-profile",
+      "bytes": 24824795
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers1-ctrlp-1794130316/chrome-profile",
+      "bytes": 24824759
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-msedge-long-headers0-button-1794130423/msedge-profile",
+      "bytes": 25453994
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-msedge-long-headers0-ctrlp-1794130437/msedge-profile",
+      "bytes": 25453880
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-msedge-long-headers1-button-1794127941/msedge-profile",
+      "bytes": 25451351
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-msedge-long-headers1-button-1794130451/msedge-profile",
+      "bytes": 25449846
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-msedge-long-headers1-ctrlp-1794130465/msedge-profile",
+      "bytes": 25449252
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-msedge-short-headers0-button-1794127791/msedge-profile",
+      "bytes": 25173378
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-msedge-short-headers0-button-1794130378/msedge-profile",
+      "bytes": 25173752
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-msedge-short-headers0-ctrlp-1794129950/msedge-profile",
+      "bytes": 25174495
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-msedge-short-headers1-button-1794130393/msedge-profile",
+      "bytes": 25169883
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/matrix-msedge-short-headers1-ctrlp-1794130409/msedge-profile",
+      "bytes": 25174602
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/native-save-1794125497/chrome-profile",
+      "bytes": 25105337
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/native-save-1794125532/chrome-profile",
+      "bytes": 25080915
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/native-save-1794125532/msedge-profile",
+      "bytes": 25733123
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/native-save-1794125615/chrome-profile",
+      "bytes": 25080927
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/native-save-1794125615/msedge-profile",
+      "bytes": 25606241
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/native-save-1794125680/msedge-profile",
+      "bytes": 25765424
+    }
+  ],
+  "deleted": [],
+  "skipped": [],
+  "deletedBytes": 0,
+  "freeAfter": 27360559104,
+  "freeDelta": 0,
+  "remainingProfiles": [
+    ".cvf/runtime/local-completion-20261108/baseline-button-chrome-short-headers0-button-1794130943/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/baseline-button-msedge-short-headers0-button-1794130982/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/baseline-key-chrome-short-headers0-ctrlp-1794130825/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/baseline-key-msedge-short-headers0-ctrlp-1794130837/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers0-button-1794131364/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers1-button-1794131092/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers1-button-1794131160/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers1-button-1794131206/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers1-button-1794131300/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/edge-header-discriminator-msedge-short-headers1-button-1794131338/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/final-default-ticket-msedge-short-headers0-button-1794132472/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/final-default-ticket-msedge-short-headers1-button-1794132514/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/final-print-1794126685/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/final-print-1794126771/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-long-headers0-button-1794130328/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-long-headers0-ctrlp-1794130341/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-long-headers1-button-1794130353/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-long-headers1-ctrlp-1794130365/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-button-1794127616/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-button-1794130290/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-ctrlp-1794127629/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-ctrlp-1794127729/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-ctrlp-1794129818/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-ctrlp-1794129928/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers0-ctrlp-1794132530/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers1-button-1794127470/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers1-button-1794130303/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-chrome-short-headers1-ctrlp-1794130316/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-msedge-long-headers0-button-1794130423/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-msedge-long-headers0-ctrlp-1794130437/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-msedge-long-headers1-button-1794127941/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-msedge-long-headers1-button-1794130451/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-msedge-long-headers1-ctrlp-1794130465/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-msedge-short-headers0-button-1794127791/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-msedge-short-headers0-button-1794130378/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-msedge-short-headers0-ctrlp-1794129950/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-msedge-short-headers1-button-1794130393/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/matrix-msedge-short-headers1-ctrlp-1794130409/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/native-save-1794125497/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/native-save-1794125532/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/native-save-1794125532/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/native-save-1794125615/chrome-profile",
+    ".cvf/runtime/local-completion-20261108/native-save-1794125615/msedge-profile",
+    ".cvf/runtime/local-completion-20261108/native-save-1794125680/msedge-profile"
+  ],
+  "preservation": "Only exact old test-browser profile trees; all nonprofile files, wheels/venv, scripts/logs, real data/backups, workbook and delivered EXEs untouched."
+}

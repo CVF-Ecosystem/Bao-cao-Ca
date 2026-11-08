@@ -1,0 +1,54 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+    "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+    "criteria": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ]
+  },
+  "controlId": "CVF-DG-CONT-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Astra 6 Medium / independent REVIEWER",
+  "authority": "Explicit operator F5 dialog-close request, exact bounded amended FLEX F1-F5 work order; Root commit owner.",
+  "decision": "ACCEPTED",
+  "reason": "Explicit operator dialog-dismiss request is bounded by locked F5 amendment and allowed modal integration/style/test paths. One guarded dispatcher for X/true-backdrop/Esc reuses cancellation owners/generation invalidation, blocks save/upload/localBusy/PNIconfirm/printBusy and preserves late-response safety. Actual business-form edits require discard consent; temporary/default/search choices cancel without needless prompts, underlying report dirty/autosave state unchanged. Pointerdown/up backdrop identity excludes interior click/drag, opener focus retained across rerenders, visible accessible type=button close hidden in print; existing successful action handlers not replaced. Independent frozen F1/F2 source and completed old-profile F3 effect acceptance inherited exactly, not re-executed. F4 packaged/private disposable flow and F5 implementation/native proof remain pending. Same60execution+15support budget/no reset, one combined headed session, no broad tests/newdependencies/network/production effects. Root commit owner; Sol implementation/sole native control; Astra independent review. Actual trusted non-ACT observation PASS; old activation stale until fresh exact receipt/pre-dispatch.",
+  "evidence": [
+    {
+      "path": "docs/work_orders/WO_IMPORT_FLEX.md",
+      "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696"
+    },
+    {
+      "path": "docs/specs/DIALOG_DISMISS.md",
+      "sha256": "1d8c99ef3c1e04516a3e062dae18e59612e4f1e50a73e58229bd1146dfd10182"
+    },
+    {
+      "path": "docs/specs/PERSONNEL_EXCEL_FLEX.md",
+      "sha256": "c6ab54b760cc8002e87de81ad7d38e1d4073c8e85af08040693b0293b3c943c6"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+      "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/configured.json",
+      "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/source-review-before-dialog-amendment.json",
+      "sha256": "b74684f7ecf7b4e27cb9f1e1995827227eca253e16eed9a5061bc3786bb99dbb"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/admission-review.json",
+      "sha256": "c8c7e9bc1686f2f3e292f97237e8441ae061fa1487c504ba344eee3ca409c1d0"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/reviews-admission/SUPPLEMENTAL_ASSESSMENT.json",
+      "sha256": "9401ef7f89bc205cffc95970d6030fdddecd3a01abc9f663288e51069e4830c4"
+    }
+  ],
+  "limits": "Admission only, not F4/F5 implementation or product completion. Independent source/native acceptance remains required; no future cleanup or web grant."
+}

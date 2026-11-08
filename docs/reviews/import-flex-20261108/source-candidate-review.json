@@ -1,0 +1,105 @@
+{
+  "status": "MERGED_SOURCE_CANDIDATE_ACCEPTED_NATIVE_F4_F5_PENDING",
+  "risk": "R2",
+  "worker": "Terra F1/F2; Sol F5/version/docs; Root F3/commit",
+  "reviewer": "Astra independent REVIEWER",
+  "action": {
+    "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+    "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+    "criteria": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ]
+  },
+  "source": [
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "sha256": "31c2b94ca64816ae8d7ad11cad9ada41fe214ecf1e236faabd7c3685526e7f6a"
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "3dfe13c87f11204b9e04da60e9f3b0befda93ac2c779f07ba0662804959c6fbd"
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_10_1.txt",
+      "sha256": "c5d047df375a1885158316fc0e15fccc9ac863ca44c5fb4e891f326511dbdc4a"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/local_ui.js",
+      "sha256": "6b78117c8b35e1fad859698003d50ed4cd3d26fd947d59cf89cc4594564338ab"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/ung_dung.js",
+      "sha256": "f3b57682a966a9d671c285d3ce8cf4decfff4f2b9cab004ebdd52167920dd096"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/style.css",
+      "sha256": "15544f66ee08ff1195ddebafc845affc09b3f3359080ed926958c7cdebcbcdf4"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_DIALOG_DISMISS.js",
+      "sha256": "3bc6244d35c799a0f897d344c37dfdd8c1f90882914e3f74e63b11960e134a47"
+    },
+    {
+      "path": "ma_nguon/PERSONNEL_XLSX.py",
+      "sha256": "98a08e6a073485ef48f378736acf80cb445dc98abcb2260344f8bab0179d4697"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "sha256": "afefdcc9d13384b9b5931b1f925a0fff8e64554afe9015196ace510ac5e2cb3d"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_XLSX.py",
+      "sha256": "4be92eceafa5b55383c3e527aa638401b814f50db407adcc2daa44760d1adbd1"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_UI.js",
+      "sha256": "0c4cfa19bb53dfa5241d9ebcc6a68cc5c1d7286137abb62e13cd63cf357124a7"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+      "sha256": "e565e5a8992ba872133eec12f94328984a8a16a56dc528e139bda3fc0b1557c5"
+    }
+  ],
+  "decision": "ACCEPTED for clean source candidate/build; not packaged/native completion.",
+  "findings": "No blocking defect found in frozen final F5 delta. Shared dispatcher handles X/Esc/true backdrop, guards save/upload/local/PNI/print busy, invokes actual cancel owners and resolves person picker null. Trusted input/change and add/remove template actions track business edits; baseline retained across same-kind rerender, actual changed value asks discard, denial preserves state. Original opener captured pre-mount and connected visible usable focus restored, fallback mainContent has tabindex=-1 in unchanged HTML. Duplicate decoration avoided. Existing explicit success/close handlers and report autosave code retained. Scoped close button type/label/sticky/header reservation and explicit print-hide; original print rules, templates, core HTML and printReport untouched. Existing39LOCAL and20focused dismissal logs PASS; initial fake-DOM harness failure retained, no claim of native layout from mocks. No reviewer source edits or test reruns.",
+  "inheritance": "Prior F1/F2 four frozen source/test hashes unchanged and source accepted under b746 review; reader19/API17/UI worker evidence and actual readonly63NEW/14conversion/0error oracle inherited. F3 exact44 profile removal accepted. Backend/schema/catalog owner/security session/dependencies unchanged; unrelated LOCAL/PNI proof inherited only for unchanged effects.",
+  "remaining": "One exact clean offline1.10.1 EXE smoke plus admitted combined private disposable import/confirm/noop/picker/restart and small synthetic newshift X/backdrop witness. Verify visible close positioning and no private screenshots in native packet. No broad suite, print matrix or benchmark. Final binary identity/prose handover after actual proof.",
+  "evidence": [
+    {
+      "path": "docs/reviews/import-flex-20261108/worker-sol-source-hashes.json",
+      "sha256": "1e60eed285ef0ac4084b00148c83991d7a6b9d8868e0369856452ec7dcbc9545"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/worker-sol.md",
+      "sha256": "ea6a8f2d9137a9ebdff6a810a62cf09bb28a9a23330686334f03277d12f47596"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/worker-terra.md",
+      "sha256": "58502a03389a134042ac3b5cb82400e1ed947a0ad17d08cb6d79a7371cd0576d"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/dialog-focused-results.json",
+      "sha256": "c15b5b1826162c5e9b847aed9a240f9f402cdfcf09f883a2c0d0811513b7b6bd"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/KIEM_THU_DIALOG_DISMISS.js.log",
+      "sha256": "4023df82e42e86d0c5713e0a3db6fe992787649220bf35c977844909438b70a8"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/KIEM_THU_LOCAL_UI.js.log",
+      "sha256": "3cfe9cc08fd03c42fb628b93fd48d66589f099f39f651f9fa3431a0212876e32"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/source-review-before-dialog-amendment.json",
+      "sha256": "b74684f7ecf7b4e27cb9f1e1995827227eca253e16eed9a5061bc3786bb99dbb"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/dialog-admission-review.json",
+      "sha256": "baaabcb25cf824d70397b5a209eee971f6e5a4ac25d37d415596b4c00ae4e7e3"
+    }
+  ]
+}

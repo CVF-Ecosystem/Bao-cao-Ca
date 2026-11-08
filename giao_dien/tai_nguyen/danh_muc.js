@@ -213,12 +213,26 @@ async function personnelInspect(){
   personnelMapping();
  }catch(e){if(personnelCurrent(state,generation))error(e)}
 }
+const personnelAliases={name:['họ và tên','họ tên','tên nhân viên','ho va ten','ho ten','ten nhan vien','ho ten nhan vien','ho va ten nhan vien','họ tên nhân viên','họ và tên nhân viên','full name','employee name'],code:['mscđ','mã nhân viên','mscd','msnv','mã nv','ma nv','ma nhan vien','employee id','employee code'],title:['chức danh','chuc danh','chức vụ','chuc vu','vị trí','vi tri','job title'],group:['nhóm/ca','tổ nhân sự','nhom/ca','to nhan su','tổ','to','nhóm','nhom','ca','thời gian làm việc','thoi gian lam viec','shift','team']};
+function personnelSuggest(sheet){
+ const candidates=[];
+ for(const row of sheet.sample){
+  const found=Object.fromEntries(Object.keys(personnelAliases).map(k=>[k,[]]));
+  for(const cell of row.cells){
+   const header=String(cell.value).trim().normalize('NFC').split(/\s+/u).join(' ').toLowerCase();
+   for(const key of Object.keys(found))if(personnelAliases[key].includes(header))found[key].push(cell.column);
+  }
+  if(found.name.length && Object.values(found).filter(v=>v.length).length>=2)candidates.push({row:row.row,found});
+ }
+ if(candidates.length!==1 || Object.values(candidates[0].found).some(v=>v.length>1))return null;
+ return candidates[0];
+}
 function personnelMapping(){
  const state=personnelImport;
  if(!state.sheets.length){$('personnelContent').textContent='Không có sheet được hỗ trợ.';return}
  const opts=state.sheets.map((s,i)=>'<option value="'+i+'">'+esc(s.name)+'</option>').join('');
- const cols=['name','code','title','group'].map((key,i)=>'<label class="input">'+['Họ tên (bắt buộc)','Mã nhân viên','Chức danh','Nhóm/Ca'][i]+'<input type="number" id="personnelCol_'+key+'" min="1" max="64" oninput="personnelInvalidate()" '+(i===0?'required value="2"':'value="'+(i===1?1:i===2?3:4)+'"')+'></label>').join('');
- $('personnelContent').innerHTML='<div class="row"><label class="input">Sheet<select id="personnelSheet" onchange="personnelSample()">'+opts+'</select></label><label class="input">Hàng tiêu đề<input id="personnelHeader" oninput="personnelInvalidate()" type="number" min="1" max="2000" value="1"></label></div><p>Chọn số cột theo bảng mẫu; để trống cột không dùng. Hàng và cột bắt đầu từ 1.</p><div class="row">'+cols+'</div><div id="personnelSample"></div><button onclick="personnelPreview()">Xem trước</button><div id="personnelPlan"></div>';
+ const cols=['name','code','title','group'].map((key,i)=>'<label class="input">'+['Họ tên (bắt buộc)','Mã nhân viên','Chức danh','Nhóm/Ca'][i]+'<input type="number" id="personnelCol_'+key+'" min="1" max="64" oninput="personnelInvalidate()" '+(i===0?'required':'')+'></label>').join('');
+ $('personnelContent').innerHTML='<div class="row"><label class="input">Sheet<select id="personnelSheet" onchange="personnelSample()">'+opts+'</select></label><label class="input">Hàng tiêu đề<input id="personnelHeader" oninput="personnelInvalidate()" type="number" min="1" max="2000"></label></div><p>Gợi ý hàng và cột có thể sửa; để trống cột không dùng. Hàng và cột bắt đầu từ 1.</p><div class="row">'+cols+'</div><div id="personnelSample"></div><button onclick="personnelPreview()">Xem trước</button><div id="personnelPlan"></div>';
  personnelSample()
 }
 function personnelInvalidate(){
@@ -229,6 +243,9 @@ function personnelInvalidate(){
 function personnelSample(){
  if(personnelImport?.confirming)return;
  const s=personnelImport.sheets[Number($('personnelSheet').value)];
+ const suggestion=personnelSuggest(s);
+ $('personnelHeader').value=suggestion?suggestion.row:'';
+ for(const key of Object.keys(personnelAliases))$('personnelCol_'+key).value=suggestion?(suggestion.found[key][0]||''):'';
  $('personnelSample').innerHTML='<p class="muted">Mẫu tối đa 20 hàng đầu (số cột: nội dung)</p><div class="scroll">'+s.sample.map(r=>'<p>Hàng '+r.row+': '+r.cells.map(c=>c.column+': '+esc(c.value)).join(' | ')+'</p>').join('')+'</div>';
  personnelInvalidate(); personnelImport.excluded=new Set();
 }

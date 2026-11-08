@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "local": 39,
+    "dialog": 20
+  },
+  "results": [
+    {
+      "command": [
+        "C:/nvm4w/nodejs/node.exe",
+        "kiem_thu/KIEM_THU_LOCAL_UI.js"
+      ],
+      "exit": 0,
+      "log": "docs\\reviews\\import-flex-20261108\\KIEM_THU_LOCAL_UI.js.log"
+    },
+    {
+      "command": [
+        "C:/nvm4w/nodejs/node.exe",
+        "kiem_thu/KIEM_THU_DIALOG_DISMISS.js"
+      ],
+      "exit": 0,
+      "log": "docs\\reviews\\import-flex-20261108\\KIEM_THU_DIALOG_DISMISS.js.log"
+    }
+  ],
+  "initialFailure": {
+    "kind": "TEST_HARNESS",
+    "message": "Template rerender fake DOM dropped template fields before decoration; expected false got true at line47. Harness now reconstructs template fields during mounting. No product change from this failure."
+  }
+}

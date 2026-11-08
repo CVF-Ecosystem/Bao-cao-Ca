@@ -43,6 +43,7 @@ function error(e){
   toast((e.message||String(e))+(e.code==='RECOVERY_REQUIRED'?' · Cần phục hồi từ bản sao đã giữ'+(e.backupName?': '+e.backupName:'')+'. Dừng thay đổi dữ liệu.':''),true)
 }
 function modal(content,wide=false){
+  if(typeof prepareLocalModal==='function')prepareLocalModal();
   if(typeof invalidateLocalDialog==='function')invalidateLocalDialog();
   $('modalBody').className='modal'+(wide?' wide':'');
   $('modalBody').innerHTML=content;
@@ -51,6 +52,7 @@ function modal(content,wide=false){
 }
 function closeModal(){
   $('modal').classList.add('hide');
+  if(typeof finishLocalModal==='function')finishLocalModal();
   if(dirty&&report?.status==='draft'&&!info?.readonly&&!info?.review&&!saving&&!uploading){
     clearTimeout(timer);
     timer=setTimeout(()=>save(false),1600)

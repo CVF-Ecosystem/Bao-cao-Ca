@@ -12,14 +12,18 @@
     "sourceRoute": "PINNED_CORE"
   },
   "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
-  "reviewer": "Astra independent cleanup terminal REVIEWER",
-  "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
+  "reviewer": "Astra independent FLEX/F5 reviewer",
+  "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
   "actions": [
     {
-      "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
-      "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
+      "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+      "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
       "criteria": [
-        "C1"
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
       ]
     }
   ],
@@ -30,13 +34,13 @@
       "sourceSha256": "b2acf0b3d3bf52e6feb58fb71ac61227b71d29cc98d61f6781f4fbd71aea4125",
       "owner": "Root orchestrator",
       "actions": [
-        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+        "docs/work_orders/WO_IMPORT_FLEX.md"
       ],
       "disposition": "ASSESSED",
       "reviewEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json",
-          "sha256": "d8acf3709161ef9bca51e987bdbae358d7bd88d268326db3b3821de9ac89c539"
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "ea8d2175b3cca34dc3e69381641c62e1495e42cdfb525c5528cc0e35aa643f82"
         }
       ]
     }
@@ -45,216 +49,264 @@
     {
       "id": "CVF-DG-INST-01",
       "owner": "Root orchestrator",
-      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
-      "reason": "Actual current terminal non-ACT control PASS independently reviewed on exact1a9d; local mechanical only.",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
       "actions": [
-        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+        "docs/work_orders/WO_IMPORT_FLEX.md"
       ],
       "criteria": [
-        "C1"
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
-        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
-          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
           "criteria": [
-            "C1"
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
-        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-INST-01.json",
-          "sha256": "73575cd000e62c167776b7c25d4e6180d49bcdadfd41c8de48cdf21a143df4d0"
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-INST-01.json",
+          "sha256": "fdea138b76234de19cd10889e0994b59106842958b450023daa3290d38d322b1"
         }
       ]
     },
     {
       "id": "CVF-DG-CONT-01",
       "owner": "Root orchestrator",
-      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
-      "reason": "Actual current terminal non-ACT control PASS independently reviewed on exact1a9d; local mechanical only.",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
       "actions": [
-        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+        "docs/work_orders/WO_IMPORT_FLEX.md"
       ],
       "criteria": [
-        "C1"
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
-        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
-          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
           "criteria": [
-            "C1"
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
-        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-CONT-01.json",
-          "sha256": "dc41477006557709d7fa35e4cf19c8ad76ee864d5b473d6713e6a1e80bb27836"
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-CONT-01.json",
+          "sha256": "cac831df006c54aca5ef4ee279aae284257ce8e076bbc9f4f247d9eac71d19af"
         }
       ]
     },
     {
       "id": "CVF-DG-RANGE-01",
       "owner": "Root orchestrator",
-      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
-      "reason": "Actual current terminal non-ACT control PASS independently reviewed on exact1a9d; local mechanical only.",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
       "actions": [
-        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+        "docs/work_orders/WO_IMPORT_FLEX.md"
       ],
       "criteria": [
-        "C1"
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
-        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
-          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
           "criteria": [
-            "C1"
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
-        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-RANGE-01.json",
-          "sha256": "1e76a3b1ca99fa71090d26e47fdb3b7fd41ff34022edd6c7fd2d3fbc84f3a864"
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-RANGE-01.json",
+          "sha256": "87a4de3ebeea72f18c12960c320de1b38eb59e32a4db9b8dd656d8cf171783cd"
         }
       ]
     },
     {
       "id": "CVF-DG-APPL-01",
       "owner": "Root orchestrator",
-      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
-      "reason": "Closed cleanup packet explicitly N/A; status grammar checked, closeability not checked, no false PASS.",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
       "actions": [
-        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+        "docs/work_orders/WO_IMPORT_FLEX.md"
       ],
       "criteria": [
-        "C1"
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
-        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
-          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
           "criteria": [
-            "C1"
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
-        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-APPL-01.json",
-          "sha256": "0a9426e05eaad7dab88fb813603ab62c31fc646e05ced8acc723a4e8a3da6c79"
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-APPL-01.json",
+          "sha256": "a7747f6215e7efc7ad50b71157bfe7ad54509b027e9c422988575367615b7cd5"
         }
       ]
     },
     {
       "id": "CVF-DG-ROUTE-01",
       "owner": "Root orchestrator",
-      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
-      "reason": "Actual current terminal non-ACT control PASS independently reviewed on exact1a9d; local mechanical only.",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
       "actions": [
-        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+        "docs/work_orders/WO_IMPORT_FLEX.md"
       ],
       "criteria": [
-        "C1"
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
-        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
-          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
           "criteria": [
-            "C1"
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
-        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-ROUTE-01.json",
-          "sha256": "19bf03b45909e2f2876b5de4099bc7e379bc1267af09d31f91f67ec68110c218"
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-ROUTE-01.json",
+          "sha256": "8e06f042324b9080ff8a5bb99861a0cef60dd63b0cd284eaca5c5fa189c492d6"
         }
       ]
     },
     {
       "id": "CVF-DG-COV-01",
       "owner": "Root orchestrator",
-      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
-      "reason": "Actual current terminal non-ACT control PASS independently reviewed on exact1a9d; local mechanical only.",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
       "actions": [
-        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+        "docs/work_orders/WO_IMPORT_FLEX.md"
       ],
       "criteria": [
-        "C1"
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
-        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
-          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
           "criteria": [
-            "C1"
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
-        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-COV-01.json",
-          "sha256": "65a372845999ab0a5a5cc07e0eb6965eb81e0038a523244ac3e9ef0728ed9c24"
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-COV-01.json",
+          "sha256": "9ee9afc39447435798552c10861fd7e97e90b70b7451b0ef9c15c506ecb82a6f"
         }
       ]
     }

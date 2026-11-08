@@ -5,7 +5,7 @@ import json
 import re
 from pathlib import Path
 
-VERSION = '1.10.0'
+VERSION = '1.10.1'
 MAX_FILE = 100 * 1024 * 1024
 MAX_DB = 8 * 1024 * 1024 * 1024
 ROOT = Path(sys.executable).resolve().parent if getattr(sys, 'frozen', False) else Path(__file__).resolve().parent.parent
