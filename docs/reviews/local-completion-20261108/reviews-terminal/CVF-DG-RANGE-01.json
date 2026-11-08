@@ -1,0 +1,85 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+    "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
+    "criteria": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "L8"
+    ]
+  },
+  "controlId": "CVF-DG-RANGE-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Astra 6 Medium / independent REVIEWER",
+  "authority": "Operator authorized local completion and subsequently requested reduced testing; Root owns explicit bounded QA amendment and terminal commit. Independent acceptance of revised local engineering scope only.",
+  "decision": "ACCEPTED",
+  "reason": "Exact CLOSED_ACCEPTED terminal REVIEW reconciles independently accepted LOCAL engineering delivery under explicit operator-reduced QA. Only two fine V8 completion timings are deferred NOT_MEASURED; original SPEC/action/receipt preserved. Known actual-layout defect corrected and independently reviewed by Root with actual nonzero native proof; exact clean isolated producer8e/EXE10aaf, scoped prior evidence inheritance and current guide accepted. Complete five evidence questions, technical/developer/business layers, owned site remainder and unchanged480/60 ceilings are recorded; unknown cumulative effort is not fabricated. Terminal copy/synchronization/commit only, no future BUILD/web/network. Original unrelated user workbook remains untouched; original root not claimed clean. Actual trusted terminal observation for this control is PASS; mechanical invocation is not live provider-governance proof. Delivery amendment independently accepted: locked prior root launcher7590 remains untouched; exact10aaf bytes delivered as SO_BAO_CAO_CA_1_10_0.exe in the same directory. THIET_LAP ROOT derives from executable parent, so this preserves intended data-directory location. Guide instructs close old before opening new; no process kill, app launch or operational data access. No product behavior or acceptance criterion change.",
+  "evidence": [
+    {
+      "path": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd"
+    },
+    {
+      "path": "docs/roadmaps/LOCAL_COMPLETION.md",
+      "sha256": "9e2c2d7aabc5ad99ab861706b4de0f0efd073c7debcfb1873c099180d3f1ec73"
+    },
+    {
+      "path": "docs/specs/LOCAL_COMPLETION.md",
+      "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
+      "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/configured-admission.json",
+      "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/operator-reduced-qa-decision.json",
+      "sha256": "2e746bf935b181473e9281f031348423ce26027952c8459425b8c7023ea07fe8"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+      "sha256": "67ec8ca39c5b1d16c1edb59726a5f49c87876936a035a790dad6f6577956e751"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+      "sha256": "8336974546e3d5823112003a718f3995df7c5541ff8e68daedd2e6ea8d23a8c0"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/history/WO_LOCAL_COMPLETION-admitted-586b-before-terminal.snapshot",
+      "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/history/LOCAL_COMPLETION-before-reduced-qa-terminal.snapshot",
+      "sha256": "9650d6f47d5143177f66149894869198a22f83276f54008efa3c16b5e848cce7"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/history/workspace-activation-before-local-terminal.snapshot",
+      "sha256": "98e132745c852e203ac8f7ad90a400e364846cb1a814ba679fae18b37602d76c"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/SUPPLEMENTAL_ASSESSMENT.json",
+      "sha256": "467449aea8eb4ae5d1428f3e3dbde19819808538b0a9f0db4904109f21fa64eb"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/delivery-custody.json",
+      "sha256": "45e8c53acd2570e2958c9e19713ce7968134df0ecee197fa8a68c3485c52a836"
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "66889a135e41f471a296178818edba8760330262ab423ac50934e9b0ecfdd175"
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "sha256": "628e0ed165749760adca22ab5cb9c1f751aed181389c2871ae7e39b0ff12da0e"
+    }
+  ],
+  "limits": "Overall pre-receipt observation fails only stale prior action activation; Root must bind exact terminal receipt, pass required fresh mechanical gates/doctor and commit before closure. Fine timing deferral, operational/device/business and untested surfaces remain explicit. No future action grant."
+}

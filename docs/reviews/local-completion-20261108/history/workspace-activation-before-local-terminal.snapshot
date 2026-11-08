@@ -1,0 +1,353 @@
+{
+  "schemaVersion": "cvf.workspaceActivation@1.0.0",
+  "identity": {
+    "projectRootSha256": "320d7a94c6415c596972609e3ed4fc87cc3754f690b2640bc75bb444401f3fc7",
+    "manifestSha256": "dd3e52630ef2ded2982569250516da5e96a8a32d7116e946ce2fb0d535ae7c12",
+    "policySha256": "4b0e460ace2337afcc7ad126f05f4e97571374303196e1851a758d34cdcc1dcc",
+    "lockSha256": "8d5b9561f8c97e4250fc9d06a7de851ade917a12f42d84efc2ea4325fa2ff936",
+    "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+    "profileId": "cvf.downstreamGateProfile@1.4.0",
+    "profileSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+    "deliveryFingerprint": "97c98cc51d571cdb928fa00a9a8380770bed27cc057e54067ffd6f4d6310bfd8",
+    "sourceRoute": "PINNED_CORE"
+  },
+  "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
+  "reviewer": "Astra independent LOCAL action reviewer",
+  "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
+  "actions": [
+    {
+      "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+      "criteria": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ]
+    }
+  ],
+  "supplemental": [
+    {
+      "id": "SUPPLEMENTAL_ASSESSMENT",
+      "mode": "INSPECTED",
+      "sourceSha256": "b2acf0b3d3bf52e6feb58fb71ac61227b71d29cc98d61f6781f4fbd71aea4125",
+      "owner": "Root orchestrator",
+      "actions": [
+        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+      ],
+      "disposition": "ASSESSED",
+      "reviewEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "467449aea8eb4ae5d1428f3e3dbde19819808538b0a9f0db4904109f21fa64eb"
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "id": "CVF-DG-INST-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
+      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "actions": [
+        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+      ],
+      "criteria": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
+        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "criteria": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5",
+            "L6",
+            "L7",
+            "L8"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
+        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-INST-01.json",
+          "sha256": "000a4053e1bc29bda6c9ff5bb24c8caf97f086c0bd4ad36da460051c9f0a37a5"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-CONT-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
+      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "actions": [
+        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+      ],
+      "criteria": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
+        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "criteria": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5",
+            "L6",
+            "L7",
+            "L8"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
+        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-CONT-01.json",
+          "sha256": "99a6aa7157926bf500706d15515d6130c5a3da8df28aea03719a0c8321f2a909"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-RANGE-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
+      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "actions": [
+        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+      ],
+      "criteria": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
+        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "criteria": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5",
+            "L6",
+            "L7",
+            "L8"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
+        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-RANGE-01.json",
+          "sha256": "a638a9d142939e8e5122c705822ee8f6b832deb8ff01dfc21726a5e248a37900"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-APPL-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
+      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "actions": [
+        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+      ],
+      "criteria": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
+        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "criteria": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5",
+            "L6",
+            "L7",
+            "L8"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
+        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-APPL-01.json",
+          "sha256": "9bb49c83bb6ce8b9a06d36d112ab70df284639604e2de71623701bc45f495f23"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-ROUTE-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
+      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "actions": [
+        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+      ],
+      "criteria": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
+        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "criteria": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5",
+            "L6",
+            "L7",
+            "L8"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
+        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-ROUTE-01.json",
+          "sha256": "1beef50f77bea9f38374ccad224c9da0455ad371dcbf3c64df638f53ecaff8dd"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-COV-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
+      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "actions": [
+        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+      ],
+      "criteria": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
+        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "criteria": [
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5",
+            "L6",
+            "L7",
+            "L8"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
+        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-COV-01.json",
+          "sha256": "751afc6fb3a3dca30d32787900f76e9291318c82ac7feb7652fd1a9ffe2e2627"
+        }
+      ]
+    }
+  ]
+}

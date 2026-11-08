@@ -1,0 +1,19 @@
+{
+  "commit": "8e641d3152581ad6341551ae3415efcb14519a2c",
+  "producer": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\build\\s8e",
+  "terminalCwd": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9",
+  "version": "1.10.0",
+  "buildExit": 0,
+  "smokeExit": 0,
+  "producerGitBefore": "",
+  "producerGitAfter": "",
+  "originalRootCleanClaim": false,
+  "exeSha256": "10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917",
+  "exeBytes": 13192535,
+  "elapsedSeconds": 13.077999999979511,
+  "logs": {
+    "build-8e641d3.txt": "3c3044dad3a525e969f6ad1c7c3d97b555543e24bf9801b1cf8cda2ea747ce20",
+    "smoke-8e641d3.txt": "6840703b1d3d143cda6c06cd0c9c782ab5e282661f079f43abb31bbb51a28b01"
+  },
+  "originalDistCopySha256": "10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917"
+}

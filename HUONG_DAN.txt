@@ -5,7 +5,10 @@ Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu
 
 1. MỞ VÀ CẬP NHẬT CHƯƠNG TRÌNH
 - Bấm Thoát tool ở phiên đang dùng trước khi cập nhật. Giữ bản sao thư mục cũ.
-- Mở SO_BAO_CAO_CA.exe trên Windows; bản nguồn dùng MO_BAO_CAO_CA.pyw.
+- Bản bàn giao lần này: mở SO_BAO_CAO_CA_1_10_0.exe ngay ở thư mục dự án.
+  Đóng bản cũ SO_BAO_CAO_CA.exe trước. Bản cũ đang chạy được giữ nguyên.
+  Giữ EXE mới cạnh DU_LIEU và DANH_MUC; không mở bản trong dist để dùng dữ liệu hiện có.
+  Khi cập nhật tên thông thường là SO_BAO_CAO_CA.exe; bản nguồn dùng MO_BAO_CAO_CA.pyw.
   Kiểm tra góc dưới giao diện hiện 1.10.0 và mã build tương ứng.
 - Giữ nguyên DU_LIEU, DANH_MUC và các tệp BAO_VE_DB_*.json cạnh thư mục dữ liệu.
   Không chép DB trắng lên DB đang dùng. EXE cũ không tự cập nhật theo mã nguồn.
@@ -82,12 +85,12 @@ Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu
   Số lượng là lượt công việc, không phải số container duy nhất.
 - Xuất Excel theo từng ca, bảng tổng hợp hoặc Xuất Excel cả tháng.
   Tháng không có báo cáo và ca không có tệp vẫn có kết quả trống kèm ghi chú tương ứng.
-- In: chọn A4 ngang, đồ họa nền tắt. Báo cáo tự có ngày/ca, Trang x/y, giờ in của máy
+- In: chọn A4 ngang, Lề Mặc định, đồ họa nền tắt. Báo cáo tự có ngày/ca, Trang x/y, giờ in của máy
   và một khối ký Trưởng ca ở trang cuối với tên từng phụ trách chung.
   Giờ in là đồng hồ máy, khác ngày của ca. Xem lại số trang và tên ký trước khi in.
 - Tùy trình duyệt có thể có hoặc không có nút tiêu đề/chân trang riêng của trình duyệt.
-  Kiểm chứng Chrome/Edge đã dùng hộp in thật và file PDF được trình duyệt lưu hoàn tất;
-  không thay bằng PDF tạo qua API. Máy in giấy và thiết bị tại bãi được nghiệm thu riêng.
+  Đã kiểm chứng hộp in và lưu PDF thực tế bằng Chrome/Edge trên Windows.
+  In giấy chưa được nghiệm thu. Người dùng để việc nghiệm thu máy/thiết bị tại bãi sang sau.
 
 7. MANG DB ĐI KIỂM TRA VÀ NHẬP BỔ SUNG
 1) Trên DB chính: Sao lưu mang đi. Đợi tải xong; còn một bản trong DU_LIEU/SAO_LUU_MANG_DI.
@@ -138,8 +141,8 @@ Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu
   không tạo DB trắng thay DB hỏng, không xóa -wal/-shm/-journal để lách kiểm tra.
 
 10. KẾT QUẢ VÀ GIỚI HẠN HIỆN TẠI
-- Mã 02d1e26f174a, EXE 1.10.0 SHA-256
-  759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b.
+- Mã 8e641d315258, EXE 1.10.0 SHA-256
+  10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917.
   Bằng chứng và đánh giá độc lập: docs/reviews/local-completion-20261108/.
 - Đã thao tác EXE có giao diện Chrome/Edge trên Windows bằng dữ liệu tổng hợp, gồm
   nâng cấp, nhập Excel, xung đột, đối chiếu, lưu/thoát/mở lại, sao lưu, bảo trì và in ra PDF gốc.
@@ -147,9 +150,10 @@ Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu
   Khởi động quan sát khoảng 74–123 giây; một lượt mang đi hoàn tất khoảng 36 giây;
   thoát quan sát từ khoảng 1 đến 41 giây. Đây là các lượt khác nhau trên máy phát triển,
   cache hệ điều hành đã ấm, RAM khoảng 16 GB, ổ NVMe; không phải cam kết thời gian ở máy bãi.
-  Phép quan sát decode ảnh 0,024 giây diễn ra sau mở tab, không phải tổng thời gian tải 40 ảnh.
-- 40 ảnh PNG hợp lệ được kiểm tra riêng; 200 blob giả JPEG trong bộ đo chỉ là dữ liệu
-  lưu trữ, không được tính là ảnh hiển thị thành công. Không có kết luận tăng tốc chung.
+  Đây là các lượt trước bản sửa cuộn cuối; không chạy lại bộ lớn theo yêu cầu thu gọn kiểm chứng.
+- Đã kiểm chứng hiển thị 40 ảnh PNG hợp lệ. Một số số đo chi tiết thời gian xuất hiện
+  bảng tổng hợp/tab tệp chưa được đo đầu-cuối và được để lại theo phạm vi thu gọn.
+  Không coi các số đo đó là đã hoàn tất, không có kết luận tăng tốc chung.
 - Chưa chứng minh tự mở trình duyệt mặc định, hộp chọn file Windows/Tk, in giấy,
   chạy Python 3.9 thực tế hoặc đồng bộ đám mây. Upload qua input của trình duyệt đã được dùng.
   Nghiệm thu thiết bị/máy khác tại bãi được người dùng để sau; không thay bằng kết quả máy này.
@@ -160,6 +164,7 @@ Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu
   không dùng số nhóm kiểm thử của bản cũ. Người dùng EXE không cần Node.js/Python.
 - Nguồn giữ mục tiêu Python 3.9+; môi trường đã kiểm chứng là Python 3.11.
   Đóng gói dùng Python >=3.10 và bộ công cụ ghim đã rà soát trong môi trường riêng.
-- Đóng gói từ chối Git chưa sạch, kiểm tra công cụ offline; không tự nâng thư viện toàn máy.
+- Đóng gói kiểm tra Git sạch trên bản checkout nguồn riêng đúng commit, dùng công cụ offline;
+  không coi thư mục làm việc gốc có tệp ngoài mã là sạch, không tự nâng thư viện toàn máy.
   Kiểm thử khói EXE: python -B cong_cu/KIEM_THU_KHOI.py --exe <đường_dẫn_EXE>
-  --commit 02d1e26f174a --version 1.10.0. EXE được nhận diện bằng cả commit/phiên bản/hash.
+  --commit 8e641d315258 --version 1.10.0. EXE được nhận diện bằng cả commit/phiên bản/hash.

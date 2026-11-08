@@ -1,0 +1,66 @@
+{
+  "pointerEvents": [
+    {
+      "text": "Mở báo cáo",
+      "id": "2026-10-01_DAY",
+      "isTrusted": true,
+      "layoutY": 597.5999755859375,
+      "windowY": 0
+    },
+    {
+      "text": "Lưu nháp",
+      "id": null,
+      "isTrusted": true,
+      "layoutY": 616,
+      "windowY": 0
+    },
+    {
+      "text": "＋ Nhập ca mới",
+      "id": null,
+      "isTrusted": true,
+      "layoutY": 616,
+      "windowY": 0
+    },
+    {
+      "text": "Vào ca này",
+      "id": null,
+      "isTrusted": true,
+      "layoutY": 616,
+      "windowY": 0
+    },
+    {
+      "text": "Thoát tool",
+      "id": null,
+      "isTrusted": true,
+      "layoutY": 0,
+      "windowY": 0
+    }
+  ],
+  "homeNativeWheelY": 597.5999755859375,
+  "existingOpening": {
+    "bounds": {
+      "x": 282.8000183105469,
+      "y": 153.8000030517578,
+      "width": 379.9999694824219,
+      "height": 38.80000305175781
+    },
+    "fullyVisible": true,
+    "layoutY": 0
+  },
+  "beforeManualSaveY": 616,
+  "manualSaveStatus": 200,
+  "afterManualSaveY": 616,
+  "newOpening": {
+    "bounds": {
+      "x": 282.8000183105469,
+      "y": -462.20001220703125,
+      "width": 379.9999694824219,
+      "height": 38.800018310546875
+    },
+    "fullyVisible": false,
+    "layoutY": 0
+  },
+  "status": "FAILED",
+  "error": "",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\consumer-prep\\narrow_final_small.py\", line 28, in <module>\n    p.locator('button[data-page=\"edit\"]').click();p.locator('#newDate').fill('2033-01-01');p.locator('#newShift').select_option('DAY');c.click('Vào ca này');r['newOpening']=visibleActor();assert r['newOpening']['fullyVisible'] and r['newOpening']['layoutY']==0;p.locator('#actor').select_option('SYNTH ACTOR');p.keyboard.press('Alt+3')\n                                                                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

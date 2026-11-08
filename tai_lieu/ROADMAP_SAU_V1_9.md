@@ -10,9 +10,9 @@ Dùng file này làm cơ sở chia việc. Mỗi hạng mục có tiêu chí ngh
 
 ## 1. Định hướng đã chốt với chủ dự án
 
-**Quyết định 2026-11-08:** hoàn tất bản local trước, sau đó mới mở giai đoạn2web. Kế hoạch đầy đủ U1–U14/V1–V8/D2–D4: [LOCAL_COMPLETION](../docs/roadmaps/LOCAL_COMPLETION.md). Nguồn 1.10.0/schema4 tại d8de489 đã được review độc lập; 211 kiểm thử Python (0 bỏ qua), 7 nhóm JavaScript (29 kiểm tra LOCAL) và 4 kiểm thử workspace đạt. EXE SHA-256 4342c996… đã build từ Git sạch và qua smoke test; nghiệm thu toàn bộ luồng local mới còn đang thực hiện. Chủ dự án xác nhận dùng máy bãi khác, nghiệm thu thiết bị sau.
+**Hiện tại — 2026-11-08:** bản local **1.10.0/schema4 đã được nghiệm thu kỹ thuật nội bộ theo phạm vi kiểm tra điều chỉnh**. [Roadmap LOCAL](../docs/roadmaps/LOCAL_COMPLETION.md) và [review độc lập](../docs/reviews/local-completion-20261108/final-local-review.json) là nguồn trạng thái hiện hành. EXE từ commit `8e641d315258`, SHA-256 `10aaf013…a648917`, tại `SO_BAO_CAO_CA_1_10_0.exe` cạnh thư mục dữ liệu; hướng dẫn đã cập nhật. D2–D4, U1–U14 và các luồng V đã có bằng chứng chức năng; hai số đo thời gian chi tiết của V8 được hoãn, ghi rõ chưa đo theo yêu cầu giảm kiểm tra. Đã sửa lỗi cuộn khi mở báo cáo và xác nhận lưu/mở lại. Kế thừa211Python/6nhómJS/4workspace trên phần nguồn không đổi; nhóm LOCAL39kiểm tra đạt, build/smoke đúng bản và kiểm tra giao diện ngắn cuối đạt. Không chạy lại toàn bộ ma trận trên bản cuối. Máy bãi khác và nghiệm thu vận hành để sau; chưa triển khai web. File chạy cũ ở gốc đang mở và khóa; giữ nguyên phiên đó, đóng bản cũ trước khi mở bản mới.
 
-**Đợt bổ sung đã nghiệm thu kỹ thuật (2026-11-08):** [Đối chiếu tan-thuan-port và roadmap nhân sự](../docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md). PNI E1–E6 nhập danh mục nhân sự Excel có xem trước được giao Terra/Sol, Astra review độc lập; phiên bản ứng viên1.9.2. Nguồn/kiểm thử191Python và6JS, build/smoke và luồng Chrome có giao diện trên Windows của EXE1.9.2 từ7ce0305b6000 đã được Astra nghiệm thu độc lập bằng dữ liệu giả lập; hộp chọn file Windows, Python3.9, in và nghiệm thu nghiệp vụ vẫn chưa thử. Tái sử dụng bộ chọn người và tổ/mẫu hiện có; tự phân tổ, định danh mã nhân viên và đồng bộ nằm ngoài đợt này. D2–D5 giữ nguyên phần việc, chưa được đánh dấu xong.
+**Đợt bổ sung đã nghiệm thu kỹ thuật (2026-11-08):** [Đối chiếu tan-thuan-port và roadmap nhân sự](../docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md). PNI E1–E6 nhập danh mục nhân sự Excel có xem trước được giao Terra/Sol, Astra review độc lập; phiên bản ứng viên1.9.2. Nguồn/kiểm thử191Python và6JS, build/smoke và luồng Chrome có giao diện trên Windows của EXE1.9.2 từ7ce0305b6000 đã được Astra nghiệm thu độc lập bằng dữ liệu giả lập; hộp chọn file Windows, Python3.9, in và nghiệm thu nghiệp vụ vẫn chưa thử. Tái sử dụng bộ chọn người và tổ/mẫu hiện có; tự phân tổ, định danh mã nhân viên và đồng bộ nằm ngoài đợt này. Đây là hồ sơ PNI lịch sử; trạng thái D2–D4 hiện tại theo nghiệm thu LOCAL ở trên. D5/web cần phạm vi riêng.
 
 | Câu hỏi | Trả lời | Hệ quả cho roadmap |
 |---|---|---|
@@ -27,6 +27,8 @@ Dùng file này làm cơ sở chia việc. Mỗi hạng mục có tiêu chí ngh
 1. Bản desktop đang chứa dữ liệu thật, nên sửa an toàn dữ liệu và hiệu năng vẫn làm trước.
 2. **Không mở rộng các luồng chỉ có ở desktop**: DB mang đi, DB bổ sung, chọn ổ dự phòng bằng tkinter, nút Thoát tool. Với các luồng này chỉ sửa an toàn.
 3. Mọi thay đổi có chạm schema, API hoặc audit phải dùng được cho cả bản web, để tránh làm hai lần.
+
+Các mục lịch sử phía dưới giữ nguyên bối cảnh và kết quả từng thời điểm; không dùng nhận định "chưa thử/chưa làm" cũ thay cho trạng thái LOCAL hiện hành. Với dữ liệu tổng hợp gần1,25GB, khởi động trên máy hiện tại từng ghi nhận74–123giây; không có cam kết tăng tốc. In PDF Chrome/Edge đã thử với A4 ngang, lề mặc định, nền tắt; in giấy và ổ dự phòng vật lý độc lập chưa nghiệm thu.
 
 ## 2. Phản hồi phản biện của Codex
 

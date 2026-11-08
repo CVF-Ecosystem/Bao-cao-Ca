@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: SO_BAO_CAO_CA_V1_9
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active role: COMMIT_STEWARD
-- Next allowed move: Root commit clean accepted actual-layout correction; Sol exact offline build/smoke then ONE SMALL positive nonzero-layout opening/retention/mainflow. No bigDB/timing/matrix. Guide and operator-reducedQA terminal assessment after proof; no web, yard-device deferred.
+- Next allowed move: LOCAL revised engineering milestone accepted and frozen. Target yard-machine/authorized real-copy/physical-printer operational acceptance later; optional phase2web requires separate W0 decisions and independently assessed work order. No new BUILD is granted.
 - Parked operator checkpoint: none
 
 ## Accepted current workspace
@@ -226,3 +226,22 @@ Astra returnedddfd7920 afteracknowledgedBUILD, exactopening-onlyresetOpeningScro
 ## LOCAL owner correction candidate stewardship — 2026-11-08
 
 CVF Agent Declaration: SO_BAO_CAO_CA_V1_9; Core../.Controlled-Vibe-Framework-CVF@68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6; REVIEW/R2/liveYES; RootCOMMIT_STEWARD/SESSION_SYNC_STEWARD; activehandoffAGENT_HANDOFF_V1_2026-11-06.md; nextcleancommit/build/smallproof; checkpointnone. Rootsource-review acceptsactualownerhelper/24rawcustody andfocused39checks, priorunchangedtechnical/nativeproof inherited. Allworkersholdingwrites throughcleanbuild. No moredisproportionateQA peroperator, fineV8timingsdeferredunmeasured. Commit candidateonly, productclosurepending.
+
+
+## LOCAL final small proof / terminal REVIEW acknowledgment — 2026-11-08
+
+Root rehydrated canonical REVIEW frontdoors; Core68a7446/profile1.4/R2/liveYES, CLOSER/SESSION_SYNC_STEWARD. Exact8e641d315258 EXE10aaf013 build/smoke passed from clean isolated build/s8e worktree; original root unrelated user XLSX is preserved untouched/unopened/unignored, not falsely called clean. Final32-file SMALL manifest83369745 matches: trusted existing .layout597.6->0, actor153.8 visible; same-editor save616->616/200; new616->0/save/newPID reopen/exits0. Initial harness read before asynchronous new-date render retained. No further tests/big-data/timing/print matrices per operator direction. Astra independent whole-local/terminal review then exact documentary amendment, receipt/gates and reviewed local delivery commit; fineV8 completion times explicitlyNOT_MEASURED, no web/device/business acceptance or provider claim. BOOTSTRAP_MIGRATION_PENDING nonblocking. Original480+60 ceilings continue; no reset.
+
+
+## LOCAL revised engineering FREEZE / terminal stewardship — 2026-11-08
+
+CVF Agent Declaration: SO_BAO_CAO_CA_V1_9; Core../.Controlled-Vibe-Framework-CVF@68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6; FREEZE/R2/liveYES; RootCLOSER -> SESSION_SYNC_STEWARD/COMMIT_STEWARD; activehandoffAGENT_HANDOFF_V1_2026-11-06.md; checkpointnone. Independent final-local-review67ec8ca3 accepts revisedL1-L8 engineering scope; operator-reduced QA explicitly defers two fineV8measurements NOT_MEASURED, no knownbug waiver or futureBUILD. Exact source8e/EXE10aaf preserved; initial terminal CONT/COV synchronization findings preserved and repaired documentary pointers/hash only, no product tests. Terminal exact assessment/receipt/gates and authorized local EXE copy/commit still required before closure claim. Device/business/realdata/physicalprinter separate; no web/provider effect, originalbudget unchanged.
+
+
+## LOCAL final terminal receipt and delivery — 2026-11-08
+
+Independent terminal-reviewfb2b4143 accepts exact644f6ce3; refreshed activation4ebd7088 binds only closed terminal action. Actual terminal pre-dispatch/worker-return/reviewer-fast exit0; doctor-terminal CORE_ASSESSED29/29 plus4 explicit bootstrap PASS. Local controls INVOKED only; APPL explicitlyN/A and closeabilitynotchecked, no provider claim. First metadata CONT/COV/unknown delivery-field findings preserved; corrected header/hash and x_delivery extension only. No product tests repeated. Source/bundled inputs unchanged after8e; external guide66889a13 adds actual delivery filename.
+
+Windows refused replacing user-running old rootEXE7590 (PIDs33612/27784 observed). It is preserved and processes left alone. Exact10aaf013 delivered as same-directory SO_BAO_CAO_CA_1_10_0.exe,13192535bytes; close old before opening new. THIET_LAP ROOT is EXE parent; using same directory preserves intended data location, without launching or upgrading real data. Prior binary retained in ignored runtime. New EXE is local untracked delivery artifact; unrelated user workbook untouched/unopened/unignored/unstaged. Only authorized metadata/evidence/prose enters commit; no false full-root-clean claim.
+
+Root COMMIT_STEWARD completes mandatory pre-commit and commits reviewed terminal records, then verifies committed range and exact source/binary custody. Revised local engineering FREEZE is settled; operational/site/business witnesses remain separately owned and deferred, twofineV8timesNOT_MEASURED. No additional product QA, new BUILD, push, deployment or web work. Next canonical move is later target-device acceptance or separately scoped web/W0 work, not an active operator checkpoint. Original ceilings remain unchanged.

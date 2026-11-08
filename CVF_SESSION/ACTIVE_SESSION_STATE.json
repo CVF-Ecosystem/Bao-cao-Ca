@@ -2,8 +2,8 @@
   "schemaVersion": "1.0",
   "continuityContract": "cvf.downstreamContinuityContract@1.0.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "FREEZE",
+  "activePhase": "FREEZE",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,7 +14,7 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
-  "nextAllowedMove": "Root commit clean accepted actual-layout correction; Sol exact offline build/smoke then ONE SMALL positive nonzero-layout opening/retention/mainflow. No bigDB/timing/matrix. Guide and operator-reducedQA terminal assessment after proof; no web, yard-device deferred.",
+  "nextAllowedMove": "LOCAL revised engineering milestone accepted and frozen. Target yard-machine/authorized real-copy/physical-printer operational acceptance later; optional phase2web requires separate W0 decisions and independently assessed work order. No new BUILD is granted.",
   "parkedOperatorCheckpoint": null,
   "activeRole": "COMMIT_STEWARD",
   "roleRoute": "INDEPENDENT_WORKER_AND_REVIEWER",

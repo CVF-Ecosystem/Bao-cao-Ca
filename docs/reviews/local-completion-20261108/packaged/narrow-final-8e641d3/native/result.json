@@ -1,0 +1,16 @@
+{
+  "pointerEvents": [],
+  "beforeNewOpeningY": 616,
+  "newOpening": {
+    "bounds": {
+      "x": 282.8000183105469,
+      "y": 153.8000030517578,
+      "width": 379.9999694824219,
+      "height": 38.80000305175781
+    },
+    "fullyVisible": true,
+    "layoutY": 0
+  },
+  "reopenedNewPID": true,
+  "status": "OBSERVED_PENDING_INDEPENDENT_REVIEW"
+}

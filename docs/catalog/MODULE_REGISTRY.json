@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
   "updatedAt": "2026-11-08",
-  "claimBoundary": "PNI E1-E6 has accepted1.9.2 packaged synthetic evidence. Local1.10.0/schema4 source and component checks are received, pending independent review and exact packaged consumer acceptance; no whole-product or AI governance claim.",
+  "claimBoundary": "Revised LOCAL1.10.0/schema4 internal engineering delivery independently accepted, exact8e EXE10aaf. Fine V8 timings NOT_MEASURED/operator deferred; device/business/web and live AI governance not accepted.",
   "modules": [
     {
       "id": "personnel-excel-import",
@@ -16,25 +16,25 @@
       "id": "local-storage-history",
       "name": "Local revision history and explicit upgrade",
       "path": "ma_nguon/NANG_CAP_CSDL.py",
-      "status": "PARTIAL",
-      "description": "Explicit legacy1/2/3-to4 upgrade, verified pre-upgrade copies, server-side save-kind and OS provenance, manifest-bound supported recovery. Component tests exist; independent and packaged acceptance pending.",
-      "evidence": "docs/reviews/local-completion-20261108/source-return-manifest.json; technical/release-source.json; worker-terra.md"
+      "status": "ENFORCED",
+      "description": "Explicit legacy1/2/3-to4 upgrade, verified pre-upgrade copies, server-side save-kind and OS provenance, manifest-bound supported recovery. Independently accepted revised local engineering scope with exact final build and scoped unchanged-effect evidence inheritance.",
+      "evidence": "docs/reviews/local-completion-20261108/final-local-review.json; docs/reviews/local-completion-20261108/technical/release-final.json; docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json; fine V8 timing/device limits in LOCAL roadmap."
     },
     {
       "id": "local-protection-maintenance",
       "name": "Tiered backups and conservative local maintenance",
       "path": "ma_nguon/BAO_TRI_CSDL.py",
-      "status": "PARTIAL",
-      "description": "Quick/full validation and last-good pin, explicit snapshot-before-orphan cleanup, conservative known viewer cleanup and restore drill. Component evidence received; product acceptance pending.",
-      "evidence": "docs/reviews/local-completion-20261108/worker-terra.md; technical/python210.txt"
+      "status": "ENFORCED",
+      "description": "Quick/full validation and last-good pin, explicit snapshot-before-orphan cleanup, conservative known viewer cleanup and restore drill. Independently accepted revised local engineering scope with exact final build and scoped unchanged-effect evidence inheritance.",
+      "evidence": "docs/reviews/local-completion-20261108/final-local-review.json; docs/reviews/local-completion-20261108/technical/release-final.json; docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json; fine V8 timing/device limits in LOCAL roadmap."
     },
     {
       "id": "local-desktop-ui",
       "name": "Local desktop workflow and print UI",
       "path": "giao_dien/tai_nguyen/local_ui.js",
-      "status": "PARTIAL",
-      "description": "Compact desktop input, revision diff, guarded async dialogs, conflict note preservation, capabilities and print layout. Seven JS groups and focused headed source evidence received; final exact EXE/native matrix pending.",
-      "evidence": "docs/reviews/local-completion-20261108/source-sol/source-manifest.json; source-sol/js-tests.txt; source-sol/source-ui-focused.json"
+      "status": "ENFORCED",
+      "description": "Compact desktop input, revision diff, guarded async dialogs, conflict note preservation, capabilities and print layout. Independently accepted revised local engineering scope with exact final build and scoped unchanged-effect evidence inheritance.",
+      "evidence": "docs/reviews/local-completion-20261108/final-local-review.json; docs/reviews/local-completion-20261108/technical/release-final.json; docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json; fine V8 timing/device limits in LOCAL roadmap."
     }
   ]
 }

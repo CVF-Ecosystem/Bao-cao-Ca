@@ -1,0 +1,117 @@
+{
+  "exitCode": 2,
+  "phase": "pre-dispatch",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=8e641d3152581ad6341551ae3415efcb14519a2c candidates=46 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [
+        {
+          "code": "SURFACE_MISMATCH",
+          "locator": "CVF_SESSION/ACTIVE_SESSION_STATE.json#/activeRole",
+          "message": "activeRole differs across surfaces: CVF_SESSION/ACTIVE_SESSION_STATE.json#/activeRole='CLOSER'; CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md#Active role='COMMIT_STEWARD'"
+        },
+        {
+          "code": "SURFACE_MISMATCH",
+          "locator": "CVF_SESSION/ACTIVE_SESSION_STATE.json#/nextAllowedMove",
+          "message": "nextAllowedMove differs across surfaces: CVF_SESSION/ACTIVE_SESSION_STATE.json#/nextAllowedMove='Final exact8e build and SMALL native proof completed. Independent whole-local reduced-QA review, documentary terminal amendment/receipt and local delivery commit only; no additional tests, web BUILD or yard-device acceptance.'; CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md#Next allowed move='Root commit clean accepted actual-layout correction; Sol exact offline build/smoke then ONE SMALL positive nonzero-layout opening/retention/mainflow. No bigDB/timing/matrix. Guide and operator-reducedQA terminal assessment after proof; no web, yard-device deferred.'"
+        },
+        {
+          "code": "ACTIVE_WORK_ORDER_NOT_ACTIVE",
+          "locator": "IMPLEMENTATION_STATUS.json#/activeWorkOrders/0",
+          "message": "docs/work_orders/WO_LOCAL_COMPLETION.md is not an admitted active work order (NOT_APPLICABLE status_not_applicable: status CLOSED_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked)"
+        }
+      ],
+      "notes": [],
+      "ok": false,
+      "outcome": "FAIL",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=8e641d3152581ad6341551ae3415efcb14519a2c candidates=46 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "docs/work_orders/WO_LOCAL_COMPLETION.md: status CLOSED_ACCEPTED is explicitly not an active dispatch state; closeability contract was NOT checked; unchecked=closeability_contract"
+      ],
+      "ok": true,
+      "outcome": "NOT_APPLICABLE_WITH_REASON",
+      "reason": "every candidate is explicitly not active; closeability contract was not checked"
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROUTE-01"
+      ],
+      "controlId": "CVF-DG-ROUTE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/WO_LOCAL_COMPLETION.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [
+        {
+          "code": "COV_AUTHORITY_STALE",
+          "locator": "docs/roadmaps/LOCAL_COMPLETION.md",
+          "message": "milestone coverage admission refused"
+        },
+        {
+          "code": "COV_AUTHORITY_STALE",
+          "locator": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+          "message": "milestone coverage admission refused"
+        }
+      ],
+      "notes": [],
+      "ok": false,
+      "outcome": "FAIL",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-ACT-01",
+      "findings": [
+        {
+          "code": "ACT_ACTION_STALE",
+          "locator": ".cvf/workspace-activation.json",
+          "message": "ACT_ACTION_STALE: exact action bytes/criteria differ or duplicated"
+        }
+      ],
+      "notes": [
+        "Mechanical evidence bindings; Local reviews semantic authority and invocation truth."
+      ],
+      "ok": false,
+      "outcome": "FAIL",
+      "reason": ""
+    }
+  ]
+}

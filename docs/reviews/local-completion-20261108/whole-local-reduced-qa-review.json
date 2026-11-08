@@ -1,0 +1,67 @@
+{
+  "status": "ENGINEERING_DELIVERY_ACCEPTED_UNDER_OPERATOR_REDUCED_QA_PENDING_TERMINAL_SCOPE_BINDING",
+  "risk": "R2",
+  "worker": "Sol packaging/native; Astra disclosed owner correction independently reviewed by Root",
+  "reviewer": "Astra independent native/evidence/prose REVIEWER",
+  "candidate": "8e641d3152581ad6341551ae3415efcb14519a2c",
+  "exeSha256": "10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917",
+  "exeBytes": 13192535,
+  "evidence": [
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+      "sha256": "8336974546e3d5823112003a718f3995df7c5541ff8e68daedd2e6ea8d23a8c0"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-return.json",
+      "sha256": "ddfd79205cca590ffd541fbde35379aaea66e684ac342f1d27e82d7dcde55dd0"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+      "sha256": "009738b230aac180a82ade6e55fef494b7add25fd083fe45c00d4435bfa80897"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+      "sha256": "a819cd9b965bbf10b83aed327d6d56aff16148750b7cfa43974555b9f30eaeeb"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/operator-reduced-qa-decision.json",
+      "sha256": "2e746bf935b181473e9281f031348423ce26027952c8459425b8c7023ea07fe8"
+    }
+  ],
+  "verified": [
+    "All32 final manifest artifacts hash-match. Independently verified all24 exact reviewed inputs at isolated producer build/s8e; current22 non-document inputs unchanged. Producer/dist and original/dist EXE hashes identical; actual clean producer build and metadata smoke success recorded. Original root user workbook untouched and root not claimed clean.",
+    "Actual native trusted existing-report click from layout597.6 produces layout0 and fully visible actor153.8; ordinary unchanged manual save at layout616 returns200 and remains616. Successful new-opening from616 resets0, actual save/exit/newPID/reopen retains unique note; all3 process exits0/sessionremoved. Visually inspected actual opening, scrolled-save and reopened-note screenshots.",
+    "Initial new-opening bbox sampled before async date/render settlement remains FAILED history. Resume awaits expected2033 date and completes only remaining flow. No repeated large/matrix/precision-timing tests.",
+    "Focused39 UI checks cover actual modeled nonzero layout/window owners; Root independently reviewed this reviewer-local source change. Prior broad211Python/other6JS/checker4 apply to unchanged paths, not falsely rerun.",
+    "Final guide03e10d0e and changelog2a352547 independently hash-match and prose reviewed: current1.10/schema4/EXE identity, explicit consent/recoverable copies, default-margin print, 90day drill, same-host external caveat, slow large startup, no speedup claim and unmeasured/deferred fine timings. External prose is not bundled; no app rebuild implied."
+  ],
+  "criterionDisposition": {
+    "L1": "ACCEPTED: prior exact correction import/preservation plus final actual409/keepnotes/shared diff.",
+    "L2": "ACCEPTED: actual XLSX/ZIP/carry boundary/portable small+1.25GB and reopen evidence retained.",
+    "L3": "ACCEPTED: confirmed owner defect now corrected with true nonzero native witness; remaining U behavior plus native print/consumed default ON/OFF and matching layouts accepted. Baseline key inconclusive remains observational limit, not PASS.",
+    "L4": "ACCEPTED: wall24h/cache/pin/failure source tests plus actual backup/drill/recovery; independent hardware not claimed.",
+    "L5": "ACCEPTED: explicit1/2/3 upgrades/readable interrupted recovery, exact history/source preservation and final schema3 representative; unsupported corrupt-main path disclosed.",
+    "L6": "ACCEPTED: source concurrency/fault checks plus actual nonempty maintenance and independently checked preserved snapshots/references.",
+    "L7": "ACCEPTED_FOR_REDUCED_QA_SCOPE_ONLY: near1.25GB workload, functional list/search/year/40images, storage/environment and representative latencies retained. Two fine click-to-completion latencies NOT_MEASURED and deferred per operator direction; original full measurement obligation is not labeled fulfilled.",
+    "L8": "ACCEPTED_FOR_REDUCED_QA_SCOPE: clean exact producer EXE, tests, fresh/open/save/export/upgrade/restore/restart, practical guide and known limitations reviewed. Final authority/closure synchronization remains Root work."
+  },
+  "inheritance": "Latest app delta only corrects opening scroll owner; backend/parser/export/save/migration/maintenance/print template/CSS unchanged. Preserve exact earlier binary identities for their results; final small flow verifies affected behavior and new packaged identity. No claim all prior cases rerun on8e.",
+  "prose": [
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "03e10d0e3f9715f8a77d6dda9214d1b1fc6c705f98fdc9e8d28ca245e6e92b98"
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_10_0.txt",
+      "sha256": "2a35254782ed3592ff5c1012cab55e51c3b2762ed5563835c3ebe35fd273f8a4"
+    }
+  ],
+  "terminalCondition": "Root must bind explicit operator-reduced QA amendment in existing roadmap/WO and preserve original criteria/action/receipt. Independent exact terminal review still required before closure. No further source/native tests recommended; no known unresolved defect within accepted reduced scope.",
+  "limits": [
+    "Fine year-summary/files-tab click-to-completion timings NOT_MEASURED/deferred.",
+    "Yard-machine/real operational DB/business acceptance deferred; no physicalprinter/Tk/OSchooser/defaultbrowser/Python3.9/independentexternalmedia proof.",
+    "General unreadable-main browser recovery unsupported; documented supported readable-main recovery only.",
+    "No web deployment, live-provider governance or speedup guarantee."
+  ],
+  "decisionBasis": "The operator explicitly requested less testing. Bounded scope interpretation preserves known-defect correctness and existing evidence, transparently defers measurement detail, and does not fabricate a pass or request user technical QA."
+}

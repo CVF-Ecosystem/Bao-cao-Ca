@@ -12,12 +12,12 @@
     "sourceRoute": "PINNED_CORE"
   },
   "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
-  "reviewer": "Astra independent LOCAL action reviewer",
-  "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
+  "reviewer": "Astra independent terminal REVIEWER",
+  "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
   "actions": [
     {
       "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-      "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+      "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
       "criteria": [
         "L1",
         "L2",
@@ -42,8 +42,8 @@
       "disposition": "ASSESSED",
       "reviewEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/SUPPLEMENTAL_ASSESSMENT.json",
-          "sha256": "467449aea8eb4ae5d1428f3e3dbde19819808538b0a9f0db4904109f21fa64eb"
+          "path": "docs/reviews/local-completion-20261108/reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "a7382b56ae8439b48b5b6867ce0b2a12eb99c5d7a40a80660644b7da71b9f27f"
         }
       ]
     }
@@ -52,8 +52,8 @@
     {
       "id": "CVF-DG-INST-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
-      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
+      "reason": "Actual terminal control PASS independently reviewed on exact644f action; local mechanical INVOKED evidence only, no provider governance.",
       "actions": [
         "docs/work_orders/WO_LOCAL_COMPLETION.md"
       ],
@@ -69,13 +69,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
-        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
+        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
           "criteria": [
             "L1",
             "L2",
@@ -94,16 +94,16 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-INST-01.json",
-          "sha256": "000a4053e1bc29bda6c9ff5bb24c8caf97f086c0bd4ad36da460051c9f0a37a5"
+          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-INST-01.json",
+          "sha256": "7ebde70e4663725f0ab2724ddf869cf9a3b6c09a2f4c30e906911eb7635e4598"
         }
       ]
     },
     {
       "id": "CVF-DG-CONT-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
-      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
+      "reason": "Actual terminal control PASS independently reviewed on exact644f action; local mechanical INVOKED evidence only, no provider governance.",
       "actions": [
         "docs/work_orders/WO_LOCAL_COMPLETION.md"
       ],
@@ -119,13 +119,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
-        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
+        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
           "criteria": [
             "L1",
             "L2",
@@ -144,16 +144,16 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-CONT-01.json",
-          "sha256": "99a6aa7157926bf500706d15515d6130c5a3da8df28aea03719a0c8321f2a909"
+          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-CONT-01.json",
+          "sha256": "b15c5c258802da92d0626271225f0988c524ebbc8899a9789c8f54a4c229df13"
         }
       ]
     },
     {
       "id": "CVF-DG-RANGE-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
-      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
+      "reason": "Actual terminal control PASS independently reviewed on exact644f action; local mechanical INVOKED evidence only, no provider governance.",
       "actions": [
         "docs/work_orders/WO_LOCAL_COMPLETION.md"
       ],
@@ -169,13 +169,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
-        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
+        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
           "criteria": [
             "L1",
             "L2",
@@ -194,16 +194,16 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-RANGE-01.json",
-          "sha256": "a638a9d142939e8e5122c705822ee8f6b832deb8ff01dfc21726a5e248a37900"
+          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-RANGE-01.json",
+          "sha256": "e31e00a9b28651c6d7549128281eff8772b2d53ad5488e6592427897f249a59a"
         }
       ]
     },
     {
       "id": "CVF-DG-APPL-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
-      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
+      "reason": "Closed packet explicitly NOT_APPLICABLE_WITH_REASON; status grammar observed, closeability NOT checked. Accepted truthful invocation, no closeability PASS.",
       "actions": [
         "docs/work_orders/WO_LOCAL_COMPLETION.md"
       ],
@@ -219,13 +219,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
-        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
+        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
           "criteria": [
             "L1",
             "L2",
@@ -244,16 +244,16 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-APPL-01.json",
-          "sha256": "9bb49c83bb6ce8b9a06d36d112ab70df284639604e2de71623701bc45f495f23"
+          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-APPL-01.json",
+          "sha256": "1fa5193d9033bad6ff28119abbf5921db95fcee2d7e4996964ffbbf52a35b436"
         }
       ]
     },
     {
       "id": "CVF-DG-ROUTE-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
-      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
+      "reason": "Actual terminal control PASS independently reviewed on exact644f action; local mechanical INVOKED evidence only, no provider governance.",
       "actions": [
         "docs/work_orders/WO_LOCAL_COMPLETION.md"
       ],
@@ -269,13 +269,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
-        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
+        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
           "criteria": [
             "L1",
             "L2",
@@ -294,16 +294,16 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-ROUTE-01.json",
-          "sha256": "1beef50f77bea9f38374ccad224c9da0455ad371dcbf3c64df638f53ecaff8dd"
+          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-ROUTE-01.json",
+          "sha256": "ec7fa8b2ad1d417788aa66b0ed56c7dc96a0ed2868a6be77197929b3e8d94969"
         }
       ]
     },
     {
       "id": "CVF-DG-COV-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 complete local before web; different yard-device acceptance deferred; independently accepted exact LOCAL L1-L8 action",
-      "reason": "Actual corrected trusted pre-admission non-ACT observation PASS independently reviewed for this exact LOCAL action; local mechanical invocation only, no provider/AI governance claim.",
+      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
+      "reason": "Actual terminal control PASS independently reviewed on exact644f action; local mechanical INVOKED evidence only, no provider governance.",
       "actions": [
         "docs/work_orders/WO_LOCAL_COMPLETION.md"
       ],
@@ -319,13 +319,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/predispatch-role-repair-before-receipt.json",
-        "sha256": "f86ab5ecac9bf85e4994960a23569f67c82318790878198baef76f432a34ad45"
+        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
+        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
           "criteria": [
             "L1",
             "L2",
@@ -344,8 +344,8 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-admission-r2/CVF-DG-COV-01.json",
-          "sha256": "751afc6fb3a3dca30d32787900f76e9291318c82ac7feb7652fd1a9ffe2e2627"
+          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-COV-01.json",
+          "sha256": "60787d95f27754d31d2adc9cfb847efb0b81574c23ea0474567169c27e5ab279"
         }
       ]
     }

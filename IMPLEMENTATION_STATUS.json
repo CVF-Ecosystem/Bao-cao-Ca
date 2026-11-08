@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "overallStatus": "LOCAL_SCROLL_OWNER_SOURCE_REVIEW_BUILD_AND_SMALL_PROOF_PENDING",
-  "currentPhase": "REVIEW",
+  "overallStatus": "LOCAL_ENGINEERING_COMPLETE_OPERATOR_REDUCED_QA",
+  "currentPhase": "FREEZE",
   "completedCapabilities": [
     "Pinned public Core68a7446 and canonical profile1.4 install with preserved workflow",
     "Current-Core project delegate with exact29 native checks and trusted explicit-packet bootstrap",
@@ -10,21 +10,17 @@
     "Actual clean committed local flow at 5fec5a122339486f5a85afa4276362e76691d61b",
     "Synchronized active continuity/catalog and preserved historical source/evidence",
     "PNI E1-E6 name-only additive flat-XLSX import,191Python0skip/6JS/4workspace and independent exact1.9.2 EXE headed flow acceptance at7ce0305b6000",
-    "LOCAL1.10.0/schema4 current24source accepted; exact211Python0skip basis unchanged and7JS38checks/4workspace pass; opening-only U1 repair independently accepted. Earlier d8de exactEXE native print/legacy/maintenance/large evidence retained with scoped inheritance; new clean candidate/native remainder pending."
+    "LOCAL1.10.0/schema4 exact8e641d315258 EXE10aaf013 built/smoked offline from clean isolated Git worktree; final nonzero-layout opening/retained-scroll save/newreport/restart proof passed.211Python prior unchanged basis,7JS/39focusedLOCAL and4workspace; extensive native/legacy/recovery proof retained with scoped inheritance. Final terminal acceptance pending. Independent final-local-review accepts revisedL1-L8; two fine timings explicitly deferred."
   ],
-  "activeWorkOrders": [
-    "docs/work_orders/WO_LOCAL_COMPLETION.md"
-  ],
+  "activeWorkOrders": [],
   "knownLimitations": [
-    "PNI only E1-E6 accepted. Native Windows file dialog, Python3.9 execution, default-browser auto-opening and printing NOT_TESTED; no business/full-product acceptance or human speed claim. E7/identity/team mapping/sync and original D2-D5 remain separate.",
-    "Application implementation and EXE/product acceptance are not reassessed by Core recovery",
-    "Prior Antigravity headless DOM/DB evidence remains qualified for the broader original product; PNI E6 now has separate accepted headed exact-EXE proof, without closing unrelated product flows.",
-    "Future action bytes and selected criteria require their own current assessment",
-    "No hosted CI, host auto-loading, universal agent compliance or live provider governance proof",
-    "No active Git pre-commit hook was found; the trusted canonical pre-commit gate is explicitly invoked and its actual output retained. Hosted workflow execution is unobserved.",
-    "LOCAL browser recovery requires readable supported main and exact manifest-bound backup. Corrupt/absent original fails closed; no arbitrary unreadable-main browser recovery claim. Actual supported interrupted-upgrade packaged flow pending.",
-    "Actual nonzero desktop .layout scroll-owner probe supersedes prior U1 top-position observation:02d1e26 window-only reset ineffective; bounded owner correction pending. Existing technical/proof bytes retained.",
-    "Operator2026-11-08 requests reduced QA. Fine V8 year-summary/files click-to-completion latencies remain NOT_MEASURED and are deferred; no further large/matrix repetition. Terminal scope/claim reconciliation pending independent assessment."
+    "Revised LOCAL engineering acceptance only; target yard-machine, authorized real operational copy and business acceptance deferred. Physical printer, independent external media, native Windows file chooser/Tk, default-browser auto-open and Python3.9 execution NOT_TESTED.",
+    "Fine V8 year-summary/files-tab click-to-completion timings NOT_MEASURED/operator-deferred; existing functional outputs accepted. Near1.25GB startup observed74–123seconds on current host; no speedup guarantee.",
+    "Browser recovery supports readable supported main plus exact manifest-bound backup. Absent/corrupt original-main browser recovery unsupported; fail-closed and external guide limitations retained.",
+    "Printing accepted for actual Chrome/Edge A4landscape/default margins/backgroundOFF PDFs; arbitrary custom margins and physical printing not universally proved. Baseline shortcut observation inconclusive, never PASS.",
+    "PNI E1-E6 additive flat-XLSX names accepted; E7/team mapping/stable identity/HRM/sync and phase2web excluded.",
+    "No hosted CI, active Git precommit hook, universal agent compliance or live provider-governance proof. Canonical local gates invoked explicitly; future exact actions require new assessment.",
+    "Original root contains unrelated untracked user workbook, preserved untouched/unopened/unignored/unstaged. Clean build custody refers to isolated producer at8e641d315258; final external guide prose is not bundled. Delivered versioned EXE is a local untracked artifact excluded from Git commit, beside existing data directories; running prior rootEXE retained."
   ],
   "evidence": [
     "docs/reviews/core-reconciliation/implementation-review.md",
@@ -62,7 +58,20 @@
     "docs/reviews/local-completion-20261108/technical/release-final.json",
     "docs/reviews/local-completion-20261108/packaged/candidate-d8de489.json",
     "docs/reviews/local-completion-20261108/u1-repair/root-source-review.json",
-    "docs/reviews/local-completion-20261108/technical/release-u1-source.json"
+    "docs/reviews/local-completion-20261108/technical/release-u1-source.json",
+    "docs/reviews/local-completion-20261108/final-local-review.json",
+    "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+    "docs/reviews/local-completion-20261108/terminal-review.json",
+    "docs/reviews/local-completion-20261108/delivery-custody.json",
+    "docs/reviews/local-completion-20261108/doctor-terminal.json"
   ],
-  "updatedAt": "2026-11-08"
+  "updatedAt": "2026-11-08",
+  "x_delivery": {
+    "candidate": "8e641d3152581ad6341551ae3415efcb14519a2c",
+    "exe": "SO_BAO_CAO_CA_1_10_0.exe",
+    "sha256": "10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917",
+    "schema": 4,
+    "rootPrior": "SO_BAO_CAO_CA.exe remains running/locked759064b9; close old before opening delivered new filename in same directory",
+    "evidence": "docs/reviews/local-completion-20261108/delivery-custody.json"
+  }
 }

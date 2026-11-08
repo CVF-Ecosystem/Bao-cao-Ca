@@ -1,0 +1,362 @@
+# Complete local release before phase 2 web
+
+Status: DISPATCH_READY
+docType: work_order
+dispatchKind: INITIAL
+Risk: R2
+Worker: Terra backend / Sol UI and delivery
+Reviewer: Astra independent
+Commit owner: Root
+Date: 2026-11-08
+
+## Dispatch Prompt Envelope
+
+Read this exact packet, locked SPEC, canonical state, memory, active handoff, implementation status, index and independent action assessment before writes. Implement all L1-L8 of the LOCAL milestone. The operator approved the proposed local completion sequence and deferred device acceptance on a different yard machine. Web remains phase 2, after local completion. Old PNI acceptance grants no new BUILD. Execution begins only after independent exact-action acceptance and successful fresh pre-dispatch and doctor checks. Workers never commit; Root owns all commits.
+
+## Authority and locked decisions
+
+Sources: tai_lieu/ROADMAP_SAU_V1_9.md; docs/roadmaps/LOCAL_COMPLETION.md; docs/specs/LOCAL_COMPLETION.md. Locked SPEC SHA256: 6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385. Version 1.10.0 / schema 4. Reuse Store, Protection, server context and existing plain-JS owners. Explicit upgrade confirmation is a team safety choice within the authorized migration scope. D2 uses wall-clock elapsed 24 hours including downtime, evaluated at the next app operation; missing/corrupt markers or clock rollback force full verification. Viewer retention: 30 days. Orphan-blob grace: 24 hours. Destructive maintenance confirmation requires a newly created, fully verified same-dataset snapshot containing candidate blobs, retained before deletion; source changes abort. Unknown files stay. No implicit VACUUM.
+
+## Ownership and permitted paths
+
+| Owner | Paths | Bounded effects |
+|---|---|---|
+| Terra | ma_nguon/LUU_TRU.py, BAO_VE_DU_LIEU.py, MAY_CHU.py, NGHIEP_VU.py, THIET_LAP.py; MO_BAO_CAO_CA.pyw; new local service/migration/maintenance Python helpers under ma_nguon/; kiem_thu/KIEM_THU*.py; tai_lieu/API.md | Backend, schema, backup, maintenance, version, API and meaningful Python regression/fault tests. No frontend writes. PERSONNEL_XLSX.py stays frozen unless an accepted finding requires repair. |
+| Sol | giao_dien/ HTML/CSS/JS and shared client/diff helpers; kiem_thu/KIEM_THU*.js; cong_cu/ local benchmark/package/verification utilities; HUONG_DAN.txt; tai_lieu/THAY_DOI_V1_10_0.txt; THIRD_PARTY_NOTICES.md only for a necessary bundled-notice correction | U1-U14, API integration, print layout, offline build and consumer/large-data proof. No backend writes or dependency-pin changes. |
+| Root | LOCAL roadmap/SPEC status/work order, milestone authority registry, activation receipt, local-completion review family, continuity/implementation/catalog/index, original product-roadmap status, .gitattributes only for LOCAL raw custody | Admission, coordination, aggregate proof, reviewed commits and terminal rebinding. |
+| Astra | docs/reviews/local-completion-20261108/; disclosed localized reviewer repair within unchanged worker paths where existing evidence determines the fix | Independent design, action, source, fault and product review. |
+
+All parties may write ignored .cvf/runtime/local-completion-20261108/ fixtures, logs and evidence. Existing reviewed isolated build dependencies may execute offline unchanged. No new dependencies, installs, network/provider use, credentials, global packages, real operational data, sibling project, Core, policy, gate, rule-pack or security-setting mutation is admitted. Disposable tests may exercise migration/deletion/restore only after resolved paths are verified within owned fixture roots. No production cleanup. Sol is the sole headed/native UI controller. Native Windows automation uses Computer Use JS only; browser DOM fallback cannot label scripted PDF as native V1 proof.
+
+## Acceptance and evidence
+
+All L1-L8 criteria remain mandatory. SPEC locks endpoint shapes, 300-second server-owned single-use plans, auth/context/main-store checks, migration, save-kind/coalescing, backup/cache/retention/clock and guarded maintenance contracts. Terra and Sol coordinate API integration without parallel writes to shared files. Material interface changes require independent review before dependent effects.
+
+Return files, source hashes, commands/exit codes, named tests/skips, predefined expected results, actual outputs, failures and remaining work for each criterion. The unavailable Core acceptance-ledger addendum is not invented; explicit L1-L8 plus worker returns own selected fulfillment. Review the five development-owned acceptance questions and keep technical, developer-product and business acceptance distinct.
+
+Run the full applicable Python release suite, all JS groups, workspace-checker tests and source smoke on the reviewed Python 3.11.9 environment. Include migration versions 1/2/3 and failure recovery; exact six-revision oracle; identity/version conflicts; tiered backup, cached corrupt blob/full failure/pin/prune/clock/downtime; source immutability; maintenance pending/referenced/re-upload-age/concurrency failures. Changed Store/server/UI paths require PNI regression checks; reuse unrelated valid evidence.
+
+After independent source/fault and technical acceptance, Root commits a clean candidate. Sol builds that exact HEAD offline with both clean-Git gates, records EXE metadata/hash/size, runs exact packaged smoke and real headed V1-V8/U checks, migration, restore, fresh-folder, save, exit/restart and export flows. Retain the ignored BASELINE_1_9_2.exe for actual before/after print comparison. True Chrome and Edge print dialogs/settings/native output remain mandatory. Browser-only print-control discrimination has a 15-minute ceiling; failed native control remains BLOCKED, not PASS. Other independent criteria continue without whole-LOCAL completion claims.
+
+Large synthetic benchmark must reach near 1 GB through real Store.save, record preparation cost, actual DB/blob/report/revision counts, current host/storage and UI latency. No direct SQL padding or invented performance threshold. Actual yard-machine acceptance is deferred by the operator; real-data and physical-printer witnesses remain disclosed, never replaced by synthetic claims.
+
+## Value, budget and stop conditions
+
+Prior PNI elapsed effort: 106 minutes reused; other earlier effort UNKNOWN. This branch started 2026-11-08T07:27:34Z with a finite 20-minute audit. The independent whole-local audit supports an additional ceiling of 480 minutes for integrated implementation/tests/build/native proof and 60 minutes for supporting admission/review. Record exact dispatch start. Include retries and review; no renamed successor or repair resets these ceilings. Shared source/API/candidate work closes required local outcomes; component-only checks cannot establish useful delivery.
+
+Stop at the ceiling, failed required gate, scope/path/effect escape, new secret/provider/network or production-destructive boundary, or unresolved material design change. Preserve partial evidence and hold only dependent actions. At the third same-root repair without a new cause record REVIEW_COST_ESCALATION_REQUIRED. After the first failed repair tranche apply the existing bounded causal-chain audit and enrollment before a dependent successor. Routine repairs within the same authority do not require operator reapproval.
+
+## Lifecycle and closure
+
+INTAKE -> DESIGN -> SPEC -> WORK_ORDER -> BUILD -> REVIEW -> FREEZE. Workers rehydrate and acknowledge the admitted exact packet/handoff before source writes. Root records role transitions and preserves original packets, receipts and failures. Invoke trusted pre-dispatch, worker-return, reviewer-fast, pre-commit and doctor checks with the explicit LOCAL packet. Source acceptance alone is not product closure. Terminal packet status/action changes require fresh independent exact assessment and receipt. Commit all artifacts before closure; verify the committed range and source/binary custody. No push, public release, deployment or phase-2 web BUILD is admitted.
+
+## Gate-To-Role Closeability Contract
+
+closeabilityContractVersion: cvf.gate-role-closeability@1.0.0
+closeabilityDisposition: CLOSEABLE
+returnTimeRecheck: REQUIRED_BEFORE_REPAIR
+implementationTopologyPolicy: BOUNDED_PATH_FAMILIES
+foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
+
+| gateId | mustPassBy | repairOwner | repairPhase | mutationSurface | topology | commitOwner | commitPhase | dependsOn |
+|---|---|---|---|---|---|---|---|---|
+| authorization_review | PRE_DISPATCH | Root | PRE_DISPATCH | LOCAL authority, SPEC, work order and action records | BOUNDED_PATH_FAMILIES | Root | MATERIAL_COMMIT | NONE |
+| pre_dispatch_gate | PRE_DISPATCH | Root | PRE_DISPATCH | LOCAL metadata and exact assessment records | BOUNDED_PATH_FAMILIES | Root | MATERIAL_COMMIT | authorization_review |
+| dispatch_continuity | IMPLEMENTATION | session-sync-steward | IMPLEMENTATION | CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md material-SHA marker | EXACT_PATHS | session-sync-steward | DISPATCH_CONTINUITY_COMMIT | pre_dispatch_gate |
+| pre_implementation_autorun | IMPLEMENTATION | Root | IMPLEMENTATION | LOCAL metadata and assigned worker source families | BOUNDED_PATH_FAMILIES | Root | MATERIAL_COMMIT | dispatch_continuity |
+| focused_checker_tests | WORKER_RETURN | Terra-and-Sol | WORKER_RETURN | assigned integration, reader and packaging source/test paths | BOUNDED_PATH_FAMILIES | Root | MATERIAL_COMMIT | dispatch_continuity |
+| adif_integrity | WORKER_RETURN | Root | WORKER_RETURN | LOCAL changed-path and artifact evidence | BOUNDED_PATH_FAMILIES | Root | MATERIAL_COMMIT | focused_checker_tests |
+| worker_return_fast | WORKER_RETURN | Terra-and-Sol | WORKER_RETURN | assigned source/test/return paths | BOUNDED_PATH_FAMILIES | Root | MATERIAL_COMMIT | adif_integrity |
+| reviewer_fast | REVIEW | Astra | REVIEW | LOCAL review records and disclosed localized in-scope repairs | BOUNDED_PATH_FAMILIES | Root | MATERIAL_COMMIT | worker_return_fast |
+| pre_commit | PRE_MATERIAL_COMMIT | Root | PRE_MATERIAL_COMMIT | LOCAL reviewed candidate and metadata | BOUNDED_PATH_FAMILIES | Root | MATERIAL_COMMIT | reviewer_fast |
+| terminal_completion_review | POST_MATERIAL | Astra-and-Sol | POST_MATERIAL | LOCAL exact EXE/native evidence and review records | BOUNDED_PATH_FAMILIES | Root | CONTINUITY_COMMIT | pre_commit |
+| continuity | CONTINUITY_COMMIT | session-sync-steward | CONTINUITY_COMMIT | canonical continuity, catalog and accepted LOCAL evidence | BOUNDED_PATH_FAMILIES | session-sync-steward | CONTINUITY_COMMIT | terminal_completion_review |
+| committed_range_closure | POST_MATERIAL_CLOSURE | Root | POST_MATERIAL_CLOSURE | LOCAL committed-range verification records | BOUNDED_PATH_FAMILIES | Root | CONTINUITY_COMMIT | continuity |
+
+## Milestone contribution
+
+```cvf-milestone-coverage-json
+{
+  "schemaVersion": "cvf.milestoneCoverage@1.0.0",
+  "authority": {
+    "path": "docs/roadmaps/LOCAL_COMPLETION.md",
+    "heading": "## Acceptance criteria — LOCAL",
+    "sha256": "d3e51ba906511d9decdde87dbcfc0392264b15123843fc45c18739309283c953"
+  },
+  "milestone": {
+    "id": "LOCAL",
+    "consumer": "Local shift-report operator",
+    "outcome": "Recoverable, usable local1.10.0 release with full workflow, print, history and maintenance proof before phase2web",
+    "checkpoint": {
+      "trigger": "Before dispatch and terminal developer-product acceptance",
+      "owner": "Root with independent Astra review",
+      "decision": "Cover allL1-L8, keep unproved native/site/business limits explicit; web deferred until complete local engineering acceptance"
+    }
+  },
+  "phase": "DISPATCH",
+  "action": {
+    "kind": "IMPLEMENT",
+    "selected": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "L8"
+    ],
+    "owner": "Terra backend/migration; Sol frontend/native/packaging; Root orchestration/commit; Astra independentreview",
+    "output": "Complete local1.10.0/schema4 source and exact packaged developer-product proof forL1-L8; named deviceacceptance deferredbyoperator",
+    "budgetMinutes": 480,
+    "stop": "Stop at originalceiling, scope/secret/network/productionescape, failedrequiredgate, thirdsame-rootrepair or missingmandatorynativeproof; preservepartialfacts andholdonlydependentclaims",
+    "next": "Independent source/faultreview, Rootclean candidatecommit, SolexactEXE/native/large/restore/printproof, independentterminalreview andlocalfreeze"
+  },
+  "rows": [
+    {
+      "id": "L1",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
+      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "evidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
+          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/design-terra.md",
+          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
+          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+        },
+        {
+          "path": "docs/specs/LOCAL_COMPLETION.md",
+          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        }
+      ]
+    },
+    {
+      "id": "L2",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
+      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "evidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
+          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/design-terra.md",
+          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
+          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+        },
+        {
+          "path": "docs/specs/LOCAL_COMPLETION.md",
+          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        }
+      ]
+    },
+    {
+      "id": "L3",
+      "state": "NOT_STARTED",
+      "gap": "U1-U14 implementation remains; nativecontroloserror3 is an evidenced proof blocker, independent of sourceimplementation; noV1closurewithout realdialogs.",
+      "owner": "Sol UI/native proof with Root blockerownership",
+      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "evidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
+          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/design-terra.md",
+          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
+          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+        },
+        {
+          "path": "docs/specs/LOCAL_COMPLETION.md",
+          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        }
+      ]
+    },
+    {
+      "id": "L4",
+      "state": "NOT_STARTED",
+      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
+      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "evidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
+          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/design-terra.md",
+          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
+          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+        },
+        {
+          "path": "docs/specs/LOCAL_COMPLETION.md",
+          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        }
+      ]
+    },
+    {
+      "id": "L5",
+      "state": "NOT_STARTED",
+      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
+      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "evidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
+          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/design-terra.md",
+          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
+          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+        },
+        {
+          "path": "docs/specs/LOCAL_COMPLETION.md",
+          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        }
+      ]
+    },
+    {
+      "id": "L6",
+      "state": "NOT_STARTED",
+      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
+      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "evidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
+          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/design-terra.md",
+          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
+          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+        },
+        {
+          "path": "docs/specs/LOCAL_COMPLETION.md",
+          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        }
+      ]
+    },
+    {
+      "id": "L7",
+      "state": "NOT_STARTED",
+      "gap": "Near1GB currenthost benchmark and largeheadedUI proof missing; actual deploymenthost classification pending operator logistics.",
+      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
+      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "evidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
+          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/design-terra.md",
+          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
+          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+        },
+        {
+          "path": "docs/specs/LOCAL_COMPLETION.md",
+          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        }
+      ]
+    },
+    {
+      "id": "L8",
+      "state": "NOT_STARTED",
+      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
+      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "evidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
+          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/design-terra.md",
+          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
+          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+        },
+        {
+          "path": "docs/specs/LOCAL_COMPLETION.md",
+          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        }
+      ]
+    }
+  ],
+  "supportingWork": [
+    {
+      "criterionIds": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "L8"
+      ],
+      "reason": "Existing source/evidence leaves reallocaloutcomes unmet; integratedcontract/admission prevents incompatible server/UI/migrationchanges, reuses PNI and existing native owners.",
+      "budgetMinutes": 60,
+      "stop": "No repeated preparation chain or gate/core mutation; preserve failures and stop at originalsupport ceiling",
+      "returnToProduct": "Admitted exactlocal implementation and independent review"
+    }
+  ],
+  "conclusions": {
+    "tranche": "PENDING",
+    "trancheSummary": "Initial integrated implementation and developer-owned proof admitted onlyafter independentexactactionassessment",
+    "trancheEvidence": [
+      {
+        "path": "docs/reviews/local-completion-20261108/audit-astra.json",
+        "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/design-terra.md",
+        "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/source-baseline.json",
+        "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+      },
+      {
+        "path": "docs/specs/LOCAL_COMPLETION.md",
+        "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+      }
+    ],
+    "product": "PENDING",
+    "productSummary": "WholelocalL1-L8 notaccepted; webphase2held",
+    "acceptance": [],
+    "owner": "Root orchestrator"
+  }
+}
+```

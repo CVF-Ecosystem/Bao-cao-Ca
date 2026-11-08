@@ -23,11 +23,10 @@ Ctrl+P trong Xem / In dùng đường in báo cáo hiện có, chặn lặp/reen
 Số lượng nguyên 0–9.999.999; ô sai được nêu rõ và chặn lưu. Chốt cần người nhập/phụ trách.
 Thông báo phía dưới có thể đóng bằng chuột hoặc Enter/Space khi được chọn.
 
-In A4 ngang, nền tắt, có ngày/ca, giờ máy, Trang x/y và khối ký cuối báo cáo.
+In A4 ngang, Lề Mặc định, nền tắt, có ngày/ca, giờ máy, Trang x/y và khối ký cuối báo cáo.
 Đã giữ hộp in và file PDF gốc do Chrome/Edge có giao diện lưu hoàn tất.
-Edge có thể không hiện widget tiêu đề/chân trang; bằng chứng ON/OFF dùng ticket thật
-được pipeline in nhận, không đồng nghĩa đã thao tác widget không tồn tại.
-In giấy và nghiệm thu máy/thiết bị tại bãi được để sau theo quyết định người dùng.
+Tùy trình duyệt có thể không hiện nút tiêu đề/chân trang riêng.
+In giấy chưa được nghiệm thu. Người dùng để nghiệm thu máy/thiết bị tại bãi sang sau.
 
 Bảo vệ phân biệt quick/full. Full bắt buộc khi chưa có hoặc đủ 24 giờ kể từ full thành công
 ở máy, kể cả thời gian tắt; thực hiện khi khởi động/thao tác tiếp theo, không có timer nền.
@@ -40,10 +39,11 @@ Giữ các tham chiếu báo cáo/lịch sử/bản gốc bổ sung; dọn blob 
 Ẩn tàu giữ nguyên lịch sử; thêm lại chủ động có thể kích hoạt. Nhập Excel chỉ thêm tên,
 không tự phân tổ/nhập báo cáo. Các luồng bản mang đi, đối chiếu, Excel tháng, ZIP và bàn giao tiếp tục dùng.
 
-EXE hiện hành từ 02d1e26f174a: SHA-256
-759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b.
+EXE hiện hành từ 8e641d315258: SHA-256
+10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917.
 Bộ tổng hợp ~1,25 GB cho thấy khởi động ~74–123s, một bản mang đi ~36s, các lượt thoát
 ~1–41s trên máy Windows/RAM~16GB/NVMe với cache ấm. Không có tuyên bố tăng tốc chung
-hoặc thời gian bảo đảm ở máy bãi. Quan sát decode 0,024s không phải latency tải cả 40 ảnh.
+hoặc thời gian bảo đảm ở máy bãi. Không đo lại bộ lớn sau sửa cuộn cuối; một số số đo
+chi tiết thời gian xuất hiện bảng tổng hợp/tab tệp chưa đo đầu-cuối, được để lại theo phạm vi thu gọn.
 Bằng chứng/giới hạn/đánh giá độc lập nằm trong docs/reviews/local-completion-20261108/.
 Không có triển khai web hoặc dữ liệu vận hành thật trong đợt kiểm chứng này.

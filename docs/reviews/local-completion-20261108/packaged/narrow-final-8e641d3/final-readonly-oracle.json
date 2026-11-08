@@ -1,0 +1,35 @@
+{
+  "schema": "4",
+  "reports": 8,
+  "newReport": {
+    "date": "2033-01-01",
+    "shift": "DAY",
+    "actor": "SYNTH ACTOR",
+    "status": "draft",
+    "notes": "NARROW FINAL SAVE ORACLE",
+    "staffing": [
+      {
+        "role": "PHỤ TRÁCH CHUNG",
+        "people": ""
+      },
+      {
+        "role": "SYNTH ROLE",
+        "people": ""
+      }
+    ],
+    "jobs": [
+      {
+        "name": "SYNTH JOB",
+        "detail": "",
+        "xn": false,
+        "rtg": false,
+        "f20": null,
+        "f40": null,
+        "e20": null,
+        "e40": null
+      }
+    ],
+    "handover": []
+  },
+  "integrity": "ok"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "event": "launch",
+    "readinessSeconds": 1.6017255999613553,
+    "pid": 28380,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917"
+  },
+  {
+    "event": "click-start",
+    "text": "Vào ca này"
+  },
+  {
+    "event": "click-done",
+    "text": "Vào ca này"
+  },
+  {
+    "event": "screenshot",
+    "file": "new-report-saved.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 28380,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  },
+  {
+    "event": "launch",
+    "readinessSeconds": 1.6065705001819879,
+    "pid": 51140,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917"
+  },
+  {
+    "event": "screenshot",
+    "file": "reopened-saved-report.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 51140,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  }
+]

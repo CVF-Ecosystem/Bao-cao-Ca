@@ -1,0 +1,28 @@
+{
+  "status": "EXACT_ACCEPTED_SAME_DIRECTORY_VERSIONED_EXE_DELIVERED",
+  "candidate": "8e641d3152581ad6341551ae3415efcb14519a2c",
+  "version": "1.10.0",
+  "schema": 4,
+  "priorRoot": {
+    "sha256": "759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b",
+    "retained": ".cvf/runtime/local-completion-20261108/DELIVERY_PREVIOUS_02d1e26.exe",
+    "bytes": 13191601,
+    "copyAttempt": "EBUSY",
+    "observedProcesses": [
+      33612,
+      27784
+    ],
+    "disposition": "User-running old launcher retained; close old before opening versioned new EXE beside same DU_LIEU/DANH_MUC. No process killed/DBaccess."
+  },
+  "delivered": {
+    "path": "SO_BAO_CAO_CA_1_10_0.exe",
+    "sha256": "10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917",
+    "bytes": 13192535
+  },
+  "independentReview": {
+    "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+    "sha256": "67ec8ca39c5b1d16c1edb59726a5f49c87876936a035a790dad6f6577956e751"
+  },
+  "effect": "Retained prior binary bytes and identified existing EXE locks only. Root EXE still7590. No operational DB/catalog read/write; unrelated untracked user workbook untouched/unopened/unignored/unstaged. Clean source producer build/s8e; original root not clean. No app launched or new tests.",
+  "sourceLocation": "ma_nguon/THIET_LAP.py:11 derives ROOT from EXE parent; same-directory filename preserves intended data-directory location without launching or upgrading it."
+}

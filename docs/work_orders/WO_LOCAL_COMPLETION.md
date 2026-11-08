@@ -1,6 +1,6 @@
 # Complete local release before phase 2 web
 
-Status: DISPATCH_READY
+Status: CLOSED_ACCEPTED
 docType: work_order
 dispatchKind: INITIAL
 Risk: R2
@@ -11,7 +11,7 @@ Date: 2026-11-08
 
 ## Dispatch Prompt Envelope
 
-Read this exact packet, locked SPEC, canonical state, memory, active handoff, implementation status, index and independent action assessment before writes. Implement all L1-L8 of the LOCAL milestone. The operator approved the proposed local completion sequence and deferred device acceptance on a different yard machine. Web remains phase 2, after local completion. Old PNI acceptance grants no new BUILD. Execution begins only after independent exact-action acceptance and successful fresh pre-dispatch and doctor checks. Workers never commit; Root owns all commits.
+Terminal REVIEW only: bind independently accepted reduced-QA LOCAL engineering delivery, deliver exact accepted bytes as root SO_BAO_CAO_CA_1_10_0.exe, preserving the same data-directory location; replace ignored root SO_BAO_CAO_CA.exe only if unlocked after retaining prior binary identity, synchronize records and commit authorized changes. No further implementation/tests/web/deploy. Original implementation instructions below are retained as history, not future BUILD authority. Read canonical continuity and exact terminal review before metadata/commit actions.
 
 ## Authority and locked decisions
 
@@ -30,7 +30,7 @@ All parties may write ignored .cvf/runtime/local-completion-20261108/ fixtures, 
 
 ## Acceptance and evidence
 
-All L1-L8 criteria remain mandatory. SPEC locks endpoint shapes, 300-second server-owned single-use plans, auth/context/main-store checks, migration, save-kind/coalescing, backup/cache/retention/clock and guarded maintenance contracts. Terra and Sol coordinate API integration without parallel writes to shared files. Material interface changes require independent review before dependent effects.
+All revised L1-L8 criteria remain mandatory. Terminal operator-directed amendment defers only the two precise V8 year-summary/files-tab click-to-completion measurements as NOT_MEASURED. Original SPEC remains frozen baseline; this explicit amendment supersedes only that measurement obligation. SPEC locks endpoint shapes, 300-second server-owned single-use plans, auth/context/main-store checks, migration, save-kind/coalescing, backup/cache/retention/clock and guarded maintenance contracts. Terra and Sol coordinate API integration without parallel writes to shared files. Material interface changes require independent review before dependent effects.
 
 Return files, source hashes, commands/exit codes, named tests/skips, predefined expected results, actual outputs, failures and remaining work for each criterion. The unavailable Core acceptance-ledger addendum is not invented; explicit L1-L8 plus worker returns own selected fulfillment. Review the five development-owned acceptance questions and keep technical, developer-product and business acceptance distinct.
 
@@ -81,7 +81,7 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
   "authority": {
     "path": "docs/roadmaps/LOCAL_COMPLETION.md",
     "heading": "## Acceptance criteria — LOCAL",
-    "sha256": "d3e51ba906511d9decdde87dbcfc0392264b15123843fc45c18739309283c953"
+    "sha256": "795e79915a8a2cf9680baaef0b874aa09e687fc26ae385745ce4c401099093cb"
   },
   "milestone": {
     "id": "LOCAL",
@@ -93,9 +93,9 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "decision": "Cover allL1-L8, keep unproved native/site/business limits explicit; web deferred until complete local engineering acceptance"
     }
   },
-  "phase": "DISPATCH",
+  "phase": "REVIEW",
   "action": {
-    "kind": "IMPLEMENT",
+    "kind": "REVIEW",
     "selected": [
       "L1",
       "L2",
@@ -106,257 +106,423 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "L7",
       "L8"
     ],
-    "owner": "Terra backend/migration; Sol frontend/native/packaging; Root orchestration/commit; Astra independentreview",
-    "output": "Complete local1.10.0/schema4 source and exact packaged developer-product proof forL1-L8; named deviceacceptance deferredbyoperator",
-    "budgetMinutes": 480,
-    "stop": "Stop at originalceiling, scope/secret/network/productionescape, failedrequiredgate, thirdsame-rootrepair or missingmandatorynativeproof; preservepartialfacts andholdonlydependentclaims",
-    "next": "Independent source/faultreview, Rootclean candidatecommit, SolexactEXE/native/large/restore/printproof, independentterminalreview andlocalfreeze"
+    "owner": "Root CLOSER/COMMIT_STEWARD with independent Astra REVIEWER",
+    "output": "Accepted revised LOCAL L1-L8 internal engineering delivery and local EXE/guide handover; operational witnesses separate",
+    "budgetMinutes": 15,
+    "stop": "Stop on exact custody drift or failed required terminal gate; original480+60 ceilings continue without reset; no further product tests",
+    "next": "Commit reviewed terminal records; target yard-device operational acceptance later. Web requires separate work order and W0 decisions."
   },
   "rows": [
     {
       "id": "L1",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
-      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
-      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with independent review",
+      "destination": "docs/roadmaps/LOCAL_COMPLETION.md",
       "evidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
-          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+          "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+          "sha256": "e7bfe50685033f4d6fd01f1e2e37017a11cf05fa48b13a62c30ec9a6f1850b5e"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/design-terra.md",
-          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
-          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+          "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-root-review.json",
+          "sha256": "78e42bf91f9b7af0d00a7c0a5a79d7041b0e003db63480c209ddbcad3ced3575"
         },
         {
-          "path": "docs/specs/LOCAL_COMPLETION.md",
-          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+          "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+          "sha256": "29db56dab067a5e876b98796e38b94153ac5ba70337b6d6d7103729d0a500d35"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+          "sha256": "f462d1a453ceac6509fe30117c1e74fe05b9d070b2524002451fcaf691cf2e0b"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+          "sha256": "033ba9ac220b1828e92d0c46b43ed7773774def24117b6c1b75e886c6a9003ee"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+          "sha256": "b241a51e47c0b823d17997de52afb5f2a49526795b5c92d5284955e709c03b34"
         }
       ]
     },
     {
       "id": "L2",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
-      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
-      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with independent review",
+      "destination": "docs/roadmaps/LOCAL_COMPLETION.md",
       "evidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
-          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+          "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+          "sha256": "e7bfe50685033f4d6fd01f1e2e37017a11cf05fa48b13a62c30ec9a6f1850b5e"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/design-terra.md",
-          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
-          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+          "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-root-review.json",
+          "sha256": "78e42bf91f9b7af0d00a7c0a5a79d7041b0e003db63480c209ddbcad3ced3575"
         },
         {
-          "path": "docs/specs/LOCAL_COMPLETION.md",
-          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+          "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+          "sha256": "29db56dab067a5e876b98796e38b94153ac5ba70337b6d6d7103729d0a500d35"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+          "sha256": "f462d1a453ceac6509fe30117c1e74fe05b9d070b2524002451fcaf691cf2e0b"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+          "sha256": "033ba9ac220b1828e92d0c46b43ed7773774def24117b6c1b75e886c6a9003ee"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+          "sha256": "b241a51e47c0b823d17997de52afb5f2a49526795b5c92d5284955e709c03b34"
         }
       ]
     },
     {
       "id": "L3",
-      "state": "NOT_STARTED",
-      "gap": "U1-U14 implementation remains; nativecontroloserror3 is an evidenced proof blocker, independent of sourceimplementation; noV1closurewithout realdialogs.",
-      "owner": "Sol UI/native proof with Root blockerownership",
-      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with independent review",
+      "destination": "docs/roadmaps/LOCAL_COMPLETION.md",
       "evidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
-          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+          "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+          "sha256": "e7bfe50685033f4d6fd01f1e2e37017a11cf05fa48b13a62c30ec9a6f1850b5e"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/design-terra.md",
-          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
-          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+          "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-root-review.json",
+          "sha256": "78e42bf91f9b7af0d00a7c0a5a79d7041b0e003db63480c209ddbcad3ced3575"
         },
         {
-          "path": "docs/specs/LOCAL_COMPLETION.md",
-          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+          "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+          "sha256": "29db56dab067a5e876b98796e38b94153ac5ba70337b6d6d7103729d0a500d35"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+          "sha256": "f462d1a453ceac6509fe30117c1e74fe05b9d070b2524002451fcaf691cf2e0b"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+          "sha256": "033ba9ac220b1828e92d0c46b43ed7773774def24117b6c1b75e886c6a9003ee"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+          "sha256": "b241a51e47c0b823d17997de52afb5f2a49526795b5c92d5284955e709c03b34"
         }
       ]
     },
     {
       "id": "L4",
-      "state": "NOT_STARTED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
-      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
-      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with independent review",
+      "destination": "docs/roadmaps/LOCAL_COMPLETION.md",
       "evidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
-          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+          "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+          "sha256": "e7bfe50685033f4d6fd01f1e2e37017a11cf05fa48b13a62c30ec9a6f1850b5e"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/design-terra.md",
-          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
-          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+          "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-root-review.json",
+          "sha256": "78e42bf91f9b7af0d00a7c0a5a79d7041b0e003db63480c209ddbcad3ced3575"
         },
         {
-          "path": "docs/specs/LOCAL_COMPLETION.md",
-          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+          "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+          "sha256": "29db56dab067a5e876b98796e38b94153ac5ba70337b6d6d7103729d0a500d35"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+          "sha256": "f462d1a453ceac6509fe30117c1e74fe05b9d070b2524002451fcaf691cf2e0b"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+          "sha256": "033ba9ac220b1828e92d0c46b43ed7773774def24117b6c1b75e886c6a9003ee"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+          "sha256": "b241a51e47c0b823d17997de52afb5f2a49526795b5c92d5284955e709c03b34"
         }
       ]
     },
     {
       "id": "L5",
-      "state": "NOT_STARTED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
-      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
-      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with independent review",
+      "destination": "docs/roadmaps/LOCAL_COMPLETION.md",
       "evidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
-          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+          "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+          "sha256": "e7bfe50685033f4d6fd01f1e2e37017a11cf05fa48b13a62c30ec9a6f1850b5e"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/design-terra.md",
-          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
-          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+          "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-root-review.json",
+          "sha256": "78e42bf91f9b7af0d00a7c0a5a79d7041b0e003db63480c209ddbcad3ced3575"
         },
         {
-          "path": "docs/specs/LOCAL_COMPLETION.md",
-          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+          "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+          "sha256": "29db56dab067a5e876b98796e38b94153ac5ba70337b6d6d7103729d0a500d35"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+          "sha256": "f462d1a453ceac6509fe30117c1e74fe05b9d070b2524002451fcaf691cf2e0b"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+          "sha256": "033ba9ac220b1828e92d0c46b43ed7773774def24117b6c1b75e886c6a9003ee"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+          "sha256": "b241a51e47c0b823d17997de52afb5f2a49526795b5c92d5284955e709c03b34"
         }
       ]
     },
     {
       "id": "L6",
-      "state": "NOT_STARTED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
-      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
-      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with independent review",
+      "destination": "docs/roadmaps/LOCAL_COMPLETION.md",
       "evidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
-          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+          "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+          "sha256": "e7bfe50685033f4d6fd01f1e2e37017a11cf05fa48b13a62c30ec9a6f1850b5e"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/design-terra.md",
-          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
-          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+          "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-root-review.json",
+          "sha256": "78e42bf91f9b7af0d00a7c0a5a79d7041b0e003db63480c209ddbcad3ced3575"
         },
         {
-          "path": "docs/specs/LOCAL_COMPLETION.md",
-          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+          "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+          "sha256": "29db56dab067a5e876b98796e38b94153ac5ba70337b6d6d7103729d0a500d35"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+          "sha256": "f462d1a453ceac6509fe30117c1e74fe05b9d070b2524002451fcaf691cf2e0b"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+          "sha256": "033ba9ac220b1828e92d0c46b43ed7773774def24117b6c1b75e886c6a9003ee"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+          "sha256": "b241a51e47c0b823d17997de52afb5f2a49526795b5c92d5284955e709c03b34"
         }
       ]
     },
     {
       "id": "L7",
-      "state": "NOT_STARTED",
-      "gap": "Near1GB currenthost benchmark and largeheadedUI proof missing; actual deploymenthost classification pending operator logistics.",
-      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
-      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with independent review",
+      "destination": "docs/roadmaps/LOCAL_COMPLETION.md",
       "evidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
-          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+          "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+          "sha256": "e7bfe50685033f4d6fd01f1e2e37017a11cf05fa48b13a62c30ec9a6f1850b5e"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/design-terra.md",
-          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
-          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+          "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-root-review.json",
+          "sha256": "78e42bf91f9b7af0d00a7c0a5a79d7041b0e003db63480c209ddbcad3ced3575"
         },
         {
-          "path": "docs/specs/LOCAL_COMPLETION.md",
-          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+          "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+          "sha256": "29db56dab067a5e876b98796e38b94153ac5ba70337b6d6d7103729d0a500d35"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+          "sha256": "f462d1a453ceac6509fe30117c1e74fe05b9d070b2524002451fcaf691cf2e0b"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+          "sha256": "033ba9ac220b1828e92d0c46b43ed7773774def24117b6c1b75e886c6a9003ee"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+          "sha256": "b241a51e47c0b823d17997de52afb5f2a49526795b5c92d5284955e709c03b34"
         }
       ]
     },
     {
       "id": "L8",
-      "state": "NOT_STARTED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
-      "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
-      "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with independent review",
+      "destination": "docs/roadmaps/LOCAL_COMPLETION.md",
       "evidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/audit-astra.json",
-          "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+          "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+          "sha256": "e7bfe50685033f4d6fd01f1e2e37017a11cf05fa48b13a62c30ec9a6f1850b5e"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/design-terra.md",
-          "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
         },
         {
-          "path": "docs/reviews/local-completion-20261108/source-baseline.json",
-          "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+          "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-root-review.json",
+          "sha256": "78e42bf91f9b7af0d00a7c0a5a79d7041b0e003db63480c209ddbcad3ced3575"
         },
         {
-          "path": "docs/specs/LOCAL_COMPLETION.md",
-          "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+          "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+          "sha256": "29db56dab067a5e876b98796e38b94153ac5ba70337b6d6d7103729d0a500d35"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+          "sha256": "f462d1a453ceac6509fe30117c1e74fe05b9d070b2524002451fcaf691cf2e0b"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+          "sha256": "033ba9ac220b1828e92d0c46b43ed7773774def24117b6c1b75e886c6a9003ee"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+          "sha256": "b241a51e47c0b823d17997de52afb5f2a49526795b5c92d5284955e709c03b34"
         }
       ]
     }
   ],
-  "supportingWork": [
-    {
-      "criterionIds": [
-        "L1",
-        "L2",
-        "L3",
-        "L4",
-        "L5",
-        "L6",
-        "L7",
-        "L8"
-      ],
-      "reason": "Existing source/evidence leaves reallocaloutcomes unmet; integratedcontract/admission prevents incompatible server/UI/migrationchanges, reuses PNI and existing native owners.",
-      "budgetMinutes": 60,
-      "stop": "No repeated preparation chain or gate/core mutation; preserve failures and stop at originalsupport ceiling",
-      "returnToProduct": "Admitted exactlocal implementation and independent review"
-    }
-  ],
+  "supportingWork": [],
   "conclusions": {
-    "tranche": "PENDING",
-    "trancheSummary": "Initial integrated implementation and developer-owned proof admitted onlyafter independentexactactionassessment",
+    "tranche": "COMPLETE",
+    "trancheSummary": "Local1.10.0 source/build/main flows accepted; known scroll defect corrected, reduced QA amendment explicit and prior failures retained",
     "trancheEvidence": [
       {
-        "path": "docs/reviews/local-completion-20261108/audit-astra.json",
-        "sha256": "3b932a0fcedf594181827297f98e53d374e99033a87bb30cde402d287f5f2f95"
+        "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+        "sha256": "e7bfe50685033f4d6fd01f1e2e37017a11cf05fa48b13a62c30ec9a6f1850b5e"
       },
       {
-        "path": "docs/reviews/local-completion-20261108/design-terra.md",
-        "sha256": "de1ea93893af37a7be7605b3b683674ac92b22a83973b24c457263bb98d7b824"
+        "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+        "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
       },
       {
-        "path": "docs/reviews/local-completion-20261108/source-baseline.json",
-        "sha256": "dfdfb14fc9c117a8f88074265511d54966f24c41d6fdc4fc36562335dcea3133"
+        "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-root-review.json",
+        "sha256": "78e42bf91f9b7af0d00a7c0a5a79d7041b0e003db63480c209ddbcad3ced3575"
       },
       {
-        "path": "docs/specs/LOCAL_COMPLETION.md",
-        "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+        "sha256": "29db56dab067a5e876b98796e38b94153ac5ba70337b6d6d7103729d0a500d35"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+        "sha256": "f462d1a453ceac6509fe30117c1e74fe05b9d070b2524002451fcaf691cf2e0b"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+        "sha256": "033ba9ac220b1828e92d0c46b43ed7773774def24117b6c1b75e886c6a9003ee"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/partial-review.json",
+        "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+        "sha256": "b241a51e47c0b823d17997de52afb5f2a49526795b5c92d5284955e709c03b34"
       }
     ],
-    "product": "PENDING",
-    "productSummary": "WholelocalL1-L8 notaccepted; webphase2held",
-    "acceptance": [],
-    "owner": "Root orchestrator"
+    "product": "COMPLETE",
+    "productSummary": "Only revised LOCAL engineering milestone L1-L8 complete. Two fine V8 timings deferred NOT_MEASURED; yard/realdata/physicalprinter/business and optional E7/web remain separate.",
+    "acceptance": [
+      {
+        "path": "docs/reviews/local-completion-20261108/final-local-review.json",
+        "sha256": "e7bfe50685033f4d6fd01f1e2e37017a11cf05fa48b13a62c30ec9a6f1850b5e"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+        "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/u1-scroll-owner-root-review.json",
+        "sha256": "78e42bf91f9b7af0d00a7c0a5a79d7041b0e003db63480c209ddbcad3ced3575"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json",
+        "sha256": "29db56dab067a5e876b98796e38b94153ac5ba70337b6d6d7103729d0a500d35"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/final-native-batch-review.json",
+        "sha256": "f462d1a453ceac6509fe30117c1e74fe05b9d070b2524002451fcaf691cf2e0b"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+        "sha256": "033ba9ac220b1828e92d0c46b43ed7773774def24117b6c1b75e886c6a9003ee"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/partial-review.json",
+        "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
+      },
+      {
+        "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+        "sha256": "b241a51e47c0b823d17997de52afb5f2a49526795b5c92d5284955e709c03b34"
+      }
+    ],
+    "owner": "Root CLOSER"
   }
 }
 ```
+
+## Terminal disposition — 2026-11-08
+
+Independent final-local-review.json accepts exact8e641d315258/EXE10aaf013 and revised L1-L8, including final actual nonzero-scroll save/reopen witness. This terminal packet adopts the explicit reduced-QA amendment in roadmap Acceptance criteria LOCAL; original admitted586b packet/criteria/receipt preserved in history. Fine V8 timings NOT_MEASURED/deferred, never original-full-contract PASS. Existing safety/functionality proof inherited only on unchanged effects. External guide/changelog are not bundled;22 non-document source inputs unchanged after build. No further product testing.
+
+Root CLOSER -> SESSION_SYNC_STEWARD/COMMIT_STEWARD performs exact terminal receipt/gates, accepted local EXE delivery and local commit. Prior ignored root EXE identity is preserved. If user-running root launcher is locked, retain it without closing processes or touching operational data, deliver accepted same-directory versioned SO_BAO_CAO_CA_1_10_0.exe and disclose close-old-before-new requirement (do not launch from dist against a different data directory). Unrelated untracked user workbook remains untouched and unstaged. All acceptance layers, five evidence questions, technical/business/site limits, cost and next owners are recorded in the existing roadmap terminal section. Terminal15min is a bounded subset of original480/60, no reset. No push, web, operational-data mutation, provider call or AI-governance claim. Closed dispatch APPL is explicitly NOT_APPLICABLE_WITH_REASON, not a fabricated closeability PASS.
