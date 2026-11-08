@@ -17,7 +17,7 @@
   "actions": [
     {
       "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973",
+      "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
       "criteria": [
         "E1",
         "E2",
@@ -40,8 +40,8 @@
       "disposition": "ASSESSED",
       "reviewEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission/SUPPLEMENTAL_ASSESSMENT.json",
-          "sha256": "a41cc58a65fe0649551d8887a1ef1aee4c741732ce84a202cd9942759b2a92a7"
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "344df634e3a9637c77dae1dcaf5ea13ee55027d856236d4859649d92577884f4"
         }
       ]
     }
@@ -65,13 +65,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-corrected-before-receipt.json",
-        "sha256": "ec8811a932a7f5815afd99d1c39dcca8f68c7388f96c1891075ceff37b69677b"
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
           "criteria": [
             "E1",
             "E2",
@@ -88,8 +88,8 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-INST-01.json",
-          "sha256": "f57f7dfd350a9eb46e98dfa7676926aeac25618c644a636e440f7cb1795e57ba"
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-INST-01.json",
+          "sha256": "82ad2711e994e4687602ebf926b20dfa8315b607440f08f5f6e077661c3093d4"
         }
       ]
     },
@@ -111,13 +111,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-corrected-before-receipt.json",
-        "sha256": "ec8811a932a7f5815afd99d1c39dcca8f68c7388f96c1891075ceff37b69677b"
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
           "criteria": [
             "E1",
             "E2",
@@ -134,8 +134,8 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-CONT-01.json",
-          "sha256": "d7534fab9d30f16421ed033a7ac7b22e4f833c4c12d358ba421483c2cbdfef4f"
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-CONT-01.json",
+          "sha256": "745c85d50c9cc7dcacf01a831d88a547739bfccb1899e0cfe00664e1f38638c5"
         }
       ]
     },
@@ -157,13 +157,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-corrected-before-receipt.json",
-        "sha256": "ec8811a932a7f5815afd99d1c39dcca8f68c7388f96c1891075ceff37b69677b"
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
           "criteria": [
             "E1",
             "E2",
@@ -180,8 +180,8 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-RANGE-01.json",
-          "sha256": "5a51b98c8de0447e43f9b2c3f4975f4738b7962931e4cf3197361ebac2c3811c"
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-RANGE-01.json",
+          "sha256": "1822c22521fa732433214b57c551b14a5d8336e41cce62fa3814503ac0517889"
         }
       ]
     },
@@ -203,13 +203,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-corrected-before-receipt.json",
-        "sha256": "ec8811a932a7f5815afd99d1c39dcca8f68c7388f96c1891075ceff37b69677b"
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
           "criteria": [
             "E1",
             "E2",
@@ -226,8 +226,8 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-APPL-01.json",
-          "sha256": "c486ca832df0f62eca79b1830beb6b667bc4ff73e0cd0ba09aacac4443be65e4"
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-APPL-01.json",
+          "sha256": "33a018ddf5d2d2940df7f2965d614313e0be17187f751dd5af3e1ca36419a5e6"
         }
       ]
     },
@@ -249,13 +249,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-corrected-before-receipt.json",
-        "sha256": "ec8811a932a7f5815afd99d1c39dcca8f68c7388f96c1891075ceff37b69677b"
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
           "criteria": [
             "E1",
             "E2",
@@ -272,8 +272,8 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-ROUTE-01.json",
-          "sha256": "8a6a7b2e8f753f1e41e7f59debef22caea6900c5d36fe676c6200a963f8fbc98"
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-ROUTE-01.json",
+          "sha256": "f40a05fc651ac47a6c087f323ab192a8f6979e2f14094bbe6efff87c4c76db21"
         }
       ]
     },
@@ -295,13 +295,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-corrected-before-receipt.json",
-        "sha256": "ec8811a932a7f5815afd99d1c39dcca8f68c7388f96c1891075ceff37b69677b"
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
           "criteria": [
             "E1",
             "E2",
@@ -318,8 +318,8 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-COV-01.json",
-          "sha256": "80757bcca3b95aea8ca3216d94ad9ffaee6104b1b95c39b6a30e01ce6aa5da6d"
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-COV-01.json",
+          "sha256": "46a8a090c5716ac7507f965d0b9f98a241c8f87ce7f02cedda178eab2e3dc303"
         }
       ]
     }

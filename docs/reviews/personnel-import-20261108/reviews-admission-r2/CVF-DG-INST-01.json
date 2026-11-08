@@ -1,0 +1,71 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+    "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+    "criteria": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ]
+  },
+  "controlId": "CVF-DG-INST-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Astra 6 Medium / independent REVIEWER",
+  "authority": "Operator2026-11-08 audit-and-proceed authority; Root bounded PNI exact action and line-only custody repair; independent r2 review preserving r1.",
+  "decision": "ACCEPTED",
+  "reason": "Narrow r2 reassessment: independent diff confirms only Root PNI raw-byte custody permission and supporting ceiling30+15minutes; product E1-E6, SPEC/ADR/dependency bytes, worker scopes and effects unchanged. Exact folder plus SPEC/ADR -text rules preserve raw bindings; original r1 packet/receipt/reviews remain preserved. Actual r2 trusted PASS; pinned source bundle unchanged. Prior generated-cache failure and environment timeout remain historical disclosed observations, not source rewrites.",
+  "evidence": [
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+      "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/configured-admission.json",
+      "sha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/comparison-admission.json",
+      "sha256": "19c4d882360a626cec8068b0b768f5cda39b29805d524dbbd9f67879a7c6fe88"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/audit-astra.md",
+      "sha256": "0057d88436f99cab011f1c37123c189f2561bf81a9cf889b4e26a5bfd10a0586"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/dependency-source-review.json",
+      "sha256": "8629e7ef690311b6603625280a52ecaa11519e04c4dc98362205ce61df45c545"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/history/WO-admission-r1.snapshot",
+      "sha256": "972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/history/workspace-activation-r1.json",
+      "sha256": "63de8a4c4c9d6240f2693460724308e072e16ff6fdedf0c9b022f51481e123a1"
+    },
+    {
+      "path": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20"
+    },
+    {
+      "path": "docs/specs/PERSONNEL_EXCEL_IMPORT.md",
+      "sha256": "521f14e93ddf0b6d0db873f791138d544df3eb0ac832be6edad09081991b28a7"
+    },
+    {
+      "path": "docs/decisions/ADR_PERSONNEL_EXCEL_READER.md",
+      "sha256": "fb6811f2e41a54c714d4eead7ae2fafc4a7df8eafd84b3d572d58f9aecafb57c"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "3cb6c6212b52709de335b27a58cdd3fa8e0d2600d36d4d5856c6fcb918d26692"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-INST-01.json",
+      "sha256": "f57f7dfd350a9eb46e98dfa7676926aeac25618c644a636e440f7cb1795e57ba"
+    }
+  ],
+  "limits": "Overall preview exit2 ACT_ACTION_STALE remains retained; these are six non-ACT observed PASS and supplemental semantic assessment, not completed admission. Root must bind new receipt, verify referenced staged blobs preserve raw SHA, then require fresh full pre-dispatch and doctor before dispatch. No product/nativeEXE/live-provider/hostedCI acceptance. Frozen r1 artifacts are not rewritten; changed action or contract bytes require review."
+}

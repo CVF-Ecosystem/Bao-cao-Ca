@@ -1,0 +1,18 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+    "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+    "criteria": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ]
+  },
+  "reviewer": "Astra independent",
+  "authority": "User audit and proceed; narrow raw-byte custody forward repair",
+  "scopeChange": "No product contract or worker path change",
+  "gateCoverage": "INSTALLED and INVOKED; local mechanical results only; no provider governance claim"
+}

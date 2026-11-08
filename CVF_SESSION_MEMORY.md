@@ -34,3 +34,7 @@ Operator authorized orchestrated audit and implementation, Astra independent rev
 ## PNI admitted BUILD — 2026-11-08
 
 Exact packet972a8d1aa666781dedddefad438e75de70994b8f54cfed8b4b8193d58ab3d973 received independent Astra acceptance; fresh trusted pre-dispatch7/7 and restored-process doctor29/29 plus explicit PNI bootstrap passed. .cvf/workspace-activation.json now binds only this action; prior CRC receipt retained as history. Workers may execute only assigned E1-E6 scope, with Root commit owner and Astra independent review. Evidence: docs/reviews/personnel-import-20261108/. Tool environment failures and cache residue are preserved; process-local PATHEXT/ComSpec resolution was restored, no inherited source or policy bypass. Implementation/native proof remains pending.
+
+## PNI raw-byte custody admission r2 — 2026-11-08
+
+Root rehydrated BUILD continuity. Exact packet fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20 independently accepted by Astra; r1 packet/receipt retained in history. Minimal PNI .gitattributes rules preserve review records and the exact SPEC/ADR raw bytes across checkout; staged25 records differ from prior Git only in line endings and match original working raw hashes. Fresh pre-dispatch7/7 and doctor29/29 plus explicit PNI bootstrap4/4 pass (predispatch-admitted-r2.json, doctor-admitted-r2.json). Root remains ORCHESTRATOR/SESSION_SYNC_STEWARD/COMMIT_STEWARD for admission, then dispatches bounded implementation. No product change or native acceptance yet.

@@ -1,0 +1,180 @@
+{
+  "purpose": "Preserve raw byte contracts across Git checkout; no content normalization of signed records",
+  "files": [
+    {
+      "path": "docs/decisions/ADR_PERSONNEL_EXCEL_READER.md",
+      "workingSha256": "fb6811f2e41a54c714d4eead7ae2fafc4a7df8eafd84b3d572d58f9aecafb57c",
+      "indexSha256": "fb6811f2e41a54c714d4eead7ae2fafc4a7df8eafd84b3d572d58f9aecafb57c",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/action-admitted.json",
+      "workingSha256": "7b139d9e1262aac12b88c6536d37e89797a3288c5fe8adf57d27cf3c85d898f3",
+      "indexSha256": "7b139d9e1262aac12b88c6536d37e89797a3288c5fe8adf57d27cf3c85d898f3",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/audit-astra.md",
+      "workingSha256": "0057d88436f99cab011f1c37123c189f2561bf81a9cf889b4e26a5bfd10a0586",
+      "indexSha256": "0057d88436f99cab011f1c37123c189f2561bf81a9cf889b4e26a5bfd10a0586",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/comparison-admission.json",
+      "workingSha256": "19c4d882360a626cec8068b0b768f5cda39b29805d524dbbd9f67879a7c6fe88",
+      "indexSha256": "19c4d882360a626cec8068b0b768f5cda39b29805d524dbbd9f67879a7c6fe88",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/configured-admission.json",
+      "workingSha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c",
+      "indexSha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/dependency-source-review.json",
+      "workingSha256": "8629e7ef690311b6603625280a52ecaa11519e04c4dc98362205ce61df45c545",
+      "indexSha256": "8629e7ef690311b6603625280a52ecaa11519e04c4dc98362205ce61df45c545",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/doctor-admitted-restored-environment.json",
+      "workingSha256": "f0fe4e6059ba054cae891bf96d99ed82db4b706d726503bd1cbe243c6af5d728",
+      "indexSha256": "f0fe4e6059ba054cae891bf96d99ed82db4b706d726503bd1cbe243c6af5d728",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/doctor-admitted.json",
+      "workingSha256": "2c4afe18710a09f559a035bd7c61958919fe174ed8e6e72fbc82b05df1b4e993",
+      "indexSha256": "2c4afe18710a09f559a035bd7c61958919fe174ed8e6e72fbc82b05df1b4e993",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/generated-cache-observation.json",
+      "workingSha256": "e69ccd762482d32713d02bd43d78058f5fa9a745f33f006c748d9b1c5c6bc5d2",
+      "indexSha256": "e69ccd762482d32713d02bd43d78058f5fa9a745f33f006c748d9b1c5c6bc5d2",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-admitted-clean-process.json",
+      "workingSha256": "c538c8a5747954dec7ae34e453c5c3cada0415ccf2484c6b9df3b5ff9c4ac0b0",
+      "indexSha256": "c538c8a5747954dec7ae34e453c5c3cada0415ccf2484c6b9df3b5ff9c4ac0b0",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-admitted-clean.json",
+      "workingSha256": "45cf48dd6b4f3488db2edac5ee91d12a47e7ff35cef31102b54357b44f8e799b",
+      "indexSha256": "45cf48dd6b4f3488db2edac5ee91d12a47e7ff35cef31102b54357b44f8e799b",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-admitted-process.json",
+      "workingSha256": "1a4699598850906037e474d9edc8d7cbb586e9dbd99ebd7c30e4877108e95366",
+      "indexSha256": "1a4699598850906037e474d9edc8d7cbb586e9dbd99ebd7c30e4877108e95366",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-admitted.json",
+      "workingSha256": "bf2c5617535608555804c92db9025bc31c4ebdc20bad083ea05f55d0bd6f729a",
+      "indexSha256": "bf2c5617535608555804c92db9025bc31c4ebdc20bad083ea05f55d0bd6f729a",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-before-receipt-process.json",
+      "workingSha256": "9d082cee89afb91e1344ceace1266b89e98062d6953b2ca5f475299cc665ef2d",
+      "indexSha256": "9d082cee89afb91e1344ceace1266b89e98062d6953b2ca5f475299cc665ef2d",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-before-receipt.json",
+      "workingSha256": "2324f42295f95166bb9a360c9ca0dde9001dd1f0f6bffd831ed9a31286f8ab1f",
+      "indexSha256": "2324f42295f95166bb9a360c9ca0dde9001dd1f0f6bffd831ed9a31286f8ab1f",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-corrected-before-receipt.json",
+      "workingSha256": "ec8811a932a7f5815afd99d1c39dcca8f68c7388f96c1891075ceff37b69677b",
+      "indexSha256": "ec8811a932a7f5815afd99d1c39dcca8f68c7388f96c1891075ceff37b69677b",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-corrected-process.json",
+      "workingSha256": "1a4699598850906037e474d9edc8d7cbb586e9dbd99ebd7c30e4877108e95366",
+      "indexSha256": "1a4699598850906037e474d9edc8d7cbb586e9dbd99ebd7c30e4877108e95366",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-APPL-01.json",
+      "workingSha256": "c486ca832df0f62eca79b1830beb6b667bc4ff73e0cd0ba09aacac4443be65e4",
+      "indexSha256": "c486ca832df0f62eca79b1830beb6b667bc4ff73e0cd0ba09aacac4443be65e4",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-CONT-01.json",
+      "workingSha256": "d7534fab9d30f16421ed033a7ac7b22e4f833c4c12d358ba421483c2cbdfef4f",
+      "indexSha256": "d7534fab9d30f16421ed033a7ac7b22e4f833c4c12d358ba421483c2cbdfef4f",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-COV-01.json",
+      "workingSha256": "80757bcca3b95aea8ca3216d94ad9ffaee6104b1b95c39b6a30e01ce6aa5da6d",
+      "indexSha256": "80757bcca3b95aea8ca3216d94ad9ffaee6104b1b95c39b6a30e01ce6aa5da6d",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-INST-01.json",
+      "workingSha256": "f57f7dfd350a9eb46e98dfa7676926aeac25618c644a636e440f7cb1795e57ba",
+      "indexSha256": "f57f7dfd350a9eb46e98dfa7676926aeac25618c644a636e440f7cb1795e57ba",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-RANGE-01.json",
+      "workingSha256": "5a51b98c8de0447e43f9b2c3f4975f4738b7962931e4cf3197361ebac2c3811c",
+      "indexSha256": "5a51b98c8de0447e43f9b2c3f4975f4738b7962931e4cf3197361ebac2c3811c",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission/CVF-DG-ROUTE-01.json",
+      "workingSha256": "8a6a7b2e8f753f1e41e7f59debef22caea6900c5d36fe676c6200a963f8fbc98",
+      "indexSha256": "8a6a7b2e8f753f1e41e7f59debef22caea6900c5d36fe676c6200a963f8fbc98",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission/SUPPLEMENTAL_ASSESSMENT.json",
+      "workingSha256": "a41cc58a65fe0649551d8887a1ef1aee4c741732ce84a202cd9942759b2a92a7",
+      "indexSha256": "a41cc58a65fe0649551d8887a1ef1aee4c741732ce84a202cd9942759b2a92a7",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    },
+    {
+      "path": "docs/specs/PERSONNEL_EXCEL_IMPORT.md",
+      "workingSha256": "521f14e93ddf0b6d0db873f791138d544df3eb0ac832be6edad09081991b28a7",
+      "indexSha256": "521f14e93ddf0b6d0db873f791138d544df3eb0ac832be6edad09081991b28a7",
+      "indexMatchesWorking": true,
+      "onlyLineEndingDifference": true
+    }
+  ]
+}

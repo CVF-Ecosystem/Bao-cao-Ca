@@ -1,0 +1,18 @@
+{
+  "dispatchedAt": "2026-11-08T05:41:55.673Z",
+  "workOrder": {
+    "path": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+    "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20"
+  },
+  "implementationBudgetMinutes": 180,
+  "workers": [
+    "Terra integration",
+    "Sol reader-packaging"
+  ],
+  "reviewer": "Astra independent",
+  "proof": [
+    "predispatch-admitted-r2.json",
+    "doctor-admitted-r2.json"
+  ],
+  "closure": "PENDING"
+}
