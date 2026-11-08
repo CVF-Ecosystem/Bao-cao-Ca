@@ -1,5 +1,6 @@
 """Lưu SQLite, lịch sử, ảnh và đối chiếu bản bổ sung."""
 import hashlib
+import getpass
 import json
 from pathlib import Path
 import re
@@ -8,7 +9,7 @@ import sqlite3
 from THIET_LAP import MAX_FILE, PEOPLE, SHIPS
 from NGHIEP_VU import now, AppError, clean_text, file_type, ClosingConnection, ship_names, report_ships, normalize
 
-SUPPORTED_SCHEMAS = ('1', '2', '3')
+SUPPORTED_SCHEMAS = ('1', '2', '3', '4')
 # DB cũ được giữ nguyên một bản trước khi nâng lên schema 3.
 UPGRADE_COPY_SUFFIX = {'1': '_TRUOC_NANG_CAP_1_2.db', '2': '_TRUOC_NANG_CAP_1_4.db'}
 SCHEMA = '''
@@ -21,7 +22,7 @@ CREATE TABLE IF NOT EXISTS reports(
 CREATE TABLE IF NOT EXISTS revisions(
   id INTEGER PRIMARY KEY, report_id TEXT NOT NULL, version INTEGER NOT NULL,
   saved_at TEXT NOT NULL, actor TEXT NOT NULL, reason TEXT NOT NULL,
-  payload TEXT NOT NULL, UNIQUE(report_id, version));
+  payload TEXT NOT NULL, kind TEXT NOT NULL DEFAULT 'legacy', os_user TEXT, auth_user TEXT, UNIQUE(report_id, version));
 CREATE INDEX IF NOT EXISTS report_days ON reports(day, shift);
 CREATE TABLE IF NOT EXISTS correction_base(
   report_id TEXT PRIMARY KEY, version INTEGER NOT NULL, payload TEXT NOT NULL);
@@ -30,7 +31,7 @@ CREATE TABLE IF NOT EXISTS attachment_blobs(
   uploaded_at TEXT NOT NULL, actor TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS people(name TEXT PRIMARY KEY, active INTEGER NOT NULL DEFAULT 1);
 CREATE TABLE IF NOT EXISTS ships(name TEXT PRIMARY KEY, active INTEGER NOT NULL DEFAULT 1);
-INSERT OR IGNORE INTO meta VALUES('schema_version', '3');
+INSERT OR IGNORE INTO meta VALUES('schema_version', '4');
 '''
 
 
@@ -47,24 +48,24 @@ class Store:
         self.validate()
 
     def _preserve_before_upgrade(self):
-        """Từ chối schema lạ; giữ bản gốc của DB schema 1/2 trước khi nâng cấp."""
+        """Existing databases must be upgraded only through explicit confirmation."""
         if not (self.path.exists() and self.path.stat().st_size):
             return
-        with self.connect() as source:
+        with sqlite3.connect(self.path.as_uri()+'?mode=ro',uri=True,factory=ClosingConnection) as source:
             row = source.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()
             if not row or row[0] not in SUPPORTED_SCHEMAS:
                 raise AppError('DB có phiên bản không được hỗ trợ. Không thay đổi dữ liệu.')
-            suffix = UPGRADE_COPY_SUFFIX.get(row[0])
-            if suffix:
-                previous = self.path.with_name(self.path.stem + suffix)
-                if not previous.exists():
-                    with sqlite3.connect(str(previous), factory=ClosingConnection) as dest:
-                        source.backup(dest)
+            if row[0] != '4':
+                raise AppError('DB cần xác nhận nâng cấp trước khi mở ghi.', 409)
+            columns = {r[1] for r in source.execute('PRAGMA table_info(revisions)')}
+            if not {'kind','os_user','auth_user'}.issubset(columns):
+                raise AppError('DB schema 4 thiếu cấu trúc lịch sử; không thay đổi dữ liệu.')
+            if source.execute('PRAGMA quick_check').fetchone()[0] != 'ok':
+                raise AppError('DB không toàn vẹn; không thay đổi dữ liệu.')
 
     def _ensure_schema(self):
         with self.connect() as c:
             c.executescript(SCHEMA)
-            c.execute("UPDATE meta SET value='3' WHERE key='schema_version'")
             c.execute("INSERT OR IGNORE INTO meta VALUES('database_id',?)", (secrets.token_hex(16),))
             self._seed_once(c, 'people', PEOPLE)
             self._seed_once(c, 'ships', SHIPS)
@@ -99,6 +100,8 @@ class Store:
                     raise ValueError()
                 c.execute('SELECT id,day,shift,version,status,created_at,updated_at,actor,payload FROM reports LIMIT 1')
                 c.execute('SELECT report_id,version,saved_at,actor,reason,payload FROM revisions LIMIT 1')
+                if c.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()[0] == '4':
+                    c.execute('SELECT kind,os_user,auth_user FROM revisions LIMIT 1')
         except (sqlite3.Error, ValueError, TypeError):
             raise AppError('DB không đúng định dạng Sổ báo cáo ca hoặc đã hỏng.')
 
@@ -117,16 +120,16 @@ class Store:
             raise AppError('Chưa có báo cáo ca này.', 404)
         return r
 
-    def save(self, p, expected, reason=''):
+    def save(self, p, expected, reason='', save_kind=None):
         if self.readonly:
             raise AppError('Đang xem bản DB kiểm tra. Không được ghi dữ liệu.', 403)
         d = normalize(p)
         reason = clean_text(reason, 1000)
         with self.connect() as c:
             c.execute('BEGIN IMMEDIATE')
-            return self._save_report(c, d, expected, reason)
+            return self._save_report(c, d, expected, reason, save_kind)
 
-    def _save_report(self, c, d, expected, reason):
+    def _save_report(self, c, d, expected, reason, save_kind='manual'):
         """Caller owns the transaction; report and revision commit together."""
         rid = d['date'] + '_' + d['shift']
         stamp = now()
@@ -140,6 +143,19 @@ class Store:
                 raise AppError('Bản bổ sung chỉ sửa ca đã có. Tạo ca mới trên máy nhập chính.')
             if not reason:
                 raise AppError('Nhập lý do bổ sung trước khi lưu bản kiểm tra.')
+        if save_kind is None:
+            save_kind = 'correction' if review and review[0] == '1' else 'close' if d['status'] == 'closed' and (not old or old['status'] != 'closed') else 'manual'
+        if save_kind not in ('auto', 'manual', 'close', 'correction'):
+            raise AppError('Loại lưu không hợp lệ.')
+        reviewing = bool(review and review[0] == '1')
+        if reviewing != (save_kind == 'correction'):
+            raise AppError('Loại lưu không phù hợp nguồn dữ liệu.')
+        if save_kind == 'auto' and (d['status'] != 'draft' or (old and old['status'] == 'closed')):
+            raise AppError('Không tự lưu ca đã chốt.')
+        if save_kind == 'close' and (d['status'] != 'closed' or (old and old['status'] == 'closed')):
+            raise AppError('Trạng thái chốt không hợp lệ.')
+        if save_kind in ('auto', 'manual') and d['status'] == 'closed' and (not old or old['status'] != 'closed'):
+            raise AppError('Cần dùng thao tác chốt ca.')
         version = old['version'] if old else 0
         if type(expected) is not int or expected != version:
             raise AppError('Báo cáo đã được lưu ở cửa sổ khác. Hãy tải lại trước khi sửa tiếp.', 409)
@@ -148,7 +164,11 @@ class Store:
         if old and old['status'] == 'closed' and d['status'] != 'closed':
             raise AppError('Báo cáo đã chốt phải giữ trạng thái đã chốt.')
         payload = json.dumps(d, ensure_ascii=False)
+        previous = c.execute('SELECT * FROM revisions WHERE report_id=? ORDER BY version DESC LIMIT 1', (rid,)).fetchone()
+        os_user = getpass.getuser()
         if old and payload == old['payload']:
+            if save_kind == 'manual' and previous and previous['kind'] == 'auto':
+                c.execute("UPDATE revisions SET kind='manual' WHERE id=?", (previous['id'],))
             return self.decode(old)
         version += 1
         c.executemany('INSERT OR IGNORE INTO ships(name) VALUES(?)', [(name,) for name in report_ships(d)])
@@ -157,8 +177,14 @@ class Store:
                   'actor=excluded.actor,payload=excluded.payload',
                   (rid, d['date'], d['shift'], version, d['status'], old['created_at'] if old else stamp,
                    stamp, d['actor'], payload))
-        c.execute('INSERT INTO revisions(report_id,version,saved_at,actor,reason,payload) VALUES(?,?,?,?,?,?)',
-                  (rid, version, stamp, d['actor'], reason or ('Chốt ca' if d['status'] == 'closed' else 'Lưu nháp'), payload))
+        label = reason or ('Chốt ca' if d['status'] == 'closed' else 'Lưu nháp')
+        if (save_kind == 'auto' and previous and previous['kind'] == 'auto' and old and old['status'] == 'draft'
+                and previous['actor'] == d['actor'] and previous['os_user'] == os_user and previous['auth_user'] is None):
+            c.execute('UPDATE revisions SET version=?,saved_at=?,actor=?,reason=?,payload=?,os_user=?,auth_user=NULL WHERE id=?',
+                      (version, stamp, d['actor'], label, payload, os_user, previous['id']))
+        else:
+            c.execute('INSERT INTO revisions(report_id,version,saved_at,actor,reason,payload,kind,os_user,auth_user) VALUES(?,?,?,?,?,?,?,?,?)',
+                      (rid, version, stamp, d['actor'], label, payload, save_kind, os_user, None))
         return self.decode(c.execute('SELECT * FROM reports WHERE id=?', (rid,)).fetchone())
 
     def meta(self, key):
@@ -188,6 +214,17 @@ class Store:
             c.execute('INSERT INTO ships(name,active) VALUES(?,1) ON CONFLICT(name) DO UPDATE SET active=1', (names[0],))
         return self.ships()
 
+    def hide_ship(self, name):
+        if self.readonly or self.meta('review_copy') == '1':
+            raise AppError('Về DB chính trước khi ẩn tàu.', 403)
+        if not isinstance(name,str) or not name.strip():
+            raise AppError('Tên tàu không hợp lệ.')
+        with self.connect() as c:
+            c.execute('BEGIN IMMEDIATE')
+            result=c.execute('UPDATE ships SET active=0 WHERE name=? AND active=1',(name,))
+            if result.rowcount != 1: raise AppError('Tàu không còn hoạt động.',409)
+        return self.ships()
+
     def _attachment_record(self, raw, filename, actor):
         if not raw or len(raw) > MAX_FILE:
             raise AppError('Mỗi tệp tối đa 100 MB, không nhận tệp rỗng.')
@@ -203,7 +240,7 @@ class Store:
         return dict(hash=digest, name=filename, caption=''), mime, actor
 
     def _insert_blob(self, c, attachment, mime, raw, actor):
-        c.execute('INSERT OR IGNORE INTO attachment_blobs(hash,mime,data,uploaded_at,actor) VALUES(?,?,?,?,?)',
+        c.execute('INSERT INTO attachment_blobs(hash,mime,data,uploaded_at,actor) VALUES(?,?,?,?,?) ON CONFLICT(hash) DO UPDATE SET uploaded_at=excluded.uploaded_at',
                   (attachment['hash'], mime, sqlite3.Binary(raw), now(), actor))
 
     def upload_attachment(self, raw, filename, actor):
@@ -235,7 +272,7 @@ class Store:
             report['actor'] = actor
             checked = normalize(report)
             self._insert_blob(c, attachment, mime, raw, actor)
-            saved = self._save_report(c, checked, expected, 'Thêm tệp đính kèm: ' + attachment['name'])
+            saved = self._save_report(c, checked, expected, 'Thêm tệp đính kèm: ' + attachment['name'], 'correction' if self.meta('review_copy') == '1' else 'manual')
             return dict(attachment=attachment, report=saved, added=True)
 
     def attachment(self, digest):
@@ -325,10 +362,16 @@ class Store:
                             raise AppError('Tệp đính kèm trong bản bổ sung bị thiếu hoặc không khớp. Chưa nhập dữ liệu.')
                         target.execute('INSERT OR IGNORE INTO attachment_blobs(hash,mime,data,uploaded_at,actor) VALUES(?,?,?,?,?)',
                                        (blob['hash'], blob['mime'], blob['data'], blob['uploaded_at'], blob['actor']))
+                    provenance = []
+                    for field in ('os_user', 'auth_user'):
+                        value = edit[field] if field in edit.keys() else None
+                        if value is not None and (not isinstance(value, str) or len(value) > 256 or any(ord(ch) < 32 or ord(ch) == 127 for ch in value)):
+                            raise AppError('Thông tin người sửa trong bản bổ sung không hợp lệ.')
+                        provenance.append(value)
                     version += 1
                     reason = 'Bổ sung từ DB • ' + edit['reason'] + ' • Nhập về máy chính ' + now()
-                    target.execute('INSERT INTO revisions(report_id,version,saved_at,actor,reason,payload) VALUES(?,?,?,?,?,?)',
-                                   (rid, version, edit['saved_at'], checked['actor'], reason, edit['payload']))
+                    target.execute('INSERT INTO revisions(report_id,version,saved_at,actor,reason,payload,kind,os_user,auth_user) VALUES(?,?,?,?,?,?,?,?,?)',
+                                   (rid, version, edit['saved_at'], checked['actor'], reason, edit['payload'], 'correction', *provenance))
                 final = item['incoming']
                 target.execute('UPDATE reports SET version=?,status=?,updated_at=?,actor=?,payload=? WHERE id=?',
                                (version, final['status'], now(), final['actor'], edits[-1]['payload'], rid))
@@ -384,7 +427,9 @@ class Store:
 
     def history(self, rid):
         with self.connect() as c:
-            rows = [dict(r) for r in c.execute('SELECT version,saved_at,actor,reason,payload FROM revisions WHERE report_id=? ORDER BY version DESC', (rid,))]
+            schema = c.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()[0]
+            fields = 'version,saved_at,actor,reason,payload,kind,os_user,auth_user' if schema == '4' else "version,saved_at,actor,reason,payload,'legacy' AS kind,NULL AS os_user,NULL AS auth_user"
+            rows = [dict(r) for r in c.execute('SELECT '+fields+' FROM revisions WHERE report_id=? ORDER BY version DESC', (rid,))]
         for r in rows:
             r['payload'] = json.loads(r['payload'])
         return rows

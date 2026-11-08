@@ -1,0 +1,37 @@
+{
+  "purpose": "Preserved worker test attempts, including failed original runs and focused successful repairs. Not current acceptance.",
+  "files": [
+    {
+      "path": "docs/reviews/local-completion-20261108/technical/history/terra-existing-core-initial.txt",
+      "sha256": "fec4ce889196e03e7490e58c31b49e32098ff2ca60afb83ca3770a2c88c149d2"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/technical/history/terra-existing-core-r1.txt",
+      "sha256": "a51093d50bf4cca072159efeaa05dbfe5e688aaa83a453297f958e0efcf2423c"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/technical/history/terra-focused-final.txt",
+      "sha256": "c719cb631b8f6412fbdf89bbc97e9023c8e4dff17831f3ad92e44936e2851099"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/technical/history/terra-full-final.txt",
+      "sha256": "b23555bf5042f5a684092aca2505fbe30860944225cb774e23cd6d0a3d316c5b"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/technical/history/terra-full-isolated-final.txt",
+      "sha256": "0720370f2c0ed35e853b89b67329f84415bb49e7eb5a53f700d37fef1c92c2a9"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/technical/history/terra-pni-regression-initial.txt",
+      "sha256": "88bfa82ca6f9e51798b993700e68a55ff69612723f23353bae71197c4cd75ba4"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/technical/history/terra-protection-final.txt",
+      "sha256": "d79c7077afbba19a74bd1f7c39d743900b9ea69e143bdbf13e537c5817bb109a"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/technical/history/terra-review-fixes.txt",
+      "sha256": "32d70ca6450bb792a967d21f7f4d85bf701b93d4394c730d4757401008882d06"
+    }
+  ]
+}

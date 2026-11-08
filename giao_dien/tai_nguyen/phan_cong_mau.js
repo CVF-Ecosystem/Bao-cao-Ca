@@ -13,7 +13,7 @@ function planStaffing(staffing,template,mode){
  for(const item of template){
   const matches=rows.map((row,index)=>({row,index})).filter(x=>x.row.role.trim().toUpperCase()===item.role.trim().toUpperCase());
   if(matches.length>1||(matches.length===1&&(matches[0].row.ships||[]).length>1)){
-   skipped.push(item.role+': có nhiều dòng hoặc nhiều tàu, giữ nguyên để anh phân công riêng.');continue;
+   skipped.push(item.role+': có nhiều dòng hoặc nhiều tàu, giữ nguyên để phân công riêng.');continue;
   }
   if(mode==='append'&&!item.people.length)continue;
   const existing=matches[0]?.row,before=existing?.people||'';
@@ -102,7 +102,7 @@ function renderStaffTemplateEditor(){
  modal('<div class="row between"><h2>Mẫu phân công theo ca</h2><button onclick="closeModal()">Đóng</button></div>'+
  '<p class="note">Chọn vị trí và người thường làm. Một vị trí nhiều người: thêm dòng và chọn lại cùng vị trí. Ô người trống có nghĩa là để trống vị trí đó khi áp dụng mẫu ca. Không thay đổi báo cáo cũ khi lưu mẫu.</p>'+
  '<label>Đang sửa mẫu<select id="staffingProfile" onchange="switchStaffTemplate(this.value)">'+ids.map(id=>'<option value="'+id+'" '+(id===staffingProfile?'selected':'')+'>'+esc(templateLabel(id))+'</option>').join('')+'</select></label>'+
- '<p class="muted subtle">Nhân sự ca ngày là nhóm riêng; chỉ bổ sung khi anh bấm nút, không tự chạy theo giờ máy. Có thể đổi tên 3 ca tại Danh mục nhân sự / công việc.</p>'+
+ '<p class="muted subtle">Nhân sự ca ngày là nhóm riêng; chỉ bổ sung khi bấm nút, không tự chạy theo giờ máy. Có thể đổi tên 3 ca tại Danh mục nhân sự / công việc.</p>'+
  '<div class="scroll"><table class="templateEditorTable"><thead><tr><th>Vị trí</th><th>Người thực hiện</th><th></th></tr></thead><tbody>'+
  staffingDraft[staffingProfile].map((row,i)=>'<tr><td><select aria-label="Vị trí mẫu dòng '+(i+1)+'" data-template-role="'+i+'">'+templateRoleOptions(row.role)+'</select></td><td><select aria-label="Người mẫu dòng '+(i+1)+'" data-template-person="'+i+'">'+personOptions(row.person)+'</select></td><td><button class="small danger" onclick="removeTemplatePerson('+i+')">×</button></td></tr>').join('')+'</tbody></table></div>'+
  '<div class="row between" style="margin-top:16px"><button onclick="addTemplatePerson()">＋ Thêm vị trí / người</button><button class="primary" onclick="saveStaffTemplates()">Lưu cả 4 mẫu</button></div>',true);

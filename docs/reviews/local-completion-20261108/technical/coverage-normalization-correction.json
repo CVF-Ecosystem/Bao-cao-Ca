@@ -1,0 +1,40 @@
+{
+  "cause": "Root added raw reviewer JSON SHA in milestone evidence; coverage contract hashes LF-normalized text. Raw review custody remains unchanged. Correct only roadmap evidence refs; retained failed gates.",
+  "repairs": [
+    {
+      "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+      "previous": "437492d087b6ba4d85332c61c4968d78c5ad74a053ff7204e55ae11da0815635",
+      "LFsha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+      "previous": "437492d087b6ba4d85332c61c4968d78c5ad74a053ff7204e55ae11da0815635",
+      "LFsha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+      "previous": "437492d087b6ba4d85332c61c4968d78c5ad74a053ff7204e55ae11da0815635",
+      "LFsha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+      "previous": "437492d087b6ba4d85332c61c4968d78c5ad74a053ff7204e55ae11da0815635",
+      "LFsha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+      "previous": "437492d087b6ba4d85332c61c4968d78c5ad74a053ff7204e55ae11da0815635",
+      "LFsha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+      "previous": "437492d087b6ba4d85332c61c4968d78c5ad74a053ff7204e55ae11da0815635",
+      "LFsha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+      "previous": "437492d087b6ba4d85332c61c4968d78c5ad74a053ff7204e55ae11da0815635",
+      "LFsha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+    }
+  ]
+}

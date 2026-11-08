@@ -1,0 +1,119 @@
+{
+  "files": [
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/attempt1-close-driver-failure.json",
+      "sha256": "47978c76b8ee2e4ccbebd632c14fce6d4220d281abf84611394b74aedf350361",
+      "bytes": 16597
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/attempt2-edge-second-output-failure.json",
+      "sha256": "306cf2bcaff33f11aa6464c22302ad834ceceaf5a6330885e67fcc3298b884e9",
+      "bytes": 21028
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/attempt3-retained-output.json",
+      "sha256": "234c0c9b5e4a62a871e67f4e83e66cf079c3424e05fe464cb53f7a297717c884",
+      "bytes": 21205
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/chrome-actual-dialog.png",
+      "sha256": "f50e56b2c6865945eb74f53df20463e90bee4893adec9def7419f7aa78ecebe9",
+      "bytes": 78190
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/chrome-long-before-print.png",
+      "sha256": "57542603fce8844367e2e51c4c6eb055e4e4dd9b4f380b96050656b0a001276a",
+      "bytes": 94663
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/chrome-long-native-saved-all-pages.png",
+      "sha256": "55578d6675e4ecc3be3800f372f97ea7be39ff976c01a296a4eab7f8cf5d6736",
+      "bytes": 145560
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/chrome-long-native-saved.pdf",
+      "sha256": "65dccbed32b6f26943feda6a4aaac054f211ff646a0d80003bc57b2a5eea149b",
+      "bytes": 170003
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/chrome-short-before-print.png",
+      "sha256": "ffde609ff235c6460154ba79d60860b696ca70fe4bbc8d70d13bd479af690f21",
+      "bytes": 92814
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/chrome-short-native-saved-all-pages.png",
+      "sha256": "a07ac9e8d1721fe09c656228cd3375f3dd88400548f062d29d648776174bb235",
+      "bytes": 70367
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/chrome-short-native-saved.pdf",
+      "sha256": "02dfd3192f2515faf49b40b54374a12f2489eec4d3a043fa64daaa4f5f57f5f7",
+      "bytes": 99210
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/edge-long-fresh-profile.json",
+      "sha256": "f7fd258a37e5e3c928a6c3348a1c0738160059737ec3ff4e52f045b0cab5a3da",
+      "bytes": 6904
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/edge-long-msedge-actual-dialog.png",
+      "sha256": "6d5c71e01d820e09b9cb1bd4482e894442c31fa7c4f7d87aae674ba583bdce0a",
+      "bytes": 95712
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/msedge-actual-dialog.png",
+      "sha256": "6103ffa996917076e146cbaccc4726413e368a6bae90f1dfdf1c0c29c76f91f8",
+      "bytes": 101664
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/msedge-long-before-print.png",
+      "sha256": "f966fc037c445b8296445e99d8afe39e7abd106be033f7b1e06b207a74c85823",
+      "bytes": 94250
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/msedge-long-native-saved-all-pages.png",
+      "sha256": "277044bfa2670967e82f2a996c444d1fa29bdc5df018f66a7a957921788df6a9",
+      "bytes": 145448
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/msedge-long-native-saved.pdf",
+      "sha256": "c80ba8e4fa1310d70006bdc47a5baf1a772207210dcf07f99796662e03a6ec63",
+      "bytes": 170019
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/msedge-short-before-print.png",
+      "sha256": "0133be627b54a31223024b00aed5b097a9d271cab375711a7db6bf41cab3853f",
+      "bytes": 92460
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/msedge-short-native-saved-all-pages.png",
+      "sha256": "a07ac9e8d1721fe09c656228cd3375f3dd88400548f062d29d648776174bb235",
+      "bytes": 70367
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/msedge-short-native-saved.pdf",
+      "sha256": "e8188dee293da8cd05689a4c03b9ccedfe433e4742ed9b9a8c974b0bbf94f07e",
+      "bytes": 99224
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/native_save_edge_long.py",
+      "sha256": "09d49c3f2dfa1936f7770e41c20d2978217d5853d0c62ad95c12a4a7d80c8a09",
+      "bytes": 8599
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/native_save_experiment.py",
+      "sha256": "816514e8dd2404eb9a8353b57353cac364787a6b92c8c789bf62ea0fd279cf91",
+      "bytes": 8554
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/pdf-readonly-qa.json",
+      "sha256": "510bdbd8903b671f88af643b2c401f068eb7ed5eb2e02af775689f74725dcefd",
+      "bytes": 2736
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/worker-observation.md",
+      "sha256": "0c82de1813bc2b7462dc6b61ead1953d7a09cb7a2fc92aee0ee1ad6a84bf19c0",
+      "bytes": 4742
+    }
+  ]
+}

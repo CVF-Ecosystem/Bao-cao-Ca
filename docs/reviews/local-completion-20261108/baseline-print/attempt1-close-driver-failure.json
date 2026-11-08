@@ -1,0 +1,315 @@
+{
+  "fixtures": [
+    {
+      "fixture": "short",
+      "id": "2026-10-01_DAY",
+      "staffRows": 9,
+      "jobRows": 6,
+      "chiefs": 1,
+      "payloadSha256": "eb19a92f0298397337978e6ae552c264b68976071c7a7c9e29998b864f5c2a2c"
+    },
+    {
+      "fixture": "long",
+      "id": "2026-10-02_DAY",
+      "staffRows": 24,
+      "jobRows": 30,
+      "chiefs": 2,
+      "payloadSha256": "15820ead475dd80fcaab3ad89d05340eb4e568550b6723a3dcd93a797f5d8868"
+    }
+  ],
+  "exeSha256": "08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484",
+  "method": "Actual headed app Print, browser kiosk-printing Save as PDF destination in owned profile; no PDF generation API",
+  "runs": [
+    {
+      "channel": "chrome",
+      "headless": false,
+      "settingsRequested": {
+        "version": 2,
+        "selectedDestinationId": "Save as PDF",
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "account": ""
+          }
+        ],
+        "isHeaderFooterEnabled": true,
+        "isCssBackgroundEnabled": false,
+        "isLandscapeEnabled": true,
+        "mediaSize": {
+          "height_microns": 297000,
+          "width_microns": 210000,
+          "custom_display_name": "A4",
+          "is_default": true
+        },
+        "marginsType": 0,
+        "scalingType": 3,
+        "scaling": "100"
+      },
+      "outputDirectory": "chrome-output",
+      "dialog": {
+        "target": {
+          "targetId": "AEDC598FFD02E341DADB710130F7A906",
+          "type": "page",
+          "title": "Sổ báo cáo ca • Bãi Container",
+          "url": "chrome://print/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "C7C8D0BEA1413C9305E0F56E33913CCC"
+        },
+        "relatedTargets": [
+          {
+            "targetId": "AEDC598FFD02E341DADB710130F7A906",
+            "type": "page",
+            "title": "Sổ báo cáo ca • Bãi Container",
+            "url": "chrome://print/",
+            "attached": false,
+            "canAccessOpener": false,
+            "browserContextId": "C7C8D0BEA1413C9305E0F56E33913CCC"
+          },
+          {
+            "targetId": "8E91A138E1FC50C22441D7EC7F615039",
+            "type": "iframe",
+            "title": "chrome-untrusted://print/3BF52B61D5EE2B1FD1C193B98C84AB55/0/print.pdf",
+            "url": "chrome-untrusted://print/3BF52B61D5EE2B1FD1C193B98C84AB55/0/print.pdf",
+            "attached": false,
+            "parentId": "AEDC598FFD02E341DADB710130F7A906",
+            "canAccessOpener": false,
+            "parentFrameId": "1817BC3E125D2CC6F0FA19EE585FECF3",
+            "browserContextId": "C7C8D0BEA1413C9305E0F56E33913CCC"
+          }
+        ],
+        "controls": {
+          "id": 1,
+          "result": {
+            "result": {
+              "type": "object",
+              "value": [
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "PRINT-PREVIEW-HEADER",
+                  "id": "header",
+                  "text": ""
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "select",
+                  "text": "Save as PDF\nNo destinations found",
+                  "value": "Save as PDF/local/",
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "seeMore",
+                  "text": "See more",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "All\nOdd pages only\nEven pages only\nCustom",
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "1",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "collate",
+                  "text": "\n      Collate\n    ",
+                  "checked": true,
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n      Portrait\n      Landscape\n    ",
+                  "value": "landscape",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n      Black and white\n      Color\n    ",
+                  "value": "color",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n  \n    \n      \n        Legal\n      \n    \n      \n        Letter\n      \n    \n      \n        Tabloid\n      \n    \n      \n        A0\n      \n    \n      \n        A1\n      \n    \n      \n        A2\n      \n    \n      \n        A3\n      \n    \n      \n        A4\n      \n    \n      \n        A5\n      \n    \n  \n",
+                  "value": "{\"height_microns\":279400,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":215900,\"imageable_area_top_microns\":279400,\"is_default\":true,\"name\":\"NA_LETTER\",\"width_microns\":215900,\"custom_display_name\":\"Letter\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "1\n2\n4\n6\n9\n16",
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "Default\nNone\nMinimum\nCustom",
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n  \n    \n      \n        300 dpi\n      \n    \n  \n",
+                  "value": "{\"horizontal_dpi\":300,\"is_default\":true,\"vertical_dpi\":300,\"name\":\"300 dpi\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n      \n        Default\n      \n      \n        Fit to printable area\n      \n      \n        Fit to paper\n      \n      \n        Actual size\n      \n      \n        Custom\n      \n    ",
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "100",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "duplex",
+                  "text": "\n      Print on both sides\n    ",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n        \n          Flip on long edge\n        \n        \n          Flip on short edge\n        \n      ",
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "headerFooter",
+                  "text": "Headers and footers",
+                  "checked": true,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "cssBackground",
+                  "text": "Background graphics",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "rasterize",
+                  "text": "\n        Print as image\n      ",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "selectionOnly",
+                  "text": "\n        Selection only\n      ",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "button",
+                  "text": "\n      Advanced settings\n    ",
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "",
+                  "text": "Save",
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "",
+                  "text": "Cancel",
+                  "disabled": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "outputs": [
+        {
+          "fixture": "short",
+          "triggerEpoch": 1794125511.3812904,
+          "completedEpoch": 1794125514.776494,
+          "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+          "bytes": 98901,
+          "sha256": "5c700c11599722b17268b2790ed77e63870426cbe98f2639cd5d846cd0a9891c",
+          "pages": 2,
+          "pageTexts": [
+            "BÁO CÁO SẢN XUẤT CUỐI CA\nBỘ PHẬN BÃI CONTAINER\n06:00–18:00 ngày 01/10/2026 · BẢN NHÁP\nTàu trong ca: —\nNgười lưu: SYNTH ACTOR · 15:11:37 8/11/2026 · Phiên bản 1\nPhân công\nNhân sự\nPHỤ TRÁCH CHUNG\nSYNTH CHIEF 1\nSYNTH POSITION 0\nSYNTH PERSON 0\nSYNTH POSITION 1\nSYNTH PERSON 1\nSYNTH POSITION 2\nSYNTH PERSON 2\nSYNTH POSITION 3\nSYNTH PERSON 3\nSYNTH POSITION 4\nSYNTH PERSON 4\nSYNTH POSITION 5\nSYNTH PERSON 5\nSYNTH POSITION 6\nSYNTH PERSON 6\nSYNTH POSITION 7\nSYNTH PERSON 7\nCông việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 0\nYARD 0\nX\n1\n2\n0\n1\nSYNTH JOB 1\nYARD 1\nX\n2\n2\n0\n1\nSYNTH JOB 2\nYARD 2\nX\n3\n2\n0\n1\nSYNTH JOB 3\nYARD 3\nX\n4\n2\n0\n1\nSYNTH JOB 4\nYARD 4\nX\n5\n2\n0\n1\n11/8/26, 3:11 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:61553\n1/2\n",
+            "Công việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 5\nYARD 5\nX\n6\n2\n0\n1\nTổng lượt\n21\n12\n0\n6\nGhi chú bàn giao\nBASELINE SHORT PRINT ORACLE\nSố lượng là lượt công việc đã báo cáo, không phải số container duy nhất.\n11/8/26, 3:11 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:61553\n2/2\n"
+          ],
+          "oracleFound": true,
+          "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+          "OSSaveAs": "NOT_TESTED"
+        }
+      ],
+      "browserVersion": "156.0.8078.81"
+    }
+  ],
+  "error": "TimeoutError: Locator.click: Timeout 6000ms exceeded.\nCall log:\n  - waiting for locator(\"button[data-page=\\\"home\\\"]\")\n    - locator resolved to <button class=\"\" data-page=\"home\" onclick=\"go('home')\">Tổng quan</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"modal\" class=\"modalback\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"modal\" class=\"modalback\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    11 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div id=\"modal\" class=\"modalback\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\native_save_experiment.py\", line 44, in <module>\n    if fixture['fixture']=='long':page.locator('button[data-page=\"home\"]').click()\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\playwright\\sync_api\\_generated.py\", line 17672, in click\n    self._sync(\n  File \"C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\playwright\\_impl\\_sync_base.py\", line 115, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\playwright\\_impl\\_locator.py\", line 163, in click\n    return await self._frame._click(self._selector, strict=True, **params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\playwright\\_impl\\_frame.py\", line 591, in _click\n    await self._channel.send(\"click\", self._timeout, locals_to_params(locals()))\n  File \"C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 69, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 563, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.TimeoutError: Locator.click: Timeout 6000ms exceeded.\nCall log:\n  - waiting for locator(\"button[data-page=\\\"home\\\"]\")\n    - locator resolved to <button class=\"\" data-page=\"home\" onclick=\"go('home')\">Tổng quan</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"modal\" class=\"modalback\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"modal\" class=\"modalback\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    11 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div id=\"modal\" class=\"modalback\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n\n",
+  "cleanupExitCode": 0,
+  "elapsedSeconds": 24.32799999997951
+}

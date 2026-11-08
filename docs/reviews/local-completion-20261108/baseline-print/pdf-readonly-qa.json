@@ -1,0 +1,92 @@
+{
+  "tool": "PyMuPDF 1.27.2.2: Python bindings for the MuPDF 1.27.2 library.\nPython 3.11 running on win32 (64-bit).\n",
+  "environment": "Existing global Python3.11.9, read-only parsing/rendering of native-completed browser save files",
+  "files": [
+    {
+      "file": "chrome-long-native-saved.pdf",
+      "sha256": "65dccbed32b6f26943feda6a4aaac054f211ff646a0d80003bc57b2a5eea149b",
+      "pages": 3,
+      "pageSizes": [
+        [
+          841.9199829101562,
+          594.9599609375
+        ],
+        [
+          841.9199829101562,
+          594.9599609375
+        ],
+        [
+          841.9199829101562,
+          594.9599609375
+        ]
+      ],
+      "textSha256": [
+        "aaca6a88f85d2f34f6177bbc348732228b32897c97810a0f704c20c1765edac2",
+        "c00245b263f0e2021d2478c1662b37694f277bde639315d9b50b7c37f221c810",
+        "321ee6bebc824dd1ed4f5ecc6db9df4d84d40290fa297587ea5d52eff6dc1c7a"
+      ]
+    },
+    {
+      "file": "chrome-short-native-saved.pdf",
+      "sha256": "02dfd3192f2515faf49b40b54374a12f2489eec4d3a043fa64daaa4f5f57f5f7",
+      "pages": 2,
+      "pageSizes": [
+        [
+          841.9199829101562,
+          594.9599609375
+        ],
+        [
+          841.9199829101562,
+          594.9599609375
+        ]
+      ],
+      "textSha256": [
+        "eb9542610addaa65a2d1d6370f87e4b029e987491e6073eeb712846042bda0f6",
+        "b33e604b9779694af3690c9ba2c7885f0a13b3e00f7e65af54feb7c37d450e20"
+      ]
+    },
+    {
+      "file": "msedge-long-native-saved.pdf",
+      "sha256": "c80ba8e4fa1310d70006bdc47a5baf1a772207210dcf07f99796662e03a6ec63",
+      "pages": 3,
+      "pageSizes": [
+        [
+          841.9199829101562,
+          594.9599609375
+        ],
+        [
+          841.9199829101562,
+          594.9599609375
+        ],
+        [
+          841.9199829101562,
+          594.9599609375
+        ]
+      ],
+      "textSha256": [
+        "b3257dcdbe7ee100a0a05c84057f5edc0250f78cf1bd799d4ef70e2883d41692",
+        "1abc4a999914ffca8a81e3c9696cb08d794c164c0e6dcf09b81a550b2a65b109",
+        "c32ff4759d5032f6dbd6a233bfdb5b212f151d3e9546689f96180e4b7d4f0d53"
+      ]
+    },
+    {
+      "file": "msedge-short-native-saved.pdf",
+      "sha256": "e8188dee293da8cd05689a4c03b9ccedfe433e4742ed9b9a8c974b0bbf94f07e",
+      "pages": 2,
+      "pageSizes": [
+        [
+          841.9199829101562,
+          594.9599609375
+        ],
+        [
+          841.9199829101562,
+          594.9599609375
+        ]
+      ],
+      "textSha256": [
+        "eb9542610addaa65a2d1d6370f87e4b029e987491e6073eeb712846042bda0f6",
+        "b33e604b9779694af3690c9ba2c7885f0a13b3e00f7e65af54feb7c37d450e20"
+      ]
+    }
+  ]
+}

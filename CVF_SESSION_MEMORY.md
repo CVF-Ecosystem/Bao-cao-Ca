@@ -5,8 +5,8 @@ Memory class: POINTER_RECORD
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: BUILD
-- Active phase: BUILD
+- Current mode: REVIEW
+- Active phase: REVIEW
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md
 
 ## Startup and continuation
@@ -96,3 +96,13 @@ Root rehydrated current WORK_ORDER continuity, received Astra independent accept
 
 
 LOCAL r2 custody acknowledgment: one missing Worker label in the Terra design return was added, with original bytes/failure/r1 packet/receipt/reviews preserved in history. Astra independently verified the label-only delta and accepted exact586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57; SPEC and all product source remain unchanged. Root rebinds the receipt and reruns gates before actual worker dispatch; no design/effect/budget reset.
+
+
+## LOCAL frozen source return / REVIEW acknowledgment — 2026-11-08
+
+Root rehydrated canonical front doors and doctor-review-intake.json CORE_ASSESSED29/29 plus4explicitbootstrapPASS. Terra and Sol froze23files with verified rawSHA/LF custody in source-return-manifest.json;210PythonPASS0skip and7JSgroupsPASS are received evidence, not independent product acceptance. Root ORCHESTRATOR/SESSION_SYNC_STEWARD transitions to REVIEW; Astra independently consolidates source/fault findings and baseline actual browser-saved print provenance. No worker source edits before accepted findings. Exact586b44bf/SPEC6e0842af remain unchanged; no EXE1.10.0 yet, no scope/effect/budget reset. Sol waits for clean accepted source commit, then owns EXE/native acceptance. Yard-machine acceptance remains deferred by operator; web phase2 not admitted.
+
+
+## LOCAL accepted source / candidate stewardship — 2026-11-08
+
+Root rehydrated canonical REVIEW and verified all23 final source hashes in Astra source-candidate-review.json (437492d0). Reviewer-local quarterly restore reminder changed only bao_ve.js and LOCAL_UI tests; all7JSgroups rerunPASS including21LOCALchecks.210Python0skip/4workspace/actualsource-smoke remain valid unchanged Python bytes; durable technical/release-source.json binds logs and preserved failures. Root transitions COMMIT_STEWARD/SESSION_SYNC_STEWARD for clean reviewed source commit, then Orchestrator for Sol exact1.10.0 build/fullnative acceptance. Baseline route eligibility accepted only; no V1/wholeLOCAL closure. L1-L8 remain pending consumerproof, near1GB seeding runs runtime-only. Arbitrary corrupt/absentmain failsclosed; supported interrupted legacy recovery stillrequiresheadedEXE proof. Exact586b44bf and SPEC unchanged, nobudgetreset/webgrant/operatorcheckpoint.

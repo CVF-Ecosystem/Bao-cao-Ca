@@ -31,9 +31,9 @@ class StartupReceiptTests(unittest.TestCase):
         for direct in (False, True):
             inspected = []
             validations = []
-            def counted_inspect(path):
+            def counted_inspect(path, **kwargs):
                 inspected.append(Path(path).resolve())
-                return inspect(path)
+                return inspect(path, **kwargs)
             def counted_validate(store):
                 validations.append(store.path)
                 return validate(store)

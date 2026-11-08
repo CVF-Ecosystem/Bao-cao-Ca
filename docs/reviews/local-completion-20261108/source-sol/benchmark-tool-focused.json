@@ -1,0 +1,87 @@
+{
+  "version": "1.10.0",
+  "profile": {
+    "days": 1,
+    "saves": 3,
+    "blobs": 1,
+    "blob_mb": 1
+  },
+  "disk_label": "không xác định",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "work": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\do_hieu_nang_970qwj8x",
+  "started_at": "2026-11-08T15:02:32.737269+07:00",
+  "attachment_semantics": "Synthetic JPEG-header/random bytes for storage/hash only, not image rendering",
+  "retained_workload": "Changed manual saves then close; HTTP auto saves measured separately",
+  "free_bytes_before": 25190572032,
+  "seed_s": 0.1,
+  "data": {
+    "reports": 2,
+    "revisions": 6,
+    "blobs": 1,
+    "avg_payload_kb": 7.4,
+    "revisions_mb": 0,
+    "blobs_mb": 1,
+    "distinct_revision_payloads": 6,
+    "db_mb": 1,
+    "db_bytes": 1191936,
+    "blobs_bytes": 1048579,
+    "target_1GB_reached": false
+  },
+  "free_bytes_after_seed": 25189380096,
+  "parts": {
+    "Chép DB bằng SQLite Backup API (không kiểm tra)": {
+      "first_s": 0.01,
+      "later_median_s": null
+    },
+    "quick_check": {
+      "first_s": 0.0,
+      "later_median_s": null
+    },
+    "integrity_check": {
+      "first_s": 0.0,
+      "later_median_s": null
+    },
+    "Duyệt JSON (reports + revisions)": {
+      "first_s": 0.0,
+      "later_median_s": null
+    },
+    "Hash SHA-256 mọi tệp đính kèm": {
+      "first_s": 0.0,
+      "later_median_s": null
+    },
+    "Chép file DB sang ổ ngoài (chỉ chép byte)": {
+      "first_s": 0.0,
+      "later_median_s": null
+    },
+    "snapshot() đầy đủ = chép + kiểm tra + fsync": {
+      "first_s": 0.02,
+      "later_median_s": null
+    }
+  },
+  "protection_backup": {
+    "external": false,
+    "first_s": 0.02,
+    "later_median_s": null
+  },
+  "startup": {
+    "guard_startup (main)": 0.0,
+    "needs_adoption (main)": 0.0,
+    "make_server (mở Store, sao lưu đầu)": 0.1,
+    "TỔNG": 0.1
+  },
+  "after_http": {
+    "reports": 3,
+    "revisions": 8
+  },
+  "http_save_s": {
+    "auto_median": 0.01,
+    "auto_max": 0.02,
+    "close_median": 0.05,
+    "close_max": 0.05
+  },
+  "search_s": {
+    "seconds": 0.0,
+    "matches": 3
+  }
+}

@@ -20,6 +20,7 @@ from BAO_CAO_CA import running_session
 from BAO_CAO_EXCEL import aggregate, monthly_tables, report_table, styled_xlsx, xlsx_bytes
 from LUU_TRU import Store
 from MAY_CHU import make_server
+from NANG_CAP_CSDL import plan_upgrade, upgrade
 from NGHIEP_VU import AppError, ClosingConnection, file_type, normalize, suggest
 from THIET_LAP import ASSETS, JOBS, MAX_FILE, PEOPLE, ROLES, SHIPS
 
@@ -206,7 +207,7 @@ class Tests(unittest.TestCase):
             opener.open(base+'/?launch='+server.app['token']).read()
             ctx=json.loads(opener.open(base+'/api/info').read())['context']
             body=json.dumps(dict(name='TAU MOI KIEM THU',context=ctx)).encode()
-            result=json.loads(opener.open(urllib.request.Request(base+'/api/ships-add',data=body,headers={'X-Ca-Request':'1'})).read())
+            result=json.loads(opener.open(urllib.request.Request(base+'/api/ships-add',data=body,headers={'X-Ca-Request':'1', 'Content-Type':'application/json'})).read())
             self.assertIn('TAU MOI KIEM THU',result['ships'])
             p=copy.deepcopy(self.p);p['ships']=['TAU MOI KIEM THU']
             server.app['store'].save(p,0)
@@ -313,11 +314,11 @@ class Tests(unittest.TestCase):
         base='http://'+server.app['host'];opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
         def post(path,payload):
             body=payload if isinstance(payload,bytes) else json.dumps(payload).encode()
-            return opener.open(urllib.request.Request(base+path,data=body,headers={'X-Ca-Request':'1'}))
+            return opener.open(urllib.request.Request(base+path,data=body,headers={'X-Ca-Request':'1', 'Content-Type':'application/json'}))
         try:
             opener.open(base+'/?launch='+server.app['token']).read()
             ctx=server.app['context'];self.p['status']='closed'
-            r=json.loads(post('/api/save',dict(report=self.p,version=0,context=ctx,reason='Chốt ca')).read())
+            r=json.loads(post('/api/save',dict(report=self.p,version=0,context=ctx,reason='Chốt ca',save_kind='close')).read())
             qs=urllib.parse.urlencode(dict(context=ctx,id=r['id'],version=r['version'],name='biên bản.html',actor='Anh'))
             result=json.loads(post('/api/attachment-upload?'+qs,b'<html><script>alert(1)</script></html>').read())
             self.assertTrue(result['added']);self.assertEqual(result['report']['status'],'closed')
@@ -359,8 +360,10 @@ class Tests(unittest.TestCase):
             c.execute("UPDATE meta SET value='1' WHERE key='schema_version'")
         view=Store(self.store.path,True)
         self.assertEqual(len(view.list({})),1)
+        with self.assertRaises(AppError): Store(self.store.path)
+        upgrade(self.store.path,plan_upgrade(self.store.path))
         writable=Store(self.store.path)
-        self.assertEqual(writable.meta('schema_version'),'3')
+        self.assertEqual(writable.meta('schema_version'),'4')
         old=Store(self.store.path.with_name('main_TRUOC_NANG_CAP_1_2.db'),True)
         self.assertEqual(old.meta('schema_version'),'1')
         self.assertEqual(len(old.list({})),1)
@@ -374,14 +377,14 @@ class Tests(unittest.TestCase):
         def get(path):return opener.open(base+path)
         def post(path,payload):
             data=payload if isinstance(payload,bytes) else json.dumps(payload).encode()
-            return opener.open(urllib.request.Request(base+path,data=data,headers={'X-Ca-Request':'1'}))
+            return opener.open(urllib.request.Request(base+path,data=data,headers={'X-Ca-Request':'1', 'Content-Type':'application/json'}))
         try:
             get('/?launch='+token).read();ctx=json.loads(get('/api/info').read())['context']
             # A file larger than the previous 10 MB limit must remain byte-for-byte intact.
             large_png=self.PNG + b'\x00'*(12*1024*1024)
             a=json.loads(post('/api/attachment-upload?'+urllib.parse.urlencode(dict(context=ctx,name='ảnh hiện trường.png',actor='Anh')),large_png).read())
             self.p['attachments']=[a]
-            r=json.loads(post('/api/save',dict(report=self.p,version=0,context=ctx)).read())
+            r=json.loads(post('/api/save',dict(report=self.p,version=0,context=ctx,reason='',save_kind='manual')).read())
             self.assertEqual(get('/api/attachment?'+urllib.parse.urlencode(dict(context=ctx,hash=a['hash']))).read(),large_png)
             with self.assertRaises(urllib.error.HTTPError) as e:get('/api/attachment?hash='+a['hash']+'&context=old')
             self.assertEqual(e.exception.code,409)
@@ -474,9 +477,9 @@ class Tests(unittest.TestCase):
             with self.assertRaises(urllib.error.HTTPError):get('/api/info')
             self.assertIn(b'<html',get('/?launch='+server.app['token']))
             info=json.loads(get('/api/info'));context=info['context']
-            r=json.loads(post('/api/save',dict(report=self.p,version=0,context=context)))
+            r=json.loads(post('/api/save',dict(report=self.p,version=0,context=context,reason='',save_kind='manual')))
             with self.assertRaises(urllib.error.HTTPError) as ctx:
-                post('/api/save',dict(report=self.p,version=0,context=context))
+                post('/api/save',dict(report=self.p,version=0,context=context,reason='',save_kind='manual'))
             self.assertEqual(ctx.exception.code,409)
             exported=get('/api/export?id='+r['id']+'&context='+context)
             self.assertTrue(zipfile.is_zipfile(io.BytesIO(exported)))
@@ -486,17 +489,17 @@ class Tests(unittest.TestCase):
             post('/api/open-viewer',db,'application/octet-stream')
             viewinfo=json.loads(get('/api/info'));self.assertTrue(viewinfo['readonly'])
             with self.assertRaises(urllib.error.HTTPError) as ctx:
-                post('/api/save',dict(report=self.p,version=1,context=viewinfo['context']))
+                post('/api/save',dict(report=self.p,version=1,context=viewinfo['context'],reason='',save_kind='manual'))
             self.assertEqual(ctx.exception.code,403)
             self.assertEqual((self.root/'http'/'BAO_CAO_CA.db').read_bytes(),original)
             post('/api/enable-corrections',dict(context=viewinfo['context'],reviewer='Giám sát'))
             editinfo=json.loads(get('/api/info'));self.assertFalse(editinfo['readonly'])
             edit=copy.deepcopy(self.p);edit['actor']='Giám sát';edit['notes']='Bổ sung qua giao diện API'
-            post('/api/save',dict(report=edit,version=1,reason='Bổ sung thông tin thiếu',context=editinfo['context']))
+            post('/api/save',dict(report=edit,version=1,reason='Bổ sung thông tin thiếu',context=editinfo['context'],save_kind='correction'))
             revised=post('/api/backup',dict(context=editinfo['context']))
             post('/api/main-db',{})
             with self.assertRaises(urllib.error.HTTPError) as ctx:
-                post('/api/save',dict(report=self.p,version=1,context=context))
+                post('/api/save',dict(report=self.p,version=1,context=context,reason='',save_kind='manual'))
             self.assertEqual(ctx.exception.code,409)
             plan=json.loads(post('/api/corrections-preview',revised,'application/octet-stream'))
             self.assertEqual(plan['items'][0]['state'],'ready')

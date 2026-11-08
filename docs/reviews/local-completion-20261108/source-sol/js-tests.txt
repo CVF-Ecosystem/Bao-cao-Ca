@@ -1,0 +1,39 @@
+6 protection UI behavior checks passed: state, escaping, preview, restore/context, directory picker, review/unsaved guard.
+4 JavaScript checks passed: chief, report export, summary export, backup context.
+PASS integer bounds and invalid syntax
+PASS invalid job marks field, focuses and names exact cell
+PASS revision diff distinguishes missing and empty, escapes HTML
+PASS signature deduplicates chiefs and escapes names
+PASS machine print stamp exact shape
+PASS Escape cannot cancel active save or confirmation
+PASS Escape routes PNI through its cancellation owner
+PASS cancelled late schema preview cannot revive plan
+PASS maintenance late preview invalidated and cancelled
+PASS readonly capability rejects maintenance before request
+PASS stale context cannot confirm
+PASS schema upgrade requires explicit consent
+PASS conflict preserves winner and explicitly pending local notes
+PASS revision comparison uses actual adjacent items despite version gaps
+PASS keyboard shortcut selects matching tab and focuses it
+PASS recovery preview shows empty data and stores only server nonce
+PASS recovery requires exact destructive consent
+PASS recovery cancel clears local and server plan
+PASS recovery confirm sends context nonce consent only
+19 local UI behavioral checks passed.
+OK preview and cancel never mutate report
+OK confirm replaces only configured positions and preserves other data
+OK switch rotating crew then append day staff without duplication
+OK day append preserves manual people and uses exact name deduplication
+OK multiple ship assignments remain separate for both rotating and day templates
+OK single ship keeps its vessel while receiving people
+OK explicit empty slot clears only after confirmation
+OK changed report or DB after preview blocks application
+OK readonly and in-flight save block application
+OK closed report stays closed and preview requires reason at save
+OK empty crew template cannot clear report
+OK template editor groups multiple people per position and preserves blank positions
+OK plan is a copy and rejects exceeding staff capacity
+13 template behavior tests passed (Node VM).
+Personnel UI: escaping, invalid replacement, deferred ordering, confirmation busy guard and failure recovery OK
+Personnel UI behavior tests passed: separate people/vessels, single selection, crew filtering, selected names preserved, legacy config fallback, readonly.
+6 kiểm tra giao diện 1.9 đạt: escape id, thanh trang, loadList, trang chủ, cảnh báo theo mức độ, tab nhập ca.

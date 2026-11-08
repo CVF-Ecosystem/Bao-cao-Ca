@@ -111,10 +111,10 @@ class HttpTests(unittest.TestCase):
             calls.clear()
             context = json.loads(opener.open(base + '/api/info').read())['context']
             body = json.dumps(dict(name='TAU KIEM THU 1.9', context=context)).encode()
-            opener.open(urllib.request.Request(base + '/api/ships-add', data=body, headers={'X-Ca-Request': '1'})).read()
+            opener.open(urllib.request.Request(base + '/api/ships-add', data=body, headers={'X-Ca-Request': '1', 'Content-Type': 'application/json'})).read()
             self.assertEqual(calls, [False])
-            report = json.dumps(dict(report=draft('2026-11-05', status='closed'), version=0, reason='', context=context)).encode()
-            opener.open(urllib.request.Request(base + '/api/save', data=report, headers={'X-Ca-Request': '1'})).read()
+            report = json.dumps(dict(report=draft('2026-11-05', status='closed'), version=0, reason='', context=context, save_kind='close')).encode()
+            opener.open(urllib.request.Request(base + '/api/save', data=report, headers={'X-Ca-Request': '1', 'Content-Type': 'application/json'})).read()
             self.assertEqual(calls, [False, True])
 
     def test_info_reports_backup_level_for_the_ui(self):
@@ -129,7 +129,7 @@ class HttpTests(unittest.TestCase):
         server, base, opener = self.start()
         server.app['backup_pending'] = True
         with patch('MAY_CHU.daily_backup') as backup:
-            opener.open(urllib.request.Request(base + '/api/shutdown', data=b'{}', headers={'X-Ca-Request': '1'})).read()
+            opener.open(urllib.request.Request(base + '/api/shutdown', data=b'{}', headers={'X-Ca-Request': '1', 'Content-Type': 'application/json'})).read()
         backup.assert_called_once()
 
 

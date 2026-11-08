@@ -1,0 +1,41 @@
+{
+  "kind": "SOURCE_HEADed_FOCUSED_NOT_EXE_ACCEPTANCE",
+  "viewport": {
+    "width": 1366,
+    "height": 657
+  },
+  "checks": [
+    {
+      "firstInput": {
+        "x": 282.8000183105469,
+        "y": 153.8000030517578,
+        "width": 379.9999694824219,
+        "height": 38.80000305175781
+      }
+    },
+    "Chief validated and focused before confirm",
+    "Invalid decimal marked and save blocked",
+    {
+      "stickyPicker": {
+        "header": {
+          "x": 386.20001220703125,
+          "y": 32.875,
+          "width": 578.7999877929688,
+          "height": 67.30000305175781
+        },
+        "footer": {
+          "x": 386.20001220703125,
+          "y": 451.8125,
+          "width": 578.7999877929688,
+          "height": 68.9000244140625
+        }
+      },
+      "escape": true
+    },
+    "History/diff and final signature visible"
+  ],
+  "keyboardState": "true",
+  "pageErrors": [],
+  "browserVersion": "156.0.8078.81",
+  "cleanupExitCode": 0
+}

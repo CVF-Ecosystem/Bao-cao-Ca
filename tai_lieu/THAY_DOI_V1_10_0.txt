@@ -1,0 +1,17 @@
+CẬP NHẬT 1.10.0 — HOÀN THIỆN BẢN CHẠY TẠI MÁY
+
+Dữ liệu dùng schema 4. Với DB cũ, chương trình chỉ cho xem kế hoạch nâng cấp; phải xác nhận mới tạo bản sao đã kiểm tra và nâng từng bước. Mọi máy cùng sử dụng dữ liệu cần bản chương trình mới. Bản 1.9.x không mở được DB schema 4. Khi cần quay về bản cũ, dùng bản sao trước nâng cấp; giữ riêng DB mới để không bỏ mất lần nhập sau đó.
+
+Tự lưu bản nháp được gộp để giảm lịch sử trùng; Lưu, Chốt ca và bổ sung bản sao có loại lưu riêng. Lịch sử hiển thị loại lưu, tài khoản Windows và thay đổi giữa hai bản liền nhau. Tài khoản máy không chứng minh danh tính người nhập trên máy dùng chung. Khi xung đột, có thể tải bản thắng và giữ riêng ghi chú chưa lưu; kiểm tra rồi bấm Lưu.
+
+Giao diện ca gọn hơn, tab bám khi cuộn. Alt+1/2/3/4 chuyển các tab. Esc hủy hộp thoại; không hủy trong lúc đang xác nhận hoặc lưu. Số lượng chỉ nhận số nguyên 0–9.999.999, ô sai được đánh dấu và chặn lưu. Cần người nhập và Phụ trách chung trước khi chốt. Thông báo dưới màn hình có thể đóng bằng bấm chuột hoặc Enter/Space khi được chọn.
+
+Báo cáo in có ngày/ca, giờ in của máy, số trang và phần ký Trưởng ca cuối báo cáo. Khi in, chọn đúng giấy A4 ngang; kiểm tra bản xem trước, số trang và tên người ký. Khả năng in cụ thể phụ thuộc trình duyệt và thiết bị. Việc đo trên máy phát triển không thay nghiệm thu thiết bị tại bãi.
+
+Bảo vệ dữ liệu phân biệt kiểm tra nhanh và kiểm tra đầy đủ. Full bắt buộc khi chưa có hoặc đã quá 24 giờ, kể cả thời gian tắt ứng dụng; bản full tốt gần nhất được giữ riêng. Màn hình Bảo vệ hiển thị lần full thành công tại máy/bên ngoài. Chọn ổ khác hoặc nơi sao lưu độc lập; một thư mục khác trên cùng ổ không bảo vệ khi ổ hỏng. Thư mục đồng bộ không chứng minh dữ liệu đã lên đám mây.
+
+Các tác vụ dọn bản chỉ xem, dọn tệp không tham chiếu và khôi phục thử đều xem trước rồi xác nhận. Trước khi xóa, chương trình tạo và kiểm tra đầy đủ bản sao mới. Dọn blob giải phóng chỗ bên trong DB, không tự thu nhỏ file. Không xóa thủ công thư mục phục hồi/bản sao khi chưa xác minh dữ liệu cần giữ.
+
+Ẩn tàu chỉ bỏ tàu khỏi danh mục chọn mới, giữ nguyên báo cáo đã lưu. Thêm lại tên tàu một cách chủ động có thể kích hoạt lại. Nhập nhân viên Excel 1.9.2 vẫn chỉ thêm tên, không tự phân tổ hay nhập báo cáo ca.
+
+Đợt này chỉ phát triển bản local; chưa có triển khai web. Kết quả kiểm chứng cụ thể, các trường hợp chưa thử và giới hạn thiết bị được ghi trong docs/reviews/local-completion-20261108/ sau đánh giá độc lập.

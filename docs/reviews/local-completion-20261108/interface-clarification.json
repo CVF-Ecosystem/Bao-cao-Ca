@@ -1,0 +1,33 @@
+{
+  "status": "ACCEPTED_IMPLEMENTATION_CLARIFICATION",
+  "risk": "R2",
+  "worker": "Terra backend / Sol UI",
+  "reviewer": "Astra independent REVIEWER",
+  "actionSha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+  "specSha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385",
+  "basis": "Locked global integration contract already requires cancellation to clear all server-owned preview handles; migration-specific endpoint list omits the mechanism. Adding the matching cancel endpoint implements that existing invariant, without new data effects or business capability. Original SPEC/WO bytes remain frozen.",
+  "contract": {
+    "route": "POST /api/schema-upgrade-cancel",
+    "request": "{context:string}, unknown fields rejected",
+    "guards": "Same session cookie, Host/origin, X-Ca-Request, JSON/type and exact context checks; permitted in restricted migration session alongside preview/confirm/status/shutdown.",
+    "effect": "Idempotently clear only pending schema-upgrade plan in current context. No DB/file/catalog mutation; no restore or migration starts.",
+    "response": "Successful JSON acknowledgment with cancelled:true; whether a plan existed need not leak. Failed guard follows locked stable error contract.",
+    "requiredTests": [
+      "preview -> cancel -> confirm original nonce returns409STALE, source and backups unchanged",
+      "cancel with no pending plan succeeds without new effects",
+      "wrong context/auth/header/origin/unknownfield rejected without clearing another context plan",
+      "UI cancellation increments generation and late preview response cannot restore nonce/dialog; confirming state cannot masquerade as cancelled migration"
+    ]
+  },
+  "boundary": {
+    "unchangedObjective": "YES",
+    "unchangedDesign": "YES",
+    "unchangedPaths": "YES",
+    "unchangedAuthority": "YES",
+    "unchangedEffects": "YES",
+    "unchangedCommitOwner": "YES",
+    "evidenceDetermined": "YES"
+  },
+  "recoveryCaveat": "Failed intermediate legacy upgrade retains verified pre-upgrade copies and clear explicit restore route. Component/sourcebytes tests do not prove actual consumer recovery; native Tk or equivalent actual admitted user path must be evidenced before L5/L8 acceptance, otherwise remain unproved.",
+  "limits": "No product acceptance or silent waiver of native print/runtime recovery. No source edits by reviewer."
+}

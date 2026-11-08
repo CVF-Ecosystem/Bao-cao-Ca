@@ -73,7 +73,7 @@ class ApiContract(unittest.TestCase):
 
     def save(self, rep, version, reason='', context=None):
         return self.call('/api/save', dict(report=rep, version=version, reason=reason,
-                                           context=context if context is not None else self.context))
+                                           context=context if context is not None else self.context, save_kind='close' if rep['status']=='closed' and version==0 else 'manual'))
 
     # ---- Xác thực và kiểm tra yêu cầu -------------------------------------------------------------
 
@@ -88,7 +88,7 @@ class ApiContract(unittest.TestCase):
 
     def test_post_requires_header_origin_and_host(self):
         rep = report()
-        body = dict(report=rep, version=0, context=self.context)
+        body = dict(report=rep, version=0, context=self.context, reason='', save_kind='manual')
         self.assertEqual(self.call('/api/save', body, headers={'X-Ca-Request': ''})[0], 403)
         self.assertEqual(self.call('/api/save', body, headers={'Origin': 'http://evil.example'})[0], 403)
         self.assertEqual(self.call('/api/info', headers={'Host': 'evil.example'})[0], 403)
@@ -105,7 +105,8 @@ class ApiContract(unittest.TestCase):
             self.assertEqual(status, 403, i)
             self.assertIsInstance(result['error'], str)
         status, _, result = self.call('/api/save', b'x' * (5 * 1024 * 1024))
-        self.assertEqual(status, 400)
+        self.assertEqual(status, 413)
+        self.assertEqual(result['code'], 'LIMIT_EXCEEDED')
         self.assertIsInstance(result['error'], str)
         for length in ('-1', 'abc', '9' * 5000):
             connection = http.client.HTTPConnection(self.server.app['host'], timeout=5)

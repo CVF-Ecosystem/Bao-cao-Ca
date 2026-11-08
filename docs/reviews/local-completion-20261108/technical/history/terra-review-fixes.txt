@@ -1,0 +1,29 @@
+test_backup_wall_clock_and_invalid_marker (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_backup_wall_clock_and_invalid_marker) ... ok
+test_external_disconnected_keeps_old_external_pin (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_external_disconnected_keeps_old_external_pin) ... ERROR:root:Sao luu ben ngoai that bai
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\ma_nguon\BAO_VE_DU_LIEU.py", line 366, in _backup
+    raise OSError('Th\u01b0 m\u1ee5c d\u1ef1 ph�ng ch\u01b0a s\u1eb5n s�ng')
+OSError: Th\u01b0 m\u1ee5c d\u1ef1 ph�ng ch\u01b0a s\u1eb5n s�ng
+ok
+test_failed_full_pin_update_retains_previous_verified_pin (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_failed_full_pin_update_retains_previous_verified_pin) ... ok
+test_full_verification_rejects_missing_references_and_malformed_payloads (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_full_verification_rejects_missing_references_and_malformed_payloads) ... ok
+test_http_guarded_maintenance_and_ship_hide (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_http_guarded_maintenance_and_ship_hide) ... ok
+test_intermediate_upgrade_failure_reports_recoverable_snapshot (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_intermediate_upgrade_failure_reports_recoverable_snapshot) ... ok
+test_legacy_preview_and_explicit_upgrade_all_versions (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_legacy_preview_and_explicit_upgrade_all_versions) ... ok
+test_missing_legacy_identity_reserved_only_until_consent (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_missing_legacy_identity_reserved_only_until_consent) ... ok
+test_orphan_full_snapshot_then_delete (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_orphan_full_snapshot_then_delete) ... ok
+test_orphan_references_reupload_and_transaction_failure (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_orphan_references_reupload_and_transaction_failure) ... ok
+test_quick_cache_full_corruption_and_pin (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_quick_cache_full_corruption_and_pin) ... ok
+test_restore_legacy_backup_returns_to_restricted_migration (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_restore_legacy_backup_returns_to_restricted_migration) ... ok
+test_revision_six_row_oracle_and_conflict (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_revision_six_row_oracle_and_conflict) ... ok
+test_schema3_correction_source_is_immutable_and_imported (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_schema3_correction_source_is_immutable_and_imported) ... ok
+test_schema4_correction_preserves_provenance_and_invalid_rolls_back (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_schema4_correction_preserves_provenance_and_invalid_rolls_back) ... ok
+test_server_restricted_preview_and_confirmation (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_server_restricted_preview_and_confirmation) ... ok
+test_unknown_schema_fails_without_source_mutation (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_unknown_schema_fails_without_source_mutation) ... ok
+test_upgrade_collision_and_source_change_refuse (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_upgrade_collision_and_source_change_refuse) ... ok
+test_viewer_custody_age_open_pending_and_modified_refuse (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_viewer_custody_age_open_pending_and_modified_refuse) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 3.961s
+
+OK

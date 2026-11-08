@@ -1,0 +1,170 @@
+test_all_extensions_original_bytes_and_closed_shift_direct_attach (KIEM_THU.Tests.test_all_extensions_original_bytes_and_closed_shift_direct_attach) ... ok
+test_attachment_limits_types_and_deduplication (KIEM_THU.Tests.test_attachment_limits_types_and_deduplication) ... ok
+test_attachments_backup_and_revision_removal (KIEM_THU.Tests.test_attachments_backup_and_revision_removal) ... ok
+test_close_and_revision_reason (KIEM_THU.Tests.test_close_and_revision_reason) ... ok
+test_conflict_does_not_overwrite_and_whole_batch_rolls_back (KIEM_THU.Tests.test_conflict_does_not_overwrite_and_whole_batch_rolls_back) ... ok
+test_consistent_backup_readonly_and_snapshot (KIEM_THU.Tests.test_consistent_backup_readonly_and_snapshot) ... ok
+test_direct_attach_to_review_copy_keeps_main_untouched (KIEM_THU.Tests.test_direct_attach_to_review_copy_keeps_main_untouched) ... ok
+test_dynamic_template_keeps_all_long_names_jobs_and_notes (KIEM_THU.Tests.test_dynamic_template_keeps_all_long_names_jobs_and_notes) ... ok
+test_edit_names_after_reopen_draft_and_multiple_ships (KIEM_THU.Tests.test_edit_names_after_reopen_draft_and_multiple_ships) ... ok
+test_explicit_attachment_columns_and_connection_close (KIEM_THU.Tests.test_explicit_attachment_columns_and_connection_close) ... ok
+test_filters_totals_and_export (KIEM_THU.Tests.test_filters_totals_and_export) ... ok
+test_http_attachments_zip_shutdown_and_running_session (KIEM_THU.Tests.test_http_attachments_zip_shutdown_and_running_session) ... ok
+test_http_direct_upload_arbitrary_file_and_error_diagnostics (KIEM_THU.Tests.test_http_direct_upload_arbitrary_file_and_error_diagnostics) ... ok
+test_http_ship_directory_and_month_export (KIEM_THU.Tests.test_http_ship_directory_and_month_export) ... ok
+test_http_workflow_and_source_switch_protection (KIEM_THU.Tests.test_http_workflow_and_source_switch_protection) ... ok
+test_invalid_counts_and_chief (KIEM_THU.Tests.test_invalid_counts_and_chief) ... ok
+test_khb_default_position_saved_and_exported (KIEM_THU.Tests.test_khb_default_position_saved_and_exported) ... ok
+test_legacy_db_without_attachments_table_can_be_opened (KIEM_THU.Tests.test_legacy_db_without_attachments_table_can_be_opened) ... ok
+test_legacy_viewer_gets_default_people_without_mutation (KIEM_THU.Tests.test_legacy_viewer_gets_default_people_without_mutation) ... ok
+test_merge_preserves_new_shifts_and_reviewer_history (KIEM_THU.Tests.test_merge_preserves_new_shifts_and_reviewer_history) ... ok
+test_merge_transfers_images_and_preserves_historical_files (KIEM_THU.Tests.test_merge_transfers_images_and_preserves_historical_files) ... ok
+test_missing_or_corrupted_attachment_rejected (KIEM_THU.Tests.test_missing_or_corrupted_attachment_rejected) ... ok
+test_month_export_full_calendar_and_template_style (KIEM_THU.Tests.test_month_export_full_calendar_and_template_style) ... ok
+test_new_ship_directory_persists_and_merges (KIEM_THU.Tests.test_new_ship_directory_persists_and_merges) ... ok
+test_people_directory_and_multiple_names_survive_backup (KIEM_THU.Tests.test_people_directory_and_multiple_names_survive_backup) ... ok
+test_reject_foreign_db_and_legacy_review (KIEM_THU.Tests.test_reject_foreign_db_and_legacy_review) ... ok
+test_review_edit_preserves_original_and_requires_reason (KIEM_THU.Tests.test_review_edit_preserves_original_and_requires_reason) ... ok
+test_save_duplicate_conflict_and_blank_zero (KIEM_THU.Tests.test_save_duplicate_conflict_and_blank_zero) ... ok
+test_shift_boundaries (KIEM_THU.Tests.test_shift_boundaries) ... ok
+test_unchanged_review_excluded_and_main_requires_correct_mode (KIEM_THU.Tests.test_unchanged_review_excluded_and_main_requires_correct_mode) ... ok
+test_wrong_db_rejected (KIEM_THU.Tests.test_wrong_db_rejected) ... ok
+test_attachment_upload_shapes_with_and_without_report (KIEM_THU_API.ApiContract.test_attachment_upload_shapes_with_and_without_report) ... ok
+test_closed_report_needs_reason_and_cannot_reopen (KIEM_THU_API.ApiContract.test_closed_report_needs_reason_and_cannot_reopen) ... ok
+test_context_bound_routes_reject_stale_context (KIEM_THU_API.ApiContract.test_context_bound_routes_reject_stale_context) ... ok
+test_drain_has_total_deadline_and_byte_limit (KIEM_THU_API.ApiContract.test_drain_has_total_deadline_and_byte_limit) ... ok
+test_every_error_is_json_with_error_text (KIEM_THU_API.ApiContract.test_every_error_is_json_with_error_text) ... ok
+test_info_build_contract (KIEM_THU_API.ApiContract.test_info_build_contract) ... ok
+test_malformed_requests_are_400_with_error_envelope (KIEM_THU_API.ApiContract.test_malformed_requests_are_400_with_error_envelope) ... ok
+test_post_requires_header_origin_and_host (KIEM_THU_API.ApiContract.test_post_requires_header_origin_and_host) ... ok
+test_query_parameter_validation (KIEM_THU_API.ApiContract.test_query_parameter_validation) ... ok
+test_rejected_bodies_and_invalid_length (KIEM_THU_API.ApiContract.test_rejected_bodies_and_invalid_length) ... FAIL
+test_save_returns_report_with_identity_version_and_timestamps (KIEM_THU_API.ApiContract.test_save_returns_report_with_identity_version_and_timestamps) ... ok
+test_session_cookie_and_launch_token (KIEM_THU_API.ApiContract.test_session_cookie_and_launch_token) ... ok
+test_stale_version_wrong_type_and_missing_context_are_409 (KIEM_THU_API.ApiContract.test_stale_version_wrong_type_and_missing_context_are_409) ... ok
+test_unknown_routes_and_methods (KIEM_THU_API.ApiContract.test_unknown_routes_and_methods) ... ok
+test_help_does_not_crash_on_a_legacy_windows_console_encoding (KIEM_THU_V1_9.ConsoleTests.test_help_does_not_crash_on_a_legacy_windows_console_encoding) ... ok
+test_throttled_call_marks_pending_and_next_success_clears_it (KIEM_THU_V1_9.DeferredBackupTests.test_throttled_call_marks_pending_and_next_success_clears_it) ... ok
+test_cheap_writes_do_not_force_a_full_backup (KIEM_THU_V1_9.HttpTests.test_cheap_writes_do_not_force_a_full_backup) ... ok
+test_deferred_backup_is_made_up_on_shutdown (KIEM_THU_V1_9.HttpTests.test_deferred_backup_is_made_up_on_shutdown) ... ok
+test_info_reports_backup_level_for_the_ui (KIEM_THU_V1_9.HttpTests.test_info_reports_backup_level_for_the_ui) ... ok
+test_paging_and_overview_over_http (KIEM_THU_V1_9.HttpTests.test_paging_and_overview_over_http) ... ok
+test_catalog_backups_are_capped_newest_first (KIEM_THU_V1_9.MaintenanceTests.test_catalog_backups_are_capped_newest_first) ... ok
+test_merge_team_members_does_not_mutate_input (KIEM_THU_V1_9.MaintenanceTests.test_merge_team_members_does_not_mutate_input) ... ok
+test_rotate_log_ignores_small_or_missing_files (KIEM_THU_V1_9.MaintenanceTests.test_rotate_log_ignores_small_or_missing_files) ... ok
+test_rotate_log_keeps_three_old_files (KIEM_THU_V1_9.MaintenanceTests.test_rotate_log_keeps_three_old_files) ... ok
+test_int_param_rejects_bad_values (KIEM_THU_V1_9.PagingTests.test_int_param_rejects_bad_values) ... ok
+test_overview_counts_without_loading_everything (KIEM_THU_V1_9.PagingTests.test_overview_counts_without_loading_everything) ... ok
+test_page_matches_list_with_filters_and_search (KIEM_THU_V1_9.PagingTests.test_page_matches_list_with_filters_and_search) ... ok
+test_page_slices_and_counts_in_sql (KIEM_THU_V1_9.PagingTests.test_page_slices_and_counts_in_sql) ... ok
+test_unconfigured_external_is_a_recommendation_and_failure_is_an_error (KIEM_THU_V1_9.WarningLevelTests.test_unconfigured_external_is_a_recommendation_and_failure_is_an_error) ... ERROR:root:Sao luu ben ngoai that bai
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\ma_nguon\BAO_VE_DU_LIEU.py", line 366, in _backup
+    raise OSError('Th\u01b0 m\u1ee5c d\u1ef1 ph�ng ch\u01b0a s\u1eb5n s�ng')
+OSError: Th\u01b0 m\u1ee5c d\u1ef1 ph�ng ch\u01b0a s\u1eb5n s�ng
+ok
+test_backup_wall_clock_and_invalid_marker (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_backup_wall_clock_and_invalid_marker) ... ok
+test_external_disconnected_keeps_old_external_pin (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_external_disconnected_keeps_old_external_pin) ... ERROR:root:Sao luu ben ngoai that bai
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\ma_nguon\BAO_VE_DU_LIEU.py", line 366, in _backup
+    raise OSError('Th\u01b0 m\u1ee5c d\u1ef1 ph�ng ch\u01b0a s\u1eb5n s�ng')
+OSError: Th\u01b0 m\u1ee5c d\u1ef1 ph�ng ch\u01b0a s\u1eb5n s�ng
+ok
+test_failed_full_pin_update_retains_previous_verified_pin (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_failed_full_pin_update_retains_previous_verified_pin) ... ok
+test_full_verification_rejects_missing_references_and_malformed_payloads (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_full_verification_rejects_missing_references_and_malformed_payloads) ... ok
+test_http_guarded_maintenance_and_ship_hide (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_http_guarded_maintenance_and_ship_hide) ... ok
+test_intermediate_upgrade_failure_reports_recoverable_snapshot (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_intermediate_upgrade_failure_reports_recoverable_snapshot) ... ok
+test_legacy_preview_and_explicit_upgrade_all_versions (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_legacy_preview_and_explicit_upgrade_all_versions) ... ok
+test_missing_legacy_identity_reserved_only_until_consent (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_missing_legacy_identity_reserved_only_until_consent) ... ok
+test_orphan_full_snapshot_then_delete (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_orphan_full_snapshot_then_delete) ... ok
+test_orphan_references_reupload_and_transaction_failure (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_orphan_references_reupload_and_transaction_failure) ... ok
+test_quick_cache_full_corruption_and_pin (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_quick_cache_full_corruption_and_pin) ... ok
+test_restore_legacy_backup_returns_to_restricted_migration (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_restore_legacy_backup_returns_to_restricted_migration) ... ok
+test_revision_six_row_oracle_and_conflict (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_revision_six_row_oracle_and_conflict) ... ok
+test_schema3_correction_source_is_immutable_and_imported (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_schema3_correction_source_is_immutable_and_imported) ... ok
+test_schema4_correction_preserves_provenance_and_invalid_rolls_back (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_schema4_correction_preserves_provenance_and_invalid_rolls_back) ... ok
+test_server_restricted_preview_and_confirmation (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_server_restricted_preview_and_confirmation) ... ok
+test_unknown_schema_fails_without_source_mutation (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_unknown_schema_fails_without_source_mutation) ... ok
+test_upgrade_collision_and_source_change_refuse (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_upgrade_collision_and_source_change_refuse) ... ok
+test_viewer_custody_age_open_pending_and_modified_refuse (KIEM_THU_LOCAL_COMPLETION.LocalCompletionTests.test_viewer_custody_age_open_pending_and_modified_refuse) ... ok
+test_adoption_failure_leaves_config_and_db (KIEM_THU_BAO_VE.AdoptionTests.test_adoption_failure_leaves_config_and_db) ... ok
+test_corrupt_and_review_db_not_accepted (KIEM_THU_BAO_VE.AdoptionTests.test_corrupt_and_review_db_not_accepted) ... ok
+test_no_adoption_does_not_touch_installed_db_or_config (KIEM_THU_BAO_VE.AdoptionTests.test_no_adoption_does_not_touch_installed_db_or_config) ... ok
+test_replace_blank_db_with_old_data (KIEM_THU_BAO_VE.AdoptionTests.test_replace_blank_db_with_old_data) ... ok
+test_draft_throttled_but_close_forced (KIEM_THU_BAO_VE.BackupScheduleTests.test_draft_throttled_but_close_forced) ... ok
+test_restore_api_and_stale_context (KIEM_THU_BAO_VE.HttpProtectionTests.test_restore_api_and_stale_context) ... ok
+test_server_lock_prevents_second_server (KIEM_THU_BAO_VE.LockTests.test_server_lock_prevents_second_server) ... ok
+test_single_process_lock_and_release (KIEM_THU_BAO_VE.LockTests.test_single_process_lock_and_release) ... ok
+test_backup_failure_keeps_old_snapshots (KIEM_THU_BAO_VE.ProtectionTests.test_backup_failure_keeps_old_snapshots) ... ok
+test_changed_backup_and_sidecars_rejected (KIEM_THU_BAO_VE.ProtectionTests.test_changed_backup_and_sidecars_rejected) ... ok
+test_config_corruption_blocks_startup (KIEM_THU_BAO_VE.ProtectionTests.test_config_corruption_blocks_startup) ... ok
+test_corrupt_backup_rejected_no_change (KIEM_THU_BAO_VE.ProtectionTests.test_corrupt_backup_rejected_no_change) ... ok
+test_corrupt_main_preserved (KIEM_THU_BAO_VE.ProtectionTests.test_corrupt_main_preserved) ... ok
+test_deleted_store_never_recreated_by_read_or_write (KIEM_THU_BAO_VE.ProtectionTests.test_deleted_store_never_recreated_by_read_or_write) ... ok
+test_deleted_whole_data_dir_still_detected (KIEM_THU_BAO_VE.ProtectionTests.test_deleted_whole_data_dir_still_detected) ... ok
+test_external_copy_works_and_disconnect_warns (KIEM_THU_BAO_VE.ProtectionTests.test_external_copy_works_and_disconnect_warns) ... ERROR:root:Sao luu ben ngoai that bai
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\ma_nguon\BAO_VE_DU_LIEU.py", line 366, in _backup
+    raise OSError('Th\u01b0 m\u1ee5c d\u1ef1 ph�ng ch\u01b0a s\u1eb5n s�ng')
+OSError: Th\u01b0 m\u1ee5c d\u1ef1 ph�ng ch\u01b0a s\u1eb5n s�ng
+ok
+test_keep_current_before_restore (KIEM_THU_BAO_VE.ProtectionTests.test_keep_current_before_restore) ... ok
+test_reject_external_inside_data (KIEM_THU_BAO_VE.ProtectionTests.test_reject_external_inside_data) ... ok
+test_restore_deleted_db_and_history (KIEM_THU_BAO_VE.ProtectionTests.test_restore_deleted_db_and_history) ... ok
+test_restore_reject_other_origin_and_review (KIEM_THU_BAO_VE.ProtectionTests.test_restore_reject_other_origin_and_review) ... ok
+test_retention_daily_monthly (KIEM_THU_BAO_VE.ProtectionTests.test_retention_daily_monthly) ... ok
+test_snapshot_uses_wal_and_carries_blob (KIEM_THU_BAO_VE.ProtectionTests.test_snapshot_uses_wal_and_carries_blob) ... ok
+test_snapshot_fsync_uses_writable_descriptor (KIEM_THU_BAO_VE.WindowsSyncTests.test_snapshot_fsync_uses_writable_descriptor) ... ok
+test_catalog_travels_in_db_without_external_files (KIEM_THU_DANH_MUC.CatalogTests.test_catalog_travels_in_db_without_external_files) ... ok
+test_external_change_affects_catalog_not_historical_reports (KIEM_THU_DANH_MUC.CatalogTests.test_external_change_affects_catalog_not_historical_reports) ... ok
+test_first_migration_preserves_custom_db_people (KIEM_THU_DANH_MUC.CatalogTests.test_first_migration_preserves_custom_db_people) ... ok
+test_http_catalog_save_assets_and_review_protection (KIEM_THU_DANH_MUC.CatalogTests.test_http_catalog_save_assets_and_review_protection) ... ok
+test_invalid_file_uses_last_good_snapshot (KIEM_THU_DANH_MUC.CatalogTests.test_invalid_file_uses_last_good_snapshot) ... ok
+test_save_and_concurrent_file_edit_conflict (KIEM_THU_DANH_MUC.CatalogTests.test_save_and_concurrent_file_edit_conflict) ... ok
+test_add_preserves_other_bytes_and_replay_noop (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_add_preserves_other_bytes_and_replay_noop) ... ok
+test_backup_failure_has_no_mutation (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_backup_failure_has_no_mutation) ... ok
+test_backup_original_read_and_verification_fail_closed (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_backup_original_read_and_verification_fail_closed) ... ok
+test_db_precondition_rechecked_immediately_before_replace (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_db_precondition_rechecked_immediately_before_replace) ... ok
+test_external_edit_during_failure_is_not_overwritten (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_external_edit_during_failure_is_not_overwritten) ... ok
+test_failed_save_consumes_nonce (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_failed_save_consumes_nonce) ... ok
+test_http_auth_header_origin_viewer_review_copy (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_http_auth_header_origin_viewer_review_copy) ... ok
+test_inactive_refusal_no_write (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_inactive_refusal_no_write) ... ok
+test_invalid_preview_clears_nonce_and_bad_index (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_invalid_preview_clears_nonce_and_bad_index) ... ok
+test_owner_refuses_a_name_that_catalog_parsing_would_split (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_owner_refuses_a_name_that_catalog_parsing_would_split) ... ok
+test_owner_sync_failure_restores (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_owner_sync_failure_restores) ... ok
+test_real_sqlite_failure_and_postverify_rollback (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_real_sqlite_failure_and_postverify_rollback) ... ok
+test_report_revision_and_noop_do_not_change (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_report_revision_and_noop_do_not_change) ... ok
+test_restore_failure_reports_backup (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_restore_failure_reports_backup) ... ok
+test_restore_write_and_replace_failures_keep_backup (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_restore_write_and_replace_failures_keep_backup) ... ok
+test_stale_expired_cancel_and_context (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_stale_expired_cancel_and_context) ... ok
+test_temp_write_fsync_and_replace_failures (KIEM_THU_PERSONNEL_API.PersonnelIntegration.test_temp_write_fsync_and_replace_failures) ... ok
+test_actual_expansion_members_and_cell_limits (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_actual_expansion_members_and_cell_limits) ... ok
+test_all_sheet_preflight_finishes_before_library_loader (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_all_sheet_preflight_finishes_before_library_loader) ... ok
+test_conflicting_codes_invalid_names_types_and_near_warning (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_conflicting_codes_invalid_names_types_and_near_warning) ... ok
+test_format_zip_traversal_duplicate_macro_relationship_entities (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_format_zip_traversal_duplicate_macro_relationship_entities) ... ok
+test_inspect_and_transient_mapping_oracle (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_inspect_and_transient_mapping_oracle) ... ok
+test_line_separators_and_locked_near_name_policy (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_line_separators_and_locked_near_name_policy) ... ok
+test_many_sheets_and_unsafe_merged_metadata (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_many_sheets_and_unsafe_merged_metadata) ... ok
+test_member_and_total_actual_byte_limits_without_large_library_parse (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_member_and_total_actual_byte_limits_without_large_library_parse) ... ok
+test_merged_range_and_unselected_sheet_physical_limits (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_merged_range_and_unselected_sheet_physical_limits) ... ok
+test_parser_provenance_and_unsafe_ambient_fail_closed (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_parser_provenance_and_unsafe_ambient_fail_closed) ... ok
+test_physical_coordinate_boundaries_and_metadata_dimension_ignored (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_physical_coordinate_boundaries_and_metadata_dimension_ignored) ... ok
+test_plain_header_profile_optional_name_only_and_error_locations (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_plain_header_profile_optional_name_only_and_error_locations) ... ok
+test_relationship_target_cannot_bypass_sheet_preflight (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_relationship_target_cannot_bypass_sheet_preflight) ... ok
+test_report_headers_and_mapping_refused (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_report_headers_and_mapping_refused) ... ok
+test_selected_formula_is_fatal_even_when_excluded (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_selected_formula_is_fatal_even_when_excluded) ... ok
+test_three_distinct_observed_report_structures_are_not_personnel_tables (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_three_distinct_observed_report_structures_are_not_personnel_tables) ... ok
+test_unicode_duplicates_and_exclusion (KIEM_THU_PERSONNEL_XLSX.PersonnelReaderTests.test_unicode_duplicates_and_exclusion) ... ok
+
+======================================================================
+FAIL: test_rejected_bodies_and_invalid_length (KIEM_THU_API.ApiContract.test_rejected_bodies_and_invalid_length)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\kiem_thu\KIEM_THU_API.py", line 108, in test_rejected_bodies_and_invalid_length
+    self.assertEqual(status, 400)
+AssertionError: 413 != 400
+
+----------------------------------------------------------------------
+Ran 142 tests in 34.049s
+
+FAILED (failures=1)

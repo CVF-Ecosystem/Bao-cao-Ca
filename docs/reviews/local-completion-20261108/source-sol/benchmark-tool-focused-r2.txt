@@ -1,0 +1,40 @@
+Thư mục làm việc (xóa sau khi chạy nếu không dùng --keep): D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\.cvf\runtime\local-completion-20261108\do_hieu_nang_970qwj8x
+Tạo dữ liệu qua Store.save: 2 ca x 3 lần lưu, 1 tệp x 1 MB...
+Đo từng thành phần (lặp 1 lần)...
+Đo Protection.backup() (có KHÔNG dự phòng ngoài)...
+Đo khởi động theo đường gọi của main()...
+Đo độ trễ HTTP /api/save (1 ca)...
+
+==============================================================================
+KẾT QUẢ ĐO — Sổ báo cáo ca 1.10.0
+==============================================================================
+Máy: Windows-10-10.0.26200-SP0 | Python 3.11.9 | CPU 16 luồng
+Loại ổ đĩa (do người chạy khai): không xác định | 23 GB trống / 201 GB
+Dự phòng ngoài: không | Lặp mỗi phép đo: 1 | seed ngẫu nhiên: 20261106
+Dữ liệu: 2 ca, 6 revision (6 payload khác nhau), 1 tệp duy nhất, DB 1 MB
+  revisions 0 MB | tệp đính kèm 1 MB | payload trung bình 7.4 KB/ca | tạo dữ liệu 0 s
+
+Thành phần                                                    Lần 1  Các lần sau
+Chép DB bằng SQLite Backup API (không kiểm tra)              0.01 s            -
+quick_check                                                  0.00 s            -
+integrity_check                                              0.00 s            -
+Duyệt JSON (reports + revisions)                             0.00 s            -
+Hash SHA-256 mọi tệp đính kèm                                0.00 s            -
+Chép file DB sang ổ ngoài (chỉ chép byte)                    0.00 s            -
+snapshot() đầy đủ = chép + kiểm tra + fsync                  0.02 s            -
+Protection.backup() toàn bộ                                  0.02 s            -
+
+Khởi động (theo đường gọi của main):
+  guard_startup (main)                                              0.0 s
+  needs_adoption (main)                                             0.0 s
+  make_server (mở Store, sao lưu đầu)                               0.1 s
+  TỔNG                                                              0.1 s
+
+Độ trễ HTTP /api/save (từ lúc gửi đến lúc nhận phản hồi):
+  Lưu thường (sao lưu bị hoãn): trung vị 0.01 s, lớn nhất 0.02 s
+  Chốt ca (sao lưu ngay)      : trung vị 0.05 s, lớn nhất 0.05 s
+Tìm kiếm toàn văn "tau 3": 0.00 s, 3 ca
+
+Lưu ý: lần 1 chỉ gần với trạng thái "nguội", không xóa được bộ nhớ đệm hệ điều hành.
+Số đo chỉ có giá trị so sánh trước/sau trên cùng máy, cùng tham số và cùng loại ổ.
+Đã ghi JSON: .cvf/runtime/local-completion-20261108/benchmark-tool-focused.json

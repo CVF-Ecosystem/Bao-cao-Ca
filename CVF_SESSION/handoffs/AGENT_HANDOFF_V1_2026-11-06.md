@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: SO_BAO_CAO_CA_V1_9
-- Current mode: BUILD
-- Active phase: BUILD
-- Active role: ORCHESTRATOR
-- Next allowed move: Terra backend and Sol UI/packaging implement exact admitted LOCAL action 586b44bf after rehydration; Astra independent source/product review. No web BUILD; native print remains mandatory.
+- Current mode: REVIEW
+- Active phase: REVIEW
+- Active role: COMMIT_STEWARD
+- Next allowed move: Root commits independently accepted23-file source after final gates; Sol then builds exact clean HEAD offline and executes full packaged V1-V8/U/migration/recovery proof. Terra runtime-only large benchmark continues. No web BUILD; yard-device acceptance deferred.
 - Parked operator checkpoint: none
 
 ## Accepted current workspace
@@ -129,3 +129,19 @@ Root rehydrated current WORK_ORDER continuity, received Astra independent accept
 
 
 LOCAL r2 custody acknowledgment: one missing Worker label in the Terra design return was added, with original bytes/failure/r1 packet/receipt/reviews preserved in history. Astra independently verified the label-only delta and accepted exact586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57; SPEC and all product source remain unchanged. Root rebinds the receipt and reruns gates before actual worker dispatch; no design/effect/budget reset.
+
+
+LOCAL worker acknowledgment: Terra and Sol each rehydrated canonical BUILD, declared IMPLEMENTATION_WORKER and acknowledged exact586b44bf before their assigned source/UI writes. Root records both acknowledgments after admission commitfc3f5c8. Actual dispatch is docs/reviews/local-completion-20261108/dispatch-start.json; initial earlier dispatch intent is preserved in history and supporting effort is not reset. Sol is sole UI controller, Terra backend owner, Astra independent reviewer.
+
+
+Sol continuation acknowledgment: after its context transfer, Sol rehydrated canonical BUILD, renewed IMPLEMENTATION_WORKER declaration and exact586b44bf acknowledgment before further frontend writes. Root records the same-scope continuation; no authority, paths, effects, owner or budget changes.
+
+
+## LOCAL frozen source return / REVIEW acknowledgment — 2026-11-08
+
+Root rehydrated canonical front doors and doctor-review-intake.json CORE_ASSESSED29/29 plus4explicitbootstrapPASS. Terra and Sol froze23files with verified rawSHA/LF custody in source-return-manifest.json;210PythonPASS0skip and7JSgroupsPASS are received evidence, not independent product acceptance. Root ORCHESTRATOR/SESSION_SYNC_STEWARD transitions to REVIEW; Astra independently consolidates source/fault findings and baseline actual browser-saved print provenance. No worker source edits before accepted findings. Exact586b44bf/SPEC6e0842af remain unchanged; no EXE1.10.0 yet, no scope/effect/budget reset. Sol waits for clean accepted source commit, then owns EXE/native acceptance. Yard-machine acceptance remains deferred by operator; web phase2 not admitted.
+
+
+## LOCAL accepted source / candidate stewardship — 2026-11-08
+
+Root rehydrated canonical REVIEW and verified all23 final source hashes in Astra source-candidate-review.json (437492d0). Reviewer-local quarterly restore reminder changed only bao_ve.js and LOCAL_UI tests; all7JSgroups rerunPASS including21LOCALchecks.210Python0skip/4workspace/actualsource-smoke remain valid unchanged Python bytes; durable technical/release-source.json binds logs and preserved failures. Root transitions COMMIT_STEWARD/SESSION_SYNC_STEWARD for clean reviewed source commit, then Orchestrator for Sol exact1.10.0 build/fullnative acceptance. Baseline route eligibility accepted only; no V1/wholeLOCAL closure. L1-L8 remain pending consumerproof, near1GB seeding runs runtime-only. Arbitrary corrupt/absentmain failsclosed; supported interrupted legacy recovery stillrequiresheadedEXE proof. Exact586b44bf and SPEC unchanged, nobudgetreset/webgrant/operatorcheckpoint.

@@ -1,0 +1,131 @@
+{
+  "status": "IN_PROGRESS_NOT_ACCEPTANCE",
+  "risk": "R2",
+  "worker": "Terra backend",
+  "reviewer": "Astra independent REVIEWER",
+  "observedUtc": "2026-11-08T08:07:31.167712+00:00",
+  "sources": [
+    {
+      "path": "ma_nguon/LUU_TRU.py",
+      "sha256": "6d3037f34da4a6297a1e4453125e902b93752d018274daaafaf37bee458a55d2",
+      "snapshot": ".cvf/runtime/local-completion-20261108/astra-source-intake/LUU_TRU.py"
+    },
+    {
+      "path": "ma_nguon/NANG_CAP_CSDL.py",
+      "sha256": "7cc26e6abffb46ebaef702c4bbaa7dda5a07413e2f43d7a8339d676b4a113f99",
+      "snapshot": ".cvf/runtime/local-completion-20261108/astra-source-intake/NANG_CAP_CSDL.py"
+    },
+    {
+      "path": "ma_nguon/BAO_VE_DU_LIEU.py",
+      "sha256": "cb4c2247857b1a78555a988789f34e0cd6290d07196775893644d91864893304",
+      "snapshot": ".cvf/runtime/local-completion-20261108/astra-source-intake/BAO_VE_DU_LIEU.py"
+    },
+    {
+      "path": "ma_nguon/BAO_TRI_CSDL.py",
+      "sha256": "902f231f59f0d2fe151588c9501d5f5b18cd80722e24c537f1500d5608f0084a",
+      "snapshot": ".cvf/runtime/local-completion-20261108/astra-source-intake/BAO_TRI_CSDL.py"
+    },
+    {
+      "path": "ma_nguon/MAY_CHU.py",
+      "sha256": "64618a6f27d1fc36484eec0d4260150dabb622d61fd95719bfd98168e5ab6102",
+      "snapshot": ".cvf/runtime/local-completion-20261108/astra-source-intake/MAY_CHU.py"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_COMPLETION.py",
+      "sha256": "b4fe86427e4bc92ccbfb641146fa22980e65ccdc1401c83a80389f58492ffd35",
+      "snapshot": ".cvf/runtime/local-completion-20261108/astra-source-intake/KIEM_THU_LOCAL_COMPLETION.py"
+    }
+  ],
+  "provisionalQuestions": [
+    {
+      "id": "Q-FULL-REFERENCES",
+      "source": "BAO_VE_DU_LIEU.inspect_db",
+      "observation": "Full validation hashes existing attachment_blobs, but observed code does not resolve every attachment reference in reports/revisions/correction_base against existing blob rows or fully normalize payload. Missing referencedblob or invalid shape may be labeled fullverified. Need source-return validation/proof or focused counterexample."
+    },
+    {
+      "id": "Q-CORRECTION-IDENTITY",
+      "source": "LUU_TRU.apply_corrections",
+      "observation": "Imported schema4 correction rows written with os_user/auth_user=None even if original source has them. Confirm locked preservation intent and explain deliberate metadata loss; actor/payload preserved but source identity provenance may be lost."
+    },
+    {
+      "id": "Q-MIGRATION-COMMIT-VERIFY",
+      "source": "NANG_CAP_CSDL.upgrade",
+      "observation": "Observed commits version marker perstep before final inspect. Intermediate recovery is WIP and deliberately not called a defect yet; final review must prove failure aftercommit exposes recoverable state, no false success."
+    }
+  ],
+  "coverageNotes": [
+    "Current tests contain meaningful sixroworacle, cachecorruption, exactorphanbackup, triggerrollback, externaldisconnect and configfailure cases. Need actual report/revision-onlyblobrefs and concurrentstate/legacyfailure/native recovery evidence at finalreturn; no PASS inferred from totals.",
+    "No source edits or duplicatefullsuite. Recovery-in-progress excluded from premature REWORK."
+  ],
+  "frontendIntake": {
+    "manifest": "docs/reviews/local-completion-20261108/source-sol/source-manifest.json",
+    "manifestSha256": "a6be55863d1748cbdd8367440e98aa690cffe90ebb67d168bd43eb6e972fc012",
+    "sourceChecks": [
+      {
+        "path": "HUONG_DAN.txt",
+        "sha256": "37b9310d5db4dc6b08899f54b8ec236053746881e48ae8a09ee43504c59df30d",
+        "matchesReturnedManifest": true
+      },
+      {
+        "path": "cong_cu/DO_HIEU_NANG.py",
+        "sha256": "42c76d60ab359cbcd6926336840894088624a0a661adf82380e05849f2bc473a",
+        "matchesReturnedManifest": true
+      },
+      {
+        "path": "giao_dien/giao_dien.html",
+        "sha256": "ebcad7a5fd7af90bf7d666b9378735af2cd9915ecc8858885cd56e4d2a992870",
+        "matchesReturnedManifest": true
+      },
+      {
+        "path": "giao_dien/tai_nguyen/bao_ve.js",
+        "sha256": "a7b0ccecaecbe566413a8cdf2466c5bf09947ca4a8e08c73cd58fe3fdfb78ee7",
+        "matchesReturnedManifest": true
+      },
+      {
+        "path": "giao_dien/tai_nguyen/danh_muc.js",
+        "sha256": "7fd1578b8e590ac57c454e163bb77c105f633cf538b29b83efc6b58645e76b3a",
+        "matchesReturnedManifest": true
+      },
+      {
+        "path": "giao_dien/tai_nguyen/phan_cong_mau.js",
+        "sha256": "ac8b6a5fd7fed07ad93cfdc9f2490dde93a4120fc0ab3d06b095d3fa2fa66268",
+        "matchesReturnedManifest": true
+      },
+      {
+        "path": "giao_dien/tai_nguyen/style.css",
+        "sha256": "b7e255c4e5587caa31fdc8e56f89293dce6e2cc5947a724572f287464ec3dbce",
+        "matchesReturnedManifest": true
+      },
+      {
+        "path": "giao_dien/tai_nguyen/ung_dung.js",
+        "sha256": "c9c86317f7a7cf524bed8422faea49f6292addb06f49a80b15f635c05452e018",
+        "matchesReturnedManifest": true
+      },
+      {
+        "path": "giao_dien/tai_nguyen/local_ui.js",
+        "sha256": "e03aff1d77a637393354790703f70b1eb9722b2d12d1f46ce1dfe5b9668e85cc",
+        "matchesReturnedManifest": true
+      },
+      {
+        "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+        "sha256": "afeabf8b64414779b8b2d3da455f95d508981f41c7ff0fe5ff4bcfb527f464eb",
+        "matchesReturnedManifest": true
+      },
+      {
+        "path": "tai_lieu/THAY_DOI_V1_10_0.txt",
+        "sha256": "e99a62468b56fb8903e2bcfb1928139dbb60b735853b313406dbe15e8d83cc36",
+        "matchesReturnedManifest": true
+      }
+    ],
+    "readFiles": [
+      "giao_dien/tai_nguyen/local_ui.js",
+      "giao_dien/tai_nguyen/bao_ve.js"
+    ],
+    "observations": [
+      "Restricted recovery uses exact context/nonce/typed confirmation and separate cancellation route; generation/context checks and localBusy protect confirmation. Source implementation only; backend final return and actual failure-recovery native proof outstanding.",
+      "Ordinary existing restore uses prior id/hash contract; do not infer restricted nonce protection covers every existing restore entry point. Assess preserved normal behavior separately at consolidated return."
+    ],
+    "status": "READ_ONLY_INTAKE_NOT_ACCEPTANCE"
+  },
+  "provisionalQuestionsSentToWorker": true
+}

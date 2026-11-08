@@ -68,7 +68,7 @@ Internal engineering acceptance for the complete local release. Existing roadmap
     {
       "id": "L1",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -87,13 +87,25 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/specs/LOCAL_COMPLETION.md",
           "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-return-manifest.json",
+          "sha256": "a6f059e3de70b5e917da22655fd173223ef9dada6c1826a0002d3a440d4da777"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-source.json",
+          "sha256": "ddb3890d743241e426759084c667f8b32fb17174bfc305392d413cd8111ade0c"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+          "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
         }
       ]
     },
     {
       "id": "L2",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -112,13 +124,25 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/specs/LOCAL_COMPLETION.md",
           "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-return-manifest.json",
+          "sha256": "a6f059e3de70b5e917da22655fd173223ef9dada6c1826a0002d3a440d4da777"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-source.json",
+          "sha256": "ddb3890d743241e426759084c667f8b32fb17174bfc305392d413cd8111ade0c"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+          "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
         }
       ]
     },
     {
       "id": "L3",
-      "state": "NOT_STARTED",
-      "gap": "U1-U14 implementation remains; nativecontroloserror3 is an evidenced proof blocker, independent of sourceimplementation; noV1closurewithout realdialogs.",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "U1-U14 source accepted including quarterly reminder; exact1.10.0 Chrome/Edge short/long headers-on/off native matrix and full U consumer checks pending.",
       "owner": "Sol UI/native proof with Root blockerownership",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -137,13 +161,25 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/specs/LOCAL_COMPLETION.md",
           "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-return-manifest.json",
+          "sha256": "a6f059e3de70b5e917da22655fd173223ef9dada6c1826a0002d3a440d4da777"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-source.json",
+          "sha256": "ddb3890d743241e426759084c667f8b32fb17174bfc305392d413cd8111ade0c"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+          "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
         }
       ]
     },
     {
       "id": "L4",
-      "state": "NOT_STARTED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -162,13 +198,25 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/specs/LOCAL_COMPLETION.md",
           "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-return-manifest.json",
+          "sha256": "a6f059e3de70b5e917da22655fd173223ef9dada6c1826a0002d3a440d4da777"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-source.json",
+          "sha256": "ddb3890d743241e426759084c667f8b32fb17174bfc305392d413cd8111ade0c"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+          "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
         }
       ]
     },
     {
       "id": "L5",
-      "state": "NOT_STARTED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -187,13 +235,25 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/specs/LOCAL_COMPLETION.md",
           "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-return-manifest.json",
+          "sha256": "a6f059e3de70b5e917da22655fd173223ef9dada6c1826a0002d3a440d4da777"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-source.json",
+          "sha256": "ddb3890d743241e426759084c667f8b32fb17174bfc305392d413cd8111ade0c"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+          "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
         }
       ]
     },
     {
       "id": "L6",
-      "state": "NOT_STARTED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -212,13 +272,25 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/specs/LOCAL_COMPLETION.md",
           "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-return-manifest.json",
+          "sha256": "a6f059e3de70b5e917da22655fd173223ef9dada6c1826a0002d3a440d4da777"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-source.json",
+          "sha256": "ddb3890d743241e426759084c667f8b32fb17174bfc305392d413cd8111ade0c"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+          "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
         }
       ]
     },
     {
       "id": "L7",
       "state": "NOT_STARTED",
-      "gap": "Near1GB currenthost benchmark and largeheadedUI proof missing; actual deploymenthost classification pending operator logistics.",
+      "gap": "Near1GB real Store.save workload is being seeded under owned runtime; actual byte size, baseline/current timings and exact EXE headed large-data/40valid-image proof pending.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -242,8 +314,8 @@ Internal engineering acceptance for the complete local release. Existing roadmap
     },
     {
       "id": "L8",
-      "state": "NOT_STARTED",
-      "gap": "Complete exact-version implementation and developer-owned consumer/failure evidence under linked SPEC required.",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -262,6 +334,18 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/specs/LOCAL_COMPLETION.md",
           "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-return-manifest.json",
+          "sha256": "a6f059e3de70b5e917da22655fd173223ef9dada6c1826a0002d3a440d4da777"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-source.json",
+          "sha256": "ddb3890d743241e426759084c667f8b32fb17174bfc305392d413cd8111ade0c"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+          "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
         }
       ]
     }

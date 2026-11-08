@@ -224,7 +224,7 @@ Phát triển bởi Mr Ân / Tân Thuận
 
 8. KIỂM THỬ VÀ GIỚI HẠN
 - Cấu trúc mã nguồn, luồng dữ liệu và danh sách API: tai_lieu\CATALOG_CAU_TRUC.md.
-- CHAY_KIEM_THU.bat chạy 154 kiểm thử Python (13 file kiem_thu\KIEM_THU*.py) bằng dữ liệu tạm.
+- cong_cu\CHAY_KIEM_THU.bat chạy các bộ kiem_thu\KIEM_THU*.py và kiem_thu\KIEM_THU*.js bằng dữ liệu tạm. Số lượng hiện tại nằm trong kết quả từng đợt.
   Kiểm chứng 1.9.1 ngày 2026-11-06: 3 lượt liên tiếp 154/154 OK trên Windows.
   Kết quả từng lần chạy: tai_lieu\BAO_CAO_CODEX_DOT1.md.
 - Hợp đồng API: tai_lieu\API.md. Đo hiệu năng trên DB giả lập: python cong_cu\DO_HIEU_NANG.py
@@ -241,7 +241,11 @@ Phát triển bởi Mr Ân / Tân Thuận
   --commit <ma_Git_12_ky_tu> --version 1.9.1. Không dùng EXE cũ để thử mã mới.
 - Khi phục hồi: tắt tool và khôi phục chương trình từ bản dự phòng.
   Giữ riêng DB mới nhất, tránh ghi đè bằng DB sao lưu cũ gây mất lần nhập
-  sau mốc sao lưu. Bản này không nâng schema DB.
+  sau mốc sao lưu. Các bản trước 1.10 không nâng lên schema 4; xem lưu ý 1.10.0 bên dưới.
 
 NHẬP NHÂN VIÊN TỪ EXCEL (1.9.2)
 Mở Danh mục nhân sự / công việc, chọn Nhập nhân viên Excel. Chọn file .xlsx danh sách phẳng tối đa 2 MiB, chọn sheet, hàng tiêu đề, số cột họ tên và các cột mã/chức danh/nhóm nếu có. Xem từng dòng, bỏ chọn dòng không muốn nhập rồi xem trước lại; xác nhận khi không còn lỗi. Chỉ tên được lưu, không tự gán tổ. File báo cáo ca, file mã hóa, macro và công thức trong cột chọn không được hỗ trợ. Nếu xuất hiện cảnh báo cần phục hồi, dừng sửa danh mục và giữ mã bản sao được thông báo.
+
+
+BẢN LOCAL 1.10.0 / SCHEMA 4
+Xem tai_lieu\THAY_DOI_V1_10_0.txt để nâng DB, hủy/xác nhận tác vụ bảo trì, đọc lịch sử và giữ bản sao trước nâng cấp. DB schema 4 cần chương trình mới trên mọi máy sử dụng. Không mở bằng bản 1.9.x; khi quay về bản cũ phải dùng bản sao tương ứng và giữ riêng DB mới. Kiểm thử khói phải truyền đúng --version 1.10.0 và commit của EXE đang dùng. Alt+1/2/3/4 chuyển tab; Esc hủy hộp thoại khi chưa xác nhận/lưu.

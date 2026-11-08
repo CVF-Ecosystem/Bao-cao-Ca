@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sổ báo cáo ca • Bãi Container</title>
 <link rel="stylesheet" href="/tai_nguyen/style.css"></head><body>
-<div class="layout"><aside><div class="brand"><span class="brand-mark">TT</span><div><small>TÂN THUẬN</small><br>Sổ báo cáo ca</div></div><nav>
+<a class="skipLink" href="#mainContent">Bỏ qua menu, tới nội dung</a><div class="layout"><aside><div class="brand"><span class="brand-mark">TT</span><div><small>TÂN THUẬN</small><br>Sổ báo cáo ca</div></div><nav>
 <div class="navgroup">
 <button data-page="home" class="active" onclick="go('home')">Tổng quan</button>
 <button data-page="edit" class="navcta" onclick="newShift()">＋ Nhập ca mới</button>
@@ -21,13 +21,13 @@
 <button onclick="openImport()">Nhập bổ sung từ DB</button>
 </details>
 <button class="navexit" onclick="exitTool()">Thoát tool</button>
-</nav><div class="foot"><span class="credit-label">Phát triển bởi</span><strong class="credit-name">Mr Ân / Tân Thuận</strong><span class="app-release"><span class="status-dot"></span><span id="appVersion">Phiên bản 1.9.0</span></span></div></aside>
-<main class="content"><header><div><div class="muted subtle" id="today"></div><h1 id="title">Tổng quan báo cáo</h1></div><div id="mode"></div></header>
+</nav><div class="foot"><span class="credit-label">Phát triển bởi</span><strong class="credit-name">Mr Ân / Tân Thuận</strong><span class="app-release"><span class="status-dot"></span><span id="appVersion"></span></span></div></aside>
+<main class="content" id="mainContent" tabindex="-1"><header><div><div class="muted subtle" id="today"></div><h1 id="title">Tổng quan báo cáo</h1></div><div id="mode"></div></header>
 <div id="viewerNote" class="note hide">Đang xem <strong>bản sao dữ liệu</strong>. Không thể nhập hoặc sửa. Dữ liệu mới sau thời điểm sao lưu chưa có trong bản này. <button class="small" onclick="returnMain()">Về DB chính của máy</button></div>
 <div id="backupWarning" class="note warn hide"></div><section id="home"></section><section id="edit" class="hide"></section>
 <section id="list" class="hide"><div class="card" id="filters"></div><div class="card"><div class="row between"><h2>Báo cáo đã lưu</h2><span class="muted subtle" id="listCount"></span></div><div class="scroll" id="reportList"></div></div></section>
 <section id="summary" class="hide"><div class="card" id="summaryFilters"></div><div id="summaryData"></div></section>
 </main></div>
-<div class="modalback hide" id="modal"><div class="modal" id="modalBody"></div></div><div class="toast hide" id="toast" role="status"></div>
+<div class="modalback hide" id="modal"><div class="modal" id="modalBody"></div></div><div class="toast hide" id="toast" role="status" tabindex="0" title="Bấm để đóng thông báo" onclick="this.classList.add('hide')"></div>
 <input type="file" accept=".db,.sqlite,.sqlite3" class="hide" id="dbFile" onchange="readDB(this)"><input type="file" accept=".db,.sqlite,.sqlite3" class="hide" id="importFile" onchange="previewImport(this)">
-<script src="/tai_nguyen/bao_ve.js" defer></script><script src="/tai_nguyen/ung_dung.js" defer></script><script src="/tai_nguyen/phan_cong_mau.js" defer></script><script src="/tai_nguyen/danh_muc.js" defer></script></body></html>
+<script src="/tai_nguyen/bao_ve.js" defer></script><script src="/tai_nguyen/ung_dung.js" defer></script><script src="/tai_nguyen/local_ui.js" defer></script><script src="/tai_nguyen/phan_cong_mau.js" defer></script><script src="/tai_nguyen/danh_muc.js" defer></script></body></html>

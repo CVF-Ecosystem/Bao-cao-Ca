@@ -2,8 +2,8 @@
   "schemaVersion": "1.0",
   "continuityContract": "cvf.downstreamContinuityContract@1.0.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "currentMode": "BUILD",
-  "activePhase": "BUILD",
+  "currentMode": "REVIEW",
+  "activePhase": "REVIEW",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,9 +14,9 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
-  "nextAllowedMove": "Terra backend and Sol UI/packaging implement exact admitted LOCAL action 586b44bf after rehydration; Astra independent source/product review. No web BUILD; native print remains mandatory.",
+  "nextAllowedMove": "Root commits independently accepted23-file source after final gates; Sol then builds exact clean HEAD offline and executes full packaged V1-V8/U/migration/recovery proof. Terra runtime-only large benchmark continues. No web BUILD; yard-device acceptance deferred.",
   "parkedOperatorCheckpoint": null,
-  "activeRole": "ORCHESTRATOR",
+  "activeRole": "COMMIT_STEWARD",
   "roleRoute": "INDEPENDENT_WORKER_AND_REVIEWER",
   "updatedAt": "2026-11-08"
 }

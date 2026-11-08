@@ -74,6 +74,7 @@ def seed(store, profile, rng, say):
     staff_pool = ['NHAN VIEN %02d' % i for i in range(30)]
     blobs = []
     for i in range(profile['blobs']):
+        # Synthetic storage/hash payload only; NOT a decodable image/render oracle.
         raw = b'\xff\xd8\xff' + rng.randbytes(profile['blob_mb'] * 1024 * 1024)
         blobs.append(store.upload_attachment(raw, 'anh_%d.jpg' % i, 'NGUOI NHAP'))
     start = dt.date(2024, 1, 1)
@@ -87,7 +88,7 @@ def seed(store, profile, rng, say):
                 if k == profile['saves'] - 1 and blobs:
                     report['attachments'] = [dict(blobs[(n * 2 + (shift == 'NIGHT')) % len(blobs)], caption='')]
                 reason = 'Chốt ca' if report['status'] == 'closed' else ''
-                version = store.save(report, version, reason)['version']
+                version = store.save(report, version, reason, save_kind='close' if report['status']=='closed' else 'manual')['version']
         if n % 20 == 19:
             say('  seed %d/%d ca' % ((n + 1) * 2, total))
 
@@ -122,12 +123,12 @@ def measure_http(server, rng, count):
             for k in range(3):
                 report = make_report(rng, day, 'DAY', k, False, staff_pool)
                 took, saved = timed(lambda: http_call(opener, base, '/api/save',
-                                                      dict(report=report, version=version, reason='', context=app['context'])))
+                                                      dict(report=report, version=version, reason='', context=app['context'], save_kind='auto')))
                 version = saved['version']
                 auto.append(took)
             report = make_report(rng, day, 'DAY', 9, True, staff_pool)
             took, _ = timed(lambda: http_call(opener, base, '/api/save',
-                                              dict(report=report, version=version, reason='Chốt ca', context=app['context'])))
+                                              dict(report=report, version=version, reason='Chốt ca', context=app['context'], save_kind='close')))
             close.append(took)
     finally:
         server.shutdown()
@@ -166,10 +167,15 @@ def main():
     if min(profile.values()) < 1 or args.repeat < 1:
         p.error('các tham số phải >= 1')
     rng = random.Random(args.seed)
-    work = Path(tempfile.mkdtemp(prefix='do_hieu_nang_', dir=args.dir))
+    work = Path(tempfile.mkdtemp(prefix='do_hieu_nang_', dir=args.dir)).resolve()
     data_dir = work / 'DU_LIEU'
     say = lambda text: print(text, flush=True)  # noqa: E731
-    result = dict(version=VERSION, profile=profile, disk_label=args.disk_label)
+    result = dict(version=VERSION, profile=profile, disk_label=args.disk_label,
+                  python=platform.python_version(), platform=platform.platform(), work=str(work),
+                  started_at=dt.datetime.now().astimezone().isoformat(),
+                  attachment_semantics='Synthetic JPEG-header/random bytes for storage/hash only, not image rendering',
+                  retained_workload='Changed manual saves then close; HTTP auto saves measured separately',
+                  free_bytes_before=shutil.disk_usage(work).free)
     try:
         say('Thư mục làm việc (xóa sau khi chạy nếu không dùng --keep): ' + str(work))
         data_dir.mkdir()
@@ -190,6 +196,13 @@ def main():
                 blobs_mb=round(c.execute('SELECT SUM(LENGTH(data)) FROM attachment_blobs').fetchone()[0] / 2**20),
                 distinct_revision_payloads=c.execute('SELECT COUNT(DISTINCT payload) FROM revisions').fetchone()[0])
         result['data']['db_mb'] = round(db.stat().st_size / 2**20)
+        result['data']['db_bytes'] = db.stat().st_size
+        with store.connect() as c:
+            result['data']['blobs_bytes'] = c.execute('SELECT COALESCE(SUM(LENGTH(data)),0) FROM attachment_blobs').fetchone()[0]
+        result['data']['target_1GB_reached'] = db.stat().st_size >= 1_000_000_000
+        result['free_bytes_after_seed'] = shutil.disk_usage(work).free
+        if result['free_bytes_after_seed'] < 5 * 2**30 + db.stat().st_size * (5 if args.external else 3):
+            raise RuntimeError('Insufficient disk reserve for bounded benchmark copies; seeded data retained only with --keep')
 
         protection = Protection(data_dir)
         protection.initialize()
@@ -266,6 +279,9 @@ def main():
         say('Đo độ trễ HTTP /api/save (%d ca)...' % args.http_reports)
         auto, close = measure_http(server, rng, args.http_reports)
         server.server_close()
+        with store.connect() as c:
+            result['after_http'] = dict(reports=c.execute('SELECT COUNT(*) FROM reports').fetchone()[0],
+                                        revisions=c.execute('SELECT COUNT(*) FROM revisions').fetchone()[0])
         result['http_save_s'] = dict(auto_median=round(statistics.median(auto), 2), auto_max=round(max(auto), 2),
                                      close_median=round(statistics.median(close), 2), close_max=round(max(close), 2))
 

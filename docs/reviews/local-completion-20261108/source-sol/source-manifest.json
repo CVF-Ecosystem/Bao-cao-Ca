@@ -1,0 +1,60 @@
+{
+  "action": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+  "files": [
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "37b9310d5db4dc6b08899f54b8ec236053746881e48ae8a09ee43504c59df30d",
+      "LF": true
+    },
+    {
+      "path": "cong_cu/DO_HIEU_NANG.py",
+      "sha256": "42c76d60ab359cbcd6926336840894088624a0a661adf82380e05849f2bc473a",
+      "LF": true
+    },
+    {
+      "path": "giao_dien/giao_dien.html",
+      "sha256": "ebcad7a5fd7af90bf7d666b9378735af2cd9915ecc8858885cd56e4d2a992870",
+      "LF": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/bao_ve.js",
+      "sha256": "a7b0ccecaecbe566413a8cdf2466c5bf09947ca4a8e08c73cd58fe3fdfb78ee7",
+      "LF": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "sha256": "7fd1578b8e590ac57c454e163bb77c105f633cf538b29b83efc6b58645e76b3a",
+      "LF": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/phan_cong_mau.js",
+      "sha256": "ac8b6a5fd7fed07ad93cfdc9f2490dde93a4120fc0ab3d06b095d3fa2fa66268",
+      "LF": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/style.css",
+      "sha256": "b7e255c4e5587caa31fdc8e56f89293dce6e2cc5947a724572f287464ec3dbce",
+      "LF": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/ung_dung.js",
+      "sha256": "c9c86317f7a7cf524bed8422faea49f6292addb06f49a80b15f635c05452e018",
+      "LF": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/local_ui.js",
+      "sha256": "e03aff1d77a637393354790703f70b1eb9722b2d12d1f46ce1dfe5b9668e85cc",
+      "LF": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+      "sha256": "afeabf8b64414779b8b2d3da455f95d508981f41c7ff0fe5ff4bcfb527f464eb",
+      "LF": true
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_10_0.txt",
+      "sha256": "e99a62468b56fb8903e2bcfb1928139dbb60b735853b313406dbe15e8d83cc36",
+      "LF": true
+    }
+  ]
+}

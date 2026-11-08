@@ -18,11 +18,32 @@ import socket
 import zipfile
 from http.server import BaseHTTPRequestHandler
 from THIET_LAP import VERSION, MAX_FILE, MAX_DB, ASSETS, VN, KEYS, build_info
-from NGHIEP_VU import now, suggest, shift_label, AppError, file_type, database_error
+from NGHIEP_VU import now, suggest, shift_label, AppError, file_type, database_error, ClosingConnection
 from LUU_TRU import Store
-from BAO_VE_DU_LIEU import Protection, SessionLock
+from BAO_VE_DU_LIEU import Protection, SessionLock, _database_stamp
 from QUAN_LY_DANH_MUC import Catalogs, PersonnelSaveError
+from NANG_CAP_CSDL import plan_upgrade, upgrade
+from BAO_TRI_CSDL import preview as maintenance_preview, confirm as maintenance_confirm, register_viewer, MaintenanceError
 from BAO_CAO_EXCEL import aggregate, monthly_tables, styled_xlsx, report_table
+
+def clear_pending_context(app):
+    for key in ('pending_personnel','pending_maintenance','pending_upgrade','pending_recovery','pending_import'):
+        app.pop(key,None)
+
+
+def local_json(raw, headers):
+    if headers.get_content_type() != 'application/json':
+        raise AppError('Cần dữ liệu JSON.')
+    def unique(pairs):
+        value={}
+        for key,item in pairs:
+            if key in value: raise ValueError('duplicate')
+            value[key]=item
+        return value
+    value=json.loads(raw,object_pairs_hook=unique)
+    if not isinstance(value,dict): raise AppError('Dữ liệu không hợp lệ.')
+    return value
+
 
 def int_param(query, name, default, low, high):
     """Số nguyên trong query; sai kiểu hoặc ngoài khoảng thì báo lỗi rõ thay vì lỗi 500."""
@@ -181,15 +202,22 @@ class Handler(BaseHTTPRequestHandler):
                   '/tai_nguyen/style.css': 'text/css; charset=utf-8',
                   '/tai_nguyen/ung_dung.js': 'application/javascript; charset=utf-8',
                   '/tai_nguyen/danh_muc.js': 'application/javascript; charset=utf-8',
-                  '/tai_nguyen/phan_cong_mau.js': 'application/javascript; charset=utf-8'}
+                  '/tai_nguyen/phan_cong_mau.js': 'application/javascript; charset=utf-8',
+                  '/tai_nguyen/local_ui.js': 'application/javascript; charset=utf-8'}
         if u.path in assets:
             self.send_data((ASSETS / 'giao_dien' / u.path.lstrip('/')).read_bytes(), assets[u.path])
         elif u.path == '/':
             self.send_data((ASSETS / 'giao_dien' / 'giao_dien.html').read_bytes(), 'text/html; charset=utf-8')
         elif u.path == '/api/info':
+            if self.app.get('migration_required'):
+                self.send_data(dict(version=VERSION, context=self.app['context'], migrationRequired=True,
+                    schemaVersion=store.meta('schema_version'), capabilities=dict(migration=True,saveKinds=False,
+                    revisionDiff=False,hideShips=False,backupLevels=False,maintenance=False),lastFull=None))
+                return
             catalog = self.app['catalogs']
+            pin = self.app['protection'].config.get('last_full_local') if store is self.app['main_store'] and self.app['protection']._pin_name('last_full_local') else None
             data = catalog.sync() if store is self.app['main_store'] else catalog.snapshot(store)
-            self.send_data(dict(suggestion=suggest(), jobs=data['jobs'], roles=data['roles'], version=VERSION, build=build_info(),
+            self.send_data(dict(migrationRequired=False, schemaVersion=store.meta('schema_version'), capabilities=dict(migration=False, saveKinds=True, revisionDiff=True, hideShips=store is self.app['main_store'] and not store.readonly, backupLevels=True, maintenance=store is self.app['main_store'] and not store.readonly), lastFull=({'at':pin['at'],'databaseId':pin['database_id'],'location':'local'} if pin and isinstance(pin.get('at'),str) else None), suggestion=suggest(), jobs=data['jobs'], roles=data['roles'], version=VERSION, build=build_info(),
                                 people=data['people'], teams=data['teams'], staff_templates=data['staff_templates'], ships=store.ships(), catalog_warning=catalog.warning if store is self.app['main_store'] else '',
                                 readonly=store.readonly, database=store.path.name, now=now(),
                                 context=self.app['context'],
@@ -197,6 +225,10 @@ class Handler(BaseHTTPRequestHandler):
                                 reviewer=store.meta('reviewer_name') if store.path != self.app['main_store'].path else '',
                                 backup_warning=self.app.get('backup_warning', ''),
                                 backup_level=self.app.get('backup_level', '')))
+        elif self.app.get('migration_required') and u.path == '/api/protection':
+            self.send_data(dict(backups=self.app['protection'].recovery_candidates(),migrationRequired=True))
+        elif self.app.get('migration_required'):
+            raise AppError('Cần nâng cấp DB trước khi sử dụng.', 409)
         elif u.path == '/api/protection':
             self.send_data(self.app['protection'].status())
         elif u.path == '/api/catalogs':
@@ -212,6 +244,7 @@ class Handler(BaseHTTPRequestHandler):
         elif u.path == '/api/report':
             self.send_data(store.get(q.get('id', '')))
         elif u.path == '/api/history':
+            if q.get('context') != self.app['context']: raise AppError('DB đã đổi.',409)
             self.send_data(store.history(q.get('id', '')))
         elif u.path == '/api/attachment':
             if q.get('context') != self.app['context']:
@@ -369,6 +402,9 @@ class Handler(BaseHTTPRequestHandler):
         if urllib.parse.urlsplit(self.path).path.startswith('/api/personnel-xlsx-'):
             return self.personnel_post()
         unread = True
+        local_routes = ('/api/maintenance-preview','/api/maintenance-confirm','/api/maintenance-cancel',
+                        '/api/schema-upgrade-preview','/api/schema-upgrade-confirm','/api/schema-upgrade-cancel','/api/restore-preview','/api/restore','/api/restore-cancel','/api/ships-hide','/api/save')
+        local_route = urllib.parse.urlsplit(self.path).path in local_routes
         try:
             self.authorize()
             if self.headers.get('X-Ca-Request') != '1':
@@ -379,9 +415,12 @@ class Handler(BaseHTTPRequestHandler):
             length = self.request_length()
             route = urllib.parse.urlsplit(self.path)
             query = dict(urllib.parse.parse_qsl(route.query))
+            if self.app.get('migration_required') and route.path not in ('/api/schema-upgrade-preview','/api/schema-upgrade-confirm','/api/schema-upgrade-cancel','/api/restore-preview','/api/restore','/api/restore-cancel','/api/shutdown'):
+                raise AppError('Cần nâng cấp DB trước khi sử dụng.',409)
             is_db = route.path in ('/api/open-viewer', '/api/corrections-preview')
             limit = MAX_DB if is_db else MAX_FILE if route.path == '/api/attachment-upload' else 4 * 1024 * 1024
             if not 0 <= length <= limit:
+                if local_route: raise AppError('Yêu cầu quá lớn.',413)
                 raise AppError('DB tối đa 8 GB; mỗi ảnh/PDF tối đa 100 MB.')
             unread = False
             uploaded = None
@@ -403,7 +442,121 @@ class Handler(BaseHTTPRequestHandler):
                 raw = b''
             else:
                 raw = self.rfile.read(length)
-            if self.path in ('/api/protection-directory', '/api/protection-config', '/api/protection-backup', '/api/restore-preview', '/api/restore'):
+            if self.app.get('migration_required') and self.path in ('/api/restore-preview','/api/restore','/api/restore-cancel'):
+                p=local_json(raw,self.headers)
+                keys={'context','id'} if self.path.endswith('preview') else {'context'} if self.path.endswith('cancel') else {'context','nonce','confirmation'}
+                if set(p)!=keys or p.get('context')!=self.app['context'] or self.app['store'] is not self.app['main_store']:
+                    raise AppError('Phiên khôi phục đã thay đổi.',409)
+                if self.path.endswith('cancel'):
+                    self.app.pop('pending_recovery',None)
+                    self.send_data(dict(cancelled=True))
+                elif self.path.endswith('preview'):
+                    self.app.pop('pending_recovery',None)
+                    info=self.app['protection'].recovery_preview(p['id'])
+                    nonce=secrets.token_hex(16)
+                    self.app['pending_recovery']=dict(id=p['id'],sha256=info['sha256'],context=p['context'],
+                        main_stamp=_database_stamp(self.app['protection'].db),nonce=nonce,expires=time.monotonic()+300)
+                    self.send_data(dict(info,nonce=nonce,expiresInSeconds=300))
+                else:
+                    pending=self.app.pop('pending_recovery',None)
+                    if (p.get('confirmation')!='KHOI PHUC' or not pending or p.get('nonce')!=pending['nonce'] or
+                            pending['context']!=p['context'] or time.monotonic()>=pending['expires']):
+                        raise AppError('Phiên khôi phục đã hết hạn hoặc chưa xác nhận.',409)
+                    try:
+                        result=self.app['protection'].restore_recovery(pending['id'],pending['sha256'],pending['main_stamp'])
+                        view=Store(self.app['protection'].db,readonly=True)
+                        if view.meta('schema_version') not in ('1','2','3'): raise AppError('DB khôi phục không phải bản cũ.')
+                        self.app['store']=self.app['main_store']=view
+                        self.app['migration_required']=True
+                        self.app.pop('pending_upgrade',None)
+                        clear_pending_context(self.app)
+                        self.app['context']=secrets.token_hex(16)
+                        result['context']=self.app['context']
+                        self.send_data(result)
+                    except Exception:
+                        if _database_stamp(self.app['protection'].db)!=pending['main_stamp']:
+                            self.send_data(dict(error='Khôi phục chưa xác minh; dừng sửa và giữ bản trước khôi phục.',code='RECOVERY_REQUIRED'),status=500)
+                        else: raise
+            elif self.path in ('/api/maintenance-preview','/api/maintenance-confirm','/api/maintenance-cancel'):
+                p = local_json(raw,self.headers)
+                if not isinstance(p,dict) or p.get('context')!=self.app['context'] or self.app['store'] is not self.app['main_store'] or self.app['store'].readonly or self.app['store'].meta('review_copy')=='1':
+                    raise AppError('Về DB chính trước khi bảo trì.',409)
+                if self.path.endswith('preview'):
+                    self.app.pop('pending_maintenance',None)
+                    if set(p)!={'context','kind'} or p['kind'] not in ('viewer_cleanup','orphan_blobs','restore_drill'):
+                        raise AppError('Loại bảo trì không hợp lệ.')
+                    items,values=maintenance_preview(self.app,p['kind'])
+                    nonce=secrets.token_hex(16)
+                    self.app['pending_maintenance']=dict(nonce=nonce,kind=p['kind'],values=values,context=p['context'],expires=time.monotonic()+300)
+                    response=dict(kind=p['kind'],items=items,count=len(items),nonce=nonce,expiresInSeconds=300)
+                    if p['kind']=='orphan_blobs':
+                        with self.app['main_store'].connect() as c:
+                            response['totalBytes']=sum(c.execute('SELECT length(data) FROM attachment_blobs WHERE hash=?',(digest,)).fetchone()[0] for digest in values)
+                    self.send_data(response)
+                elif self.path.endswith('cancel'):
+                    if set(p)!={'context','kind'}: raise AppError('Dữ liệu không hợp lệ.')
+                    self.app.pop('pending_maintenance',None)
+                    self.send_data(dict(cancelled=True))
+                else:
+                    plan=self.app.pop('pending_maintenance',None)
+                    if set(p)!={'context','nonce'} or not plan or p['nonce']!=plan['nonce'] or plan['context']!=p['context'] or time.monotonic()>=plan['expires']:
+                        raise AppError('Phiên bảo trì đã hết hạn.',409)
+                    self.send_data(maintenance_confirm(self.app,plan['kind'],plan['values']))
+            elif self.path in ('/api/schema-upgrade-preview', '/api/schema-upgrade-confirm', '/api/schema-upgrade-cancel'):
+                p = local_json(raw,self.headers)
+                expected_keys = {'context'} if self.path.endswith(('preview','cancel')) else {'context','nonce'}
+                if not isinstance(p,dict) or set(p) != expected_keys or p.get('context') != self.app['context'] or not self.app.get('migration_required'):
+                    raise AppError('Phiên nâng cấp đã thay đổi.',409)
+                if self.path.endswith('cancel'):
+                    self.app.pop('pending_upgrade',None)
+                    self.send_data(dict(cancelled=True))
+                elif self.path.endswith('preview'):
+                    self.app.pop('pending_upgrade',None)
+                    plan = plan_upgrade(self.app['data_dir'] / 'BAO_CAO_CA.db')
+                    nonce = secrets.token_hex(16)
+                    self.app['pending_upgrade'] = dict(plan=plan,nonce=nonce,context=self.app['context'],expires=time.monotonic()+300)
+                    self.send_data({**{k:v for k,v in plan.items() if k not in ('stamp','manifestName','sourceDatabaseId')},'nonce':nonce,'expiresInSeconds':300})
+                else:
+                    pending = self.app.pop('pending_upgrade',None)
+                    if not pending or p.get('nonce') != pending['nonce'] or pending['context'] != self.app['context'] or time.monotonic()>=pending['expires']:
+                        raise AppError('Phiên xem trước đã hết hạn.',409)
+                    plan=pending['plan']
+                    try:
+                        upgrade(self.app['data_dir'] / 'BAO_CAO_CA.db',plan)
+                        store=Store(self.app['data_dir'] / 'BAO_CAO_CA.db')
+                        protection=self.app['protection']
+                        if protection.config.get('database_id') not in (None,'',plan['databaseId']):
+                            from BAO_VE_DU_LIEU import atomic_json
+                            archive=self.app['data_dir'] / 'TRUOC_TIEP_NHAN' / ('CAU_HINH_CU_'+secrets.token_hex(8)+'.json')
+                            atomic_json(archive,protection.config)
+                            protection.config={}
+                        for key in ('verified_cache','last_full_local','last_full_external','last_validation'):
+                            protection.config.pop(key,None)
+                        protection.initialize(store)
+                        self.app['store']=self.app['main_store']=store
+                        self.app['catalogs']=Catalogs(self.app['data_dir'].parent/'DANH_MUC',store)
+                        self.app['catalogs'].sync()
+                        self.app['migration_required']=False
+                        clear_pending_context(self.app)
+                        self.app['context']=secrets.token_hex(16)
+                        daily_backup(self.app,full=True)
+                        self.send_data(dict(schemaVersion='4',databaseId=plan['databaseId'],backupName=plan['backupName'],context=self.app['context']))
+                    except Exception:
+                        db=self.app['data_dir'] / 'BAO_CAO_CA.db'
+                        try:
+                            with sqlite3.connect(db.as_uri()+'?mode=ro',uri=True,factory=ClosingConnection) as conn:
+                                row=conn.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()
+                            changed=not row or row[0]!=plan['sourceSchema']
+                        except (OSError,sqlite3.Error):
+                            changed=True
+                        if changed:
+                            existing=next((step['backupName'] for step in plan['migrationSteps'] if db.with_name(step['backupName']).is_file()),None)
+                            self.send_data(dict(error='Nâng cấp chưa hoàn tất. Dừng sửa; đóng ứng dụng và khôi phục bản trước nâng cấp đã xác minh.',code='RECOVERY_REQUIRED',backupName=existing),status=500)
+                        else:
+                            raise
+            elif self.app.get('migration_required') and self.path != '/api/shutdown':
+                raise AppError('Cần nâng cấp DB trước khi sử dụng.',409)
+            elif self.path in ('/api/protection-directory', '/api/protection-config', '/api/protection-backup', '/api/restore-preview', '/api/restore'):
                 p = json.loads(raw)
                 if p.get('context') != self.app['context'] or self.app['store'] is not self.app['main_store']:
                     raise AppError('Về DB chính và tải lại trước khi thao tác bảo vệ dữ liệu.', 409)
@@ -416,7 +569,7 @@ class Handler(BaseHTTPRequestHandler):
                     daily_backup(self.app)
                     self.send_data(protection.status())
                 elif self.path == '/api/protection-backup':
-                    daily_backup(self.app)
+                    daily_backup(self.app, full=True)
                     self.send_data(protection.status())
                 elif self.path == '/api/restore-preview':
                     self.send_data(protection.preview(protection.selected(p.get('id'))))
@@ -424,12 +577,22 @@ class Handler(BaseHTTPRequestHandler):
                     if p.get('confirmation') != 'KHOI PHUC':
                         raise AppError('Cần nhập KHOI PHUC để xác nhận thay dữ liệu hiện tại.')
                     result = protection.restore(protection.selected(p.get('id')), p.get('sha256', ''))
-                    store = Store(protection.db)
+                    view = Store(protection.db, readonly=True)
+                    legacy = view.meta('schema_version') in ('1','2','3')
+                    store = view if legacy else Store(protection.db)
                     self.app['store'] = self.app['main_store'] = store
                     self.app.pop('pending_personnel', None)
+                    self.app.pop('pending_maintenance',None)
+                    clear_pending_context(self.app)
                     self.app['context'] = secrets.token_hex(16)
-                    self.app['catalogs'] = Catalogs(self.app['data_dir'].parent / 'DANH_MUC', store)
-                    daily_backup(self.app)
+                    self.app['migration_required'] = legacy
+                    if legacy:
+                        self.app.pop('catalogs',None)
+                    else:
+                        self.app['catalogs'] = Catalogs(self.app['data_dir'].parent / 'DANH_MUC', store)
+                        daily_backup(self.app)
+                    result['migrationRequired'] = legacy
+                    result['context'] = self.app['context']
                     self.send_data(result)
             elif self.path == '/api/catalogs-save':
                 p = json.loads(raw)
@@ -448,6 +611,11 @@ class Handler(BaseHTTPRequestHandler):
                 else:
                     a = self.app['store'].upload_attachment(raw, query.get('name', ''), query.get('actor', ''))
                 self.send_data(a)
+            elif self.path == '/api/ships-hide':
+                p = local_json(raw,self.headers)
+                if set(p)!={'context','name'} or p.get('context')!=self.app['context'] or self.app['store'] is not self.app['main_store']:
+                    raise AppError('DB đã đổi. Về DB chính.',409)
+                self.send_data(dict(ships=self.app['store'].hide_ship(p['name'])))
             elif self.path == '/api/ships-add':
                 p = json.loads(raw)
                 if p.get('context') != self.app['context']:
@@ -467,14 +635,22 @@ class Handler(BaseHTTPRequestHandler):
                 except Exception:
                     path.unlink(missing_ok=True)
                     raise
+                try:
+                    register_viewer(path)
+                except (OSError, AppError):
+                    logging.warning('Không thể ghi nhận bản xem; bản này sẽ không được tự dọn.')
                 self.app['store'] = newstore
                 self.app.pop('pending_personnel', None)
+                clear_pending_context(self.app)
                 self.app['context'] = secrets.token_hex(16)
+                self.app.pop('pending_maintenance',None)
                 self.send_data({'ok': True})
             elif self.path == '/api/main-db':
                 self.app['store'] = self.app['main_store']
                 self.app.pop('pending_personnel', None)
+                clear_pending_context(self.app)
                 self.app['context'] = secrets.token_hex(16)
+                self.app.pop('pending_maintenance',None)
                 self.send_data({'ok': True})
             elif self.path == '/api/enable-corrections':
                 p = json.loads(raw)
@@ -484,7 +660,9 @@ class Handler(BaseHTTPRequestHandler):
                     raise AppError('Chức năng này chỉ dùng trên bản sao DB kiểm tra.')
                 self.app['store'] = self.app['store'].enable_corrections(p.get('reviewer', ''))
                 self.app.pop('pending_personnel', None)
+                clear_pending_context(self.app)
                 self.app['context'] = secrets.token_hex(16)
+                self.app.pop('pending_maintenance',None)
                 self.send_data({'ok': True})
             elif self.path == '/api/corrections-preview':
                 if self.app['store'] is not self.app['main_store']:
@@ -508,10 +686,12 @@ class Handler(BaseHTTPRequestHandler):
                 daily_backup(self.app)
                 self.send_data(dict(ok=True, count=count))
             elif self.path == '/api/save':
-                p = json.loads(raw)
+                p = local_json(raw,self.headers)
                 if p.get('context') != self.app['context']:
                     raise AppError('DB đang mở đã thay đổi ở cửa sổ khác. Hãy tải lại tool trước khi nhập tiếp.', 409)
-                r = self.app['store'].save(p['report'], p.get('version'), p.get('reason', ''))
+                if set(p) != {'context','report','version','reason','save_kind'} or not isinstance(p['report'],dict) or {'os_user','auth_user'} & p['report'].keys() or p['save_kind'] not in ('auto','manual','close','correction'):
+                    raise AppError('Loại lưu không hợp lệ.')
+                r = self.app['store'].save(p['report'], p.get('version'), p.get('reason', ''), p['save_kind'])
                 daily_backup(self.app, force=r['status'] == 'closed')
                 self.send_data(r)
             elif self.path == '/api/backup':
@@ -526,22 +706,26 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_file(path, name)
             else:
                 raise AppError('Không tìm thấy chức năng.', 404)
+        except MaintenanceError as e:
+            self.send_data(dict(error=str(e),code='OPERATION_FAILED',completed=e.completed,retained=e.retained),status=500)
         except AppError as e:
+            result={'error':str(e)}
+            if local_route: result['code']='FORBIDDEN' if e.status==403 else 'CONFLICT' if e.status==409 else 'LIMIT_EXCEEDED' if e.status==413 else 'INVALID_INPUT'
             if unread:
-                self.reject_unread({'error': str(e)}, e.status)
+                self.reject_unread(result, e.status)
             else:
-                self.send_data({'error': str(e)}, status=e.status)
+                self.send_data(result, status=e.status)
         except (sqlite3.Error, OSError) as e:
             logging.exception('Loi tai tep / ghi DB: %s', urllib.parse.urlsplit(self.path).path)
-            self.send_data({'error': database_error(e)}, status=503 if 'locked' in str(e).lower() else 500)
+            self.send_data({'error': database_error(e), **({'code':'OPERATION_FAILED'} if local_route else {})}, status=503 if 'locked' in str(e).lower() else 500)
         except (ValueError, KeyError, TypeError, AttributeError):
-            self.send_data({'error': 'Dữ liệu gửi lên không hợp lệ.'}, status=400)
+            self.send_data({'error': 'Dữ liệu gửi lên không hợp lệ.', **({'code':'INVALID_INPUT'} if local_route else {})}, status=400)
         except Exception:
             logging.exception('Loi ghi du lieu')
             self.send_data({'error': 'Lỗi chương trình khi xử lý tệp/dữ liệu. Xem DU_LIEU/LOI_CHUONG_TRINH.log; chưa thể kết luận do dung lượng hoặc quyền ghi.'}, status=500)
 
 
-def daily_backup(app, force=True):
+def daily_backup(app, force=True, full=False):
     # Bản kiểm tra/bổ sung có luồng xuất riêng, không vào bộ phục hồi DB chính.
     if app['store'] is not app['main_store'] or app['store'].readonly:
         return
@@ -553,7 +737,8 @@ def daily_backup(app, force=True):
         protection = app['protection'] = Protection(app['data_dir'])
         protection.initialize()
     try:
-        result = protection.backup()
+        level = protection.backup_level(force_full=full)
+        result = protection.backup(level=level)
         if result is None:
             app['backup_pending'] = True
         else:
@@ -576,8 +761,15 @@ def make_server(directory, port=0, startup_check=None):
     lock = SessionLock(directory)
     server = None
     try:
-        store = Store(directory / 'BAO_CAO_CA.db')
-        protection.initialize(store)
+        db = directory / 'BAO_CAO_CA.db'
+        legacy = False
+        if db.exists() and db.stat().st_size:
+            with sqlite3.connect(db.as_uri()+'?mode=ro',uri=True,factory=ClosingConnection) as conn:
+                row=conn.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()
+                legacy=bool(row and row[0] in ('1','2','3'))
+        store = Store(db, readonly=legacy)
+        if not legacy:
+            protection.initialize(store)
         if store.meta('review_copy') == '1':
             raise AppError('Đây là DB bổ sung, không phải DB chính. Dùng Nhập bổ sung từ DB.')
         from http.server import HTTPServer
@@ -590,10 +782,11 @@ def make_server(directory, port=0, startup_check=None):
         server = ProtectedServer(('127.0.0.1', port), Handler)
         server.app = dict(store=store, main_store=store, protection=protection, data_dir=directory,
                          context=secrets.token_hex(16), token=secrets.token_urlsafe(32),
-                         host='127.0.0.1:' + str(server.server_port))
-        server.app['catalogs'] = Catalogs(directory.parent / 'DANH_MUC', store)
-        server.app['catalogs'].sync()
-        daily_backup(server.app)
+                         host='127.0.0.1:' + str(server.server_port), migration_required=legacy)
+        if not legacy:
+            server.app['catalogs'] = Catalogs(directory.parent / 'DANH_MUC', store)
+            server.app['catalogs'].sync()
+            daily_backup(server.app)
         return server
     except Exception:
         if server is not None:

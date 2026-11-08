@@ -1,0 +1,23 @@
+{
+  "status": "ROUTE_ELIGIBLE_BASELINE_ONLY",
+  "risk": "R2",
+  "worker": "Sol",
+  "reviewer": "Astra independent REVIEWER",
+  "manifest": {
+    "path": "docs/reviews/local-completion-20261108/baseline-print/artifact-manifest.json",
+    "sha256": "4ed4e13814ff6ade0802f4b573c6b27bd778e18fdc2f5ba54d1b440a1bd23b51"
+  },
+  "hashVerification": "23of23 artifact hashes matched; source23of23 matched before disclosed UI repair",
+  "inspection": "Read worker observation and actual drivers; inspected Chrome native dialog, Edge long native dialog and all four all-pages rendered PDF montages (10pages). Genuine app print invokes headed kiosk SaveasPDF; drivers observe completed disk output then retain unchanged copies. No PDF generation API or preview-byte extraction observed.",
+  "observations": [
+    "Chrome/Edge short2pages and long3pages; named fixture oracles visible, baseline no final chief signatures.",
+    "Chrome long has no separate same-report dialog witness; explicitly not full matrix.",
+    "Edge repeated same-title15second output failures retained; fresh owned profile per case is bounded routing choice, not claimed root-cause fix."
+  ],
+  "limits": [
+    "V1 NOT_ACCEPTED; final reviewed exact1.10.0 matrix remains mandatory",
+    "HeadersOFF final matrix absent; Chrome long dialog absent in baseline",
+    "OS SaveAs, physical printer, default user profile and yard-machine NOT_TESTED",
+    "No product/source or governance acceptance from baseline route"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "files": [
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/baseline-chrome-print-preview.png",
+      "sha256": "1b34961dcc608edfd96495f8ee96b2818d3e002ec25efe609257dda5fc368adb",
+      "bytes": 48825
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/baseline-msedge-print-preview.png",
+      "sha256": "fd6ace635bd37ebbeacb5ab1e5bbd1ef271623a0d2f75636a16f72b25076b2d9",
+      "bytes": 75297
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/baseline-print-observation.json",
+      "sha256": "3dd2759606bb4f953bb09c6350f71f024807afb11bd166fbca6856250c326024",
+      "bytes": 15041
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/benchmark-tool-focused-r2.txt",
+      "sha256": "5854e2399671ba726b72caaa4d816e78b1e45bb9773b93ac228b6100866a2fd1",
+      "bytes": 2844
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/benchmark-tool-focused.json",
+      "sha256": "f60fe0ddd25c23fe6b49d153748b86ce83b9a3c0db4961c13b2b12ed259d51ea",
+      "bytes": 2308
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/compact-editor.png",
+      "sha256": "f190b51eca1ade5d7dc7d135960d03402ce63446a7b6f8a9e08eb79909f96ea7",
+      "bytes": 136222
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/invalid-number.png",
+      "sha256": "672b3c8c4c7c2d364a3ac38315dc69b06ea5a30d28e43570be7e7b26f602df9d",
+      "bytes": 130339
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/js-tests.txt",
+      "sha256": "e31f4fb388be16d5d00c74f91d68a390cb4e3082953595bce7dbac81a5a29e1c",
+      "bytes": 2550
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/revision-diff.png",
+      "sha256": "cbf22984bea5ee74baaa7d9f3bd898697d587e3457c4534dfaf16052dd4ed2ab",
+      "bytes": 111890
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/signature-preview.png",
+      "sha256": "b08eb42571e258789ec9cc7cf3afcf7f3d69b393fc3308e712ee02456f144474",
+      "bytes": 95549
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/source-manifest.json",
+      "sha256": "a6be55863d1748cbdd8367440e98aa690cffe90ebb67d168bd43eb6e972fc012",
+      "bytes": 1923
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/source-ui-focused.json",
+      "sha256": "c49263204bfc05dac3cdddf393fdfa58d43f05b0220ed2d5edea1aab0ac88370",
+      "bytes": 1001
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/source-ui-initial-failure.json",
+      "sha256": "3ce27d524b52095b358a13899f16e8b614606565218df20aefedfa2f4bb18dc6",
+      "bytes": 4526
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/source-ui-toast-height-failure.json",
+      "sha256": "ad904466fc6e265f1c3106561b0207c2aa3486c795fbfc295aa8b4d6188a586d",
+      "bytes": 1852
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/sticky-staff-picker.png",
+      "sha256": "647f4a9a4d228a3c312260ca2119176bc78e1ef32bfa1ce22b23ca10993cac2c",
+      "bytes": 122939
+    }
+  ]
+}

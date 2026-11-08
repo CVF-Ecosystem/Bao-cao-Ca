@@ -1,0 +1,129 @@
+{
+  "fixtures": [
+    {
+      "fixture": "long",
+      "id": "2026-10-02_DAY",
+      "staffRows": 24,
+      "jobRows": 30,
+      "chiefs": 2,
+      "payloadSha256": "15820ead475dd80fcaab3ad89d05340eb4e568550b6723a3dcd93a797f5d8868"
+    }
+  ],
+  "exeSha256": "08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484",
+  "method": "Actual headed app Print, browser kiosk-printing Save as PDF destination in owned profile; no PDF generation API",
+  "runs": [
+    {
+      "channel": "msedge",
+      "headless": false,
+      "settingsRequested": {
+        "version": 2,
+        "selectedDestinationId": "Save as PDF",
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "account": ""
+          }
+        ],
+        "isHeaderFooterEnabled": true,
+        "isCssBackgroundEnabled": false,
+        "isLandscapeEnabled": true,
+        "mediaSize": {
+          "height_microns": 297000,
+          "width_microns": 210000,
+          "custom_display_name": "A4",
+          "is_default": true
+        },
+        "marginsType": 0,
+        "scalingType": 3,
+        "scaling": "100"
+      },
+      "outputDirectory": "msedge-output",
+      "dialog": {
+        "target": {
+          "targetId": "D24DBF8D81C51CCD032868A05FC4F119",
+          "type": "page",
+          "title": "Sổ báo cáo ca • Bãi Container",
+          "url": "edge://print/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "2685EDDF80240A8F096767F4F409372A",
+          "pid": 59188
+        },
+        "relatedTargets": [
+          {
+            "targetId": "D24DBF8D81C51CCD032868A05FC4F119",
+            "type": "page",
+            "title": "Sổ báo cáo ca • Bãi Container",
+            "url": "edge://print/",
+            "attached": false,
+            "canAccessOpener": false,
+            "browserContextId": "2685EDDF80240A8F096767F4F409372A",
+            "pid": 59188
+          },
+          {
+            "targetId": "379A6150ECC59CA09358B171760A1AD0",
+            "type": "iframe",
+            "title": "chrome-untrusted://print/7B773B44A4505E5C3A78B0E99AABE872/0/print.pdf",
+            "url": "chrome-untrusted://print/7B773B44A4505E5C3A78B0E99AABE872/0/print.pdf",
+            "attached": false,
+            "parentId": "D24DBF8D81C51CCD032868A05FC4F119",
+            "canAccessOpener": false,
+            "parentFrameId": "F5D869F40C9368301B02C3159DB9AB2A",
+            "browserContextId": "2685EDDF80240A8F096767F4F409372A",
+            "pid": 0
+          }
+        ],
+        "controls": {
+          "id": 1,
+          "result": {
+            "result": {
+              "type": "object",
+              "value": [
+                {
+                  "tag": "INPUT",
+                  "id": "control",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "control",
+                  "text": "",
+                  "value": "100",
+                  "checked": false,
+                  "disabled": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "outputs": [
+        {
+          "fixture": "long",
+          "triggerEpoch": 1794125690.0349786,
+          "completedEpoch": 1794125693.3262577,
+          "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+          "retainedCopy": "msedge-long-native-saved.pdf",
+          "bytes": 170019,
+          "sha256": "c80ba8e4fa1310d70006bdc47a5baf1a772207210dcf07f99796662e03a6ec63",
+          "pages": 3,
+          "pageTexts": [
+            "BÁO CÁO SẢN XUẤT CUỐI CA\nBỘ PHẬN BÃI CONTAINER\n06:00–18:00 ngày 02/10/2026 · BẢN NHÁP\nTàu trong ca: —\nNgười lưu: SYNTH ACTOR · 15:14:40 8/11/2026 · Phiên bản 1\nPhân công\nNhân sự\nPHỤ TRÁCH CHUNG\nSYNTH CHIEF 1; SYNTH CHIEF 2\nSYNTH POSITION 0\nSYNTH PERSON 0\nSYNTH POSITION 1\nSYNTH PERSON 1\nSYNTH POSITION 2\nSYNTH PERSON 2\nSYNTH POSITION 3\nSYNTH PERSON 3\nSYNTH POSITION 4\nSYNTH PERSON 4\nSYNTH POSITION 5\nSYNTH PERSON 5\nSYNTH POSITION 6\nSYNTH PERSON 6\nSYNTH POSITION 7\nSYNTH PERSON 7\nSYNTH POSITION 8\nSYNTH PERSON 8\nSYNTH POSITION 9\nSYNTH PERSON 9\nSYNTH POSITION 10\nSYNTH PERSON 10\nSYNTH POSITION 11\nSYNTH PERSON 11\nSYNTH POSITION 12\nSYNTH PERSON 12\nSYNTH POSITION 13\nSYNTH PERSON 13\nSYNTH POSITION 14\nSYNTH PERSON 14\n11/8/26, 3:14 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:54361\n1/3\n",
+            "Phân công\nNhân sự\nSYNTH POSITION 15\nSYNTH PERSON 15\nSYNTH POSITION 16\nSYNTH PERSON 16\nSYNTH POSITION 17\nSYNTH PERSON 17\nSYNTH POSITION 18\nSYNTH PERSON 18\nSYNTH POSITION 19\nSYNTH PERSON 19\nSYNTH POSITION 20\nSYNTH PERSON 20\nSYNTH POSITION 21\nSYNTH PERSON 21\nSYNTH POSITION 22\nSYNTH PERSON 22\nCông việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 0\nYARD 0\nX\n1\n2\n0\n1\nSYNTH JOB 1\nYARD 1\nX\n2\n2\n0\n1\nSYNTH JOB 2\nYARD 2\nX\n3\n2\n0\n1\nSYNTH JOB 3\nYARD 3\nX\n4\n2\n0\n1\nSYNTH JOB 4\nYARD 4\nX\n5\n2\n0\n1\nSYNTH JOB 5\nYARD 5\nX\n6\n2\n0\n1\nSYNTH JOB 6\nYARD 6\nX\n7\n2\n0\n1\nSYNTH JOB 7\nYARD 7\nX\n8\n2\n0\n1\nSYNTH JOB 8\nYARD 8\nX\n9\n2\n0\n1\nSYNTH JOB 9\nYARD 9\nX\n10\n2\n0\n1\nSYNTH JOB 10\nYARD 10\nX\n11\n2\n0\n1\nSYNTH JOB 11\nYARD 11\nX\n12\n2\n0\n1\nSYNTH JOB 12\nYARD 12\nX\n13\n2\n0\n1\n11/8/26, 3:14 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:54361\n2/3\n",
+            "Công việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 13\nYARD 13\nX\n14\n2\n0\n1\nSYNTH JOB 14\nYARD 14\nX\n15\n2\n0\n1\nSYNTH JOB 15\nYARD 15\nX\n16\n2\n0\n1\nSYNTH JOB 16\nYARD 16\nX\n17\n2\n0\n1\nSYNTH JOB 17\nYARD 17\nX\n18\n2\n0\n1\nSYNTH JOB 18\nYARD 18\nX\n19\n2\n0\n1\nSYNTH JOB 19\nYARD 19\nX\n20\n2\n0\n1\nSYNTH JOB 20\nYARD 20\nX\n21\n2\n0\n1\nSYNTH JOB 21\nYARD 21\nX\n22\n2\n0\n1\nSYNTH JOB 22\nYARD 22\nX\n23\n2\n0\n1\nSYNTH JOB 23\nYARD 23\nX\n24\n2\n0\n1\nSYNTH JOB 24\nYARD 24\nX\n25\n2\n0\n1\nSYNTH JOB 25\nYARD 25\nX\n26\n2\n0\n1\nSYNTH JOB 26\nYARD 26\nX\n27\n2\n0\n1\nSYNTH JOB 27\nYARD 27\nX\n28\n2\n0\n1\nSYNTH JOB 28\nYARD 28\nX\n29\n2\n0\n1\nSYNTH JOB 29\nYARD 29\nX\n30\n2\n0\n1\nTổng lượt\n465\n60\n0\n30\nGhi chú bàn giao\nBASELINE LONG PRINT ORACLE\nSố lượng là lượt công việc đã báo cáo, không phải số container duy nhất.\n11/8/26, 3:14 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:54361\n3/3\n"
+          ],
+          "oracleFound": true,
+          "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+          "OSSaveAs": "NOT_TESTED"
+        }
+      ],
+      "browserVersion": "156.0.4314.58"
+    }
+  ],
+  "cleanupExitCode": 0,
+  "elapsedSeconds": 14.875
+}

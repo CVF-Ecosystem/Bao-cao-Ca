@@ -1,0 +1,366 @@
+"""Local completion backend tests; each uses isolated synthetic fixtures."""
+import datetime as dt
+import base64
+import os
+from types import SimpleNamespace
+import hashlib
+import http.cookiejar
+import json
+import sqlite3
+import tempfile
+import threading
+import unittest
+import urllib.error
+import urllib.request
+from pathlib import Path
+from unittest.mock import patch
+
+from BAO_VE_DU_LIEU import Protection, inspect_db
+from BAO_TRI_CSDL import preview, confirm, register_viewer
+from LUU_TRU import Store, SCHEMA
+from MAY_CHU import make_server
+from NANG_CAP_CSDL import plan_upgrade, upgrade
+import NANG_CAP_CSDL
+from NGHIEP_VU import AppError, ClosingConnection
+
+
+def report(actor='Tester', status='draft', notes=''):
+    return dict(date='2026-11-08', shift='DAY', actor=actor, status=status, notes=notes,
+                staffing=[dict(role='PHỤ TRÁCH CHUNG',people='Synthetic')],
+                jobs=[dict(name='JOB',detail='',xn=False,rtg=False,f20=0,f40=0,e20=0,e40=0)],handover=[])
+
+
+def legacy(path,version):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    old=SCHEMA.replace("  payload TEXT NOT NULL, kind TEXT NOT NULL DEFAULT 'legacy', os_user TEXT, auth_user TEXT, UNIQUE(report_id, version));", "  payload TEXT NOT NULL, UNIQUE(report_id, version));").replace("VALUES('schema_version', '4')", "VALUES('schema_version', '"+version+"')")
+    with sqlite3.connect(path, factory=ClosingConnection) as c:
+        c.executescript(old)
+        c.execute("INSERT INTO meta VALUES('database_id','synthetic-dataset')")
+        c.execute("INSERT INTO people(name,active) VALUES('Synthetic',1)")
+
+
+class LocalCompletionTests(unittest.TestCase):
+    def setUp(self): self.tmp=tempfile.TemporaryDirectory(); self.root=Path(self.tmp.name)
+    def tearDown(self): self.tmp.cleanup()
+
+    def test_revision_six_row_oracle_and_conflict(self):
+        store=Store(self.root/'main.db'); version=0
+        for i in range(10):
+            r=store.save(report(notes=str(i)),version,save_kind='auto');version=r['version']
+        r=store.save(report(notes='manual'),version,save_kind='manual');version=r['version']
+        for i in range(5):
+            r=store.save(report(notes='b'+str(i)),version,save_kind='auto');version=r['version']
+        r=store.save(report(notes='b4'),version,save_kind='manual');self.assertEqual(r['version'],16)
+        for i in range(3):
+            r=store.save(report(notes='c'+str(i)),version,save_kind='auto');version=r['version']
+        r=store.save(report(actor='Other',notes='other'),version,save_kind='auto');version=r['version']
+        r=store.save(report(actor='Other',status='closed',notes='other'),version,save_kind='close');version=r['version']
+        self.assertEqual(version,21)
+        self.assertEqual([(x['version'],x['kind']) for x in reversed(store.history('2026-11-08_DAY'))],
+                         [(10,'auto'),(11,'manual'),(16,'manual'),(19,'auto'),(20,'auto'),(21,'close')])
+        with self.assertRaises(AppError) as ex: store.save(report(notes='x'),20,save_kind='manual')
+        self.assertEqual(ex.exception.status,409)
+        with self.assertRaises(AppError): store.save(report(status='closed'),21,save_kind='auto')
+
+    def test_legacy_preview_and_explicit_upgrade_all_versions(self):
+        for v in ('1','2','3'):
+            with self.subTest(schema=v):
+                path=self.root/v/'DU_LIEU'/'BAO_CAO_CA.db';legacy(path,v)
+                before=hashlib.sha256(path.read_bytes()).hexdigest();plan=plan_upgrade(path)
+                self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(),before)
+                self.assertEqual(plan['sourceSchema'],v);self.assertEqual(len(plan['migrationSteps']),4-int(v))
+                with self.assertRaises(AppError): Store(path)
+                upgrade(path,plan);self.assertEqual(Store(path,True).meta('schema_version'),'4')
+                first=path.with_name(plan['migrationSteps'][0]['backupName'])
+                self.assertEqual(Store(first,True).meta('schema_version'),v)
+                self.assertEqual(inspect_db(first)['database_id'],'synthetic-dataset')
+
+    def test_missing_legacy_identity_reserved_only_until_consent(self):
+        path=self.root/'DU_LIEU'/'BAO_CAO_CA.db';legacy(path,'3')
+        with sqlite3.connect(path,factory=ClosingConnection) as c:c.execute("DELETE FROM meta WHERE key='database_id'")
+        before=path.read_bytes(); plan=plan_upgrade(path)
+        self.assertTrue(plan['databaseId']);self.assertEqual(path.read_bytes(),before)
+        with sqlite3.connect(path,factory=ClosingConnection) as c:
+            self.assertIsNone(c.execute("SELECT value FROM meta WHERE key='database_id'").fetchone())
+        upgrade(path,plan);self.assertEqual(Store(path,True).meta('database_id'),plan['databaseId'])
+        with sqlite3.connect(path.with_name(plan['backupName']),factory=ClosingConnection) as c:
+            self.assertIsNone(c.execute("SELECT value FROM meta WHERE key='database_id'").fetchone())
+
+    def test_schema3_correction_source_is_immutable_and_imported(self):
+        target=Store(self.root/'main.db');saved=target.save(report(notes='original'),0,save_kind='manual')
+        copy=target.backup(self.root/'copy.db');source=Store(copy,True).enable_corrections('Reviewer')
+        edited=report(actor='Reviewer',notes='correction')
+        source.save(edited,saved['version'],'Updated','correction')
+        with sqlite3.connect(copy,factory=ClosingConnection) as c:
+            c.execute('CREATE TABLE old_revisions(id INTEGER PRIMARY KEY,report_id TEXT NOT NULL,version INTEGER NOT NULL,saved_at TEXT NOT NULL,actor TEXT NOT NULL,reason TEXT NOT NULL,payload TEXT NOT NULL,UNIQUE(report_id,version))')
+            c.execute('INSERT INTO old_revisions SELECT id,report_id,version,saved_at,actor,reason,payload FROM revisions')
+            c.execute('DROP TABLE revisions');c.execute('ALTER TABLE old_revisions RENAME TO revisions')
+            c.execute("UPDATE meta SET value='3' WHERE key='schema_version'")
+        before=hashlib.sha256(copy.read_bytes()).hexdigest();incoming=Store(copy,True)
+        plan=target.correction_plan(incoming);self.assertEqual(plan[0]['state'],'ready')
+        self.assertEqual(target.apply_corrections(incoming,[saved['id']]),1)
+        self.assertEqual(target.get(saved['id'])['notes'],'correction')
+        self.assertEqual(target.history(saved['id'])[0]['kind'],'correction')
+        self.assertEqual(target.history(saved['id'])[0]['actor'],'Reviewer')
+        self.assertEqual(hashlib.sha256(copy.read_bytes()).hexdigest(),before)
+
+    def test_schema4_correction_preserves_provenance_and_invalid_rolls_back(self):
+        target=Store(self.root/'main.db'); saved=target.save(report(notes='original'),0,save_kind='manual')
+        copy=target.backup(self.root/'copy.db'); source=Store(copy,True).enable_corrections('Reviewer')
+        source.save(report(actor='Reviewer',notes='corrected'),saved['version'],'Updated','correction')
+        with sqlite3.connect(copy,factory=ClosingConnection) as c:
+            c.execute("UPDATE revisions SET os_user=?,auth_user=? WHERE version>?",('SOURCE_OS','SOURCE_AUTH',saved['version']))
+        incoming=Store(copy,True)
+        with sqlite3.connect(copy,factory=ClosingConnection) as c:
+            c.execute("UPDATE revisions SET os_user=? WHERE version>?",('invalid\x01user',saved['version']))
+        with self.assertRaises(AppError): target.apply_corrections(incoming,[saved['id']])
+        self.assertEqual(target.get(saved['id'])['notes'],'original')
+        self.assertEqual(len(target.history(saved['id'])),1)
+        with sqlite3.connect(copy,factory=ClosingConnection) as c:
+            c.execute("UPDATE revisions SET os_user=? WHERE version>?",('SOURCE_OS',saved['version']))
+        target.apply_corrections(incoming,[saved['id']])
+        item=target.history(saved['id'])[0]
+        self.assertEqual((item['kind'],item['os_user'],item['auth_user']),('correction','SOURCE_OS','SOURCE_AUTH'))
+
+    def test_full_verification_rejects_missing_references_and_malformed_payloads(self):
+        for table in ('reports','revisions','correction_base'):
+            for malformed in (False,True):
+                with self.subTest(table=table,malformed=malformed):
+                    directory=self.root/(table+str(malformed))/'DU_LIEU'
+                    store=Store(directory/'BAO_CAO_CA.db'); saved=store.save(report(),0,save_kind='manual')
+                    prot=Protection(directory);prot.initialize(store);prot.backup('full');pin=dict(prot.config['last_full_local'])
+                    payload=report();payload['attachments']=[dict(hash='a'*64,name='missing.png')]
+                    if malformed: payload['jobs']=[42]
+                    with store.connect() as c:
+                        if table=='correction_base':
+                            c.execute('INSERT INTO correction_base VALUES(?,?,?)',(saved['id'],1,json.dumps(payload)))
+                        else:
+                            c.execute('UPDATE '+table+' SET payload=?',(json.dumps(payload),))
+                    with self.assertRaises(AppError): prot.backup('full')
+                    self.assertEqual(prot.config['last_full_local'],pin)
+
+    def test_upgrade_collision_and_source_change_refuse(self):
+        path=self.root/'DU_LIEU'/'BAO_CAO_CA.db';legacy(path,'3');plan=plan_upgrade(path)
+        original=path.read_bytes();backup=path.with_name(plan['backupName']);backup.write_bytes(b'existing')
+        with self.assertRaises(AppError):upgrade(path,plan)
+        self.assertEqual(path.read_bytes(),original);self.assertEqual(backup.read_bytes(),b'existing')
+        backup.unlink();plan=plan_upgrade(path)
+        with sqlite3.connect(path, factory=ClosingConnection) as c:c.execute("INSERT INTO meta VALUES('modified','yes')")
+        with self.assertRaises(AppError):upgrade(path,plan)
+        self.assertFalse(backup.exists())
+
+    def test_quick_cache_full_corruption_and_pin(self):
+        directory=self.root/'data'/'DU_LIEU';store=Store(directory/'BAO_CAO_CA.db');prot=Protection(directory);prot.initialize(store)
+        raw=b'synthetic blob';digest=hashlib.sha256(raw).hexdigest()
+        with store.connect() as c:c.execute("INSERT INTO attachment_blobs VALUES(?,?,?,?,?)",(digest,'application/pdf',raw,'2000-01-01T00:00:00+07:00','test'))
+        first=prot.backup('full');pin=dict(prot.config['last_full_local'])
+        self.assertTrue(first.exists());self.assertEqual(prot.backup_level(),'quick')
+        with store.connect() as c:c.execute('UPDATE attachment_blobs SET data=? WHERE hash=?',(b'corrupted',digest))
+        quick=prot.backup('quick');self.assertTrue(quick.exists())
+        with self.assertRaises(AppError):prot.backup('full')
+        self.assertEqual(prot.config['last_full_local'],pin);prot.prune(prot.local,pinned=pin['name'])
+        self.assertTrue(first.exists())
+        later=dt.datetime.fromisoformat(pin['at'])+dt.timedelta(hours=24)
+        self.assertEqual(prot.backup_level(now_time=later),'full')
+
+    def test_orphan_full_snapshot_then_delete(self):
+        directory=self.root/'d'/'DU_LIEU';store=Store(directory/'BAO_CAO_CA.db');prot=Protection(directory);prot.initialize(store)
+        raw=b'old orphan';digest=hashlib.sha256(raw).hexdigest()
+        with store.connect() as c:c.execute('INSERT INTO attachment_blobs VALUES(?,?,?,?,?)',(digest,'test',raw,'2000-01-01T00:00:00+07:00','x'))
+        app=dict(data_dir=directory,main_store=store,store=store,protection=prot)
+        items,values=preview(app,'orphan_blobs');self.assertEqual(len(items),1)
+        result=confirm(app,'orphan_blobs',values);self.assertEqual(result['completed'],1)
+        with store.connect() as c:self.assertEqual(c.execute('SELECT COUNT(*) FROM attachment_blobs').fetchone()[0],0)
+        pinned=prot.local/prot.config['last_full_local']['name']
+        with sqlite3.connect(pinned, factory=ClosingConnection) as c:self.assertEqual(c.execute('SELECT COUNT(*) FROM attachment_blobs').fetchone()[0],1)
+
+    def test_orphan_references_reupload_and_transaction_failure(self):
+        directory=self.root/'maint'/'DU_LIEU';store=Store(directory/'BAO_CAO_CA.db');prot=Protection(directory);prot.initialize(store)
+        png=base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aC1sAAAAASUVORK5CYII=')
+        blob=store.upload_attachment(png,'x.png','test');fresh=blob['hash']; raw=b'old'; orphan=hashlib.sha256(raw).hexdigest()
+        with store.connect() as c:
+            c.execute("UPDATE attachment_blobs SET uploaded_at='2000-01-01T00:00:00+07:00' WHERE hash=?",(fresh,))
+            c.execute('INSERT INTO attachment_blobs VALUES(?,?,?,?,?)',(orphan,'test',raw,'2000-01-01T00:00:00+07:00','x'))
+            c.execute('INSERT INTO correction_base VALUES(?,?,?)',('2026-01-01_DAY',1,json.dumps({'attachments':[{'hash':orphan}]})))
+        store.upload_attachment(png,'x.png','test')
+        app=dict(data_dir=directory,main_store=store,store=store,protection=prot)
+        self.assertEqual(preview(app,'orphan_blobs')[1],[])
+        with store.connect() as c:
+            c.execute('DELETE FROM correction_base')
+            c.execute("CREATE TRIGGER stop_delete BEFORE DELETE ON attachment_blobs BEGIN SELECT RAISE(ABORT,'injected'); END")
+        items,values=preview(app,'orphan_blobs');self.assertEqual(values,[orphan])
+        with self.assertRaises(sqlite3.IntegrityError):confirm(app,'orphan_blobs',values)
+        with store.connect() as c:self.assertEqual(c.execute('SELECT count(*) FROM attachment_blobs').fetchone()[0],2)
+        full=prot.local/prot.config['last_full_local']['name'];self.assertTrue(full.exists())
+        with sqlite3.connect(full,factory=ClosingConnection) as c:self.assertEqual(c.execute('SELECT count(*) FROM attachment_blobs').fetchone()[0],2)
+
+    def test_viewer_custody_age_open_pending_and_modified_refuse(self):
+        directory=self.root/'viewer'/'DU_LIEU';store=Store(directory/'BAO_CAO_CA.db');prot=Protection(directory);prot.initialize(store)
+        folder=directory/'DB_KIEM_TRA';folder.mkdir()
+        path=folder/'ban_sao_0123456789abcdef.db';store.backup(path);register_viewer(path)
+        old=(dt.datetime.now().timestamp()-31*86400);os.utime(path,(old,old))
+        app=dict(data_dir=directory,main_store=store,store=store,protection=prot)
+        self.assertEqual(len(preview(app,'viewer_cleanup')[1]),1)
+        app['pending_import']=dict(source=SimpleNamespace(path=path.resolve()))
+        self.assertEqual(preview(app,'viewer_cleanup')[1],[]);app.pop('pending_import')
+        app['store']=SimpleNamespace(path=path.resolve());self.assertEqual(preview(app,'viewer_cleanup')[1],[]);app['store']=store
+        with sqlite3.connect(path,factory=ClosingConnection) as c:c.execute("INSERT OR REPLACE INTO meta VALUES('review_copy','1')")
+        os.utime(path,(old,old));self.assertEqual(preview(app,'viewer_cleanup')[1],[]);self.assertTrue(path.exists())
+
+    def test_backup_wall_clock_and_invalid_marker(self):
+        directory=self.root/'clock'/'DU_LIEU';store=Store(directory/'BAO_CAO_CA.db');prot=Protection(directory);prot.initialize(store)
+        prot.backup('full');pin=prot.config['last_full_local'];t=dt.datetime.fromisoformat(pin['at'])
+        self.assertEqual(prot.backup_level(now_time=t+dt.timedelta(hours=23,minutes=59)),'quick')
+        self.assertEqual(prot.backup_level(now_time=t+dt.timedelta(hours=24)),'full')
+        self.assertEqual(prot.backup_level(now_time=t-dt.timedelta(seconds=1)),'full')
+        prot.config['last_full_local']={'at':'broken','name':'../unsafe','database_id':store.meta('database_id')}
+        self.assertEqual(prot.backup_level(),'full')
+
+    def test_unknown_schema_fails_without_source_mutation(self):
+        path=self.root/'unknown'/'DU_LIEU'/'BAO_CAO_CA.db';legacy(path,'3')
+        with sqlite3.connect(path,factory=ClosingConnection) as c:c.execute("UPDATE meta SET value='99' WHERE key='schema_version'")
+        original=path.read_bytes()
+        with self.assertRaises(AppError):make_server(path.parent)
+        self.assertEqual(path.read_bytes(),original)
+        self.assertFalse(list(path.parent.glob('*_TRUOC_NANG_CAP*.db')))
+
+    def test_external_disconnected_keeps_old_external_pin(self):
+        directory=self.root/'ext'/'DU_LIEU';external=self.root/'external';external.mkdir()
+        store=Store(directory/'BAO_CAO_CA.db');prot=Protection(directory);prot.initialize(store);prot.set_external(str(external))
+        prot.backup('full');old_external=dict(prot.config['last_full_external']);old_path=prot.external()/old_external['name'];self.assertTrue(old_path.exists())
+        original=Path.is_dir
+        def disconnected(path):
+            if path==external: return False
+            return original(path)
+        with patch.object(Path,'is_dir',disconnected):local=prot.backup('full')
+        self.assertTrue(local.exists());self.assertEqual(prot.warning_level,'error');self.assertEqual(prot.config['last_full_external'],old_external)
+        self.assertTrue(old_path.exists())
+
+    def test_failed_full_pin_update_retains_previous_verified_pin(self):
+        directory=self.root/'pin'/'DU_LIEU';store=Store(directory/'BAO_CAO_CA.db');prot=Protection(directory);prot.initialize(store)
+        first=prot.backup('full');old=dict(prot.config['last_full_local']);disk_before=prot.config_path.read_bytes()
+        with patch('BAO_VE_DU_LIEU.atomic_json',side_effect=OSError('injected config fsync')):
+            with self.assertRaises(OSError):prot.backup('full')
+        self.assertEqual(prot.config['last_full_local'],old);self.assertEqual(prot.config_path.read_bytes(),disk_before)
+        self.assertTrue(first.exists());self.assertEqual(inspect_db(first)['database_id'],store.meta('database_id'))
+
+    def test_restore_legacy_backup_returns_to_restricted_migration(self):
+        directory=self.root/'restore'/'DU_LIEU';server=make_server(directory)
+        thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+        client=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()));base='http://'+server.app['host']
+        def post(route,body):
+            req=urllib.request.Request(base+route,data=json.dumps(body).encode(),headers={'Content-Type':'application/json','X-Ca-Request':'1'})
+            return json.load(client.open(req))
+        try:
+            client.open(base+'/?launch='+server.app['token']).read();ctx=server.app['context']
+            prot=server.app['protection']; backup=prot.local/'legacy.db';legacy(backup,'3')
+            with sqlite3.connect(backup,factory=ClosingConnection) as c:
+                c.execute("UPDATE meta SET value=? WHERE key='database_id'",(prot.config['database_id'],))
+            candidate=next(x for x in prot.candidates() if x['name']=='legacy.db')
+            view=post('/api/restore-preview',dict(context=ctx,id=candidate['id']))
+            result=post('/api/restore',dict(context=ctx,id=candidate['id'],sha256=view['sha256'],confirmation='KHOI PHUC'))
+            self.assertTrue(result['migrationRequired']);self.assertTrue(Path(result['preserved']).is_file())
+            info=json.load(client.open(base+'/api/info'));self.assertTrue(info['migrationRequired'])
+            plan=post('/api/schema-upgrade-preview',dict(context=info['context']))
+            self.assertEqual(plan['sourceSchema'],'3')
+        finally:server.shutdown();thread.join();server.server_close()
+
+    def test_intermediate_upgrade_failure_reports_recoverable_snapshot(self):
+        directory=self.root/'failed'/'DU_LIEU';path=directory/'BAO_CAO_CA.db';legacy(path,'1')
+        with sqlite3.connect(path,factory=ClosingConnection) as c:c.execute("DELETE FROM meta WHERE key='database_id'")
+        server=make_server(directory);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+        client=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()));base='http://'+server.app['host']
+        def post(route,body):
+            req=urllib.request.Request(base+route,data=json.dumps(body).encode(),headers={'Content-Type':'application/json','X-Ca-Request':'1'})
+            return json.load(client.open(req))
+        try:
+            client.open(base+'/?launch='+server.app['token']).read();ctx=server.app['context']
+            plan=post('/api/schema-upgrade-preview',dict(context=ctx));original=NANG_CAP_CSDL.snapshot
+            def interrupted(source,dest):
+                if str(dest).endswith('_2_3.db'):raise OSError('injected second-stage failure')
+                return original(source,dest)
+            with patch('NANG_CAP_CSDL.snapshot',side_effect=interrupted):
+                with self.assertRaises(urllib.error.HTTPError) as exc:post('/api/schema-upgrade-confirm',dict(context=ctx,nonce=plan['nonce']))
+            payload=json.load(exc.exception);self.assertEqual(payload['code'],'RECOVERY_REQUIRED')
+            self.assertEqual(payload['backupName'],plan['migrationSteps'][0]['backupName'])
+            self.assertEqual(Store(path.with_name(payload['backupName']),True).meta('schema_version'),'1')
+            self.assertEqual(Store(path,True).meta('schema_version'),'2')
+            self.assertTrue(server.app['migration_required'])
+            sources=json.load(client.open(base+'/api/protection'))['backups']
+            selected=next(row for row in sources if row['name']==payload['backupName'])
+            source=path.with_name(selected['name']);source_bytes=source.read_bytes();before=hashlib.sha256(source_bytes).hexdigest()
+            current=path.read_bytes()
+            with self.assertRaises(urllib.error.HTTPError):post('/api/restore-preview',dict(context=ctx,id=str(source)))
+            source.write_bytes(b'tampered')
+            with self.assertRaises(urllib.error.HTTPError):post('/api/restore-preview',dict(context=ctx,id=selected['id']))
+            self.assertEqual(path.read_bytes(),current)
+            source.write_bytes(source_bytes)
+            previewed=post('/api/restore-preview',dict(context=ctx,id=selected['id']))
+            with self.assertRaises(urllib.error.HTTPError):post('/api/restore-cancel',dict(context='wrong'))
+            self.assertEqual(server.app['pending_recovery']['nonce'],previewed['nonce'])
+            self.assertTrue(post('/api/restore-cancel',dict(context=ctx))['cancelled'])
+            with self.assertRaises(urllib.error.HTTPError):post('/api/restore',dict(context=ctx,nonce=previewed['nonce'],confirmation='KHOI PHUC'))
+            previewed=post('/api/restore-preview',dict(context=ctx,id=selected['id']))
+            result=post('/api/restore',dict(context=ctx,nonce=previewed['nonce'],confirmation='KHOI PHUC'))
+            self.assertTrue(result['migrationRequired']);self.assertNotEqual(result['context'],ctx)
+            self.assertTrue((directory/'TRUOC_KHOI_PHUC'/result['preservedName']).is_file())
+            self.assertEqual(Store(path,True).meta('schema_version'),'1')
+            self.assertEqual(hashlib.sha256(source.read_bytes()).hexdigest(),before)
+            ctx=result['context'];again=post('/api/schema-upgrade-preview',dict(context=ctx))
+            upgraded=post('/api/schema-upgrade-confirm',dict(context=ctx,nonce=again['nonce']))
+            self.assertEqual(upgraded['schemaVersion'],'4')
+        finally:server.shutdown();thread.join();server.server_close()
+
+    def test_http_guarded_maintenance_and_ship_hide(self):
+        directory=self.root/'http'/'DU_LIEU';server=make_server(directory)
+        thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+        client=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()));base='http://'+server.app['host']
+        def post(route,body):
+            req=urllib.request.Request(base+route,data=json.dumps(body).encode(),headers={'Content-Type':'application/json','X-Ca-Request':'1'})
+            return json.load(client.open(req))
+        try:
+            client.open(base+'/?launch='+server.app['token']).read();ctx=server.app['context'];store=server.app['store']
+            asset=client.open(base+'/tai_nguyen/local_ui.js')
+            self.assertEqual(asset.status,200);self.assertIn('javascript',asset.headers['Content-Type']);self.assertGreater(len(asset.read()),100)
+            ship=store.ships()[0];old=report(notes='unchanged');old['jobs'][0]['ships']=[ship]
+            saved=store.save(old,0,save_kind='manual');before=store.get(saved['id'])
+            result=post('/api/ships-hide',dict(context=ctx,name=ship));self.assertNotIn(ship,result['ships'])
+            self.assertEqual(store.get(saved['id']),before)
+            raw=b'http orphan';digest=hashlib.sha256(raw).hexdigest()
+            with store.connect() as c:c.execute('INSERT INTO attachment_blobs VALUES(?,?,?,?,?)',(digest,'test',raw,'2000-01-01T00:00:00+07:00','x'))
+            plan=post('/api/maintenance-preview',dict(context=ctx,kind='orphan_blobs'))
+            self.assertEqual((plan['count'],plan['totalBytes']),(1,len(raw)))
+            with self.assertRaises(urllib.error.HTTPError):post('/api/maintenance-cancel',dict(context='wrong',kind='orphan_blobs'))
+            self.assertEqual(server.app['pending_maintenance']['nonce'],plan['nonce'])
+            result=post('/api/maintenance-confirm',dict(context=ctx,nonce=plan['nonce']))
+            self.assertEqual(result['completed'],1)
+            with self.assertRaises(urllib.error.HTTPError):post('/api/maintenance-confirm',dict(context=ctx,nonce=plan['nonce']))
+            pin=server.app['protection'].config['last_full_local'];backup=server.app['protection'].local/pin['name']
+            with sqlite3.connect(backup,factory=ClosingConnection) as c:self.assertEqual(c.execute('SELECT count(*) FROM attachment_blobs').fetchone()[0],1)
+        finally:server.shutdown();thread.join();server.server_close()
+
+    def test_server_restricted_preview_and_confirmation(self):
+        directory=self.root/'DU_LIEU';path=directory/'BAO_CAO_CA.db';legacy(path,'3')
+        server=make_server(directory);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+        client=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()));base='http://'+server.app['host']
+        def post(route,body):
+            req=urllib.request.Request(base+route,data=json.dumps(body).encode(),headers={'Content-Type':'application/json','X-Ca-Request':'1'})
+            return json.load(client.open(req))
+        try:
+            client.open(base+'/?launch='+server.app['token']).read();info=json.load(client.open(base+'/api/info'))
+            self.assertTrue(info['migrationRequired']);ctx=info['context'];before=path.read_bytes()
+            plan=post('/api/schema-upgrade-preview',dict(context=ctx));self.assertEqual(path.read_bytes(),before)
+            self.assertEqual(plan['sourceSchema'],'3')
+            with self.assertRaises(urllib.error.HTTPError): post('/api/schema-upgrade-cancel',dict(context='wrong'))
+            self.assertEqual(server.app['pending_upgrade']['nonce'],plan['nonce'])
+            self.assertEqual(post('/api/schema-upgrade-cancel',dict(context=ctx)),{'cancelled':True})
+            self.assertEqual(post('/api/schema-upgrade-cancel',dict(context=ctx)),{'cancelled':True})
+            with self.assertRaises(urllib.error.HTTPError): post('/api/schema-upgrade-confirm',dict(context=ctx,nonce=plan['nonce']))
+            self.assertEqual(path.read_bytes(),before)
+            plan=post('/api/schema-upgrade-preview',dict(context=ctx))
+            result=post('/api/schema-upgrade-confirm',dict(context=ctx,nonce=plan['nonce']))
+            self.assertEqual(result['schemaVersion'],'4');self.assertNotEqual(result['context'],ctx)
+            self.assertEqual(Store(path,True).meta('schema_version'),'4')
+        finally:server.shutdown();thread.join();server.server_close()
+
+if __name__=='__main__': unittest.main(verbosity=2)

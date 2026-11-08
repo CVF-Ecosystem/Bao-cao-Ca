@@ -1,0 +1,177 @@
+{
+  "status": "SOURCE_CANDIDATE_ACCEPTED",
+  "risk": "R2",
+  "worker": "Terra backend / Sol frontend",
+  "reviewer": "Astra independent REVIEWER",
+  "action": {
+    "path": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+    "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57"
+  },
+  "spec": {
+    "path": "docs/specs/LOCAL_COMPLETION.md",
+    "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+  },
+  "files": [
+    {
+      "path": "ma_nguon/BAO_VE_DU_LIEU.py",
+      "sha256": "99cd19b28c051b0f0302dc8f984adfa57ea774908fda0fc78ae2fe768428ab64"
+    },
+    {
+      "path": "ma_nguon/LUU_TRU.py",
+      "sha256": "17ba6d6cb64677ef9bffd48b41b5b562bdbbb0a556522684f0fd5f86dad498ab"
+    },
+    {
+      "path": "ma_nguon/MAY_CHU.py",
+      "sha256": "929f263a00025f4b22f6436dc6c18473c181b4e53e4e8c445c58e656dd9350f7"
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "sha256": "628e0ed165749760adca22ab5cb9c1f751aed181389c2871ae7e39b0ff12da0e"
+    },
+    {
+      "path": "ma_nguon/BAO_TRI_CSDL.py",
+      "sha256": "902f231f59f0d2fe151588c9501d5f5b18cd80722e24c537f1500d5608f0084a"
+    },
+    {
+      "path": "ma_nguon/NANG_CAP_CSDL.py",
+      "sha256": "7cc26e6abffb46ebaef702c4bbaa7dda5a07413e2f43d7a8339d676b4a113f99"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU.py",
+      "sha256": "e83634b4ba55421b47ec4fab97a4aee29139f7c06e128dd7725cbd1baac48b4d"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_API.py",
+      "sha256": "6065b3c30f83b73ccc1b5c608db963b3da65d678484911ca5f5c0a3018d97fd1"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_V1_9.py",
+      "sha256": "a12622df1027ac2edc006056deb06381aa52d24a5f8af12727209dad2270f27c"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_KHOI_DONG.py",
+      "sha256": "d22c31a41ecb56e28a48132a16815e1d2a52c1ac343e55108f339d4902b6e425"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_COMPLETION.py",
+      "sha256": "255e0915c818355bf303e69beb376ad97dfa76ffaa6cf6beb605a0584e6d1b68"
+    },
+    {
+      "path": "tai_lieu/API.md",
+      "sha256": "d19e0850e52ba8be10260b2c992460b95b30d929a06a466f2f57c6c4ebcd525b"
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "37b9310d5db4dc6b08899f54b8ec236053746881e48ae8a09ee43504c59df30d"
+    },
+    {
+      "path": "cong_cu/DO_HIEU_NANG.py",
+      "sha256": "42c76d60ab359cbcd6926336840894088624a0a661adf82380e05849f2bc473a"
+    },
+    {
+      "path": "giao_dien/giao_dien.html",
+      "sha256": "ebcad7a5fd7af90bf7d666b9378735af2cd9915ecc8858885cd56e4d2a992870"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/bao_ve.js",
+      "sha256": "f4c7b642ae4e3a2060cb6973898b405bcc86c2a274e8a0aed873fb5a7cbd882b"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "sha256": "7fd1578b8e590ac57c454e163bb77c105f633cf538b29b83efc6b58645e76b3a"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/phan_cong_mau.js",
+      "sha256": "ac8b6a5fd7fed07ad93cfdc9f2490dde93a4120fc0ab3d06b095d3fa2fa66268"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/style.css",
+      "sha256": "b7e255c4e5587caa31fdc8e56f89293dce6e2cc5947a724572f287464ec3dbce"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/ung_dung.js",
+      "sha256": "c9c86317f7a7cf524bed8422faea49f6292addb06f49a80b15f635c05452e018"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/local_ui.js",
+      "sha256": "e03aff1d77a637393354790703f70b1eb9722b2d12d1f46ce1dfe5b9668e85cc"
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+      "sha256": "6896d3d383729e25062513e63173e3f892301322096ed716ce93c8ad1e4bc58c"
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_10_0.txt",
+      "sha256": "e99a62468b56fb8903e2bcfb1928139dbb60b735853b313406dbe15e8d83cc36"
+    }
+  ],
+  "receivedManifest": {
+    "path": "docs/reviews/local-completion-20261108/source-return-manifest.json",
+    "sha256": "a6f059e3de70b5e917da22655fd173223ef9dada6c1826a0002d3a440d4da777"
+  },
+  "scope": "Source candidate only; Root must bind final aggregate and run required gates before clean candidate commit. No whole LOCAL, native, performance or governance acceptance.",
+  "reviewFindings": [
+    {
+      "id": "FULL_REFERENCES",
+      "disposition": "RESOLVED_BY_WORKER",
+      "basis": "inspect_db normalizes report/revision/correction_base payloads and checks references against verified blob hashes; focused cases cover each table."
+    },
+    {
+      "id": "CORRECTION_PROVENANCE",
+      "disposition": "RESOLVED_BY_WORKER",
+      "basis": "apply_corrections preserves validated schema4 provenance; legacy remains null; invalid metadata rollback is tested."
+    },
+    {
+      "id": "QUARTERLY_REMINDER",
+      "disposition": "RESOLVED_REVIEWER_LOCAL",
+      "basis": "Protection status already supplies date/due flag but UI ignored them. Added rendered last-success/date and overdue90day action guidance; two behavior tests cover due/recent states. Actual node KIEM_THU_LOCAL_UI.js exit0,21checks,0skips. Only bao_ve.js and KIEM_THU_LOCAL_UI.js changed from returned23source."
+    },
+    {
+      "id": "UNREADABLE_MAIN_RECOVERY",
+      "disposition": "EXPLICIT_LIMIT_NOT_NEW_SCOPE",
+      "basis": "recovery_candidates requires readable valid main; corrupt/absent original fails closed as SPEC requires. Do not claim arbitrary corrupt-main browser recovery. Tested intermediate1to2 failure leaves readable schema2 and allows exact manifest-bound restore; actual headed packaged failure/restart remains mandatory. If admitted operation actually produces unreadable main, return concrete REWORK; never waive that observed failure."
+    }
+  ],
+  "reviewerLocalRepair": {
+    "unchangedObjective": "YES",
+    "unchangedDesign": "YES",
+    "unchangedPaths": "YES",
+    "unchangedAuthority": "YES",
+    "unchangedEffects": "YES",
+    "unchangedCommitOwner": "YES",
+    "evidenceDetermined": "YES",
+    "basis": "Missing rendering of existing accepted status fields; localized UI plus meaningful due/recent tests. Root notified before repair."
+  },
+  "sourceAssessment": [
+    "Durable upgrade manifest records origin/schema/backup SHA before each step mutation; readonly preview and explicit consent precede writes; steps transactional, pre-upgrade copies retained.",
+    "Restricted restore validates manifest-bound regular contained source/schema/full contents/hash twice, servernonce/context/expiry, preserves prior main, rotates context and stays restricted. No general foreign identity bypass.",
+    "Backup24h uses wall elapsed including downtime and rollback/malformed timestamps force full; cache identity scoped; local/external pins updated durably before pruning with prior-pin preservation on tested failures.",
+    "Maintenance locks SQLite with BEGIN IMMEDIATE, recomputes references before and after new full snapshot, includes candidate blobs; viewer custody excludes unknown/modified/open/pending copies; restore drill uses separate temporary directory. HTTPServer serializes in-process clients; cross-process hostile writes are not claimed atomic.",
+    "Save-kind six-row oracle, closed/review restrictions, CAS and correction history/provenance assessed. No full-suite duplicate. Received210Python0skip and7JSgroups are worker evidence, with reviewer-local21checks after UI repair."
+  ],
+  "evidence": [
+    {
+      "path": "docs/reviews/local-completion-20261108/worker-terra.md",
+      "sha256": "f8178a3167f6967df02779a2520a8a0907f9a91d28959916bdb96d099d02cc39"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/worker-sol.md",
+      "sha256": "82f5ec1ea7fad1e9d5b673aa3bafccb4bc6972e69613fb19c98343b18d09ca68"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/recovery-clarification.json",
+      "sha256": "ddde0c1f1a824b977b042f2a2be56068eaaee4167e779f56a8f408d17cfb4e74"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/interface-clarification.json",
+      "sha256": "0c254e2306f8259acf62cc1a6c7583170d3b6e34e3ead8039ff5065e3ccffa48"
+    }
+  ],
+  "remainingRequired": [
+    "Root durable aggregate/gates and exact clean1.10.0 EXE build/smoke",
+    "Chrome and Edge short/long headersON/OFF backgroundOFF true dialog and completed native output; final page/time/identity/signature oracles",
+    "Headed supported migration1/2/3 and intermediate failure -> knownbackup -> explicitrestore -> restart -> separateupgrade; before/after logical content and source custody",
+    "All remaining V/U exported files, correction roundtrip, valid40attachments, near1GB real benchmark, portable/defaultbrowser and maintenance workflows",
+    "Yard-device acceptance remains operator-deferred; OS/Tk dialogs unsupported unless actually exercised"
+  ]
+}

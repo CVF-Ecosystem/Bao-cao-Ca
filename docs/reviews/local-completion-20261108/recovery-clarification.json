@@ -1,0 +1,40 @@
+{
+  "status": "ACCEPTED_BOUNDED_RECOVERY_INTERPRETATION",
+  "risk": "R2",
+  "worker": "Terra backend / Sol UI",
+  "reviewer": "Astra independent REVIEWER",
+  "actionSha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+  "basis": "Locked SPEC explicitly requires a separate known-backup recovery screen, explicit consent, prior-main preservation and usable failure recovery; its restricted-session allowlist omits that mandatory mechanism. Reusing existing Protection restore ownership in that same migration/failure context fulfills the approved recovery outcome. This qualified allowlist interpretation introduces no new external effect, arbitrary source, general write permission, path family or business scope. SPEC/WO bytes stay frozen.",
+  "proposalReviewed": "Terra proposes existing GET /api/protection and POST /api/restore-preview plus /api/restore, server-known backup IDs only; generated preupgrade copies discovered through durable origin/name/SHA manifest rather than loosening normal restore identity checks.",
+  "requiredBoundary": [
+    "Restricted migration/failure session additionally permits only recovery status/candidates, restore-preview and explicit restore-confirm through existing endpoint names; ordinary reports/save/upload/catalog/GC and unrelated sources remain blocked.",
+    "All existing auth/Host/origin/header/strictJSON/context/main-dataset restrictions remain. Recovery confirmation has independent server-owned >=128bit nonce,300second expiry,singleuse and explicit separate consent; same nonce cannot authorize migration.",
+    "Server-generated durable preupgrade manifest records source origin,actual schema,backup name andSHA before source mutation. Select only those exact regular contained backup files, with no symlink/junction/pathescape or caller paths. Unknown/corrupt manifest and mismatched hash fail closed.",
+    "Legacy backup missing database_id may qualify only as exact manifest-bound copy of this dataset. Existing normal restore identity checks stay unchanged for all ordinary/foreign backup paths. Manifest existence alone never substitutes for full verification.",
+    "Preview and immediate preeffect confirm recheck exactbackuphash, full integrity/payload/blob validation, schema, current main state and pending/session lock. Changed source/nonce/context expires plan; verify existing main preservation before replacement. Retain selected backup and prior main; failures cannot report success.",
+    "After restoring legacy main, rotate context and return migrationRequired; stay restricted until separate explicit upgrade. After restoring schema4, construct writableStore only after verification/reinitialization succeeds. No silent migration during recovery.",
+    "Cancel/failedconfirm clear recoveryplan; UIgeneration and confirmingbusy behavior prevent stale recovery response or misleading cancellation."
+  ],
+  "requiredEvidence": [
+    "Actual fault during intermediate legacy upgrade preserves source/copies and exposes recovery choice",
+    "Headed exactEXE failure recovery: knownbackup preview -> explicitconfirm -> preserved oldmain/backup -> verifiedrestoreddata -> restart -> explicitupgrade where required",
+    "Wrongorigin/foreignDB/path/hash/manifest/context/replay/expiredhandle and fullverificationfailure no-write cases",
+    "Source/backup hashes and logical reports/revisions/blob identity independently compared readonly"
+  ],
+  "nativeLimit": "Actual browser-backed recovery flow can prove this admitted recovery outcome; it does not prove Tk/OS native dialogs and those remain NOT_TESTED unless separately exercised. Component --restore success alone is insufficient for L5/L8 consumer acceptance.",
+  "boundary": {
+    "unchangedObjective": "YES",
+    "unchangedDesign": "YES",
+    "unchangedPaths": "YES",
+    "unchangedAuthority": "YES",
+    "unchangedEffects": "YES",
+    "unchangedCommitOwner": "YES"
+  },
+  "limits": "Interpretation acceptance only; no implementation/product acceptance or general permission expansion.",
+  "exactCancelAndConfirmClarification": {
+    "cancel": "POST /api/restore-cancel {context:string}; unknownfields rejected, existing auth/Host/origin/header/context guards; restricted allowed; idempotent recovery-plan-only clear; returns {cancelled:true}, no DB effects.",
+    "restrictedConfirm": "POST /api/restore {context:string,nonce:string,confirmation:\"KHOI PHUC\"}; retain existing typed confirmation guard, no client source/path/id/digest. Server recovery nonce binds source/hash/mainstamp; explicit consent independent of migration.",
+    "tests": "Cancel then originalnonceconfirm409; badguard/wrongcontext leaves other plan intact; failure/expiry/contextchange consumes invalidatesplan; generation/busyguard prevents misleading cancel during effects.",
+    "scope": "Necessary cancellation mechanism under locked global plan contract; unchanged scope/effects/paths/authority. Earlier assessment retained."
+  }
+}

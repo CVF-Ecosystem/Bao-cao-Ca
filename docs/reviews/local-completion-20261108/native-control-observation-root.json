@@ -1,0 +1,10 @@
+{
+  "status": "OBSERVED_TOOL_FAILURE_NO_APP_CONTROL",
+  "at": "2026-11-08T07:47:38.220Z",
+  "tool": "mcp__cua_repl.js",
+  "request": "await cua.getState();",
+  "observedError": "failed to write kernel assets: The system cannot find the path specified. (os error 3)",
+  "completionSummaryRecorded": true,
+  "effects": "Read-only initialization failed before any app/window selection or UI input",
+  "routing": "Sol remains sole actual UI controller; finite headed browser-only native print-preview discrimination is independently assessed. No OS automation fallback, no preview/scripted PDF counted completed printing."
+}

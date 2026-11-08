@@ -1,0 +1,444 @@
+{
+  "fixtures": [
+    {
+      "fixture": "short",
+      "id": "2026-10-01_DAY",
+      "staffRows": 9,
+      "jobRows": 6,
+      "chiefs": 1,
+      "payloadSha256": "eb19a92f0298397337978e6ae552c264b68976071c7a7c9e29998b864f5c2a2c"
+    },
+    {
+      "fixture": "long",
+      "id": "2026-10-02_DAY",
+      "staffRows": 24,
+      "jobRows": 30,
+      "chiefs": 2,
+      "payloadSha256": "15820ead475dd80fcaab3ad89d05340eb4e568550b6723a3dcd93a797f5d8868"
+    }
+  ],
+  "exeSha256": "08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484",
+  "method": "Actual headed app Print, browser kiosk-printing Save as PDF destination in owned profile; no PDF generation API",
+  "runs": [
+    {
+      "channel": "chrome",
+      "headless": false,
+      "settingsRequested": {
+        "version": 2,
+        "selectedDestinationId": "Save as PDF",
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "account": ""
+          }
+        ],
+        "isHeaderFooterEnabled": true,
+        "isCssBackgroundEnabled": false,
+        "isLandscapeEnabled": true,
+        "mediaSize": {
+          "height_microns": 297000,
+          "width_microns": 210000,
+          "custom_display_name": "A4",
+          "is_default": true
+        },
+        "marginsType": 0,
+        "scalingType": 3,
+        "scaling": "100"
+      },
+      "outputDirectory": "chrome-output",
+      "dialog": {
+        "target": {
+          "targetId": "69134D1CB3369C5A687126D0A70A56C8",
+          "type": "page",
+          "title": "Sổ báo cáo ca • Bãi Container",
+          "url": "chrome://print/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "69FEAA8EF1C13BE7F826DED3D5BC84AD"
+        },
+        "relatedTargets": [
+          {
+            "targetId": "69134D1CB3369C5A687126D0A70A56C8",
+            "type": "page",
+            "title": "Sổ báo cáo ca • Bãi Container",
+            "url": "chrome://print/",
+            "attached": false,
+            "canAccessOpener": false,
+            "browserContextId": "69FEAA8EF1C13BE7F826DED3D5BC84AD"
+          },
+          {
+            "targetId": "E8916C2B68B4D41B16EC43D48D0FA38D",
+            "type": "iframe",
+            "title": "chrome-untrusted://print/AAC2DB9739FEDBF50B0B78167F4BC051/0/print.pdf",
+            "url": "chrome-untrusted://print/AAC2DB9739FEDBF50B0B78167F4BC051/0/print.pdf",
+            "attached": false,
+            "parentId": "69134D1CB3369C5A687126D0A70A56C8",
+            "canAccessOpener": false,
+            "parentFrameId": "246882AC6809B39B8EA4F7F8330B307F",
+            "browserContextId": "69FEAA8EF1C13BE7F826DED3D5BC84AD"
+          }
+        ],
+        "controls": {
+          "id": 1,
+          "result": {
+            "result": {
+              "type": "object",
+              "value": [
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "PRINT-PREVIEW-HEADER",
+                  "id": "header",
+                  "text": ""
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "select",
+                  "text": "Save as PDF\nNo destinations found",
+                  "value": "Save as PDF/local/",
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "seeMore",
+                  "text": "See more",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "All\nOdd pages only\nEven pages only\nCustom",
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "1",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "collate",
+                  "text": "\n      Collate\n    ",
+                  "checked": true,
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n      Portrait\n      Landscape\n    ",
+                  "value": "landscape",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n      Black and white\n      Color\n    ",
+                  "value": "color",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n  \n    \n      \n        Legal\n      \n    \n      \n        Letter\n      \n    \n      \n        Tabloid\n      \n    \n      \n        A0\n      \n    \n      \n        A1\n      \n    \n      \n        A2\n      \n    \n      \n        A3\n      \n    \n      \n        A4\n      \n    \n      \n        A5\n      \n    \n  \n",
+                  "value": "{\"height_microns\":279400,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":215900,\"imageable_area_top_microns\":279400,\"is_default\":true,\"name\":\"NA_LETTER\",\"width_microns\":215900,\"custom_display_name\":\"Letter\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "1\n2\n4\n6\n9\n16",
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "Default\nNone\nMinimum\nCustom",
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n  \n    \n      \n        300 dpi\n      \n    \n  \n",
+                  "value": "{\"horizontal_dpi\":300,\"is_default\":true,\"vertical_dpi\":300,\"name\":\"300 dpi\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n      \n        Default\n      \n      \n        Fit to printable area\n      \n      \n        Fit to paper\n      \n      \n        Actual size\n      \n      \n        Custom\n      \n    ",
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "value": "100",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "duplex",
+                  "text": "\n      Print on both sides\n    ",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n        \n          Flip on long edge\n        \n        \n          Flip on short edge\n        \n      ",
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "headerFooter",
+                  "text": "Headers and footers",
+                  "checked": true,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "cssBackground",
+                  "text": "Background graphics",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "rasterize",
+                  "text": "\n        Print as image\n      ",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "selectionOnly",
+                  "text": "\n        Selection only\n      ",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "button",
+                  "text": "\n      Advanced settings\n    ",
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "",
+                  "text": "Save",
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "",
+                  "text": "Cancel",
+                  "disabled": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "outputs": [
+        {
+          "fixture": "short",
+          "triggerEpoch": 1794125625.9857967,
+          "completedEpoch": 1794125629.2621903,
+          "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+          "retainedCopy": "chrome-short-native-saved.pdf",
+          "bytes": 99210,
+          "sha256": "02dfd3192f2515faf49b40b54374a12f2489eec4d3a043fa64daaa4f5f57f5f7",
+          "pages": 2,
+          "pageTexts": [
+            "BÁO CÁO SẢN XUẤT CUỐI CA\nBỘ PHẬN BÃI CONTAINER\n06:00–18:00 ngày 01/10/2026 · BẢN NHÁP\nTàu trong ca: —\nNgười lưu: SYNTH ACTOR · 15:13:35 8/11/2026 · Phiên bản 1\nPhân công\nNhân sự\nPHỤ TRÁCH CHUNG\nSYNTH CHIEF 1\nSYNTH POSITION 0\nSYNTH PERSON 0\nSYNTH POSITION 1\nSYNTH PERSON 1\nSYNTH POSITION 2\nSYNTH PERSON 2\nSYNTH POSITION 3\nSYNTH PERSON 3\nSYNTH POSITION 4\nSYNTH PERSON 4\nSYNTH POSITION 5\nSYNTH PERSON 5\nSYNTH POSITION 6\nSYNTH PERSON 6\nSYNTH POSITION 7\nSYNTH PERSON 7\nCông việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 0\nYARD 0\nX\n1\n2\n0\n1\nSYNTH JOB 1\nYARD 1\nX\n2\n2\n0\n1\nSYNTH JOB 2\nYARD 2\nX\n3\n2\n0\n1\nSYNTH JOB 3\nYARD 3\nX\n4\n2\n0\n1\nSYNTH JOB 4\nYARD 4\nX\n5\n2\n0\n1\n11/8/26, 3:13 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:54148\n1/2\n",
+            "Công việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 5\nYARD 5\nX\n6\n2\n0\n1\nTổng lượt\n21\n12\n0\n6\nGhi chú bàn giao\nBASELINE SHORT PRINT ORACLE\nSố lượng là lượt công việc đã báo cáo, không phải số container duy nhất.\n11/8/26, 3:13 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:54148\n2/2\n"
+          ],
+          "oracleFound": true,
+          "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+          "OSSaveAs": "NOT_TESTED"
+        },
+        {
+          "fixture": "long",
+          "triggerEpoch": 1794125629.6723657,
+          "completedEpoch": 1794125630.410597,
+          "filename": "Sổ báo cáo ca • Bãi Container (1).pdf",
+          "retainedCopy": "chrome-long-native-saved.pdf",
+          "bytes": 170003,
+          "sha256": "65dccbed32b6f26943feda6a4aaac054f211ff646a0d80003bc57b2a5eea149b",
+          "pages": 3,
+          "pageTexts": [
+            "BÁO CÁO SẢN XUẤT CUỐI CA\nBỘ PHẬN BÃI CONTAINER\n06:00–18:00 ngày 02/10/2026 · BẢN NHÁP\nTàu trong ca: —\nNgười lưu: SYNTH ACTOR · 15:13:35 8/11/2026 · Phiên bản 1\nPhân công\nNhân sự\nPHỤ TRÁCH CHUNG\nSYNTH CHIEF 1; SYNTH CHIEF 2\nSYNTH POSITION 0\nSYNTH PERSON 0\nSYNTH POSITION 1\nSYNTH PERSON 1\nSYNTH POSITION 2\nSYNTH PERSON 2\nSYNTH POSITION 3\nSYNTH PERSON 3\nSYNTH POSITION 4\nSYNTH PERSON 4\nSYNTH POSITION 5\nSYNTH PERSON 5\nSYNTH POSITION 6\nSYNTH PERSON 6\nSYNTH POSITION 7\nSYNTH PERSON 7\nSYNTH POSITION 8\nSYNTH PERSON 8\nSYNTH POSITION 9\nSYNTH PERSON 9\nSYNTH POSITION 10\nSYNTH PERSON 10\nSYNTH POSITION 11\nSYNTH PERSON 11\nSYNTH POSITION 12\nSYNTH PERSON 12\nSYNTH POSITION 13\nSYNTH PERSON 13\nSYNTH POSITION 14\nSYNTH PERSON 14\n11/8/26, 3:13 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:54148\n1/3\n",
+            "Phân công\nNhân sự\nSYNTH POSITION 15\nSYNTH PERSON 15\nSYNTH POSITION 16\nSYNTH PERSON 16\nSYNTH POSITION 17\nSYNTH PERSON 17\nSYNTH POSITION 18\nSYNTH PERSON 18\nSYNTH POSITION 19\nSYNTH PERSON 19\nSYNTH POSITION 20\nSYNTH PERSON 20\nSYNTH POSITION 21\nSYNTH PERSON 21\nSYNTH POSITION 22\nSYNTH PERSON 22\nCông việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 0\nYARD 0\nX\n1\n2\n0\n1\nSYNTH JOB 1\nYARD 1\nX\n2\n2\n0\n1\nSYNTH JOB 2\nYARD 2\nX\n3\n2\n0\n1\nSYNTH JOB 3\nYARD 3\nX\n4\n2\n0\n1\nSYNTH JOB 4\nYARD 4\nX\n5\n2\n0\n1\nSYNTH JOB 5\nYARD 5\nX\n6\n2\n0\n1\nSYNTH JOB 6\nYARD 6\nX\n7\n2\n0\n1\nSYNTH JOB 7\nYARD 7\nX\n8\n2\n0\n1\nSYNTH JOB 8\nYARD 8\nX\n9\n2\n0\n1\nSYNTH JOB 9\nYARD 9\nX\n10\n2\n0\n1\nSYNTH JOB 10\nYARD 10\nX\n11\n2\n0\n1\nSYNTH JOB 11\nYARD 11\nX\n12\n2\n0\n1\nSYNTH JOB 12\nYARD 12\nX\n13\n2\n0\n1\n11/8/26, 3:13 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:54148\n2/3\n",
+            "Công việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 13\nYARD 13\nX\n14\n2\n0\n1\nSYNTH JOB 14\nYARD 14\nX\n15\n2\n0\n1\nSYNTH JOB 15\nYARD 15\nX\n16\n2\n0\n1\nSYNTH JOB 16\nYARD 16\nX\n17\n2\n0\n1\nSYNTH JOB 17\nYARD 17\nX\n18\n2\n0\n1\nSYNTH JOB 18\nYARD 18\nX\n19\n2\n0\n1\nSYNTH JOB 19\nYARD 19\nX\n20\n2\n0\n1\nSYNTH JOB 20\nYARD 20\nX\n21\n2\n0\n1\nSYNTH JOB 21\nYARD 21\nX\n22\n2\n0\n1\nSYNTH JOB 22\nYARD 22\nX\n23\n2\n0\n1\nSYNTH JOB 23\nYARD 23\nX\n24\n2\n0\n1\nSYNTH JOB 24\nYARD 24\nX\n25\n2\n0\n1\nSYNTH JOB 25\nYARD 25\nX\n26\n2\n0\n1\nSYNTH JOB 26\nYARD 26\nX\n27\n2\n0\n1\nSYNTH JOB 27\nYARD 27\nX\n28\n2\n0\n1\nSYNTH JOB 28\nYARD 28\nX\n29\n2\n0\n1\nSYNTH JOB 29\nYARD 29\nX\n30\n2\n0\n1\nTổng lượt\n465\n60\n0\n30\nGhi chú bàn giao\nBASELINE LONG PRINT ORACLE\nSố lượng là lượt công việc đã báo cáo, không phải số container duy nhất.\n11/8/26, 3:13 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:54148\n3/3\n"
+          ],
+          "oracleFound": true,
+          "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+          "OSSaveAs": "NOT_TESTED"
+        }
+      ],
+      "browserVersion": "156.0.8078.81"
+    },
+    {
+      "channel": "msedge",
+      "headless": false,
+      "settingsRequested": {
+        "version": 2,
+        "selectedDestinationId": "Save as PDF",
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "account": ""
+          }
+        ],
+        "isHeaderFooterEnabled": true,
+        "isCssBackgroundEnabled": false,
+        "isLandscapeEnabled": true,
+        "mediaSize": {
+          "height_microns": 297000,
+          "width_microns": 210000,
+          "custom_display_name": "A4",
+          "is_default": true
+        },
+        "marginsType": 0,
+        "scalingType": 3,
+        "scaling": "100"
+      },
+      "outputDirectory": "msedge-output",
+      "dialog": {
+        "target": {
+          "targetId": "409278907D8B0D3021E815AEFAA410AF",
+          "type": "page",
+          "title": "Sổ báo cáo ca • Bãi Container",
+          "url": "edge://print/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "988EB1CC4D0BFC1B14D3C33299657632",
+          "pid": 25824
+        },
+        "relatedTargets": [
+          {
+            "targetId": "409278907D8B0D3021E815AEFAA410AF",
+            "type": "page",
+            "title": "Sổ báo cáo ca • Bãi Container",
+            "url": "edge://print/",
+            "attached": false,
+            "canAccessOpener": false,
+            "browserContextId": "988EB1CC4D0BFC1B14D3C33299657632",
+            "pid": 25824
+          },
+          {
+            "targetId": "2F918547090C327DBC67BA6027DBC6BB",
+            "type": "iframe",
+            "title": "chrome-untrusted://print/82CB80CB8CC8AC514027C01AE4B5AF8E/0/print.pdf",
+            "url": "chrome-untrusted://print/82CB80CB8CC8AC514027C01AE4B5AF8E/0/print.pdf",
+            "attached": false,
+            "parentId": "409278907D8B0D3021E815AEFAA410AF",
+            "canAccessOpener": false,
+            "parentFrameId": "E28CDD3C5BC901DB710FD3D286A40FD8",
+            "browserContextId": "988EB1CC4D0BFC1B14D3C33299657632",
+            "pid": 0
+          }
+        ],
+        "controls": {
+          "id": 1,
+          "result": {
+            "result": {
+              "type": "object",
+              "value": [
+                {
+                  "tag": "INPUT",
+                  "id": "control",
+                  "text": "",
+                  "value": "",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "control",
+                  "text": "",
+                  "value": "100",
+                  "checked": false,
+                  "disabled": false
+                }
+              ]
+            }
+          }
+        }
+      },
+      "outputs": [
+        {
+          "fixture": "short",
+          "triggerEpoch": 1794125639.0061736,
+          "completedEpoch": 1794125642.390238,
+          "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+          "retainedCopy": "msedge-short-native-saved.pdf",
+          "bytes": 99224,
+          "sha256": "e8188dee293da8cd05689a4c03b9ccedfe433e4742ed9b9a8c974b0bbf94f07e",
+          "pages": 2,
+          "pageTexts": [
+            "BÁO CÁO SẢN XUẤT CUỐI CA\nBỘ PHẬN BÃI CONTAINER\n06:00–18:00 ngày 01/10/2026 · BẢN NHÁP\nTàu trong ca: —\nNgười lưu: SYNTH ACTOR · 15:13:35 8/11/2026 · Phiên bản 1\nPhân công\nNhân sự\nPHỤ TRÁCH CHUNG\nSYNTH CHIEF 1\nSYNTH POSITION 0\nSYNTH PERSON 0\nSYNTH POSITION 1\nSYNTH PERSON 1\nSYNTH POSITION 2\nSYNTH PERSON 2\nSYNTH POSITION 3\nSYNTH PERSON 3\nSYNTH POSITION 4\nSYNTH PERSON 4\nSYNTH POSITION 5\nSYNTH PERSON 5\nSYNTH POSITION 6\nSYNTH PERSON 6\nSYNTH POSITION 7\nSYNTH PERSON 7\nCông việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 0\nYARD 0\nX\n1\n2\n0\n1\nSYNTH JOB 1\nYARD 1\nX\n2\n2\n0\n1\nSYNTH JOB 2\nYARD 2\nX\n3\n2\n0\n1\nSYNTH JOB 3\nYARD 3\nX\n4\n2\n0\n1\nSYNTH JOB 4\nYARD 4\nX\n5\n2\n0\n1\n11/8/26, 3:13 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:54148\n1/2\n",
+            "Công việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 5\nYARD 5\nX\n6\n2\n0\n1\nTổng lượt\n21\n12\n0\n6\nGhi chú bàn giao\nBASELINE SHORT PRINT ORACLE\nSố lượng là lượt công việc đã báo cáo, không phải số container duy nhất.\n11/8/26, 3:13 PM\nSổ báo cáo ca • Bãi Container\n127.0.0.1:54148\n2/2\n"
+          ],
+          "oracleFound": true,
+          "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+          "OSSaveAs": "NOT_TESTED"
+        }
+      ],
+      "browserVersion": "156.0.4314.58"
+    }
+  ],
+  "error": "RuntimeError: msedge native save produced no complete PDF within15s",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\native_save_experiment.py\", line 58, in <module>\n    if not completed:raise RuntimeError(channel+' native save produced no complete PDF within15s')\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: msedge native save produced no complete PDF within15s\n",
+  "cleanupExitCode": 0,
+  "elapsedSeconds": 44.84400000004098
+}

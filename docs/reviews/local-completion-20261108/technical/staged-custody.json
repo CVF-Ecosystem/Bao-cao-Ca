@@ -1,0 +1,17 @@
+{
+  "sourceReview": {
+    "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
+    "sha256": "437492d087b6ba4d85332c61c4968d78c5ad74a053ff7204e55ae11da0815635"
+  },
+  "stagedSource23RawHashesVerified": true,
+  "stagedLocalReviewRawBytesEqualWorkingFiles": true,
+  "files": 107,
+  "whitespace": {
+    "exit": 2,
+    "output": "docs/reviews/local-completion-20261108/technical/history/terra-full-final.txt:260: trailing whitespace.\n++ [] : \r\ndocs/reviews/local-completion-20261108/technical/javascript-final.txt:55: new blank line at EOF.\n"
+  },
+  "defaultDiffCheck": "Default diff --check flags literal CR in intentionally -text immutable review artifacts. Rechecked with command-local cr-at-eol while retaining blank-at-eol,blank-at-eof,space-before-tab checks. No source/evidence normalization or Git config mutation.",
+  "whitespaceDisposition": "Two remaining diff --check notices are literal original failed-log output and an aggregated command-log blank EOF, retained unchanged as evidence. Application/test source passes focused whitespace check. This is not a failed runtime test or gate.",
+  "sourceWhitespaceExit": 0,
+  "secretPatternScanSuspicions": []
+}

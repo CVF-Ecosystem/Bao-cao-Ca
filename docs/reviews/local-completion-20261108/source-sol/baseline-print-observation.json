@@ -1,0 +1,373 @@
+[
+  {
+    "channel": "chrome",
+    "headless": false,
+    "nativeSaveWitness": "NOT_TESTED",
+    "printClickObservation": "TimeoutError",
+    "browserVersion": "156.0.8078.81",
+    "targets": [
+      {
+        "type": "page",
+        "url": "chrome://print/",
+        "title": "Sổ báo cáo ca • Bãi Container",
+        "new": true
+      },
+      {
+        "type": "iframe",
+        "url": "chrome-untrusted://print/D7C28C5769A516D1D25298F83A01B074/0/print.pdf",
+        "title": "chrome-untrusted://print/D7C28C5769A516D1D25298F83A01B074/0/print.pdf",
+        "new": true
+      },
+      {
+        "type": "browser_ui",
+        "url": "chrome://omnibox-popup.top-chrome/",
+        "title": "Omnibox Popup",
+        "new": false
+      },
+      {
+        "type": "browser_ui",
+        "url": "chrome://omnibox-popup.top-chrome/omnibox_popup_aim.html",
+        "title": "Omnibox Popup",
+        "new": false
+      },
+      {
+        "type": "page",
+        "url": "http://127.0.0.1:51870/",
+        "title": "Sổ báo cáo ca • Bãi Container",
+        "new": false
+      }
+    ],
+    "contextPages": [
+      "http://127.0.0.1:51870/"
+    ],
+    "printTargets": 1,
+    "printDom": {
+      "id": 1,
+      "result": {
+        "result": {
+          "type": "object",
+          "value": {
+            "title": "Sổ báo cáo ca • Bãi Container",
+            "controls": [
+              {
+                "tag": "INPUT",
+                "id": "input",
+                "text": "",
+                "value": "",
+                "checked": false,
+                "disabled": true
+              },
+              {
+                "tag": "INPUT",
+                "id": "input",
+                "text": "",
+                "value": "",
+                "checked": false,
+                "disabled": true
+              },
+              {
+                "tag": "INPUT",
+                "id": "input",
+                "text": "",
+                "value": "",
+                "checked": false,
+                "disabled": true
+              },
+              {
+                "tag": "INPUT",
+                "id": "input",
+                "text": "",
+                "value": "",
+                "checked": false,
+                "disabled": true
+              },
+              {
+                "tag": "PRINT-PREVIEW-HEADER",
+                "id": "header",
+                "text": ""
+              },
+              {
+                "tag": "SELECT",
+                "id": "select",
+                "text": "PDF24\nSave as PDF\nNo destinations found",
+                "value": "PDF24/local/",
+                "disabled": false
+              },
+              {
+                "tag": "CR-BUTTON",
+                "id": "seeMore",
+                "text": "See more",
+                "disabled": false
+              },
+              {
+                "tag": "SELECT",
+                "id": "",
+                "text": "All\nOdd pages only\nEven pages only\nCustom",
+                "value": "0",
+                "disabled": false
+              },
+              {
+                "tag": "INPUT",
+                "id": "input",
+                "text": "",
+                "value": "",
+                "checked": false,
+                "disabled": true
+              },
+              {
+                "tag": "INPUT",
+                "id": "input",
+                "text": "",
+                "value": "1",
+                "checked": false,
+                "disabled": false
+              },
+              {
+                "tag": "CR-CHECKBOX",
+                "id": "collate",
+                "text": "\n      Collate\n    ",
+                "checked": true,
+                "disabled": false
+              },
+              {
+                "tag": "SELECT",
+                "id": "",
+                "text": "\n      Portrait\n      Landscape\n    ",
+                "value": "portrait",
+                "disabled": false
+              },
+              {
+                "tag": "SELECT",
+                "id": "",
+                "text": "Black and white\nColor",
+                "value": "color",
+                "disabled": false
+              },
+              {
+                "tag": "SELECT",
+                "id": "",
+                "text": "\n  \n    \n      \n        Letter\n      \n    \n      \n        Tabloid\n      \n    \n      \n        Legal\n      \n    \n      \n        Executive\n      \n    \n      \n        A3\n      \n    \n      \n        A4\n      \n    \n      \n        A5\n      \n    \n      \n        Envelope DL\n      \n    \n      \n        Envelope C5\n      \n    \n      \n        Envelope C3\n      \n    \n      \n        Envelope C4\n      \n    \n      \n        Envelope C6\n      \n    \n      \n        Envelope Monarch\n      \n    \n      \n        Tabloid Extra\n      \n    \n      \n        Super A\n      \n    \n      \n        A2\n      \n    \n      \n        A6\n      \n    \n      \n        11x14\n      \n    \n      \n        13x19\n      \n    \n      \n        16x20\n      \n    \n      \n        16x24\n      \n    \n      \n        2A\n      \n    \n      \n        4A\n      \n    \n      \n        8x10\n      \n    \n      \n        8x12\n      \n    \n      \n        A0\n      \n    \n      \n        A1\n      \n    \n      \n        A7\n      \n    \n      \n        A8\n      \n    \n      \n        A9\n      \n    \n      \n        A10\n      \n    \n      \n        ANSI C\n      \n    \n      \n        ANSI D\n      \n    \n      \n        ANSI E\n      \n    \n      \n        Arch A\n      \n    \n      \n        Arch C\n      \n    \n      \n        Arch D\n      \n    \n      \n        Arch E\n      \n    \n      \n        Arch E1\n      \n    \n      \n        Envelope C0\n      \n    \n      \n        Envelope C1\n      \n    \n      \n        Envelope C2\n      \n    \n      \n        Envelope 10\n      \n    \n      \n        ISO B0\n      \n    \n      \n        ISO B1\n      \n    \n      \n        ISO B2\n      \n    \n      \n        ISO B3\n      \n    \n      \n        ISO B4\n      \n    \n      \n        ISO B5\n      \n    \n      \n        ISO B6\n      \n    \n      \n        JIS B0\n      \n    \n      \n        JIS B1\n      \n    \n      \n        JIS B2\n      \n    \n      \n        JIS B3\n      \n    \n      \n        JIS B4\n      \n    \n      \n        JIS B5\n      \n    \n      \n        JIS B6\n      \n    \n      \n        RA0\n      \n    \n      \n        RA1\n      \n    \n      \n        RA2\n      \n    \n      \n        RA3\n      \n    \n      \n        RA4\n      \n    \n      \n        SRA0\n      \n    \n      \n        SRA1\n      \n    \n      \n        SRA2\n      \n    \n      \n        SRA3\n      \n    \n      \n        SRA4\n      \n    \n  \n",
+                "value": "{\"custom_display_name\":\"Letter\",\"height_microns\":279400,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":215900,\"imageable_area_top_microns\":279400,\"is_default\":true,\"name\":\"NA_LETTER\",\"vendor_id\":\"1\",\"width_microns\":215900}",
+                "disabled": false
+              },
+              {
+                "tag": "SELECT",
+                "id": "",
+                "text": "\n      1\n      2\n      4\n      6\n      9\n      16\n    ",
+                "value": "1",
+                "disabled": false
+              },
+              {
+                "tag": "SELECT",
+                "id": "",
+                "text": "\n      \n      \n        Default\n      \n      \n        None\n      \n      \n        Minimum\n      \n      \n        Custom\n      \n    ",
+                "value": "0",
+                "disabled": false
+              },
+              {
+                "tag": "SELECT",
+                "id": "",
+                "text": "\n  \n    \n      \n        72 dpi\n      \n    \n      \n        96 dpi\n      \n    \n      \n        144 dpi\n      \n    \n      \n        150 dpi\n      \n    \n      \n        200 dpi\n      \n    \n      \n        300 dpi\n      \n    \n      \n        600 dpi\n      \n    \n      \n        720 dpi\n      \n    \n      \n        1,200 dpi\n      \n    \n      \n        2,400 dpi\n      \n    \n      \n        3,600 dpi\n      \n    \n      \n        4,000 dpi\n      \n    \n  \n",
+                "value": "{\"horizontal_dpi\":600,\"is_default\":true,\"vertical_dpi\":600,\"name\":\"600 dpi\"}",
+                "disabled": false
+              },
+              {
+                "tag": "SELECT",
+                "id": "",
+                "text": "\n      \n        Default\n      \n      \n        Fit to printable area\n      \n      \n        Fit to paper\n      \n      \n        Actual size\n      \n      \n        Custom\n      \n    ",
+                "value": "0",
+                "disabled": false
+              },
+              {
+                "tag": "INPUT",
+                "id": "input",
+                "text": "",
+                "value": "100",
+                "checked": false,
+                "disabled": true
+              },
+              {
+                "tag": "CR-CHECKBOX",
+                "id": "duplex",
+                "text": "\n      Print on both sides\n    ",
+                "checked": false,
+                "disabled": false
+              },
+              {
+                "tag": "SELECT",
+                "id": "",
+                "text": "\n        \n          Flip on long edge\n        \n        \n          Flip on short edge\n        \n      ",
+                "value": "1",
+                "disabled": false
+              },
+              {
+                "tag": "CR-CHECKBOX",
+                "id": "headerFooter",
+                "text": "\n        Headers and footers\n      ",
+                "checked": true,
+                "disabled": false
+              },
+              {
+                "tag": "CR-CHECKBOX",
+                "id": "cssBackground",
+                "text": "\n        Background graphics\n      ",
+                "checked": false,
+                "disabled": false
+              },
+              {
+                "tag": "CR-CHECKBOX",
+                "id": "rasterize",
+                "text": "\n        Print as image\n      ",
+                "checked": false,
+                "disabled": false
+              },
+              {
+                "tag": "CR-CHECKBOX",
+                "id": "selectionOnly",
+                "text": "\n        Selection only\n      ",
+                "checked": false,
+                "disabled": false
+              },
+              {
+                "tag": "CR-BUTTON",
+                "id": "button",
+                "text": "\n      Advanced settings\n    ",
+                "disabled": false
+              },
+              {
+                "tag": "CR-BUTTON",
+                "id": "",
+                "text": "Print",
+                "disabled": false
+              },
+              {
+                "tag": "CR-BUTTON",
+                "id": "",
+                "text": "Cancel",
+                "disabled": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    "actualPreviewScreenshot": true,
+    "pageScreenshotObservation": "TimeoutError",
+    "nativeConclusion": "Browser targets observed; no OS save control is available through current ComputerUse initialization. Not native V1 acceptance.",
+    "cleanupExitCode": 0
+  },
+  {
+    "channel": "msedge",
+    "headless": false,
+    "nativeSaveWitness": "NOT_TESTED",
+    "printClickObservation": "TimeoutError",
+    "browserVersion": "156.0.4314.58",
+    "targets": [
+      {
+        "type": "page",
+        "url": "edge://print/",
+        "title": "Sổ báo cáo ca • Bãi Container",
+        "new": true
+      },
+      {
+        "type": "iframe",
+        "url": "chrome-untrusted://print/37213204B6C6DE7C774612BA196FBAA8/0/print.pdf",
+        "title": "chrome-untrusted://print/37213204B6C6DE7C774612BA196FBAA8/0/print.pdf",
+        "new": true
+      },
+      {
+        "type": "page",
+        "url": "http://127.0.0.1:54626/",
+        "title": "Sổ báo cáo ca • Bãi Container",
+        "new": false
+      }
+    ],
+    "contextPages": [
+      "http://127.0.0.1:54626/"
+    ],
+    "printTargets": 1,
+    "printDom": {
+      "id": 1,
+      "result": {
+        "result": {
+          "type": "object",
+          "value": {
+            "title": "Sổ báo cáo ca • Bãi Container",
+            "controls": [
+              {
+                "tag": "BUTTON",
+                "id": "input-39",
+                "text": "PDF24",
+                "value": "",
+                "disabled": false
+              },
+              {
+                "tag": "INPUT",
+                "id": "control",
+                "text": "",
+                "value": "1",
+                "checked": false,
+                "disabled": false
+              },
+              {
+                "tag": "INPUT",
+                "id": "control",
+                "text": "",
+                "value": "",
+                "checked": false,
+                "disabled": false
+              },
+              {
+                "tag": "BUTTON",
+                "id": "input-57",
+                "text": "Color",
+                "value": "",
+                "disabled": false
+              },
+              {
+                "tag": "BUTTON",
+                "id": "input-58",
+                "text": "\n    Letter\n  ",
+                "value": "",
+                "disabled": false
+              },
+              {
+                "tag": "INPUT",
+                "id": "control",
+                "text": "",
+                "value": "100",
+                "checked": false,
+                "disabled": false
+              },
+              {
+                "tag": "BUTTON",
+                "id": "input-43",
+                "text": "\n    1\n  ",
+                "value": "",
+                "disabled": false
+              },
+              {
+                "tag": "BUTTON",
+                "id": "input-59",
+                "text": "\n    600 dpi\n  ",
+                "value": "",
+                "disabled": false
+              },
+              {
+                "tag": "BUTTON",
+                "id": "input-45",
+                "text": "\n    Default\n  ",
+                "value": "",
+                "disabled": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    "actualPreviewScreenshot": true,
+    "pageScreenshotObservation": "TimeoutError",
+    "nativeConclusion": "Browser targets observed; no OS save control is available through current ComputerUse initialization. Not native V1 acceptance.",
+    "cleanupExitCode": 0
+  }
+]

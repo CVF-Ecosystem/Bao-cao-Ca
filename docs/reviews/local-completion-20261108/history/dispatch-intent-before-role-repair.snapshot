@@ -1,0 +1,26 @@
+{
+  "dispatchedAt": "2026-11-08T07:39:47.009Z",
+  "action": {
+    "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+    "sha256": "b153ee4956d7bb28533e1e42c0e2c8766a1b20913670f13fa9d0f7d47ff157b4",
+    "criteria": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "L8"
+    ]
+  },
+  "executionCeilingMinutes": 480,
+  "supportingReviewCeilingMinutes": 60,
+  "owner": "Root orchestrator and commit owner",
+  "workers": [
+    "Terra backend",
+    "Sol frontend and sole native controller"
+  ],
+  "reviewer": "Astra independent",
+  "note": "No budget reset; previous audit/admission evidence retained. Native required printing unproved."
+}

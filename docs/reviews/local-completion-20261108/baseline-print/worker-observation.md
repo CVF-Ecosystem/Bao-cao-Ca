@@ -1,0 +1,23 @@
+Risk: R2
+Worker: Sol
+Reviewer: Astra
+
+# Baseline native-save experiment — observations, not acceptance
+
+Authority: exact LOCAL action586b44bf, print-output-experiment-plan.json, unchanged frozen11 source files. Rehydrated BUILD and renewed implementation/UI declaration. Baseline EXE1.9.2 SHA08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484; fixture seeder imports exact7ce0305b6000 source extracted by local git archive into ignored runtime. Sanitized fixture defaults,9staff rows/6jobs/1chief short and24staff rows/30jobs/2chief names long; named notes oracle retained. No operational data or source changes.
+
+Method: actual headed Chrome156.0.8078.81 / Edge156.0.4314.58, app Open report -> Xem/In -> In/LưuPDF. First launch same owned persistent profile without kiosk, observe actual browser-native print target, inspect its DOM read-only and capture true dialog screenshot. The browser destination is Save as PDF, landscape, headers/footers ON and backgrounds OFF; printing preferences are limited to owned temporary profile. Close browser, relaunch same profile with supported --kiosk-printing and trigger the actual app Print button. Watch browser output directory for a newly completed readable PDF, retain an unchanged copy of that already-saved file before browser-managed cleanup. No Page.printToPDF, page.pdf, preview-byte copy, fake print controls, OS automation or user/global/security settings.
+
+Retained actual completed files:
+- chrome-short-native-saved.pdf:2pages,99210bytes,SHA02dfd3192f2515faf49b40b54374a12f2489eec4d3a043fa64daaa4f5f57f5f7.
+- chrome-long-native-saved.pdf:3pages,170003bytes,SHA65dccbed32b6f26943feda6a4aaac054f211ff646a0d80003bc57b2a5eea149b.
+- msedge-short-native-saved.pdf:2pages,99224bytes,SHAe8188dee293da8cd05689a4c03b9ccedfe433e4742ed9b9a8c974b0bbf94f07e.
+- msedge-long-native-saved.pdf:3pages,170019bytes,SHAc80ba8e4fa1310d70006bdc47a5baf1a772207210dcf07f99796662e03a6ec63.
+
+All contain matching named short/long oracle. PDF read-only QA uses existing global Python3.11.9/PyMuPDF1.27.2.2/PIL; all10 pages rendered and all four all-pages montages visually inspected. Baseline short spills to2pages, long3pages, browser headers/footers appear, and old1.9.2 has no final chief signature block: these are BEFORE observations, not layout acceptance. Dialog screenshots inspected for Chrome short and Edge long. Same-report dialog evidence exists for short Chrome/Edge and separate fresh-profile long Edge; Chrome long has completed native output with carried settings but no separate long-report dialog screenshot. Final exact1.10 matrix still requires full short/long and headers ON/OFF settings evidence on both browsers.
+
+Preserved failures/limits: first two fixture loader attempts lacked sanitized fallback filenames and stopped before app launch; fixed only ignored fixture defaults. Attempt1 completed Chrome short but driver assumed Escape closes old preview; old1.9.2 does not, so visible Close was used subsequently. Browser-managed outputs disappear at context close; attempt2 files were observed/read but not retained and are not used as final artifacts. Attempt3 retains completed Chrome short/long and Edge short. Edge second same-title save produced no newly detectable completed output within15s, including a retry detecting changed mtime/size. Cause beyond observed repeated-name behavior is unproved; no OS dialog control was attempted. Fresh owned Edge profile/output for long succeeds in14.875s. Final recommended routing uses one fresh profile/output per matrix case to avoid that observed failure, not an inferred printer fix. Actual OS SaveAs and physical printer remain NOT_TESTED. Browser-default user profile behavior is unproved.
+
+Four recorded execution attempts total128.766s (24.328+44.719+44.844+14.875); preparation/initial loader failures are additional unmeasured support within original budget. Plan creation08:09:38UTC, last actual UI execution finished approximately08:14:55UTC; no more UI after that, within10min ceiling. Every launched baseline process exited0 via owned-session cleanup. PDF QA/artifact custody followed read-only. Frozen source manifest independently rehashed unchanged11/11. Raw profiles/cookies/token session files are not copied into durable evidence. Drivers contain no literal session secrets.
+
+Conclusion proposed to independent reviewer: this demonstrates an eligible completed native-save route on both browsers using temporary profiles, with genuine same-browser report/dialog/settings witnesses for the short cases and long Edge. It does not accept V1, headers-off matrix, final1.10 print layout, yard-machine/device behavior or whole LOCAL product. All further app/native execution waits for Root's next dispatch.

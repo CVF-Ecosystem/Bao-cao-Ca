@@ -1,0 +1,9 @@
+test_disposable_repo_identity_and_drift (kiem_thu.test_project_workspace_checker.CoreIdentityTests.test_disposable_repo_identity_and_drift) ... ok
+test_fail_closed_and_explicit_packet (kiem_thu.test_project_workspace_checker.DelegationTests.test_fail_closed_and_explicit_packet) ... ok
+test_actual_native_output_and_corruption (kiem_thu.test_project_workspace_checker.NativeOutputTests.test_actual_native_output_and_corruption) ... ok
+test_bootstrap_control_set (kiem_thu.test_project_workspace_checker.NativeOutputTests.test_bootstrap_control_set) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.964s
+
+OK

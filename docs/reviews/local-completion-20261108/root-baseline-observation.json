@@ -1,0 +1,27 @@
+{
+  "role": "ORCHESTRATOR",
+  "method": "Read-only PNG visual inspection via view_image of four complete page montages, plus raw hash verification of 38 baseline/source-Sol evidence artifacts. PDF skill applied read-only; no PDF authored.",
+  "artifactManifests": [
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-print/artifact-manifest.json",
+      "sha256": "4ed4e13814ff6ade0802f4b573c6b27bd778e18fdc2f5ba54d1b440a1bd23b51"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/source-sol/artifact-manifest.json",
+      "sha256": "22fde174789c050b05846f2ba6dc51347f8812eec2e7a6adda97edfe8aa0ac7c"
+    }
+  ],
+  "mismatches": [],
+  "observed": {
+    "chromeShortPages": 2,
+    "chromeLongPages": 3,
+    "edgeShortPages": 2,
+    "edgeLongPages": 3,
+    "shortSpillsLastJobAndNotesToSecondPage": true,
+    "longContinuesStaffAndJobsAcrossPages": true,
+    "baselineBrowserHeaderHasDateTitleUrlAndPageFraction": true,
+    "baselineNoFinalChiefSignature": true,
+    "baselineDateShiftOnlyFirstPage": true
+  },
+  "limits": "Before-layout observations only. Independent Astra provenance review and exact1.10.0 completed native matrix remain required; no V1/product acceptance."
+}

@@ -34,17 +34,20 @@ async function api(path,body){
   if(!res.ok){
     const e=new Error(data.error||'Chưa hoàn tất thao tác.');
     e.status=res.status;
+    e.code=data.code;e.backupName=data.backupName;
     throw e
   }
   return data
 }
 function error(e){
-  toast(e.message||String(e),true)
+  toast((e.message||String(e))+(e.code==='RECOVERY_REQUIRED'?' · Cần phục hồi từ bản sao đã giữ'+(e.backupName?': '+e.backupName:'')+'. Dừng thay đổi dữ liệu.':''),true)
 }
 function modal(content,wide=false){
+  if(typeof invalidateLocalDialog==='function')invalidateLocalDialog();
   $('modalBody').className='modal'+(wide?' wide':'');
   $('modalBody').innerHTML=content;
-  $('modal').classList.remove('hide')
+  $('modal').classList.remove('hide');
+  if(typeof decorateLocalModal==='function')decorateLocalModal()
 }
 function closeModal(){
   $('modal').classList.add('hide');
@@ -68,6 +71,7 @@ function leave(){
 }
 async function refreshInfo(){
   info=await api('/api/info');
+  if(info.migrationRequired){$('mode').textContent='CẦN NÂNG CẤP DỮ LIỆU';$('appVersion').textContent='Phiên bản '+info.version;return}
   $('mode').innerHTML=info.review?(info.readonly?'<span class="badge viewbadge">CHỈ XEM · DB KIỂM TRA</span>':'<span class="badge draft">ĐANG BỔ SUNG · BẢN SAO DB</span>'):'<span class="badge">MÁY NHẬP BÁO CÁO</span>';
   $('viewerNote').classList.toggle('hide',!info.review);
   $('viewerNote').innerHTML=info.readonly?'Đang xem bản sao DB. Muốn sửa báo cáo ngày cũ, bấm <button class="small" onclick="enableCorrections()">Bật chỉnh sửa / bổ sung</button> <button class="small" onclick="returnMain()">Về DB chính của máy</button>':'Đang chỉnh sửa trên <strong>bản sao DB</strong>. Lưu từng ca kèm lý do, sau đó <button class="small" onclick="backup()">Xuất DB đã bổ sung</button> để mang về máy chính nhập lại. <button class="small" onclick="returnMain()">Về DB chính của máy</button>';
@@ -90,6 +94,7 @@ async function go(name){
   setPage(name);
   try{
     await refreshInfo();
+    if(info.migrationRequired){renderMigration();return}
     if(name==='home')await renderHome();
     if(name==='list'){
       renderFilters('filters','l');
@@ -120,6 +125,7 @@ function reportRows(rows){
   return rows.length?'<div class="scroll"><table><thead><tr><th>Ngày / Ca</th><th>Phụ trách chung</th><th>Người lưu gần nhất</th><th>Trạng thái</th><th>Lưu lần cuối</th><th></th></tr></thead><tbody>'+rows.map(r=>`<tr><td><strong>${dateLabel(r.date)}</strong><br><span class="muted subtle">${shiftName(r.shift)}</span></td><td>${esc(chiefPeople(r.staffing)||'—')}</td><td>${esc(r.actor)}</td><td>${badge(r.status)}</td><td class="subtle">${timeLabel(r.updated_at)}</td><td><button class="small" data-id="${esc(r.id)}" onclick="loadReport(this.dataset.id)">Mở báo cáo</button></td></tr>`).join('')+'</tbody></table></div>':'<div class="empty">Chưa có báo cáo. Bấm “Nhập ca mới” để bắt đầu.</div>'
 }
 async function newShift(){
+  if(info?.migrationRequired)return renderMigration();
   if(info.readonly||info.review){
     toast('Bản kiểm tra chỉ bổ sung ca đã có. Về DB chính để nhập ca mới.',true);
     return
@@ -127,7 +133,7 @@ async function newShift(){
   if(!leave())return;
   await refreshInfo();
   const s=info.suggestion;
-  modal(`<div class="sectionno">TẠO / MỞ BÁO CÁO</div><h2>Xác nhận ngày và ca</h2><p class="muted">Ca chỉ được gợi ý theo giờ. Anh em có thể đổi để nhập trễ hoặc nhập bù.</p><div class="row"><label class="input">Ngày bắt đầu ca<input type="date" id="newDate" value="${s.date}" onchange="shiftHint()"></label><label class="input">Ca<select id="newShift" onchange="shiftHint()"><option value="DAY">Ca ngày</option><option value="NIGHT">Ca đêm</option></select></label></div><div class="note" id="shiftHint" style="margin-top:18px"></div><div class="row" style="justify-content:flex-end"><button onclick="closeModal()">Hủy</button><button class="primary" onclick="beginShift()">Vào ca này</button></div>`);
+  modal(`<div class="sectionno">TẠO / MỞ BÁO CÁO</div><h2>Xác nhận ngày và ca</h2><p class="muted">Ca chỉ được gợi ý theo giờ. Có thể đổi để nhập trễ hoặc nhập bù.</p><div class="row"><label class="input">Ngày bắt đầu ca<input type="date" id="newDate" value="${s.date}" onchange="shiftHint()"></label><label class="input">Ca<select id="newShift" onchange="shiftHint()"><option value="DAY">Ca ngày</option><option value="NIGHT">Ca đêm</option></select></label></div><div class="note" id="shiftHint" style="margin-top:18px"></div><div class="row" style="justify-content:flex-end"><button onclick="closeModal()">Hủy</button><button class="primary" onclick="beginShift()">Vào ca này</button></div>`);
   $('newShift').value=s.shift;
   shiftHint()
 }
@@ -208,7 +214,7 @@ function showEditTab(name){
   }
 }
 function editorHeader(dis){
-  return `<div class="card"><div class="row between"><div><div class="sectionno">${dateLabel(report.date)} · ${shiftName(report.shift).toUpperCase()}</div><h2 style="margin-bottom:4px">${period(report)}</h2><span>${badge(report.status)} <span class="muted subtle">Phiên bản ${report.version||'chưa lưu'}</span></span></div><div class="row noprint"><button onclick="showHistory()" ${report.version?'':'disabled'}>Lịch sử sửa</button><button onclick="showPreview()" ${report.version?'':'disabled'}>Xem / In</button><button onclick="exportReport()" ${report.version?'':'disabled'}>Xuất Excel</button></div></div><div style="max-width:380px;margin-top:16px"><label>Người đang nhập / chỉnh sửa<select id="actor" ${dis} onchange="touch()">${personOptions(report.actor)}</select></label></div></div>`
+  return `<div class="card editorCompact"><div class="row between"><div><div class="sectionno">${dateLabel(report.date)} · ${shiftName(report.shift).toUpperCase()}</div><h2 style="margin-bottom:4px">${period(report)}</h2><span>${badge(report.status)} <span class="muted subtle">Phiên bản ${report.version||'chưa lưu'}</span></span></div><div class="row noprint"><button onclick="showHistory()" ${report.version?'':'disabled'}>Lịch sử sửa</button><button onclick="showPreview()" ${report.version?'':'disabled'}>Xem / In</button><button onclick="exportReport()" ${report.version?'':'disabled'}>Xuất Excel</button></div></div><div style="max-width:380px;margin-top:16px"><label>Người đang nhập / chỉnh sửa<select id="actor" ${dis} onchange="touch()">${personOptions(report.actor)}</select></label></div></div>`
 }
 function editorNotice(){
   return (report.status==='closed'||info.review)&&!info.readonly?'<div class="note warn">Chỉnh sửa cần lưu thủ công kèm lý do. Nội dung cũ vẫn giữ trong lịch sử phiên bản.</div>':''
@@ -350,7 +356,7 @@ function renderStaff(){
 
 function renderJobs(){
   const dis=info.readonly?'disabled':'';
-  $('jobRows').innerHTML=report.jobs.map((j,i)=>`<tr><td><input aria-label="Tên công việc" data-job="${i}" data-key="name" value="${esc(j.name)}" oninput="touch()" ${dis}></td><td><input aria-label="Chi tiết công việc" data-job="${i}" data-key="detail" value="${esc(j.detail)}" placeholder="Vị trí, lý do…" oninput="touch()" ${dis}>${(j.ships||[]).length?'<div class="muted subtle" style="margin-top:6px">Tàu đã lưu: '+esc(j.ships.join('; '))+'</div>':''}</td>${['xn','rtg'].map(k=>`<td><input type="checkbox" aria-label="${k.toUpperCase()}" data-job="${i}" data-key="${k}" ${j[k]?'checked':''} onchange="touch()" ${dis}></td>`).join('')}${keys.map(k=>`<td><input type="number" min="0" max="9999999" step="1" aria-label="${k.toUpperCase()}" data-job="${i}" data-key="${k}" value="${j[k]??''}" oninput="touch()" ${dis}></td>`).join('')}<td><button class="small danger" title="Xóa công việc" onclick="removeJob(${i})" ${dis}>×</button></td></tr>`).join('');
+  $('jobRows').innerHTML=report.jobs.map((j,i)=>`<tr><td><input aria-label="Tên công việc" data-job="${i}" data-key="name" value="${esc(j.name)}" oninput="touch()" ${dis}></td><td><input aria-label="Chi tiết công việc" data-job="${i}" data-key="detail" value="${esc(j.detail)}" placeholder="Vị trí, lý do…" oninput="touch()" ${dis}>${(j.ships||[]).length?'<div class="muted subtle" style="margin-top:6px">Tàu đã lưu: '+esc(j.ships.join('; '))+'</div>':''}</td>${['xn','rtg'].map(k=>`<td><input type="checkbox" aria-label="${k.toUpperCase()}" data-job="${i}" data-key="${k}" ${j[k]?'checked':''} onchange="touch()" ${dis}></td>`).join('')}${keys.map(k=>`<td><input type="number" min="0" max="9999999" step="1" aria-label="${k.toUpperCase()}" data-job="${i}" data-key="${k}" value="${j[k]??''}" onkeydown="quantityKey(event)" oninput="touch()" ${dis}></td>`).join('')}<td><button class="small danger" title="Xóa công việc" onclick="removeJob(${i})" ${dis}>×</button></td></tr>`).join('');
   totals()
 }
 function renderTasks(){
@@ -369,7 +375,8 @@ function collect(){
 }
 function totals(){
   if(!$('jobTotal'))return;
-  const sums=keys.map(k=>report.jobs.reduce((n,j)=>n+(Number(j[k])||0),0));
+  const sums=keys.map(k=>report.jobs.reduce((n,j)=>n+(quantityValid(j[k])?(Number(j[k])||0):0),0));
+  validateJobInputs(false);
   $('jobTotal').innerHTML='<tr class="totalrow"><td colspan="4">Tổng lượt công việc</td>'+sums.map(v=>'<td style="text-align:right">'+v.toLocaleString('vi-VN')+'</td>').join('')+'<td></td></tr>'
 }
 function touch(){
@@ -445,8 +452,9 @@ async function carry(){
     error(e)
   }
 }
-async function save(manual=true,reason=''){
+async function save(manual=true,reason='',saveKind=null){
   if(info.readonly||saving||uploading)return false;
+  if(!validateJobInputs(true))return false;
   if(conflict){
     toast('Có xung đột. Sao chép phần chưa lưu nếu cần rồi tải lại báo cáo.',true);
     return false
@@ -464,7 +472,7 @@ async function save(manual=true,reason=''){
   const before=JSON.stringify(report);
   $('saveState').textContent='Đang lưu vào DB…';
   try{
-    const saved=await api('/api/save',{report:JSON.parse(before),version:report.version,reason,context:info.context});
+    const saved=await api('/api/save',{report:JSON.parse(before),version:report.version,reason,context:info.context,save_kind:saveKind||(info.review?'correction':report.status==='closed'||manual?'manual':'auto')});
     collect();
     const changed=JSON.stringify(report)!==before;
     report.version=saved.version;
@@ -485,7 +493,7 @@ async function save(manual=true,reason=''){
   }catch(e){
     dirty=true;
     if(e.status===409)conflict=true;
-    $('saveState').innerHTML='<span class="issue">Chưa lưu: '+esc(e.message)+'</span>'+(conflict?' <button class="small" data-id="'+esc(report.date+'_'+report.shift)+'" onclick="loadReport(this.dataset.id)">Tải lại báo cáo</button>':'');
+    $('saveState').innerHTML='<span class="issue">Chưa lưu: '+esc(e.message)+'</span>'+(conflict?' <button class="small" data-id="'+esc(report.date+'_'+report.shift)+'" onclick="reloadConflict(false)">Tải bản mới, bỏ thay đổi</button> <button onclick="reloadConflict(true)">Tải bản mới, giữ ghi chú chưa lưu</button>':'');
     error(e);
     return false
   }finally{
@@ -503,9 +511,11 @@ async function manualSave(){
 async function closeShift(){
   if(saving||uploading)return toast('Đợi lưu xong rồi chốt ca.');
   collect();
-  if(!confirm('Chốt '+shiftName(report.shift)+' ngày '+dateLabel(report.date)+'? Sau khi chốt, mỗi lần sửa cần ghi lý do.'))return;
+  if(!validateJobInputs(true))return;
+  if(!report.actor?.trim()||!report.staffing.some(s=>s.role.trim().toUpperCase()==='PHỤ TRÁCH CHUNG'&&s.people.trim())){showEditTab('staff');toast('Điền người nhập và PHỤ TRÁCH CHUNG trước khi chốt ca.',true);const chiefIndex=report.staffing.findIndex(s=>s.role.trim().toUpperCase()==='PHỤ TRÁCH CHUNG');($('actor')?.value?document.querySelector('[data-staff-people="'+chiefIndex+'"]'):$('actor'))?.focus();return}
+  if(!confirm('Chốt '+shiftName(report.shift).toLowerCase()+' '+dateLabel(report.date)+'? Sau khi chốt, mỗi lần sửa cần ghi lý do.'))return;
   report.status='closed';
-  if(!await save(true,'Chốt ca')){
+  if(!await save(true,'Chốt ca','close')){
     report.status='draft';
     renderEditor();
     $('saveState').textContent='Chưa chốt thành công · kiểm tra thông tin và lưu lại'
@@ -619,7 +629,7 @@ async function returnMain(){
   }
 }
 function preview(r){
-  return `<div class="row between noprint"><h2>Xem báo cáo</h2><div class="row"><button onclick="printReport()">In / Lưu PDF</button><button onclick="closeModal()">Đóng</button></div></div><div class="preview"><h2>BÁO CÁO SẢN XUẤT CUỐI CA<br>BỘ PHẬN BÃI CONTAINER</h2><p><strong>${esc(period(r))}</strong> · ${r.status==='closed'?'Đã chốt':'BẢN NHÁP'}</p><p>Tàu trong ca: ${esc(allReportShips(r).join('; '))||'—'}</p><p class="subtle">Người lưu: ${esc(r.actor)} · ${timeLabel(r.updated_at)} · Phiên bản ${r.version||''}</p><table><thead><tr><th>Phân công</th><th>Nhân sự</th></tr></thead><tbody>${r.staffing.filter(s=>s.people).map(s=>'<tr><td>'+esc(s.role)+(s.ships?.length?'<br>'+esc(s.ships.join('; ')):'')+'</td><td>'+esc(s.people)+'</td></tr>').join('')}</tbody></table><br><table><thead><tr><th>Công việc</th><th>Chi tiết</th><th>XN</th><th>RTG</th>${keys.map(k=>'<th>'+k.toUpperCase()+'</th>').join('')}</tr></thead><tbody>${r.jobs.filter(j=>j.detail||j.xn||j.rtg||keys.some(k=>j[k]!==null&&j[k]!==''&&j[k]!==undefined)).map(j=>'<tr><td>'+esc(j.name)+'</td><td>'+esc([...(j.ships||[]),j.detail].filter(Boolean).join('; '))+'</td><td>'+(j.xn?'X':'')+'</td><td>'+(j.rtg?'X':'')+'</td>'+keys.map(k=>'<td>'+esc(j[k])+'</td>').join('')+'</tr>').join('')}<tr><th colspan="4">Tổng lượt</th>${keys.map(k=>'<th>'+r.jobs.reduce((n,j)=>n+(Number(j[k])||0),0)+'</th>').join('')}</tr></tbody></table><br><strong>Ghi chú bàn giao</strong><p style="white-space:pre-wrap">${esc(r.notes)||'—'}</p>${r.handover.map(t=>'<p>'+(t.done?'☑ Đã xử lý: ':'□ Chưa xử lý: ')+esc(t.text)+'</p>').join('')}${attachmentPreview(r)}<p class="muted subtle">Số lượng là lượt công việc đã báo cáo, không phải số container duy nhất.</p></div>`
+  return `<div class="row between noprint"><h2>Xem báo cáo</h2><div class="row"><button onclick="printReport()">In / Lưu PDF</button><button onclick="closeModal()">Đóng</button></div></div><div class="preview" data-print-ca="${esc(dateLabel(r.date)+' · '+shiftName(r.shift))}"><h2>BÁO CÁO SẢN XUẤT CUỐI CA<br>BỘ PHẬN BÃI CONTAINER</h2><p><strong>${esc(period(r))}</strong> · ${r.status==='closed'?'Đã chốt':'BẢN NHÁP'}</p><p>Tàu trong ca: ${esc(allReportShips(r).join('; '))||'—'}</p><p class="subtle">Người lưu: ${esc(r.actor)} · ${timeLabel(r.updated_at)} · Phiên bản ${r.version||''}</p><table><thead><tr><th>Phân công</th><th>Nhân sự</th></tr></thead><tbody>${r.staffing.filter(s=>s.people).map(s=>'<tr><td>'+esc(s.role)+(s.ships?.length?'<br>'+esc(s.ships.join('; ')):'')+'</td><td>'+esc(s.people)+'</td></tr>').join('')}</tbody></table><br><table><thead><tr><th>Công việc</th><th>Chi tiết</th><th>XN</th><th>RTG</th>${keys.map(k=>'<th>'+k.toUpperCase()+'</th>').join('')}</tr></thead><tbody>${r.jobs.filter(j=>j.detail||j.xn||j.rtg||keys.some(k=>j[k]!==null&&j[k]!==''&&j[k]!==undefined)).map(j=>'<tr><td>'+esc(j.name)+'</td><td>'+esc([...(j.ships||[]),j.detail].filter(Boolean).join('; '))+'</td><td>'+(j.xn?'X':'')+'</td><td>'+(j.rtg?'X':'')+'</td>'+keys.map(k=>'<td>'+esc(j[k])+'</td>').join('')+'</tr>').join('')}<tr><th colspan="4">Tổng lượt</th>${keys.map(k=>'<th>'+r.jobs.reduce((n,j)=>n+(Number(j[k])||0),0)+'</th>').join('')}</tr></tbody></table><br><strong>Ghi chú bàn giao</strong><p style="white-space:pre-wrap">${esc(r.notes)||'—'}</p>${r.handover.map(t=>'<p>'+(t.done?'☑ Đã xử lý: ':'□ Chưa xử lý: ')+esc(t.text)+'</p>').join('')}${attachmentPreview(r)}<p class="muted subtle">Số lượng là lượt công việc đã báo cáo, không phải số container duy nhất.</p>${typeof signatureHTML==='function'?signatureHTML(r):''}</div>`
 }
 async function enableCorrections(){
   if(!leave())return;
@@ -668,7 +678,7 @@ function renderImport(){
 }
 function compareImport(i){
   const item=importPlan.items[i];
-  modal('<div class="row between"><h2>Đối chiếu '+dateLabel(item.date)+' · '+shiftName(item.shift)+'</h2><button onclick="renderImport()">Về danh sách đối chiếu</button></div><h3>DB chính hiện tại</h3>'+(item.current?preview(item.current):'<p>Chưa có ca này.</p>')+'<hr><h3>Bản anh đã bổ sung</h3>'+preview(item.incoming),true)
+  modal('<div class="row between"><h2>Đối chiếu '+dateLabel(item.date)+' · '+shiftName(item.shift)+'</h2><button onclick="renderImport()">Về danh sách đối chiếu</button></div>'+reportDiffHTML(item.current,item.incoming),true)
 }
 async function applyImport(){
   const selected=[...document.querySelectorAll('.mergeChoice:checked')].map(x=>x.value);
@@ -690,16 +700,14 @@ function showPreview(){
 }
 async function showHistory(){
   try{
-    const rows=await api('/api/history?id='+encodeURIComponent(report.id));
+    const rows=await api('/api/history?id='+encodeURIComponent(report.id)+'&context='+encodeURIComponent(info.context));
     window.revisions=rows;
-    modal('<div class="row between"><h2>Lịch sử chỉnh sửa</h2><button onclick="closeModal()">Đóng</button></div><p class="muted">Mỗi phiên bản giữ đầy đủ nội dung tại thời điểm lưu. Người nhập là tên tự khai trên máy dùng chung.</p><div class="scroll"><table><thead><tr><th>Phiên bản</th><th>Thời gian</th><th>Người lưu</th><th>Lý do</th><th></th></tr></thead><tbody>'+rows.map((r,i)=>`<tr><td>${r.version}</td><td>${timeLabel(r.saved_at)}</td><td>${esc(r.actor)}</td><td>${esc(r.reason)}</td><td><button class="small" onclick="revisionPreview(${i})">Xem nội dung</button></td></tr>`).join('')+'</tbody></table></div>',true)
-  }catch(e){
-    error(e)
-  }
+    modal('<div class="row between"><h2>Lịch sử chỉnh sửa</h2><button onclick="closeModal()">Đóng</button></div><p class="muted">Tên người nhập do người dùng chọn; tài khoản máy chỉ hỗ trợ đối chiếu, không định danh người thật trên máy dùng chung. Phiên bản có thể có khoảng trống do gộp tự lưu.</p><div class="scroll"><table><thead><tr><th>Phiên bản</th><th>Thời gian</th><th>Loại lưu</th><th>Người lưu / tài khoản máy</th><th>Lý do</th><th></th></tr></thead><tbody>'+rows.map((r,i)=>`<tr><td>${r.version}</td><td>${esc(timeLabel(r.saved_at))}</td><td>${esc(r.kind||'legacy')}</td><td>${esc(r.actor)}<br><small>${esc(r.os_user||'Không ghi tài khoản máy')}</small></td><td>${esc(r.reason)}</td><td><button class="small" onclick="revisionPreview(${i})" ${info.capabilities?.revisionDiff?'':'disabled'}>Xem thay đổi</button></td></tr>`).join('')+'</tbody></table></div>',true)
+  }catch(e){error(e)}
 }
 function revisionPreview(i){
-  const r=window.revisions[i];
-  modal(preview({...r.payload,updated_at:r.saved_at,version:r.version}),true)
+  const current=window.revisions[i],previous=window.revisions[i+1];
+  modal('<div class="row between"><h2>Phiên bản '+esc(current.version)+(previous?' so với '+esc(previous.version):' · bản đầu tiên')+'</h2><button onclick="showHistory()">Về lịch sử</button></div>'+(previous?reportDiffHTML(previous.payload,current.payload):'<p>Không có phiên bản liền trước để so sánh.</p>'),true)
 }
 
 function attachmentURL(a,downloadFile=false){
@@ -844,7 +852,7 @@ async function exitTool(){
   try{
     await api('/api/shutdown',{});
     dirty=false;
-    document.body.innerHTML='<main style="padding:60px;font:18px Segoe UI"><h2>Đã thoát Sổ báo cáo ca.</h2><p>Anh có thể đóng tab này. Bấm mở lại chương trình khi cần làm việc tiếp.</p></main>'
+    document.body.innerHTML='<main style="padding:60px;font:18px Segoe UI"><h2>Đã thoát Sổ báo cáo ca.</h2><p>Có thể đóng tab này. Bấm mở lại chương trình khi cần làm việc tiếp.</p></main>'
   }catch(e){
     error(e)
   }
@@ -888,3 +896,27 @@ document.addEventListener('keydown',e=>{
   }
 });
 
+
+// Integer validation is shared by totals and save, independent of browser number coercion.
+function quantityValid(value){return value===null||value===undefined||value===''||(/^\d+$/.test(String(value))&&Number(value)<=9999999)}
+function quantityKey(event){if(['.',',','e','E','-','+'].includes(event.key))event.preventDefault()}
+function validateJobInputs(notify=false){
+ let first=null;
+ document.querySelectorAll('[data-job]').forEach(el=>{
+  if(!keys.includes(el.dataset.key))return;
+  const valid=!el.validity?.badInput&&quantityValid(el.value);
+  el.setAttribute?.('aria-invalid',String(!valid));el.classList?.toggle('invalidQuantity',!valid);
+  if(!valid&&!first)first=el;
+ });
+ if(first&&notify){showEditTab('jobs');first.focus?.();toast('Công việc '+(report.jobs[Number(first.dataset.job)]?.name||Number(first.dataset.job)+1)+', cột '+first.dataset.key.toUpperCase()+': cần số nguyên từ 0 đến 9.999.999.',true)}
+ return !first;
+}
+async function reloadConflict(keepNotes){
+ if(saving||uploading||!conflict)return;
+ collect();const notes=report.notes,id=report.id||(report.date+'_'+report.shift);
+ try{
+  const fresh=await api('/api/report?id='+encodeURIComponent(id));
+  report=fresh;conflict=false;dirty=false;renderEditor();
+  if(keepNotes){report.notes=notes;$('notes').value=notes;dirty=true;clearTimeout(timer);$('saveState').textContent='Đã tải bản mới; ghi chú giữ lại chưa được lưu. Kiểm tra rồi bấm Lưu.'}
+ }catch(e){error(e)}
+}

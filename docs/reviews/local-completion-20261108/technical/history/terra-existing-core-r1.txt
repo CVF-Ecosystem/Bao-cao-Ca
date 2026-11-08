@@ -1,0 +1,9 @@
+ERROR:root:Sao luu ben ngoai that bai
+Traceback (most recent call last):
+  File "D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\ma_nguon\BAO_VE_DU_LIEU.py", line 354, in _backup
+    raise OSError('Thư mục dự phòng chưa sẵn sàng')
+OSError: Thư mục dự phòng chưa sẵn sàng
+----------------------------------------------------------------------
+Ran 60 tests in 15.326s
+
+OK

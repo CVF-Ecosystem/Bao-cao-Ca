@@ -80,7 +80,7 @@ function chooseShips(kind,index=null){
   clearTimeout(timer);
   shipTarget={kind,index};
   shipSelection=new Set((report.staffing[index].ships||[]).length===1?report.staffing[index].ships:[]);
-  renderShipPicker()
+  renderShipPicker();$('shipSearch')?.focus()
 }
 function renderShipPicker(){
  const names=[...new Set([...(info.ships||[]),...(report.staffing[shipTarget.index].ships||[]),...shipSelection])];
@@ -127,7 +127,7 @@ async function manageShips(){
   clearTimeout(timer);
   try{
     await refreshInfo();
-    modal('<h2>Danh sách tàu</h2><p class="muted">Danh sách được lưu trong DB. Thêm tàu mới tại đây, không cần sửa code.</p><div style="max-height:330px;overflow:auto">'+(info.ships||[]).map(name=>'<p>'+esc(name)+'</p>').join('')+'</div><div class="row"><input id="catalogShipName" placeholder="Tên tàu mới" '+(info.readonly?'disabled':'')+'><button onclick="addCatalogShip()" '+(info.readonly?'disabled':'')+'>Thêm tàu</button></div><div style="text-align:right;margin-top:16px"><button onclick="closeModal()">Đóng</button></div>')
+    modal('<h2>Danh sách tàu</h2><p class="muted">Danh sách được lưu trong DB. Thêm tàu mới tại đây, không cần sửa code.</p><div style="max-height:330px;overflow:auto">'+(info.ships||[]).map((name,i)=>'<p class="row between"><span>'+esc(name)+'</span>'+(!info.readonly&&!info.review&&info.capabilities?.hideShips?'<button class="small" onclick="hideCatalogShip('+i+')">Ẩn</button>':'')+'</p>').join('')+'</div><div class="row"><input id="catalogShipName" placeholder="Tên tàu mới" '+(info.readonly?'disabled':'')+'><button onclick="addCatalogShip()" '+(info.readonly?'disabled':'')+'>Thêm tàu</button></div><div style="text-align:right;margin-top:16px"><button onclick="closeModal()">Đóng</button></div>')
   }catch(e){
     error(e)
   }
@@ -152,7 +152,7 @@ function teamEditorHTML(){
     teams=info.teams
   }
  if(!Array.isArray(teams)||teams.length!==3)teams=info.teams||[];
- return '<div class="row between" style="margin-top:24px"><h3>3 tổ nhân sự để lọc danh sách</h3></div><p class="note">Muốn chọn ca rồi tự điền người vào vị trí: dùng nút Mẫu phân công Ca 1–2–3 / ca ngày ở menu bên trái sau khi lưu danh mục này.</p><p class="muted">Đặt tên Ca 1 / Ca 2 / Ca 3 hoặc theo tổ của anh. Mỗi dòng một người, đúng họ tên có trong danh mục Nhân viên bên trên. Đây là nhóm chọn người, không đổi ca báo cáo ngày / đêm.</p><div class="catalogColumns">'+teams.map((team,i)=>
+ return '<div class="row between" style="margin-top:24px"><h3>3 tổ nhân sự để lọc danh sách</h3></div><p class="note">Muốn chọn ca rồi tự điền người vào vị trí: dùng nút Mẫu phân công Ca 1–2–3 / ca ngày ở menu bên trái sau khi lưu danh mục này.</p><p class="muted">Đặt tên Ca 1 / Ca 2 / Ca 3 hoặc theo tổ phù hợp. Mỗi dòng một người, đúng họ tên có trong danh mục Nhân viên bên trên. Đây là nhóm chọn người, không đổi ca báo cáo ngày / đêm.</p><div class="catalogColumns">'+teams.map((team,i)=>
  '<div class="input"><label>Tên tổ<input id="team_name_'+i+'" maxlength="80" value="'+esc(team.name)+'"></label><label style="margin-top:12px">Nhân viên của tổ<textarea id="team_people_'+i+'" rows="10" placeholder="Mỗi dòng một họ tên">'+esc(team.people.join('\n'))+'</textarea></label></div>').join('')+'</div>';
 }
 async function manageCatalogs(){
@@ -279,3 +279,9 @@ async function personnelCancel(){
  try{await personnelApi('/api/personnel-xlsx-cancel',{context:state.context})}catch(e){/* Closed dialog: a later dialog must not be changed. */}
 }
 go('home');
+
+async function hideCatalogShip(index){
+ if(!info.capabilities?.hideShips||info.readonly||info.review)return;
+ const name=info.ships[index];if(!name||!confirm('Ẩn tàu '+name+' khỏi danh sách chọn? Báo cáo cũ giữ nguyên.'))return;
+ try{const result=await api('/api/ships-hide',{context:info.context,name});info.ships=result.ships;await manageShips();toast('Đã ẩn tàu khỏi danh sách chọn.')}catch(e){error(e)}
+}

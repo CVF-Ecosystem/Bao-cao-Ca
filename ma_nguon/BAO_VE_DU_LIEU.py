@@ -8,7 +8,9 @@ from pathlib import Path
 import secrets
 import shutil
 import sqlite3
-from NGHIEP_VU import AppError, ClosingConnection
+import threading
+import re
+from NGHIEP_VU import AppError, ClosingConnection, normalize
 from THIET_LAP import VN
 
 
@@ -26,37 +28,56 @@ def atomic_json(path, value):
         tmp.unlink(missing_ok=True)
 
 
-def inspect_db(path):
+def inspect_db(path, level='full', verified=None):
     """Read-only, không tạo file nếu đường dẫn đã mất; kiểm tra cả cấu trúc và JSON."""
     path = Path(path).resolve()
     from LUU_TRU import Store
     store = Store(path, readonly=True)
     with store.connect() as c:
-        checks = [r[0] for r in c.execute('PRAGMA integrity_check')]
+        if level not in ('quick','full'): raise AppError('Mức kiểm tra không hợp lệ.')
+        checks = [r[0] for r in c.execute('PRAGMA integrity_check' if level == 'full' else 'PRAGMA quick_check')]
         if checks != ['ok']:
             raise AppError('Bản sao bị lỗi toàn vẹn, không thể khôi phục.')
+        referenced = set()
+        def checked_payload(raw):
+            try:
+                payload = normalize(json.loads(raw))
+            except (ValueError, TypeError, AttributeError, KeyError) as error:
+                raise AppError('Nội dung báo cáo trong DB không hợp lệ.') from error
+            referenced.update(a['hash'] for a in payload.get('attachments', []))
+            return payload
         rows = c.execute('SELECT day,shift,payload FROM reports ORDER BY day,shift').fetchall()
         for row in rows:
-            payload = json.loads(row['payload'])
+            payload = checked_payload(row['payload'])
             if payload.get('date') != row['day'] or payload.get('shift') != row['shift']:
                 raise AppError('Ngày/ca trong nội dung DB không khớp.')
-        for row in c.execute('SELECT payload FROM revisions'):
-            if not isinstance(json.loads(row[0]), dict):
-                raise AppError('Lịch sử chỉnh sửa không hợp lệ.')
-        # Nội dung ảnh/PDF cũng nằm trong snapshot; kiểm tra không mất byte.
+        for table in ('revisions','correction_base'):
+            if not c.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?",(table,)).fetchone():
+                continue
+            for row in c.execute('SELECT report_id,payload FROM '+table):
+                payload=checked_payload(row['payload'])
+                if (not isinstance(payload,dict) or not isinstance(payload.get('date'),str) or
+                        not isinstance(payload.get('shift'),str) or payload['date']+'_'+payload['shift']!=row['report_id']):
+                    raise AppError('Ngày/ca trong lịch sử hoặc bản bổ sung không khớp.')
+        meta = dict(c.execute('SELECT key,value FROM meta'))
+        cached = set(verified or ()) if level == 'quick' else set()
+        checked = set()
+        # Quick trusts only a previous verified hash; full always hashes again.
         for row in c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='attachment_blobs'"):
             for blob in c.execute('SELECT hash,data FROM attachment_blobs'):
-                if hashlib.sha256(blob['data']).hexdigest() != blob['hash']:
+                if blob['hash'] not in cached and hashlib.sha256(blob['data']).hexdigest() != blob['hash']:
                     raise AppError('Một tệp đính kèm trong DB bị lỗi.')
-        meta = dict(c.execute('SELECT key,value FROM meta'))
+                checked.add(blob['hash'])
+        if referenced - checked:
+            raise AppError('DB thiếu tệp đính kèm được báo cáo hoặc lịch sử tham chiếu.')
         if meta.get('review_copy') == '1':
             raise AppError('Đây là DB bổ sung. Dùng Nhập bổ sung, không thay DB chính bằng file này.')
         return dict(database_id=meta.get('database_id', ''), reports=len(rows),
                     first_day=rows[0]['day'] if rows else '', last_day=rows[-1]['day'] if rows else '',
-                    revisions=c.execute('SELECT count(*) FROM revisions').fetchone()[0])
+                    revisions=c.execute('SELECT count(*) FROM revisions').fetchone()[0], verified_hashes=sorted(checked))
 
 
-def snapshot(source, dest):
+def snapshot(source, dest, level='full', verified=None):
     """Chụp nhất quán cả WAL, kiểm tra rồi mới đổi tên thành .db hoàn chỉnh."""
     source, dest = Path(source).resolve(), Path(dest).resolve()
     if source == dest:
@@ -68,7 +89,7 @@ def snapshot(source, dest):
             with sqlite3.connect(str(tmp), factory=ClosingConnection) as target:
                 src.backup(target, pages=256)
                 target.commit()
-        info = inspect_db(tmp)
+        info = inspect_db(tmp, level=level, verified=verified)
         # Windows _commit cần descriptor có quyền ghi; rb gây EBADF (Errno 9).
         # Chỉ mở đọc/ghi bản sao tạm, tuyệt đối không đổi quyền mở DB nguồn.
         with tmp.open('r+b') as stream:
@@ -104,6 +125,7 @@ class Protection:
         suffix = hashlib.sha256(str(self.directory).encode()).hexdigest()[:10]
         self.config_path = self.directory.parent / ('BAO_VE_DB_' + suffix + '.json')
         self.warning = ''
+        self._backup_lock = threading.RLock()
         # '' = ổn; 'info' = khuyến nghị (chưa chọn ổ dự phòng); 'error' = sao lưu thất bại.
         self.warning_level = ''
         if self.config_path.exists():
@@ -136,6 +158,10 @@ class Protection:
         if not self.db.exists() or not self.config.get('database_id'):
             return False
         info = self._checked_info(startup_check)
+        with sqlite3.connect(self.db.as_uri()+'?mode=ro', uri=True, factory=ClosingConnection) as c:
+            row = c.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()
+            if row and row[0] in ('1','2','3'):
+                return False  # restricted upgrade flow obtains explicit consent first
         return (info if info is not None else inspect_db(self.db))['database_id'] != self.config['database_id']
 
     def accept_installed(self, digest):
@@ -158,6 +184,9 @@ class Protection:
                    accepted_at=dt.datetime.now(VN).isoformat(), accepted_snapshot=str(before))
         new.pop('last_local', None)
         new.pop('last_external', None)
+        new.pop('last_full_local',None)
+        new.pop('last_full_external',None)
+        new.pop('verified_cache',None)
         atomic_json(self.config_path, new)
         self.config = new
         return before
@@ -225,7 +254,7 @@ class Protection:
         self.config['external_directory'] = str(path)
         atomic_json(self.config_path, self.config)
 
-    def prune(self, directory, today=None):
+    def prune(self, directory, today=None, pinned=None):
         """30 ngày: bản mới nhất mỗi ngày; hôm nay tối đa 10 bản; lâu hơn giữ cuối mỗi tháng."""
         today = today or dt.datetime.now(VN).date()
         groups = {}
@@ -245,6 +274,7 @@ class Protection:
             elif (today - day).days <= 30:
                 keep.add(paths[-1])
         keep.update(monthly.values())
+        if pinned: keep.add(directory / pinned)
         for paths in groups.values():
             for path in paths:
                 if path not in keep:
@@ -274,7 +304,36 @@ class Protection:
                     ': cần ít nhất ' + str(required) + ' byte, còn ' + str(free) + ' byte.')
         return ''
 
-    def backup(self):
+    def _pin_name(self, key):
+        pin=self.config.get(key)
+        if not isinstance(pin,dict) or pin.get('database_id')!=self.config.get('database_id'):
+            return None
+        name=pin.get('name')
+        if not isinstance(name,str) or not re.fullmatch(r'BAO_CAO_CA_\d{8}_\d{6}_\d+_[0-9a-f]+\.db',name):
+            return None
+        return name
+
+    def backup_level(self, force_full=False, now_time=None):
+        if force_full: return 'full'
+        pin = self.config.get('last_full_local')
+        try:
+            current=now_time or dt.datetime.now(dt.timezone.utc)
+            stamp=dt.datetime.fromisoformat(pin['at'])
+            if stamp.tzinfo is None: return 'full'
+            age=current-stamp
+            if age.total_seconds()<0 or age.total_seconds()>=86400: return 'full'
+            name=self._pin_name('last_full_local')
+            if not name or not (self.local / name).is_file(): return 'full'
+            return 'quick'
+        except (ValueError, TypeError, KeyError, AttributeError):
+            return 'full'
+
+    def backup(self, level='full'):
+        with self._backup_lock:
+            return self._backup(level)
+
+    def _backup(self, level='full'):
+        if level not in ('full','quick'): raise AppError('Mức sao lưu không hợp lệ.')
         name = 'BAO_CAO_CA_' + dt.datetime.now(VN).strftime('%Y%m%d_%H%M%S_%f') + '_' + secrets.token_hex(3) + '.db'
         path = self.local / name
         required = self._space_required()
@@ -282,12 +341,23 @@ class Protection:
         if warning:
             self.warning, self.warning_level = warning, 'error'
             return None
-        snapshot(self.db, path)
-        # Không dọn các bản cũ trước khi snapshot mới đã được kiểm tra thành công.
-        self.prune(self.local)
-        self.config['last_local'] = dict(at=dt.datetime.now(VN).isoformat(), name=name)
+        cache = self.config.get('verified_cache',{})
+        verified = cache.get('hashes',[]) if isinstance(cache,dict) and cache.get('database_id') == self.config.get('database_id') and isinstance(cache.get('hashes'),list) else []
+        info = snapshot(self.db, path, level=level, verified=verified)
+        if info['database_id'] != self.config.get('database_id'):
+            raise AppError('Bản sao không cùng nguồn dữ liệu.')
+        stamp=dt.datetime.now(VN).isoformat()
+        updated=dict(self.config)
+        updated['last_local']=dict(at=stamp,name=name)
+        updated['last_validation']=level
+        updated['verified_cache']=dict(database_id=info['database_id'],hashes=info['verified_hashes'])
+        if level=='full': updated['last_full_local']=dict(at=stamp,name=name,database_id=info['database_id'])
+        atomic_json(self.config_path,updated)
+        self.config=updated
+        local_pin=self._pin_name('last_full_local')
+        if local_pin: self.prune(self.local,pinned=local_pin)
         errors = []
-        level = ''
+        warning_level = ''
         outside = self.external()
         if outside:
             try:
@@ -297,22 +367,116 @@ class Protection:
                 warning = self._space_warning(outside, required)
                 if warning:
                     errors.append('Sao lưu tại máy thành công. ' + warning)
-                    level = 'error'
+                    warning_level = 'error'
                 else:
-                    snapshot(path, outside / name)
-                    self.prune(outside)
-                    self.config['last_external'] = dict(at=dt.datetime.now(VN).isoformat(), name=name)
+                    snapshot(path, outside / name, level=level, verified=verified)
+                    updated=dict(self.config)
+                    updated['last_external']=dict(at=stamp,name=name)
+                    if level=='full': updated['last_full_external']=dict(at=stamp,name=name,database_id=info['database_id'])
+                    atomic_json(self.config_path,updated)
+                    self.config=updated
+                    external_pin=self._pin_name('last_full_external')
+                    if external_pin: self.prune(outside,pinned=external_pin)
             except Exception:
                 logging.exception('Sao luu ben ngoai that bai')
                 errors.append('Sao lưu tại máy thành công; sao lưu bên ngoài thất bại. Kiểm tra ổ/thư mục dự phòng.')
-                level = 'error'
+                warning_level = 'error'
         else:
             errors.append('Chưa chọn nơi dự phòng bên ngoài. Các bản sao hiện chỉ bảo vệ khi mất DB, chưa bảo vệ khi mất cả ổ máy.')
-            level = 'info'
+            warning_level = 'info'
         self.warning = ' '.join(errors)
-        self.warning_level = level
+        self.warning_level = warning_level
         atomic_json(self.config_path, self.config)
         return path
+
+    def recovery_candidates(self):
+        """Only full-manifest-bound pre-upgrade copies inside this dataset are exposed."""
+        self.recovery_choices={}
+        rows=[]
+        main=inspect_db(self.db)
+        try:
+            manifests=list(self.directory.glob('NANG_CAP_*.json'))
+        except OSError:
+            return []
+        for manifest in manifests[:500]:
+            try:
+                if manifest.is_symlink() or getattr(manifest.lstat(),'st_file_attributes',0)&0x400 or manifest.stat().st_size>1024*1024:
+                    continue
+                if not re.fullmatch(r'NANG_CAP_[0-9a-f]{32}\.json',manifest.name): continue
+                record=json.loads(manifest.read_text(encoding='utf-8'))
+                if not isinstance(record,dict) or record.get('schema')!='local-upgrade-manifest-1': continue
+                target_id=record.get('databaseId'); origin=record.get('sourceDatabaseId')
+                if not isinstance(target_id,str) or not isinstance(origin,str) or not isinstance(record.get('steps'),list): continue
+                if origin and main['database_id'] not in (origin,target_id): continue
+                if not origin and main['database_id'] not in ('',target_id): continue
+                for step in record['steps']:
+                    name=step.get('name','')
+                    allowed=self.db.stem+r'_TRUOC_NANG_CAP_([123])_([234])\.db'
+                    match=re.fullmatch(allowed,name) if isinstance(name,str) else None
+                    if not match or int(match.group(2))!=int(match.group(1))+1: continue
+                    if step.get('sourceSchema')!=match.group(1) or not re.fullmatch('[a-f0-9]{64}',str(step.get('sha256',''))): continue
+                    if step.get('sourceDatabaseId') != origin: continue
+                    candidate=self.directory/name
+                    stat=candidate.lstat()
+                    if candidate.is_symlink() or getattr(stat,'st_file_attributes',0)&0x400 or not candidate.is_file(): continue
+                    key=hashlib.sha256(str(candidate).encode()).hexdigest()
+                    self.recovery_choices[key]=(candidate,step,record)
+                    rows.append(dict(id=key,name=name,location='Bản trước nâng cấp',bytes=stat.st_size,
+                                     modified=dt.datetime.fromtimestamp(stat.st_mtime,VN).isoformat()))
+            except (OSError,ValueError,TypeError,AttributeError):
+                continue
+        return rows
+
+    def recovery_preview(self, key):
+        self.recovery_candidates()
+        choice=self.recovery_choices.get(key)
+        if not choice: raise AppError('Bản trước nâng cấp không còn hợp lệ.',409)
+        path,step,record=choice
+        before=_database_stamp(path)
+        info=inspect_db(path)
+        digest=hashlib.sha256()
+        with path.open('rb') as stream:
+            for chunk in iter(lambda:stream.read(1024*1024),b''): digest.update(chunk)
+        if before!=_database_stamp(path) or digest.hexdigest()!=step['sha256'] or info['database_id']!=step['sourceDatabaseId']:
+            raise AppError('Bản trước nâng cấp đã thay đổi.',409)
+        with sqlite3.connect(path.as_uri()+'?mode=ro',uri=True,factory=ClosingConnection) as c:
+            schema=c.execute("SELECT value FROM meta WHERE key='schema_version'").fetchone()
+        if not schema or schema[0]!=step['sourceSchema'] or schema[0] not in ('1','2','3'):
+            raise AppError('Bản trước nâng cấp không hợp lệ.',409)
+        return dict(info,sha256=digest.hexdigest(),sourceSchema=schema[0],name=path.name)
+
+    def restore_recovery(self,key,digest,main_stamp):
+        info=self.recovery_preview(key)
+        if not secrets.compare_digest(info['sha256'],digest) or _database_stamp(self.db)!=main_stamp:
+            raise AppError('Nguồn hoặc DB chính đã đổi; xem trước lại.',409)
+        source=self.recovery_choices[key][0]
+        for suffix in ('-wal','-shm','-journal'):
+            if Path(str(self.db)+suffix).exists(): raise AppError('DB còn tệp giao dịch; đóng phiên khác trước.')
+        archive=self.directory/'TRUOC_KHOI_PHUC'
+        archive.mkdir(parents=True,exist_ok=True)
+        preserved=archive/('DB_CU_'+secrets.token_hex(12)+'.db')
+        shutil.copy2(self.db,preserved)
+        with preserved.open('r+b') as stream:
+            stream.flush();os.fsync(stream.fileno())
+        def hash_file(path):
+            h=hashlib.sha256()
+            with path.open('rb') as stream:
+                for chunk in iter(lambda:stream.read(1024*1024),b''): h.update(chunk)
+            return h.hexdigest()
+        if _database_stamp(self.db)!=main_stamp or hash_file(preserved)!=hash_file(self.db):
+            raise AppError('Không xác minh được bản giữ trước khôi phục; DB chưa thay đổi.',409)
+        staged=self.directory/('KHOI_PHUC_'+secrets.token_hex(6)+'.tmp')
+        try:
+            snapshot(source,staged)
+            if self.recovery_preview(key)['sha256']!=digest or _database_stamp(self.db)!=main_stamp:
+                raise AppError('Nguồn đã thay đổi; DB chưa được khôi phục.',409)
+            os.replace(staged,self.db)
+            restored=inspect_db(self.db)
+            if restored['database_id']!=info['database_id'] or restored['reports']!=info['reports'] or restored['revisions']!=info['revisions'] or restored['verified_hashes']!=info['verified_hashes']:
+                raise AppError('Bản đã khôi phục chưa xác minh.')
+        finally:
+            staged.unlink(missing_ok=True)
+        return dict(restored=info,preservedName=preserved.name,migrationRequired=True)
 
     def candidates(self):
         directories = [self.local, self.directory / 'SAO_LUU_AN_TOAN', self.directory / 'SAO_LUU_TU_DONG', self.directory / 'SAO_LUU_MANG_DI']
@@ -331,9 +495,19 @@ class Protection:
                                  modified=dt.datetime.fromtimestamp(stat.st_mtime, VN).isoformat()))
         return sorted(rows, key=lambda r: r['modified'], reverse=True)
 
+    def restore_drill_due(self):
+        try:
+            previous=dt.datetime.fromisoformat(self.config['last_restore_drill'])
+            age=dt.datetime.now(VN)-previous
+            return age.total_seconds()<0 or age.total_seconds()>=90*86400
+        except (KeyError, ValueError, TypeError):
+            return True
+
     def status(self):
         return dict(warning=self.warning, warning_level=self.warning_level, external_directory=self.config.get('external_directory', ''),
                     last_local=self.config.get('last_local'), last_external=self.config.get('last_external'),
+                    last_full_local=self.config.get('last_full_local'), last_full_external=self.config.get('last_full_external'), last_validation=self.config.get('last_validation'),
+                    last_restore_drill=self.config.get('last_restore_drill'), restore_drill_due=self.restore_drill_due(),
                     local_directory=str(self.local), database_exists=self.db.is_file(), backups=self.candidates())
 
     def selected(self, key):
@@ -378,6 +552,9 @@ class Protection:
             os.replace(staged, self.db)
         finally:
             staged.unlink(missing_ok=True)
+        self.config.pop('verified_cache',None)
+        self.config.pop('last_full_local',None)
+        self.config.pop('last_full_external',None)
         self.initialize()
         return dict(restored=info, preserved=str(preserved) if preserved else '')
 
