@@ -1,0 +1,24 @@
+{
+  "source": ".cvf\\runtime\\local-completion-20261108\\fixtures-terra\\benchmark\\do_hieu_nang_k2rzn8ud\\DU_LIEU\\BAO_CAO_CA.db",
+  "bytes": 1251680256,
+  "sha256": "51757e7c9db4af7bfa43e6b5a5ae09c8f0b3987c64705e6c024a0bae037c5307",
+  "counts": {
+    "reports": 2191,
+    "revisions": 87602,
+    "attachment_blobs": 200
+  },
+  "year2026Reports": 728,
+  "year2026Totals": {
+    "f20": 433902,
+    "f40": 434773,
+    "e20": 217262,
+    "e40": 110063
+  },
+  "sourceFirstActor": "NGUOI NHAP",
+  "freeAfterCopy": 13847134208,
+  "limitations": [
+    "Warm OS cache",
+    "200 original storage JPEG blobs nondecodable, not image proof",
+    "No concurrent heavy benchmark jobs; same host/NVMe"
+  ]
+}

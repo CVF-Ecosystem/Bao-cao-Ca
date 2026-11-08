@@ -1,0 +1,59 @@
+{
+  "fixtures": [
+    {
+      "fixture": "short",
+      "id": "2026-10-01_DAY",
+      "staffRows": 9,
+      "jobRows": 6,
+      "chiefs": 1
+    }
+  ],
+  "exeSha256": "08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484",
+  "method": "Actual headed app Print, browser kiosk-printing Save as PDF destination in owned profile; no PDF generation API",
+  "runs": [
+    {
+      "trustedKeyWitness": [],
+      "case": "chrome-short-headers0-ctrlp",
+      "trigger": "ctrlp",
+      "headersRequested": false,
+      "channel": "chrome",
+      "headless": false,
+      "settingsRequested": {
+        "version": 2,
+        "selectedDestinationId": "Save as PDF",
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "account": ""
+          }
+        ],
+        "isHeaderFooterEnabled": false,
+        "isCssBackgroundEnabled": false,
+        "isLandscapeEnabled": true,
+        "mediaSize": {
+          "height_microns": 297000,
+          "width_microns": 210000,
+          "custom_display_name": "A4",
+          "name": "ISO_A4",
+          "imageable_area_bottom_microns": 0,
+          "imageable_area_left_microns": 0,
+          "imageable_area_right_microns": 210000,
+          "imageable_area_top_microns": 297000,
+          "is_default": false
+        },
+        "marginsType": 0,
+        "scalingType": 3,
+        "scaling": "100"
+      },
+      "outputDirectory": "chrome-output",
+      "dialog": null,
+      "outputs": [],
+      "browserVersion": "156.0.8078.81"
+    }
+  ],
+  "error": "StopIteration: ",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\consumer-prep\\baseline_key_case.py\", line 30, in <module>\n    time.sleep(1);targets=cdp.send('Target.getTargets')['targetInfos'];target=next(t for t in targets if t['url'].startswith(('chrome://print','edge://print')));received={}\n                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nStopIteration\n",
+  "cleanupExitCode": 0,
+  "elapsedSeconds": 5.984999999869615
+}

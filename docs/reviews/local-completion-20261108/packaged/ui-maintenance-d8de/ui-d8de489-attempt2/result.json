@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "U7 server version"
+  ],
+  "status": "FAILED",
+  "error": "U1 first actor visible1366x657",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\consumer-prep\\run_ui.py\", line 12, in <module>\n    c.launch(pw);p=c.page;check('U7 server version', '1.10.0' in p.locator('#appVersion').inner_text());c.report('2026-10-01_DAY');a=p.locator('#actor').bounding_box();check('U1 first actor visible1366x657',a['y']>=0 and a['y']+a['height']<657);c.capture('compact-first-input');p.keyboard.press('Alt+1');p.locator('#tab_staff[aria-selected=\"true\"]').wait_for()\n                                                                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\consumer-prep\\run_ui.py\", line 9, in check\n    assert value,label\n           ^^^^^\nAssertionError: U1 first actor visible1366x657\n"
+}

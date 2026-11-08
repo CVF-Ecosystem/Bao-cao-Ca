@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "restore drill status updated",
+    "valid PDF actual upload"
+  ],
+  "status": "OBSERVED_PENDING_REVIEW"
+}

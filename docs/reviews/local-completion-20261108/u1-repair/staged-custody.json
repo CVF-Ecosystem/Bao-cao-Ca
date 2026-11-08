@@ -1,0 +1,104 @@
+{
+  "status": "STAGED24_MATCH_ACCEPTED_RAW_BYTES",
+  "files": [
+    {
+      "path": "ma_nguon/BAO_VE_DU_LIEU.py",
+      "ok": true
+    },
+    {
+      "path": "ma_nguon/LUU_TRU.py",
+      "ok": true
+    },
+    {
+      "path": "ma_nguon/MAY_CHU.py",
+      "ok": true
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "ok": true
+    },
+    {
+      "path": "ma_nguon/BAO_TRI_CSDL.py",
+      "ok": true
+    },
+    {
+      "path": "ma_nguon/NANG_CAP_CSDL.py",
+      "ok": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU.py",
+      "ok": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_API.py",
+      "ok": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_V1_9.py",
+      "ok": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_KHOI_DONG.py",
+      "ok": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_COMPLETION.py",
+      "ok": true
+    },
+    {
+      "path": "tai_lieu/API.md",
+      "ok": true
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "ok": true
+    },
+    {
+      "path": "cong_cu/DO_HIEU_NANG.py",
+      "ok": true
+    },
+    {
+      "path": "giao_dien/giao_dien.html",
+      "ok": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/bao_ve.js",
+      "ok": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "ok": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/phan_cong_mau.js",
+      "ok": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/style.css",
+      "ok": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/ung_dung.js",
+      "ok": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/local_ui.js",
+      "ok": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+      "ok": true
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_10_0.txt",
+      "ok": true
+    },
+    {
+      "path": "ma_nguon/NGHIEP_VU.py",
+      "ok": true
+    }
+  ],
+  "secretPatternScan": "No provider-key/Bearer-token/rawlaunch-URLtoken matches in LOCAL reviewfamily; filenames-only scan, no secrets printed.",
+  "sourceWhitespace": "git diff --cached --check on2changedsource/testpaths exit0",
+  "limits": "Immutable raw review CRLF preserved by -text; no wholesale proof rewriting for whitespace."
+}

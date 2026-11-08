@@ -1,0 +1,27 @@
+[
+  {
+    "event": "launch",
+    "pid": 67248,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f"
+  },
+  {
+    "event": "screenshot",
+    "file": "failure.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 67248,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  }
+]

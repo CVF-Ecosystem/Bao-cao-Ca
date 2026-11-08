@@ -1,0 +1,952 @@
+{
+  "fixtures": [
+    {
+      "fixture": "short",
+      "id": "2026-10-01_DAY",
+      "staffRows": 9,
+      "jobRows": 6,
+      "chiefs": 1
+    }
+  ],
+  "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f",
+  "method": "Actual headed app Print, browser kiosk-printing Save as PDF destination in owned profile; no PDF generation API",
+  "runs": [
+    {
+      "trustedKeyWitness": [
+        {
+          "key": "p",
+          "ctrlKey": true,
+          "isTrusted": true,
+          "repeat": false,
+          "defaultPrevented": true
+        }
+      ],
+      "case": "chrome-short-headers0-ctrlp",
+      "trigger": "ctrlp",
+      "headersRequested": false,
+      "channel": "chrome",
+      "headless": false,
+      "settingsRequested": {
+        "version": 2,
+        "selectedDestinationId": "Save as PDF",
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "account": ""
+          }
+        ],
+        "isHeaderFooterEnabled": false,
+        "isCssBackgroundEnabled": false,
+        "isLandscapeEnabled": true,
+        "mediaSize": {
+          "height_microns": 297000,
+          "width_microns": 210000,
+          "custom_display_name": "A4",
+          "name": "ISO_A4",
+          "imageable_area_bottom_microns": 0,
+          "imageable_area_left_microns": 0,
+          "imageable_area_right_microns": 210000,
+          "imageable_area_top_microns": 297000,
+          "is_default": false
+        },
+        "marginsType": 0,
+        "scalingType": 3,
+        "scaling": "100"
+      },
+      "outputDirectory": "chrome-output",
+      "dialog": {
+        "target": {
+          "targetId": "E68FA6A8A9D01D428816DF72883574C5",
+          "type": "page",
+          "title": "Sổ báo cáo ca • Bãi Container",
+          "url": "chrome://print/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "E1D80B568BDD813D3A706ACAE931E9B3"
+        },
+        "relatedTargets": [
+          {
+            "targetId": "E68FA6A8A9D01D428816DF72883574C5",
+            "type": "page",
+            "title": "Sổ báo cáo ca • Bãi Container",
+            "url": "chrome://print/",
+            "attached": false,
+            "canAccessOpener": false,
+            "browserContextId": "E1D80B568BDD813D3A706ACAE931E9B3"
+          },
+          {
+            "targetId": "C386CA9DA6B84CEC5E5B0A7C4D22DA07",
+            "type": "iframe",
+            "title": "chrome-untrusted://print/8914AACA651E58313097D84AC1B7ACFF/0/print.pdf",
+            "url": "chrome-untrusted://print/8914AACA651E58313097D84AC1B7ACFF/0/print.pdf",
+            "attached": false,
+            "parentId": "E68FA6A8A9D01D428816DF72883574C5",
+            "canAccessOpener": false,
+            "parentFrameId": "9F9672F3813DC25AE120A660476327C7",
+            "browserContextId": "E1D80B568BDD813D3A706ACAE931E9B3"
+          }
+        ],
+        "controls": {
+          "id": 1,
+          "result": {
+            "result": {
+              "type": "object",
+              "value": [
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "label": "Top margin",
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "label": "Right margin",
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "label": "Bottom margin",
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "label": "Left margin",
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "select",
+                  "text": "Save as PDF\nNo destinations found",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "Save as PDF/local/",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Save as PDF\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "Save as PDF/local/",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        No destinations found\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "noDestinations",
+                  "disabled": false
+                },
+                {
+                  "tag": "PRINT-PREVIEW-DESTINATION-SELECT",
+                  "id": "destinationSelect",
+                  "text": "\n",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "seeMore",
+                  "text": "See more",
+                  "label": "See more destinations",
+                  "role": "button",
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "All\nOdd pages only\nEven pages only\nCustom",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        All\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Odd pages only\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Even pages only\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "2",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Custom\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "3",
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "label": "e.g. 1-5, 8, 11-13",
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "label": "Copies",
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "1",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "DIV",
+                  "id": "checkbox",
+                  "text": "\n  \n  \n    \n    \n  \n  \n",
+                  "label": null,
+                  "role": "checkbox",
+                  "ariaChecked": "true"
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "collate",
+                  "text": "\n      Collate\n    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "checked": true,
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n      Portrait\n      Landscape\n    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "landscape",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "Portrait",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "portrait",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "Landscape",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "landscape",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n      Black and white\n      Color\n    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "color",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "Black and white",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "bw",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "Color",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "color",
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-ICON-BUTTON",
+                  "id": "icon",
+                  "text": "\n",
+                  "label": "More settings",
+                  "role": "button",
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-EXPAND-BUTTON",
+                  "id": "",
+                  "text": "\n    More settings\n  ",
+                  "label": "More settings",
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n  \n    \n      \n        Legal\n      \n    \n      \n        Letter\n      \n    \n      \n        Tabloid\n      \n    \n      \n        A0\n      \n    \n      \n        A1\n      \n    \n      \n        A2\n      \n    \n      \n        A3\n      \n    \n      \n        A4\n      \n    \n      \n        A5\n      \n    \n  \n",
+                  "label": "Paper size",
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":297000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":210000,\"imageable_area_top_microns\":297000,\"name\":\"ISO_A4\",\"width_microns\":210000,\"custom_display_name\":\"A4\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Legal\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":355600,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":215900,\"imageable_area_top_microns\":355600,\"name\":\"NA_LEGAL\",\"width_microns\":215900,\"custom_display_name\":\"Legal\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Letter\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":279400,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":215900,\"imageable_area_top_microns\":279400,\"is_default\":true,\"name\":\"NA_LETTER\",\"width_microns\":215900,\"custom_display_name\":\"Letter\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Tabloid\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":431800,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":279400,\"imageable_area_top_microns\":431800,\"name\":\"NA_LEDGER\",\"width_microns\":279400,\"custom_display_name\":\"Tabloid\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        A0\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":1189000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":841000,\"imageable_area_top_microns\":1189000,\"name\":\"ISO_A0\",\"width_microns\":841000,\"custom_display_name\":\"A0\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        A1\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":841000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":594000,\"imageable_area_top_microns\":841000,\"name\":\"ISO_A1\",\"width_microns\":594000,\"custom_display_name\":\"A1\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        A2\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":594000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":420000,\"imageable_area_top_microns\":594000,\"name\":\"ISO_A2\",\"width_microns\":420000,\"custom_display_name\":\"A2\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        A3\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":420000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":297000,\"imageable_area_top_microns\":420000,\"name\":\"ISO_A3\",\"width_microns\":297000,\"custom_display_name\":\"A3\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        A4\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":297000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":210000,\"imageable_area_top_microns\":297000,\"name\":\"ISO_A4\",\"width_microns\":210000,\"custom_display_name\":\"A4\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        A5\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":210000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":148000,\"imageable_area_top_microns\":210000,\"name\":\"ISO_A5\",\"width_microns\":148000,\"custom_display_name\":\"A5\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "PRINT-PREVIEW-SETTINGS-SELECT",
+                  "id": "",
+                  "text": "\n    ",
+                  "label": "Paper size",
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "1\n2\n4\n6\n9\n16",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "1",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "2",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "2",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "4",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "4",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "6",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "6",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "9",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "9",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "16",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "16",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "Default\nNone\nMinimum\nCustom",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Default\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        None\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Minimum\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "2",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Custom\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "3",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n  \n    \n      \n        300 dpi\n      \n    \n  \n",
+                  "label": "Quality",
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"horizontal_dpi\":300,\"is_default\":true,\"vertical_dpi\":300,\"name\":\"300 dpi\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        300 dpi\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"horizontal_dpi\":300,\"is_default\":true,\"vertical_dpi\":300,\"name\":\"300 dpi\"}",
+                  "disabled": false
+                },
+                {
+                  "tag": "PRINT-PREVIEW-SETTINGS-SELECT",
+                  "id": "",
+                  "text": "\n    ",
+                  "label": "Quality",
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n      \n        Default\n      \n      \n        Fit to printable area\n      \n      \n        Fit to paper\n      \n      \n        Actual size\n      \n      \n        Custom\n      \n    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Default\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Fit to printable area\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Fit to paper\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "2",
+                  "disabled": true
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Actual size\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "3",
+                  "disabled": true
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n        Custom\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "4",
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "input",
+                  "text": "",
+                  "label": "",
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "100",
+                  "checked": false,
+                  "disabled": true
+                },
+                {
+                  "tag": "DIV",
+                  "id": "checkbox",
+                  "text": "\n  \n  \n    \n    \n  \n  \n",
+                  "label": null,
+                  "role": "checkbox",
+                  "ariaChecked": "false"
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "duplex",
+                  "text": "\n      Print on both sides\n    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT",
+                  "id": "",
+                  "text": "\n        \n          Flip on long edge\n        \n        \n          Flip on short edge\n        \n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n          Flip on long edge\n        ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTION",
+                  "id": "",
+                  "text": "\n          Flip on short edge\n        ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "2",
+                  "disabled": false
+                },
+                {
+                  "tag": "DIV",
+                  "id": "checkbox",
+                  "text": "\n  \n  \n    \n    \n  \n  \n",
+                  "label": null,
+                  "role": "checkbox",
+                  "ariaChecked": "false"
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "headerFooter",
+                  "text": "\n        Headers and footers\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "DIV",
+                  "id": "checkbox",
+                  "text": "\n  \n  \n    \n    \n  \n  \n",
+                  "label": null,
+                  "role": "checkbox",
+                  "ariaChecked": "false"
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "cssBackground",
+                  "text": "Background graphics",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "DIV",
+                  "id": "checkbox",
+                  "text": "\n  \n  \n    \n    \n  \n  \n",
+                  "label": null,
+                  "role": "checkbox",
+                  "ariaChecked": "false"
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "rasterize",
+                  "text": "\n        Print as image\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "DIV",
+                  "id": "checkbox",
+                  "text": "\n  \n  \n    \n    \n  \n  \n",
+                  "label": null,
+                  "role": "checkbox",
+                  "ariaChecked": "false"
+                },
+                {
+                  "tag": "CR-CHECKBOX",
+                  "id": "selectionOnly",
+                  "text": "\n        Selection only\n      ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "PRINT-PREVIEW-OTHER-OPTIONS-SETTINGS",
+                  "id": "",
+                  "text": "\n    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "button",
+                  "text": "\n      Advanced settings\n    ",
+                  "label": null,
+                  "role": "button",
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "PRINT-PREVIEW-ADVANCED-OPTIONS-SETTINGS",
+                  "id": "",
+                  "text": "\n    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-ICON-BUTTON",
+                  "id": "",
+                  "text": "\n  ",
+                  "label": "Print using system dialog… (Ctrl+Shift+P)",
+                  "role": "button",
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "",
+                  "text": "Save",
+                  "label": null,
+                  "role": "button",
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "CR-BUTTON",
+                  "id": "",
+                  "text": "Cancel",
+                  "label": null,
+                  "role": "button",
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "PRINT-PREVIEW-BUTTON-STRIP",
+                  "id": "",
+                  "text": "\n",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null
+                }
+              ]
+            }
+          }
+        }
+      },
+      "outputs": [
+        {
+          "fixture": "short",
+          "triggerEpoch": 1794129938.6493702,
+          "completedEpoch": 1794129940.9819076,
+          "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+          "retainedCopy": "chrome-short-native-saved.pdf",
+          "bytes": 95375,
+          "sha256": "c5958dbd87f0e886408948f65f9e50edd2d92080eac88c1db826d6f6fe0c5ac0",
+          "pages": 1,
+          "pageTexts": [
+            "01/10/2026 · Ca ngày\nTrang 1/1\nIn lúc 16:25 08/11/2026\nBÁO CÁO SẢN XUẤT CUỐI CA\nBỘ PHẬN BÃI CONTAINER\n06:00–18:00 ngày 01/10/2026 · BẢN NHÁP\nTàu trong ca: —\nNgười lưu: SYNTH ACTOR · 15:31:08 8/11/2026 · Phiên bản 1\nPhân công\nNhân sự\nPHỤ TRÁCH CHUNG\nSYNTH CHIEF 1\nSYNTH POSITION 0\nSYNTH PERSON 00\nSYNTH POSITION 1\nSYNTH PERSON 01\nSYNTH POSITION 2\nSYNTH PERSON 02\nSYNTH POSITION 3\nSYNTH PERSON 03\nSYNTH POSITION 4\nSYNTH PERSON 04\nSYNTH POSITION 5\nSYNTH PERSON 05\nSYNTH POSITION 6\nSYNTH PERSON 06\nSYNTH POSITION 7\nSYNTH PERSON 07\nCông việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 0\nYARD 0\nX\n1\n2\n0\n1\nSYNTH JOB 1\nYARD 1\nX\n2\n2\n0\n1\nSYNTH JOB 2\nYARD 2\nX\n3\n2\n0\n1\nSYNTH JOB 3\nYARD 3\nX\n4\n2\n0\n1\nSYNTH JOB 4\nYARD 4\nX\n5\n2\n0\n1\nSYNTH JOB 5\nYARD 5\nX\n6\n2\n0\n1\nTổng lượt\n21\n12\n0\n6\nGhi chú bàn giao\nLOCAL ORACLE short\nSố lượng là lượt công việc đã báo cáo, không phải số container duy nhất.\nTrưởng ca (Phụ trách chung)\nKý và ghi rõ họ tên\nSYNTH CHIEF 1\n"
+          ],
+          "oracleFound": true,
+          "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+          "OSSaveAs": "NOT_TESTED"
+        }
+      ],
+      "browserVersion": "156.0.8078.81",
+      "nativePaperSelection": {
+        "id": 90,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "control": "native paper SELECT",
+              "selected": "{\"height_microns\":297000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":210000,\"imageable_area_top_microns\":297000,\"name\":\"ISO_A4\",\"width_microns\":210000,\"custom_display_name\":\"A4\"}"
+            }
+          }
+        }
+      },
+      "persistedPrintingAppState": {
+        "version": 2,
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "account": ""
+          }
+        ],
+        "isCssBackgroundEnabled": false,
+        "customMargins": {},
+        "isHeaderFooterEnabled": false,
+        "isLandscapeEnabled": true,
+        "marginsType": 0,
+        "mediaSize": {
+          "height_microns": 279400,
+          "imageable_area_bottom_microns": 0,
+          "imageable_area_left_microns": 0,
+          "imageable_area_right_microns": 215900,
+          "imageable_area_top_microns": 279400,
+          "is_default": true,
+          "name": "NA_LETTER",
+          "width_microns": 215900,
+          "custom_display_name": "Letter"
+        },
+        "scaling": "100",
+        "scalingType": 3
+      },
+      "layoutOracles": {
+        "A4landscape": true,
+        "shortOnePage": true,
+        "perPageIdentity": true,
+        "perPageNumber": true,
+        "perPageMachineTime": true,
+        "signatureOnlyLast": true,
+        "allChiefNamesLast": [
+          true
+        ]
+      },
+      "mediaBoxes": [
+        [
+          841.9199829101562,
+          594.9599609375
+        ]
+      ]
+    }
+  ],
+  "cleanupExitCode": 0,
+  "elapsedSeconds": 13.077999999979511
+}

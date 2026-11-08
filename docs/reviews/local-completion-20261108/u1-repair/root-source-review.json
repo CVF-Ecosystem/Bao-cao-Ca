@@ -1,0 +1,192 @@
+{
+  "status": "SOURCE_REPAIR_ACCEPTED_NEW_EXE_NATIVE_PENDING",
+  "risk": "R2",
+  "worker": "Astra disclosed reviewer-local repair",
+  "reviewer": "Root independent REVIEWER",
+  "action": {
+    "path": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+    "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57"
+  },
+  "assessment": {
+    "path": "docs/reviews/local-completion-20261108/legacy-ui-batch-review.json",
+    "sha256": "9a0d16780c4b794145edb4ce6b7209094b1254663eb83f8e0535d40c21fffe36"
+  },
+  "workerReturn": {
+    "path": "docs/reviews/local-completion-20261108/u1-repair/source-review-return.json",
+    "sha256": "d8f72aa7a2196aae9b368fad6263c9f844cd1ace77be1f1a8e44c916d824332d"
+  },
+  "files": [
+    {
+      "path": "ma_nguon/BAO_VE_DU_LIEU.py",
+      "sha256": "99cd19b28c051b0f0302dc8f984adfa57ea774908fda0fc78ae2fe768428ab64",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "ma_nguon/LUU_TRU.py",
+      "sha256": "17ba6d6cb64677ef9bffd48b41b5b562bdbbb0a556522684f0fd5f86dad498ab",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "ma_nguon/MAY_CHU.py",
+      "sha256": "929f263a00025f4b22f6436dc6c18473c181b4e53e4e8c445c58e656dd9350f7",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "sha256": "628e0ed165749760adca22ab5cb9c1f751aed181389c2871ae7e39b0ff12da0e",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "ma_nguon/BAO_TRI_CSDL.py",
+      "sha256": "902f231f59f0d2fe151588c9501d5f5b18cd80722e24c537f1500d5608f0084a",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "ma_nguon/NANG_CAP_CSDL.py",
+      "sha256": "7cc26e6abffb46ebaef702c4bbaa7dda5a07413e2f43d7a8339d676b4a113f99",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU.py",
+      "sha256": "e83634b4ba55421b47ec4fab97a4aee29139f7c06e128dd7725cbd1baac48b4d",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_API.py",
+      "sha256": "6065b3c30f83b73ccc1b5c608db963b3da65d678484911ca5f5c0a3018d97fd1",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_V1_9.py",
+      "sha256": "a12622df1027ac2edc006056deb06381aa52d24a5f8af12727209dad2270f27c",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_KHOI_DONG.py",
+      "sha256": "d22c31a41ecb56e28a48132a16815e1d2a52c1ac343e55108f339d4902b6e425",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_COMPLETION.py",
+      "sha256": "b0c0cce1aaa75de76e04d6baf77d9e4caa7f770ff5e1bb486853e73be61b4411",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "tai_lieu/API.md",
+      "sha256": "d19e0850e52ba8be10260b2c992460b95b30d929a06a466f2f57c6c4ebcd525b",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "37b9310d5db4dc6b08899f54b8ec236053746881e48ae8a09ee43504c59df30d",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "cong_cu/DO_HIEU_NANG.py",
+      "sha256": "42c76d60ab359cbcd6926336840894088624a0a661adf82380e05849f2bc473a",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "giao_dien/giao_dien.html",
+      "sha256": "ebcad7a5fd7af90bf7d666b9378735af2cd9915ecc8858885cd56e4d2a992870",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/bao_ve.js",
+      "sha256": "f4c7b642ae4e3a2060cb6973898b405bcc86c2a274e8a0aed873fb5a7cbd882b",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "sha256": "7fd1578b8e590ac57c454e163bb77c105f633cf538b29b83efc6b58645e76b3a",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/phan_cong_mau.js",
+      "sha256": "ac8b6a5fd7fed07ad93cfdc9f2490dde93a4120fc0ab3d06b095d3fa2fa66268",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/style.css",
+      "sha256": "b7e255c4e5587caa31fdc8e56f89293dce6e2cc5947a724572f287464ec3dbce",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/ung_dung.js",
+      "sha256": "32d0e752ef32e5b0d22011eb117e54684b92db4b63870667c5435e517dbb7414",
+      "unchangedFromD8": false
+    },
+    {
+      "path": "giao_dien/tai_nguyen/local_ui.js",
+      "sha256": "20359ad8d340df6b9c48f1c7c303c513d1d29be364cc4fe707ac0f7811c67c14",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+      "sha256": "e9ff05574990596e5026fdfc914e9153a7848493bca769021343b17cc346c151",
+      "unchangedFromD8": false
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_10_0.txt",
+      "sha256": "e99a62468b56fb8903e2bcfb1928139dbb60b735853b313406dbe15e8d83cc36",
+      "unchangedFromD8": true
+    },
+    {
+      "path": "ma_nguon/NGHIEP_VU.py",
+      "sha256": "a695a9c2c6b0db27c078738af27f001b3f3218eaab06c7048a14d91f08be59d4",
+      "unchangedFromD8": true
+    }
+  ],
+  "checks": {
+    "all24RawHashesMatch": true,
+    "other22Unchanged": true,
+    "productDeltaExactlyTwoPostSuccessOpeningCalls": true,
+    "sourceWhitespaceExitCode": 0,
+    "rootIndependentActualCommand": "C:/nvm4w/nodejs/node.exe kiem_thu/KIEM_THU_LOCAL_UI.js",
+    "rootIndependentActualExitCode": 0,
+    "rootIndependentObservedChecks": 38,
+    "sevenJsGroups": {
+      "groups": [
+        {
+          "path": "kiem_thu/KIEM_THU_BAO_VE.js",
+          "exitCode": 0
+        },
+        {
+          "path": "kiem_thu/KIEM_THU_GIAO_DIEN.js",
+          "exitCode": 0
+        },
+        {
+          "path": "kiem_thu/KIEM_THU_LOCAL_UI.js",
+          "exitCode": 0
+        },
+        {
+          "path": "kiem_thu/KIEM_THU_MAU_CA.js",
+          "exitCode": 0
+        },
+        {
+          "path": "kiem_thu/KIEM_THU_PERSONNEL_UI.js",
+          "exitCode": 0
+        },
+        {
+          "path": "kiem_thu/KIEM_THU_PHAN_CONG.js",
+          "exitCode": 0
+        },
+        {
+          "path": "kiem_thu/KIEM_THU_V1_9.js",
+          "exitCode": 0
+        }
+      ],
+      "localBehaviorChecks": 38,
+      "newOpeningChecks": 9,
+      "skips": 0,
+      "log": {
+        "path": "docs/reviews/local-completion-20261108/u1-repair/js-tests.txt",
+        "sha256": "32f6765b6075bde2e2aab53232aff8f4586d4d8968107a164e18833874fc0816"
+      }
+    }
+  },
+  "reason": "Only successful loadReport and new beginShift scroll after render. Declined/failed/deferred opens do not scroll; same-editor/autosave/add-row owners retain scroll in actual behavioral tests. No broad render reset. Root independently read exact diff and executed38checks.",
+  "pythonBasis": "211/0skip43.059s final production Python/tests from d8de are unchanged and explicitly inherited, not claimed rerun. Workspace4 unchanged source basis.",
+  "inheritance": "PrintReport/template/CSS/backend unchanged; retain d8de native16 matrix, upgrades, correction/export and large behavior as scoped historical evidence. NewEXE requires actual opening/same-editor/fresh/restart/representativeprint and pending Edge default-margin/40DOM/U/maintenance outcomes.",
+  "limits": "Source acceptance only; fullL1-L8/product pending, no provider-governance/web/device acceptance."
+}

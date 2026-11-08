@@ -1,0 +1,92 @@
+{
+  "exitCode": 0,
+  "phase": "worker-return",
+  "range": "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=d8de4896b85e412e2756ad6c4f033fa049bb837d candidates=408 deleted=0",
+  "results": [
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-INST-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-CONT-01",
+      "findings": [],
+      "notes": [],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [],
+      "controlId": "CVF-DG-RANGE-01",
+      "findings": [],
+      "notes": [
+        "WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=d8de4896b85e412e2756ad6c4f033fa049bb837d candidates=408 deleted=0"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "work_order_status_grammar",
+        "closeability_contract"
+      ],
+      "controlId": "CVF-DG-APPL-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/work_orders/WO_LOCAL_COMPLETION.md"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-ROLE-01"
+      ],
+      "controlId": "CVF-DG-ROLE-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/reviews/local-completion-20261108/packaged/large-timing-supplement/timing-boundaries.md, docs/reviews/local-completion-20261108/packaged/legacy-d8de/observation.md, docs/reviews/local-completion-20261108/packaged/maintenance-d8de/observation.md, docs/reviews/local-completion-20261108/packaged/print-first-d8de/observation.md, docs/reviews/local-completion-20261108/packaged/print-matrix-d8de/observation.md, docs/reviews/local-completion-20261108/packaged/print-setting-supplement/observation.md, docs/reviews/local-completion-20261108/packaged/ui-maintenance-d8de/observation.md",
+        "docs/reviews/local-completion-20261108/packaged/large-d8de/custody-note.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)",
+        "docs/reviews/local-completion-20261108/packaged/legacy-copies-supplement/custody-note.md: no Risk, Worker or Reviewer declaration (not a role-bearing review)"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "CVF-DG-CLAIM-01"
+      ],
+      "controlId": "CVF-DG-CLAIM-01",
+      "findings": [],
+      "notes": [
+        "0 explicit claim line(s) and 10 document(s) scanned"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    },
+    {
+      "checkedControlIds": [
+        "milestone_coverage"
+      ],
+      "controlId": "CVF-DG-COV-01",
+      "findings": [],
+      "notes": [
+        "checked: docs/roadmaps/LOCAL_COMPLETION.md, docs/work_orders/WO_LOCAL_COMPLETION.md",
+        "mechanical joins only; Local owns semantic acceptance"
+      ],
+      "ok": true,
+      "outcome": "PASS",
+      "reason": ""
+    }
+  ]
+}

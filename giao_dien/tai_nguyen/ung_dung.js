@@ -156,7 +156,8 @@ async function beginShift(){
     conflict=false;
     editTab='staff';
     closeModal();
-    renderEditor()
+    renderEditor();
+    window.scrollTo(0,0)
   }catch(e){
     error(e)
   }
@@ -169,7 +170,8 @@ async function loadReport(id){
     dirty=false;
     conflict=false;
     editTab='staff';
-    renderEditor()
+    renderEditor();
+    window.scrollTo(0,0)
   }catch(e){
     error(e)
   }

@@ -1,0 +1,136 @@
+[
+  {
+    "event": "launch",
+    "readinessSeconds": 75.64697670005262,
+    "pid": 58320,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f"
+  },
+  {
+    "event": "screenshot",
+    "file": "large-ready.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Tìm báo cáo"
+  },
+  {
+    "event": "click-done",
+    "text": "Tìm báo cáo"
+  },
+  {
+    "event": "screenshot",
+    "file": "large-page1.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Trang sau →"
+  },
+  {
+    "event": "click-done",
+    "text": "Trang sau →"
+  },
+  {
+    "event": "screenshot",
+    "file": "large-page2.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Tìm báo cáo"
+  },
+  {
+    "event": "click-done",
+    "text": "Tìm báo cáo"
+  },
+  {
+    "event": "screenshot",
+    "file": "large-search-empty.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Xem tổng hợp"
+  },
+  {
+    "event": "click-done",
+    "text": "Xem tổng hợp"
+  },
+  {
+    "event": "screenshot",
+    "file": "large-year-summary.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Vào ca này"
+  },
+  {
+    "event": "click-done",
+    "text": "Vào ca này"
+  },
+  {
+    "event": "click-start",
+    "text": "＋ Thêm tệp"
+  },
+  {
+    "event": "click-done",
+    "text": "＋ Thêm tệp"
+  },
+  {
+    "event": "upload40",
+    "seconds": 0.9362501997966319
+  },
+  {
+    "event": "screenshot",
+    "file": "forty-images.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "large-40decoded.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "large-files-tab.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "portable-visible-wait.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "portable-pending-menu-responsive.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Mở DB kiểm tra / bổ sung"
+  },
+  {
+    "event": "menu-done",
+    "text": "Mở DB kiểm tra / bổ sung"
+  },
+  {
+    "event": "screenshot",
+    "file": "large-viewer-40.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Về DB chính của máy"
+  },
+  {
+    "event": "click-done",
+    "text": "Về DB chính của máy"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 58320,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  }
+]

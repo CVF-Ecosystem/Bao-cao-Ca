@@ -1,0 +1,858 @@
+{
+  "fixtures": [
+    {
+      "fixture": "short",
+      "id": "2026-10-01_DAY",
+      "staffRows": 9,
+      "jobRows": 6,
+      "chiefs": 1
+    }
+  ],
+  "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f",
+  "method": "Actual headed app Print, browser kiosk-printing Save as PDF destination in owned profile; no PDF generation API",
+  "runs": [
+    {
+      "trustedKeyWitness": [],
+      "case": "msedge-short-headers1-button",
+      "trigger": "button",
+      "headersRequested": true,
+      "channel": "msedge",
+      "headless": false,
+      "settingsRequested": {
+        "version": 2,
+        "selectedDestinationId": "Save as PDF",
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "account": ""
+          }
+        ],
+        "isHeaderFooterEnabled": true,
+        "isCssBackgroundEnabled": false,
+        "isLandscapeEnabled": true,
+        "mediaSize": {
+          "height_microns": 297000,
+          "width_microns": 210000,
+          "custom_display_name": "A4",
+          "name": "ISO_A4",
+          "imageable_area_bottom_microns": 0,
+          "imageable_area_left_microns": 0,
+          "imageable_area_right_microns": 210000,
+          "imageable_area_top_microns": 297000,
+          "is_default": false
+        },
+        "marginsType": 0,
+        "scalingType": 3,
+        "scaling": "100"
+      },
+      "outputDirectory": "msedge-output",
+      "dialog": {
+        "target": {
+          "targetId": "5719E70255E384E377C9F8440AED5325",
+          "type": "page",
+          "title": "Sổ báo cáo ca • Bãi Container",
+          "url": "edge://print/",
+          "attached": false,
+          "canAccessOpener": false,
+          "browserContextId": "4CA9A9B44ECCCD41F2D0AF0DB025DB4D",
+          "pid": 2004
+        },
+        "relatedTargets": [
+          {
+            "targetId": "5719E70255E384E377C9F8440AED5325",
+            "type": "page",
+            "title": "Sổ báo cáo ca • Bãi Container",
+            "url": "edge://print/",
+            "attached": false,
+            "canAccessOpener": false,
+            "browserContextId": "4CA9A9B44ECCCD41F2D0AF0DB025DB4D",
+            "pid": 2004
+          },
+          {
+            "targetId": "6B22756119CE777F8288C30D6435ADAC",
+            "type": "iframe",
+            "title": "chrome-untrusted://print/825D229A14A646C379F2117C59BFE670/0/print.pdf",
+            "url": "chrome-untrusted://print/825D229A14A646C379F2117C59BFE670/0/print.pdf",
+            "attached": false,
+            "parentId": "5719E70255E384E377C9F8440AED5325",
+            "canAccessOpener": false,
+            "parentFrameId": "56727D46925E41F5E405FE0A6BF5FEAC",
+            "browserContextId": "4CA9A9B44ECCCD41F2D0AF0DB025DB4D",
+            "pid": 0
+          }
+        ],
+        "controls": {
+          "id": 1,
+          "result": {
+            "result": {
+              "type": "object",
+              "value": [
+                {
+                  "tag": "FLUENT-BUTTON",
+                  "id": "",
+                  "text": "\n      \n  \n  \n\n    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "Save as PDF",
+                  "text": "\n                        \n                        Save as PDF\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "Save as PDF",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "OneNote (Desktop)",
+                  "text": "\n                        \n                        OneNote (Desktop)\n                        \n                        \n                          Ready\n                          \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "OneNote (Desktop)",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "PDF24",
+                  "text": "\n                        \n                        PDF24\n                        \n                        \n                          Ready\n                          \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "PDF24"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "Microsoft Print to PDF",
+                  "text": "\n                        \n                        Microsoft Print to PDF\n                        \n                        \n                          Ready\n                          \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "Microsoft Print to PDF"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "Foxit Reader PDF Printer",
+                  "text": "\n                        \n                        Foxit Reader PDF Printer\n                        \n                        \n                          Ready\n                          \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "Foxit Reader PDF Printer"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "ADD_PRINTER_OPTION_ID",
+                  "text": "\n                        \n                        Add a printer\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "ADD_PRINTER_OPTION_ID"
+                },
+                {
+                  "tag": "BUTTON",
+                  "id": "input-39",
+                  "text": "Save as PDF",
+                  "label": null,
+                  "role": "combobox",
+                  "ariaChecked": null,
+                  "value": "",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT-SETTING",
+                  "id": "",
+                  "text": "\n  ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-RADIO",
+                  "id": "input30",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "false",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-RADIO",
+                  "id": "input31",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "true",
+                  "checked": true,
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-RADIO",
+                  "id": "input50",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0",
+                  "checked": true,
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-RADIO",
+                  "id": "input51",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "4",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "control",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "{\"height_microns\":1189000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":841000,\"imageable_area_top_microns\":1189000,\"name\":\"ISO_A0\",\"width_microns\":841000,\"custom_display_name\":\"A0\"}",
+                  "text": "\n                        \n                        A0\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":1189000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":841000,\"imageable_area_top_microns\":1189000,\"name\":\"ISO_A0\",\"width_microns\":841000,\"custom_display_name\":\"A0\"}"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "{\"height_microns\":841000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":594000,\"imageable_area_top_microns\":841000,\"name\":\"ISO_A1\",\"width_microns\":594000,\"custom_display_name\":\"A1\"}",
+                  "text": "\n                        \n                        A1\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":841000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":594000,\"imageable_area_top_microns\":841000,\"name\":\"ISO_A1\",\"width_microns\":594000,\"custom_display_name\":\"A1\"}"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "{\"height_microns\":594000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":420000,\"imageable_area_top_microns\":594000,\"name\":\"ISO_A2\",\"width_microns\":420000,\"custom_display_name\":\"A2\"}",
+                  "text": "\n                        \n                        A2\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":594000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":420000,\"imageable_area_top_microns\":594000,\"name\":\"ISO_A2\",\"width_microns\":420000,\"custom_display_name\":\"A2\"}"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "{\"height_microns\":420000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":297000,\"imageable_area_top_microns\":420000,\"name\":\"ISO_A3\",\"width_microns\":297000,\"custom_display_name\":\"A3\"}",
+                  "text": "\n                        \n                        A3\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":420000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":297000,\"imageable_area_top_microns\":420000,\"name\":\"ISO_A3\",\"width_microns\":297000,\"custom_display_name\":\"A3\"}"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "{\"height_microns\":297000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":210000,\"imageable_area_top_microns\":297000,\"name\":\"ISO_A4\",\"width_microns\":210000,\"custom_display_name\":\"A4\"}",
+                  "text": "\n                        \n                        A4\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":297000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":210000,\"imageable_area_top_microns\":297000,\"name\":\"ISO_A4\",\"width_microns\":210000,\"custom_display_name\":\"A4\"}"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "{\"height_microns\":210000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":148000,\"imageable_area_top_microns\":210000,\"name\":\"ISO_A5\",\"width_microns\":148000,\"custom_display_name\":\"A5\"}",
+                  "text": "\n                        \n                        A5\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":210000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":148000,\"imageable_area_top_microns\":210000,\"name\":\"ISO_A5\",\"width_microns\":148000,\"custom_display_name\":\"A5\"}"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "{\"height_microns\":355600,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":215900,\"imageable_area_top_microns\":355600,\"name\":\"NA_LEGAL\",\"width_microns\":215900,\"custom_display_name\":\"Legal\"}",
+                  "text": "\n                        \n                        Legal\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":355600,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":215900,\"imageable_area_top_microns\":355600,\"name\":\"NA_LEGAL\",\"width_microns\":215900,\"custom_display_name\":\"Legal\"}"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "{\"height_microns\":279400,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":215900,\"imageable_area_top_microns\":279400,\"is_default\":true,\"name\":\"NA_LETTER\",\"width_microns\":215900,\"custom_display_name\":\"Letter\"}",
+                  "text": "\n                        \n                        Letter\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":279400,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":215900,\"imageable_area_top_microns\":279400,\"is_default\":true,\"name\":\"NA_LETTER\",\"width_microns\":215900,\"custom_display_name\":\"Letter\"}"
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "{\"height_microns\":431800,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":279400,\"imageable_area_top_microns\":431800,\"name\":\"NA_LEDGER\",\"width_microns\":279400,\"custom_display_name\":\"Tabloid\"}",
+                  "text": "\n                        \n                        Tabloid\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "{\"height_microns\":431800,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":279400,\"imageable_area_top_microns\":431800,\"name\":\"NA_LEDGER\",\"width_microns\":279400,\"custom_display_name\":\"Tabloid\"}"
+                },
+                {
+                  "tag": "BUTTON",
+                  "id": "input-53",
+                  "text": "A4",
+                  "label": null,
+                  "role": "combobox",
+                  "ariaChecked": null,
+                  "value": "A4",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT-SETTING",
+                  "id": "",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "control",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "100",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "1",
+                  "text": "\n                        \n                        1\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "2",
+                  "text": "\n                        \n                        2\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "2",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "4",
+                  "text": "\n                        \n                        4\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "4",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "6",
+                  "text": "\n                        \n                        6\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "6",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "9",
+                  "text": "\n                        \n                        9\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "9",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "16",
+                  "text": "\n                        \n                        16\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "16",
+                  "disabled": false
+                },
+                {
+                  "tag": "BUTTON",
+                  "id": "input-43",
+                  "text": "1",
+                  "label": null,
+                  "role": "combobox",
+                  "ariaChecked": null,
+                  "value": "",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT-SETTING",
+                  "id": "",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "DEFAULT",
+                  "text": "\n                        \n                        Default\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "NO_MARGINS",
+                  "text": "\n                        \n                        None\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "1",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "MINIMUM",
+                  "text": "\n                        \n                        Minimum\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "2",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-OPTION",
+                  "id": "CUSTOM",
+                  "text": "\n                        \n                        Custom\n                        \n                        \n                    ",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "3",
+                  "disabled": false
+                },
+                {
+                  "tag": "BUTTON",
+                  "id": "input-45",
+                  "text": "Custom",
+                  "label": null,
+                  "role": "combobox",
+                  "ariaChecked": null,
+                  "value": "Custom",
+                  "disabled": false
+                },
+                {
+                  "tag": "SELECT-SETTING",
+                  "id": "",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "control",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0.5",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "control",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0.5",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "control",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0.5",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "INPUT",
+                  "id": "control",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "0.5",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-CHECKBOX",
+                  "id": "backgrounds-checkbox",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "on",
+                  "checked": false,
+                  "disabled": false
+                },
+                {
+                  "tag": "OPTIONS-SETTING",
+                  "id": "",
+                  "text": "",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-BUTTON",
+                  "id": "",
+                  "text": "Save",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "Print",
+                  "disabled": false
+                },
+                {
+                  "tag": "FLUENT-BUTTON",
+                  "id": "",
+                  "text": "Cancel",
+                  "label": null,
+                  "role": null,
+                  "ariaChecked": null,
+                  "value": "Cancel"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "outputs": [
+        {
+          "fixture": "short",
+          "triggerEpoch": 1794131218.7259877,
+          "completedEpoch": 1794131220.891792,
+          "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+          "retainedCopy": "msedge-short-native-saved.pdf",
+          "bytes": 95311,
+          "sha256": "3f0c72528f54468b524dea6f25cf4534af9a73da7c7405a23e1cb17475f3583a",
+          "pages": 1,
+          "pageTexts": [
+            "01/10/2026 · Ca ngày\nTrang 1/1\nIn lúc 16:46 08/11/2026\nBÁO CÁO SẢN XUẤT CUỐI CA\nBỘ PHẬN BÃI CONTAINER\n06:00–18:00 ngày 01/10/2026 · BẢN NHÁP\nTàu trong ca: —\nNgười lưu: SYNTH ACTOR · 15:31:08 8/11/2026 · Phiên bản 1\nPhân công\nNhân sự\nPHỤ TRÁCH CHUNG\nSYNTH CHIEF 1\nSYNTH POSITION 0\nSYNTH PERSON 00\nSYNTH POSITION 1\nSYNTH PERSON 01\nSYNTH POSITION 2\nSYNTH PERSON 02\nSYNTH POSITION 3\nSYNTH PERSON 03\nSYNTH POSITION 4\nSYNTH PERSON 04\nSYNTH POSITION 5\nSYNTH PERSON 05\nSYNTH POSITION 6\nSYNTH PERSON 06\nSYNTH POSITION 7\nSYNTH PERSON 07\nCông việc\nChi tiết\nXN\nRTG\nF20\nF40\nE20\nE40\nSYNTH JOB 0\nYARD 0\nX\n1\n2\n0\n1\nSYNTH JOB 1\nYARD 1\nX\n2\n2\n0\n1\nSYNTH JOB 2\nYARD 2\nX\n3\n2\n0\n1\nSYNTH JOB 3\nYARD 3\nX\n4\n2\n0\n1\nSYNTH JOB 4\nYARD 4\nX\n5\n2\n0\n1\nSYNTH JOB 5\nYARD 5\nX\n6\n2\n0\n1\nTổng lượt\n21\n12\n0\n6\nGhi chú bàn giao\nLOCAL ORACLE short\nSố lượng là lượt công việc đã báo cáo, không phải số container duy nhất.\nTrưởng ca (Phụ trách chung)\nKý và ghi rõ họ tên\nSYNTH CHIEF 1\n"
+          ],
+          "oracleFound": true,
+          "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+          "OSSaveAs": "NOT_TESTED"
+        }
+      ],
+      "browserVersion": "156.0.4314.58",
+      "nativePaperSelection": {
+        "id": 90,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "paperControlNotFound": true
+            }
+          }
+        }
+      },
+      "edgeNativePaperControlAction": {
+        "id": 92,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "clickedPaperButton": true,
+              "clickedActualA4Option": true
+            }
+          }
+        }
+      },
+      "nativeMarginAction": {
+        "id": 93,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "clickedMargins": true,
+              "clickedCustom": true
+            }
+          }
+        }
+      },
+      "customMarginActualInput": {
+        "method": "CDP native Input.insertText in focused real margin INPUT; Tab commit",
+        "text": "0.5 inch",
+        "focusResults": [
+          {
+            "id": 100,
+            "result": {
+              "result": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          },
+          {
+            "id": 103,
+            "result": {
+              "result": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          },
+          {
+            "id": 106,
+            "result": {
+              "result": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          },
+          {
+            "id": 109,
+            "result": {
+              "result": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          }
+        ]
+      },
+      "persistedPrintingAppState": {
+        "version": 2,
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "capabilities": {
+              "printer": {
+                "color": {
+                  "option": [
+                    {
+                      "is_default": true,
+                      "type": "STANDARD_COLOR",
+                      "vendor_id": "2"
+                    }
+                  ]
+                },
+                "dpi": {
+                  "option": [
+                    {
+                      "horizontal_dpi": 300,
+                      "is_default": true,
+                      "vertical_dpi": 300
+                    }
+                  ]
+                },
+                "media_size": {
+                  "option": [
+                    {
+                      "height_microns": 1189000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 841000,
+                      "imageable_area_top_microns": 1189000,
+                      "name": "ISO_A0",
+                      "width_microns": 841000,
+                      "custom_display_name": "A0"
+                    },
+                    {
+                      "height_microns": 841000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 594000,
+                      "imageable_area_top_microns": 841000,
+                      "name": "ISO_A1",
+                      "width_microns": 594000,
+                      "custom_display_name": "A1"
+                    },
+                    {
+                      "height_microns": 594000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 420000,
+                      "imageable_area_top_microns": 594000,
+                      "name": "ISO_A2",
+                      "width_microns": 420000,
+                      "custom_display_name": "A2"
+                    },
+                    {
+                      "height_microns": 420000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 297000,
+                      "imageable_area_top_microns": 420000,
+                      "name": "ISO_A3",
+                      "width_microns": 297000,
+                      "custom_display_name": "A3"
+                    },
+                    {
+                      "height_microns": 297000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 210000,
+                      "imageable_area_top_microns": 297000,
+                      "name": "ISO_A4",
+                      "width_microns": 210000,
+                      "custom_display_name": "A4"
+                    },
+                    {
+                      "height_microns": 210000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 148000,
+                      "imageable_area_top_microns": 210000,
+                      "name": "ISO_A5",
+                      "width_microns": 148000,
+                      "custom_display_name": "A5"
+                    },
+                    {
+                      "height_microns": 355600,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 215900,
+                      "imageable_area_top_microns": 355600,
+                      "name": "NA_LEGAL",
+                      "width_microns": 215900,
+                      "custom_display_name": "Legal"
+                    },
+                    {
+                      "height_microns": 279400,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 215900,
+                      "imageable_area_top_microns": 279400,
+                      "is_default": true,
+                      "name": "NA_LETTER",
+                      "width_microns": 215900,
+                      "custom_display_name": "Letter"
+                    },
+                    {
+                      "height_microns": 431800,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 279400,
+                      "imageable_area_top_microns": 431800,
+                      "name": "NA_LEDGER",
+                      "width_microns": 279400,
+                      "custom_display_name": "Tabloid"
+                    }
+                  ]
+                },
+                "page_orientation": {
+                  "option": [
+                    {
+                      "type": "PORTRAIT"
+                    },
+                    {
+                      "type": "LANDSCAPE"
+                    },
+                    {
+                      "is_default": true,
+                      "type": "AUTO"
+                    }
+                  ]
+                }
+              },
+              "version": "1.0"
+            },
+            "displayName": "Save as PDF",
+            "printerStatus": "printerStatusUnknown",
+            "extensionId": "",
+            "extensionName": ""
+          }
+        ],
+        "dpi": {
+          "horizontal_dpi": 300,
+          "is_default": true,
+          "vertical_dpi": 300
+        },
+        "duplexType": "NO_DUPLEX",
+        "mediaSize": {
+          "height_microns": 297000,
+          "imageable_area_bottom_microns": 0,
+          "imageable_area_left_microns": 0,
+          "imageable_area_right_microns": 210000,
+          "imageable_area_top_microns": 297000,
+          "name": "ISO_A4",
+          "width_microns": 210000,
+          "custom_display_name": "A4"
+        },
+        "marginsType": 3,
+        "customMargins": {
+          "marginTop": 36,
+          "marginRight": 36,
+          "marginBottom": 36,
+          "marginLeft": 36
+        },
+        "isColorEnabled": true,
+        "isHeaderFooterEnabled": true,
+        "isLandscapeEnabled": true,
+        "isCollateEnabled": true,
+        "isCssBackgroundEnabled": false,
+        "scaling": "100",
+        "vendorOptions": {}
+      },
+      "layoutOracles": {
+        "A4landscape": true,
+        "shortOnePage": true,
+        "perPageIdentity": true,
+        "perPageNumber": true,
+        "perPageMachineTime": true,
+        "signatureOnlyLast": true,
+        "allChiefNamesLast": [
+          true
+        ]
+      },
+      "mediaBoxes": [
+        [
+          841.9199829101562,
+          594.9599609375
+        ]
+      ]
+    }
+  ],
+  "cleanupExitCode": 0,
+  "elapsedSeconds": 15.875
+}

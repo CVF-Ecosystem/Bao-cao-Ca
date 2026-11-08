@@ -1,0 +1,40 @@
+{
+  "root": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\fixtures-terra\\maintenance",
+  "data_dir": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\fixtures-terra\\maintenance\\DU_LIEU",
+  "db": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\fixtures-terra\\maintenance\\DU_LIEU\\BAO_CAO_CA.db",
+  "identity": "341be2d2197c0fefa164eb20522680e9",
+  "report_id": "2026-11-08_DAY",
+  "report_version": 2,
+  "report_count": 1,
+  "revision_count": 2,
+  "blob_count_before": 5,
+  "blob_count_after": 4,
+  "hashes": {
+    "report": "9ce6a12401590cf322aba53754e84fe8681eeaf9a59239fb40cd237bbab86501",
+    "revision": "393d0c250c02ad28744e0be3f79b03e3e1016527fe0daa91bc7a691567a4ba50",
+    "base": "7d8d0bc30378d2c6c0ee89e61e68e15b6888188ce4deae4d90517e978a4bee24",
+    "old_orphan": "88662fa62013de8c9a3bd79097264e0806ef0d112c0921df6b60eafd1c761061",
+    "reuploaded": "d74e8c2d1f2577d9fdc7beb14f2c227a967ff2a98095c16b38fc2c098df7d646"
+  },
+  "references_preserved": [
+    "393d0c250c02ad28744e0be3f79b03e3e1016527fe0daa91bc7a691567a4ba50",
+    "7d8d0bc30378d2c6c0ee89e61e68e15b6888188ce4deae4d90517e978a4bee24",
+    "9ce6a12401590cf322aba53754e84fe8681eeaf9a59239fb40cd237bbab86501"
+  ],
+  "orphan_delete_only": [
+    "88662fa62013de8c9a3bd79097264e0806ef0d112c0921df6b60eafd1c761061"
+  ],
+  "viewer_delete_only": [
+    "ban_sao_1111111111111111.db"
+  ],
+  "viewer_keep": [
+    "ban_sao_2222222222222222.db",
+    "ban_sao_3333333333333333.db",
+    "ban_sao_4444444444444444.db"
+  ],
+  "eligible_viewer_sha256": "cd4e741aaa98f2d81d115e320952a835d8e59e962177166f0a7064d482dd9b6f",
+  "current_db_sha256": "cf4d07714ef930a8cfda93482432c647f86a57e449f0f77714d2a409fad5ba2b",
+  "preview_candidate_count_each": 1,
+  "expected_main_db_survives": true,
+  "limitations": "Pending/open viewer exclusions require separate live proof; unknown/correction/recent are present. Ages are synthetic fixture metadata. Synthetic JPEG-header bytes are not image render evidence."
+}

@@ -1,0 +1,88 @@
+[
+  {
+    "event": "launch",
+    "readinessSeconds": 2.7356569999828935,
+    "pid": 70528,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f"
+  },
+  {
+    "event": "menu-start",
+    "text": "Bảo vệ dữ liệu / Khôi phục"
+  },
+  {
+    "event": "menu-done",
+    "text": "Bảo vệ dữ liệu / Khôi phục"
+  },
+  {
+    "event": "click-start",
+    "text": "Dọn bản chỉ xem cũ"
+  },
+  {
+    "event": "click-done",
+    "text": "Dọn bản chỉ xem cũ"
+  },
+  {
+    "event": "screenshot",
+    "file": "viewer-preview-one.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Xác nhận thực hiện"
+  },
+  {
+    "event": "click-done",
+    "text": "Xác nhận thực hiện"
+  },
+  {
+    "event": "screenshot",
+    "file": "viewer-completed.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Bảo vệ dữ liệu / Khôi phục"
+  },
+  {
+    "event": "menu-done",
+    "text": "Bảo vệ dữ liệu / Khôi phục"
+  },
+  {
+    "event": "click-start",
+    "text": "Dọn tệp không tham chiếu"
+  },
+  {
+    "event": "click-done",
+    "text": "Dọn tệp không tham chiếu"
+  },
+  {
+    "event": "screenshot",
+    "file": "orphan-preview-one.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Xác nhận thực hiện"
+  },
+  {
+    "event": "click-done",
+    "text": "Xác nhận thực hiện"
+  },
+  {
+    "event": "screenshot",
+    "file": "orphan-completed.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 70528,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  }
+]

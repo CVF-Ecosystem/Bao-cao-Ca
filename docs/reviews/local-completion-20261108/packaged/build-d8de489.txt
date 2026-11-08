@@ -1,0 +1,77 @@
+82 INFO: PyInstaller: 6.14.2, contrib hooks: 2025.5
+82 INFO: Python: 3.11.9
+95 INFO: Platform: Windows-10-10.0.26200-SP0
+95 INFO: Python environment: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\.cvf\runtime\personnel-import-20261108\build-venv
+96 INFO: wrote D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\SO_BAO_CAO_CA.spec
+100 INFO: Removing temporary files and cleaning cache in C:\Users\DELL\AppData\Local\pyinstaller
+105 INFO: Module search paths (PYTHONPATH):
+['D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9',
+ 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\python311.zip',
+ 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\DLLs',
+ 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311\\Lib',
+ 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python311',
+ 'D:\\UNG DUNG AI\\TOOL AI '
+ '2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv',
+ 'D:\\UNG DUNG AI\\TOOL AI '
+ '2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages',
+ 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9',
+ 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\ma_nguon']
+342 INFO: Appending 'datas' from .spec
+345 INFO: checking Analysis
+345 INFO: Building Analysis because Analysis-00.toc is non existent
+345 INFO: Running Analysis Analysis-00.toc
+345 INFO: Target bytecode optimization level: 0
+345 INFO: Initializing module dependency graph...
+345 INFO: Initializing module graph hook caches...
+367 INFO: Analyzing modules for base_library.zip ...
+1079 INFO: Processing standard module hook 'hook-encodings.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+1519 INFO: Processing standard module hook 'hook-heapq.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+1807 INFO: Processing standard module hook 'hook-pickle.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+3448 INFO: Caching module dependency graph...
+3474 INFO: Looking for Python shared library...
+3480 INFO: Using Python shared library: C:\Users\DELL\AppData\Local\Programs\Python\Python311\python311.dll
+3480 INFO: Analyzing D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\MO_BAO_CAO_CA.pyw
+3732 INFO: Processing standard module hook 'hook-sqlite3.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4109 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+4110 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+4362 INFO: Processing standard module hook 'hook-_tkinter.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4424 INFO: Processing standard module hook 'hook-xml.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4527 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4567 INFO: Processing standard module hook 'hook-xml.dom.domreg.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4819 INFO: Processing standard module hook 'hook-platform.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4833 INFO: Processing standard module hook 'hook-sysconfig.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4863 INFO: Processing standard module hook 'hook-openpyxl.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+5630 INFO: Processing module hooks (post-graph stage)...
+5634 INFO: Processing standard module hook 'hook-_tkinter.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5641 INFO: Performing binary vs. data reclassification (960 entries)
+5798 INFO: Looking for ctypes DLLs
+5812 INFO: Analyzing run-time hooks ...
+5814 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+5816 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+5818 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+5836 INFO: Creating base_library.zip...
+5879 INFO: Looking for dynamic libraries
+6127 INFO: Extra DLL search directories (AddDllDirectory): []
+6127 INFO: Extra DLL search directories (PATH): []
+6324 INFO: Warnings written to D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\build\SO_BAO_CAO_CA\warn-SO_BAO_CAO_CA.txt
+6350 INFO: Graph cross-reference written to D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\build\SO_BAO_CAO_CA\xref-SO_BAO_CAO_CA.html
+6382 INFO: checking PYZ
+6382 INFO: Building PYZ because PYZ-00.toc is non existent
+6382 INFO: Building PYZ (ZlibArchive) D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\build\SO_BAO_CAO_CA\PYZ-00.pyz
+6790 INFO: Building PYZ (ZlibArchive) D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\build\SO_BAO_CAO_CA\PYZ-00.pyz completed successfully.
+6813 INFO: checking PKG
+6813 INFO: Building PKG because PKG-00.toc is non existent
+6813 INFO: Building PKG (CArchive) SO_BAO_CAO_CA.pkg
+9155 INFO: Building PKG (CArchive) SO_BAO_CAO_CA.pkg completed successfully.
+9170 INFO: Bootloader D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+9170 INFO: checking EXE
+9170 INFO: Building EXE because EXE-00.toc is non existent
+9170 INFO: Building EXE from EXE-00.toc
+9171 INFO: Copying bootloader EXE to D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\dist\SO_BAO_CAO_CA.exe
+9175 INFO: Copying icon to EXE
+9178 INFO: Copying 0 resources to EXE
+9178 INFO: Embedding manifest in EXE
+9180 INFO: Appending PKG archive to EXE
+9189 INFO: Fixing EXE headers
+9284 INFO: Building EXE from EXE-00.toc completed successfully.
+9300 INFO: Build complete! The results are available in: D:\UNG DUNG AI\TOOL AI 2026\CVF-Workspace\SO_BAO_CAO_CA_V1_9\dist

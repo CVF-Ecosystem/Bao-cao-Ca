@@ -1,0 +1,32 @@
+{
+  "status": "TECHNICAL_SOURCE_U1_ACCEPTED_PACKAGED_PRODUCT_PENDING",
+  "sourceReview": {
+    "path": "docs/reviews/local-completion-20261108/u1-repair/root-source-review.json",
+    "sha256": "0781c719a06ffaf9790b4f72caba7c439dc78546fa42795d023183131936e7f6"
+  },
+  "priorExactPythonRelease": {
+    "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+    "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+  },
+  "python": {
+    "passed": 211,
+    "skipped": 0,
+    "seconds": 43.059,
+    "basis": "Production Python and Python tests exactunchanged; inherited actual run, not rerun"
+  },
+  "javascript": {
+    "groups": 7,
+    "localBehaviorChecks": 38,
+    "skipped": 0,
+    "log": {
+      "path": "docs/reviews/local-completion-20261108/u1-repair/js-tests.txt",
+      "sha256": "32f6765b6075bde2e2aab53232aff8f4586d4d8968107a164e18833874fc0816"
+    }
+  },
+  "workspace": {
+    "passed": 4,
+    "basis": "checker/test source unchanged; inherited actual4PASS"
+  },
+  "sourceSmoke": "Actual prior launcher source smoke inherited unchanged Python; new packaged smoke required after clean source commit.",
+  "nativeProduct": "PENDING targeted newbinary outcomes and independent fullcriterion review"
+}

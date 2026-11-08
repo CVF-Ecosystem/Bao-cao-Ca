@@ -1,0 +1,76 @@
+{
+  "status": "ROOT_CUSTODY_AND_VISUAL_OBSERVATION_ONLY",
+  "role": "ORCHESTRATOR",
+  "candidate": {
+    "path": "docs/reviews/local-completion-20261108/packaged/candidate-d8de489.json",
+    "sha256": "b253ed8dd3024a6a17661d630f0a7fceae1c7a2983a315b0dc160d21a6888cf4"
+  },
+  "manifest": {
+    "path": "docs/reviews/local-completion-20261108/packaged/print-first-d8de/artifact-manifest.json",
+    "sha256": "e8bc08b801601917e0fe7d77ed39e4b325a9a1013e7d569f07dbd47357f2f2e3"
+  },
+  "artifacts": [
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/chrome-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/chrome-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/chrome-short-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/chrome-short-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/chrome-short-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/trusted-key-events.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/msedge-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/msedge-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/msedge-short-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/msedge-short-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/msedge-short-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/trusted-key-events.json",
+      "ok": true
+    },
+    {
+      "path": "observation.md",
+      "ok": true
+    }
+  ],
+  "visualObservation": "Viewed both original-rendered Chrome/Edge short PDFs page1: all tables legible, report date/shift at top, machine print time and Trang1/1 at bottom, final chief signature block intact; no overlap/clipping observed. Original native-save provenance and settings are independently reviewed by Astra; two cases do not close fullV1.",
+  "limits": "App-owned trustedCtrlP only; browser accelerator/OS SaveAs/physical printer unproved. Edge absent header/footer control requires honest qualification; full16matrix pending."
+}

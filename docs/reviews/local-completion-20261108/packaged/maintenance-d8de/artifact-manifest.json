@@ -1,0 +1,102 @@
+[
+  {
+    "path": "BAO_VE_DB_0ba6a17f1d.json",
+    "bytes": 917,
+    "sha256": "53540d02e36326e678b52224a4880e74ad0a6cb99dbb55bab43a6ef2a00b0f16"
+  },
+  {
+    "path": "consumer-events.json",
+    "bytes": 1807,
+    "sha256": "866d4b9cffebce37ba081334705328525061de5ad96b36d86b8dd3f495986dfe"
+  },
+  {
+    "path": "DANH_MUC/MAU_PHAN_CONG.json",
+    "bytes": 67,
+    "sha256": "fa5d081a7627ed7b45efcf94f73596db737b4777e7a7dd096c7b67dcda280a19"
+  },
+  {
+    "path": "DANH_MUC/TO_NHAN_SU.json",
+    "bytes": 215,
+    "sha256": "3037f3e626dcb2ba24af924e2c53ec11fc6422b43d89a0a7dea17a39c9681f35"
+  },
+  {
+    "path": "DU_LIEU/BAO_CAO_CA.db",
+    "bytes": 69632,
+    "sha256": "069b62ae01eab9a61c00c15b1d04200314df0dfc8a52db444855b3a9b00644ba"
+  },
+  {
+    "path": "DU_LIEU/DB_KIEM_TRA/ban_sao_2222222222222222.db",
+    "bytes": 69632,
+    "sha256": "cd4e741aaa98f2d81d115e320952a835d8e59e962177166f0a7064d482dd9b6f"
+  },
+  {
+    "path": "DU_LIEU/DB_KIEM_TRA/ban_sao_3333333333333333.db",
+    "bytes": 69632,
+    "sha256": "0e6cfed947b9f9a5d8c50667db09599694ee03b859f9de410f31dd144cfd751b"
+  },
+  {
+    "path": "DU_LIEU/DB_KIEM_TRA/ban_sao_4444444444444444.db",
+    "bytes": 69632,
+    "sha256": "cd4e741aaa98f2d81d115e320952a835d8e59e962177166f0a7064d482dd9b6f"
+  },
+  {
+    "path": "DU_LIEU/DB_KIEM_TRA/VIEWER_CUSTODY.json",
+    "bytes": 309,
+    "sha256": "95a2013c42cb3d448d3ab5590373998e36a303bccb16ff999659860df6f2fde2"
+  },
+  {
+    "path": "DU_LIEU/SAO_LUU_AN_TOAN/341be2d2197c0fefa164eb20522680e9/BAO_CAO_CA_20261108_165715_846862_4e70b5.db",
+    "bytes": 69632,
+    "sha256": "d49765164603cf03585394c14e318da547c0dd759719974b596dbeb9c5d3d43c"
+  },
+  {
+    "path": "DU_LIEU/SAO_LUU_AN_TOAN/341be2d2197c0fefa164eb20522680e9/BAO_CAO_CA_20261108_165718_168735_299d52.db",
+    "bytes": 69632,
+    "sha256": "d49765164603cf03585394c14e318da547c0dd759719974b596dbeb9c5d3d43c"
+  },
+  {
+    "path": "DU_LIEU/SAO_LUU_AN_TOAN/341be2d2197c0fefa164eb20522680e9/BAO_CAO_CA_20261108_165718_552989_b889da.db",
+    "bytes": 69632,
+    "sha256": "d49765164603cf03585394c14e318da547c0dd759719974b596dbeb9c5d3d43c"
+  },
+  {
+    "path": "executed-run_maintenance.py",
+    "bytes": 3071,
+    "sha256": "d3495b460f7af6b3347754ec3e4a9939556aee1cc09b37365e8112cdc4d0d88b"
+  },
+  {
+    "path": "fixture-oracle.json",
+    "bytes": 2179,
+    "sha256": "402e63d8e85cc8091af95949ab528c7f7f92ce6f15d9c6d1973a898c79a5106f"
+  },
+  {
+    "path": "observation.md",
+    "bytes": 567,
+    "sha256": "7cc8b77938aa5ba4d13dffe39d8c480ae2d8102012acfe9cba51c16f065ce091"
+  },
+  {
+    "path": "orphan-completed.png",
+    "bytes": 127054,
+    "sha256": "6e0a14d738329d2092fe3de9836184da96b18150e4ceabfc95c37bfcc6185ab8"
+  },
+  {
+    "path": "orphan-preview-one.png",
+    "bytes": 97191,
+    "sha256": "92ef600715d60a736436c9dfc9e5309c7631898934017f7561e078b73bf59357"
+  },
+  {
+    "path": "result.json",
+    "bytes": 5963,
+    "sha256": "cd22b95978db12724f75925297baf53a38c28d165209dd322f0763075ed631ab"
+  },
+  {
+    "path": "viewer-completed.png",
+    "bytes": 126631,
+    "sha256": "1b4948e5a34b1f4bab98c933f01aff467070f7f34bb2ea43f2c7dff3cefd53e1"
+  },
+  {
+    "path": "viewer-preview-one.png",
+    "bytes": 95366,
+    "sha256": "2a3655674e850c644de600b239056ea68c06afe953e5ec856f4011ffa657be94"
+  }
+]

@@ -1,0 +1,135 @@
+{
+  "beforeRows": {
+    "reports": [
+      [
+        "2026-11-08_DAY",
+        "2026-11-08",
+        "DAY",
+        2,
+        "draft",
+        "2026-11-08T16:44:58+07:00",
+        "2026-11-08T16:44:58+07:00",
+        "Synthetic",
+        "{\"date\": \"2026-11-08\", \"shift\": \"DAY\", \"actor\": \"Synthetic\", \"status\": \"draft\", \"notes\": \"maintenance synthetic\", \"staffing\": [], \"jobs\": [], \"handover\": [], \"attachments\": [{\"hash\": \"9ce6a12401590cf322aba53754e84fe8681eeaf9a59239fb40cd237bbab86501\", \"name\": \"report.jpg\", \"caption\": \"\"}]}"
+      ]
+    ],
+    "revisions": [
+      [
+        1,
+        "2026-11-08_DAY",
+        1,
+        "2026-11-08T16:44:58+07:00",
+        "Synthetic",
+        "Lưu nháp",
+        "{\"date\": \"2026-11-08\", \"shift\": \"DAY\", \"actor\": \"Synthetic\", \"status\": \"draft\", \"notes\": \"maintenance synthetic\", \"staffing\": [], \"jobs\": [], \"handover\": [], \"attachments\": [{\"hash\": \"393d0c250c02ad28744e0be3f79b03e3e1016527fe0daa91bc7a691567a4ba50\", \"name\": \"revision.jpg\", \"caption\": \"\"}]}",
+        "manual",
+        "DELL",
+        null
+      ],
+      [
+        2,
+        "2026-11-08_DAY",
+        2,
+        "2026-11-08T16:44:58+07:00",
+        "Synthetic",
+        "Lưu nháp",
+        "{\"date\": \"2026-11-08\", \"shift\": \"DAY\", \"actor\": \"Synthetic\", \"status\": \"draft\", \"notes\": \"maintenance synthetic\", \"staffing\": [], \"jobs\": [], \"handover\": [], \"attachments\": [{\"hash\": \"9ce6a12401590cf322aba53754e84fe8681eeaf9a59239fb40cd237bbab86501\", \"name\": \"report.jpg\", \"caption\": \"\"}]}",
+        "manual",
+        "DELL",
+        null
+      ]
+    ]
+  },
+  "viewerFiles": [
+    "ban_sao_2222222222222222.db",
+    "ban_sao_3333333333333333.db",
+    "ban_sao_4444444444444444.db"
+  ],
+  "afterBlobHashes": [
+    "393d0c250c02ad28744e0be3f79b03e3e1016527fe0daa91bc7a691567a4ba50",
+    "7d8d0bc30378d2c6c0ee89e61e68e15b6888188ce4deae4d90517e978a4bee24",
+    "9ce6a12401590cf322aba53754e84fe8681eeaf9a59239fb40cd237bbab86501",
+    "d74e8c2d1f2577d9fdc7beb14f2c227a967ff2a98095c16b38fc2c098df7d646"
+  ],
+  "integrity": "ok",
+  "afterRows": {
+    "reports": [
+      [
+        "2026-11-08_DAY",
+        "2026-11-08",
+        "DAY",
+        2,
+        "draft",
+        "2026-11-08T16:44:58+07:00",
+        "2026-11-08T16:44:58+07:00",
+        "Synthetic",
+        "{\"date\": \"2026-11-08\", \"shift\": \"DAY\", \"actor\": \"Synthetic\", \"status\": \"draft\", \"notes\": \"maintenance synthetic\", \"staffing\": [], \"jobs\": [], \"handover\": [], \"attachments\": [{\"hash\": \"9ce6a12401590cf322aba53754e84fe8681eeaf9a59239fb40cd237bbab86501\", \"name\": \"report.jpg\", \"caption\": \"\"}]}"
+      ]
+    ],
+    "revisions": [
+      [
+        1,
+        "2026-11-08_DAY",
+        1,
+        "2026-11-08T16:44:58+07:00",
+        "Synthetic",
+        "Lưu nháp",
+        "{\"date\": \"2026-11-08\", \"shift\": \"DAY\", \"actor\": \"Synthetic\", \"status\": \"draft\", \"notes\": \"maintenance synthetic\", \"staffing\": [], \"jobs\": [], \"handover\": [], \"attachments\": [{\"hash\": \"393d0c250c02ad28744e0be3f79b03e3e1016527fe0daa91bc7a691567a4ba50\", \"name\": \"revision.jpg\", \"caption\": \"\"}]}",
+        "manual",
+        "DELL",
+        null
+      ],
+      [
+        2,
+        "2026-11-08_DAY",
+        2,
+        "2026-11-08T16:44:58+07:00",
+        "Synthetic",
+        "Lưu nháp",
+        "{\"date\": \"2026-11-08\", \"shift\": \"DAY\", \"actor\": \"Synthetic\", \"status\": \"draft\", \"notes\": \"maintenance synthetic\", \"staffing\": [], \"jobs\": [], \"handover\": [], \"attachments\": [{\"hash\": \"9ce6a12401590cf322aba53754e84fe8681eeaf9a59239fb40cd237bbab86501\", \"name\": \"report.jpg\", \"caption\": \"\"}]}",
+        "manual",
+        "DELL",
+        null
+      ]
+    ]
+  },
+  "backups": [
+    {
+      "path": "DU_LIEU\\SAO_LUU_AN_TOAN\\341be2d2197c0fefa164eb20522680e9\\BAO_CAO_CA_20261108_165715_846862_4e70b5.db",
+      "sha256": "d49765164603cf03585394c14e318da547c0dd759719974b596dbeb9c5d3d43c",
+      "hashes": [
+        "393d0c250c02ad28744e0be3f79b03e3e1016527fe0daa91bc7a691567a4ba50",
+        "7d8d0bc30378d2c6c0ee89e61e68e15b6888188ce4deae4d90517e978a4bee24",
+        "88662fa62013de8c9a3bd79097264e0806ef0d112c0921df6b60eafd1c761061",
+        "9ce6a12401590cf322aba53754e84fe8681eeaf9a59239fb40cd237bbab86501",
+        "d74e8c2d1f2577d9fdc7beb14f2c227a967ff2a98095c16b38fc2c098df7d646"
+      ],
+      "integrity": "ok"
+    },
+    {
+      "path": "DU_LIEU\\SAO_LUU_AN_TOAN\\341be2d2197c0fefa164eb20522680e9\\BAO_CAO_CA_20261108_165718_168735_299d52.db",
+      "sha256": "d49765164603cf03585394c14e318da547c0dd759719974b596dbeb9c5d3d43c",
+      "hashes": [
+        "393d0c250c02ad28744e0be3f79b03e3e1016527fe0daa91bc7a691567a4ba50",
+        "7d8d0bc30378d2c6c0ee89e61e68e15b6888188ce4deae4d90517e978a4bee24",
+        "88662fa62013de8c9a3bd79097264e0806ef0d112c0921df6b60eafd1c761061",
+        "9ce6a12401590cf322aba53754e84fe8681eeaf9a59239fb40cd237bbab86501",
+        "d74e8c2d1f2577d9fdc7beb14f2c227a967ff2a98095c16b38fc2c098df7d646"
+      ],
+      "integrity": "ok"
+    },
+    {
+      "path": "DU_LIEU\\SAO_LUU_AN_TOAN\\341be2d2197c0fefa164eb20522680e9\\BAO_CAO_CA_20261108_165718_552989_b889da.db",
+      "sha256": "d49765164603cf03585394c14e318da547c0dd759719974b596dbeb9c5d3d43c",
+      "hashes": [
+        "393d0c250c02ad28744e0be3f79b03e3e1016527fe0daa91bc7a691567a4ba50",
+        "7d8d0bc30378d2c6c0ee89e61e68e15b6888188ce4deae4d90517e978a4bee24",
+        "88662fa62013de8c9a3bd79097264e0806ef0d112c0921df6b60eafd1c761061",
+        "9ce6a12401590cf322aba53754e84fe8681eeaf9a59239fb40cd237bbab86501",
+        "d74e8c2d1f2577d9fdc7beb14f2c227a967ff2a98095c16b38fc2c098df7d646"
+      ],
+      "integrity": "ok"
+    }
+  ],
+  "status": "OBSERVED_PENDING_REVIEW"
+}

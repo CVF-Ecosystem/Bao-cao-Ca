@@ -1,0 +1,786 @@
+[
+  {
+    "case": "chrome-long-headers0-button",
+    "path": "matrix-chrome-long-headers0-button-1794130328",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true,
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "headerFooter",
+        "text": "\n        Headers and footers\n      ",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      },
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "cssBackground",
+        "text": "Background graphics",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": false,
+    "outputs": [
+      {
+        "fixture": "long",
+        "triggerEpoch": 1794130337.894158,
+        "completedEpoch": 1794130339.946101,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "chrome-long-native-saved.pdf",
+        "bytes": 167367,
+        "sha256": "9d1665235e57a19df9a5c24002d1e2832e163ccecd6f2ced10992132b4043812",
+        "pages": 2,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "chrome-long-headers0-ctrlp",
+    "path": "matrix-chrome-long-headers0-ctrlp-1794130341",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true,
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "headerFooter",
+        "text": "\n        Headers and footers\n      ",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      },
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "cssBackground",
+        "text": "Background graphics",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": false,
+    "outputs": [
+      {
+        "fixture": "long",
+        "triggerEpoch": 1794130350.2669423,
+        "completedEpoch": 1794130352.4404888,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "chrome-long-native-saved.pdf",
+        "bytes": 167367,
+        "sha256": "0028737e812b090ffd52d87c45868f392733bffeda1353427f5fdcc090dc7e94",
+        "pages": 2,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "chrome-long-headers1-button",
+    "path": "matrix-chrome-long-headers1-button-1794130353",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true,
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "headerFooter",
+        "text": "\n        Headers and footers\n      ",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": true,
+        "disabled": false
+      },
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "cssBackground",
+        "text": "Background graphics",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": true,
+    "outputs": [
+      {
+        "fixture": "long",
+        "triggerEpoch": 1794130362.6854935,
+        "completedEpoch": 1794130364.7736983,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "chrome-long-native-saved.pdf",
+        "bytes": 167367,
+        "sha256": "6ec8683b4a346d34e30aea7647d6df8850cb4ec19bf886a06a042531bd1e439e",
+        "pages": 2,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "chrome-long-headers1-ctrlp",
+    "path": "matrix-chrome-long-headers1-ctrlp-1794130365",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true,
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "headerFooter",
+        "text": "\n        Headers and footers\n      ",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": true,
+        "disabled": false
+      },
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "cssBackground",
+        "text": "Background graphics",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": true,
+    "outputs": [
+      {
+        "fixture": "long",
+        "triggerEpoch": 1794130375.3235848,
+        "completedEpoch": 1794130377.481683,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "chrome-long-native-saved.pdf",
+        "bytes": 167367,
+        "sha256": "353d12a5f3c0717d6ba73c327ffebbcdddb195e94db630ff5bf576b3b15a4e4b",
+        "pages": 2,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "chrome-short-headers0-button",
+    "path": "matrix-chrome-short-headers0-button-1794130290",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "headerFooter",
+        "text": "\n        Headers and footers\n      ",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      },
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "cssBackground",
+        "text": "Background graphics",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": false,
+    "outputs": [
+      {
+        "fixture": "short",
+        "triggerEpoch": 1794130300.4117906,
+        "completedEpoch": 1794130302.701199,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "chrome-short-native-saved.pdf",
+        "bytes": 95388,
+        "sha256": "2c05b05bfb5c5ffa2d1244b0de6a014638b781af3ef4c629783e3347f544a544",
+        "pages": 1,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "chrome-short-headers0-ctrlp",
+    "path": "matrix-chrome-short-headers0-ctrlp-1794129928",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "headerFooter",
+        "text": "\n        Headers and footers\n      ",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      },
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "cssBackground",
+        "text": "Background graphics",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": false,
+    "outputs": [
+      {
+        "fixture": "short",
+        "triggerEpoch": 1794129938.6493702,
+        "completedEpoch": 1794129940.9819076,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "chrome-short-native-saved.pdf",
+        "bytes": 95375,
+        "sha256": "c5958dbd87f0e886408948f65f9e50edd2d92080eac88c1db826d6f6fe0c5ac0",
+        "pages": 1,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "chrome-short-headers1-button",
+    "path": "matrix-chrome-short-headers1-button-1794130303",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "headerFooter",
+        "text": "\n        Headers and footers\n      ",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": true,
+        "disabled": false
+      },
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "cssBackground",
+        "text": "Background graphics",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": true,
+    "outputs": [
+      {
+        "fixture": "short",
+        "triggerEpoch": 1794130312.8070233,
+        "completedEpoch": 1794130314.9537294,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "chrome-short-native-saved.pdf",
+        "bytes": 95388,
+        "sha256": "7b8ae12bc77db752919166b55f92b7f7c8a496c55cdd4aa6987eb1c4136c4adf",
+        "pages": 1,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "chrome-short-headers1-ctrlp",
+    "path": "matrix-chrome-short-headers1-ctrlp-1794130316",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "headerFooter",
+        "text": "\n        Headers and footers\n      ",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": true,
+        "disabled": false
+      },
+      {
+        "tag": "CR-CHECKBOX",
+        "id": "cssBackground",
+        "text": "Background graphics",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": true,
+    "outputs": [
+      {
+        "fixture": "short",
+        "triggerEpoch": 1794130325.3030682,
+        "completedEpoch": 1794130327.5851955,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "chrome-short-native-saved.pdf",
+        "bytes": 95389,
+        "sha256": "d656c5e6bf36deb880d2178dec01f8e2c65e7075ab4cc135356d8c8492403962",
+        "pages": 1,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "msedge-long-headers0-button",
+    "path": "matrix-msedge-long-headers0-button-1794130423",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true,
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "FLUENT-CHECKBOX",
+        "id": "backgrounds-checkbox",
+        "text": "",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": false,
+    "outputs": [
+      {
+        "fixture": "long",
+        "triggerEpoch": 1794130433.8919597,
+        "completedEpoch": 1794130436.140395,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "msedge-long-native-saved.pdf",
+        "bytes": 167381,
+        "sha256": "7d37ef46bd78f8f73118e47a0025f06c8dd251a2ae73d4cca27e126d61d41609",
+        "pages": 2,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "msedge-long-headers0-ctrlp",
+    "path": "matrix-msedge-long-headers0-ctrlp-1794130437",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true,
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "FLUENT-CHECKBOX",
+        "id": "backgrounds-checkbox",
+        "text": "",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": false,
+    "outputs": [
+      {
+        "fixture": "long",
+        "triggerEpoch": 1794130448.0244474,
+        "completedEpoch": 1794130450.2331967,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "msedge-long-native-saved.pdf",
+        "bytes": 167706,
+        "sha256": "c859c01f7dd21d0fa29bdc934435fd99d82a75730cfb9324a45448f7a9b4b125",
+        "pages": 2,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "msedge-long-headers1-button",
+    "path": "matrix-msedge-long-headers1-button-1794130451",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true,
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "FLUENT-CHECKBOX",
+        "id": "backgrounds-checkbox",
+        "text": "",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": true,
+    "outputs": [
+      {
+        "fixture": "long",
+        "triggerEpoch": 1794130461.9344513,
+        "completedEpoch": 1794130464.1769946,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "msedge-long-native-saved.pdf",
+        "bytes": 167706,
+        "sha256": "d3f91aa1ab6a73e63ce233c44b6e4e841688d6d4565c3dd4966b5e15ca36a5f9",
+        "pages": 2,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "msedge-long-headers1-ctrlp",
+    "path": "matrix-msedge-long-headers1-ctrlp-1794130465",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true,
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "FLUENT-CHECKBOX",
+        "id": "backgrounds-checkbox",
+        "text": "",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": true,
+    "outputs": [
+      {
+        "fixture": "long",
+        "triggerEpoch": 1794130475.8372169,
+        "completedEpoch": 1794130478.076197,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "msedge-long-native-saved.pdf",
+        "bytes": 167706,
+        "sha256": "6c03deecfb2e315cb8ae3da8b463c368be4420bf49b0516c6273cee2b802ce1d",
+        "pages": 2,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "msedge-short-headers0-button",
+    "path": "matrix-msedge-short-headers0-button-1794130378",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "FLUENT-CHECKBOX",
+        "id": "backgrounds-checkbox",
+        "text": "",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": false,
+    "outputs": [
+      {
+        "fixture": "short",
+        "triggerEpoch": 1794130389.6490378,
+        "completedEpoch": 1794130391.9074652,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "msedge-short-native-saved.pdf",
+        "bytes": 95403,
+        "sha256": "2683b98067d6c9b200cefe7329013abfaab2dc91286b84bcf4f0f090024dd7b7",
+        "pages": 1,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "msedge-short-headers0-ctrlp",
+    "path": "matrix-msedge-short-headers0-ctrlp-1794129950",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "FLUENT-CHECKBOX",
+        "id": "backgrounds-checkbox",
+        "text": "",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": false,
+    "outputs": [
+      {
+        "fixture": "short",
+        "triggerEpoch": 1794129961.7635508,
+        "completedEpoch": 1794129966.080411,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "msedge-short-native-saved.pdf",
+        "bytes": 94956,
+        "sha256": "0efd1347700f8bc85514030ee4952e2156af7b8e2896944d748b015ea3939a83",
+        "pages": 1,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "msedge-short-headers1-button",
+    "path": "matrix-msedge-short-headers1-button-1794130393",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "FLUENT-CHECKBOX",
+        "id": "backgrounds-checkbox",
+        "text": "",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": true,
+    "outputs": [
+      {
+        "fixture": "short",
+        "triggerEpoch": 1794130403.6510427,
+        "completedEpoch": 1794130407.9210873,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "msedge-short-native-saved.pdf",
+        "bytes": 95403,
+        "sha256": "586e393a7c58ede7f039d13029acbe65d9c17ea0cc66e125a8dea11305495fca",
+        "pages": 1,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  },
+  {
+    "case": "msedge-short-headers1-ctrlp",
+    "path": "matrix-msedge-short-headers1-ctrlp-1794130409",
+    "oracles": {
+      "A4landscape": true,
+      "shortOnePage": true,
+      "perPageIdentity": true,
+      "perPageNumber": true,
+      "perPageMachineTime": true,
+      "signatureOnlyLast": true,
+      "allChiefNamesLast": [
+        true
+      ]
+    },
+    "headerControlsObserved": [
+      {
+        "tag": "FLUENT-CHECKBOX",
+        "id": "backgrounds-checkbox",
+        "text": "",
+        "label": null,
+        "role": null,
+        "ariaChecked": null,
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    "persistedHeaderPreference": true,
+    "outputs": [
+      {
+        "fixture": "short",
+        "triggerEpoch": 1794130419.7404099,
+        "completedEpoch": 1794130421.9541671,
+        "filename": "Sổ báo cáo ca • Bãi Container.pdf",
+        "retainedCopy": "msedge-short-native-saved.pdf",
+        "bytes": 95403,
+        "sha256": "380d32661d09af00bb2332c917d214ae5f3015aaa7debddd921ebcb2bf345a6c",
+        "pages": 1,
+        "oracleFound": true,
+        "origin": "BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT",
+        "OSSaveAs": "NOT_TESTED"
+      }
+    ]
+  }
+]

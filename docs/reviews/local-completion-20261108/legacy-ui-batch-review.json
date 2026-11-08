@@ -1,0 +1,67 @@
+{
+  "status": "PARTIAL_NATIVE_ACCEPTANCE_U1_REPAIR_REQUIRED",
+  "risk": "R2",
+  "worker": "Sol sole native controller",
+  "reviewer": "Astra independent REVIEWER",
+  "candidate": "d8de4896b85e412e2756ad6c4f033fa049bb837d",
+  "evidence": [
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/legacy-d8de/artifact-manifest.json",
+      "sha256": "51bb98212b101e837d0d9ef9edf5b177f0532a66281ff4dd7bb933ac15ac094c"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/ui-maintenance-d8de/artifact-manifest.json",
+      "sha256": "59caef5d203c8c3e2b041b09db8c934c9fca58e48ac632308068e73e68648c11"
+    }
+  ],
+  "checks": [
+    "All 52 legacy and 85 UI/maintenance manifest hashes independently matched.",
+    "Read executed migration driver and consumer methods: consent via actual checkbox/button, recovery via typed KHOI PHUC, cancellation hash assertion, separate upgrade/restart; no consumer API mutation. Process events bind exact EXE4342, distinct relaunch PIDs, exit0/session removal.",
+    "Independently opened all four final legacy DBs read-only: integrity OK, schema4, report id/version/payload and revision report/version/actor/reason/payload exactly match recorded before rows. Other historical columns remain covered by source tests, not this narrower native result projection.",
+    "Visually inspected schema1 ordered upgrade/backup preview and interrupted known-backup preview, restored restricted screen. Native recovery usable for preconstructed supported readable-main interrupted state; not a naturally triggered EXE fault or arbitrary corrupt-main recovery.",
+    "Independently inspected U1 attempt2 screenshot and attempt3 bounds: actor y=-443.8 with height38.8 outside1366x657 after actual existing-report open. Source loadReport/new beginShift renders without reset; renderEditor reused by ordinary editing, so blanket reset is unsafe.",
+    "UI packet retains later async assertion races and hidden-modal-visible wait timeout. Restore drill completed screen shows dated successful result; maintenance orphan screen has zero eligible candidates. Do not treat preview/cancel as nonempty deletion proof.",
+    "Baseline official CDP attempts bind unchanged1.9.2 EXE, empty trusted-key witness, no native target/output, StopIteration, both exit0. They establish bounded unsuccessful automation attempts only."
+  ],
+  "acceptedScope": [
+    "Actual legacy1/2/3 explicit upgrade and final reopen behavior, with backup physical-copy custody supplement pending.",
+    "Supported readable interrupted recovery UI, cancel assertion and restored restriction across restart followed by separate upgrade; original source/backup and prior-main copies still require retained artifact cross-check.",
+    "UI source-backed observed behaviors may be reused individually; overall failed driver is not a complete UI PASS."
+  ],
+  "remaining": [
+    "Sol to supply existing generated pre-upgrade and pre-restore main DB copies with manifest hash/read-only integrity cross-check; no rerun required.",
+    "Map existing/final headed U10 staffing/protection, U6 note conflict, U11 diff, U12 empty restore, U4 keyboard witnesses; source tests alone do not silently replace required headed evidence.",
+    "Nonempty safe maintenance confirmations and snapshot/reference preservation need consumer evidence. Quiet large UI and other L1-L8 remainders remain separately pending."
+  ],
+  "u1RepairAssessment": {
+    "finding": "Opening existing report inherits scroll from home recent table; first input is offscreen.",
+    "minimalDirection": "Reset document scroll only after successful explicit loadReport and newly created beginShift rendering. Do not reset inside general renderEditor/setPage.",
+    "reviewerLocalEligible": true,
+    "unchangedObjective": "YES",
+    "unchangedDesign": "YES",
+    "unchangedPaths": "YES",
+    "unchangedAuthority": "YES",
+    "unchangedEffects": "YES",
+    "unchangedCommitOwner": "YES",
+    "evidenceDetermined": "YES",
+    "executionHold": "No source edit until Root bounded BUILD acknowledgment after consolidated findings.",
+    "focusedProof": [
+      "Existing and new opening reset; failed/cancelled open does not reset.",
+      "Ordinary same-editor rerender/autosave/add-row preserves scroll.",
+      "New clean EXE actual1366x657 home->existing and new-shift first-input visibility."
+    ],
+    "inheritance": "If only explicit opening scroll calls and tests change, printReport/print template/CSS/backend remain exact unchanged. Preserve16 prior native output proofs as inherited, with new-EXE representative preview/native print and fresh/reopen checks; no automatic16case rerun. Reassess if actual patch alters print/layout paths.",
+    "allowedPaths": [
+      "giao_dien/tai_nguyen/ung_dung.js",
+      "kiem_thu/KIEM_THU_LOCAL_UI.js"
+    ],
+    "futureFindings": "This bounded repair does not waive later independent findings; new root causes receive separate assessment."
+  },
+  "claims": "No whole LOCAL/V1 closure; no provider governance claim.",
+  "authority": {
+    "workOrder": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+    "workOrderSha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57",
+    "spec": "docs/specs/LOCAL_COMPLETION.md",
+    "specSha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+  }
+}

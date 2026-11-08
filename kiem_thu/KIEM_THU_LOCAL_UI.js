@@ -9,6 +9,36 @@ for(const file of ['bao_ve.js','ung_dung.js','local_ui.js'])vm.runInContext(fs.r
 const run=code=>vm.runInContext(code,box);let passed=0;
 function check(name,fn){fn();passed++;console.log('PASS '+name)}
 (async()=>{
+ // Isolated opening harness retains the real open/render/save owners, stubbing only IO and section HTML.
+ const openingEvents=[],openingNodes={};
+ const openingNode=id=>openingNodes[id]??={value:'',innerHTML:'',textContent:'',classList:{toggle(){},add(){},contains(){return true}},contains(){return false}};
+ const opening={console,history:{replaceState(){}},document:{getElementById:openingNode,querySelectorAll(){return []},addEventListener(){},activeElement:null},window:{addEventListener(){},scrollTo(x,y){openingEvents.push(['scroll',x,y])}},sessionStorage:{getItem(){return 'SYNTH ACTOR'},setItem(){}},clearTimeout,setTimeout,encodeURIComponent,confirm(){return false}};
+ vm.createContext(opening);
+ for(const file of ['ung_dung.js','local_ui.js'])vm.runInContext(fs.readFileSync(__dirname+'/../giao_dien/tai_nguyen/'+file,'utf8'),opening);
+ const opened=code=>vm.runInContext(code,opening);
+ opening.markRender=()=>openingEvents.push(['render']);
+ opened("info={roles:[],jobs:[],context:'ctx'};editorHeader=editorNotice=editorTabs=staffSection=jobsSection=notesSection=filesSection=editorToolbar=()=>'';renderStaff=()=>markRender();renderJobs=renderTasks=renderAttachments=()=>{};error=e=>{globalThis.openError=e.message};toast=()=>{}");
+ const fixture={id:'2026-11-08_DAY',date:'2026-11-08',shift:'DAY',version:1,status:'draft',actor:'SYNTH ACTOR',staffing:[],jobs:[],handover:[]};
+ let finishOpen;opening.response=()=>new Promise(resolve=>{finishOpen=resolve});opened('api=()=>response()');
+ const openingPending=opened("loadReport('2026-11-08_DAY')");assert.equal(openingEvents.length,0);finishOpen(structuredClone(fixture));await openingPending;
+ check('existing report resets scroll only after successful render',()=>assert.deepEqual(openingEvents,[['render'],['scroll',0,0]]));
+ openingEvents.length=0;opened('dirty=true');await opened("loadReport('cancelled')");
+ check('declined dirty navigation preserves scroll and editor',()=>assert.deepEqual(openingEvents,[]));
+ opened("dirty=false;api=async()=>{throw new Error('read failed')}");await opened("loadReport('failed')");
+ check('failed report read preserves scroll and editor',()=>{assert.deepEqual(openingEvents,[]);assert.equal(opening.openError,'read failed')});
+ openingNode('newDate').value='2026-11-09';openingNode('newShift').value='DAY';opened('api=async()=>[]');await opened('beginShift()');
+ check('new shift resets scroll after rendering',()=>assert.deepEqual(openingEvents,[['render'],['scroll',0,0]]));
+ openingEvents.length=0;openingNode('newDate').value='';await opened('beginShift()');
+ openingNode('newDate').value='2026-11-09';opened("api=async()=>{throw new Error('lookup failed')}");await opened('beginShift()');
+ check('invalid or failed new-shift lookup does not scroll',()=>assert.deepEqual(openingEvents,[]));
+ opening.fixture=fixture;opened("api=async path=>path.startsWith('/api/reports?')?[fixture]:fixture");await opened('beginShift()');
+ check('new-shift dialog opening an existing shift resets once',()=>assert.deepEqual(openingEvents,[['render'],['scroll',0,0]]));
+ openingEvents.length=0;opened('renderEditor()');
+ check('same-editor rerender preserves document scroll',()=>assert.deepEqual(openingEvents,[['render']]));
+ openingEvents.length=0;opened("collect=()=>{};validateJobInputs=()=>true;refreshInfo=async()=>{};api=async()=>({id:report.id,version:2,updated_at:'2026-11-08T12:00:00Z',created_at:'2026-11-08T11:00:00Z'})");assert.equal(await opened('save(false)'),true);
+ check('actual autosave rerender preserves scroll',()=>assert.deepEqual(openingEvents,[['render']]));
+ openingEvents.length=0;opened('touch=()=>{};addKHB()');
+ check('add-row editor rerender preserves scroll',()=>assert.deepEqual(openingEvents,[['render']]));
  check('integer bounds and invalid syntax',()=>{for(const val of ['1.5','-1','1e3','NaN','10000000'])assert.equal(run('quantityValid('+JSON.stringify(val)+')'),false);for(const val of ['',null,'0','9999999'])assert.equal(run('quantityValid('+JSON.stringify(val)+')'),true)});
  check('invalid job marks field, focuses and names exact cell',()=>{const input=element('q');input.value='2.5';input.dataset={job:'0',key:'f20'};doc.querySelectorAll=()=>[input];run("report={jobs:[{name:'SYNTH JOB'}]};showEditTab=x=>{globalThis.tab=x};toast=x=>{globalThis.message=x};validateJobInputs(true)");assert.equal(input['aria-invalid'],'true');assert.equal(input.focused,true);assert.equal(box.tab,'jobs');assert.match(box.message,/SYNTH JOB.*F20/);doc.querySelectorAll=()=>[]});
  check('revision diff distinguishes missing and empty, escapes HTML',()=>{const html=run("reportDiffHTML({notes:'<script>'},{notes:'',newValue:''})");assert.match(html,/&lt;script&gt;/);assert.doesNotMatch(html,/<script>/);assert.match(html,/Không có trường/);assert.match(html,/chuỗi rỗng/)});

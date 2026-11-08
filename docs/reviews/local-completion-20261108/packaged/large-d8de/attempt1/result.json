@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "large exactEXE ready"
+  ],
+  "timings": {
+    "startup": 74.24144840007648,
+    "allList": 0.709543300094083
+  },
+  "bounds": {
+    "startup": 240,
+    "operation": 180,
+    "exit": 180
+  },
+  "limitations": [
+    "Warm OS cache, no causal speedup claim",
+    "200 original fakeJPEG blobs storage-only, 40newPNG are valid image oracle",
+    "Same physical NVMe, benchmark/profiling jobs completed"
+  ],
+  "status": "FAILED",
+  "error": "large2191count/50page",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\consumer-prep\\run_large.py\", line 14, in <module>\n    start=time.perf_counter();p.locator('button[data-page=\"list\"]').click();p.wait_for_load_state('networkidle');p.locator('#lfrom').fill('2024-01-01');p.locator('#lto').fill('2030-12-31');c.click('Tìm báo cáo');r['timings']['allList']=time.perf_counter()-start;check('large2191count/50page',p.locator('#listCount').inner_text().startswith('2191 báo cáo') and p.locator('#reportList button[data-id]').count()==50);c.capture('large-page1');start=time.perf_counter();c.click('Trang sau →');r['timings']['page2']=time.perf_counter()-start;check('large page2', '51–100' in p.locator('#listCount').inner_text());c.capture('large-page2');p.locator('#lq').fill('SYNTH ABSENT QUERY 918273');start=time.perf_counter();c.click('Tìm báo cáo');r['timings']['searchEmpty']=time.perf_counter()-start;check('large search0',p.locator('#listCount').inner_text()=='0 báo cáo');c.capture('large-search-empty')\n                                                                                                                                                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\consumer-prep\\run_large.py\", line 8, in check\n    assert value,label\n           ^^^^^\nAssertionError: large2191count/50page\n"
+}

@@ -1,0 +1,62 @@
+{
+  "checks": [
+    "large exactEXE ready",
+    "large2191count/50page",
+    "large page2",
+    "large search0",
+    "large year728aggregate independent SQLoracle",
+    "large40PNG actually decoded",
+    "large portable completed artifact",
+    "large portable logical counts/newreport",
+    "large portable viewer40decode",
+    "large actualUI exit0"
+  ],
+  "timings": {
+    "startup": 75.67878870014101,
+    "allList": 0.7949105000589043,
+    "page2": 0.11929440009407699,
+    "searchEmpty": 1.3968184997793287,
+    "yearSummary": 0.04469010001048446,
+    "upload40": 1.09288730006665,
+    "filesTab": 0.06888899998739362,
+    "portablePendingLocalMenuResponse": 0.04000329994596541,
+    "portableCompleted": 36.294173300033435,
+    "viewerOpen": 5.542998899938539,
+    "exit": 40.94167119986378
+  },
+  "bounds": {
+    "startup": 240,
+    "operation": 180,
+    "exit": 180
+  },
+  "limitations": [
+    "Warm OS cache, no causal speedup claim",
+    "200 original fakeJPEG blobs storage-only, 40newPNG are valid image oracle",
+    "Same physical NVMe, benchmark/profiling jobs completed"
+  ],
+  "summaryObserved": [
+    "433.902",
+    "434.773",
+    "217.262",
+    "110.063"
+  ],
+  "summaryExpected": [
+    "433.902",
+    "434.773",
+    "217.262",
+    "110.063"
+  ],
+  "freeBytes": [
+    12223000576,
+    9718714368
+  ],
+  "portable": {
+    "bytes": 1252007936,
+    "sha256": "1f31459d02037f528c517844462ce6b060c13cc4c185affb5cf371f774b9a89e",
+    "reports": 2192,
+    "revisions": 87643,
+    "largeNotes": "SYNTH LARGE40VALIDPNG ORACLE",
+    "quickCheck": "ok"
+  },
+  "status": "OBSERVED_PENDING_REVIEW"
+}

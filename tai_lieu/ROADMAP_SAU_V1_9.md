@@ -10,7 +10,7 @@ Dùng file này làm cơ sở chia việc. Mỗi hạng mục có tiêu chí ngh
 
 ## 1. Định hướng đã chốt với chủ dự án
 
-**Quyết định 2026-11-08:** hoàn tất bản local trước, sau đó mới mở giai đoạn2web. Kế hoạch đầy đủ U1–U14/V1–V8/D2–D4: [LOCAL_COMPLETION](../docs/roadmaps/LOCAL_COMPLETION.md). Đã nhận nguồn 1.10.0/schema4, đang review độc lập; 210 kiểm thử Python, 7 nhóm JavaScript và 4 kiểm thử workspace đạt. Chưa nghiệm thu EXE và toàn bộ luồng local mới. Chủ dự án xác nhận dùng máy bãi khác, nghiệm thu thiết bị sau.
+**Quyết định 2026-11-08:** hoàn tất bản local trước, sau đó mới mở giai đoạn2web. Kế hoạch đầy đủ U1–U14/V1–V8/D2–D4: [LOCAL_COMPLETION](../docs/roadmaps/LOCAL_COMPLETION.md). Nguồn 1.10.0/schema4 tại d8de489 đã được review độc lập; 211 kiểm thử Python (0 bỏ qua), 7 nhóm JavaScript (29 kiểm tra LOCAL) và 4 kiểm thử workspace đạt. EXE SHA-256 4342c996… đã build từ Git sạch và qua smoke test; nghiệm thu toàn bộ luồng local mới còn đang thực hiện. Chủ dự án xác nhận dùng máy bãi khác, nghiệm thu thiết bị sau.
 
 **Đợt bổ sung đã nghiệm thu kỹ thuật (2026-11-08):** [Đối chiếu tan-thuan-port và roadmap nhân sự](../docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md). PNI E1–E6 nhập danh mục nhân sự Excel có xem trước được giao Terra/Sol, Astra review độc lập; phiên bản ứng viên1.9.2. Nguồn/kiểm thử191Python và6JS, build/smoke và luồng Chrome có giao diện trên Windows của EXE1.9.2 từ7ce0305b6000 đã được Astra nghiệm thu độc lập bằng dữ liệu giả lập; hộp chọn file Windows, Python3.9, in và nghiệm thu nghiệp vụ vẫn chưa thử. Tái sử dụng bộ chọn người và tổ/mẫu hiện có; tự phân tổ, định danh mã nhân viên và đồng bộ nằm ngoài đợt này. D2–D5 giữ nguyên phần việc, chưa được đánh dấu xong.
 
@@ -234,7 +234,7 @@ Hai mức kiểm tra:
 
 Quy tắc:
 - Thao tác bắt buộc full **được ưu tiên** hơn giới hạn lịch tự động.
-- **Quá hạn** nghĩa là chưa có full thành công trong 24 giờ hoạt động gần nhất. Không cam kết "phát hiện trong một ngày", vì ứng dụng có thể không chạy. Quá hạn thì full ở lần khởi động hoặc thao tác kế tiếp.
+- **Quá hạn** nghĩa là đã trôi qua ít nhất 24 giờ kể từ lần full thành công gần nhất, kể cả thời gian ứng dụng không chạy. Full được thực hiện ở lần khởi động hoặc thao tác kế tiếp; không có bộ hẹn giờ chạy khi ứng dụng đã tắt. Mốc thiếu, hỏng hoặc đồng hồ lùi buộc kiểm tra full.
 - Ghi riêng **bản full tốt gần nhất** (tên, thời điểm, `database_id`) vào cấu hình bảo vệ. `prune` **không được xóa** bản này cho tới khi có bản full tốt mới thay thế.
 - Full thất bại: không cập nhật mốc full, giữ bản tốt đã ghim, báo lỗi mức `error`, không gắn nhãn "đã kiểm tra đầy đủ" cho bản quick.
 - Cache hash khóa theo `database_id`; xóa cache khi khôi phục hoặc tiếp nhận. Cache chỉ hỗ trợ quick; full luôn đọc lại mọi blob.
@@ -387,8 +387,10 @@ Mốc dung lượng ~3 GB chỉ là **tín hiệu để đo lại**, không ph�
 
 ## 9. Giới hạn
 
-- Số đo bản 1 (1,15 GB) dùng payload giống nhau, không tái lập được bằng kịch bản đã lưu. Đợt 0 và Đợt 1 đã đo DB giả lập 125 MB có 4.800 payload khác nhau qua Store.save; loại ổ đĩa vẫn chưa xác định. Chưa đo trên máy bãi hoặc DB cỡ gần 1 GB.
-- Chưa chạy EXE Windows, hộp thoại tkinter, trình duyệt thật.
+Hiện tại (2026-11-08): bộ dữ liệu giả lập tạo qua Store.save đạt khoảng 1,25 GB; đã ghi số đo và cấu hình máy trong [bằng chứng LOCAL](../docs/reviews/local-completion-20261108/). Thời gian khởi động/kiểm tra full có thể kéo dài hàng chục giây; không có kết luận tăng tốc. Nghiệm thu giao diện trên bộ dữ liệu lớn và toàn bộ L1–L8 vẫn chờ review độc lập. Máy bãi khác được chủ dự án để nghiệm thu sau; dữ liệu thật và máy in vật lý chưa được kiểm chứng.
+
+- **Giới hạn lịch sử đến 1.9.1:** Số đo bản 1 (1,15 GB) dùng payload giống nhau, không tái lập được bằng kịch bản đã lưu. Đợt 0 và Đợt 1 đã đo DB giả lập 125 MB có 4.800 payload khác nhau qua Store.save; loại ổ đĩa vẫn chưa xác định. Chưa đo trên máy bãi hoặc DB cỡ gần 1 GB.
+- **Tình trạng lịch sử đến 1.9.1:** chưa chạy EXE Windows, hộp thoại tkinter, trình duyệt thật. Đợt PNI 1.9.2 và ứng viên 1.10.0 đã có bằng chứng EXE/Chrome có giao diện riêng; không dùng dòng lịch sử này làm kết luận hiện tại. Hộp thoại tkinter/Windows và máy in vật lý vẫn chưa được nghiệm thu.
 - Chưa đọc các công cụ khác ở thư mục cha và dữ liệu thật trong `DU_LIEU/`.
 - Các yêu cầu pháp lý về dữ liệu cá nhân ở W0-1 cần bộ phận phụ trách của đơn vị xác nhận; tài liệu này không phải ý kiến pháp lý.
 
@@ -406,7 +408,9 @@ Chủ dự án dự định chuyển project vào `D:\UNG DUNG AI\TOOL AI 2026\C
 
 **Việc cần làm sau khi chuyển:** mở "Bảo vệ dữ liệu / Khôi phục", chọn lại thư mục dự phòng bên ngoài và bấm "Lưu nơi dự phòng"; kiểm tra "Bên ngoài" có thời gian thành công mới.
 
-**Đối chiếu CVF ngày 2026-11-06:** xem `.cvf/manifest.json`, `.cvf/policy.json`, `AGENTS.md` và handoff đang hoạt động. Core công khai được ghim `c4c8767ac8861854f40d466ba338ffd11eb9558e`; nguồn bổ sung operator-local có source commit rút gọn `f8175616c`, standard `project-development-application-standard` SHA-256 `d06b62387e015160a77658f333882a2a316d54ffd0421071354cf63a3730dd7a`. Profile bổ sung 1.4 và thiết lập local đã được review độc lập, nghiệm thu theo bốn tiêu chí WSA trong `docs/roadmaps/WORKSPACE_ACTIVATION.md`; bản lock/workflow cũ và các lần thất bại được giữ tại `docs/reviews/activation-history/`. Lệnh `python -B scripts/check_project_workspace.py --json` trả `COMPATIBLE_ASSESSED`, kiểm tra kích hoạt trả `CURRENT_ASSESSED` cho hồ sơ REVIEW đã chốt. Doctor Core cũ giữ nguyên chẩn đoán phiên bản đã review (FAIL 27/28 trên Git sạch, hoặc 26/28 khi hai hồ sơ mới vào phạm vi); lệnh của project đối chiếu riêng bằng nguồn bổ sung đã ghim và từ chối mọi lỗi khác. Sáu nhóm kiểm thử adapter đạt, gồm xác minh trên Git sạch tại commit đã lưu (bổ sung ngày 2026-11-07; xem `docs/reviews/workspace-activation-postcommit-review.md`). Đây là nghiệm thu thiết lập phát triển local; việc BUILD tiếp theo phải có action và receipt mới, còn nghiệm thu sản phẩm giữ nguyên các giới hạn ở mục 9.
+**Hồ sơ lịch sử CVF ngày 2026-11-06 (được giữ để đối chiếu, đã có hồ sơ thay thế):** xem `.cvf/manifest.json`, `.cvf/policy.json`, `AGENTS.md` và handoff đang hoạt động. Core công khai được ghim `c4c8767ac8861854f40d466ba338ffd11eb9558e`; nguồn bổ sung operator-local có source commit rút gọn `f8175616c`, standard `project-development-application-standard` SHA-256 `d06b62387e015160a77658f333882a2a316d54ffd0421071354cf63a3730dd7a`. Profile bổ sung 1.4 và thiết lập local đã được review độc lập, nghiệm thu theo bốn tiêu chí WSA trong `docs/roadmaps/WORKSPACE_ACTIVATION.md`; bản lock/workflow cũ và các lần thất bại được giữ tại `docs/reviews/activation-history/`. Lệnh `python -B scripts/check_project_workspace.py --json` trả `COMPATIBLE_ASSESSED`, kiểm tra kích hoạt trả `CURRENT_ASSESSED` cho hồ sơ REVIEW đã chốt. Doctor Core cũ giữ nguyên chẩn đoán phiên bản đã review (FAIL 27/28 trên Git sạch, hoặc 26/28 khi hai hồ sơ mới vào phạm vi); lệnh của project đối chiếu riêng bằng nguồn bổ sung đã ghim và từ chối mọi lỗi khác. Sáu nhóm kiểm thử adapter đạt, gồm xác minh trên Git sạch tại commit đã lưu (bổ sung ngày 2026-11-07; xem `docs/reviews/workspace-activation-postcommit-review.md`). Đây là nghiệm thu thiết lập phát triển local; việc BUILD tiếp theo phải có action và receipt mới, còn nghiệm thu sản phẩm giữ nguyên các giới hạn ở mục 9.
+
+**Tình trạng CVF hiện tại (2026-11-08):** Core được ghim `68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6`, profile1.4, thực thi PINNED_CORE; nguồn bổ sung được xem xét riêng. Doctor của project trả `CORE_ASSESSED`: 29/29 kiểm tra gốc và bốn kiểm tra bootstrap với work order cụ thể đều đạt, không miễn trừ lỗi doctor cũ. Receipt chỉ ràng buộc đúng action đã được đánh giá. Các kiểm tra cơ học này không chứng minh điều khiển AI qua provider hoặc hosted CI. Hồ sơ hiện hành: [Core reconciliation](../docs/reviews/core-reconciliation/) và [LOCAL](../docs/reviews/local-completion-20261108/).
 
 ### Áp dụng quy tắc phát triển CVF
 

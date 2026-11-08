@@ -1,0 +1,105 @@
+[
+  {
+    "event": "launch",
+    "pid": 64276,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f"
+  },
+  {
+    "event": "screenshot",
+    "file": "opening-existing-scroll.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "compact-first-input-after-explicit-home.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Chốt ca"
+  },
+  {
+    "event": "click-done",
+    "text": "Chốt ca"
+  },
+  {
+    "event": "screenshot",
+    "file": "chief-validation.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "invalid-quantity.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Lịch sử sửa"
+  },
+  {
+    "event": "click-done",
+    "text": "Lịch sử sửa"
+  },
+  {
+    "event": "screenshot",
+    "file": "history.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "history-diff.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Danh mục nhân sự / công việc"
+  },
+  {
+    "event": "menu-done",
+    "text": "Danh mục nhân sự / công việc"
+  },
+  {
+    "event": "screenshot",
+    "file": "catalog-sticky.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Danh sách tàu"
+  },
+  {
+    "event": "menu-done",
+    "text": "Danh sách tàu"
+  },
+  {
+    "event": "click-start",
+    "text": "Thêm tàu"
+  },
+  {
+    "event": "click-done",
+    "text": "Thêm tàu"
+  },
+  {
+    "event": "click-start",
+    "text": "Thêm tàu"
+  },
+  {
+    "event": "click-done",
+    "text": "Thêm tàu"
+  },
+  {
+    "event": "screenshot",
+    "file": "ship-reactivated.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Bảo vệ dữ liệu / Khôi phục"
+  },
+  {
+    "event": "menu-done",
+    "text": "Bảo vệ dữ liệu / Khôi phục"
+  },
+  {
+    "event": "screenshot",
+    "file": "failure.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  }
+]

@@ -1,0 +1,1 @@
+Retained existing generated upgrade and pre-restore copies from exact headed legacy run, no rerun. Original driver asserts interrupted cancel hash unchanged but did not persist a separately named boolean; no retrospective boolean is invented. SHA/rows/integrity/schema permit independent migration-manifest and final-history cross-check.

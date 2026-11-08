@@ -1,0 +1,33 @@
+{
+  "status": "FINAL_CANDIDATE_BUILD_SMOKE_PASS_NATIVE_PRODUCT_PENDING",
+  "sourceCommit": "d8de4896b85e412e2756ad6c4f033fa049bb837d",
+  "version": "1.10.0",
+  "metadataCommit": "d8de4896b85e",
+  "exe": {
+    "path": "dist/SO_BAO_CAO_CA.exe",
+    "sha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f"
+  },
+  "bytes": 13191896,
+  "offlineBuildExitCode": 0,
+  "packagedSmokeExitCode": 0,
+  "cleanBeforeAfter": "Root actualcleancommit +Solreportedbothcleanbuildgates/actualGitstatusEMPTY",
+  "sourceReview": {
+    "path": "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+    "sha256": "030322809aa72923b62d6228eaa448281d62e895ce9774f1605ece7b639f9637"
+  },
+  "technical": {
+    "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+    "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+  },
+  "logs": [
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/build-d8de489.txt",
+      "sha256": "bc0d4041b047e19a529e3207e51d975d4f746f1a330b7117f2f9f71e9e321747"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/smoke-d8de489.txt",
+      "sha256": "ead1b2c81c3b17d16f662348e5b63f5306e8caac86a5140c127be61ffc6d0a40"
+    }
+  ],
+  "priorCandidateRetained": "Runtime CANDIDATE_0f6ed11_1_10_0.exe2d3b9787...; baseline1.9.2also retained; root launcher remainsolduntilacceptedfinaldelivery."
+}

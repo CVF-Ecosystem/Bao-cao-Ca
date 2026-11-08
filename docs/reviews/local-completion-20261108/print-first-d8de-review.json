@@ -1,0 +1,310 @@
+{
+  "status": "TWO_FINAL_APP_OWNED_CTRLP_CASES_ACCEPTED_WITH_SETTINGS_QUALIFICATION",
+  "risk": "R2",
+  "worker": "Sol sole native controller",
+  "reviewer": "Astra independent REVIEWER",
+  "manifest": {
+    "path": "docs/reviews/local-completion-20261108/packaged/print-first-d8de/artifact-manifest.json",
+    "sha256": "e8bc08b801601917e0fe7d77ed39e4b325a9a1013e7d569f07dbd47357f2f2e3"
+  },
+  "candidate": "d8de4896b85e412e2756ad6c4f033fa049bb837d",
+  "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f",
+  "checks": [
+    "All15manifest artifact hashes matched. Both results bind exactEXE and headedChrome/Edge; trusted key p/ctrl/isTrusted/defaultPrevented witnesses support app-owned shortcut, notbrowseraccelerator.",
+    "Both actualcompleted native-save PDFs independently hashed/parsed1page841.92x594.96pt A4landscape. Date01/10/2026,Cangay,Trang1/1,time16:25Chrome/16:26Edge08/11/2026 andfinalchiefsignature present.",
+    "Visually inspected2fullpage renders+2actualnative dialogscreenshots: no clipping/overlap, finalsignature unsplit, same-reportnative preview. Edge actualA4visible in dialog; nativeaction/persisted evidence corroborates."
+  ],
+  "qualification": "Chrome retained nativeDOM includes headerFooter checkedfalse and cssBackground checkedfalse, although headercontrol is not visible in screenshot. Edge retained controls expose backgroundOFF but no headerfooter control; requested/persistedOFF is preference evidence only there. Chrome nativepaper query reportsA4 and actualPDF isA4, while persistedPrintingAppState recordsLetter: preserve this discrepancy, do not claim allstates agree. Edge actualA4clicked/dialogvisible andPDF A4. Outputs show no extra browserURL/header collision; requestedON alone cannotprove effectiveON.",
+  "remaining": [
+    "Finalremaining14case matrix includinglong/button/headerON withactualnativeavailability/state/output observations; preserve distinctions betweenrequested,persisted,effective.",
+    "Bind sanitized executedharness hash/provenance in finalbatch; no fakeevent/PDFgenerator/previewbytes.",
+    "V1 andwholeL1-L8 notclosed; browserownedaccelerator/OSSaveAs/physicalprinter remainNOT_TESTED."
+  ],
+  "controlsObserved": [
+    {
+      "case": "chrome-short-headers0-ctrlp",
+      "keyWitness": [
+        {
+          "key": "p",
+          "ctrlKey": true,
+          "isTrusted": true,
+          "repeat": false,
+          "defaultPrevented": true
+        }
+      ],
+      "settings": [
+        {
+          "tag": "CR-CHECKBOX",
+          "id": "headerFooter",
+          "text": "\n        Headers and footers\n      ",
+          "label": null,
+          "role": null,
+          "ariaChecked": null,
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "tag": "CR-CHECKBOX",
+          "id": "cssBackground",
+          "text": "Background graphics",
+          "label": null,
+          "role": null,
+          "ariaChecked": null,
+          "checked": false,
+          "disabled": false
+        }
+      ],
+      "paper": {
+        "id": 90,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "control": "native paper SELECT",
+              "selected": "{\"height_microns\":297000,\"imageable_area_bottom_microns\":0,\"imageable_area_left_microns\":0,\"imageable_area_right_microns\":210000,\"imageable_area_top_microns\":297000,\"name\":\"ISO_A4\",\"width_microns\":210000,\"custom_display_name\":\"A4\"}"
+            }
+          }
+        }
+      },
+      "persisted": {
+        "version": 2,
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "account": ""
+          }
+        ],
+        "isCssBackgroundEnabled": false,
+        "customMargins": {},
+        "isHeaderFooterEnabled": false,
+        "isLandscapeEnabled": true,
+        "marginsType": 0,
+        "mediaSize": {
+          "height_microns": 279400,
+          "imageable_area_bottom_microns": 0,
+          "imageable_area_left_microns": 0,
+          "imageable_area_right_microns": 215900,
+          "imageable_area_top_microns": 279400,
+          "is_default": true,
+          "name": "NA_LETTER",
+          "width_microns": 215900,
+          "custom_display_name": "Letter"
+        },
+        "scaling": "100",
+        "scalingType": 3
+      }
+    },
+    {
+      "case": "msedge-short-headers0-ctrlp",
+      "keyWitness": [
+        {
+          "key": "p",
+          "ctrlKey": true,
+          "isTrusted": true,
+          "repeat": false,
+          "defaultPrevented": true
+        }
+      ],
+      "settings": [
+        {
+          "tag": "FLUENT-CHECKBOX",
+          "id": "backgrounds-checkbox",
+          "text": "",
+          "label": null,
+          "role": null,
+          "ariaChecked": null,
+          "value": "on",
+          "checked": false,
+          "disabled": false
+        }
+      ],
+      "paper": {
+        "id": 90,
+        "result": {
+          "result": {
+            "type": "object",
+            "value": {
+              "paperControlNotFound": true
+            }
+          }
+        }
+      },
+      "persisted": {
+        "version": 2,
+        "recentDestinations": [
+          {
+            "id": "Save as PDF",
+            "origin": "local",
+            "capabilities": {
+              "printer": {
+                "color": {
+                  "option": [
+                    {
+                      "is_default": true,
+                      "type": "STANDARD_COLOR",
+                      "vendor_id": "2"
+                    }
+                  ]
+                },
+                "dpi": {
+                  "option": [
+                    {
+                      "horizontal_dpi": 300,
+                      "is_default": true,
+                      "vertical_dpi": 300
+                    }
+                  ]
+                },
+                "media_size": {
+                  "option": [
+                    {
+                      "height_microns": 1189000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 841000,
+                      "imageable_area_top_microns": 1189000,
+                      "name": "ISO_A0",
+                      "width_microns": 841000,
+                      "custom_display_name": "A0"
+                    },
+                    {
+                      "height_microns": 841000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 594000,
+                      "imageable_area_top_microns": 841000,
+                      "name": "ISO_A1",
+                      "width_microns": 594000,
+                      "custom_display_name": "A1"
+                    },
+                    {
+                      "height_microns": 594000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 420000,
+                      "imageable_area_top_microns": 594000,
+                      "name": "ISO_A2",
+                      "width_microns": 420000,
+                      "custom_display_name": "A2"
+                    },
+                    {
+                      "height_microns": 420000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 297000,
+                      "imageable_area_top_microns": 420000,
+                      "name": "ISO_A3",
+                      "width_microns": 297000,
+                      "custom_display_name": "A3"
+                    },
+                    {
+                      "height_microns": 297000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 210000,
+                      "imageable_area_top_microns": 297000,
+                      "name": "ISO_A4",
+                      "width_microns": 210000,
+                      "custom_display_name": "A4"
+                    },
+                    {
+                      "height_microns": 210000,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 148000,
+                      "imageable_area_top_microns": 210000,
+                      "name": "ISO_A5",
+                      "width_microns": 148000,
+                      "custom_display_name": "A5"
+                    },
+                    {
+                      "height_microns": 355600,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 215900,
+                      "imageable_area_top_microns": 355600,
+                      "name": "NA_LEGAL",
+                      "width_microns": 215900,
+                      "custom_display_name": "Legal"
+                    },
+                    {
+                      "height_microns": 279400,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 215900,
+                      "imageable_area_top_microns": 279400,
+                      "is_default": true,
+                      "name": "NA_LETTER",
+                      "width_microns": 215900,
+                      "custom_display_name": "Letter"
+                    },
+                    {
+                      "height_microns": 431800,
+                      "imageable_area_bottom_microns": 0,
+                      "imageable_area_left_microns": 0,
+                      "imageable_area_right_microns": 279400,
+                      "imageable_area_top_microns": 431800,
+                      "name": "NA_LEDGER",
+                      "width_microns": 279400,
+                      "custom_display_name": "Tabloid"
+                    }
+                  ]
+                },
+                "page_orientation": {
+                  "option": [
+                    {
+                      "type": "PORTRAIT"
+                    },
+                    {
+                      "type": "LANDSCAPE"
+                    },
+                    {
+                      "is_default": true,
+                      "type": "AUTO"
+                    }
+                  ]
+                }
+              },
+              "version": "1.0"
+            },
+            "displayName": "Save as PDF",
+            "printerStatus": "printerStatusUnknown",
+            "extensionId": "",
+            "extensionName": ""
+          }
+        ],
+        "dpi": {
+          "horizontal_dpi": 300,
+          "is_default": true,
+          "vertical_dpi": 300
+        },
+        "duplexType": "NO_DUPLEX",
+        "mediaSize": {
+          "height_microns": 297000,
+          "imageable_area_bottom_microns": 0,
+          "imageable_area_left_microns": 0,
+          "imageable_area_right_microns": 210000,
+          "imageable_area_top_microns": 297000,
+          "name": "ISO_A4",
+          "width_microns": 210000,
+          "custom_display_name": "A4"
+        },
+        "marginsType": 0,
+        "customMargins": {
+          "marginTop": 0,
+          "marginRight": 0,
+          "marginBottom": 0,
+          "marginLeft": 0
+        },
+        "isColorEnabled": true,
+        "isHeaderFooterEnabled": false,
+        "isLandscapeEnabled": true,
+        "isCollateEnabled": true,
+        "isCssBackgroundEnabled": false,
+        "scaling": "100",
+        "vendorOptions": {}
+      }
+    }
+  ]
+}

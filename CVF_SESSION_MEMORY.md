@@ -12,8 +12,8 @@ Memory class: POINTER_RECORD
 ## Current local release
 
 - Current LOCAL authority: WO_LOCAL_COMPLETION.md raw586b44bf, locked SPEC6e0842af, L1-L8 all mandatory; no web BUILD.
-- Current delivery state:merged source accepted24files; exact211Python0skip/7JS29/checker4 pass. Regex product experiment reverted; new clean candidate/build/native product proof next.
-- Current owner/next move: Root COMMIT_STEWARD/SESSION_SYNC_STEWARD commits reviewed candidate; Sol sole native controller builds after exactSHA, Terra frozen, Astra independent product reviewer.
+- Current delivery state:U1 opening-only repair independently accepted24files/22unchanged,211Python inherited unchanged/7JS38/checker4. Clean newcandidate/EXE and targeted native outcomes pending; prior d8de proof scoped, no productclosure/speedupclaim.
+- Current owner/next move: RootCOMMIT_STEWARD/session sync forcleannewcandidate; SolsoleUI/packaging allotherwritersfrozen, Astraindependentproofreview, Terrafixturecomplete.
 - Deferred by operator: another yard-machine/device acceptance later. No parked operator checkpoint.
 - Earlier dated sections below are preserved history; current state and active handoff own next-action truth.
 
@@ -144,3 +144,23 @@ Root rehydratedBUILD and receives frozen2-fileTerra return validation-hotpath-wo
 ## LOCAL merged final source / new candidate stewardship — 2026-11-08
 
 Astra source-candidate-final-review.json03032280 accepts24-file mergedsource, restoresNGHIEPexact0fGitblob, preserves unsuccessfulregexexperiment source/test snapshots andretainsindependentvalidationcontracttest. Root verifiedall24rawhashes andranrequired fullsuiteafterrevert:211PASS0skip43.059s inclactualsource launcher; current7JSgroups29LOCALacceptedbytesunchanged, checker4valid. technical/release-final.json bindsfinalevidence; no runtime speedimprovementclaimed. Only2productJS+2tests differ0f6ed11. Root rehydratedREVIEW and assumesCOMMIT_STEWARD/SESSION_SYNC_STEWARD fornewcleanreviewedcandidate, thensameofflinebuild/smoke/newnativeproof. Prior0fEXE/eligibleV2-V7proof andallfailedattempts preserved; affectedprint16mustnewEXE, supportedlegacy/recovery/maintenance/PNI/quietlargeUIstillrequired. Same586b44bf/SPEC/budgets/risks/effects/owner, nowebgrant/checkpoint.
+
+
+## LOCAL final candidate build / native dispatch acknowledgment — 2026-11-08
+
+Rootcommittedclean d8de4896b85e412e2756ad6c4f033fa049bb837d; Sol rehydratedREVIEW, declaredpackaging/nativeIMPLEMENTATION_WORKER andacknowledged586b44bf/d8debeforeofflinebuild. BothcleanGitgates/toolimports/buildPASS, packagedsmokeexact1.10.0/d8de4896b85ePASS andactualGitstatusEMPTYafter. NewdistEXE13191896bytes SHA4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f independentlyrehashedRoot. packaged/candidate-d8de489.json bindslogs/source/technical211Python0skip+7JS29/checker4. Rootrehydrated andreturnsORCHESTRATOR/SESSION_SYNC_STEWARD; Solaloneexecutesnew16nativeprintcases (firstChrome/EdgeCtrlP), thenallremainingL1-L8consumerproofincludingquietlargeUI. Browser-ownedacceleratorfailedandremainsNOT_TESTED; app-ownedtrustedpreviewshortcutmustproveactualnativeoutput. No speedupclaim/wholeLOCALclosure, oldbinaries/failuresretained, Rootlauncherremainsbaselineuntilacceptedfinaldelivery. Originalbudget/authorityunchanged, nowebgrant/checkpoint.
+
+
+## LOCAL U1 bounded BUILD acknowledgment — 2026-11-08
+
+Root rehydrated current REVIEW frontdoors and accepts independent legacy-ui-batch-review.json9a0d1678 under unchanged586b44bf/SPEC6e0842af. Actual U1 first-input y=-443.8 is a concrete opening-scroll defect. Root acknowledges BUILD before Astra disclosed reviewer-local two-file repair: scroll only after successful loadReport/new beginShift render, never blanket renderEditor/setPage; preserve cancelled/failed open and same-editor/autosave scroll. Focused JS then independent Root source/custody and Sol final1366 affected proof; unchanged print/CSS may inherit16 d8de native outputs only with explicit final-source/effect argument and representative newEXE print. Sol alone continues other frozen/native/quietlarge proof; no heavy Root job during measured windows. All L1-L8/Edge effective settings/remaining maintenance/U/custody pending, no future-finding waiver, no budget/scope/owner/effect reset or web grant.
+
+
+## LOCAL U1 repair return / independent REVIEW acknowledgment — 2026-11-08
+
+Astra rehydrated admitted BUILD after Sol QUIET_DONE, disclosed reviewer-local repair and returned exactly two opening-only scroll calls plus9meaningfulbehaviorchecks, all7JSgroupsPASS0skip/38LOCAL. Root verifiedall24rawsourcehashes and return d8f72aa7, rehydratedcanonicalfrontdoors, returnsREVIEW asindependent REVIEWER forAstra-localdelta plusORCHESTRATOR/SESSION_SYNC_STEWARD. Other22files inclPython/print/CSSunchanged;211Pythonbasis inheritedexplicitly, notrerunclaim. NewcleanEXE/actualU1+representativeprint/freshrestart andothernativeU/maintenance remainder stillrequired. Prior16print/legacy/largeproofremainexactd8de withscopedinheritance, no relabel. Same586b/SPEC/480+60budget/owner/effects, no web/deviceacceptance/checkpoint.
+
+
+## LOCAL U1 accepted source / clean candidate stewardship — 2026-11-08
+
+Root independentREVIEWER accepts u1-repair/root-source-review.json0781c719 after exactdiff/two-call equality,24rawcustody/22unchanged, sourcewhitespaceexit0 and independent actual38LOCALchecksPASS. Astra all7JSgroupsPASS0skip/log32f6765b;211Python/4checker actualbasis inheritedunchanged, no rerunclaim. Root rehydrated and transitions COMMIT_STEWARD/SESSION_SYNC_STEWARD before cleannewcandidatecommit andSolofflinebuild/smoke. Allotheragents/proof/prosewriters frozen throughbuild. Prior d8deEXE4342 is preserved; native16/legacy/maintenance/large remainhistoricalscoped evidence. Remaining finalU1/fresh/restart/Ugap, representativeChromeprint,2Edge defaultmarginactualconsumedticket/layout andserializedlarge40DOMproof aremandatory; no wholelocalclosure, no effects/owner/budget/authoritychange.

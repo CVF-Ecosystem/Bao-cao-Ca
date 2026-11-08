@@ -1,0 +1,34 @@
+{
+  "status": "FINAL_NATIVE_OUTPUT_LAYOUT_ACCEPTED_WITH_OPEN_V1_QUALIFICATIONS",
+  "risk": "R2",
+  "worker": "Sol sole native controller",
+  "reviewer": "Astra independent REVIEWER",
+  "candidate": "d8de4896b85e412e2756ad6c4f033fa049bb837d",
+  "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f",
+  "evidence": [
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/print-matrix-d8de/artifact-manifest.json",
+      "sha256": "71bd7fc0c5e570cd9b77c916434d934a35d7c89792aefe093a5861f701cbde01"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/print-matrix-independent-checks.json",
+      "sha256": "ed4642775f3001c5887e1883d09407fc50cb9020d83e90e5045690d41c47dd13"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/baseline-v1-coverage-review.json",
+      "sha256": "0212b9ac0e32101f5ab715ac4341ddaee734ee671762f6e8215da1408c778932"
+    }
+  ],
+  "independentChecks": [
+    "Rehashed all 136 manifest artifacts; all match. Parsed all 16 saved PDFs independently: 8 short one-page and 8 long two-page outputs, all A4 landscape 841.92 x 594.96 points.",
+    "All 24 pages contain report date/shift, correct page x/y and machine print-time field; chief signature block only on final page with expected chief names. Inspected all three contact sheets covering all 24 rendered pages: no observed clipping, overlap or split final signature.",
+    "Reviewed executed harness: actual button or trusted Control+p invokes application print flow and real headed native dialog. Same owned profile completes browser Save as PDF; retained copy is of completed output, not preview bytes or PDF-generation API. All eight keyboard cases record trusted control-key/default-prevented witness.",
+    "Chrome all eight cases expose matching actual native headerFooter checked ON/OFF and cssBackground OFF. Edge all eight expose actual backgrounds-checkbox OFF, but no native header/footer toggle. Requested and persisted ON/OFF preferences are retained accurately."
+  ],
+  "qualifications": [
+    "Edge requested/persisted header preference is not proof of effective browser headers ON/OFF. Accept observed layout/output and actions only; do not report a fully proven effective-setting matrix or close V1 on that basis.",
+    "Baseline before/after action coverage remains separately open per baseline-v1-coverage-review.json. Final application-owned shortcut does not establish old browser-owned accelerator behavior.",
+    "OS Save As chooser and physical printing remain untested. No provider governance or whole-product completion claim."
+  ],
+  "disposition": "Retain these exact candidate output proofs. Root must resolve or explicitly retain mandatory V1 evidence gaps; other L1-L8 evidence and U1 finding remain pending. No source changes in this review."
+}

@@ -1,0 +1,153 @@
+[
+  {
+    "event": "launch",
+    "pid": 58216,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f"
+  },
+  {
+    "event": "screenshot",
+    "file": "restricted-start.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Phục hồi từ bản sao đã giữ"
+  },
+  {
+    "event": "click-done",
+    "text": "Phục hồi từ bản sao đã giữ"
+  },
+  {
+    "event": "click-start",
+    "text": "Kiểm tra / phục hồi"
+  },
+  {
+    "event": "click-done",
+    "text": "Kiểm tra / phục hồi"
+  },
+  {
+    "event": "screenshot",
+    "file": "recovery-preview-cancel.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Hủy"
+  },
+  {
+    "event": "click-done",
+    "text": "Hủy"
+  },
+  {
+    "event": "click-start",
+    "text": "Phục hồi từ bản sao đã giữ"
+  },
+  {
+    "event": "click-done",
+    "text": "Phục hồi từ bản sao đã giữ"
+  },
+  {
+    "event": "screenshot",
+    "file": "known-recovery-list.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "known-recovery-preview.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Phục hồi bản sao này"
+  },
+  {
+    "event": "click-done",
+    "text": "Phục hồi bản sao này"
+  },
+  {
+    "event": "screenshot",
+    "file": "restored-legacy-restricted.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 58216,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  },
+  {
+    "event": "launch",
+    "pid": 39144,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f"
+  },
+  {
+    "event": "click-start",
+    "text": "Xem kế hoạch nâng cấp"
+  },
+  {
+    "event": "click-done",
+    "text": "Xem kế hoạch nâng cấp"
+  },
+  {
+    "event": "screenshot",
+    "file": "upgrade-preview.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Nâng cấp dữ liệu"
+  },
+  {
+    "event": "click-done",
+    "text": "Nâng cấp dữ liệu"
+  },
+  {
+    "event": "screenshot",
+    "file": "upgrade-complete.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 39144,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  },
+  {
+    "event": "launch",
+    "pid": 23356,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f"
+  },
+  {
+    "event": "screenshot",
+    "file": "report-after-restart.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 23356,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  }
+]

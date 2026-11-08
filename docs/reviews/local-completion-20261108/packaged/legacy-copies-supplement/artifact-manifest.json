@@ -1,0 +1,102 @@
+[
+  {
+    "path": "1/DU_LIEU/BAO_CAO_CA_TRUOC_NANG_CAP_1_2.db",
+    "bytes": 77824,
+    "sha256": "4374954a913f2e42065022481bb5f7dace3e0d07acf624f2a94e820b58fc2373"
+  },
+  {
+    "path": "1/DU_LIEU/BAO_CAO_CA_TRUOC_NANG_CAP_2_3.db",
+    "bytes": 77824,
+    "sha256": "27b51c69f39bdfd34b37a63c92fd5ab8fce6a107ae683cd3c0dee3cf441450f3"
+  },
+  {
+    "path": "1/DU_LIEU/BAO_CAO_CA_TRUOC_NANG_CAP_3_4.db",
+    "bytes": 77824,
+    "sha256": "4c60669c6943e7e81771ec46d486ed2e53387709df9d1e45cacdde4d08dddf41"
+  },
+  {
+    "path": "1/DU_LIEU/SAO_LUU_AN_TOAN/7e9d4759f160200b7bf5b4ed1a7d1fe1/BAO_CAO_CA_20261108_163443_902269_078aa6.db",
+    "bytes": 77824,
+    "sha256": "51ff5bdb13d36ab75445179e5e652dba86c63fad8e2de1e20131ba952de099dd"
+  },
+  {
+    "path": "1/DU_LIEU/SAO_LUU_AN_TOAN/7e9d4759f160200b7bf5b4ed1a7d1fe1/BAO_CAO_CA_20261108_163446_099851_db9f29.db",
+    "bytes": 77824,
+    "sha256": "51ff5bdb13d36ab75445179e5e652dba86c63fad8e2de1e20131ba952de099dd"
+  },
+  {
+    "path": "2/DU_LIEU/BAO_CAO_CA_TRUOC_NANG_CAP_2_3.db",
+    "bytes": 77824,
+    "sha256": "cde8f72084f5548936a0cfd76e52054f94f11d4108aea00c0859b7a44b3f7bed"
+  },
+  {
+    "path": "2/DU_LIEU/BAO_CAO_CA_TRUOC_NANG_CAP_3_4.db",
+    "bytes": 77824,
+    "sha256": "e36eb6f27e372bc8a6524b0798c7ea4a02aa4aece2c27ea0b2bdad8f95ef8d93"
+  },
+  {
+    "path": "2/DU_LIEU/SAO_LUU_AN_TOAN/4dfac4e5b078a01fb65de3cc43802eb7/BAO_CAO_CA_20261108_163451_485091_cc9df0.db",
+    "bytes": 77824,
+    "sha256": "8a5f78092d5f8f7a6372e615eeb6aa33253afc89f321768f4284bf4a6ab810b2"
+  },
+  {
+    "path": "2/DU_LIEU/SAO_LUU_AN_TOAN/4dfac4e5b078a01fb65de3cc43802eb7/BAO_CAO_CA_20261108_163453_683580_93d8e9.db",
+    "bytes": 77824,
+    "sha256": "8a5f78092d5f8f7a6372e615eeb6aa33253afc89f321768f4284bf4a6ab810b2"
+  },
+  {
+    "path": "3/DU_LIEU/BAO_CAO_CA_TRUOC_NANG_CAP_3_4.db",
+    "bytes": 77824,
+    "sha256": "bbe1f50e40a6dbbf1b33a20ceb2434b32b386007410819ffb0cbd71c9610675f"
+  },
+  {
+    "path": "3/DU_LIEU/SAO_LUU_AN_TOAN/c39f49c44d1ddd17a4bed115ef2dfd25/BAO_CAO_CA_20261108_163458_983629_f6d57e.db",
+    "bytes": 77824,
+    "sha256": "02da25ccbc588c5fabf49e0fa61ea18f83dceebe8f70c69653be7d0f37137437"
+  },
+  {
+    "path": "3/DU_LIEU/SAO_LUU_AN_TOAN/c39f49c44d1ddd17a4bed115ef2dfd25/BAO_CAO_CA_20261108_163501_189203_b77a49.db",
+    "bytes": 77824,
+    "sha256": "02da25ccbc588c5fabf49e0fa61ea18f83dceebe8f70c69653be7d0f37137437"
+  },
+  {
+    "path": "custody-note.md",
+    "bytes": 339,
+    "sha256": "2c2673f8fa4e07ee7e32210a8dc3c04912c661f1163a22fe21ec3869e3960c38"
+  },
+  {
+    "path": "interrupted/DU_LIEU/BAO_CAO_CA_TRUOC_NANG_CAP_1_2.db",
+    "bytes": 77824,
+    "sha256": "2089e2f423e7034b128a225dfb7e975d944c26d8b136433020f53cf27b922c25"
+  },
+  {
+    "path": "interrupted/DU_LIEU/BAO_CAO_CA_TRUOC_NANG_CAP_2_3.db",
+    "bytes": 77824,
+    "sha256": "da012ebe0c5814ef825ec3545b776ea81dce9f07047b954e51f97a27a25fa2a5"
+  },
+  {
+    "path": "interrupted/DU_LIEU/BAO_CAO_CA_TRUOC_NANG_CAP_3_4.db",
+    "bytes": 77824,
+    "sha256": "f724b5a003db4b9fc3fd00a38052fcf93bfbb418075ba22e89aa4aee521fb171"
+  },
+  {
+    "path": "interrupted/DU_LIEU/SAO_LUU_AN_TOAN/cbae7745f5bf8c42bc51e16a663d27f5/BAO_CAO_CA_20261108_163510_114188_9796f0.db",
+    "bytes": 77824,
+    "sha256": "66392484b85568a72b5df87259e5cbcdd4b50c3871d116068add9d175c0809e5"
+  },
+  {
+    "path": "interrupted/DU_LIEU/SAO_LUU_AN_TOAN/cbae7745f5bf8c42bc51e16a663d27f5/BAO_CAO_CA_20261108_163512_093810_5a0413.db",
+    "bytes": 77824,
+    "sha256": "66392484b85568a72b5df87259e5cbcdd4b50c3871d116068add9d175c0809e5"
+  },
+  {
+    "path": "interrupted/DU_LIEU/TRUOC_KHOI_PHUC/DB_CU_160efa67fa5b639b0bee641d.db",
+    "bytes": 77824,
+    "sha256": "e118f78cdf6f3ae363a7605d51bade014da20c5bba028ed899023a3c4866f382"
+  },
+  {
+    "path": "readonly-oracles.json",
+    "bytes": 21502,
+    "sha256": "f82c23e86d8c85f7905c051cc36a0d0ec5f70165da4153b6038398464f7d63a9"
+  }
+]

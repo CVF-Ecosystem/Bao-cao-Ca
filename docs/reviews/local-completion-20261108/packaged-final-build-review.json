@@ -1,0 +1,37 @@
+{
+  "status": "FINAL_BUILD_PROVENANCE_ACCEPTED_NATIVE_PRODUCT_PENDING",
+  "risk": "R2",
+  "worker": "Sol packaging / Root release aggregation",
+  "reviewer": "Astra independent REVIEWER",
+  "candidate": {
+    "path": "docs/reviews/local-completion-20261108/packaged/candidate-d8de489.json",
+    "sha256": "b253ed8dd3024a6a17661d630f0a7fceae1c7a2983a315b0dc160d21a6888cf4"
+  },
+  "technical": {
+    "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+    "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+  },
+  "sourceCommit": "d8de4896b85e412e2756ad6c4f033fa049bb837d",
+  "exe": {
+    "path": "dist/SO_BAO_CAO_CA.exe",
+    "sha256": "4342c996ee6e51d3adbe154b487f38791b783f2f2c75aa362d3481d16761058f"
+  },
+  "bytes": 13191896,
+  "independentChecks": {
+    "all24WorkingAndGitBlobsMatchAccepted": true,
+    "exeHashSizeMatch": true,
+    "buildSmokeSourceTechnicalAndThreeTestLogHashesMatch": true,
+    "actualFinalPython": "211PASS0skip43.059s on final restoredsource, supersedes earlier inherited210plusfocused1 qualification",
+    "javascript": "7groups29LOCAL0skip unchanged acceptedbytes",
+    "workspace": "4PASS unchangedbasis",
+    "smoke": "1.10.0 / d8de4896b85e actual log"
+  },
+  "limits": [
+    "Build/smoke provenance is not product acceptance. All mandatory remaining native workflows and L1-L8 obligations retained.",
+    "App-owned trustedCtrlP must reach actual native dialog/output; old browseraccelerator failure remainsNOT_TESTED.",
+    "Quiet1.25GB UI waiting/completion/usability remains unproved; no performance gain or numericalthreshold claim.",
+    "Old V2-V7 evidence is inherited only under existing explicit unchanged-effect argument, not relabeled as newbinary execution.",
+    "Yard-device acceptance deferred; OSdialogs/Tk/physicalprinter/Python3.9 unproved unless actually witnessed."
+  ],
+  "next": "Review frozen native batches read-only; no UI overlap, sourcewrites, fullsuite repetition or closure now."
+}

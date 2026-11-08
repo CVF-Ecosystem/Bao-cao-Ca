@@ -1,0 +1,24 @@
+{
+  "checks": [
+    "U7 server version",
+    "U3 missing chief focused/no confirm",
+    "U2 decimal invalid",
+    "U2 exact job-column feedback",
+    "U5 escaped adjacent diff",
+    "U5 no redundant print control",
+    "U4 Escape closes history",
+    "U10 catalog sticky header/actions",
+    "U9 hidden ship removed",
+    "U9 explicit add reactivates"
+  ],
+  "U1OpeningExistingActorBounds": {
+    "x": 282.8000183105469,
+    "y": -443.8000183105469,
+    "width": 379.9999694824219,
+    "height": 38.800018310546875
+  },
+  "U1OpeningExistingVisible": false,
+  "status": "FAILED",
+  "error": "quarterly restore reminder visible",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\consumer-prep\\run_ui.py\", line 18, in <module>\n    c.menu('Bảo vệ dữ liệu / Khôi phục');check('quarterly restore reminder visible','90 ngày' in p.locator('#modalBody').inner_text());c.capture('protection-status');c.click('Dọn bản chỉ xem cũ');c.capture('maintenance-viewer-preview');p.keyboard.press('Escape');check('maintenance Escape closes preview', 'hide' in p.locator('#modal').get_attribute('class'));c.menu('Bảo vệ dữ liệu / Khôi phục');c.click('Dọn tệp không tham chiếu');c.capture('maintenance-orphan-preview');c.click('Hủy');c.menu('Bảo vệ dữ liệu / Khôi phục');c.click('Khôi phục thử định kỳ');c.capture('restore-drill-preview');c.click('Chạy khôi phục thử');p.locator('#modal.hide').wait_for(timeout=60000);check('restore drill actual completed UI',True);c.menu('Bảo vệ dữ liệu / Khôi phục');check('restore drill status updated','Chưa thực hiện' not in p.locator('#modalBody').inner_text().split('Khôi phục thử gần nhất:')[1].split('</p>')[0][:100]);c.capture('restore-drill-completed');p.keyboard.press('Escape')\n                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\consumer-prep\\run_ui.py\", line 9, in check\n    assert value,label\n           ^^^^^\nAssertionError: quarterly restore reminder visible\n"
+}

@@ -1,0 +1,35 @@
+{
+  "status": "BASELINE_DISTINCT_COVERAGE_GAP_IDENTIFIED",
+  "risk": "R2",
+  "worker": "Sol sole native controller",
+  "reviewer": "Astra independent REVIEWER",
+  "authority": [
+    "tai_lieu/ROADMAP_SAU_V1_9.md:209",
+    "docs/specs/LOCAL_COMPLETION.md:38",
+    "docs/roadmaps/LOCAL_COMPLETION.md:L3",
+    "docs/work_orders/WO_LOCAL_COMPLETION.md:39"
+  ],
+  "interpretation": "OriginalV1 names buttonANDCtrlP, headersON/OFF/backgroundOFF and then says run once on current baseline and once afterU8. LockedSPEC retains bothheaderoptions andoriginalV1; no explicit baseline exception exists. Do not retroactively read baseline as buttonON-only. Original does not expressly demand a16case baseline crossproduct or everyshort/long combination; required distinct baseline options/actions can be covered on one representative shortsample perbrowser.",
+  "alreadyObserved": "Baseline1.9.2 Chrome/Edge short+long completedbuttonPDFs withheadersON,backgroundOFF; shortsame-reportdialogs observed. These prove baseline layout/ON/button, not baselineOFF/key.",
+  "minimalAdditionalCases": [
+    {
+      "browser": "Chrome",
+      "binary": "unchangedBASELINE1.9.2",
+      "report": "short",
+      "trigger": "actualCtrlP",
+      "headers": "actualOFF",
+      "background": "actualOFF"
+    },
+    {
+      "browser": "Edge",
+      "binary": "unchangedBASELINE1.9.2",
+      "report": "short",
+      "trigger": "actualCtrlP",
+      "headers": "actualOFF",
+      "background": "actualOFF"
+    }
+  ],
+  "requiredProof": "Actualnative dialog/settings andcompleted nativeoutput withbaselineEXEhash, trustedkey/action provenance, retainedPDF/page/layout observations. Reuse alreadyapproved browser-native route; no patch tobaseline/noinjectedapphandler/PDFgenerator.",
+  "failureBoundary": "If true baselinekey unavailable, record actualboundedfailure andbaselinekey/OFF remainsunproved. Finald8deapp-ownedshortcut does not retroactively prove baselineCtrlP. Do not claim fullbefore/afterV1coverage or silentlydropmandatorycondition. Otherindependentproofcontinues.",
+  "coordination": "Root andSol notified immediately, no broadmatrixrepeat requested; Root owns remainingboundedexecutionbudget."
+}

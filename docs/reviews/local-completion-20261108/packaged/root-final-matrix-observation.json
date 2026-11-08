@@ -1,0 +1,556 @@
+{
+  "status": "ROOT_CUSTODY_AND_CONTACT_SHEET_OBSERVATION_ONLY",
+  "role": "ORCHESTRATOR",
+  "manifest": {
+    "path": "docs/reviews/local-completion-20261108/packaged/print-matrix-d8de/artifact-manifest.json",
+    "sha256": "71bd7fc0c5e570cd9b77c916434d934a35d7c89792aefe093a5861f701cbde01"
+  },
+  "artifacts": [
+    {
+      "path": "cases.json",
+      "ok": true
+    },
+    {
+      "path": "contact-0.png",
+      "ok": true
+    },
+    {
+      "path": "contact-1.png",
+      "ok": true
+    },
+    {
+      "path": "contact-2.png",
+      "ok": true
+    },
+    {
+      "path": "executed-print_case.py",
+      "ok": true
+    },
+    {
+      "path": "executed-run_matrix_d8de.py",
+      "ok": true
+    },
+    {
+      "path": "initial-keyboard-block-failure.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-button-1794130328/chrome-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-button-1794130328/chrome-long-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-button-1794130328/chrome-long-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-button-1794130328/chrome-long-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-button-1794130328/chrome-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-button-1794130328/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-button-1794130328/render-page2.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-button-1794130328/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-ctrlp-1794130341/chrome-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-ctrlp-1794130341/chrome-long-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-ctrlp-1794130341/chrome-long-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-ctrlp-1794130341/chrome-long-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-ctrlp-1794130341/chrome-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-ctrlp-1794130341/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-ctrlp-1794130341/render-page2.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-ctrlp-1794130341/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers0-ctrlp-1794130341/trusted-key-events.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-button-1794130353/chrome-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-button-1794130353/chrome-long-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-button-1794130353/chrome-long-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-button-1794130353/chrome-long-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-button-1794130353/chrome-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-button-1794130353/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-button-1794130353/render-page2.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-button-1794130353/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-ctrlp-1794130365/chrome-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-ctrlp-1794130365/chrome-long-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-ctrlp-1794130365/chrome-long-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-ctrlp-1794130365/chrome-long-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-ctrlp-1794130365/chrome-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-ctrlp-1794130365/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-ctrlp-1794130365/render-page2.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-ctrlp-1794130365/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-long-headers1-ctrlp-1794130365/trusted-key-events.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-button-1794130290/chrome-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-button-1794130290/chrome-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-button-1794130290/chrome-short-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-button-1794130290/chrome-short-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-button-1794130290/chrome-short-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-button-1794130290/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-button-1794130290/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/chrome-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/chrome-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/chrome-short-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/chrome-short-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/chrome-short-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers0-ctrlp-1794129928/trusted-key-events.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-button-1794130303/chrome-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-button-1794130303/chrome-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-button-1794130303/chrome-short-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-button-1794130303/chrome-short-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-button-1794130303/chrome-short-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-button-1794130303/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-button-1794130303/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-ctrlp-1794130316/chrome-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-ctrlp-1794130316/chrome-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-ctrlp-1794130316/chrome-short-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-ctrlp-1794130316/chrome-short-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-ctrlp-1794130316/chrome-short-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-ctrlp-1794130316/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-ctrlp-1794130316/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-chrome-short-headers1-ctrlp-1794130316/trusted-key-events.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-button-1794130423/msedge-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-button-1794130423/msedge-long-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-button-1794130423/msedge-long-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-button-1794130423/msedge-long-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-button-1794130423/msedge-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-button-1794130423/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-button-1794130423/render-page2.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-button-1794130423/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-ctrlp-1794130437/msedge-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-ctrlp-1794130437/msedge-long-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-ctrlp-1794130437/msedge-long-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-ctrlp-1794130437/msedge-long-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-ctrlp-1794130437/msedge-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-ctrlp-1794130437/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-ctrlp-1794130437/render-page2.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-ctrlp-1794130437/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers0-ctrlp-1794130437/trusted-key-events.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-button-1794130451/msedge-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-button-1794130451/msedge-long-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-button-1794130451/msedge-long-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-button-1794130451/msedge-long-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-button-1794130451/msedge-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-button-1794130451/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-button-1794130451/render-page2.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-button-1794130451/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-ctrlp-1794130465/msedge-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-ctrlp-1794130465/msedge-long-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-ctrlp-1794130465/msedge-long-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-ctrlp-1794130465/msedge-long-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-ctrlp-1794130465/msedge-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-ctrlp-1794130465/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-ctrlp-1794130465/render-page2.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-ctrlp-1794130465/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-long-headers1-ctrlp-1794130465/trusted-key-events.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-button-1794130378/msedge-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-button-1794130378/msedge-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-button-1794130378/msedge-short-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-button-1794130378/msedge-short-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-button-1794130378/msedge-short-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-button-1794130378/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-button-1794130378/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/msedge-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/msedge-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/msedge-short-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/msedge-short-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/msedge-short-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers0-ctrlp-1794129950/trusted-key-events.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-button-1794130393/msedge-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-button-1794130393/msedge-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-button-1794130393/msedge-short-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-button-1794130393/msedge-short-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-button-1794130393/msedge-short-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-button-1794130393/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-button-1794130393/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-ctrlp-1794130409/msedge-actual-dialog.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-ctrlp-1794130409/msedge-native-dom.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-ctrlp-1794130409/msedge-short-before-print.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-ctrlp-1794130409/msedge-short-native-saved.pdf",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-ctrlp-1794130409/msedge-short-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-ctrlp-1794130409/render-page1.png",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-ctrlp-1794130409/result.json",
+      "ok": true
+    },
+    {
+      "path": "matrix-msedge-short-headers1-ctrlp-1794130409/trusted-key-events.json",
+      "ok": true
+    },
+    {
+      "path": "observation.md",
+      "ok": true
+    }
+  ],
+  "visualObservation": "Viewed all24page contact sheets: short reports each1page, long each2pages; staff/job tables and final chief signature blocks show no clipped/overlapping content. Longcases repeat pageidentity and keep signatures onfinalpage. Detailed settings, PDF parsing and provenance remain Astra independent review.",
+  "limits": "Actual Chrome headerFooterON/OFF; Edge ON/OFF are requested/persisted preferences with no native control observed, not actualtoggle claim. Oldbaseline distinctCtrlP/OFF cases pending; no productclosure."
+}

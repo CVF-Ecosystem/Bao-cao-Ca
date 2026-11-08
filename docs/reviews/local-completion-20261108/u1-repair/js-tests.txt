@@ -1,0 +1,71 @@
+kiem_thu/KIEM_THU_BAO_VE.js
+6 protection UI behavior checks passed: state, escaping, preview, restore/context, directory picker, review/unsaved guard.
+
+kiem_thu/KIEM_THU_GIAO_DIEN.js
+4 JavaScript checks passed: chief, report export, summary export, backup context.
+
+kiem_thu/KIEM_THU_LOCAL_UI.js
+PASS existing report resets scroll only after successful render
+PASS declined dirty navigation preserves scroll and editor
+PASS failed report read preserves scroll and editor
+PASS new shift resets scroll after rendering
+PASS invalid or failed new-shift lookup does not scroll
+PASS new-shift dialog opening an existing shift resets once
+PASS same-editor rerender preserves document scroll
+PASS actual autosave rerender preserves scroll
+PASS add-row editor rerender preserves scroll
+PASS integer bounds and invalid syntax
+PASS invalid job marks field, focuses and names exact cell
+PASS revision diff distinguishes missing and empty, escapes HTML
+PASS signature deduplicates chiefs and escapes names
+PASS machine print stamp exact shape
+PASS Escape cannot cancel active save or confirmation
+PASS Escape routes PNI through its cancellation owner
+PASS cancelled late schema preview cannot revive plan
+PASS maintenance late preview invalidated and cancelled
+PASS readonly capability rejects maintenance before request
+PASS stale context cannot confirm
+PASS schema upgrade requires explicit consent
+PASS conflict preserves winner and explicitly pending local notes
+PASS revision comparison uses actual adjacent items despite version gaps
+PASS keyboard shortcut selects matching tab and focuses it
+PASS recovery preview shows empty data and stores only server nonce
+PASS recovery requires exact destructive consent
+PASS recovery cancel clears local and server plan
+PASS recovery confirm sends context nonce consent only
+PASS quarterly restore reminder renders due state and action
+PASS recent successful drill shows date without overdue warning
+PASS deferred image decode owns print once and blocks reentry
+PASS closed or replaced preview during image decode aborts print safely
+PASS print error releases owner for next deliberate print
+PASS visible trusted preview CtrlP invokes existing print owner
+PASS synthetic repeat and other modifiers preserve browser default
+PASS save upload pending confirmation and print busy reject shortcut
+PASS hidden stale and unrelated dialogs never intercept CtrlP
+PASS afterprint lifecycle releases print guard
+38 local UI behavioral checks passed.
+
+kiem_thu/KIEM_THU_MAU_CA.js
+OK preview and cancel never mutate report
+OK confirm replaces only configured positions and preserves other data
+OK switch rotating crew then append day staff without duplication
+OK day append preserves manual people and uses exact name deduplication
+OK multiple ship assignments remain separate for both rotating and day templates
+OK single ship keeps its vessel while receiving people
+OK explicit empty slot clears only after confirmation
+OK changed report or DB after preview blocks application
+OK readonly and in-flight save block application
+OK closed report stays closed and preview requires reason at save
+OK empty crew template cannot clear report
+OK template editor groups multiple people per position and preserves blank positions
+OK plan is a copy and rejects exceeding staff capacity
+13 template behavior tests passed (Node VM).
+
+kiem_thu/KIEM_THU_PERSONNEL_UI.js
+Personnel UI: escaping, invalid replacement, deferred ordering, confirmation busy guard and failure recovery OK
+
+kiem_thu/KIEM_THU_PHAN_CONG.js
+Personnel UI behavior tests passed: separate people/vessels, single selection, crew filtering, selected names preserved, legacy config fallback, readonly.
+
+kiem_thu/KIEM_THU_V1_9.js
+6 kiểm tra giao diện 1.9 đạt: escape id, thanh trang, loadList, trang chủ, cảnh báo theo mức độ, tab nhập ca.

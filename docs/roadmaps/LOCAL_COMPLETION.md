@@ -1,6 +1,6 @@
 # Hoàn thiện bản local trước giai đoạn web
 
-Status: DESIGN
+Status: REVIEW
 
 Authority: operator2026-11-08 explicitly approves the proposed completion sequence and requires local completion beforephase2web. Baselineeb852f3 / PNI1.9.2 remains accepted onlywithinitsownscope. Original product owner: `tai_lieu/ROADMAP_SAU_V1_9.md`; locked integratedSPEC: `docs/specs/LOCAL_COMPLETION.md`.
 
@@ -8,7 +8,7 @@ Authority: operator2026-11-08 explicitly approves the proposed completion sequen
 
 Deliver1.10.0/schema4 using currentStore/Protection/servercontext and plainJS owners. Explicitupgrade preview/confirm is a team safety choice within alreadyauthorizedmigration, not an additionaloperatorinstruction. D2 uses wall elapsed24h sincefull, downtimeincluded, executesonlyonnextappoperation; clockrollback/missing/corruptmarkerforcesfull. Viewerretention30days; orphanblobgrace24h; explicitmaintenance afterverifiedfull, conservativeunknownretention, noVACUUM. Preservefullmigrationcopy/history/identity; sharedWindowsaccount is notrealuserauthentication. No newdependency/provider/network/globalinstall orrealdata is admitted.
 
-Sequence: source-backed audit -> sharedSPEC/API -> exactWORK_ORDER/admission -> Terra storage/API and Sol UI/print -> source/fault review -> clean committed candidate -> current-toolchain EXE plus headed consumer/drill/large-data/actualprint proof -> independent aggregate review/freeze. Native control currently fails kernel-assetsoserror3; retain1.9.2baselineEXEforbefore/afterprint, investigate finitebrowser-onlycontrolwithoutOSsecuritychanges; otherimplementation is independent, V1 remains mandatory. Product must remainPENDING ifrequirednativeproofcannotbeobtained.
+Sequence: source-backed audit -> sharedSPEC/API -> exactWORK_ORDER/admission -> Terra storage/API and Sol UI/print -> source/fault review -> clean committed candidate -> current-toolchain EXE plus headed consumer/drill/large-data/actualprint proof -> independent aggregate review/freeze. Original native OS-control initialization failed kernel-assetsoserror3; its failure is preserved. Browser-mediated headed native dialog and browser-saved PDF route is independently eligible, with1.9.2baseline retained; final Chrome/Edge matrix on d8de489 and consumer outcomes remain mandatory. Product stays PENDING until complete independent acceptance.
 
 ## Acceptance criteria — LOCAL
 
@@ -68,7 +68,7 @@ Internal engineering acceptance for the complete local release. Existing roadmap
     {
       "id": "L1",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
+      "gap": "Accepted U1-repaired24-file source,211Python inherited unchanged/7JS38/checker4; newcleanEXE build and pending consumer outcomes are explicitly mapped under L1 in partial-review.json.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -99,13 +99,29 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
           "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+          "sha256": "b8ed1cabd0e603a5ecee458ead694f386f5d4570b28a522dbe2bf397211555d5"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/packaged-final-build-review.json",
+          "sha256": "ab0f3054c1a67e0f5773b227c2883d3305584571a865d6bce814eab4e38afffb"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
         }
       ]
     },
     {
       "id": "L2",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
+      "gap": "Accepted U1-repaired24-file source,211Python inherited unchanged/7JS38/checker4; newcleanEXE build and pending consumer outcomes are explicitly mapped under L2 in partial-review.json.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -136,13 +152,29 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
           "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+          "sha256": "b8ed1cabd0e603a5ecee458ead694f386f5d4570b28a522dbe2bf397211555d5"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/packaged-final-build-review.json",
+          "sha256": "ab0f3054c1a67e0f5773b227c2883d3305584571a865d6bce814eab4e38afffb"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
         }
       ]
     },
     {
       "id": "L3",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "U1-U14 source accepted including quarterly reminder; exact1.10.0 Chrome/Edge short/long headers-on/off native matrix and full U consumer checks pending.",
+      "gap": "Accepted U1-repaired24-file source,211Python inherited unchanged/7JS38/checker4; newcleanEXE build and pending consumer outcomes are explicitly mapped under L3 in partial-review.json.",
       "owner": "Sol UI/native proof with Root blockerownership",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -173,13 +205,29 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
           "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+          "sha256": "b8ed1cabd0e603a5ecee458ead694f386f5d4570b28a522dbe2bf397211555d5"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/packaged-final-build-review.json",
+          "sha256": "ab0f3054c1a67e0f5773b227c2883d3305584571a865d6bce814eab4e38afffb"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
         }
       ]
     },
     {
       "id": "L4",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
+      "gap": "Accepted U1-repaired24-file source,211Python inherited unchanged/7JS38/checker4; newcleanEXE build and pending consumer outcomes are explicitly mapped under L4 in partial-review.json.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -210,13 +258,29 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
           "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+          "sha256": "b8ed1cabd0e603a5ecee458ead694f386f5d4570b28a522dbe2bf397211555d5"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/packaged-final-build-review.json",
+          "sha256": "ab0f3054c1a67e0f5773b227c2883d3305584571a865d6bce814eab4e38afffb"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
         }
       ]
     },
     {
       "id": "L5",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
+      "gap": "Accepted U1-repaired24-file source,211Python inherited unchanged/7JS38/checker4; newcleanEXE build and pending consumer outcomes are explicitly mapped under L5 in partial-review.json.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -247,13 +311,29 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
           "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+          "sha256": "b8ed1cabd0e603a5ecee458ead694f386f5d4570b28a522dbe2bf397211555d5"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/packaged-final-build-review.json",
+          "sha256": "ab0f3054c1a67e0f5773b227c2883d3305584571a865d6bce814eab4e38afffb"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
         }
       ]
     },
     {
       "id": "L6",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
+      "gap": "Accepted U1-repaired24-file source,211Python inherited unchanged/7JS38/checker4; newcleanEXE build and pending consumer outcomes are explicitly mapped under L6 in partial-review.json.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -284,13 +364,29 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
           "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+          "sha256": "b8ed1cabd0e603a5ecee458ead694f386f5d4570b28a522dbe2bf397211555d5"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/packaged-final-build-review.json",
+          "sha256": "ab0f3054c1a67e0f5773b227c2883d3305584571a865d6bce814eab4e38afffb"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
         }
       ]
     },
     {
       "id": "L7",
-      "state": "NOT_STARTED",
-      "gap": "Near1GB real Store.save workload is being seeded under owned runtime; actual byte size, baseline/current timings and exact EXE headed large-data/40valid-image proof pending.",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Real Store.save near1.25GB workload, host facts and baseline/current timings complete; quiet exact d8de489 EXE large-data UI/portable/40valid-image usability and independent outcome review remain required.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -309,13 +405,29 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/specs/LOCAL_COMPLETION.md",
           "sha256": "6e0842af89a2701b8bccb0d72f4924ee0df22effd854a71f4c6e803f7c95d385"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+          "sha256": "b8ed1cabd0e603a5ecee458ead694f386f5d4570b28a522dbe2bf397211555d5"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/packaged-final-build-review.json",
+          "sha256": "ab0f3054c1a67e0f5773b227c2883d3305584571a865d6bce814eab4e38afffb"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
         }
       ]
     },
     {
       "id": "L8",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Independent source/fault review and technical suite accepted; exact1.10.0 packaged consumer/failure proof remains required.",
+      "gap": "Accepted U1-repaired24-file source,211Python inherited unchanged/7JS38/checker4; newcleanEXE build and pending consumer outcomes are explicitly mapped under L8 in partial-review.json.",
       "owner": "Terra backend / Sol UI and packaged proof / Root aggregate",
       "destination": "docs/work_orders/WO_LOCAL_COMPLETION.md",
       "evidence": [
@@ -346,6 +458,22 @@ Internal engineering acceptance for the complete local release. Existing roadmap
         {
           "path": "docs/reviews/local-completion-20261108/source-candidate-review.json",
           "sha256": "26065913e8157523535ddc6b5bea3dce5c9cd1457935bbee4ddc0f57fe949240"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/source-candidate-final-review.json",
+          "sha256": "b8ed1cabd0e603a5ecee458ead694f386f5d4570b28a522dbe2bf397211555d5"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/technical/release-final.json",
+          "sha256": "8b22323b7175d7c0ce9c89a60629a25e91e91a651a6c3c7248d71c1647063eed"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/packaged-final-build-review.json",
+          "sha256": "ab0f3054c1a67e0f5773b227c2883d3305584571a865d6bce814eab4e38afffb"
+        },
+        {
+          "path": "docs/reviews/local-completion-20261108/partial-review.json",
+          "sha256": "58ed5087c52f7d2dca74cd2700f9500175e5ba50bbb9d8a1020eff61525a9da3"
         }
       ]
     }

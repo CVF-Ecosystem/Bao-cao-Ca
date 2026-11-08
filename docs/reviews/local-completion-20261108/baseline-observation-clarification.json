@@ -1,0 +1,26 @@
+{
+  "status": "BASELINE_OBSERVATION_CONTRACT_CLARIFIED_WITH_UNPROVED_BEHAVIOR_RETAINED",
+  "risk": "R2",
+  "worker": "Sol sole native controller",
+  "reviewer": "Astra independent REVIEWER",
+  "authority": [
+    "tai_lieu/ROADMAP_SAU_V1_9.md:205",
+    "tai_lieu/ROADMAP_SAU_V1_9.md:209",
+    "docs/specs/LOCAL_COMPLETION.md:38-40"
+  ],
+  "priorReview": {
+    "path": "docs/reviews/local-completion-20261108/baseline-v1-coverage-review.json",
+    "sha256": "0212b9ac0e32101f5ab715ac4341ddaee734ee671762f6e8215da1408c778932"
+  },
+  "interpretation": "Original V verification instruction says only verify and record, explicitly requiring unavailable behavior to be labeled not verified with reason. Before-U8 run is a baseline observation, not a demand that old behavior meet final U8 success conditions. Genuine bounded keyboard attempts with preserved exact events/errors satisfy the investigative attempt, but do not establish baseline keyboard behavior or successful native keyboard output.",
+  "refinement": "Prior review correctly identified missing distinct baseline OFF/key evidence and prohibited silent omission. It was overly restrictive if interpreted to require a successful old-key output as a final-product prerequisite despite the explicit unavailable-observation rule. Preserve that review unchanged and distinguish observation completed from behavior NOT_TESTED. No skip becomes PASS.",
+  "requiredRemainingBaseline": "Two feasible short baseline button/OFF native setting and completed-output observations, one per browser, can establish the separately missing OFF layout comparison without requiring the unavailable old accelerator. Review returned artifacts before accepting these observations.",
+  "requiredClaims": [
+    "Baseline CtrlP attempted, tool/native-target inconclusive; behavior NOT_TESTED. No conclusion that old product keyboard behavior is broken.",
+    "Final app-owned trusted CtrlP is separately proven and does not retroactively prove old browser-owned accelerator.",
+    "No fully successful before/after keyboard comparison claim. No baseline layout/signature compliance requirement invented."
+  ],
+  "unchangedFinalObligations": "Final native dialog, completed native output, keyboard/button, per-page identity/time/page count/signatures and required settings remain mandatory. Edge requested/persisted header preference alone does not establish effective native ON/OFF. Whole L3/LOCAL remains pending separate final-settings and remaining UI/native evidence.",
+  "evidenceStatus": "Parent reports latest bounded official-CDP baseline attempts failed native target lookup; exact frozen failure packet still to be independently inspected. This record interprets authority, not accepts uninspected logs.",
+  "scope": "No SPEC/WO/source edits, additional authority or waived product postcondition."
+}
