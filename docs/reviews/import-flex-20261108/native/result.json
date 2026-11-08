@@ -1,0 +1,123 @@
+{
+  "exeSha256": "72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f",
+  "commit": "563c4b83eb23",
+  "version": "1.10.1",
+  "workbookSha256Before": "db6016eb65f728916c028601cb8dfd9ebad45d94ced00c343eed79fef346af7e",
+  "headless": false,
+  "viewport": {
+    "width": 1366,
+    "height": 657
+  },
+  "browserInputUpload": "EXERCISED",
+  "nativeOSFileDialog": "NOT_TESTED",
+  "events": [
+    {
+      "event": "exeStarted",
+      "pid": 66300
+    },
+    {
+      "event": "syntheticDialogReady"
+    },
+    {
+      "event": "newshiftX",
+      "closed": true,
+      "openerFocusRestored": true
+    },
+    {
+      "event": "newshiftBackdrop",
+      "closed": true
+    },
+    {
+      "event": "newshiftEscape",
+      "closed": true
+    },
+    {
+      "event": "dismissalNoReportCreated",
+      "reports": 0
+    },
+    {
+      "event": "inspectSuggested",
+      "headerRow": 2,
+      "columns": {
+        "name": "2",
+        "code": "3",
+        "title": "4",
+        "group": "6"
+      }
+    },
+    {
+      "event": "preview",
+      "counts": {
+        "new": 63,
+        "existing": 0,
+        "error": 0,
+        "excluded": 0
+      },
+      "numericConversions": 14,
+      "canConfirm": true
+    },
+    {
+      "event": "confirm",
+      "added": 63
+    },
+    {
+      "event": "reportPersonPickerAvailable",
+      "total": 64,
+      "syntheticSentinel": 1,
+      "actualImported": 63
+    },
+    {
+      "event": "processCustodyCorrection",
+      "actualInitialExePID": 54284,
+      "attempt2SpawnWasNotServing": "Original retained session served consumer; second launch did not replace lock owner."
+    },
+    {
+      "event": "repeatNoop",
+      "counts": {
+        "new": 0,
+        "existing": 63,
+        "error": 0,
+        "excluded": 0
+      },
+      "noConfirmButton": true
+    },
+    {
+      "event": "initialExeExited",
+      "pid": 54284,
+      "exitCode": 0,
+      "sessionRemoved": true
+    },
+    {
+      "event": "restartPersistence",
+      "newPID": 620,
+      "total": 64,
+      "actualImported": 63,
+      "syntheticSentinel": 1,
+      "catalogSha256": "5f34a6a5a02cb013f658fc0a07f74a313b185ac16c9fec6f3257668b66e37439"
+    },
+    {
+      "event": "restartExeExited",
+      "pid": 620,
+      "exitCode": 0,
+      "sessionRemoved": true
+    },
+    {
+      "event": "workbookUnchanged",
+      "sha256": "db6016eb65f728916c028601cb8dfd9ebad45d94ced00c343eed79fef346af7e"
+    }
+  ],
+  "browserVersion": "156.0.8078.81",
+  "status": "OBSERVED_PENDING_INDEPENDENT_REVIEW",
+  "failureHistory": [
+    {
+      "attempt": 1,
+      "cause": "Harness read bounding box before async newShift render completed; TypeError; added visible newDate wait."
+    },
+    {
+      "attempt": 2,
+      "cause": "Harness unconditionally toggled already-open Settings menu closed; timeout on hidden catalog button. Resume retained imported fixture, no repeated confirm."
+    }
+  ],
+  "workbookSha256After": "db6016eb65f728916c028601cb8dfd9ebad45d94ced00c343eed79fef346af7e",
+  "processEnded": true
+}

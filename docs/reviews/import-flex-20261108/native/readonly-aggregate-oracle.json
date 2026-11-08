@@ -1,0 +1,12 @@
+{
+  "sourceActualNames": 63,
+  "fixtureBaselineSynthetic": 1,
+  "catalogFinalCount": 64,
+  "namesExactlySourcePlusSentinel": true,
+  "activeDbPeopleMatchCatalog": true,
+  "reports": 0,
+  "revisions": 0,
+  "catalogSha256": "5f34a6a5a02cb013f658fc0a07f74a313b185ac16c9fec6f3257668b66e37439",
+  "dbSha256": "f6409fda9e6824edfd56ae6497488bf5f3ca52d8d8b76d6ef409168ca4ccfb4e",
+  "privateContentRetainedDurably": false
+}

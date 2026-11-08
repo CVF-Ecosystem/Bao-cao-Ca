@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: SO_BAO_CAO_CA_V1_9
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active role: COMMIT_STEWARD
-- Next allowed move: Commit independently accepted1.10.1 source candidate, then Sol exact clean isolated offline build/smoke and one combined private-fixture import/dialog session. F4/F5 product acceptance still pending.
+- Next allowed move: FLEX1.10.1 engineering frozen and delivered. Next: separately scoped target-yard-device/operational acceptance; phase2 web W0 requires its own intake and assessed work order. No active BUILD.
 - Parked operator checkpoint: none
 
 ## Accepted current workspace
@@ -281,3 +281,14 @@ FLEX merged-source REVIEW acknowledgment: Terra4sourcefiles frozen andindependen
 
 
 FLEX source-candidate COMMIT_STEWARD acknowledgment: rehydrated currentREVIEW; independent source-candidate-reviewb2906666 accepts frozen11ownedinputs plusunchangedLOCALtest. Rootrawhashcustody verifiedmergedmanifest, actualworker-return/reviewer-fast exit0 afterpreservedRisk-headingannotation inreadonlyTerraaudit (no sourcechange). CVF Agent Declaration: SO_BAO_CAO_CA_V1_9/Core68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6,REVIEW/R2/liveYES,COMMIT_STEWARD,activehandoffV1,checkpointnone. Commitreviewedcandidateonly thenSolexactcleanproducerbuild andonesmallcombinednativeproof; no wholeFLEX/productclosureyet, no further broadtests. User workbook/newoldEXEs remainuntrackedandunstaged.
+
+
+FLEX build/native dispatch acknowledgment: exact563c4b83eb23 source built offline from clean shortbuild/f11 withbothnativeGitgatesPASS, build0/smoke0/version1.10.1. EXE72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f,13192767B, Rootindependentrehashedand11producerinputsmatch. RehydratedREVIEW/COMMIT_STEWARD->ORCHESTRATOR/SESSION_SYNC_STEWARD,Core68a7446/R2/liveYES,activehandoffV1,checkpointnone. Source frozen; Solsolecontroller onecombinednativeactualworkbook/private-disposablefixture andX/backdrop/Esc thenindependentAstraaggregate. No bigdata/fullmatrix/realDBwrite. Originalbudgetunchanged.
+
+
+FLEX engineering FREEZE / terminal stewardship acknowledgment: RootrehydratedREVIEW and receives independentfinal-review0bf6a01a acceptingallF1-F5/exact1.10.1EXE72c30e35.16nativeartifacthashes independentlymatchedbyRoot; syntheticXlayout visuallychecked, sourceworkbookunchanged,privatefixture/profileabsent. Solauthorizedsame-directorydeliveryhashmatched. CVF Agent Declaration SO_BAO_CAO_CA_V1_9/Core68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6,FREEZE/R2/liveYES,RootCLOSER->SESSION_SYNC_STEWARD/COMMIT_STEWARD,activehandoffV1,checkpointnone. Freshterminalexactreview/receipt/gates/commit stillrequired; no more source/tests/deletion. Originalbudgets/limits/failures preserved, no provider/webgrant.
+
+
+## FLEX terminal receipt and record stewardship — 2026-11-08
+
+Astra independently accepted exact terminal fba5d00d; Root verified seven raw review bindings and refreshed activation. Actual terminal pre-dispatch passed six mechanical controls, with APPL explicitly NOT_APPLICABLE_WITH_REASON for CLOSED_ACCEPTED and no closeability assertion. Root COMMIT_STEWARD completes mandatory return/reviewer/doctor/pre-commit checks and records this terminal set locally; no additional product tests, source edits or cleanup. FLEX1.10.1 engineering acceptance and exact delivery are settled; target-device/operational acceptance and phase2 web remain separate.

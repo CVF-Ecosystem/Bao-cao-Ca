@@ -1,6 +1,6 @@
 # Ordinary Excel import flexibility and finished browser-cache cleanup
 
-Status: DISPATCH_READY
+Status: CLOSED_ACCEPTED
 docType: work_order
 dispatchKind: INITIAL
 Risk: R2
@@ -10,11 +10,11 @@ Date: 2026-11-08
 
 ## Dispatch Prompt Envelope
 
-Read exact packet, dialog amendment docs/specs/DIALOG_DISMISS.md SHA2561d8c99ef3c1e04516a3e062dae18e59612e4f1e50a73e58229bd1146dfd10182, locked amendment docs/specs/PERSONNEL_EXCEL_FLEX.md SHA256c6ab54b760cc8002e87de81ad7d38e1d4073c8e85af08040693b0293b3c943c6, canonical continuity and independent assessment before writes. Explicit user requests cleanup and flexible Excel import. Implement allF1-F5 using existing reader/UI/server/catalog; no new dependencies. Budget60minutes implementation/build/native and15minutes supporting review from initial intake, no repair reset. Root alone commits; Sol sole headed browser controller.
+Terminal REVIEW only: reconcile independently accepted FLEX F1-F5 and exact delivered1.10.1, synchronize records/current product-roadmap status and commit. No future BUILD, source edits, tests or cleanup. Originalf937/e79 packets and activation preserved. Read current canonical continuity and terminal assessment before record/commit actions.
 
 ## Ownership and bounded paths
 
-Terra: ma_nguon/PERSONNEL_XLSX.py, giao_dien/tai_nguyen/danh_muc.js, kiem_thu/KIEM_THU_PERSONNEL_XLSX.py, KIEM_THU_PERSONNEL_UI.js and optional new focused test under kiem_thu/. Reader acceptance, UI suggestions and focused regression only, no server/catalog-owner writes. Sol: ma_nguon/THIET_LAP.py VERSION1.10.1 only, HUONG_DAN.txt,tai_lieu/THAY_DOI_V1_10_1.txt; offline build/worktree/native evidence under ignored build/,dist/,.cvf/runtime/import-flex-20261108/ and same-directory SO_BAO_CAO_CA_1_10_1.exe. Sol also owns giao_dien/tai_nguyen/local_ui.js, ung_dung.js (modal mounting/dismiss integration only), style.css (close-control scoped styling/print-hide only), kiem_thu/KIEM_THU_LOCAL_UI.js and optional new focused dialog test. Implement F5 only after exact amended admission. Sol may remove only newly owned headed profile after browser shutdown and durable evidence transfer. Root: exact44tree cleanup plan; this packet/SPEC status, .cvf/workspace-activation.json, .gitattributes for new raw evidence custody, milestone registry, canonical continuity/implementation/catalog/index and import-flex review family; no product code edits. Astra: independent review family plus disclosed localized same-scope reviewer repair when evidence determines it. All roles record continuity acknowledgment before BUILD; independent reviewer cannot hide self-approval.
+Terra: ma_nguon/PERSONNEL_XLSX.py, giao_dien/tai_nguyen/danh_muc.js, kiem_thu/KIEM_THU_PERSONNEL_XLSX.py, KIEM_THU_PERSONNEL_UI.js and optional new focused test under kiem_thu/. Reader acceptance, UI suggestions and focused regression only, no server/catalog-owner writes. Sol: ma_nguon/THIET_LAP.py VERSION1.10.1 only, HUONG_DAN.txt,tai_lieu/THAY_DOI_V1_10_1.txt; offline build/worktree/native evidence under ignored build/,dist/,.cvf/runtime/import-flex-20261108/ and same-directory SO_BAO_CAO_CA_1_10_1.exe. Sol also owns giao_dien/tai_nguyen/local_ui.js, ung_dung.js (modal mounting/dismiss integration only), style.css (close-control scoped styling/print-hide only), kiem_thu/KIEM_THU_LOCAL_UI.js and optional new focused dialog test. Implement F5 only after exact amended admission. Sol may remove only newly owned headed profile after browser shutdown and durable evidence transfer. Root: exact44tree cleanup plan; this packet/SPEC status, .cvf/workspace-activation.json, .gitattributes for new raw evidence custody, milestone registry, canonical continuity/implementation/catalog/index, current-status paragraph of tai_lieu/ROADMAP_SAU_V1_9.md and import-flex review family; no product code edits. Astra: independent review family plus disclosed localized same-scope reviewer repair when evidence determines it. All roles record continuity acknowledgment before BUILD; independent reviewer cannot hide self-approval.
 
 Original workbook Danh sach doi container 28.12.2025.xlsx is read-only evidence, never changed or committed, no personal row data/raw workbook/sensitive screenshots in durable artifacts. Catalog/DB mutations only disposable fixtures. No real DB, root DANH_MUC/backups, user app process, Core/policy/gates/securitysettings or siblingproject mutation. Reader acceptance is an explicitly assessed R2 adjustment; no arbitrary binary/security bypass. No install/provider/network/credentials, no push/deploy/web.
 
@@ -79,9 +79,9 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "decision": "Cover F1-F4, preserve prior safety/additive behavior, no broad testing or production mutation"
     }
   },
-  "phase": "DISPATCH",
+  "phase": "REVIEW",
   "action": {
-    "kind": "IMPLEMENT",
+    "kind": "REVIEW",
     "selected": [
       "F1",
       "F2",
@@ -89,23 +89,39 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "F4",
       "F5"
     ],
-    "owner": "Terra parser/UI, Sol packaging/native, Root cleanup/metadata/commit, Astra independent review",
-    "output": "Usable1.10.1 import and consistent modal dismissal with reclaimed test cache",
-    "budgetMinutes": 60,
-    "stop": "Stop on60min execution/15min supporting ceiling, unsafe path/data/security escape, failed required gate, new dependency/network or third same-root repair without independent cause; no large test regen",
-    "next": "Independent exactsource review then clean offline EXE and one disposable native flow, terminal review/commit"
+    "owner": "Root CLOSER/COMMIT_STEWARD with independent Astra terminal review",
+    "output": "Accepted local1.10.1 FLEX improvements and exact same-directory EXE delivery, synchronized cleanup/continuity records",
+    "budgetMinutes": 5,
+    "stop": "Stop on failed terminal gate or exact custody drift; no more product tests/deletions; original60+15ceilings continue without reset",
+    "next": "Commit reviewed terminal records then FREEZE; target-device/business acceptance and phase2web separately owned"
   },
   "rows": [
     {
       "id": "F1",
       "state": "VERIFIED",
       "gap": "",
-      "owner": "Terra",
+      "owner": "Root closer with Astra independent acceptance",
       "destination": "docs/work_orders/WO_IMPORT_FLEX.md",
       "evidence": [
         {
-          "path": "docs/reviews/import-flex-20261108/source-review-before-dialog-amendment.json",
-          "sha256": "4544ac53d320d0aafbb0217528235a35ce57c20f4231154192d2e12170395aa6"
+          "path": "docs/reviews/import-flex-20261108/final-review.json",
+          "sha256": "c0725f9b49c08750f817719b0b606d310492653757ef0eb249e90b4541e76e18"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/source-candidate-review.json",
+          "sha256": "b658f64d663424618715af7e330d9d286934bfd40741c6971d97ad43019181e7"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+          "sha256": "efcf20a2b80694f36c7c4487650bdc3c9e3ef15a8de8e16c23069404e8f0711f"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/profile-cleanup-result.json",
+          "sha256": "69aa1ba2e7cbb61e6b611a5526276528b70f6ec96b85b999b614ae212e7adb2f"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/delivery-custody.json",
+          "sha256": "3613d08047bac87347c034791e8e7b6f64aff06664223ab4e80250395f96ceea"
         }
       ]
     },
@@ -113,12 +129,28 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "id": "F2",
       "state": "VERIFIED",
       "gap": "",
-      "owner": "Terra",
+      "owner": "Root closer with Astra independent acceptance",
       "destination": "docs/work_orders/WO_IMPORT_FLEX.md",
       "evidence": [
         {
-          "path": "docs/reviews/import-flex-20261108/source-review-before-dialog-amendment.json",
-          "sha256": "4544ac53d320d0aafbb0217528235a35ce57c20f4231154192d2e12170395aa6"
+          "path": "docs/reviews/import-flex-20261108/final-review.json",
+          "sha256": "c0725f9b49c08750f817719b0b606d310492653757ef0eb249e90b4541e76e18"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/source-candidate-review.json",
+          "sha256": "b658f64d663424618715af7e330d9d286934bfd40741c6971d97ad43019181e7"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+          "sha256": "efcf20a2b80694f36c7c4487650bdc3c9e3ef15a8de8e16c23069404e8f0711f"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/profile-cleanup-result.json",
+          "sha256": "69aa1ba2e7cbb61e6b611a5526276528b70f6ec96b85b999b614ae212e7adb2f"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/delivery-custody.json",
+          "sha256": "3613d08047bac87347c034791e8e7b6f64aff06664223ab4e80250395f96ceea"
         }
       ]
     },
@@ -126,46 +158,141 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "id": "F3",
       "state": "VERIFIED",
       "gap": "",
-      "owner": "Root",
+      "owner": "Root closer with Astra independent acceptance",
       "destination": "docs/work_orders/WO_IMPORT_FLEX.md",
       "evidence": [
         {
-          "path": "docs/reviews/import-flex-20261108/source-review-before-dialog-amendment.json",
-          "sha256": "4544ac53d320d0aafbb0217528235a35ce57c20f4231154192d2e12170395aa6"
+          "path": "docs/reviews/import-flex-20261108/final-review.json",
+          "sha256": "c0725f9b49c08750f817719b0b606d310492653757ef0eb249e90b4541e76e18"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/source-candidate-review.json",
+          "sha256": "b658f64d663424618715af7e330d9d286934bfd40741c6971d97ad43019181e7"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+          "sha256": "efcf20a2b80694f36c7c4487650bdc3c9e3ef15a8de8e16c23069404e8f0711f"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/profile-cleanup-result.json",
+          "sha256": "69aa1ba2e7cbb61e6b611a5526276528b70f6ec96b85b999b614ae212e7adb2f"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/delivery-custody.json",
+          "sha256": "3613d08047bac87347c034791e8e7b6f64aff06664223ab4e80250395f96ceea"
         }
       ]
     },
     {
       "id": "F4",
-      "state": "NOT_STARTED",
-      "gap": "Implementation/execution and exact consumer proof pending admission",
-      "owner": "Sol",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
       "destination": "docs/work_orders/WO_IMPORT_FLEX.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/import-flex-20261108/final-review.json",
+          "sha256": "c0725f9b49c08750f817719b0b606d310492653757ef0eb249e90b4541e76e18"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/source-candidate-review.json",
+          "sha256": "b658f64d663424618715af7e330d9d286934bfd40741c6971d97ad43019181e7"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+          "sha256": "efcf20a2b80694f36c7c4487650bdc3c9e3ef15a8de8e16c23069404e8f0711f"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/profile-cleanup-result.json",
+          "sha256": "69aa1ba2e7cbb61e6b611a5526276528b70f6ec96b85b999b614ae212e7adb2f"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/delivery-custody.json",
+          "sha256": "3613d08047bac87347c034791e8e7b6f64aff06664223ab4e80250395f96ceea"
+        }
+      ]
     },
     {
       "id": "F5",
-      "state": "NOT_STARTED",
-      "gap": "User-requested dialog-dismiss amendment not implemented",
-      "owner": "Sol",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
       "destination": "docs/work_orders/WO_IMPORT_FLEX.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/import-flex-20261108/final-review.json",
+          "sha256": "c0725f9b49c08750f817719b0b606d310492653757ef0eb249e90b4541e76e18"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/source-candidate-review.json",
+          "sha256": "b658f64d663424618715af7e330d9d286934bfd40741c6971d97ad43019181e7"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+          "sha256": "efcf20a2b80694f36c7c4487650bdc3c9e3ef15a8de8e16c23069404e8f0711f"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/profile-cleanup-result.json",
+          "sha256": "69aa1ba2e7cbb61e6b611a5526276528b70f6ec96b85b999b614ae212e7adb2f"
+        },
+        {
+          "path": "docs/reviews/import-flex-20261108/delivery-custody.json",
+          "sha256": "3613d08047bac87347c034791e8e7b6f64aff06664223ab4e80250395f96ceea"
+        }
+      ]
     }
   ],
   "supportingWork": [],
   "conclusions": {
-    "tranche": "PENDING",
-    "trancheSummary": "F1/F2source andF3cleanup independently accepted; user requests F5 before final1.10.1 consumer proof",
+    "tranche": "COMPLETE",
+    "trancheSummary": "FLEX F1-F5 source/build/main consumer outcomes and stopped browser-cache cleanup independently accepted; no source change after563c4b83",
     "trancheEvidence": [
       {
-        "path": "docs/reviews/import-flex-20261108/source-review-before-dialog-amendment.json",
-        "sha256": "4544ac53d320d0aafbb0217528235a35ce57c20f4231154192d2e12170395aa6"
+        "path": "docs/reviews/import-flex-20261108/final-review.json",
+        "sha256": "c0725f9b49c08750f817719b0b606d310492653757ef0eb249e90b4541e76e18"
+      },
+      {
+        "path": "docs/reviews/import-flex-20261108/source-candidate-review.json",
+        "sha256": "b658f64d663424618715af7e330d9d286934bfd40741c6971d97ad43019181e7"
+      },
+      {
+        "path": "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+        "sha256": "efcf20a2b80694f36c7c4487650bdc3c9e3ef15a8de8e16c23069404e8f0711f"
+      },
+      {
+        "path": "docs/reviews/import-flex-20261108/profile-cleanup-result.json",
+        "sha256": "69aa1ba2e7cbb61e6b611a5526276528b70f6ec96b85b999b614ae212e7adb2f"
+      },
+      {
+        "path": "docs/reviews/import-flex-20261108/delivery-custody.json",
+        "sha256": "3613d08047bac87347c034791e8e7b6f64aff06664223ab4e80250395f96ceea"
       }
     ],
-    "product": "PENDING",
-    "productSummary": "FLEX improvement not delivered yet; existing1.10.0 remains accepted",
-    "acceptance": [],
-    "owner": "Root"
+    "product": "COMPLETE",
+    "productSummary": "Only bounded1.10.1 engineering improvement complete: actual63-name import/noop/restart, X/backdrop/Esc and44-profile cleanup. Existing LOCAL operational/business/site/physicalprinter/web limits retained.",
+    "acceptance": [
+      {
+        "path": "docs/reviews/import-flex-20261108/final-review.json",
+        "sha256": "c0725f9b49c08750f817719b0b606d310492653757ef0eb249e90b4541e76e18"
+      },
+      {
+        "path": "docs/reviews/import-flex-20261108/source-candidate-review.json",
+        "sha256": "b658f64d663424618715af7e330d9d286934bfd40741c6971d97ad43019181e7"
+      },
+      {
+        "path": "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+        "sha256": "efcf20a2b80694f36c7c4487650bdc3c9e3ef15a8de8e16c23069404e8f0711f"
+      },
+      {
+        "path": "docs/reviews/import-flex-20261108/profile-cleanup-result.json",
+        "sha256": "69aa1ba2e7cbb61e6b611a5526276528b70f6ec96b85b999b614ae212e7adb2f"
+      },
+      {
+        "path": "docs/reviews/import-flex-20261108/delivery-custody.json",
+        "sha256": "3613d08047bac87347c034791e8e7b6f64aff06664223ab4e80250395f96ceea"
+      }
+    ],
+    "owner": "Root CLOSER"
   }
 }
 ```
@@ -173,3 +300,13 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
 ## User-requested dialog scope amendment
 
 User explicitly requests X-close/backdrop dismissal in current turn. Retain original e79 packet/receipt and immutable c6ab54b7 readerSPEC; all workers frozen before authority change. F1/F2source/F3 effects independently accepted before amendment and inherited exact. F5 adds only shared modal/test/style paths and guarded cancellation behavior per locked DIALOG_DISMISS spec. Original60+15ceilings from11:21:48Z continue without reset; same one headed consumer session includes lightweight newshift X/backdrop witness. No other product scope, network/provider/security setting or production effect.
+
+## Terminal disposition — 2026-11-08
+
+Independent final-review0bf6a01a accepts F1-F5 and16native/packaged artifact bindings. Source563c4b83eb23dfa0797f1097ce43873f1204db25,1.10.1/schema4, EXE72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f,13,192,767bytes. Both real clean Git gates passed in isolatedbuild/f11, offline build/smoke exit0; original root has unrelated untracked workbook/old deliveredEXE and is not called clean. Same-directory SO_BAO_CAO_CA_1_10_1.exe delivered with matching hash; old EXEs/processes/data retained. External guide/changelog prose updated afterbuild, not bundled; non-document source unchanged.
+
+Technical layer:19reader,17API,personnelUI,39existingLOCAL and20newdialog focused checks passed. Existing unrelated tests/native evidence inherited only on unchanged effects; no broad fullsuite/large-data/print rerun or unobserved pass. Developer-product layer: actual authorized workbook readonly SHA db6016eb65f728916c028601cb8dfd9ebad45d94ced00c343eed79fef346af7e unchanged; auto row2/B/C/D/F,63NEW/0error/14numericconversions,confirm63,repeat0NEW/63EXISTING/no confirm,picker64including1syntheticbaseline,exit/newPIDrestart retains64/exactcataloghash. Aggregate oracle proves exactsource63+sentinel andactiveDBpeople match; zero reports/revisions. Newshift X/backdrop/Esc close withfocusreturn/no reportcreated; dirty/business/pending/busy/drag cases use actual focused/source evidence, not falsely native-tested. Business/yard/real operational DB/physicalprinter/Python3.9/native OSchooser/default-browser witnesses remain separately limited; no web grant.
+
+Cleanup:44exact stopped old testprofiles/10,322files removed1,077,402,818logicalbytes,0skips/remaining; observed freeDelta1,082,585,088B includes allocation/ambient effects. New owned native profile/privatefixture removed after sanitized evidence; original newprofile bytecount NOT_RECORDED, no invented amount.16-artifact manifest, count-only/synthetic screenshots and exact-set aggregate proof retained; privacy scan0actual-name matches, no private workbook/DB/catalog rows in durable records. Initialtwo nativeharness/menu failures, non-serving lockrejectedPID66300 versus actualserving54284 correction, and ownSQLitehandle cleanup retry are preserved. No product failure silently relabeled.
+
+Five evidence answers: job/output = ordinary staff workbook to deliberate additive names with usable cancellation; standard/provenance = immutable reader/dialog amendments and readonly sourcehash with predefined63/14 oracle; proof = reviewed source/fault/UI, exactbuild/native outputs and independent result; value = formerly rejected file now works without reconstruction,44profiles reclaimed without a speed guarantee; delivery = exact namedEXE/currentguide, same DATA-directory location, no production writes, explicit limits. Tranche and bounded FLEX engineering product complete; broader operational/business rollout remains separately owned. Original60execution/15support ceiling from11:21:48Z retained; terminal5minutes is a subset, no reset, cumulative active effort not fabricated. Required local mechanical checks INVOKED only, no provider-backed AI-governance claim. RootCLOSER->SESSION_SYNC_STEWARD/COMMIT_STEWARD owns final reviewed local commit; no push/deploy/new effects.

@@ -2,15 +2,15 @@
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
   "updatedAt": "2026-11-08",
-  "claimBoundary": "Accepted LOCAL1.10.0 retained. FLEX1.10.1 parser/mapping source and stopped-profile cleanup accepted; new shared dialog source/exact EXE consumer proof pending. No operational/business/web or provider-governance acceptance.",
+  "claimBoundary": "LOCAL baseline plus FLEX1.10.1 F1-F5 internal engineering accepted on exact563c4b83/EXE72c30e35. Site/business/web/physicalprinter and prior fineperformance limits remain; no provider-governance claim.",
   "modules": [
     {
       "id": "personnel-excel-import",
       "name": "Flat personnel Excel import",
       "path": "ma_nguon/PERSONNEL_XLSX.py",
-      "status": "PARTIAL",
-      "description": "Additive personnel XLSX names import reuses existing preview/nonce/catalog owner; source now accepts narrowly validated ordinary print metadata, safe numeric codes and unique editable mapping suggestions. Final1.10.1 packaged acceptance pending.",
-      "evidence": "docs/reviews/import-flex-20261108/source-review-before-dialog-amendment.json; docs/reviews/import-flex-20261108/worker-terra.md; prior PNI owner/native proof retained with unchanged-effect limits."
+      "status": "ENFORCED",
+      "description": "Additive personnel XLSX names import accepts narrowly validated ordinary print metadata, safe numeric codes and unique editable mapping; exact1.10.1 actual-workbook disposable flow accepted. No team/identity migration.",
+      "evidence": "docs/reviews/import-flex-20261108/final-review.json; docs/reviews/import-flex-20261108/native/artifact-manifest.json; docs/reviews/import-flex-20261108/source-candidate-review.json"
     },
     {
       "id": "local-storage-history",
@@ -33,8 +33,8 @@
       "name": "Local desktop workflow and print UI",
       "path": "giao_dien/tai_nguyen/local_ui.js",
       "status": "ENFORCED",
-      "description": "Compact desktop input, revision diff, guarded async dialogs, conflict note preservation, capabilities and print layout. Independently accepted revised local engineering scope with exact final build and scoped unchanged-effect evidence inheritance.",
-      "evidence": "docs/reviews/local-completion-20261108/final-local-review.json; docs/reviews/local-completion-20261108/technical/release-final.json; docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json; fine V8 timing/device limits in LOCAL roadmap."
+      "description": "Compact desktop input, revision diff, guarded async dialogs, conflict note preservation, capabilities and print layout. Independently accepted revised local engineering scope with exact final build and scoped unchanged-effect evidence inheritance. FLEX1.10.1 shared X/backdrop/Esc dismissal uses guarded cancel owners and focus return, source/focused/native evidence accepted.",
+      "evidence": "docs/reviews/local-completion-20261108/final-local-review.json; docs/reviews/local-completion-20261108/technical/release-final.json; docs/reviews/local-completion-20261108/packaged/narrow-final-8e641d3/artifact-manifest.json; fine V8 timing/device limits in LOCAL roadmap.; docs/reviews/import-flex-20261108/final-review.json"
     }
   ]
 }

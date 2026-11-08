@@ -1,0 +1,77 @@
+{
+  "status": "FLEX_F1_F5_ENGINEERING_ACCEPTED_TERMINAL_RECORDS_PENDING",
+  "risk": "R2",
+  "worker": "Terra parser/UI; Sol dialog/version/build/native; Root cleanup/commit",
+  "reviewer": "Astra independent REVIEWER",
+  "action": {
+    "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+    "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+    "criteria": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ]
+  },
+  "candidate": {
+    "commit": "563c4b83eb23dfa0797f1097ce43873f1204db25",
+    "version": "1.10.1",
+    "schema": 4,
+    "exeSha256": "72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f",
+    "bytes": 13192767
+  },
+  "criterionDispositions": {
+    "F1": "ACCEPTED: prior source/security-focused review plus exact EXE readonly source workbook63NEW/0ERROR/14conversions; original workbook digest preserved, aggregate only.",
+    "F2": "ACCEPTED: actual sheet suggestion row2/nameB/codeC/titleD/groupF and deliberate preview/confirm; ambiguity/manual/nonce guards inherited focused source tests.",
+    "F3": "ACCEPTED:44 old profiles/1077402818bytes previously independently accepted. New profile and private fixture independently confirmed absent; partial cleanup/SQLite own handle retry disclosed, new profile byte total NOT_RECORDED, not invented.",
+    "F4": "ACCEPTED: clean isolated build/f11, offline build/smoke0, exact dist hash independently rechecked; headed63 additions/picker64 including one synthetic sentinel, repeat0new63existing/no confirm, actual servingPID54284exit0/session removed and restartPID620same catalog digest/exit0. Readonly aggregate exact-source-set+sentinel/activeDB consistency/reports0/revisions0 retained. Current external guide/changelog correctly identify binary and observed limits.",
+    "F5": "ACCEPTED: focused39LOCAL+20dialog proof plus genuine headed X/backdrop/Esc close, opener focus and no report creation. Independently viewed synthetic screenshot: top-right X clear, no overlap/title/action obstruction. Print hide and busy/dirty/cancellation/drag defenses source/focused-test evidence, not separately claimed as native matrix."
+  },
+  "custody": "All16 manifest artifacts hash/size verified. Current non-document reviewed source hashes unchanged; only external unbundled guide/changelog identity prose updated and rehashed. Root independent11producer-input observation plus clean build logs accepted. Original root not claimed clean; user workbook untouched. Two harness failures retained (async bbox, hidden menu), resumed retained fixture without duplicate confirm. PID66300 was lock-rejected/non-serving; corrected54284 is authoritative. Cleanup initial own readonly connection lock and successful retry retained.",
+  "privacy": "Viewed only synthetic dialog/count-only screenshots. Durable reviewed records contain aggregate counts/digests/coordinates, not personnel rows. Private fixture/profile removed; original source workbook retained. Root reports separate17artifact/zero-name-match scan; this review does not independently claim an exhaustive actual-name scan.",
+  "limits": "Developer engineering F1-F5 accepted only; prior LOCAL operational/device/physicalprinter/OSfilepicker/Python3.9/web limitations remain. Native OS file dialog NOT_TESTED; browser file input exercised. No new broad tests, print matrix or performance assertion. No provider governance claim.",
+  "evidence": [
+    {
+      "path": "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+      "sha256": "3ed098245e6fd4c46d577c857f5c5ab57c1d75ff3ee3909184ffde1ac34fa241"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/native/result.json",
+      "sha256": "16738fc32bc172c2c21c65721e559c0b770a8189c490cd32f36a8f4e49688cab"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/native/readonly-aggregate-oracle.json",
+      "sha256": "b5fbd5b4bf4288836163301a65c0cb75581d720cffaa3aaeb3d701b0565a077c"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/native/cleanup.json",
+      "sha256": "cb9542fe34d6023bba3726518b4b9ae88a686e7b8d62499d1491aa26016a7255"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/native/worker-sol-native.md",
+      "sha256": "0ffb5f3a4f472ed75c0313c4eb65b89fde12418b3c3ec204080d411169d10c0f"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/build-observation.json",
+      "sha256": "8edcf1f2fd6cff71fed4eaa6ff1ace4d7d569c71b77034a641e8f0b4321bddbf"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/packaged/candidate.json",
+      "sha256": "a89be02c541e3c139340648e3bd4d4327b510b418e910647c8f2ff722c4f0b63"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/source-candidate-review.json",
+      "sha256": "b2906666ba29d84437442fd8e0e0c9469654304837af3d1c2323c9804d5a34ed"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/source-review-before-dialog-amendment.json",
+      "sha256": "b74684f7ecf7b4e27cb9f1e1995827227eca253e16eed9a5061bc3786bb99dbb"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/post-build-prose-hashes.json",
+      "sha256": "cd1ef5c715367e9b5ea93bb048a4161989cd8be7ffbf898b367fb1eecf79b0c8"
+    }
+  ],
+  "remaining": "Root same-directory versioned delivery custody, terminal exact scope/receipt/mechanical gates and commit only. No further product tests or changes recommended."
+}

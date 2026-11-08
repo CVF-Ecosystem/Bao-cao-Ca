@@ -2,8 +2,8 @@
   "schemaVersion": "1.0",
   "continuityContract": "cvf.downstreamContinuityContract@1.0.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "currentMode": "REVIEW",
-  "activePhase": "REVIEW",
+  "currentMode": "FREEZE",
+  "activePhase": "FREEZE",
   "phaseModel": [
     "INTAKE",
     "DESIGN",
@@ -14,7 +14,7 @@
     "FREEZE"
   ],
   "activeHandoff": "CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md",
-  "nextAllowedMove": "Commit independently accepted1.10.1 source candidate, then Sol exact clean isolated offline build/smoke and one combined private-fixture import/dialog session. F4/F5 product acceptance still pending.",
+  "nextAllowedMove": "FLEX1.10.1 engineering frozen and delivered. Next: separately scoped target-yard-device/operational acceptance; phase2 web W0 requires its own intake and assessed work order. No active BUILD.",
   "parkedOperatorCheckpoint": null,
   "activeRole": "COMMIT_STEWARD",
   "roleRoute": "INDEPENDENT_WORKER_AND_REVIEWER",

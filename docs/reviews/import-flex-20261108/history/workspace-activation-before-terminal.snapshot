@@ -1,0 +1,314 @@
+{
+  "schemaVersion": "cvf.workspaceActivation@1.0.0",
+  "identity": {
+    "projectRootSha256": "320d7a94c6415c596972609e3ed4fc87cc3754f690b2640bc75bb444401f3fc7",
+    "manifestSha256": "dd3e52630ef2ded2982569250516da5e96a8a32d7116e946ce2fb0d535ae7c12",
+    "policySha256": "4b0e460ace2337afcc7ad126f05f4e97571374303196e1851a758d34cdcc1dcc",
+    "lockSha256": "8d5b9561f8c97e4250fc9d06a7de851ade917a12f42d84efc2ea4325fa2ff936",
+    "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+    "profileId": "cvf.downstreamGateProfile@1.4.0",
+    "profileSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+    "deliveryFingerprint": "97c98cc51d571cdb928fa00a9a8380770bed27cc057e54067ffd6f4d6310bfd8",
+    "sourceRoute": "PINNED_CORE"
+  },
+  "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
+  "reviewer": "Astra independent FLEX/F5 reviewer",
+  "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+  "actions": [
+    {
+      "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+      "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+      "criteria": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ]
+    }
+  ],
+  "supplemental": [
+    {
+      "id": "SUPPLEMENTAL_ASSESSMENT",
+      "mode": "INSPECTED",
+      "sourceSha256": "b2acf0b3d3bf52e6feb58fb71ac61227b71d29cc98d61f6781f4fbd71aea4125",
+      "owner": "Root orchestrator",
+      "actions": [
+        "docs/work_orders/WO_IMPORT_FLEX.md"
+      ],
+      "disposition": "ASSESSED",
+      "reviewEvidence": [
+        {
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "ea8d2175b3cca34dc3e69381641c62e1495e42cdfb525c5528cc0e35aa643f82"
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "id": "CVF-DG-INST-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
+      "actions": [
+        "docs/work_orders/WO_IMPORT_FLEX.md"
+      ],
+      "criteria": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+          "criteria": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-INST-01.json",
+          "sha256": "fdea138b76234de19cd10889e0994b59106842958b450023daa3290d38d322b1"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-CONT-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
+      "actions": [
+        "docs/work_orders/WO_IMPORT_FLEX.md"
+      ],
+      "criteria": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+          "criteria": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-CONT-01.json",
+          "sha256": "cac831df006c54aca5ef4ee279aae284257ce8e076bbc9f4f247d9eac71d19af"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-RANGE-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
+      "actions": [
+        "docs/work_orders/WO_IMPORT_FLEX.md"
+      ],
+      "criteria": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+          "criteria": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-RANGE-01.json",
+          "sha256": "87a4de3ebeea72f18c12960c320de1b38eb59e32a4db9b8dd656d8cf171783cd"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-APPL-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
+      "actions": [
+        "docs/work_orders/WO_IMPORT_FLEX.md"
+      ],
+      "criteria": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+          "criteria": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-APPL-01.json",
+          "sha256": "a7747f6215e7efc7ad50b71157bfe7ad54509b027e9c422988575367615b7cd5"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-ROUTE-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
+      "actions": [
+        "docs/work_orders/WO_IMPORT_FLEX.md"
+      ],
+      "criteria": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+          "criteria": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-ROUTE-01.json",
+          "sha256": "8e06f042324b9080ff8a5bb99861a0cef60dd63b0cd284eaca5c5fa189c492d6"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-COV-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator flexibleExcel/cache cleanup plus explicit modalX/backdrop dismissal; independently assessed exact F1-F5 action, no production/provider/web effect.",
+      "reason": "Actual current non-ACT pre-admission PASS independently reviewed on exact FLEX action; mechanical invocation only.",
+      "actions": [
+        "docs/work_orders/WO_IMPORT_FLEX.md"
+      ],
+      "criteria": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/import-flex-20261108/before-dialog-receipt-final.json",
+        "sha256": "3fc69a4718d5d29d466f20cc70deeee99592d132246237380b513314de161dd8"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+          "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+          "criteria": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/import-flex-20261108/configured.json",
+        "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/CVF-DG-COV-01.json",
+          "sha256": "9ee9afc39447435798552c10861fd7e97e90b70b7451b0ef9c15c506ecb82a6f"
+        }
+      ]
+    }
+  ]
+}

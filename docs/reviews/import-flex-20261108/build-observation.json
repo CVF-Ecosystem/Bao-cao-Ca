@@ -1,0 +1,17 @@
+{
+  "candidate": "563c4b83eb23dfa0797f1097ce43873f1204db25",
+  "version": "1.10.1",
+  "schema": 4,
+  "exe": {
+    "path": "dist/SO_BAO_CAO_CA.exe",
+    "sha256": "72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f"
+  },
+  "bytes": 13192767,
+  "sourceManifest": {
+    "path": "docs/reviews/import-flex-20261108/merged-source-manifest.json",
+    "sha256": "a3e850480c945332162716df57ade93eaa8dc7b90b22d117c6af19be66d0f0b0"
+  },
+  "all11ProducerInputsMatch": true,
+  "producer": "build/f11",
+  "custody": "Clean isolated Git producer, not original root (untracked user workbook/old delivered EXE preserved). Root independently rehashed actual dist and all11 reviewed producer inputs; Sol native flow pending."
+}

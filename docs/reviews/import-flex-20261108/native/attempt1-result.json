@@ -1,0 +1,34 @@
+{
+  "exeSha256": "72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f",
+  "commit": "563c4b83eb23",
+  "version": "1.10.1",
+  "workbookSha256Before": "db6016eb65f728916c028601cb8dfd9ebad45d94ced00c343eed79fef346af7e",
+  "headless": false,
+  "viewport": {
+    "width": 1366,
+    "height": 657
+  },
+  "browserInputUpload": "EXERCISED",
+  "nativeOSFileDialog": "NOT_TESTED",
+  "events": [
+    {
+      "event": "exeStarted",
+      "pid": 54284
+    },
+    {
+      "event": "syntheticDialogReady"
+    },
+    {
+      "event": "newshiftX",
+      "closed": true,
+      "openerFocusRestored": true
+    }
+  ],
+  "browserVersion": "156.0.8078.81",
+  "status": "FAILED",
+  "failure": {
+    "phase": "synthetic dialogs",
+    "class": "TypeError"
+  },
+  "processEnded": false
+}

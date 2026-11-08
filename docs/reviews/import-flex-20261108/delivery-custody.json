@@ -1,0 +1,14 @@
+{
+  "version": "1.10.1",
+  "commit": "563c4b83eb23dfa0797f1097ce43873f1204db25",
+  "source": "dist/SO_BAO_CAO_CA.exe",
+  "destination": "SO_BAO_CAO_CA_1_10_1.exe",
+  "sha256": "72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f",
+  "bytes": 13192767,
+  "copyResult": "HASH_IDENTICAL",
+  "independentReview": "final-review.json (0bf6a01a)",
+  "launched": false,
+  "oldExesAndUserProcessesPreserved": true,
+  "operationalDataTouched": false,
+  "atUtc": "2026-11-08T11:59:30.120685+00:00"
+}

@@ -1,0 +1,66 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+    "sha256": "fba5d00d4e5086d0e31bee3df0d6ac33cf09c092fb5be62152dafebad3f68885",
+    "criteria": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ]
+  },
+  "controlId": "CVF-DG-ROUTE-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Astra 6 Medium / independent REVIEWER",
+  "authority": "Explicit operator cleanup/import-flex/dialog requests; independent accepted exact engineering scope closure only; Root commit owner.",
+  "decision": "ACCEPTED",
+  "reason": "Exact CLOSED_ACCEPTED terminal FLEX F1-F5 accepted, reconciling independent final-review0bf with reviewed source563c4b83 and exact1.10.1/schema4 EXE72c30. Same-directory delivered versionedEXE independently rehashed, old applications/data untouched; original root not claimed clean. Complete five evidence questions and technical/developer/business layers correctly distinguish focused/native proof, scoped inheritance and separate operational limits. Exact63actual+1synthetic=64 persistence oracle,14conversions, repeatnoop, dialog dismissal,44profile cleanup and retained harness/PID/cleanup failures accurately stated. Newprofile byte total NOT_RECORDED; ambient freeDelta not extra-deletion claim. Original f937 action/receipt preserved; source unaffected by external prose updates. Original60+15 budget and bounded terminal subset unchanged, no fabricated effort or new authority. Root owns terminal synchronization/commit only. Actual trusted terminal non-ACT observation PASS.",
+  "evidence": [
+    {
+      "path": "docs/work_orders/WO_IMPORT_FLEX.md",
+      "sha256": "fba5d00d4e5086d0e31bee3df0d6ac33cf09c092fb5be62152dafebad3f68885"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/terminal-before-receipt.json",
+      "sha256": "0b73b3700f6ae68d479bb56c97df57d95de04c78226c44e60c307c35c84565a4"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/configured.json",
+      "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/final-review.json",
+      "sha256": "0bf6a01a5d15cea8335f87631fe59054e0b5de2a0053879e1a4234b388f4f3b5"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/delivery-custody.json",
+      "sha256": "a91b44375d39bc7beca36f4720a59936208ba4a1b271561e6dbd5f9d8a3f78f9"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/source-candidate-review.json",
+      "sha256": "b2906666ba29d84437442fd8e0e0c9469654304837af3d1c2323c9804d5a34ed"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+      "sha256": "3ed098245e6fd4c46d577c857f5c5ab57c1d75ff3ee3909184ffde1ac34fa241"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/post-build-prose-hashes.json",
+      "sha256": "cd1ef5c715367e9b5ea93bb048a4161989cd8be7ffbf898b367fb1eecf79b0c8"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/history/WO_IMPORT_FLEX-before-terminal-f937.snapshot",
+      "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/history/workspace-activation-before-terminal.snapshot",
+      "sha256": "063e0c12201335cc3292c91a3b9c74a218c5c45f688c95dec9275bc40f9e81ea"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/SUPPLEMENTAL_ASSESSMENT.json",
+      "sha256": "ea8d2175b3cca34dc3e69381641c62e1495e42cdfb525c5528cc0e35aa643f82"
+    }
+  ],
+  "limits": "Fresh exact terminal activation and mandatory mechanical checks/commit remain. No further tests/source changes/cleanup/web/BUILD grant. Prior operational and evidence limits retained."
+}

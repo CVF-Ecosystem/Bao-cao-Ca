@@ -1,0 +1,21 @@
+{
+  "targets": [
+    {
+      "path": ".cvf\\runtime\\import-flex-20261108\\chrome-profile",
+      "remainingFilesBeforeRetry": 0,
+      "remainingBytesBeforeRetry": 0,
+      "removed": true
+    },
+    {
+      "path": ".cvf\\runtime\\import-flex-20261108\\private-fixture",
+      "remainingFilesBeforeRetry": 6,
+      "remainingBytesBeforeRetry": 208897,
+      "removed": true
+    }
+  ],
+  "firstCleanupFailure": "Own read-only SQLite oracle connection remained open until helper process exited; profile removed then WinError32 on fixture DB. Retry after helper exit removed remaining fixture. No active application process or operational data affected.",
+  "totalOriginalProfileBytes": "NOT_RECORDED",
+  "sourceWorkbookPreservedSha256": "db6016eb65f728916c028601cb8dfd9ebad45d94ced00c343eed79fef346af7e",
+  "operationalDataTouched": false,
+  "oldUserAppProcessesTouched": false
+}

@@ -156,7 +156,10 @@ HỘP THOẠI
 
 10. KẾT QUẢ VÀ GIỚI HẠN HIỆN TẠI
 - Bản 1.10.1 dùng schema 4; xem tai_lieu/THAY_DOI_V1_10_1.txt.
-  Mã/hash EXE 1.10.1 sẽ được ghi sau kiểm chứng bản đóng gói.
+  Mã build 1.10.1: 563c4b83eb23; SHA-256 EXE:
+  72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f.
+  Luồng file nhân sự thật trên dữ liệu tạm: thêm63 tên, nhập lại không thêm trùng;
+  thoát/mở lại giữ danh mục. File nguồn được giữ nguyên; không thay dữ liệu vận hành.
 - Bằng chứng bản nền đã nghiệm thu: mã 8e641d315258, EXE 1.10.0 SHA-256
   10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917.
   Bằng chứng và đánh giá độc lập: docs/reviews/local-completion-20261108/.

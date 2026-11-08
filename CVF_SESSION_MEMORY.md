@@ -5,15 +5,15 @@ Memory class: POINTER_RECORD
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: REVIEW
-- Active phase: REVIEW
+- Current mode: FREEZE
+- Active phase: FREEZE
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md
 
 ## Current local release
 
-- Current LOCAL authority: accepted1.10.0 is retained baseline. Active FLEX F1-F5 packetf937aa36 and locked readerSPECc6ab54b7/dialogSPEC1d8c99ef admit only bounded1.10.1 repair/cleanup; no web BUILD.
-- Current delivery state:1.10.1 merged11-file source independently accepted b2906666,19reader/17API/personnelUI/39LOCAL/20dialog focusedPASS;44profiles removed. Exact newEXE/native F4/F5 remains pending;1.10.0 baseline retained.
-- Current owner/next move: Root COMMIT_STEWARD/session sync for accepted11-file source candidate, then Sol exact offlinebuild/onecombinednative proof.
+- Current LOCAL authority: LOCAL1.10.0 accepted baseline plus independently accepted FLEX1.10.1 F1-F5 terminal REVIEW; locked reader/dialog specs unchanged, no future BUILD.
+- Current delivery state:1.10.1 exact563c4b83 EXE72c30e35/13192767B delivered as SO_BAO_CAO_CA_1_10_1.exe;63names import/repeat/restart and X/backdrop/Esc accepted.44oldprofiles reclaimed1.077GB; no private testdata retained.
+- Current owner/next move: FLEX1.10.1 engineering FREEZE and delivered; Root owns terminal record commit. Next work is separately scoped target-device/operational acceptance or phase2 web W0; no active BUILD.
 - Deferred by operator: another yard-machine/device acceptance later. No parked operator checkpoint.
 - Earlier dated sections below are preserved history; current state and active handoff own next-action truth.
 
@@ -242,3 +242,12 @@ FLEX merged-source REVIEW acknowledgment: Terra4sourcefiles frozen andindependen
 
 
 FLEX source-candidate COMMIT_STEWARD acknowledgment: rehydrated currentREVIEW; independent source-candidate-reviewb2906666 accepts frozen11ownedinputs plusunchangedLOCALtest. Rootrawhashcustody verifiedmergedmanifest, actualworker-return/reviewer-fast exit0 afterpreservedRisk-headingannotation inreadonlyTerraaudit (no sourcechange). CVF Agent Declaration: SO_BAO_CAO_CA_V1_9/Core68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6,REVIEW/R2/liveYES,COMMIT_STEWARD,activehandoffV1,checkpointnone. Commitreviewedcandidateonly thenSolexactcleanproducerbuild andonesmallcombinednativeproof; no wholeFLEX/productclosureyet, no further broadtests. User workbook/newoldEXEs remainuntrackedandunstaged.
+
+
+FLEX build/native dispatch acknowledgment: exact563c4b83eb23 source built offline from clean shortbuild/f11 withbothnativeGitgatesPASS, build0/smoke0/version1.10.1. EXE72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f,13192767B, Rootindependentrehashedand11producerinputsmatch. RehydratedREVIEW/COMMIT_STEWARD->ORCHESTRATOR/SESSION_SYNC_STEWARD,Core68a7446/R2/liveYES,activehandoffV1,checkpointnone. Source frozen; Solsolecontroller onecombinednativeactualworkbook/private-disposablefixture andX/backdrop/Esc thenindependentAstraaggregate. No bigdata/fullmatrix/realDBwrite. Originalbudgetunchanged.
+
+
+FLEX engineering FREEZE / terminal stewardship acknowledgment: RootrehydratedREVIEW and receives independentfinal-review0bf6a01a acceptingallF1-F5/exact1.10.1EXE72c30e35.16nativeartifacthashes independentlymatchedbyRoot; syntheticXlayout visuallychecked, sourceworkbookunchanged,privatefixture/profileabsent. Solauthorizedsame-directorydeliveryhashmatched. CVF Agent Declaration SO_BAO_CAO_CA_V1_9/Core68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6,FREEZE/R2/liveYES,RootCLOSER->SESSION_SYNC_STEWARD/COMMIT_STEWARD,activehandoffV1,checkpointnone. Freshterminalexactreview/receipt/gates/commit stillrequired; no more source/tests/deletion. Originalbudgets/limits/failures preserved, no provider/webgrant.
+
+
+FLEX terminal record: independent terminal-review.json accepts exact fba5d00d; receipt refreshed with seven raw review bindings. Mechanical controls INVOKED only; APPL explicitly N/A for CLOSED_ACCEPTED, never closeability PASS. No provider-governance claim or further product tests. Terminal records are committed locally by Root after required checks.

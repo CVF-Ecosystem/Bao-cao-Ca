@@ -24,4 +24,8 @@ Bản bàn giao: SO_BAO_CAO_CA_1_10_1.exe cạnh DU_LIEU/DANH_MUC sau khi đư�
 Đợt này chỉ kiểm tra reader/UI liên quan và một luồng file thật trên dữ liệu tạm.
 Không chạy lại ma trận in, dữ liệu lớn hay toàn bộ sản phẩm; không sửa dữ liệu vận hành.
 Nội dung nhân sự thật không được đưa vào gói bằng chứng. Hướng dẫn: HUONG_DAN.txt.
-Mã build/hash và kết quả đóng gói được bổ sung sau rà soát độc lập.
+Mã build 563c4b83eb23; EXE 13.192.767 byte, SHA-256:
+72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f.
+Đã quan sát luồng đóng hộp thoại và file thật trên danh mục tạm: thêm63 tên,
+nhập lại không thêm trùng, thoát/mở lại giữ đủ; file nguồn không thay đổi.
+Kết quả chi tiết và giới hạn: docs/reviews/import-flex-20261108/native/.

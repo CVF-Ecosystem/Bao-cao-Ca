@@ -1,0 +1,10 @@
+{
+  "role": "PACKAGING_WORKER",
+  "phase": "REVIEW",
+  "workOrder": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696",
+  "commit": "563c4b83eb23dfa0797f1097ce43873f1204db25",
+  "producer": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\build\\f11",
+  "actualClean": "",
+  "originalRootClean": false,
+  "core": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6"
+}

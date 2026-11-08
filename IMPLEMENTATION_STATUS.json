@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "overallStatus": "FLEX_SOURCE_ACCEPTED_BUILD_AND_NATIVE_PENDING",
-  "currentPhase": "REVIEW",
+  "overallStatus": "LOCAL_1_10_1_FLEX_ENGINEERING_FROZEN",
+  "currentPhase": "FREEZE",
   "completedCapabilities": [
     "Pinned public Core68a7446 and canonical profile1.4 install with preserved workflow",
     "Current-Core project delegate with exact29 native checks and trusted explicit-packet bootstrap",
@@ -10,11 +10,10 @@
     "Actual clean committed local flow at 5fec5a122339486f5a85afa4276362e76691d61b",
     "Synchronized active continuity/catalog and preserved historical source/evidence",
     "PNI E1-E6 name-only additive flat-XLSX import,191Python0skip/6JS/4workspace and independent exact1.9.2 EXE headed flow acceptance at7ce0305b6000",
-    "LOCAL1.10.0/schema4 exact8e641d315258 EXE10aaf013 built/smoked offline from clean isolated Git worktree; final nonzero-layout opening/retained-scroll save/newreport/restart proof passed.211Python prior unchanged basis,7JS/39focusedLOCAL and4workspace; extensive native/legacy/recovery proof retained with scoped inheritance. Terminal acceptance committed481fffda. Independent final-local-review accepts revisedL1-L8; two fine timings explicitly deferred."
+    "LOCAL1.10.0/schema4 exact8e641d315258 EXE10aaf013 built/smoked offline from clean isolated Git worktree; final nonzero-layout opening/retained-scroll save/newreport/restart proof passed.211Python prior unchanged basis,7JS/39focusedLOCAL and4workspace; extensive native/legacy/recovery proof retained with scoped inheritance. Terminal acceptance committed481fffda. Independent final-local-review accepts revisedL1-L8; two fine timings explicitly deferred.",
+    "FLEX1.10.1 exact563c4b83/EXE72c30e35: ordinary printer metadata/safe numericcodes/editable unique mapping; actual63name import/repeatnoop/restart and shared modalX/backdrop/Esc accepted,44oldprofiles removed1.077GB. Focused19reader/17API/personnelUI/39LOCAL/20dialog and exactbuild/smoke/native evidence reviewed; no broadmatrix rerun."
   ],
-  "activeWorkOrders": [
-    "docs/work_orders/WO_IMPORT_FLEX.md"
-  ],
+  "activeWorkOrders": [],
   "knownLimitations": [
     "Revised LOCAL engineering acceptance only; target yard-machine, authorized real operational copy and business acceptance deferred. Physical printer, independent external media, native Windows file chooser/Tk, default-browser auto-open and Python3.9 execution NOT_TESTED.",
     "Fine V8 year-summary/files-tab click-to-completion timings NOT_MEASURED/operator-deferred; existing functional outputs accepted. Near1.25GB startup observed74–123seconds on current host; no speedup guarantee.",
@@ -23,7 +22,8 @@
     "PNI E1-E6 additive flat-XLSX names accepted; E7/team mapping/stable identity/HRM/sync and phase2web excluded.",
     "No hosted CI, active Git precommit hook, universal agent compliance or live provider-governance proof. Canonical local gates invoked explicitly; future exact actions require new assessment.",
     "Original root contains unrelated untracked user workbook, preserved untouched/unopened/unignored/unstaged. Clean build custody refers to isolated producer at8e641d315258; final external guide prose is not bundled. Delivered versioned EXE is a local untracked artifact excluded from Git commit, beside existing data directories; running prior rootEXE retained.",
-    "Operator-authorized CLN cleanup removed16 completed synthetic benchmark DB payloads20,028,223,488B from two explicit ignored fixture roots. Bulk runtime payloads no longer retained for replay; durable measurements/oracles/logs/generators and delivered EXE remain. No operational-data deletion."
+    "Operator-authorized CLN cleanup removed16 completed synthetic benchmark DB payloads20,028,223,488B from two explicit ignored fixture roots. Bulk runtime payloads no longer retained for replay; durable measurements/oracles/logs/generators and delivered EXE remain. No operational-data deletion.",
+    "FLEX narrow ordinary printerSettings support only, existing workbook/archive/macro/external/formula limits retained; minimum two recognized mapped columns,500people/2MiB limit and names-only catalog persistence. Native fixture had1syntheticbaseline/63actual additions; no real operational DB import performed."
   ],
   "evidence": [
     "docs/reviews/core-reconciliation/implementation-review.md",
@@ -68,15 +68,21 @@
     "docs/reviews/local-completion-20261108/delivery-custody.json",
     "docs/reviews/local-completion-20261108/doctor-terminal.json",
     "docs/reviews/local-completion-20261108/runtime-cleanup-result.json",
-    "docs/reviews/local-completion-20261108/cleanup-terminal-review.json"
+    "docs/reviews/local-completion-20261108/cleanup-terminal-review.json",
+    "docs/reviews/import-flex-20261108/final-review.json",
+    "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+    "docs/reviews/import-flex-20261108/profile-cleanup-result.json",
+    "docs/reviews/import-flex-20261108/delivery-custody.json",
+    "docs/reviews/import-flex-20261108/terminal-review.json",
+    "docs/reviews/import-flex-20261108/doctor-terminal.json"
   ],
   "updatedAt": "2026-11-08",
   "x_delivery": {
-    "candidate": "8e641d3152581ad6341551ae3415efcb14519a2c",
-    "exe": "SO_BAO_CAO_CA_1_10_0.exe",
-    "sha256": "10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917",
+    "candidate": "563c4b83eb23dfa0797f1097ce43873f1204db25",
+    "exe": "SO_BAO_CAO_CA_1_10_1.exe",
+    "sha256": "72c30e3578fb4e850110726a54f5af5d4cf690c637bdb8c983add419cf45796f",
     "schema": 4,
-    "rootPrior": "SO_BAO_CAO_CA.exe remains running/locked759064b9; close old before opening delivered new filename in same directory",
-    "evidence": "docs/reviews/local-completion-20261108/delivery-custody.json"
+    "note": "Close old1.10.0 before opening new same-directoryEXE; olduserprocesses/data untouched.",
+    "evidence": "docs/reviews/import-flex-20261108/delivery-custody.json"
   }
 }

@@ -1,0 +1,105 @@
+{
+  "status": "FLEX_EXACT_TERMINAL_ACCEPTED_RECEIPT_AND_COMMIT_PENDING",
+  "risk": "R2",
+  "worker": "Root terminal metadata/commit; Terra/Sol prior implementation",
+  "reviewer": "Astra independent REVIEWER",
+  "action": {
+    "packet": "docs/work_orders/WO_IMPORT_FLEX.md",
+    "sha256": "fba5d00d4e5086d0e31bee3df0d6ac33cf09c092fb5be62152dafebad3f68885",
+    "criteria": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ]
+  },
+  "criteriaSha256": "0eccb6de7fb99c88a2edef591c9dc666a5a94f0cae2ae08b40416c59ad4b3c13",
+  "disposition": "Exact CLOSED_ACCEPTED terminal FLEX F1-F5 accepted, reconciling independent final-review0bf with reviewed source563c4b83 and exact1.10.1/schema4 EXE72c30. Same-directory delivered versionedEXE independently rehashed, old applications/data untouched; original root not claimed clean. Complete five evidence questions and technical/developer/business layers correctly distinguish focused/native proof, scoped inheritance and separate operational limits. Exact63actual+1synthetic=64 persistence oracle,14conversions, repeatnoop, dialog dismissal,44profile cleanup and retained harness/PID/cleanup failures accurately stated. Newprofile byte total NOT_RECORDED; ambient freeDelta not extra-deletion claim. Original f937 action/receipt preserved; source unaffected by external prose updates. Original60+15 budget and bounded terminal subset unchanged, no fabricated effort or new authority. Root owns terminal synchronization/commit only.",
+  "controlObservations": {
+    "CVF-DG-INST-01": "PASS",
+    "CVF-DG-CONT-01": "PASS",
+    "CVF-DG-RANGE-01": "PASS",
+    "CVF-DG-APPL-01": "NOT_APPLICABLE_WITH_REASON",
+    "CVF-DG-ROUTE-01": "PASS",
+    "CVF-DG-COV-01": "PASS",
+    "CVF-DG-ACT-01": "FAIL"
+  },
+  "evidence": [
+    {
+      "path": "docs/work_orders/WO_IMPORT_FLEX.md",
+      "sha256": "fba5d00d4e5086d0e31bee3df0d6ac33cf09c092fb5be62152dafebad3f68885"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/terminal-before-receipt.json",
+      "sha256": "0b73b3700f6ae68d479bb56c97df57d95de04c78226c44e60c307c35c84565a4"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/configured.json",
+      "sha256": "95a19f2ff933352a12bbe5b30ef54fb23487ef61a1d230c580c8deb3d3806e3e"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/final-review.json",
+      "sha256": "0bf6a01a5d15cea8335f87631fe59054e0b5de2a0053879e1a4234b388f4f3b5"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/delivery-custody.json",
+      "sha256": "a91b44375d39bc7beca36f4720a59936208ba4a1b271561e6dbd5f9d8a3f78f9"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/source-candidate-review.json",
+      "sha256": "b2906666ba29d84437442fd8e0e0c9469654304837af3d1c2323c9804d5a34ed"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/native/artifact-manifest.json",
+      "sha256": "3ed098245e6fd4c46d577c857f5c5ab57c1d75ff3ee3909184ffde1ac34fa241"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/post-build-prose-hashes.json",
+      "sha256": "cd1ef5c715367e9b5ea93bb048a4161989cd8be7ffbf898b367fb1eecf79b0c8"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/history/WO_IMPORT_FLEX-before-terminal-f937.snapshot",
+      "sha256": "f937aa3604e428979d689c58d676e44f3e8059c923f8fe3184d84c2d904ac696"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/history/workspace-activation-before-terminal.snapshot",
+      "sha256": "063e0c12201335cc3292c91a3b9c74a218c5c45f688c95dec9275bc40f9e81ea"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/reviews-dialog-admission/SUPPLEMENTAL_ASSESSMENT.json",
+      "sha256": "ea8d2175b3cca34dc3e69381641c62e1495e42cdfb525c5528cc0e35aa643f82"
+    }
+  ],
+  "reviews": [
+    {
+      "path": "docs/reviews/import-flex-20261108/reviews-terminal/CVF-DG-INST-01.json",
+      "sha256": "cfbfaf09a0ca12514a64d78090755c11368f9aca589eca2ee543f5f35999f650"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/reviews-terminal/CVF-DG-CONT-01.json",
+      "sha256": "b8f330e42be13077d5c60c1edb8b4602ca75095541460f904ae44ffe4dd6da84"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/reviews-terminal/CVF-DG-RANGE-01.json",
+      "sha256": "9c76fb853be90122370ecc9f283d2c5532d7152f3d5810268cda37b4649db890"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/reviews-terminal/CVF-DG-APPL-01.json",
+      "sha256": "b892e358384ff5b2044c235de8c2bccd3b81972b14c08e362e69063bd782c1e4"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/reviews-terminal/CVF-DG-ROUTE-01.json",
+      "sha256": "1145dfac7756a07da3bdf445774f4bd8569bb25988abfafff6b6cc724cdf6a9a"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/reviews-terminal/CVF-DG-COV-01.json",
+      "sha256": "e604d808a3a4b0807e30856273e5876fc7283355f2d5302c1d227e1ccb23d4a0"
+    },
+    {
+      "path": "docs/reviews/import-flex-20261108/reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json",
+      "sha256": "846482836d3b41e8a5254d0d0a92d5dfa73c330b9f574d86a08232949011c56a"
+    }
+  ],
+  "remaining": "Root exact terminal receipt, required mechanical gates and commit only. No product tests or source changes."
+}
