@@ -1,0 +1,1 @@
+OK launcher: version=1.10.0, build=02d1e26f174a

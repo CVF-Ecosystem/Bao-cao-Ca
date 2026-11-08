@@ -1,0 +1,46 @@
+[
+  {
+    "variant": "3",
+    "setup": "Terra synthetic legacy fixture; interrupted uses preconstructed injected-fault state, not naturalEXEfaulttrigger",
+    "before": {
+      "schema": "3",
+      "reports": [
+        [
+          "2026-11-08_DAY",
+          1,
+          "{\"date\": \"2026-11-08\", \"shift\": \"DAY\", \"actor\": \"Synthetic operator\", \"status\": \"draft\", \"notes\": \"Synthetic baseline 3\", \"staffing\": [], \"jobs\": [], \"handover\": []}"
+        ]
+      ],
+      "revisions": [
+        [
+          "2026-11-08_DAY",
+          1,
+          "Synthetic operator",
+          "Lưu nháp",
+          "{\"date\": \"2026-11-08\", \"shift\": \"DAY\", \"actor\": \"Synthetic operator\", \"status\": \"draft\", \"notes\": \"Synthetic baseline 3\", \"staffing\": [], \"jobs\": [], \"handover\": []}"
+        ]
+      ]
+    },
+    "cancelDBUnchanged": true,
+    "afterUpgrade": {
+      "schema": "4",
+      "reports": [
+        [
+          "2026-11-08_DAY",
+          1,
+          "{\"date\": \"2026-11-08\", \"shift\": \"DAY\", \"actor\": \"Synthetic operator\", \"status\": \"draft\", \"notes\": \"Synthetic baseline 3\", \"staffing\": [], \"jobs\": [], \"handover\": []}"
+        ]
+      ],
+      "revisions": [
+        [
+          "2026-11-08_DAY",
+          1,
+          "Synthetic operator",
+          "Lưu nháp",
+          "{\"date\": \"2026-11-08\", \"shift\": \"DAY\", \"actor\": \"Synthetic operator\", \"status\": \"draft\", \"notes\": \"Synthetic baseline 3\", \"staffing\": [], \"jobs\": [], \"handover\": []}"
+        ]
+      ]
+    },
+    "status": "OBSERVED_PENDING_REVIEW"
+  }
+]

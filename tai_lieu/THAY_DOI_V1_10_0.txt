@@ -1,17 +1,49 @@
-CẬP NHẬT 1.10.0 — HOÀN THIỆN BẢN CHẠY TẠI MÁY
+CẬP NHẬT 1.10.0 — BẢN CHẠY TẠI MÁY / SCHEMA 4
+Ngày 08/11/2026. Hướng dẫn hiện hành: HUONG_DAN.txt.
 
-Dữ liệu dùng schema 4. Với DB cũ, chương trình chỉ cho xem kế hoạch nâng cấp; phải xác nhận mới tạo bản sao đã kiểm tra và nâng từng bước. Mọi máy cùng sử dụng dữ liệu cần bản chương trình mới. Bản 1.9.x không mở được DB schema 4. Khi cần quay về bản cũ, dùng bản sao trước nâng cấp; giữ riêng DB mới để không bỏ mất lần nhập sau đó.
+Dữ liệu cũ schema 1/2/3 vào chế độ hạn chế. Người dùng xem kế hoạch, bản sao kiểm tra
+đầy đủ trước từng bước và đồng ý mới nâng lên schema 4. Hủy không nâng DB.
+Các máy cùng dùng dữ liệu phải có chương trình mới; 1.9.x không mở được schema 4.
+Giữ riêng DB mới và bản sao trước nâng cấp nếu cần quay về chương trình cũ.
 
-Tự lưu bản nháp được gộp để giảm lịch sử trùng; Lưu, Chốt ca và bổ sung bản sao có loại lưu riêng. Lịch sử hiển thị loại lưu, tài khoản Windows và thay đổi giữa hai bản liền nhau. Tài khoản máy không chứng minh danh tính người nhập trên máy dùng chung. Khi xung đột, có thể tải bản thắng và giữ riêng ghi chú chưa lưu; kiểm tra rồi bấm Lưu.
+Nếu nâng cấp bị gián đoạn nhưng main còn đọc được, chỉ bản sao đúng nguồn được chương trình
+liệt kê mới dùng qua Phục hồi từ bản sao đã giữ. Xem trước, nhập KHOI PHUC và xác nhận;
+main trước phục hồi được giữ riêng. Sau phục hồi schema cũ vẫn hạn chế, cần đồng ý nâng riêng.
+Không hứa phục hồi mọi main mất/hỏng trong trình duyệt; đường Tk/--restore còn giới hạn kiểm chứng.
 
-Giao diện ca gọn hơn, tab bám khi cuộn. Alt+1/2/3/4 chuyển các tab. Esc hủy hộp thoại; không hủy trong lúc đang xác nhận hoặc lưu. Số lượng chỉ nhận số nguyên 0–9.999.999, ô sai được đánh dấu và chặn lưu. Cần người nhập và Phụ trách chung trước khi chốt. Thông báo dưới màn hình có thể đóng bằng bấm chuột hoặc Enter/Space khi được chọn.
+Tự lưu nháp liên tiếp được gộp lịch sử theo quy tắc, giữ mốc lưu tay/chốt/bổ sung riêng.
+Lịch sử và đối chiếu bổ sung hiển thị trước → sau, loại lưu và tài khoản máy.
+Tài khoản máy không xác minh người nhập thật. Xung đột có thể tải bản thắng và giữ ghi chú
+chưa lưu trong biểu mẫu; không tự ghi đè DB, phải kiểm tra rồi chủ động Lưu.
 
-Báo cáo in có ngày/ca, giờ in của máy, số trang và phần ký Trưởng ca cuối báo cáo. Khi in, chọn đúng giấy A4 ngang; kiểm tra bản xem trước, số trang và tên người ký. Khả năng in cụ thể phụ thuộc trình duyệt và thiết bị. Việc đo trên máy phát triển không thay nghiệm thu thiết bị tại bãi.
+Giao diện gọn, tab/đầu/nút hộp thoại bám khi cuộn. Mở ca đưa tới đầu biểu mẫu;
+lưu/rerender trong cùng ca và hủy mở ca không kéo người dùng về đầu.
+Alt+1/2/3/4 chuyển tab, Ctrl+S lưu, Esc hủy trước khi xác nhận/lưu.
+Ctrl+P trong Xem / In dùng đường in báo cáo hiện có, chặn lặp/reentry và đợi ảnh.
+Số lượng nguyên 0–9.999.999; ô sai được nêu rõ và chặn lưu. Chốt cần người nhập/phụ trách.
+Thông báo phía dưới có thể đóng bằng chuột hoặc Enter/Space khi được chọn.
 
-Bảo vệ dữ liệu phân biệt kiểm tra nhanh và kiểm tra đầy đủ. Full bắt buộc khi chưa có hoặc đã quá 24 giờ, kể cả thời gian tắt ứng dụng; bản full tốt gần nhất được giữ riêng. Màn hình Bảo vệ hiển thị lần full thành công tại máy/bên ngoài. Chọn ổ khác hoặc nơi sao lưu độc lập; một thư mục khác trên cùng ổ không bảo vệ khi ổ hỏng. Thư mục đồng bộ không chứng minh dữ liệu đã lên đám mây.
+In A4 ngang, nền tắt, có ngày/ca, giờ máy, Trang x/y và khối ký cuối báo cáo.
+Đã giữ hộp in và file PDF gốc do Chrome/Edge có giao diện lưu hoàn tất.
+Edge có thể không hiện widget tiêu đề/chân trang; bằng chứng ON/OFF dùng ticket thật
+được pipeline in nhận, không đồng nghĩa đã thao tác widget không tồn tại.
+In giấy và nghiệm thu máy/thiết bị tại bãi được để sau theo quyết định người dùng.
 
-Các tác vụ dọn bản chỉ xem, dọn tệp không tham chiếu và khôi phục thử đều xem trước rồi xác nhận. Trước khi xóa, chương trình tạo và kiểm tra đầy đủ bản sao mới. Dọn blob giải phóng chỗ bên trong DB, không tự thu nhỏ file. Không xóa thủ công thư mục phục hồi/bản sao khi chưa xác minh dữ liệu cần giữ.
+Bảo vệ phân biệt quick/full. Full bắt buộc khi chưa có hoặc đủ 24 giờ kể từ full thành công
+ở máy, kể cả thời gian tắt; thực hiện khi khởi động/thao tác tiếp theo, không có timer nền.
+Bản full tốt gần nhất được giữ. Full bên ngoài chỉ ghi nhận khi bên ngoài thực sự thành công.
+Lưu nháp sao lưu tối đa mỗi 5 phút theo thao tác; không còn hướng dẫn full sau mỗi lần lưu.
+Nhắc khôi phục thử chu kỳ 90 ngày; chỉ thử thành công mới cập nhật mốc.
+Dọn viewer/orphan phải xem trước/xác nhận và có full mới kiểm tra trước xóa.
+Giữ các tham chiếu báo cáo/lịch sử/bản gốc bổ sung; dọn blob không tự thu nhỏ file DB.
 
-Ẩn tàu chỉ bỏ tàu khỏi danh mục chọn mới, giữ nguyên báo cáo đã lưu. Thêm lại tên tàu một cách chủ động có thể kích hoạt lại. Nhập nhân viên Excel 1.9.2 vẫn chỉ thêm tên, không tự phân tổ hay nhập báo cáo ca.
+Ẩn tàu giữ nguyên lịch sử; thêm lại chủ động có thể kích hoạt. Nhập Excel chỉ thêm tên,
+không tự phân tổ/nhập báo cáo. Các luồng bản mang đi, đối chiếu, Excel tháng, ZIP và bàn giao tiếp tục dùng.
 
-Đợt này chỉ phát triển bản local; chưa có triển khai web. Kết quả kiểm chứng cụ thể, các trường hợp chưa thử và giới hạn thiết bị được ghi trong docs/reviews/local-completion-20261108/ sau đánh giá độc lập.
+EXE hiện hành từ 02d1e26f174a: SHA-256
+759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b.
+Bộ tổng hợp ~1,25 GB cho thấy khởi động ~74–123s, một bản mang đi ~36s, các lượt thoát
+~1–41s trên máy Windows/RAM~16GB/NVMe với cache ấm. Không có tuyên bố tăng tốc chung
+hoặc thời gian bảo đảm ở máy bãi. Quan sát decode 0,024s không phải latency tải cả 40 ảnh.
+Bằng chứng/giới hạn/đánh giá độc lập nằm trong docs/reviews/local-completion-20261108/.
+Không có triển khai web hoặc dữ liệu vận hành thật trong đợt kiểm chứng này.

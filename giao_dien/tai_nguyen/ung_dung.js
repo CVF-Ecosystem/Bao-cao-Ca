@@ -141,6 +141,10 @@ function shiftHint(){
   const r={date:$('newDate').value,shift:$('newShift').value};
   $('shiftHint').textContent=r.date?period(r):'Chọn ngày báo cáo.'
 }
+function resetOpeningScroll(){
+  document.querySelector('.layout')?.scrollTo(0,0);
+  window.scrollTo(0,0)
+}
 async function beginShift(){
   const day=$('newDate').value,shift=$('newShift').value;
   if(!day)return toast('Chọn ngày báo cáo.',true);
@@ -157,7 +161,7 @@ async function beginShift(){
     editTab='staff';
     closeModal();
     renderEditor();
-    window.scrollTo(0,0)
+    resetOpeningScroll()
   }catch(e){
     error(e)
   }
@@ -171,7 +175,7 @@ async function loadReport(id){
     conflict=false;
     editTab='staff';
     renderEditor();
-    window.scrollTo(0,0)
+    resetOpeningScroll()
   }catch(e){
     error(e)
   }

@@ -1,0 +1,38 @@
+{
+  "editorAfterWheel": {
+    "windowY": 0,
+    "documentY": 0,
+    "layoutY": 1065.5999755859375,
+    "mainY": 0
+  },
+  "homeBeforeOpening": {
+    "windowY": 0,
+    "documentY": 0,
+    "layoutY": 185.60000610351562,
+    "mainY": 0
+  },
+  "actualOpeningPointerdown": {
+    "id": "2032-01-01_DAY",
+    "isTrusted": true,
+    "windowY": 0,
+    "layoutY": 185.60000610351562
+  },
+  "afterOpening": {
+    "windowY": 0,
+    "documentY": 0,
+    "layoutY": 185.60000610351562,
+    "mainY": 0
+  },
+  "actorBounds": {
+    "x": 282.8000183105469,
+    "y": -31.80000114440918,
+    "width": 379.9999694824219,
+    "height": 38.80000114440918
+  },
+  "viewport": {
+    "width": 1366,
+    "height": 657
+  },
+  "actorVisible": false,
+  "status": "OBSERVED_PENDING_REVIEW"
+}

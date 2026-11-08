@@ -1,251 +1,165 @@
-BẢN 1.9.2 — NHẬP DANH MỤC NHÂN VIÊN EXCEL
-
-Mở Danh mục nhân sự / công việc → Nhập nhân viên Excel. Chọn file .xlsx
-bảng danh sách phẳng, sheet, hàng tiêu đề và cột; xem trước, loại dòng không
-muốn nhập rồi xác nhận. Chỉ họ tên được thêm vào danh mục hiện có; mã, chức
-danh và nhóm chỉ dùng khi xem trước. Không tự gán tổ, đổi định danh hoặc
-đồng bộ ứng dụng. Hướng dẫn chi tiết ở phần nhập Excel phía cuối tài liệu.
-
-Bản EXE 1.9.2 từ mã 7ce0305b6000 đã qua kiểm tra khởi động và luồng nhập,
-chọn người, lưu ca, thoát/mở lại và xuất trong Chrome có giao diện trên Windows,
-với dữ liệu giả lập. Hộp thoại chọn file gốc của Windows và Python 3.9 chưa
-được kiểm thử. Astra đã nghiệm thu độc lập đợt nhập Excel E1–E6; chưa có nghiệm thu nghiệp vụ,
-in hoặc toàn bộ roadmap sản phẩm. Xem tai_lieu\THAY_DOI_V1_9_2.txt.
-
-================ HƯỚNG DẪN 1.9.1 VÀ LỊCH SỬ ================
-
-BẢN 1.9.1 — XEM tai_lieu\THAY_DOI_V1_9_1.txt
-
-Khởi động bỏ các lượt kiểm tra DB trùng, giữ nguyên kiểm tra đầy đủ khi sao lưu.
-Sửa trả lỗi HTTP khi request bị từ chối sớm; kiểm tra dung lượng trước sao lưu.
-Phiên bản có thêm mã build; đóng gói từ chối khi cây Git còn thay đổi chưa commit.
-Chi tiết lệnh và số đo: tai_lieu\BAO_CAO_CODEX_DOT1.md.
-
-Trước cập nhật: bấm Thoát tool trong tab cũ. Nếu tiến trình 1.9.0 còn chạy,
-1.9.1 sẽ báo yêu cầu thoát bản cũ. Giữ nguyên DU_LIEU, DANH_MUC, cấu hình bảo vệ
-và khóa DB. Schema vẫn là 3. EXE cũ không tự dùng mã mới; dùng MO_BAO_CAO_CA.pyw
-với Python hoặc build lại sau khi cây Git đã sạch. EXE 1.9.1 chưa được nghiệm thu.
-
-Mã chương trình nằm trong
-ma_nguon/, giao diện trong giao_dien/, file mẫu trong mau/; bấm đúp MO_BAO_CAO_CA.pyw để mở. Để dùng với dữ liệu hiện có,
-chép DU_LIEU và DANH_MUC từ bản cũ vào đây, mở MO_BAO_CAO_CA.pyw, rồi chọn lại thư mục
-dự phòng ngoài. Chạy cong_cu\CHAY_KIEM_THU.bat để kiểm thử (cần Python 3.9+; có Node.js để
-kiểm thử giao diện).
-
-================ LỊCH SỬ HƯỚNG DẪN CÁC BẢN TRƯỚC ================
-
-SỬA LỖI WINDOWS ERRNO 9 — BẢN 1.8.2
-
-Bản 1.8.1 mở bản sao tạm chỉ đọc rồi gọi fsync; Windows cần handle có quyền
-ghi nên có thể báo [Errno 9] Bad file descriptor trước khi tiếp nhận DB.
-Bản này mở bản sao tạm r+b để đồng bộ, giữ DB nguồn ở chế độ chỉ đọc khi chụp.
-
-Cập nhật:
-1) Đóng các hộp báo lỗi, Thoát tool nếu còn phiên đang chạy.
-2) Chép các tệp chương trình mới vào thư mục đang dùng, gồm tai_nguyen.
-   Giữ nguyên DU_LIEU và DANH_MUC; không chép DB trắng lên DB thật.
-3) Mở MO_BAO_CAO_CA.pyw. Khi hiện Tiếp nhận DB đang có, kiểm tra số báo cáo,
-   số lần lưu và ngày; bấm Có khi đúng dữ liệu. Không cần chép lại DB.
-4) Nếu dùng EXE, cần đóng gói lại; EXE cũ không tự dùng code mới.
-
-Đã tái hiện Errno 9 ở code trước bằng kiểm thử mô phỏng fsync yêu cầu handle
-có quyền ghi; code sau sửa vượt qua kiểm thử này. Toàn bộ 93 kiểm thử Python
-qua. Đây là kiểm thử mô phỏng điều kiện Windows trên Linux, chưa phải chạy
-thực tế EXE Windows. Số kiểm thử hiện tại xem tai_lieu\THAY_DOI_V1_9_1.txt.
-
----------------- HƯỚNG DẪN TIẾP NHẬN VÀ SAO LƯU ----------------
-
-SỬA LỖI CHÉP DB CŨ — BẢN 1.8.1
-
-Thông báo “DB chính khác nguồn dữ liệu đã đăng ký” của 1.8 là do mã DB
-khác cấu hình đã ghi nhớ, không đồng nghĩa DB hỏng.
-
-1) Thoát tool cũ. Chép các tệp chương trình mới vào thư mục đang sử dụng,
-   gồm tai_nguyen và DANH_MUC_MAU. Giữ nguyên DU_LIEU và DANH_MUC thật.
-2) Mở MO_BAO_CAO_CA.pyw. Nếu có hộp “Tiếp nhận DB đang có”, kiểm tra đúng
-   số báo cáo và phạm vi ngày, rồi bấm Có để dùng DB anh đã chép vào.
-3) Chương trình sao lưu DB đang có và cấu hình vào TRUOC_TIEP_NHAN trước
-   khi đổi mã đăng ký. Các bản sao của nguồn trước vẫn được giữ riêng.
-4) Vào Xem báo cáo kiểm tra ngày cũ và vào Bảo vệ dữ liệu kiểm tra nơi dự phòng.
-5) Nếu dữ liệu hiển thị sai nguồn thì bấm Không, thoát và kiểm tra đúng file.
-   Không trộn dữ liệu hai nguồn. Mở DB kiểm tra/bổ sung nếu cần nhập bổ sung.
-6) Nếu dùng EXE, phải đóng gói lại; mở EXE 1.8 cũ vẫn có lỗi chặn cũ.
-
-Đã kiểm tra tình huống DB trắng đăng ký trước rồi được chép DB cũ vào;
-DB thử của anh vẫn đủ 3 báo cáo và 74 lần lưu lịch sử sau tiếp nhận.
-92 kiểm thử Python và các bộ hành vi JavaScript đều qua. Hộp thoại Windows
-chưa được thao tác trực tiếp trong môi trường kiểm thử này.
-
----------------- HƯỚNG DẪN BẢN 1.8 ĐƯỢC GIỮ BÊN DƯỚI ----------------
-
-BỔ SUNG QUAN TRỌNG BẢN 1.8 — BẢO VỆ DỮ LIỆU
-
-A. CẬP NHẬT VÀ THIẾT LẬP MỘT LẦN
-1) Bấm Thoát tool trong bản cũ. Giữ một bản sao cả thư mục cũ trước khi cập nhật.
-2) Chép các tệp chương trình trong gói mới vào thư mục ứng dụng đang dùng,
-   gồm cả tai_nguyen và DANH_MUC_MAU. Giữ nguyên DU_LIEU và DANH_MUC thật.
-   Gói này không chứa DB mẫu và không có DB trắng để ghi đè dữ liệu của anh.
-3) Mở MO_BAO_CAO_CA.pyw, kiểm tra hiện phiên bản 1.8.
-4) Bấm Bảo vệ dữ liệu / Khôi phục > Chọn thư mục… > chọn ổ khác hoặc thư mục
-   đám mây đã đồng bộ trên máy > Lưu nơi dự phòng.
-5) Kiểm tra cả Tại máy và Bên ngoài có thời gian thành công mới. Khi chưa
-   chọn hoặc ổ ngoài không sẵn sàng, chương trình có cảnh báo riêng.
-   Ứng dụng chỉ xác nhận ghi file trên máy, không xác nhận đã tải lên đám mây.
-6) Nếu dùng EXE, phải đóng gói lại bằng TAO_FILE_EXE.bat; EXE cũ không tự đổi.
-
-B. CÁCH SAO LƯU
-- SQLite Backup API chụp cả dữ liệu đã ghi trong WAL; kiểm tra toàn vẹn DB,
-  cấu trúc, JSON báo cáo/lịch sử và hash các tệp đính kèm trước khi công nhận.
-- Sao lưu lúc mở; sau chốt/sửa chốt; sau các cập nhật danh mục/tệp đính kèm.
-- Lưu nháp tự động: tối đa một lần sao lưu mỗi 5 phút, kích hoạt khi có lần
-  lưu nháp tiếp theo; không phải bộ hẹn giờ chạy nền. Chốt ca luôn sao lưu ngay.
-- Giữ tối đa 10 bản trong hôm nay; bản cuối mỗi ngày trong 30 ngày gần đây;
-  bản cuối mỗi tháng lâu hơn. Bản cuối tháng ở đây là bản sao mới nhất hiện
-  có trong tháng sao lưu, không bảo đảm đúng ngày cuối tháng nếu không chạy.
-- Bản sao mang đi và DB_CU trong TRUOC_KHOI_PHUC không tự xóa.
-- Ảnh/PDF làm DB lớn, mọi snapshot là bản đầy đủ. Cần theo dõi dung lượng
-  ổ dự phòng; bản đầu sẽ chậm hơn khi DB lớn. Chưa có sao lưu tăng dần.
-- Không xóa các tệp BAO_VE_DB_*.json cạnh DU_LIEU: đây là dấu nhận diện đã
-  dùng DB và cấu hình nơi dự phòng. File KHOA_DB_*.lock có thể còn sau thoát;
-  hệ điều hành tự nhả khóa, không cần xóa tay.
-
-C. KHÔI PHỤC
-- Trong ứng dụng: Bảo vệ dữ liệu / Khôi phục > Kiểm tra / khôi phục tại bản
-  sao muốn dùng > xem số ca và phạm vi ngày > nhập KHOI PHUC > Khôi phục.
-- DB hiện tại được giữ nguyên byte tại DU_LIEU/TRUOC_KHOI_PHUC trước khi thay.
-- Nếu mất/hỏng DB lúc khởi động: ứng dụng không tạo DB trắng, hiện hộp chọn
-  bản sao. Chọn đúng file cùng nguồn, xem phạm vi và xác nhận phục hồi.
-- Chọn file ở nơi khác: Thoát tool rồi mở KHOI_PHUC_DU_LIEU.pyw.
-  Với EXE: chạy SO_BAO_CAO_CA.exe --restore.
-- Chỉ phục hồi tới thời điểm bản sao đã chọn. Nếu bản sao cũ hơn dữ liệu đã
-  nhập, phần nhập thêm sau đó không xuất hiện trong DB phục hồi.
-- DB bổ sung không được dùng thay DB chính. Dùng Nhập bổ sung từ DB.
-- Nếu còn tệp -wal/-shm/-journal cạnh DB, chương trình chặn thay DB. Đóng các
-  chương trình còn dùng DB, giữ nguyên các tệp này, không tự xóa để lách chặn.
-- Hai phiên ứng dụng không được cùng mở một thư mục dữ liệu. Khóa cấp hệ
-  điều hành nhả khi thoát hoặc khi tiến trình bị đóng.
-- Nếu xóa cả mọi bản sao và dấu cấu hình, không thể tự cứu dữ liệu. Bản ở ổ
-  khác/đám mây và kiểm tra thử phục hồi định kỳ vẫn là phần quan trọng.
-
-D. GIỚI HẠN KIỂM TRA
-Đã chạy kiểm thử tự động trên môi trường Linux; chưa thao tác thực tế hộp
-thoại Windows, chưa đóng gói/chạy EXE Windows và chưa đo với DB hàng GB.
-Xem tai_lieu\DANH_GIA_UNG_DUNG_V1_8_1.md trong gói.
-
----------------- HƯỚNG DẪN CÁC NGHIỆP VỤ ĐÃ CÓ ----------------
-
-SỔ BÁO CÁO CA — NGHIỆP VỤ ĐÃ CÓ (viết theo 1.8; 1.9 đổi menu và tab nhập ca, xem tai_lieu\THAY_DOI_V1_9.txt)
+SỔ BÁO CÁO CA — HƯỚNG DẪN HIỆN HÀNH 1.10.0 / SCHEMA 4
 Phát triển bởi Mr Ân / Tân Thuận
+Cập nhật ngày 08/11/2026. Các hướng dẫn thao tác bên dưới áp dụng cho 1.10.0.
+Lịch sử các bản cũ nằm trong các tệp THAY_DOI_V1_*.txt ở tai_lieu và lịch sử Git.
 
-1. CẬP NHẬT — GIỮ NGUYÊN DB CŨ
-- Bấm Thoát tool ở bản cũ. Sao lưu cả thư mục đang dùng.
-- Chép đủ bộ chương trình 1.8, gồm tai_nguyen và DANH_MUC_MAU.
-- GIỮ NGUYÊN DU_LIEU và DANH_MUC đang dùng. Nếu chuyển sang thư mục mới,
-  chép nguyên hai thư mục này sang cạnh MO_BAO_CAO_CA.pyw.
-- Mở MO_BAO_CAO_CA.pyw; kiểm tra góc dưới hiện phiên bản 1.8.
-- Nếu đang dùng EXE: mã nguồn mới không tự cập nhật EXE; chạy
-  TAO_FILE_EXE.bat trên Windows để đóng gói lại.
-- Không đổi schema DB (vẫn là 3), không tự sửa báo cáo lịch sử. Các file
-  cấu hình mới chỉ tự tạo nếu thiếu. DB mang đi bổ sung phải mở bằng
-  Mở DB kiểm tra / bổ sung, không dùng để thay DB chính.
+1. MỞ VÀ CẬP NHẬT CHƯƠNG TRÌNH
+- Bấm Thoát tool ở phiên đang dùng trước khi cập nhật. Giữ bản sao thư mục cũ.
+- Mở SO_BAO_CAO_CA.exe trên Windows; bản nguồn dùng MO_BAO_CAO_CA.pyw.
+  Kiểm tra góc dưới giao diện hiện 1.10.0 và mã build tương ứng.
+- Giữ nguyên DU_LIEU, DANH_MUC và các tệp BAO_VE_DB_*.json cạnh thư mục dữ liệu.
+  Không chép DB trắng lên DB đang dùng. EXE cũ không tự cập nhật theo mã nguồn.
+- Chỉ một phiên ứng dụng dùng một thư mục dữ liệu. Dùng Thoát tool và đợi hoàn tất.
+  Tệp khóa có thể còn trên đĩa sau thoát; khóa hệ điều hành đã được nhả, không cần xóa tay.
+- DB schema 1/2/3 vào màn hình hạn chế. Chọn Xem kế hoạch nâng cấp, xem từng bước
+  và bản sao trước bước đó, đánh dấu đồng ý rồi Nâng cấp dữ liệu. Hủy không nâng DB.
+- Schema 4 cần chương trình mới trên mọi máy sử dụng. Bản 1.9.x không mở được nó.
+  Muốn quay về chương trình cũ, dùng đúng bản sao trước nâng cấp và giữ riêng DB mới
+  để không bỏ mất nội dung nhập sau thời điểm bản sao.
 
-2. CÀI MẪU PHÂN CÔNG MỘT LẦN
-- Nhân viên mới: thêm ở Danh mục nhân sự / công việc, Lưu danh mục trước.
-- Bấm Mẫu phân công Ca 1–2–3 / ca ngày ở menu bên trái; hoặc Cài mẫu phân
-  công tại phần nhân sự của báo cáo.
-- Chọn mẫu Ca 1, Ca 2, Ca 3 hoặc Nhân sự ca ngày tại ô Đang sửa mẫu.
-- Ở mỗi dòng, chọn vị trí và người thường làm vị trí đó.
-- Một vị trí nhiều người: + Thêm vị trí / người, chọn lại cùng vị trí và
-  chọn thêm người. Khi lưu, các dòng cùng vị trí được gộp thành danh sách.
-- Có thể chuyển qua lại 4 mẫu trong cửa sổ, các phần đang nhập được giữ.
-- Bấm Lưu cả 4 mẫu khi hoàn thành. Việc lưu mẫu không đổi bất kỳ báo cáo
-  đã có nào. Chưa có dữ liệu phân công thật nên ban đầu các mẫu để trống.
-- Ô người để trống trong mẫu ca có nghĩa là vị trí đó được để trống khi
-  áp dụng. Bảng xem trước sẽ thể hiện rõ các tên sắp được xóa/thay.
-- Muốn giữ một vị trí ngoài phạm vi mẫu: xóa dòng vị trí đó khỏi mẫu.
-- Danh sách lọc của Ca 1/2/3 tự bổ sung những người đã được chọn trong
-  mẫu ca tương ứng. Nhân sự ca ngày độc lập, không tự thêm vào 3 ca.
-- Đổi tên Ca 1/2/3 ở Danh mục nhân sự / công việc như bản 1.6.
+2. NHẬP VÀ CHỐT MỘT CA
+1) Nhập ca mới, kiểm tra ngày bắt đầu và ca ngày/ca đêm rồi Vào ca này.
+   Ca ngày 06:00–18:00; ca đêm bắt đầu 18:00 ngày chọn và kết thúc 06:00 hôm sau.
+2) Chọn Người đang nhập / chỉnh sửa. Có thể nhập trễ bằng cách chọn lại ngày/ca.
+3) Chọn người theo từng vị trí. PHỤ TRÁCH CHUNG phải có người trước khi chốt.
+4) Nhập công việc, đánh dấu XN/RTG và số nguyên F20/F40/E20/E40 từ 0 đến 9.999.999.
+   Ô sai được đánh dấu, nêu đúng công việc/cột và không được cộng vào tổng hoặc lưu.
+5) Ghi chú, việc bàn giao, ảnh/biên bản nằm ở các tab riêng. Lấy việc chưa xong từ
+   ca trước chỉ lấy việc chưa xử lý; bấm lại không thêm trùng cùng nội dung.
+6) Lưu nháp hoặc Ctrl+S. Bản nháp có tự lưu sau khi ngừng nhập; theo dõi trạng thái
+   Đã lưu lúc. Khi hoàn tất, Chốt ca. Thiếu người nhập/phụ trách sẽ được đưa tới ô cần điền.
+- Báo cáo đã chốt muốn sửa phải có lý do. Mỗi lần lưu/chốt/bổ sung được ghi loại lưu.
+- Tự lưu nháp liên tiếp có thể gộp một dòng lịch sử; số phiên bản vì thế có khoảng trống.
+  Lưu thủ công, chốt và sửa/bổ sung vẫn giữ các mốc riêng theo quy tắc chương trình.
+- Lịch sử sửa cho xem trước → sau giữa hai bản liền nhau, loại lưu, người chọn nhập
+  và tài khoản máy. Tài khoản Windows không xác minh người thật trên máy dùng chung.
+- Khi có xung đột, bản thắng trong DB được giữ. Tải bản mới, giữ ghi chú chưa lưu
+  chỉ đưa ghi chú của mình vào biểu mẫu, chưa tự ghi đè DB. Kiểm tra rồi chủ động Lưu.
 
-3. THAO TÁC HẰNG CA
-1) Nhập ca mới: xác nhận đúng ngày bắt đầu và ca ngày / ca đêm.
-2) Chọn Người đang nhập / chỉnh sửa.
-3) Trong phần nhân sự, chọn Ca 1/2/3 tại Điền mẫu phân công.
-4) Xem Hiện tại / Sau áp dụng rồi bấm Xác nhận áp dụng.
-5) Nếu có người làm ngày: bấm + Thêm nhân sự ca ngày, xem trước, xác nhận.
-   Chức năng chỉ thêm người còn thiếu tại vị trí, không xóa người đang có.
-   Bấm lại không thêm trùng tên. Không tự chạy theo giờ máy.
-6) Chỉnh người nghỉ, thay ca, hỗ trợ ngay trên báo cáo thực tế. Các chỉnh
-   sửa này không làm đổi mẫu gốc của cả tổ.
-7) Lưu nháp; khi xong toàn bộ nội dung và có PHỤ TRÁCH CHUNG thì Chốt ca.
-- Nếu đổi mẫu ca sau khi thêm người ca ngày hoặc thay người thủ công,
-  xem kỹ bảng trước/sau vì mẫu ca có thể thay danh sách ở vị trí đó.
-  Trình tự nên dùng: chọn mẫu ca trước, bổ sung ca ngày sau.
-- Báo cáo đã chốt / DB bổ sung: áp dụng chỉ đổi biểu mẫu đang mở; vẫn
-  phải Lưu chỉnh sửa / Lưu bổ sung kèm lý do như quy tắc cũ.
+3. MẪU PHÂN CÔNG, TỔ NHÂN SỰ VÀ TÀU
+- Danh mục nhân sự / công việc quản lý tên người, vị trí, công việc và ba tổ lọc.
+- Mẫu phân công Ca 1–2–3 / ca ngày: chọn mẫu, sửa vị trí/người rồi Lưu cả 4 mẫu.
+  Lưu mẫu không sửa báo cáo cũ. Danh sách tổ lọc và mẫu phân công là hai thao tác khác nhau.
+- Trên báo cáo: điền mẫu ca trước, thêm nhân sự ca ngày sau; xem bảng hiện tại/sau áp dụng.
+  Ca ngày chỉ thêm người còn thiếu ở vị trí, không tự chạy theo giờ máy.
+- Mẫu có ô người trống có thể xóa người tại vị trí khi áp dụng; xem kỹ bảng trước/sau.
+  Xóa dòng khỏi mẫu nếu muốn để vị trí đó ngoài phạm vi áp dụng.
+- TALLY TÀU và XUẤT TÀU có từng dòng tàu/người riêng. Bấm Chọn tàu… và Chọn người;
+  thêm dòng tàu/người khi có tàu khác. Không nhân cùng một nhóm người cho mọi tàu.
+  Phân công cũ gán chung nhiều tàu được giữ cho tới khi chủ động sửa.
+- Lọc tổ khi chọn người chỉ thu gọn danh sách; tên đã chọn ngoài tổ vẫn giữ.
+- Danh sách tàu → Ẩn bỏ tên khỏi lựa chọn mới, giữ nguyên báo cáo cũ.
+  Chủ động thêm lại đúng tên có thể kích hoạt lại tàu.
+- Các tệp danh mục ở DANH_MUC: NHAN_VIEN.txt, VI_TRI.txt, CONG_VIEC.txt,
+  TO_NHAN_SU.json và MAU_PHAN_CONG.json. Nên dùng các nút giao diện để sửa.
 
-4. NHIỀU TÀU VẪN GỌN VÀ ĐÚNG NGƯỜI
-- Một khung TALLY TÀU, một khung XUẤT TÀU. Bấm + Thêm tàu để thêm dòng
-  tàu thứ 2, thứ 3, không thêm cả khung lớn.
-- Mỗi dòng chọn 1 tàu và người làm riêng; một tàu có thể có nhiều người.
-- Nếu vị trí đã có nhiều dòng hoặc đang gán chung nhiều tàu, chức năng
-  áp dụng mẫu sẽ giữ nguyên vị trí đó, có thông báo để anh phân công
-  đúng người cho từng tàu bằng nút Chọn người. Không nhân cùng một nhóm
-  người sang tất cả tàu theo suy đoán.
-- Khi chỉ có 1 dòng của vị trí, áp dụng mẫu sẽ điền người theo mẫu nhưng
-  giữ tàu đã chọn. Luôn thể hiện trong bảng xem trước.
-- Báo cáo cũ gán chung nhiều tàu vẫn được giữ nguyên cho tới khi anh sửa.
-- Excel và bản xem/in tiếp tục thể hiện cặp vị trí - tàu - người.
+4. NHẬP DANH MỤC NHÂN VIÊN TỪ EXCEL
+- Danh mục nhân sự / công việc → Nhập nhân viên Excel. Chọn .xlsx danh sách phẳng,
+  tối đa 2 MiB; chọn sheet, hàng tiêu đề và số cột. Hàng/cột bắt đầu từ 1.
+- Họ tên bắt buộc; mã, chức danh, nhóm/ca chỉ để đối chiếu khi xem trước.
+- Xem trước, đánh dấu Loại ở dòng không muốn nhập rồi xem lại kết quả.
+  Khi hợp lệ, Xác nhận thêm nhân viên. Hủy/Esc trước xác nhận không thêm tên.
+- Chỉ thêm tên chưa có, không tự phân tổ, điền phân công hay đổi ca ngày/đêm.
+  Nhập lại cùng danh sách không thêm trùng. Tên mới xuất hiện trong cửa sổ chọn người.
+- Không dùng ba biểu báo cáo ca làm danh sách phẳng. Không hỗ trợ .xls, file mã hóa,
+  macro hoặc công thức ở vùng dữ liệu nhập. Sửa nguồn dữ liệu khi chương trình từ chối.
 
-5. CHỈ LỌC DANH SÁCH KHI CHỌN NGƯỜI
-- Ô Lọc danh sách khi chọn người dùng để rút gọn cửa sổ chọn tên.
-- Khác với Điền mẫu phân công: bộ lọc không tự điền hoặc đổi phân công.
-- Tên đã chọn ở tổ khác vẫn giữ; bỏ chọn chủ động mới xóa khỏi dòng.
+5. PHÍM VÀ THAO TÁC NHANH
+- Alt+1/2/3/4: Nhân sự / Công việc / Ghi chú & bàn giao / Ảnh & biên bản.
+- Ctrl+S: lưu ca đang mở. Mở Xem / In rồi Ctrl+P hoặc In / Lưu PDF để in báo cáo.
+- Esc: đóng/hủy hộp thoại trước xác nhận; không hủy khi đang lưu/tải tệp/xác nhận.
+- Liên kết Bỏ qua menu, tới nội dung hỗ trợ bàn phím. Ô tìm tàu được chọn khi mở chọn tàu.
+- Tab báo cáo và đầu/nút hành động hộp thoại bám khi cuộn. Thông báo phía dưới có thể
+  đóng bằng bấm chuột hoặc Enter/Space khi thông báo đang được chọn.
 
-6. LƯU TRỮ VÀ CẤU HÌNH
-- DU_LIEU: báo cáo, lịch sử, tệp gốc trong SQLite và các bản sao lưu.
-- DANH_MUC/NHAN_VIEN.txt, VI_TRI.txt, CONG_VIEC.txt: danh mục chung.
-- DANH_MUC/TO_NHAN_SU.json: tên tổ và danh sách lọc người.
-- DANH_MUC/MAU_PHAN_CONG.json: mẫu phân công Ca 1/2/3 và nhân sự ca ngày.
-- Dùng các nút giao diện để sửa, không cần tự viết JSON hay sửa code.
-- Danh mục và mẫu có snapshot trong DB mang đi. Bản chỉ xem không sửa
-  được mẫu dùng chung. Danh mục sai dùng snapshot hợp lệ gần nhất, có
-  cảnh báo; lưu qua giao diện có bản dự phòng và kiểm tra sửa đồng thời.
-- Sao lưu toàn DB sau mỗi lần lưu được giữ như cũ. DB nhiều ảnh/video
-  cần theo dõi dung lượng; chưa đo thời gian trên máy bãi.
+6. ĐÍNH KÈM, XEM LẠI VÀ XUẤT
+- Tối đa 40 tệp/ca, 100 MB/tệp. Thêm tệp là lưu ngay; mặc định giữ nguyên byte gốc.
+  Có thể thêm ảnh và PDF. Thu nhỏ ảnh là tùy chọn, có thể bỏ thông tin máy ảnh;
+  để nguyên nếu cần giữ tệp gốc làm bằng chứng.
+- Tải tất cả tệp tạo ZIP kèm ghi chú; các tệp trùng tên được đặt tên riêng trong ZIP.
+- Xem báo cáo có bộ lọc ngày, ca, trạng thái, nội dung và phân trang 50 báo cáo.
+- Tổng hợp chọn các ca phù hợp rồi cộng mọi công việc trong những ca đó.
+  Số lượng là lượt công việc, không phải số container duy nhất.
+- Xuất Excel theo từng ca, bảng tổng hợp hoặc Xuất Excel cả tháng.
+  Tháng không có báo cáo và ca không có tệp vẫn có kết quả trống kèm ghi chú tương ứng.
+- In: chọn A4 ngang, đồ họa nền tắt. Báo cáo tự có ngày/ca, Trang x/y, giờ in của máy
+  và một khối ký Trưởng ca ở trang cuối với tên từng phụ trách chung.
+  Giờ in là đồng hồ máy, khác ngày của ca. Xem lại số trang và tên ký trước khi in.
+- Tùy trình duyệt có thể có hoặc không có nút tiêu đề/chân trang riêng của trình duyệt.
+  Kiểm chứng Chrome/Edge đã dùng hộp in thật và file PDF được trình duyệt lưu hoàn tất;
+  không thay bằng PDF tạo qua API. Máy in giấy và thiết bị tại bãi được nghiệm thu riêng.
 
-7. CHỨC NĂNG CŨ ĐƯỢC GIỮ
-- Thêm tàu từ giao diện; KHB; công việc dời dọn; số nguyên F20/F40/E20/E40.
-- Đính kèm tối đa 40 tệp/ca và 100 MB/tệp, giữ nguyên bytes khi không tối ưu.
-- Lịch sử, sửa có lý do, chống ghi đè phiên khác, DB bổ sung cùng nguồn.
-- Xuất Excel theo MAU_BAO_CAO.xlsx từng ca / tổng hợp / nguyên tháng.
-- Mẫu Excel giữ nguyên byte; số lượng là lượt công việc, không phải số
-  container duy nhất.
+7. MANG DB ĐI KIỂM TRA VÀ NHẬP BỔ SUNG
+1) Trên DB chính: Sao lưu mang đi. Đợi tải xong; còn một bản trong DU_LIEU/SAO_LUU_MANG_DI.
+2) Máy kiểm tra: Mở DB kiểm tra / bổ sung, chọn bản mang đi. Ban đầu chỉ xem.
+3) Bật chỉnh sửa / bổ sung, chọn người, sửa ca và Lưu bổ sung kèm lý do.
+4) Xuất DB đã bổ sung, mang file này về máy giữ DB chính.
+5) Nhập bổ sung từ DB → xem ca có thể nhập, ca xung đột và Xem hai bản.
+   Chỉ xác nhận các ca phù hợp đã chọn. Ca xung đột không tự ghi đè bản thắng.
+- Bản chỉ xem/bổ sung dùng bản sao riêng, không sửa file nguồn đã chọn.
+  Dùng Về DB chính của máy để trở lại. Không dùng DB bổ sung thay DB chính bằng Khôi phục.
 
-8. KIỂM THỬ VÀ GIỚI HẠN
-- Cấu trúc mã nguồn, luồng dữ liệu và danh sách API: tai_lieu\CATALOG_CAU_TRUC.md.
-- cong_cu\CHAY_KIEM_THU.bat chạy các bộ kiem_thu\KIEM_THU*.py và kiem_thu\KIEM_THU*.js bằng dữ liệu tạm. Số lượng hiện tại nằm trong kết quả từng đợt.
-  Kiểm chứng 1.9.1 ngày 2026-11-06: 3 lượt liên tiếp 154/154 OK trên Windows.
-  Kết quả từng lần chạy: tai_lieu\BAO_CAO_CODEX_DOT1.md.
-- Hợp đồng API: tai_lieu\API.md. Đo hiệu năng trên DB giả lập: python cong_cu\DO_HIEU_NANG.py
-  (chỉ dùng thư mục tạm, không chạm DU_LIEU).
-- Nếu có Node.js: chạy thêm 5 bộ kiem_thu\KIEM_THU*.js (BAO_VE, GIAO_DIEN,
-  MAU_CA, PHAN_CONG, V1_9); kiểm chứng 2026-11-06: 5/5 OK. Không cần Node để sử dụng chương trình.
-- Đã kiểm tra DB thực sự được tạo bằng mã nguồn 1.6 mở trên 1.8, giữ
-  báo cáo/lịch sử/tệp/nhân viên/tàu và schema. Bản chỉ xem giữ nguyên byte.
-- Đã chạy kiểm thử tự động và launcher mã nguồn trên Windows. Chưa nghiệm thu
-  EXE 1.9.1, hộp thoại tkinter, hiển thị trình duyệt đồ họa hoặc in thực tế
-  bằng Microsoft Excel trong đợt này; không đọc DB vận hành để đối chiếu.
-- Kiểm thử khói nguồn: python cong_cu\KIEM_THU_KHOI.py (tự tạo/xóa thư mục tạm).
-  Với EXE mới đã build: python cong_cu\KIEM_THU_KHOI.py --exe <duong_dan_exe>
-  --commit <ma_Git_12_ky_tu> --version 1.9.1. Không dùng EXE cũ để thử mã mới.
-- Khi phục hồi: tắt tool và khôi phục chương trình từ bản dự phòng.
-  Giữ riêng DB mới nhất, tránh ghi đè bằng DB sao lưu cũ gây mất lần nhập
-  sau mốc sao lưu. Các bản trước 1.10 không nâng lên schema 4; xem lưu ý 1.10.0 bên dưới.
+8. SAO LƯU VÀ KIỂM TRA ĐỊNH KỲ
+- Bảo vệ dữ liệu / Khôi phục hiển thị lần sao lưu và lần kiểm tra đầy đủ thành công
+  tại máy/bên ngoài riêng biệt. Thành công tại máy không tự chứng minh bên ngoài thành công.
+- Có kiểm tra nhanh khi mở, sau chốt/sửa chốt và theo các thao tác lưu. Lưu nháp được
+  hạn chế sao lưu tối đa mỗi 5 phút khi có thao tác tiếp theo, không phải bộ hẹn giờ nền.
+- Full bắt buộc khi chưa có hoặc đủ 24 giờ kể từ lần full thành công tại máy, kể cả
+  thời gian tắt ứng dụng; thực hiện khi khởi động/thao tác tiếp theo. Bản full tốt gần nhất
+  được giữ riêng. Bản full bên ngoài chỉ được ghi nhận khi bên ngoài thực sự thành công.
+- Sao lưu ngay, bản mang đi và các thao tác nâng cấp/khôi phục/bảo trì cần kiểm tra đầy đủ
+  theo kế hoạch trước khi công nhận/thay/xóa dữ liệu. Không phải mỗi lần lưu đều chạy full.
+- Chính sách giữ: tối đa 10 bản hôm nay, bản cuối mỗi ngày trong 30 ngày gần đây,
+  bản cuối mỗi tháng lâu hơn. Bản cuối tháng là bản mới nhất đã có, không nhất thiết ngày cuối tháng.
+  Bản mang đi và DB trước phục hồi không tự xóa. Bản sao vẫn là toàn DB, chưa có tăng dần.
+- Nơi dự phòng phải tồn tại ngoài DU_LIEU. Lưu nơi dự phòng rồi Sao lưu ngay và xem trạng thái.
+  Một thư mục khác trên cùng ổ không bảo vệ khi ổ hỏng; ứng dụng chỉ xác nhận ghi file,
+  không xác nhận đã đồng bộ lên đám mây. Kiểm chứng thư mục ngoài không thay thử thiết bị độc lập.
+- Nhắc khôi phục thử theo chu kỳ 90 ngày. Khôi phục thử định kỳ → xem trước → Chạy khôi phục thử.
+  Chương trình kiểm tra bản sao trong thư mục riêng, không thay DB chính; thành công mới cập nhật mốc.
+- Dọn bản chỉ xem cũ và Dọn tệp không tham chiếu đều xem trước mục có thể làm/mục giữ lại.
+  Chỉ xác nhận sau khi xem kế hoạch. Trước xóa phải có bản sao mới kiểm tra đầy đủ.
+  Tệp còn được báo cáo/lịch sử/bản gốc bổ sung tham chiếu được giữ. Dọn blob giải phóng chỗ
+  bên trong DB, không tự thu nhỏ file DB trên đĩa.
 
-NHẬP NHÂN VIÊN TỪ EXCEL (1.9.2)
-Mở Danh mục nhân sự / công việc, chọn Nhập nhân viên Excel. Chọn file .xlsx danh sách phẳng tối đa 2 MiB, chọn sheet, hàng tiêu đề, số cột họ tên và các cột mã/chức danh/nhóm nếu có. Xem từng dòng, bỏ chọn dòng không muốn nhập rồi xem trước lại; xác nhận khi không còn lỗi. Chỉ tên được lưu, không tự gán tổ. File báo cáo ca, file mã hóa, macro và công thức trong cột chọn không được hỗ trợ. Nếu xuất hiện cảnh báo cần phục hồi, dừng sửa danh mục và giữ mã bản sao được thông báo.
+9. KHÔI PHỤC VÀ NÂNG CẤP BỊ GIÁN ĐOẠN
+- Khôi phục bình thường: Bảo vệ dữ liệu / Khôi phục → Kiểm tra / khôi phục tại bản sao,
+  xem số ca/phạm vi ngày → nhập KHOI PHUC → Khôi phục dữ liệu. DB hiện tại được giữ riêng
+  trước khi thay. Nội dung nhập sau mốc bản sao sẽ không có trong dữ liệu phục hồi.
+- Nếu nâng cấp bị gián đoạn nhưng DB còn đọc được và chương trình liệt kê bản sao đã giữ:
+  Phục hồi từ bản sao đã giữ → Kiểm tra / phục hồi → xem đúng bản/số ca → nhập KHOI PHUC
+  → Phục hồi bản sao này. DB trước phục hồi được giữ riêng. DB cũ sau phục hồi vẫn hạn chế;
+  phải xem kế hoạch và đồng ý nâng cấp riêng lần nữa. Hủy trước xác nhận không thay DB.
+- Chỉ bản sao đúng nguồn và được chương trình xác nhận mới dùng cho luồng này.
+  Không suy rộng thành khả năng phục hồi mọi DB hỏng/mất/không đọc được trong trình duyệt.
+- Khi DB không đọc được/mất hoặc cần chọn file khác lúc khởi động, công cụ phục hồi riêng
+  là KHOI_PHUC_DU_LIEU.pyw hoặc EXE --restore. Hộp thoại Tk/Windows của đường này chưa
+  được thao tác trong bằng chứng hiện tại. Giữ nguyên dữ liệu/nhật ký để xử lý hỗ trợ;
+  không tạo DB trắng thay DB hỏng, không xóa -wal/-shm/-journal để lách kiểm tra.
 
+10. KẾT QUẢ VÀ GIỚI HẠN HIỆN TẠI
+- Mã 02d1e26f174a, EXE 1.10.0 SHA-256
+  759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b.
+  Bằng chứng và đánh giá độc lập: docs/reviews/local-completion-20261108/.
+- Đã thao tác EXE có giao diện Chrome/Edge trên Windows bằng dữ liệu tổng hợp, gồm
+  nâng cấp, nhập Excel, xung đột, đối chiếu, lưu/thoát/mở lại, sao lưu, bảo trì và in ra PDF gốc.
+- Bộ tổng hợp khoảng 1,25 GB có 2.191 báo cáo/87.602 bản lịch sử trước thao tác mới.
+  Khởi động quan sát khoảng 74–123 giây; một lượt mang đi hoàn tất khoảng 36 giây;
+  thoát quan sát từ khoảng 1 đến 41 giây. Đây là các lượt khác nhau trên máy phát triển,
+  cache hệ điều hành đã ấm, RAM khoảng 16 GB, ổ NVMe; không phải cam kết thời gian ở máy bãi.
+  Phép quan sát decode ảnh 0,024 giây diễn ra sau mở tab, không phải tổng thời gian tải 40 ảnh.
+- 40 ảnh PNG hợp lệ được kiểm tra riêng; 200 blob giả JPEG trong bộ đo chỉ là dữ liệu
+  lưu trữ, không được tính là ảnh hiển thị thành công. Không có kết luận tăng tốc chung.
+- Chưa chứng minh tự mở trình duyệt mặc định, hộp chọn file Windows/Tk, in giấy,
+  chạy Python 3.9 thực tế hoặc đồng bộ đám mây. Upload qua input của trình duyệt đã được dùng.
+  Nghiệm thu thiết bị/máy khác tại bãi được người dùng để sau; không thay bằng kết quả máy này.
+- Đợt này chỉ chạy tại máy; chưa triển khai web. Không dùng dữ liệu vận hành thật làm bộ thử.
 
-BẢN LOCAL 1.10.0 / SCHEMA 4
-Xem tai_lieu\THAY_DOI_V1_10_0.txt để nâng DB, hủy/xác nhận tác vụ bảo trì, đọc lịch sử và giữ bản sao trước nâng cấp. DB schema 4 cần chương trình mới trên mọi máy sử dụng. Không mở bằng bản 1.9.x; khi quay về bản cũ phải dùng bản sao tương ứng và giữ riêng DB mới. Kiểm thử khói phải truyền đúng --version 1.10.0 và commit của EXE đang dùng. Alt+1/2/3/4 chuyển tab; Esc hủy hộp thoại khi chưa xác nhận/lưu.
+11. CHO NGƯỜI BẢO TRÌ MÃ NGUỒN
+- cong_cu/CHAY_KIEM_THU.bat chạy các bộ Python/JavaScript; xem kết quả hiện hành,
+  không dùng số nhóm kiểm thử của bản cũ. Người dùng EXE không cần Node.js/Python.
+- Nguồn giữ mục tiêu Python 3.9+; môi trường đã kiểm chứng là Python 3.11.
+  Đóng gói dùng Python >=3.10 và bộ công cụ ghim đã rà soát trong môi trường riêng.
+- Đóng gói từ chối Git chưa sạch, kiểm tra công cụ offline; không tự nâng thư viện toàn máy.
+  Kiểm thử khói EXE: python -B cong_cu/KIEM_THU_KHOI.py --exe <đường_dẫn_EXE>
+  --commit 02d1e26f174a --version 1.10.0. EXE được nhận diện bằng cả commit/phiên bản/hash.

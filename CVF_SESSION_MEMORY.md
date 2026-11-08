@@ -12,8 +12,8 @@ Memory class: POINTER_RECORD
 ## Current local release
 
 - Current LOCAL authority: WO_LOCAL_COMPLETION.md raw586b44bf, locked SPEC6e0842af, L1-L8 all mandatory; no web BUILD.
-- Current delivery state:U1 opening-only repair independently accepted24files/22unchanged,211Python inherited unchanged/7JS38/checker4. Clean newcandidate/EXE and targeted native outcomes pending; prior d8de proof scoped, no productclosure/speedupclaim.
-- Current owner/next move: RootCOMMIT_STEWARD/session sync forcleannewcandidate; SolsoleUI/packaging allotherwritersfrozen, Astraindependentproofreview, Terrafixturecomplete.
+- Current delivery state:Actual.layout owner correction independentlysourceaccepted24files/39focusedLOCALchecks; previous211Python/other6JS/checker4 unchanged. CleannewEXE/smallproofpending; fineV8timesdeferredNOT_MEASURED byoperatorQA direction.
+- Current owner/next move: RootCOMMIT_STEWARD/session sync; Solholdsforcleannewbuild thenSMALLscroll/mainflow only; Astraindependentreview.
 - Deferred by operator: another yard-machine/device acceptance later. No parked operator checkpoint.
 - Earlier dated sections below are preserved history; current state and active handoff own next-action truth.
 
@@ -164,3 +164,28 @@ Astra rehydrated admitted BUILD after Sol QUIET_DONE, disclosed reviewer-local r
 ## LOCAL U1 accepted source / clean candidate stewardship — 2026-11-08
 
 Root independentREVIEWER accepts u1-repair/root-source-review.json0781c719 after exactdiff/two-call equality,24rawcustody/22unchanged, sourcewhitespaceexit0 and independent actual38LOCALchecksPASS. Astra all7JSgroupsPASS0skip/log32f6765b;211Python/4checker actualbasis inheritedunchanged, no rerunclaim. Root rehydrated and transitions COMMIT_STEWARD/SESSION_SYNC_STEWARD before cleannewcandidatecommit andSolofflinebuild/smoke. Allotheragents/proof/prosewriters frozen throughbuild. Prior d8deEXE4342 is preserved; native16/legacy/maintenance/large remainhistoricalscoped evidence. Remaining finalU1/fresh/restart/Ugap, representativeChromeprint,2Edge defaultmarginactualconsumedticket/layout andserializedlarge40DOMproof aremandatory; no wholelocalclosure, no effects/owner/budget/authoritychange.
+
+
+## LOCAL final U1 candidate build / native dispatch acknowledgment — 2026-11-08
+
+Root cleancommit02d1e26f174a073750d9991d9b4749c7ad8f86ea passedactualEMPTYstatus. SolrehydratedREVIEW/COMMIT_STEWARDfrontdoors, declared packagingIMPLEMENTATION_WORKER andacknowledged586b/02d beforeofflinebuild. BothcleanGitgates/build/smokePASS, metadata1.10.0/02d1e26f174a, EXE13191601bytesSHA759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b independentlyrehashedRoot. Oldd8EXE4342preserved. RootrehydratedandreturnsORCHESTRATOR/SESSION_SYNC_STEWARD; writerfreeze liftedafterbuild, Solaloneexecutesexplicitremainingnewbinaryproof; Astra reviewsfrozenexistingandnewbatches. Largefullportable/legacy/L6proofscopedinheritance, notnewbinaryrerun;38JSandunchanged211Pythonbasis. NewEdgeactualDEFAULTmarginconsumedticket pair/matchingU8outputs, actualserialized40imageDOM/decode, U1/open/same-editor/Ugap/freshPNI/409/restartstillmandatory. Monitor5GiBreserve beforelarge; no unassessedcleanup. No productclosure/speedupclaim/webgrant/deviceacceptance, samebudgets/authority/owner/effects.
+
+
+## Operator-directed proportionate QA / known U1 owner defect — 2026-11-08
+
+Operator: “Kiểm tra quá kỹ, tôi nghĩ không cần thiết”. Root acknowledges overtesting and narrows remaining execution to actual knownU1ownerrepair, cheapSMALLpositive native opening/retention, cleanbuild/smoke/briefcoreflow andguide/terminalrecords. Cancel additionallarge/timing/matrixruns; fineV8completionlatencies stayNOT_MEASURED/deferred, neverretroactivePASS. Existing211Python/7JS38/16print/legacy/L6/large40DOM/PNI/correctionproof retained withunchanged-effectinheritance. Actual7590probe confirms desktop.layout owner185.6 remains afteropen, actor-31.8invisible; CSS102-103 bodyhidden/layoutauto independently explains window-onlyfailure. Prior acceptedsource/0->0native observations preserved andqualified, no knownbugwaiver. Astra minimalindependentassessment beforeRootBUILDack; no sourceedit yet. Samecodepaths/R2/effects/commitowner, no budgetreset; operatorQA revision tobeexplicitlyreconciled inexistingauthority/terminal review, no furtherpermissionloop. No appsactive(lastprobeexit0), no web/device acceptance.
+
+
+## LOCAL actual scroll-owner bounded BUILD acknowledgment — 2026-11-08
+
+Root rehydratedcanonicalREVIEWfrontdoors and accepts independent u1-scroll-owner-assessment.json7a9afcb3 underunchanged586b/SPEC. Nativefindingmanifest6e3a5380 preserves actual.layout185.6/notwindow0 attrustedclick andactor-31.8afteropen; desktopCSS102-103 confirmsowner. Priorwindow-onlysource repair and0->0nativewitness remainpreserved/qualified. Root acknowledgesBUILD beforeAstra reviewer-localrepair ONLYsame2files: opening-onlyhelper resets.layout pluswindowfallback; modelnonzeroowners/failedcancel/samererender in focusedJS. Solaftercleannewbuild/smoke onlySMALLnativeactualnonzeroowneropening/retention/mainflow. UserexplicitlyrequestsreducedQA; canceladditionalbigDB/fine-timing/matrixruns, discloseNOT_MEASURED insteadofPASS. Existingmajorproofreuse requiresunchanged-effectargument. NewindependentCSSownerrootcause, secondU1repair, no budgetreset/scope/effect/ownerchange; no thirdsame-rootrepair withoutcostescalation. No sourcewritebeforethisack.
+
+
+## LOCAL actual scroll-owner return / REVIEW acknowledgment — 2026-11-08
+
+Astra returnedddfd7920 afteracknowledgedBUILD, exactopening-onlyresetOpeningScroll uses.layout.scrollTo pluswindowfallback, noCSS/generalrenderchange. FocusedLOCAL_UI39PASS0skip; meaningfulnonzeroownerstate checks replace earlierwindow-onlyassumption. Root rehydrated, transitionsindependentREVIEWER/SESSION_SYNC_STEWARD beforeacceptance, verifiedall24rawhashes (20unchanged,2source/test,2Solunbundledprose). No additionalbroadsuites; preserveactual211Python/other6JS/checker4basis unchanged. Nextcleanbuild/smokeandSMALLnativepositive.layoutopening/retention/mainflowonly, thenoperatorreducedQAterminalreview. No full-readinessclaimyet.
+
+
+## LOCAL owner correction candidate stewardship — 2026-11-08
+
+CVF Agent Declaration: SO_BAO_CAO_CA_V1_9; Core../.Controlled-Vibe-Framework-CVF@68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6; REVIEW/R2/liveYES; RootCOMMIT_STEWARD/SESSION_SYNC_STEWARD; activehandoffAGENT_HANDOFF_V1_2026-11-06.md; nextcleancommit/build/smallproof; checkpointnone. Rootsource-review acceptsactualownerhelper/24rawcustody andfocused39checks, priorunchangedtechnical/nativeproof inherited. Allworkersholdingwrites throughcleanbuild. No moredisproportionateQA peroperator, fineV8timingsdeferredunmeasured. Commit candidateonly, productclosurepending.

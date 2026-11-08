@@ -1,0 +1,28 @@
+{
+  "checks": [
+    "U4 skip focuses main",
+    "U10 protection sticky visible",
+    "U12 empty restore explicit"
+  ],
+  "limitations": [
+    "browser fileinput exercised; nativeOSfiledialog NOT_TESTED",
+    "external folder samehost, not independentdevice/cloudproof"
+  ],
+  "protectionStickyBounds": {
+    "modalHead": {
+      "x": 211.1999969482422,
+      "y": 32.875,
+      "width": 928.8000030517578,
+      "height": 67.30000305175781
+    },
+    "modalActions": {
+      "x": 211.1999969482422,
+      "y": 555.6000366210938,
+      "width": 928.8000030517578,
+      "height": 68.89996337890625
+    }
+  },
+  "status": "FAILED",
+  "error": "external folder actual backup files",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\consumer-prep\\run_remaining.py\", line 22, in <module>\n    backupResponse.value.finished();expect(p.locator('#modalBody')).to_contain_text('Kiểm tra đầy đủ gần nhất bên ngoài');check('external folder actual backup files',len(list(external.glob('*.db')))>0);r['externalFiles']=[{'name':f.name,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in external.glob('*.db')];c.capture('external-full-success');p.keyboard.press('Escape')\n                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\consumer-prep\\run_remaining.py\", line 9, in check\n    assert value,label\n           ^^^^^\nAssertionError: external folder actual backup files\n"
+}

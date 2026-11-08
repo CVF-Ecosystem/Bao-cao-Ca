@@ -1,0 +1,30 @@
+{
+  "checks": [
+    "U1 existingreport actor visible",
+    "U1 manual sameeditor scroll preserved",
+    "U1 cancel newopening scroll preserved",
+    "U4 ship search focused",
+    "U4 all4keyboard tabs actual",
+    "actual save response 200",
+    "actual save response 200",
+    "actual save response 409",
+    "U6 keep local notes/no winner overwrite",
+    "U11 exact correction before-after shared diff",
+    "fresh exit/restart persisted"
+  ],
+  "limitations": [
+    "browser fileinput exercised; nativeOSfiledialog NOT_TESTED",
+    "external folder samehost, not independentdevice/cloudproof"
+  ],
+  "existingOpeningActor": {
+    "x": 282.8000183105469,
+    "y": 124.20000457763672,
+    "width": 379.9999694824219,
+    "height": 38.79999542236328
+  },
+  "sameEditorScroll": {
+    "before": 0,
+    "after": 0
+  },
+  "status": "OBSERVED_PENDING_REVIEW"
+}

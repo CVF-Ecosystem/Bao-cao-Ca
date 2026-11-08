@@ -1,0 +1,58 @@
+{
+  "status": "SUPPLEMENTAL_ACCEPTANCE_WITH_EXPLICIT_REMAINING_PROOF",
+  "risk": "R2",
+  "worker": "Sol native controller / Terra synthetic fixture owner",
+  "reviewer": "Astra independent REVIEWER",
+  "candidate": "d8de4896b85e412e2756ad6c4f033fa049bb837d",
+  "evidence": [
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/legacy-copies-supplement/artifact-manifest.json",
+      "sha256": "c9c3e790d06309789e68e9d1677b3d0a24d899090ada330a44329e8951470c7e"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/maintenance-d8de/artifact-manifest.json",
+      "sha256": "f758e5c1706bf79c003deee9ccb87d9f6fef47ec6eee434b493854884ab01a23"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/large-d8de/artifact-manifest.json",
+      "sha256": "c71797d7c34c1ee0cadf2743670c1d65b0c670c738aecc21ed5cbd4f3bf30d10"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/large-timing-supplement/artifact-manifest.json",
+      "sha256": "25a3ad7b9c863639068df285fb77dd6f44ec3fa976f6f308399d3d36666e9d74"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/print-setting-supplement/artifact-manifest.json",
+      "sha256": "c5286cd0e49a80d760091687220650e2da56fecdb2781c066db0623081ac128f"
+    }
+  ],
+  "legacy": {
+    "decision": "SUPPORTED_LEGACY_NATIVE_RECOVERY_ACCEPTED_WITH_STATED_BOUNDARY",
+    "checks": "20 manifest artifacts hash-matched. Independently read all18 DB copies: integrity/schema/recorded full rows match. All five migration manifests bind matching physical backup hashes. Common historical reports/revisions columns including timestamp/actor/reason match final schema4 DBs for1/2/3/interrupted. Prior-main TRUOC_KHOI_PHUC copy is retained. Combined with legacy-ui-batch-review actual consent/cancel/restricted restart/separate upgrade closes copy-custody gap.",
+    "limits": "Interrupted state preconstructed by setup fault injection; not natural packaged failure or arbitrary unreadable-main recovery. Interrupted cancel assertion is in executed driver, not an invented persisted boolean."
+  },
+  "maintenance": {
+    "decision": "NONEMPTY_NATIVE_MAINTENANCE_OUTCOME_ACCEPTED",
+    "checks": "20 artifacts hash-matched. Reviewed genuine explicit preview/confirmation driver/screens and independently queried final main plus3 preserved backup DBs. Integrity OK; reports/revisions/correction_base exact unchanged; all5 blobs present in each preserved snapshot; finalmain only eligible aged orphan removed. Eligible old viewer removed, three unknown/correction/recent viewers retained.",
+    "limits": "Synthetic fixture ages/custody. Concurrent/pending/open exclusions retain source/fault-test basis, not a claim this native run exercised all races. No filesystem shrinkage claim."
+  },
+  "large": {
+    "decision": "LARGE_PORTABLE_AND_BOUNDED_UI_OBSERVATIONS_ACCEPTED_WITH_REMAINING_MEASUREMENT",
+    "checks": "26 main packet artifacts and timing-supplement manifest hashes checked. Exact old candidate native startup75.6788s, completed1,252,007,936-byte portable36.2942s, exit40.9417s; actual viewer reopen, list2191/page50/page2/searchzero/year728 and completed aggregate screenshot. Warm cache/no causal performance improvement. Long waits are disclosed, menu response during portable wait observed.",
+    "timingQualification": "yearSummary0.0447s and filesTab0.0689s stop at action return, not oracle/decode completion. Do not report these as end-to-end latency.",
+    "imageQualification": "Executed evaluate_all promises decode images but boolean count/dimensions result was discarded before unconditional check(True). Stored40 valid PNG hashes/dimensions are supplemental data evidence, not equivalent to an asserted DOM oracle. Serialized real DOM count/dimensions/decode and completed-action latency remain required on planned new-EXE witness.",
+    "custody": "Large DB binaries remain ignored runtime under worker SHA/logical-oracle custody; no new independent GB-wide hash/read scan performed during clean-build review.",
+    "V4Scope": "Actual nontrivial1.25GB same-path portable download/reopen satisfies stronger-size V4 witness as previously reasoned; no medium-specific timing claimed."
+  },
+  "printing": {
+    "decision": "BASELINE_OBSERVATIONS_ACCEPTED_FINAL_CUSTOM_MARGIN_OUTPUTS_NOT_ACCEPTED",
+    "checks": "63 artifacts hash-matched. Baseline2button/OFF PDFs actually completed on unchanged1.9.2,2pages each; expected old absence of signatures/page-time is baseline observation. Prior key attempts remain inconclusive and are not upgraded to PASS. Read executed read-only Debugger chrome.send breakpoint; final Edge getPreview consumed headerFooterEnabled true/false, backgroundsfalse, A4landscape. This strengthens pipeline-setting evidence beyond persisted preference.",
+    "finding": "Final ON1794131338/OFF1794131364 custom-margin completed PDFs independently parsed and visually inspected: required Trang x/y and In lúc absent. Tickets record custom bottom/right margins0. These outputs fail U8 and cannot be combined with different default-margin outputs to claim the same setting/layout case passed.",
+    "inheritance": "Original16 default-margin outputs remain independently valid for their observed conditions. Widget absent remains disclosed. Root authorized finite new-EXE default-margin redraw/ticket+matching-output witness; no native code patch or PDF generator.",
+    "baselineRefinement": {
+      "path": "docs/reviews/local-completion-20261108/baseline-observation-clarification.json",
+      "sha256": "ffa457198ba2956967c18f4a88859ee10a1559633ab863d645de038802918ef8"
+    }
+  },
+  "next": "Independent new02d1 build proof and remaining targeted native packets before whole L1-L8 decision. No product closure or provider-governance claim."
+}

@@ -1,0 +1,298 @@
+{
+  "freeBefore": 8734289920,
+  "mainShaBefore": "4c2b5ccd7b496cb822a5aa2f3a3feb3b9a8516eb34ef9cfb71cd0715848f923e",
+  "startupSeconds": 123.17618920002133,
+  "observedDOM": {
+    "count": 40,
+    "decoded": [
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled",
+      "fulfilled"
+    ],
+    "images": [
+      {
+        "name": "trùng tên.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "trùng tên.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 02.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 03.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 04.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 05.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 06.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 07.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 08.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 09.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 10.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 11.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 12.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 13.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 14.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 15.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 16.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 17.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 18.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 19.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 20.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 21.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 22.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 23.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 24.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 25.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 26.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 27.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 28.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 29.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 30.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 31.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 32.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 33.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 34.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 35.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 36.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 37.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 38.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      },
+      {
+        "name": "ký tự đặc biệt & (ảnh) 39.png",
+        "complete": true,
+        "width": 240,
+        "height": 140
+      }
+    ],
+    "allDecoded": true
+  },
+  "decodeObservationSeconds": 0.02403770014643669,
+  "exitSeconds": 1.02133210003376,
+  "mainShaAfter": "4c2b5ccd7b496cb822a5aa2f3a3feb3b9a8516eb34ef9cfb71cd0715848f923e",
+  "freeAfter": 7505276928,
+  "status": "OBSERVED_PENDING_REVIEW"
+}

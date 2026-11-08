@@ -1,0 +1,58 @@
+{
+  "status": "FINAL_NATIVE_BATCH_ACCEPTED_IN_PART_TWO_NARROW_PROOF_GAPS",
+  "risk": "R2",
+  "worker": "Sol sole native controller",
+  "reviewer": "Astra independent REVIEWER",
+  "candidate": "02d1e26f174a073750d9991d9b4749c7ad8f86ea",
+  "exeSha256": "759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b",
+  "evidence": [
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged/final-02d1e26/artifact-manifest.json",
+      "sha256": "938062c52f9c0343d1513f1ec6e0b9eaa47c195e6376d024ec7e98c40093a37f"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/packaged-u1-build-review.json",
+      "sha256": "9299d81103f694eef0e965a499f204f938ed4af502663fe949a7871d391a5151"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/supplemental-native-review.json",
+      "sha256": "a819cd9b965bbf10b83aed327d6d56aff16148750b7cfa43974555b9f30eaeeb"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/print-matrix-review.json",
+      "sha256": "c1b8bd8d4933b89c604de529700fbdc9ad2c18a4e70746c7de4e74d5cdd452b3"
+    }
+  ],
+  "independentChecks": [
+    "All117 final manifest hashes match. Native process events bind exact EXE; all observed exits0/session removed, including final large123.1762s startup and1.02133s exit. Worker notification delay is not application time.",
+    "Parsed all3 final native PDFs: one-page A4landscape, date/shift, Trang1/1, machine print time and final chief signature present. Visually inspected final Edge ON/OFF renders and Chrome representative; no overlap or split signature observed.",
+    "Read-only actual chrome.send/getPreview ticket interception binds true/false headerFooterEnabled, marginsType0, backgroundsfalse, A4landscape to matching same-profile completed native PDF runs. No visible Edge header-toggle claim. This closes prior effective-configuration witness gap for default-margin flow; custom-margin failed outputs remain retained separately.",
+    "Final schema3 before-backup and after-main independently integrity checked; all original reports/revisions columns including timestamp/actor/reason exact preserved. Actual cancel/consent/restart events retained; inherited schema1/2/interrupted unchanged-backend proofs remain applicable.",
+    "Actual U1 existing actor y124.2/new y153.8 within1366x657, skip/tab/ship focus, staffing/protection sticky bounds, empty restore, additive PNI exclusion/cancel/repeat, actual200/409 two-client conflict and keep-local-notes, exact shared correction diff, fresh save/export/restart are retained individually across documented harness failures. Visually inspected conflict/diff screens.",
+    "Final large serialized count40, all40 decode fulfilled, complete240x140; before/after mainSHAequal. This closes earlier discarded-boolean correctness gap. It does not measure total click-to-visible latency."
+  ],
+  "inheritance": "Two successful opening scroll calls and JS tests are the only change from d8de. Root independently reviewed repair. Backend/export/migration/maintenance/print template/CSS/source parser unchanged; retain prior accepted V2-V7, nonempty maintenance, all legacy variants,16 print matrix and211Python with original candidate identities. New candidate representatives verify packaged identity and affected openings.",
+  "criterionDisposition": {
+    "L1": "ACCEPTED_ENGINEERING: inherited exact correction roundtrip/oracles plus final actual409/keepnotes/diff.",
+    "L2": "ACCEPTED_ENGINEERING: inherited XLSX/ZIP/previouswork plus1.25GB same-path portable/reopen and final fresh export.",
+    "L3": "MAIN_OUTCOMES_ACCEPTED; targeted nonzero same-editor scroll regression witness still pending. Baseline CtrlP remains attempted/inconclusive observation, not PASS; final native keyboard and settings proven.",
+    "L4": "ACCEPTED_ENGINEERING: accepted source/fault schedule/cache/pin tests, native restore drill/recovery and final external-folder backup. Independent-media/site protection not claimed.",
+    "L5": "ACCEPTED_ENGINEERING: accepted exact save-kind/provenance/source tests, all legacy/recovery native plus final schema3 representative. General unreadable-main recovery not supported.",
+    "L6": "ACCEPTED_ENGINEERING: source/fault/concurrency basis plus native nonempty maintenance with independently verified snapshots/reference preservation.",
+    "L7": "PENDING_TWO_COMPLETION_LATENCIES: year summary and40-image tab current timing starts/stops do not cover click-to-completed appearance. Workload/storage/oracles/responsiveness otherwise demonstrated.",
+    "L8": "PENDING_FINAL_DOCUMENTATION_AND_SETTLED_L3_L7: exact clean EXE/build/tests/fresh+upgrade+restore+restart proof accepted; guide/changelog review and remaining measurements not yet settled."
+  },
+  "remaining": [
+    {
+      "id": "FINAL-PROOF-1",
+      "finding": "sameEditorScroll before0 after0 cannot establish retained nonzero scroll. Unit real-owner no-scroll tests pass; no native defect inferred.",
+      "minimalEvidence": "On an existing tall report, establish actual positive document scroll then manual save and cancel-new dialog; preserve before/after positive offsets. No source edit."
+    },
+    {
+      "id": "FINAL-PROOF-2",
+      "finding": "Prior yearSummary/filesTab action-return timings and final decodeObservation after count40 are not V8 click-to-appearance latency.",
+      "minimalEvidence": "One retained large-DB session: timer before summary trigger through expected728 rows/totals; timer before files-tab trigger through40 visible/decoded images. Preserve actual timing/oracles, no fixed threshold or new dataset/export."
+    }
+  ],
+  "claimBoundary": "No wholeLOCAL closure yet. Developer engineering acceptance is separate from deferred yard-device/realDB/business acceptance, OS file/save dialogs, physicalprinter, independentexternalmedia and Python3.9. No provider governance proof."
+}

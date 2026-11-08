@@ -1,0 +1,18 @@
+[
+  {
+    "browser": "msedge",
+    "headers": "1",
+    "trigger": "button",
+    "exit": 0,
+    "stdout": "{\"run\": \"D:\\\\UNG DUNG AI\\\\TOOL AI 2026\\\\CVF-Workspace\\\\SO_BAO_CAO_CA_V1_9\\\\.cvf\\\\runtime\\\\local-completion-20261108\\\\final-default-ticket-msedge-short-headers1-button-1794132514\", \"elapsed\": 14.780999999959022, \"error\": null, \"outputs\": [{\"channel\": \"msedge\", \"outputs\": [{\"fixture\": \"short\", \"triggerEpoch\": 1794132526.2817876, \"completedEpoch\": 1794132528.4746263, \"filename\": \"Sổ báo cáo ca • Bãi Container.pdf\", \"retainedCopy\": \"msedge-short-native-saved.pdf\", \"bytes\": 95100, \"sha256\": \"a29d74026c0623f91ead0bf205a5f2815a9d3c22b5acf58b965249207229c1d4\", \"pages\": 1, \"oracleFound\": true, \"origin\": \"BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT\", \"OSSaveAs\": \"NOT_TESTED\"}]}]}\n",
+    "stderr": ""
+  },
+  {
+    "browser": "chrome",
+    "headers": "0",
+    "trigger": "ctrlp",
+    "exit": 0,
+    "stdout": "{\"run\": \"D:\\\\UNG DUNG AI\\\\TOOL AI 2026\\\\CVF-Workspace\\\\SO_BAO_CAO_CA_V1_9\\\\.cvf\\\\runtime\\\\local-completion-20261108\\\\matrix-chrome-short-headers0-ctrlp-1794132530\", \"elapsed\": 12.437999999849126, \"error\": null, \"outputs\": [{\"channel\": \"chrome\", \"outputs\": [{\"fixture\": \"short\", \"triggerEpoch\": 1794132539.1884325, \"completedEpoch\": 1794132541.527267, \"filename\": \"Sổ báo cáo ca • Bãi Container.pdf\", \"retainedCopy\": \"chrome-short-native-saved.pdf\", \"bytes\": 95086, \"sha256\": \"e2a5f735133b590d4bf2b7f505d9f245f74837c8f73ebf6427867bcb56d71cf0\", \"pages\": 1, \"oracleFound\": true, \"origin\": \"BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT\", \"OSSaveAs\": \"NOT_TESTED\"}]}]}\n",
+    "stderr": ""
+  }
+]

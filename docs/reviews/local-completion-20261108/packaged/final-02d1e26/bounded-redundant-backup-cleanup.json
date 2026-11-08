@@ -1,0 +1,10 @@
+{
+  "target": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\large-ui-d8de489\\DU_LIEU\\SAO_LUU_AN_TOAN\\1fffcce2400d0fc79f09cd85c076151f\\BAO_CAO_CA_20261108_165230_853449_312cdf.db",
+  "bytes": 1251680256,
+  "sha256": "e24d3d3cc2cbc41f7e0f4c9755524cf6e303dfa5d9d5bfab947619d094755338",
+  "duplicateOfRetainedPinned": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\large-ui-d8de489\\DU_LIEU\\SAO_LUU_AN_TOAN\\1fffcce2400d0fc79f09cd85c076151f\\BAO_CAO_CA_20261108_165025_621750_0b675a.db",
+  "preservedLatest": "D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\local-completion-20261108\\large-ui-d8de489\\DU_LIEU\\SAO_LUU_AN_TOAN\\1fffcce2400d0fc79f09cd85c076151f\\BAO_CAO_CA_20261108_165400_826325_8d39f7.db",
+  "freeBefore": 7483482112,
+  "reason": "Only redundant ownedfixture backup, exact hash identical retained last-full; source seed/main/portable/viewer and selectedbackup untouched",
+  "freeAfter": 8735162368
+}

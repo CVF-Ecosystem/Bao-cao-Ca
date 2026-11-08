@@ -1,0 +1,16 @@
+{
+  "commit": "02d1e26f174a073750d9991d9b4749c7ad8f86ea",
+  "version": "1.10.0",
+  "buildExit": 0,
+  "smokeExit": 0,
+  "gitBefore": "",
+  "gitAfter": "",
+  "exeSha256": "759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b",
+  "exeBytes": 13191601,
+  "elapsedSeconds": 13.827999999979511,
+  "logs": {
+    "build-02d1e26.txt": "fe785bccdcd12124ffde7ecdb9d60b7947e592c52fa59a796809522cc0d6336d",
+    "smoke-02d1e26.txt": "eac8ee9faf50efe3d80fea6bf61af73ae95a547cef526e7aef496c869d9c3416"
+  },
+  "roleAcknowledgment": "Sol rehydrated REVIEW/COMMIT_STEWARD frontdoors and declared packaging/native IMPLEMENTATION_WORKER, acknowledged exact586b44bf/02d1e26 before build; Root verified759064b9 and dispatches targetednative after BUILD_DONE"
+}

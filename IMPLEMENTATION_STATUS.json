@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "overallStatus": "LOCAL_U1_SOURCE_ACCEPTED_CLEAN_CANDIDATE_PACKAGING_PENDING",
+  "overallStatus": "LOCAL_SCROLL_OWNER_SOURCE_REVIEW_BUILD_AND_SMALL_PROOF_PENDING",
   "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Pinned public Core68a7446 and canonical profile1.4 install with preserved workflow",
@@ -23,7 +23,8 @@
     "No hosted CI, host auto-loading, universal agent compliance or live provider governance proof",
     "No active Git pre-commit hook was found; the trusted canonical pre-commit gate is explicitly invoked and its actual output retained. Hosted workflow execution is unobserved.",
     "LOCAL browser recovery requires readable supported main and exact manifest-bound backup. Corrupt/absent original fails closed; no arbitrary unreadable-main browser recovery claim. Actual supported interrupted-upgrade packaged flow pending.",
-    "Actual d8de U1 opening existing report retains old document scroll; bounded reviewer-local opening-only fix admitted, final candidate/affected native proof pending."
+    "Actual nonzero desktop .layout scroll-owner probe supersedes prior U1 top-position observation:02d1e26 window-only reset ineffective; bounded owner correction pending. Existing technical/proof bytes retained.",
+    "Operator2026-11-08 requests reduced QA. Fine V8 year-summary/files click-to-completion latencies remain NOT_MEASURED and are deferred; no further large/matrix repetition. Terminal scope/claim reconciliation pending independent assessment."
   ],
   "evidence": [
     "docs/reviews/core-reconciliation/implementation-review.md",

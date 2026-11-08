@@ -1,0 +1,11 @@
+Risk: R2
+Worker: Sol
+Reviewer: Astra
+
+Exact final02d1e26 EXE759064b9. Actual new/existingfirstinput andsame-editor/manual/cancel scroll, keyboard/sticky/emptyrestore/PNI/newperson/409keepnotes/exactcorrectiondiff/freshrestart observed. Externalfolderfirstassert used nonrecursiveglob; actual nestedidentitybackup files existed, resumedrecursiveoracle provesfiles. Shipsearchfirstselector used obsolete buttonname; actual UIbutton title corrected, no productchange. Runtime syntax and parentconsoleCP1252 failure were harness-only, earlier outputcompleted before parentlogprint; no unnecessary successfulcase repeat. Playwright Response.finished emitted background Targetclosed teardown warnings; consumersteps/exitcodes retained.
+
+FinalEdge nativechrome.send read-onlyfunction-call breakpoint captures consumed getPreview headerFooterEnabled true/false, marginsType0, bgfalse, A4landscape, and SAMEprofile nativecompletedPDFs retainALL requiredU8fields. This closes prior custommargin experiment limitation; earlier failedconfigoutputs stay historical, never relabeled. Chrome actualtrustedCtrlP finalPDF retainsallU8fields. VisibleEdge headerwidget remains unavailable; pipelineconfiguration is evidenced, not widgettoggle. OS SaveAs/physicalprinter NOT_TESTED, yarddevice deferred.
+
+Finalschema3 actualpreview/cancel DBunchanged/consent/historypreserved/exit/restart. Other schema1/2/interrupted flows inherited d8 unchangedbackendwithspecificsourceimpact. Final large40 actual serialized DOMcount40, all40complete240x140 anddecodefulfilled, mainDBbefore/afterhash equal, exit0/sessionremoved, reserve>5GiB. No newseed/portablecopy. Redundantmiddleownedbackup only was resolved/hashed identical retainedlastfull before unlink; main/seed/baseline/portable/viewer/selectedbackups preserved. Notification delay afterthisrun was worker/toolcontinuity, not applicationexit; actualexit1.021s differs earlier40.94s, no causal claim.
+
+Prior d8 print16/V2–V8/legacy/maintenance evidence remains exacthistorical provenance. Only two explicit successful-opening scroll calls changed; printing/CSS/parser/backend/save/export/maintenance functions unchanged, so inherit unchangedeffects with finalrepresentatives; independentAstra disposition stillrequired.

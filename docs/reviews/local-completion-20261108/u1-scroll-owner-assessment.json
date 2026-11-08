@@ -1,0 +1,38 @@
+{
+  "status": "BOUNDED_REVIEWER_LOCAL_CORRECTION_READY_AWAITING_BUILD_ACK",
+  "risk": "R2",
+  "worker": "Astra disclosed reviewer-local correction; Sol small native witness",
+  "reviewer": "Astra source assessment; Root independent correction review",
+  "action": {
+    "path": "docs/work_orders/WO_LOCAL_COMPLETION.md",
+    "sha256": "586b44bf71c22146d7c5e959453acda10a96ab2e50992ce5d78f7b31b5e3df57"
+  },
+  "sourceCandidate": "02d1e26f174a073750d9991d9b4749c7ad8f86ea",
+  "evidence": [
+    {
+      "path": ".cvf/runtime/local-completion-20261108/remaining-final/u1-owner-probe/result.json",
+      "sha256": "0425de4a47ba384067e11568fa8e7d18a9e731024209b6c5f393810a1ec5811e"
+    },
+    {
+      "path": "giao_dien/tai_nguyen/style.css",
+      "sha256": "b7e255c4e5587caa31fdc8e56f89293dce6e2cc5947a724572f287464ec3dbce"
+    }
+  ],
+  "rootCause": "Independently read CSS102-103: desktop body height100vh/overflowhidden; .layout overflowauto. HTML has actual .layout container. Previous window-only calls target wrong desktop scroll owner. Native wheel records layout1065.6/window0, home185.6, trusted report click185.6, afteropen185.6 and actor y-31.8. This confirms failure of prior repair; retain it, do not call earlier y-positive-from-top a regression proof.",
+  "repair": "Opening-only helper resets actual document.querySelector(.layout) scroll to0 and retains window reset for document/mobile fallback. Call only after successful render in loadReport/new beginShift. No general setPage/renderEditor reset; no CSS change.",
+  "allowedPaths": [
+    "giao_dien/tai_nguyen/ung_dung.js",
+    "kiem_thu/KIEM_THU_LOCAL_UI.js"
+  ],
+  "unchangedObjective": "YES",
+  "unchangedDesign": "YES",
+  "unchangedPaths": "YES",
+  "unchangedAuthority": "YES",
+  "unchangedEffects": "YES",
+  "unchangedCommitOwner": "YES",
+  "evidenceDetermined": "YES",
+  "reviewerLocalRepairBasis": "Actual CSS owner plus retained native nonzero failure determines a localized same-path correction. No new feature or business decision. Distinct owner root cause, not repeated speculative optimization.",
+  "verification": "Correct existing focused harness to model nonzero layout and window separately; successful openings reset both, failed/cancelled opens and ordinary real-owner rerenders/save preserve nonzero offsets. Run focused JS, clean build/smoke and one cheap small-data actual nonzero-owner opening witness plus mainflow. No large-data/timing/16-case expansion.",
+  "operatorSteering": "User said testing is excessive. Root reduced QA to known-defect repair and cheap affected proof; missing fine V8 completion timings remain NOT_MEASURED/deferred in explicit final scope amendment, never fakePASS.",
+  "impact": "Print/CSS/backend unchanged; retain existing native and source evidence with exact old identities. Root owns any authority/closure amendment and commits. Await Root BUILD acknowledgment before source writes."
+}

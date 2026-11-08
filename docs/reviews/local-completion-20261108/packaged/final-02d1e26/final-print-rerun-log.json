@@ -1,0 +1,10 @@
+[
+  {
+    "browser": "msedge",
+    "headers": "0",
+    "trigger": "button",
+    "exit": 0,
+    "stdout": "{\"run\": \"D:\\\\UNG DUNG AI\\\\TOOL AI 2026\\\\CVF-Workspace\\\\SO_BAO_CAO_CA_V1_9\\\\.cvf\\\\runtime\\\\local-completion-20261108\\\\final-default-ticket-msedge-short-headers0-button-1794132472\", \"elapsed\": 14.875, \"error\": null, \"outputs\": [{\"channel\": \"msedge\", \"outputs\": [{\"fixture\": \"short\", \"triggerEpoch\": 1794132483.9286816, \"completedEpoch\": 1794132486.0940642, \"filename\": \"Sổ báo cáo ca • Bãi Container.pdf\", \"retainedCopy\": \"msedge-short-native-saved.pdf\", \"bytes\": 95100, \"sha256\": \"737b30869b387549f70140146076860f784e090236adf8129b37667445c1e756\", \"pages\": 1, \"oracleFound\": true, \"origin\": \"BROWSER_NATIVE_COMPLETED_SAVE_FROM_APP_PRINT\", \"OSSaveAs\": \"NOT_TESTED\"}]}]}\n",
+    "stderr": ""
+  }
+]

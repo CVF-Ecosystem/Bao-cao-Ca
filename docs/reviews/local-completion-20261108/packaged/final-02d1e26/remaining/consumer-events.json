@@ -1,0 +1,180 @@
+[
+  {
+    "event": "launch",
+    "readinessSeconds": 1.7018695999868214,
+    "pid": 45456,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b"
+  },
+  {
+    "event": "screenshot",
+    "file": "existing-opening.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Lưu nháp"
+  },
+  {
+    "event": "click-done",
+    "text": "Lưu nháp"
+  },
+  {
+    "event": "click-start",
+    "text": "Hủy"
+  },
+  {
+    "event": "click-done",
+    "text": "Hủy"
+  },
+  {
+    "event": "screenshot",
+    "file": "same-editor-cancel-scroll.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "ship-search-keyboard.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "fresh-report-saved.png"
+  },
+  {
+    "event": "screenshot",
+    "file": "conflict-before-keep.png"
+  },
+  {
+    "event": "click-start",
+    "text": "Tải bản mới, giữ ghi chú chưa lưu"
+  },
+  {
+    "event": "click-done",
+    "text": "Tải bản mới, giữ ghi chú chưa lưu"
+  },
+  {
+    "event": "screenshot",
+    "file": "conflict-kept-unsaved.png"
+  },
+  {
+    "event": "download-start",
+    "target": "fresh-portable.db"
+  },
+  {
+    "event": "menu-start",
+    "text": "Sao lưu mang đi"
+  },
+  {
+    "event": "menu-done",
+    "text": "Sao lưu mang đi"
+  },
+  {
+    "event": "download",
+    "file": "fresh-portable.db",
+    "suggested": "BAO_CAO_CA_20261108_170732_d34d.db",
+    "bytes": 77824,
+    "sha256": "ab3c138bcfda38356354859fd20fd0556bd30e0e2d5537e0f55e515fe44d9f63"
+  },
+  {
+    "event": "menu-start",
+    "text": "Mở DB kiểm tra / bổ sung"
+  },
+  {
+    "event": "menu-done",
+    "text": "Mở DB kiểm tra / bổ sung"
+  },
+  {
+    "event": "click-start",
+    "text": "Bật chỉnh sửa / bổ sung"
+  },
+  {
+    "event": "click-done",
+    "text": "Bật chỉnh sửa / bổ sung"
+  },
+  {
+    "event": "click-start",
+    "text": "Chọn tên này"
+  },
+  {
+    "event": "click-done",
+    "text": "Chọn tên này"
+  },
+  {
+    "event": "download-start",
+    "target": "fresh-reviewer.db"
+  },
+  {
+    "event": "click-start",
+    "text": "Xuất DB đã bổ sung"
+  },
+  {
+    "event": "click-done",
+    "text": "Xuất DB đã bổ sung"
+  },
+  {
+    "event": "download",
+    "file": "fresh-reviewer.db",
+    "suggested": "DB_BO_SUNG_20261108_170733_9a54.db",
+    "bytes": 77824,
+    "sha256": "de07eff3e23e712ad7b76fadc9445cc9c065b0bae3d9dffb6e02534f86d07ae9"
+  },
+  {
+    "event": "click-start",
+    "text": "Về DB chính của máy"
+  },
+  {
+    "event": "click-done",
+    "text": "Về DB chính của máy"
+  },
+  {
+    "event": "menu-start",
+    "text": "Nhập bổ sung từ DB"
+  },
+  {
+    "event": "menu-done",
+    "text": "Nhập bổ sung từ DB"
+  },
+  {
+    "event": "screenshot",
+    "file": "correction-exact-diff.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 45456,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  },
+  {
+    "event": "launch",
+    "readinessSeconds": 1.537615800043568,
+    "pid": 63124,
+    "headless": false,
+    "browser": "156.0.8078.81",
+    "exeSha256": "759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b"
+  },
+  {
+    "event": "screenshot",
+    "file": "fresh-reopened.png"
+  },
+  {
+    "event": "menu-start",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "menu-done",
+    "text": "Thoát tool"
+  },
+  {
+    "event": "exit",
+    "pid": 63124,
+    "exitCode": 0,
+    "sessionFileRemoved": true
+  }
+]

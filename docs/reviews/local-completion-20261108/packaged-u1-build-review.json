@@ -1,0 +1,24 @@
+{
+  "status": "EXACT_BUILD_PROVENANCE_ACCEPTED_NATIVE_ACCEPTANCE_PENDING",
+  "risk": "R2",
+  "worker": "Sol packaging; Astra disclosed U1 repair independently reviewed by Root",
+  "reviewer": "Astra independent build/evidence REVIEWER",
+  "candidate": "02d1e26f174a073750d9991d9b4749c7ad8f86ea",
+  "exeSha256": "759064b9b750406996c921383ce930e437b7262cf8cd769ba7da875bbd6df66b",
+  "exeBytes": 13191601,
+  "candidateRecord": {
+    "path": "docs/reviews/local-completion-20261108/packaged/candidate-02d1e26.json",
+    "sha256": "38f8f27d52958f857cfd1afa09fb63ebe34645c2566d2f57881701e19390268c"
+  },
+  "sourceReturn": {
+    "path": "docs/reviews/local-completion-20261108/u1-repair/source-review-return.json",
+    "sha256": "d8f72aa7a2196aae9b368fad6263c9f844cd1ace77be1f1a8e44c916d824332d"
+  },
+  "checks": [
+    "All24 working source hashes match returned manifest and exact committed Git blobs.",
+    "Actual EXE hash and size independently match; build/smoke logs hash-match, build success and1.10.0/02d1e26 launcher metadata observed.",
+    "Clean Git before/after build recorded; later review/continuity artifacts are subsequent writes, not represented as clean now."
+  ],
+  "impact": "Only two opening scroll calls and related JS tests differ from d8de candidate. Root independently reviewed this reviewer-local source repair; this artifact does not self-approve that repair. Backend/fullPython211 and unchanged print/CSS bodies retain scoped prior evidence.",
+  "pending": "Actual new-EXE U1/same-editor and representative print/restart plus remaining mandatory L1-L8 evidence. No product closure."
+}
