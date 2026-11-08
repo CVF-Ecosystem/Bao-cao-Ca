@@ -2,4 +2,8 @@ BẢN 1.9.2 — NHẬP DANH MỤC NHÂN VIÊN EXCEL
 
 Bổ sung nhập bảng nhân viên .xlsx phẳng: chọn sheet, hàng tiêu đề và cột; xem từng dòng, loại dòng và xác nhận trước khi thêm. Chỉ lưu họ tên; mã, chức danh, nhóm không được lưu hay dùng phân tổ. Không nhận bảng báo cáo ca hoặc file có macro/mã hóa. Danh mục có tên ngừng hoạt động hoặc DB chưa đồng bộ được từ chối để tránh thay đổi ngoài ý muốn. Danh mục cũ được sao lưu trước khi nhập; nếu phục hồi chưa xác minh, giữ bản sao và báo rõ.
 
-Nghiệm thu EXE Windows, kiểm thử độc lập và toàn bộ release vẫn đang thực hiện; không xem nội dung này là bằng chứng phát hành.
+Bằng chứng kỹ thuật: 191 kiểm thử Python qua, không bỏ qua; sáu nhóm JavaScript đã qua trên cùng các byte giao diện và kiểm thử không đổi. EXE 1.9.2 được build từ commit 7ce0305b6000, qua kiểm tra khởi động; luồng Chrome có giao diện trên Windows đã thực hiện nhập, chọn người, lưu ca, thoát/mở lại và xuất bằng dữ liệu giả lập. Kiểm tra dùng tải file qua trường chọn file của trình duyệt; hộp thoại chọn file gốc Windows chưa được kiểm thử. Python 3.9 chưa được kiểm thử.
+
+Astra đã nghiệm thu độc lập đợt nhập Excel E1–E6; hồ sơ tại docs/reviews/personnel-import-20261108/native-e6-review.json. Chưa có nghiệm thu nghiệp vụ, kiểm thử in hay nghiệm thu toàn bộ roadmap sản phẩm. Kết quả trên không chứng minh tốc độ thao tác của người dùng thực tế.
+
+Bằng chứng đã ghi: docs/reviews/personnel-import-20261108/release-r3-final.json; docs/reviews/personnel-import-20261108/native/headed-e6-proof.json; docs/reviews/personnel-import-20261108/native/persistence-export-proof.json.

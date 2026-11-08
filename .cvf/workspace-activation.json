@@ -12,12 +12,12 @@
     "sourceRoute": "PINNED_CORE"
   },
   "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
-  "reviewer": "Astra independent PNI action reviewer",
-  "authority": "Operator2026-11-08 audit-and-proceed request; independently accepted exact PNI E1-E6 packet and actual control observations",
+  "reviewer": "Astra independent terminal REVIEWER",
+  "authority": "Operator audit-and-proceed authority; Astra independent exact terminal PNI E1-E6 acceptance; documentary REVIEW only, no future BUILD grant",
   "actions": [
     {
       "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+      "sha256": "844b8966139b5821e774a9b8717bd33b645c9b540f01a4c915e9db1f7fdccae3",
       "criteria": [
         "E1",
         "E2",
@@ -40,8 +40,8 @@
       "disposition": "ASSESSED",
       "reviewEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r3/SUPPLEMENTAL_ASSESSMENT.json",
-          "sha256": "7710411d095a29ff7e44aed2982c244eb03478c53c7bf77f1faab889c91decf5"
+          "path": "docs/reviews/personnel-import-20261108/reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "307370c7c38be77d5322d5ad7d0ca80a681a39b2f719e5680c6375610922e317"
         }
       ]
     }
@@ -50,8 +50,8 @@
     {
       "id": "CVF-DG-INST-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
-      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "authority": "Operator audit-and-proceed authority; Astra independent exact terminal PNI E1-E6 acceptance; documentary REVIEW only, no future BUILD grant",
+      "reason": "Actual terminal observation PASS: ; local mechanical assessment only, no provider governance claim.",
       "actions": [
         "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
       ],
@@ -65,13 +65,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-r3-before-receipt.json",
-        "sha256": "ea8a01f4c171aeefa897f4a069400b4a49b29d583b518255d887c25be1c78886"
+        "path": "docs/reviews/personnel-import-20261108/terminal-before-receipt.json",
+        "sha256": "33c89d8258f66c144f69d34e0d1a835bbe0657402a7d546dd4f8061ccb977cc7"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+          "sha256": "844b8966139b5821e774a9b8717bd33b645c9b540f01a4c915e9db1f7fdccae3",
           "criteria": [
             "E1",
             "E2",
@@ -88,16 +88,16 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r3/CVF-DG-INST-01.json",
-          "sha256": "101e87f955adee049f1aac5b0e80100675b274e8c3793d308ea4cd2fb193b79d"
+          "path": "docs/reviews/personnel-import-20261108/reviews-terminal/CVF-DG-INST-01.json",
+          "sha256": "cd9f1a7e99e3512a4682df26c26272ff08765915af2aa611daa5160c7ebb0693"
         }
       ]
     },
     {
       "id": "CVF-DG-CONT-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
-      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "authority": "Operator audit-and-proceed authority; Astra independent exact terminal PNI E1-E6 acceptance; documentary REVIEW only, no future BUILD grant",
+      "reason": "Actual terminal observation PASS: ; local mechanical assessment only, no provider governance claim.",
       "actions": [
         "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
       ],
@@ -111,13 +111,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-r3-before-receipt.json",
-        "sha256": "ea8a01f4c171aeefa897f4a069400b4a49b29d583b518255d887c25be1c78886"
+        "path": "docs/reviews/personnel-import-20261108/terminal-before-receipt.json",
+        "sha256": "33c89d8258f66c144f69d34e0d1a835bbe0657402a7d546dd4f8061ccb977cc7"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+          "sha256": "844b8966139b5821e774a9b8717bd33b645c9b540f01a4c915e9db1f7fdccae3",
           "criteria": [
             "E1",
             "E2",
@@ -134,16 +134,16 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r3/CVF-DG-CONT-01.json",
-          "sha256": "a776acc3fb231414d79b2fe36f482fcfb82a61b1e3f58dfa853c4b6279b1cff3"
+          "path": "docs/reviews/personnel-import-20261108/reviews-terminal/CVF-DG-CONT-01.json",
+          "sha256": "52059949acab908c9e1735e293cf642365b284d00f67c9f5260f086629508724"
         }
       ]
     },
     {
       "id": "CVF-DG-RANGE-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
-      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "authority": "Operator audit-and-proceed authority; Astra independent exact terminal PNI E1-E6 acceptance; documentary REVIEW only, no future BUILD grant",
+      "reason": "Actual terminal observation PASS: WORKTREE_SCOPE mode=WORKTREE_SCOPE base=None head=7ce0305b6000f4895be4910a93d9bf9d9a01ad95 candidates=54 deleted=0; local mechanical assessment only, no provider governance claim.",
       "actions": [
         "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
       ],
@@ -157,13 +157,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-r3-before-receipt.json",
-        "sha256": "ea8a01f4c171aeefa897f4a069400b4a49b29d583b518255d887c25be1c78886"
+        "path": "docs/reviews/personnel-import-20261108/terminal-before-receipt.json",
+        "sha256": "33c89d8258f66c144f69d34e0d1a835bbe0657402a7d546dd4f8061ccb977cc7"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+          "sha256": "844b8966139b5821e774a9b8717bd33b645c9b540f01a4c915e9db1f7fdccae3",
           "criteria": [
             "E1",
             "E2",
@@ -180,16 +180,16 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r3/CVF-DG-RANGE-01.json",
-          "sha256": "a356ea6a3d45e5bd1c9440f08691f77545ae92a1dbb8f69b4564cd9e5320cc94"
+          "path": "docs/reviews/personnel-import-20261108/reviews-terminal/CVF-DG-RANGE-01.json",
+          "sha256": "a967499bfbf5e78ddd556d92f5c5a32f49d8f7229154c25867dc016be9e8e245"
         }
       ]
     },
     {
       "id": "CVF-DG-APPL-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
-      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "authority": "Operator audit-and-proceed authority; Astra independent exact terminal PNI E1-E6 acceptance; documentary REVIEW only, no future BUILD grant",
+      "reason": "Actual terminal observation NOT_APPLICABLE_WITH_REASON: every candidate is explicitly not active; closeability contract was not checked; local mechanical assessment only, no provider governance claim.",
       "actions": [
         "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
       ],
@@ -201,15 +201,15 @@
         "E5",
         "E6"
       ],
-      "disposition": "APPLIED",
+      "disposition": "NOT_APPLICABLE_WITH_EVIDENCE",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-r3-before-receipt.json",
-        "sha256": "ea8a01f4c171aeefa897f4a069400b4a49b29d583b518255d887c25be1c78886"
+        "path": "docs/reviews/personnel-import-20261108/terminal-before-receipt.json",
+        "sha256": "33c89d8258f66c144f69d34e0d1a835bbe0657402a7d546dd4f8061ccb977cc7"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+          "sha256": "844b8966139b5821e774a9b8717bd33b645c9b540f01a4c915e9db1f7fdccae3",
           "criteria": [
             "E1",
             "E2",
@@ -226,16 +226,16 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r3/CVF-DG-APPL-01.json",
-          "sha256": "7c0a44c3855eb457fa3d3ea5849a3f45565f5b5243765f5118a0febd2bc69cc4"
+          "path": "docs/reviews/personnel-import-20261108/reviews-terminal/CVF-DG-APPL-01.json",
+          "sha256": "f69c7747e0d458aebf62329fe5067efa71737cda049035cf529bf1112e984094"
         }
       ]
     },
     {
       "id": "CVF-DG-ROUTE-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
-      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "authority": "Operator audit-and-proceed authority; Astra independent exact terminal PNI E1-E6 acceptance; documentary REVIEW only, no future BUILD grant",
+      "reason": "Actual terminal observation PASS: checked: docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md; local mechanical assessment only, no provider governance claim.",
       "actions": [
         "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
       ],
@@ -249,13 +249,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-r3-before-receipt.json",
-        "sha256": "ea8a01f4c171aeefa897f4a069400b4a49b29d583b518255d887c25be1c78886"
+        "path": "docs/reviews/personnel-import-20261108/terminal-before-receipt.json",
+        "sha256": "33c89d8258f66c144f69d34e0d1a835bbe0657402a7d546dd4f8061ccb977cc7"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+          "sha256": "844b8966139b5821e774a9b8717bd33b645c9b540f01a4c915e9db1f7fdccae3",
           "criteria": [
             "E1",
             "E2",
@@ -272,16 +272,16 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r3/CVF-DG-ROUTE-01.json",
-          "sha256": "bd0929df6d8f29c778e1384ab42961c03364d126fc2e709cc82e0f78e772bf93"
+          "path": "docs/reviews/personnel-import-20261108/reviews-terminal/CVF-DG-ROUTE-01.json",
+          "sha256": "47bd6a0ab627efa5c289272c6ed695e90eb577f64c26ccc2879a366d61277bbd"
         }
       ]
     },
     {
       "id": "CVF-DG-COV-01",
       "owner": "Root orchestrator",
-      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
-      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "authority": "Operator audit-and-proceed authority; Astra independent exact terminal PNI E1-E6 acceptance; documentary REVIEW only, no future BUILD grant",
+      "reason": "Actual terminal observation PASS: checked: docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md, docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md; mechanical joins only; Local owns semantic acceptance; local mechanical assessment only, no provider governance claim.",
       "actions": [
         "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
       ],
@@ -295,13 +295,13 @@
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/personnel-import-20261108/predispatch-r3-before-receipt.json",
-        "sha256": "ea8a01f4c171aeefa897f4a069400b4a49b29d583b518255d887c25be1c78886"
+        "path": "docs/reviews/personnel-import-20261108/terminal-before-receipt.json",
+        "sha256": "33c89d8258f66c144f69d34e0d1a835bbe0657402a7d546dd4f8061ccb977cc7"
       },
       "actionBindings": [
         {
           "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-          "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+          "sha256": "844b8966139b5821e774a9b8717bd33b645c9b540f01a4c915e9db1f7fdccae3",
           "criteria": [
             "E1",
             "E2",
@@ -318,8 +318,8 @@
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r3/CVF-DG-COV-01.json",
-          "sha256": "55d3dd40af2e343df74e4001bb733bbb2957bd0404aec94a0ea3a2125f5a04bf"
+          "path": "docs/reviews/personnel-import-20261108/reviews-terminal/CVF-DG-COV-01.json",
+          "sha256": "8ba6f1b9ee0e6ceff3d5c34b22670b82244200a186605425f66ad8b7649398f2"
         }
       ]
     }

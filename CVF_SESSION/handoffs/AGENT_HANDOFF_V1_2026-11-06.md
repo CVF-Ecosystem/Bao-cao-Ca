@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: SO_BAO_CAO_CA_V1_9
-- Current mode: REVIEW
-- Active phase: REVIEW
-- Active role: ORCHESTRATOR
-- Next allowed move: Root commits exact accepted r3 source; Sol rebuilds that clean HEAD and executes E6 Windows consumer proof; Astra terminal evidence review before criterion/product closure.
+- Current mode: FREEZE
+- Active phase: FREEZE
+- Active role: SESSION_SYNC_STEWARD
+- Next allowed move: PNI E1-E6 settled. Next product move is roadmap prioritization and a separate assessed work order for E7 or original D2-D5; no current BUILD or operator checkpoint.
 - Parked operator checkpoint: none
 
 ## Accepted current workspace
@@ -96,3 +96,18 @@ Sol acknowledged r3 BUILD/REPAIR_WORKER in its appended return, changed only req
 ## PNI r3 accepted source / new candidate stewardship — 2026-11-08
 
 Astra accepted source-candidate-r3-review.json exact18LF files (4build/test/license changes,14unchanged) and release-r3-final.json191PythonPASS0skip with unchanged6JS/4workspace and actual source-smoke execution. Root verified all raw hashes. First candidate378dab6 build failure remains retained; no EXE/native claim. Root resumes COMMIT_STEWARD for the corrected clean local candidate then ORCHESTRATOR for Sol E6; original r3action7bf5cb remains exact and original budgets/stop conditions continue. No tracked evidence writes before clean build/smoke.
+
+
+## PNI packaged return / external documentation repair acknowledgment — 2026-11-08
+
+Root rehydrated REVIEW and received successful clean7ce0305b6000 EXE build/smoke plus headed consumer observations; Astra independently verified source/build and is completing E6 review. Terra rehydrated and declared REPAIR_WORKER only for assigned HUONG_DAN.txt and THAY_DOI_V1_9_2.txt external release prose; neither is packaged by DONG_GOI. Application/build/test source and EXE remain frozen. Root retains ORCHESTRATOR and session stewardship; no milestone closure until independent E6 disposition and terminal exact action gates.
+
+
+## PNI accepted terminal acknowledgment — 2026-11-08
+
+Root rehydrated REVIEW frontdoors and received Astra independent E6 ACCEPTED at native-e6-review.json before taking CLOSER responsibility. Source candidate7ce0305b6000 and EXE08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484 bind the accepted1.9.2. Technical release191Python0skip/6JS/4workspace, exact clean build/smoke and actual headed synthetic import/picker/save/exit/restart/export preserve old report/revision/four other catalog files.37artifact hashes verified. E1–E6 accepted; native file dialog/Python3.9/default-browser auto-opening/printing/business and full original roadmap unproved. Timing is automation-only.
+
+FREEZE records the settled PNI product slice; Root SESSION_SYNC_STEWARD/COMMIT_STEWARD completes exact terminal REVIEW assessment/gates and local commit before claiming tranche closure. Two external user documents receive only status/guidance correction and are not packaged;16other accepted files and binary stay frozen. Terminal action844b8966139b5821e774a9b8717bd33b645c9b540f01a4c915e9db1f7fdccae3 grants no future implementation. E7, identity, team mapping, sync and original D2–D5 remain with Orchestrator for independent future scope. Original authority/failures retained; no budget reset, operator wait, push or deployment.
+
+
+Terminal gate receipt: Astra terminal-review.json independently accepts exact844b8966 REVIEW action and two external-doc updates. Current activation binds that exact action; fresh pre-dispatch, worker-return and reviewer-fast exit0. APPL is explicitly NOT_APPLICABLE_WITH_REASON for CLOSED_ACCEPTED, not a closeability PASS. doctor-terminal.json is CORE_ASSESSED29/29 plus4explicitbootstrapPASS. Root COMMIT_STEWARD runs final pre-commit before the local terminal records commit; no future BUILD grant, public release or deployment. Source/binary custody is in terminal-preservation.json. This records commit is the closure artifact; subsequent source remains the accepted7ce0305b6000 binary.

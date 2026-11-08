@@ -2,15 +2,15 @@
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
   "updatedAt": "2026-11-08",
-  "claimBoundary": "Source-verified runtime entries only; PNI source accepted with technical tests, exact packaged consumer proof remains pending.",
+  "claimBoundary": "Only the implemented PNI flat-XLSX first slice is accepted by source/tests and exact packaged headed synthetic flow; no whole-product or AI governance claim.",
   "modules": [
     {
       "id": "personnel-excel-import",
       "name": "Flat personnel Excel import",
       "path": "ma_nguon/PERSONNEL_XLSX.py",
-      "status": "PARTIAL",
-      "description": "Bounded XLSX reader, server preview/confirm/cancel, additive catalog owner and UI implemented and independently source-reviewed. Exact packaged E6 consumer proof pending; no employee-ID or team mapping migration.",
-      "evidence": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json; release-r3-final.json:191 Python plus unchanged6 JavaScript/4workspace and source smoke evidence accepted; exact packaged consumer proof pending."
+      "status": "ENFORCED",
+      "description": "Bounded flat-XLSX name-only additive catalog import with inspect/preview/exclude/confirm/cancel and preserved existing-owner semantics; independent exact EXE headed consumer proof accepted. No identity/team mapping migration.",
+      "evidence": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json; release-r3-final.json:191Python0skip,6JS/4workspace; native-e6-review.json: exact1.9.2 EXE7ce0305b6000 headed import/picker/save/restart/export accepted; scope limits retained."
     }
   ]
 }

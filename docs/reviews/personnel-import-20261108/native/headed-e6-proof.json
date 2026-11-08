@@ -1,0 +1,152 @@
+{
+  "candidateCommit": "7ce0305b6000f4895be4910a93d9bf9d9a01ad95",
+  "action": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+  "buildMetadata": {
+    "commit": "7ce0305b6000",
+    "built_at": "2026-11-08T06:31:39.302409+00:00",
+    "version": "1.9.2"
+  },
+  "exeSha256": "08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484",
+  "exeSize": 13150510,
+  "platform": "Windows10 build26200 x64",
+  "python": "3.11.9",
+  "browser": "Google Chrome156.0.8078.81",
+  "browserAutomation": "Installed PythonPlaywright1.61.0, chromium.launch(channel=chrome,headless=False), actual locator click/fill/select/check/set_input_files and expect_download",
+  "applicationLaunch": "Exact EXE --no-browser --data-dir <unique disposable parent>/data/DU_LIEU; headed browser navigates local launch URL; sibling DANH_MUC isolated",
+  "uiMutationRoute": "All catalog/import/report/save/shutdown workflow steps through real visible UI; no API/store mutation substituted. Read-only SQLite/ZIP checks after UI. Ancillary abandoned bootstrap/benchmark servers shut down through shutdown API only for cleanup.",
+  "osFileDialog": "NOT_TESTED",
+  "browserFileInputUpload": "EXERCISED",
+  "cuaControl": "Initialization failed os error3 for cua_repl and node_repl; completion_summary recorded; Root and Astra routed existing headed Playwright fallback",
+  "buildExitCode": 0,
+  "packagedSmokeExitCode": 0,
+  "screenshots": [
+    {
+      "file": "01-new-old-report-dialog.png",
+      "capturedUtc": "2026-11-08T06:35:10.885948+00:00",
+      "sha256": "9c3a3d42861deebe051d9a9f97c8f168431f525ed2f4312cea033dcf55fa0aad"
+    },
+    {
+      "file": "02-old-report-saved.png",
+      "capturedUtc": "2026-11-08T06:35:25.693883+00:00",
+      "sha256": "8fb4a4477db2c63453212b10a16a0521f30db43467ee55d05c47f31f45c2d4be"
+    },
+    {
+      "file": "03-inspect-mapping.png",
+      "capturedUtc": "2026-11-08T06:35:49.550009+00:00",
+      "sha256": "3c79af4081d8dcc1301b6d9a6c1cdb6d4e79d492c471c3edf176a67831a8e847"
+    },
+    {
+      "file": "04-preview-oracle.png",
+      "capturedUtc": "2026-11-08T06:35:51.753798+00:00",
+      "sha256": "a6f58aa8b6807f295d8c1e20f87f1d43c8a2cb568058b199626c4fdb8f579638"
+    },
+    {
+      "file": "05-excluded-row.png",
+      "capturedUtc": "2026-11-08T06:36:15.432026+00:00",
+      "sha256": "db2777d67a709a30749457bb3c54d41149d9d7827694d615b1e858e63cad37e9"
+    },
+    {
+      "file": "06-cancel-no-write.png",
+      "capturedUtc": "2026-11-08T06:36:17.667254+00:00",
+      "sha256": "2381ae6ee701614b9aa97dd4ffdd38af60ca641bce1a3f16be0346baf8de4c4d"
+    },
+    {
+      "file": "07-import-confirmed.png",
+      "capturedUtc": "2026-11-08T06:36:51.533939+00:00",
+      "sha256": "fe7d1f44bb34e2767fa6283e89944c7dfc6af6b2b488838ba8bda3151a1f2674"
+    },
+    {
+      "file": "08-repeat-noop.png",
+      "capturedUtc": "2026-11-08T06:37:27.624578+00:00",
+      "sha256": "9ba960ec868301d58004c0b203fa131d30aa0441be3430eb47b4f90eb9fe099b"
+    },
+    {
+      "file": "09-new-report-editor.png",
+      "capturedUtc": "2026-11-08T06:37:36.002304+00:00",
+      "sha256": "eb364e768f4ff7f338448c5543674d20e11addd2f6b8abbdddfa6041bcdab33e"
+    },
+    {
+      "file": "10-picker-new-person.png",
+      "capturedUtc": "2026-11-08T06:37:52.118489+00:00",
+      "sha256": "10441673d8229fb7d101e2c6eaa3878a6794545fbda43bb09f597a379becee9c"
+    },
+    {
+      "file": "11-new-report-saved.png",
+      "capturedUtc": "2026-11-08T06:38:06.395374+00:00",
+      "sha256": "9626fc555daebed63f02268efb67fbbbb0bfc48fb221df2a1699c373c52a374e"
+    },
+    {
+      "file": "12-graceful-exit.png",
+      "capturedUtc": "2026-11-08T06:38:08.586773+00:00",
+      "sha256": "95e42cd74ce6fd901fe6679b3fd9cf8fa7f2b6ccb66d7dc220577eee42309e05"
+    },
+    {
+      "file": "13-relaunched-home.png",
+      "capturedUtc": "2026-11-08T06:38:39.435814+00:00",
+      "sha256": "a06fd069f9677f22f53d1066b3b1ed75a64fdd57b9a38e1a4a67849aea63e934"
+    },
+    {
+      "file": "14-reopened-person-persisted.png",
+      "capturedUtc": "2026-11-08T06:38:58.049919+00:00",
+      "sha256": "9a0968e4b923100a134c21bcc2ccde0d60cab962fa240e834100b96ec4758c78"
+    },
+    {
+      "file": "15-old-report-unchanged.png",
+      "capturedUtc": "2026-11-08T06:38:59.235950+00:00",
+      "sha256": "c6cfc07f767c6064c9249a3e8020fa33f7453dbc37c8874176aae3affe1179a7"
+    },
+    {
+      "file": "16-final-exit.png",
+      "capturedUtc": "2026-11-08T06:38:59.882814+00:00",
+      "sha256": "95e42cd74ce6fd901fe6679b3fd9cf8fa7f2b6ccb66d7dc220577eee42309e05"
+    }
+  ],
+  "benchmark": {
+    "method": "Two separate fresh disposable roots on same EXE/Chrome with same one-existing/two-new synthetic list. Timed from catalog-opening click through successful modal-close. Automated fill is instantaneous, excludes human reading/typing and spreadsheet preparation; one run per route, no performance superiority claim.",
+    "results": [
+      {
+        "mode": "manual",
+        "elapsedSeconds": 0.28235960006713867,
+        "userInteractions": 3,
+        "expectedAndActualPeople": [
+          "PNI Người Mới A",
+          "PNI Người Mới B",
+          "PNI Đã Có"
+        ],
+        "processExitCode": 0
+      },
+      {
+        "mode": "import",
+        "elapsedSeconds": 0.4916512998752296,
+        "userInteractions": 5,
+        "expectedAndActualPeople": [
+          "PNI Người Mới A",
+          "PNI Người Mới B",
+          "PNI Đã Có"
+        ],
+        "processExitCode": 0
+      }
+    ]
+  },
+  "harnessFailures": [
+    {
+      "stage": "First UI driver bootstrap",
+      "reason": "stdin EOF after initial home observation closed initial browser; no workflow data entered; separate live queue driver used"
+    },
+    {
+      "stage": "Supplemental timing attempt",
+      "reason": "Unmatched parenthesis in read-only timing helper; no state mutation; replaced by independently timed paired UI benchmark"
+    },
+    {
+      "stage": "First paired benchmark setup",
+      "reason": "Harness waited for .hide to be visible; modal had correctly closed. Fixed wait to attached; fresh roots used; no product defect"
+    }
+  ],
+  "productFindings": [],
+  "notTested": [
+    "Native Windows file dialog interaction",
+    "Python3.9 runtime execution",
+    "Business acceptance or original full product roadmap"
+  ],
+  "conclusion": "Observed exact-EXE headed E6 evidence returned for independent Astra acceptance; worker does not self-approve milestone closure"
+}

@@ -1,0 +1,24 @@
+from pathlib import Path
+import json,time,subprocess,sys
+from playwright.sync_api import sync_playwright
+ROOT=Path('.').resolve();base=ROOT/'.cvf/runtime/personnel-import-20261108';run=base/'headed-r3-live';data=run/'data/DU_LIEU';proof=[]
+with sync_playwright() as p:
+ browser=p.chromium.launch(channel='chrome',headless=False)
+ for cycle in (1,2):
+  assert not (data/'PHIEN_DANG_CHAY.json').exists()
+  proc=subprocess.Popen([str(ROOT/'SO_BAO_CAO_CA.exe'),'--no-browser','--data-dir',str(data)],cwd=run,creationflags=subprocess.CREATE_NO_WINDOW)
+  for _ in range(200):
+   if (data/'PHIEN_DANG_CHAY.json').exists():break
+   time.sleep(.05)
+  session=json.loads((data/'PHIEN_DANG_CHAY.json').read_text());ctx=browser.new_context(viewport={'width':1440,'height':1000});page=ctx.new_page();page.on('dialog',lambda d:d.accept())
+  page.goto('http://127.0.0.1:'+str(session['port'])+'/?launch='+session['token'])
+  page.locator('#home button:text-is("Mở báo cáo")').first.wait_for()
+  body=page.locator('body').inner_text();assert 'PNI Người Mới A' in body and page.locator('#home button:text-is("Mở báo cáo")').count()==2
+  page.screenshot(path=str(run/('17-process-cycle'+str(cycle)+'-relaunched.png')),full_page=True)
+  page.locator('button:text-is("Thoát tool")').click();proc.wait(timeout=15)
+  assert proc.returncode==0 and not (data/'PHIEN_DANG_CHAY.json').exists()
+  proof.append(dict(cycle=cycle,launchedPid=proc.pid,exitCode=proc.returncode,sessionAbsentBeforeLaunch=True,sessionAbsentAfterExit=True,twoExistingReportsVisible=True,importedChiefVisible=True))
+  ctx.close()
+ browser.close()
+(base/'process-relaunch-proof.json').write_text(json.dumps(dict(supplementalSameDataCycle=True,reason='Original workflow first PID overwritten during restart; original exit/relaunch screenshots and pre-restart session-absence retained; this finite cycle records exact process identity/exit without inference.',cycles=proof),indent=2)+'\n',encoding='utf-8')
+print(json.dumps(proof))

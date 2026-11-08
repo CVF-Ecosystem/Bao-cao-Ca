@@ -1,0 +1,22 @@
+{
+  "status": "ROUTING_ACCEPTED_EVIDENCE_PENDING",
+  "risk": "R2",
+  "worker": "Sol native verification",
+  "reviewer": "Astra independent REVIEWER",
+  "actionSha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+  "candidate": "7ce0305b6000f4895be4910a93d9bf9d9a01ad95",
+  "basis": "Locked E6 requires actual clean committed Windows EXE headed consumer flow; WO explicitly requires native/headless/file-picker scope disclosure and treats skipped cases as NOT_TESTED. The application UI is browser-backed. Actual headed Chrome UI automation against the exact EXE backend is within this scope when no headless or API mutation substitutes for required user interactions.",
+  "route": "Preinstalled Python Playwright headed Chrome after reported CUA kernel asset failure; no new installation, source or effect class.",
+  "requiredEvidence": [
+    "Preserved CUA failure and explicit fallback; browser launch headless=False and visible UI screenshots",
+    "Exact EXE hash, commit, process and disposable data-root binding",
+    "Real UI inspect/map/exclude/preview/confirm, Chon nguoi, report creation/save and export/download",
+    "Actual EXE termination and relaunch; persisted catalog/report oracle and old-report preservation",
+    "Same synthetic list manual/import steps and measured timing; disclose automated interaction timing limits"
+  ],
+  "filePickerScope": {
+    "WindowsNativeDialog": "NOT_TESTED",
+    "browserFileInputUpload": "Must be evidenced separately; not a native-dialog PASS"
+  },
+  "limits": "Routing acceptance only. E6 and product acceptance remain pending actual evidence; no provider governance claim."
+}

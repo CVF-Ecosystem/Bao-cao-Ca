@@ -1,0 +1,124 @@
+{
+  "candidate": "7ce0305b6000f4895be4910a93d9bf9d9a01ad95",
+  "nonDocFiles": 16,
+  "nonDocFilesUnchanged": true,
+  "checks": [
+    {
+      "path": "ma_nguon/MAY_CHU.py",
+      "candidateSha256": "ca55728d8dc6e7204a5fdcdcbd5b29d16276b49fce334318f87324bf5e74d1c9",
+      "currentSha256": "ca55728d8dc6e7204a5fdcdcbd5b29d16276b49fce334318f87324bf5e74d1c9",
+      "equal": true
+    },
+    {
+      "path": "ma_nguon/QUAN_LY_DANH_MUC.py",
+      "candidateSha256": "681a3c102d8155bfb6d676c615e6b9d09e37e6e7411089ce9b2e41c412e75924",
+      "currentSha256": "681a3c102d8155bfb6d676c615e6b9d09e37e6e7411089ce9b2e41c412e75924",
+      "equal": true
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "candidateSha256": "bf5164a7a8bfe6736c4cd12f550579beb4d2716853ea12a9b6d3cc90976fdeaf",
+      "currentSha256": "bf5164a7a8bfe6736c4cd12f550579beb4d2716853ea12a9b6d3cc90976fdeaf",
+      "equal": true
+    },
+    {
+      "path": "ma_nguon/PERSONNEL_XLSX.py",
+      "candidateSha256": "58f083074587553f3d62e66ba01105143c9e5576dc0ff397245d53bd23d563d2",
+      "currentSha256": "58f083074587553f3d62e66ba01105143c9e5576dc0ff397245d53bd23d563d2",
+      "equal": true
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "candidateSha256": "8bb55f2045c4d8ce1b603075da076f6fb7c7774f2c807bb5a2693990d118a097",
+      "currentSha256": "8bb55f2045c4d8ce1b603075da076f6fb7c7774f2c807bb5a2693990d118a097",
+      "equal": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_API.py",
+      "candidateSha256": "87b25e55b88606f3dc34b1669f09532770a2f97e78bdf7b0101a33709054d798",
+      "currentSha256": "87b25e55b88606f3dc34b1669f09532770a2f97e78bdf7b0101a33709054d798",
+      "equal": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_UI.js",
+      "candidateSha256": "5b69324837679c73ab47e882498e10cf4ee848354f548433d53989a7ca4efd0a",
+      "currentSha256": "5b69324837679c73ab47e882498e10cf4ee848354f548433d53989a7ca4efd0a",
+      "equal": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_XLSX.py",
+      "candidateSha256": "c37e4499ed5b28863e2088fa1366c1f58a1f4ea23d1cdff02e4b61bce1e6ede9",
+      "currentSha256": "c37e4499ed5b28863e2088fa1366c1f58a1f4ea23d1cdff02e4b61bce1e6ede9",
+      "equal": true
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PHAT_HANH.py",
+      "candidateSha256": "1f0b9b83176cd7b696b454721a588ebfadd041bd3e9083f7134a4cefba2eba04",
+      "currentSha256": "1f0b9b83176cd7b696b454721a588ebfadd041bd3e9083f7134a4cefba2eba04",
+      "equal": true
+    },
+    {
+      "path": "cong_cu/DONG_GOI.py",
+      "candidateSha256": "2ddad11b77d3a9c3bf6bbc24fe70ecb4687c26c097e105e7133452be4d801479",
+      "currentSha256": "2ddad11b77d3a9c3bf6bbc24fe70ecb4687c26c097e105e7133452be4d801479",
+      "equal": true
+    },
+    {
+      "path": "cong_cu/TAO_FILE_EXE.bat",
+      "candidateSha256": "823e72787bf8a61fabd41798425e8f0f601865f720a37ebd6077242c42af82b4",
+      "currentSha256": "823e72787bf8a61fabd41798425e8f0f601865f720a37ebd6077242c42af82b4",
+      "equal": true
+    },
+    {
+      "path": "requirements.txt",
+      "candidateSha256": "6277d17aa658a18f49d19ef8e43b8a5be0477a072ae19bf52e0613fec23b74e9",
+      "currentSha256": "6277d17aa658a18f49d19ef8e43b8a5be0477a072ae19bf52e0613fec23b74e9",
+      "equal": true
+    },
+    {
+      "path": "requirements-build.txt",
+      "candidateSha256": "5464a122989898d0649ac2c703311ca64b0a480b0754be5b20835e0cccfe6818",
+      "currentSha256": "5464a122989898d0649ac2c703311ca64b0a480b0754be5b20835e0cccfe6818",
+      "equal": true
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "candidateSha256": "c64796b63340e6fbd0bf50a7ca7548bd2bbe698941cabd61d9ce958dcffb5c4f",
+      "currentSha256": "c64796b63340e6fbd0bf50a7ca7548bd2bbe698941cabd61d9ce958dcffb5c4f",
+      "equal": true
+    },
+    {
+      "path": "pyproject.toml",
+      "candidateSha256": "0e1f9df3707ec1a335d1ceb30829c9ef63a49f4c5cab9972bb92456625fb481e",
+      "currentSha256": "0e1f9df3707ec1a335d1ceb30829c9ef63a49f4c5cab9972bb92456625fb481e",
+      "equal": true
+    },
+    {
+      "path": "tai_lieu/API.md",
+      "candidateSha256": "9b2550f3efc92b82fa6ba093dba61bac3a2919eb774457661c1868aaae535ecd",
+      "currentSha256": "9b2550f3efc92b82fa6ba093dba61bac3a2919eb774457661c1868aaae535ecd",
+      "equal": true
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_9_2.txt",
+      "candidateSha256": "57bacd1f3022728e56e464a329727f4d373bdd414a15ddfa72652c8feccee3c4",
+      "currentSha256": "7ad5fa868d3f1f7f4dbdfc1832bb3f6cb05923a6c41d721a70fa71a9bd6895ed",
+      "equal": false
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "candidateSha256": "637b764ab56acacfb6c5c8b89c78425c5f2163f6d3ef18f0e27e370f86aa1bac",
+      "currentSha256": "e01591831d0809f2f1f2daf825ab53bd176de76e17d78d5c6d6494e909324931",
+      "equal": false
+    }
+  ],
+  "documentationDisposition": "Only guide/changelog external prose changed after build; not bundled by DONG_GOI; original candidate manifests remain immutable",
+  "exeSha256": "08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484",
+  "exeSize": 13150510,
+  "nativeManifest": {
+    "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+    "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
+  },
+  "nativeArtifactsVerified": 37,
+  "claimBoundary": "Current PNI E1-E6 only; no provider governance or whole-product claim"
+}

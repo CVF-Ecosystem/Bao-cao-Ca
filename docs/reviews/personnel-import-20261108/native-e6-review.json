@@ -1,0 +1,84 @@
+{
+  "status": "ACCEPTED",
+  "risk": "R2",
+  "worker": "Terra integration / Sol reader-packaging and native verification",
+  "reviewer": "Astra independent REVIEWER",
+  "criterion": "PNI E6",
+  "action": {
+    "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+    "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c"
+  },
+  "candidateCommit": "7ce0305b6000f4895be4910a93d9bf9d9a01ad95",
+  "exeSha256": "08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484",
+  "evidence": [
+    {
+      "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+      "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/native/headed-e6-proof.json",
+      "sha256": "9e1aff209b60ca8e6de8bbc445da6f26e6beb9ad698b0693c80d1ecb8ba92e94"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/native/worker-sol-native.md",
+      "sha256": "91185372aca0b7c84e8ff285d0c709c6b85978320aa74e2060446fb07b7d3dea"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/native/process-relaunch-proof.json",
+      "sha256": "18d6cea4906a5c81ef58c834d457a4cfd294419a5829b187cf7f0021e5200fa3"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/native/persistence-export-proof.json",
+      "sha256": "fb60160a192a359462ce1b6e458b36e7ebf18e3c611e4b80b1c9406219213ee5"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/native/frozen-parser-proof.json",
+      "sha256": "0e34c0262a96b875e62e1dde38e51ff6cb901b7f5f0b3ee527708d950df69da0"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/native/manual-import-benchmark.json",
+      "sha256": "adcbd14035285d82463092c29725b73dc8218b21c4bd073bc05bb7061fae1d7e"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+      "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+      "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+      "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/native-routing-review.json",
+      "sha256": "aaa99a44a3ff9cf99a24f141e7abd0fb05ee041abdac7e83a10c7814984f07cb"
+    }
+  ],
+  "independentChecks": [
+    "All18 candidate Git blobs independently matched reviewed source hashes; local EXE hash08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484 and size13150510 verified; build/smoke identify1.9.2 at7ce0305b6000",
+    "All37 final native artifact hashes verified;16 main screenshot hashes, synthetic fixture and downloaded export hashes verified",
+    "Visually inspected preview, exclusion, repeated no-op, person picker, exit, relaunched home, reopened imported person and unchanged old report screenshots",
+    "Read original and sanitized drivers: actual headless=False Chrome and UI locator operations; no API/store write substitution for consumer flow",
+    "Independent read-only SQLite comparison: old report and revision objects exactly equal baseline; three exact expected names without duplicates",
+    "Independent downloaded XLSX hash and XML inspection confirm imported chief and saved notes",
+    "Actual process relaunch supplement records two successful exit0 cycles with session absence and persisted reports; original missing PID/exitcode disclosed",
+    "Frozen parser metadata/code-equivalence plus successful guarded import support parser selection in exercised EXE path; inference correctly qualified"
+  ],
+  "assessment": "E6 accepted for exact Windows EXE headed browser-backed consumer flow: import/preview/exclusion/cancel/no-op, picker, report save, exit/relaunch, persistence and UI export corroborated. Source E1-E5 review and applicable technical release evidence remain accepted; Root may reconcile PNI E1-E6 terminal metadata and gates.",
+  "benchmark": {
+    "manualSeconds": 0.28235960006713867,
+    "manualInteractions": 3,
+    "importSeconds": 0.4916512998752296,
+    "importInteractions": 5,
+    "limits": "One automated run per route with same synthetic list; instantaneous text fill, excludes human reading/typing and workbook preparation. No human time-saving or superiority claim."
+  },
+  "notTested": [
+    "Native Windows file dialog (browser file-input upload exercised)",
+    "Python3.9 runtime execution",
+    "Business acceptance and unrelated original product roadmap"
+  ],
+  "remaining": "Root terminal metadata/custody/gates/commit and separately reviewed external two-document release-truth update; no EXE rebuild for external documentation only. E7 and original roadmap remainder remain separate.",
+  "claimBoundary": "Development acceptance of PNI E6 on the bound local EXE and synthetic workflow, not public release/deployment, universal safety, business acceptance or live provider governance."
+}

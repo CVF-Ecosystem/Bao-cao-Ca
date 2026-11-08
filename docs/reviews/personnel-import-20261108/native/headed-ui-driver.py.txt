@@ -1,0 +1,49 @@
+from pathlib import Path
+import json,sys,subprocess,time,os,datetime
+from playwright.sync_api import sync_playwright
+sys.stdout.reconfigure(encoding='utf-8')
+ROOT=Path('.').resolve();RUN=ROOT/'.cvf/runtime/personnel-import-20261108/headed-r3-live'
+RUN.mkdir(parents=True,exist_ok=False)
+DATA=RUN/'data/DU_LIEU';DATA.parent.mkdir()
+exe=ROOT/'SO_BAO_CAO_CA.exe'
+proc=subprocess.Popen([str(exe),'--no-browser','--data-dir',str(DATA)],cwd=RUN,creationflags=subprocess.CREATE_NO_WINDOW)
+(RUN/'process.json').write_text(json.dumps({'pid':proc.pid,'exe':str(exe),'dataDir':str(DATA)}))
+for _ in range(300):
+ if (DATA/'PHIEN_DANG_CHAY.json').exists():break
+ if proc.poll() is not None:raise RuntimeError('EXE exited '+str(proc.returncode))
+ time.sleep(.1)
+state=json.loads((DATA/'PHIEN_DANG_CHAY.json').read_text())
+pw=sync_playwright().start();browser=pw.chromium.launch(channel='chrome',headless=False)
+context=browser.new_context(viewport={'width':1440,'height':1000},accept_downloads=True)
+page=context.new_page();page.on('dialog',lambda dialog:dialog.accept())
+page.goto('http://127.0.0.1:'+str(state['port'])+'/?launch='+state['token']);page.wait_for_timeout(600)
+print(json.dumps({'ready':True,'browser':browser.version,'body':page.locator('body').inner_text()[:6000]},ensure_ascii=False),flush=True)
+last_command = ''
+while True:
+ queue = RUN/'commands.json'
+ if not queue.exists() or queue.read_text(encoding='utf-8') == last_command:
+  time.sleep(.1)
+  continue
+ last_command=queue.read_text(encoding='utf-8')
+ line=last_command
+ try:
+  command=json.loads(line)
+  for a in command:
+   kind=a['action']
+   if kind=='click':page.locator(a['selector']).click()
+   elif kind=='fill':page.locator(a['selector']).fill(a['value'])
+   elif kind=='select':page.locator(a['selector']).select_option(a['value'])
+   elif kind=='upload':page.locator(a['selector']).set_input_files(a['path'])
+   elif kind=='check':page.locator(a['selector']).check()
+   elif kind=='uncheck':page.locator(a['selector']).uncheck()
+   elif kind=='wait':page.wait_for_timeout(a.get('ms',400))
+   elif kind=='snapshot':
+    page.screenshot(path=str(RUN/(a['name']+'.png')),full_page=True)
+    print(json.dumps({'snapshot':a['name'],'body':page.locator('body').inner_text()[:16000]},ensure_ascii=False),flush=True)
+   elif kind=='download':
+    with page.expect_download() as d:page.locator(a['selector']).click()
+    target=RUN/a['name'];d.value.save_as(target);print(json.dumps({'download':str(target),'size':target.stat().st_size}),flush=True)
+   elif kind=='read':print(json.dumps({'text':page.locator(a['selector']).inner_text()},ensure_ascii=False),flush=True)
+   elif kind=='inputs':print(json.dumps(page.locator('input,select,textarea,button').evaluate_all('(els)=>els.map(e=>({tag:e.tagName,id:e.id,type:e.type,text:e.innerText,value:e.value,placeholder:e.placeholder,visible:!!e.getClientRects().length}))'),ensure_ascii=False),flush=True)
+  print('DONE',flush=True)
+ except Exception as e:print(json.dumps({'error':type(e).__name__,'message':str(e)}),flush=True)

@@ -1,0 +1,76 @@
+{
+  "fixture": "PNI_SYNTHETIC.xlsx",
+  "sha256": "fdf9c5692606f55f569012b1322f52ae9360696b3500d951f13f73b1ec4bfd9d",
+  "syntheticOnly": true,
+  "baselineCatalog": [
+    "PNI Đã Có"
+  ],
+  "expectedCounts": {
+    "new": 2,
+    "existing": 1,
+    "error": 0,
+    "excluded": 0
+  },
+  "expectedAdded": [
+    "PNI Người Mới A",
+    "PNI Người Mới B"
+  ],
+  "expectedPersistedFields": [
+    "name"
+  ],
+  "forbiddenAutomaticEffects": [
+    "team assignment",
+    "DAY/NIGHT change",
+    "old report/revision change"
+  ],
+  "actualReaderPlan": {
+    "sheet": "Nhân sự thử",
+    "headerRow": 1,
+    "columns": {
+      "name": 2,
+      "code": 1,
+      "title": 3,
+      "group": 4
+    },
+    "counts": {
+      "new": 2,
+      "existing": 1,
+      "error": 0,
+      "excluded": 0
+    },
+    "rows": [
+      {
+        "row": 2,
+        "name": "PNI Đã Có",
+        "code": "0001",
+        "title": "Thử nghiệm",
+        "group": "Ca ngày",
+        "status": "EXISTING",
+        "messages": []
+      },
+      {
+        "row": 3,
+        "name": "PNI Người Mới A",
+        "code": "0002",
+        "title": "Thử nghiệm",
+        "group": "Ca 1",
+        "status": "NEW",
+        "messages": []
+      },
+      {
+        "row": 4,
+        "name": "PNI Người Mới B",
+        "code": "0003",
+        "title": "Thử nghiệm",
+        "group": "Nhãn lạ",
+        "status": "NEW",
+        "messages": []
+      }
+    ],
+    "canConfirm": true,
+    "newNames": [
+      "PNI Người Mới A",
+      "PNI Người Mới B"
+    ]
+  }
+}

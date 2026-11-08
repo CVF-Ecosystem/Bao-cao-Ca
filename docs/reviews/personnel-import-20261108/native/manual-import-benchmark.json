@@ -1,0 +1,27 @@
+{
+  "method": "Two separate fresh disposable roots on same EXE/Chrome with same one-existing/two-new synthetic list. Timed from catalog-opening click through successful modal-close. Automated fill is instantaneous, excludes human reading/typing and spreadsheet preparation; one run per route, no performance superiority claim.",
+  "results": [
+    {
+      "mode": "manual",
+      "elapsedSeconds": 0.28235960006713867,
+      "userInteractions": 3,
+      "expectedAndActualPeople": [
+        "PNI Người Mới A",
+        "PNI Người Mới B",
+        "PNI Đã Có"
+      ],
+      "processExitCode": 0
+    },
+    {
+      "mode": "import",
+      "elapsedSeconds": 0.4916512998752296,
+      "userInteractions": 5,
+      "expectedAndActualPeople": [
+        "PNI Người Mới A",
+        "PNI Người Mới B",
+        "PNI Đã Có"
+      ],
+      "processExitCode": 0
+    }
+  ]
+}

@@ -1,3 +1,19 @@
+BẢN 1.9.2 — NHẬP DANH MỤC NHÂN VIÊN EXCEL
+
+Mở Danh mục nhân sự / công việc → Nhập nhân viên Excel. Chọn file .xlsx
+bảng danh sách phẳng, sheet, hàng tiêu đề và cột; xem trước, loại dòng không
+muốn nhập rồi xác nhận. Chỉ họ tên được thêm vào danh mục hiện có; mã, chức
+danh và nhóm chỉ dùng khi xem trước. Không tự gán tổ, đổi định danh hoặc
+đồng bộ ứng dụng. Hướng dẫn chi tiết ở phần nhập Excel phía cuối tài liệu.
+
+Bản EXE 1.9.2 từ mã 7ce0305b6000 đã qua kiểm tra khởi động và luồng nhập,
+chọn người, lưu ca, thoát/mở lại và xuất trong Chrome có giao diện trên Windows,
+với dữ liệu giả lập. Hộp thoại chọn file gốc của Windows và Python 3.9 chưa
+được kiểm thử. Astra đã nghiệm thu độc lập đợt nhập Excel E1–E6; chưa có nghiệm thu nghiệp vụ,
+in hoặc toàn bộ roadmap sản phẩm. Xem tai_lieu\THAY_DOI_V1_9_2.txt.
+
+================ HƯỚNG DẪN 1.9.1 VÀ LỊCH SỬ ================
+
 BẢN 1.9.1 — XEM tai_lieu\THAY_DOI_V1_9_1.txt
 
 Khởi động bỏ các lượt kiểm tra DB trùng, giữ nguyên kiểm tra đầy đủ khi sao lưu.

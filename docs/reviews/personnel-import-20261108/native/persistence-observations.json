@@ -1,0 +1,76 @@
+{
+  "before": {
+    "oldReport": {
+      "id": "2026-11-07_DAY",
+      "day": "2026-11-07",
+      "shift": "DAY",
+      "version": 1,
+      "status": "draft",
+      "created_at": "2026-11-08T13:35:24+07:00",
+      "updated_at": "2026-11-08T13:35:24+07:00",
+      "actor": "PNI Đã Có",
+      "payload": "{\"date\": \"2026-11-07\", \"shift\": \"DAY\", \"actor\": \"PNI Đã Có\", \"status\": \"draft\", \"notes\": \"PNI BASELINE OLD REPORT - giữ nguyên\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"\"}, {\"role\": \"HÀNG RỖNG\", \"people\": \"\"}, {\"role\": \"HÀNG NHẬP\", \"people\": \"\"}, {\"role\": \"GATE\", \"people\": \"\"}, {\"role\": \"CỔNG\", \"people\": \"\"}, {\"role\": \"CFS\", \"people\": \"\"}, {\"role\": \"TALLY TÀU\", \"people\": \"\"}, {\"role\": \"CHECKPOINT\", \"people\": \"\"}, {\"role\": \"XUẤT TÀU\", \"people\": \"\"}, {\"role\": \"XÀ LAN\", \"people\": \"\"}, {\"role\": \"KHB (KẾ HOẠCH BÃI)\", \"people\": \"\"}, {\"role\": \"BÙ\", \"people\": \"\"}, {\"role\": \"PHÉP\", \"people\": \"\"}], \"jobs\": [{\"name\": \"TRẢI LÓT PHÁO\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN LÓT PHÁO\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI DỌN LẤY NGUYÊN\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI CẤP RỖNG\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI DỌN KHÁC\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN CHẤT SẮT\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN NHẬP TÀU\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN NHẬP TẠM\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"NHẬP TẠM\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}], \"handover\": []}"
+    },
+    "oldRevisions": [
+      {
+        "id": 1,
+        "report_id": "2026-11-07_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T13:35:24+07:00",
+        "actor": "PNI Đã Có",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-11-07\", \"shift\": \"DAY\", \"actor\": \"PNI Đã Có\", \"status\": \"draft\", \"notes\": \"PNI BASELINE OLD REPORT - giữ nguyên\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"\"}, {\"role\": \"HÀNG RỖNG\", \"people\": \"\"}, {\"role\": \"HÀNG NHẬP\", \"people\": \"\"}, {\"role\": \"GATE\", \"people\": \"\"}, {\"role\": \"CỔNG\", \"people\": \"\"}, {\"role\": \"CFS\", \"people\": \"\"}, {\"role\": \"TALLY TÀU\", \"people\": \"\"}, {\"role\": \"CHECKPOINT\", \"people\": \"\"}, {\"role\": \"XUẤT TÀU\", \"people\": \"\"}, {\"role\": \"XÀ LAN\", \"people\": \"\"}, {\"role\": \"KHB (KẾ HOẠCH BÃI)\", \"people\": \"\"}, {\"role\": \"BÙ\", \"people\": \"\"}, {\"role\": \"PHÉP\", \"people\": \"\"}], \"jobs\": [{\"name\": \"TRẢI LÓT PHÁO\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN LÓT PHÁO\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI DỌN LẤY NGUYÊN\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI CẤP RỖNG\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI DỌN KHÁC\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN CHẤT SẮT\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN NHẬP TÀU\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN NHẬP TẠM\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"NHẬP TẠM\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}], \"handover\": []}"
+      }
+    ],
+    "catalogHashes": {
+      "CONG_VIEC.txt": "7f2de984f58f0f5b0ff1dd2480e1411089f1f82a03a59ca3596183ec71381470",
+      "MAU_PHAN_CONG.json": "fa5d081a7627ed7b45efcf94f73596db737b4777e7a7dd096c7b67dcda280a19",
+      "NHAN_VIEN.txt": "7a8707a2653dbb3e8c09ee1eae4440d9e77d293ae015dc417c80bdd655e03b3b",
+      "TO_NHAN_SU.json": "3037f3e626dcb2ba24af924e2c53ec11fc6422b43d89a0a7dea17a39c9681f35",
+      "VI_TRI.txt": "287d14b1f9081624f83823f035e1f16e0a77b106770d1898c087b4fd669ca3c2"
+    }
+  },
+  "after": {
+    "oldReport": {
+      "id": "2026-11-07_DAY",
+      "day": "2026-11-07",
+      "shift": "DAY",
+      "version": 1,
+      "status": "draft",
+      "created_at": "2026-11-08T13:35:24+07:00",
+      "updated_at": "2026-11-08T13:35:24+07:00",
+      "actor": "PNI Đã Có",
+      "payload": "{\"date\": \"2026-11-07\", \"shift\": \"DAY\", \"actor\": \"PNI Đã Có\", \"status\": \"draft\", \"notes\": \"PNI BASELINE OLD REPORT - giữ nguyên\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"\"}, {\"role\": \"HÀNG RỖNG\", \"people\": \"\"}, {\"role\": \"HÀNG NHẬP\", \"people\": \"\"}, {\"role\": \"GATE\", \"people\": \"\"}, {\"role\": \"CỔNG\", \"people\": \"\"}, {\"role\": \"CFS\", \"people\": \"\"}, {\"role\": \"TALLY TÀU\", \"people\": \"\"}, {\"role\": \"CHECKPOINT\", \"people\": \"\"}, {\"role\": \"XUẤT TÀU\", \"people\": \"\"}, {\"role\": \"XÀ LAN\", \"people\": \"\"}, {\"role\": \"KHB (KẾ HOẠCH BÃI)\", \"people\": \"\"}, {\"role\": \"BÙ\", \"people\": \"\"}, {\"role\": \"PHÉP\", \"people\": \"\"}], \"jobs\": [{\"name\": \"TRẢI LÓT PHÁO\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN LÓT PHÁO\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI DỌN LẤY NGUYÊN\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI CẤP RỖNG\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI DỌN KHÁC\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN CHẤT SẮT\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN NHẬP TÀU\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN NHẬP TẠM\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"NHẬP TẠM\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}], \"handover\": []}"
+    },
+    "oldRevisions": [
+      {
+        "id": 1,
+        "report_id": "2026-11-07_DAY",
+        "version": 1,
+        "saved_at": "2026-11-08T13:35:24+07:00",
+        "actor": "PNI Đã Có",
+        "reason": "Lưu nháp",
+        "payload": "{\"date\": \"2026-11-07\", \"shift\": \"DAY\", \"actor\": \"PNI Đã Có\", \"status\": \"draft\", \"notes\": \"PNI BASELINE OLD REPORT - giữ nguyên\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"\"}, {\"role\": \"HÀNG RỖNG\", \"people\": \"\"}, {\"role\": \"HÀNG NHẬP\", \"people\": \"\"}, {\"role\": \"GATE\", \"people\": \"\"}, {\"role\": \"CỔNG\", \"people\": \"\"}, {\"role\": \"CFS\", \"people\": \"\"}, {\"role\": \"TALLY TÀU\", \"people\": \"\"}, {\"role\": \"CHECKPOINT\", \"people\": \"\"}, {\"role\": \"XUẤT TÀU\", \"people\": \"\"}, {\"role\": \"XÀ LAN\", \"people\": \"\"}, {\"role\": \"KHB (KẾ HOẠCH BÃI)\", \"people\": \"\"}, {\"role\": \"BÙ\", \"people\": \"\"}, {\"role\": \"PHÉP\", \"people\": \"\"}], \"jobs\": [{\"name\": \"TRẢI LÓT PHÁO\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN LÓT PHÁO\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI DỌN LẤY NGUYÊN\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI CẤP RỖNG\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI DỌN KHÁC\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN CHẤT SẮT\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN NHẬP TÀU\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN NHẬP TẠM\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"NHẬP TẠM\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}], \"handover\": []}"
+      }
+    ],
+    "newReport": {
+      "id": "2026-11-08_NIGHT",
+      "day": "2026-11-08",
+      "shift": "NIGHT",
+      "version": 3,
+      "status": "draft",
+      "created_at": "2026-11-08T13:37:33+07:00",
+      "updated_at": "2026-11-08T13:38:03+07:00",
+      "actor": "PNI Người Mới A",
+      "payload": "{\"date\": \"2026-11-08\", \"shift\": \"NIGHT\", \"actor\": \"PNI Người Mới A\", \"status\": \"draft\", \"notes\": \"PNI NEW NIGHT REPORT - imported person\", \"staffing\": [{\"role\": \"PHỤ TRÁCH CHUNG\", \"people\": \"PNI Người Mới A\"}, {\"role\": \"HÀNG RỖNG\", \"people\": \"\"}, {\"role\": \"HÀNG NHẬP\", \"people\": \"\"}, {\"role\": \"GATE\", \"people\": \"\"}, {\"role\": \"CỔNG\", \"people\": \"\"}, {\"role\": \"CFS\", \"people\": \"\"}, {\"role\": \"TALLY TÀU\", \"people\": \"\"}, {\"role\": \"CHECKPOINT\", \"people\": \"\"}, {\"role\": \"XUẤT TÀU\", \"people\": \"\"}, {\"role\": \"XÀ LAN\", \"people\": \"\"}, {\"role\": \"KHB (KẾ HOẠCH BÃI)\", \"people\": \"\"}, {\"role\": \"BÙ\", \"people\": \"\"}, {\"role\": \"PHÉP\", \"people\": \"\"}], \"jobs\": [{\"name\": \"TRẢI LÓT PHÁO\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN LÓT PHÁO\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI DỌN LẤY NGUYÊN\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI CẤP RỖNG\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỜI DỌN KHÁC\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN CHẤT SẮT\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN NHẬP TÀU\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"DỌN NHẬP TẠM\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}, {\"name\": \"NHẬP TẠM\", \"detail\": \"\", \"xn\": false, \"rtg\": false, \"f20\": null, \"f40\": null, \"e20\": null, \"e40\": null}], \"handover\": []}"
+    },
+    "catalogHashes": {
+      "CONG_VIEC.txt": "7f2de984f58f0f5b0ff1dd2480e1411089f1f82a03a59ca3596183ec71381470",
+      "MAU_PHAN_CONG.json": "fa5d081a7627ed7b45efcf94f73596db737b4777e7a7dd096c7b67dcda280a19",
+      "NHAN_VIEN.txt": "7e064221aae08905d2201709d54a05b3d718e8d2e54226b212c8a74314301b3b",
+      "TO_NHAN_SU.json": "3037f3e626dcb2ba24af924e2c53ec11fc6422b43d89a0a7dea17a39c9681f35",
+      "VI_TRI.txt": "287d14b1f9081624f83823f035e1f16e0a77b106770d1898c087b4fd669ca3c2"
+    }
+  },
+  "syntheticOnly": true
+}

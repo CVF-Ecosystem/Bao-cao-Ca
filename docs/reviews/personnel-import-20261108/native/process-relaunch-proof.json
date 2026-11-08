@@ -1,0 +1,24 @@
+{
+  "supplementalSameDataCycle": true,
+  "reason": "Original workflow first PID overwritten during restart; original exit/relaunch screenshots and pre-restart session-absence retained; this finite cycle records exact process identity/exit without inference.",
+  "cycles": [
+    {
+      "cycle": 1,
+      "launchedPid": 44284,
+      "exitCode": 0,
+      "sessionAbsentBeforeLaunch": true,
+      "sessionAbsentAfterExit": true,
+      "twoExistingReportsVisible": true,
+      "importedChiefVisible": true
+    },
+    {
+      "cycle": 2,
+      "launchedPid": 70432,
+      "exitCode": 0,
+      "sessionAbsentBeforeLaunch": true,
+      "sessionAbsentAfterExit": true,
+      "twoExistingReportsVisible": true,
+      "importedChiefVisible": true
+    }
+  ]
+}

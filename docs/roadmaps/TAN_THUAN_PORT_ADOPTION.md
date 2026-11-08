@@ -1,8 +1,8 @@
 # Đối chiếu tan-thuan-port và roadmap bổ sung nhân sự
 
-Status: SOURCE_ACCEPTED_NATIVE_PENDING
+Status: CLOSED_ACCEPTED
 
-Ngày: 2026-11-08. Đối chiếu/thiết kế đã được audit độc lập; PNI E1–E6 đang triển khai theo work order được chấp nhận. Roadmap sản phẩm gốc vẫn là [ROADMAP_SAU_V1_9.md](../../tai_lieu/ROADMAP_SAU_V1_9.md). Phiên bản ứng viên1.9.2 chưa được nghiệm thu/phát hành. Các phần khảo sát bên dưới giữ lại quyết định và giới hạn quan sát ban đầu.
+Ngày: 2026-11-08. Đối chiếu/thiết kế và đợt nhập Excel PNI E1–E6 đã được Astra nghiệm thu độc lập. Roadmap sản phẩm gốc vẫn là [ROADMAP_SAU_V1_9.md](../../tai_lieu/ROADMAP_SAU_V1_9.md). Bản EXE1.9.2 từ7ce0305b6000 đã qua nghiệm thu kỹ thuật và luồng Chrome có giao diện trên Windows bằng dữ liệu giả lập. Các phần khảo sát bên dưới giữ lại quyết định và giới hạn quan sát ban đầu.
 
 ## Tiếp tục được yêu cầu — 2026-11-08
 
@@ -12,7 +12,7 @@ Căn cứ độc lập: `docs/reviews/personnel-import-20261108/audit-astra.md`;
 
 ## 1. Kết luận về tính phù hợp
 
-**Phù hợp nhất: nhập danh mục nhân sự từ Excel có xem trước, kiểm tra lỗi và xác nhận.** Nên tận dụng cơ chế danh mục và mẫu phân công sẵn có của Sổ báo cáo ca. Lợi ích kỳ vọng là giảm nhập lại danh sách người và tổ; chưa có số đo thời gian tiết kiệm hoặc tần suất cập nhật để định lượng.
+**Phù hợp nhất: nhập danh mục nhân sự từ Excel có xem trước, kiểm tra lỗi và xác nhận.** Nên tận dụng cơ chế danh mục và mẫu phân công sẵn có của Sổ báo cáo ca. Lợi ích kỳ vọng là giảm nhập lại danh sách người và tổ; chưa có số đo thời gian tiết kiệm cho người dùng thật hoặc tần suất cập nhật để định lượng.
 
 Việc này phù hợp hướng một ứng dụng desktop/web dùng chung nghiệp vụ. Không cần mang theo React, IndexedDB, hệ thống đồng bộ hay toàn bộ mô-đun nhân sự của tan-thuan-port. Khác biệt dữ liệu quan trọng nhất là Sổ báo cáo ca hiện nhận diện người bằng họ tên; dự án tham khảo có mã nhân viên. Vì vậy, đợt nhập đầu chỉ bổ sung danh mục theo mô hình hiện tại, phải từ chối trường hợp không thể phân biệt an toàn.
 
@@ -160,9 +160,9 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
       "decision": "Require all E1-E6 scope/evidence and exact admission; keep E7 and unrelated product gaps open"
     }
   },
-  "phase": "PLAN",
+  "phase": "REVIEW",
   "action": {
-    "kind": "PLAN",
+    "kind": "REVIEW",
     "selected": [
       "E1",
       "E2",
@@ -171,19 +171,19 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
       "E5",
       "E6"
     ],
-    "owner": "Root orchestrator",
-    "output": "docs/specs/PERSONNEL_EXCEL_IMPORT.md and docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-    "budgetMinutes": 30,
-    "stop": "Stop on changed business/data/effect boundary or unresolved independent design blocker",
-    "next": "Independently assess exact implementation packet and require successful fresh pre-dispatch"
+    "owner": "Root CLOSER/COMMIT_STEWARD with independent Astra terminal review",
+    "output": "Terminal PNI E1-E6 acceptance and synchronized continuity; no future BUILD grant",
+    "budgetMinutes": 15,
+    "stop": "Stop on failed terminal checks, source drift or missing independent acceptance; original budget ceilings continue without reset",
+    "next": "Commit reviewed terminal records; E7 and original D2-D5 require separate future governed scope"
   },
   "rows": [
     {
       "id": "E1",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Application source accepted and unchanged during build-only correction;191Python plus inherited6JS/4workspace source proof accepted; packaged/native corroboration pending",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
           "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
@@ -192,15 +192,27 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
         {
           "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
           "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     },
     {
       "id": "E2",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Application source accepted and unchanged during build-only correction;191Python plus inherited6JS/4workspace source proof accepted; packaged/native corroboration pending",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
           "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
@@ -209,15 +221,27 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
         {
           "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
           "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     },
     {
       "id": "E3",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Application source accepted and unchanged during build-only correction;191Python plus inherited6JS/4workspace source proof accepted; packaged/native corroboration pending",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
           "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
@@ -226,15 +250,27 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
         {
           "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
           "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     },
     {
       "id": "E4",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Application source accepted and unchanged during build-only correction;191Python plus inherited6JS/4workspace source proof accepted; packaged/native corroboration pending",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
           "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
@@ -243,15 +279,27 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
         {
           "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
           "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     },
     {
       "id": "E5",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Application source accepted and unchanged during build-only correction;191Python plus inherited6JS/4workspace source proof accepted; packaged/native corroboration pending",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
           "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
@@ -260,15 +308,27 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
         {
           "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
           "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     },
     {
       "id": "E6",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "First real build failure retained; corrected graph/source accepted with191PythonPASS; new exact committed EXE and native consumer proof pending",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
           "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
@@ -277,19 +337,80 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
         {
           "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
           "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     }
   ],
   "supportingWork": [],
   "conclusions": {
-    "tranche": "PENDING",
-    "trancheSummary": "Corrected build-only source candidate independently accepted; new clean commit, exact EXE and E6 native evidence still required",
-    "trancheEvidence": [],
-    "product": "PENDING",
-    "productSummary": "PNI first slice not yet product-accepted; E7 and original roadmap gaps separately owned",
-    "acceptance": [],
-    "owner": "Root orchestrator"
+    "tranche": "COMPLETE",
+    "trancheSummary": "PNI E1-E6 implemented, independent source and actual packaged headed flow accepted at7ce0305b6000; doc-only terminal updates external to EXE",
+    "trancheEvidence": [
+      {
+        "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+        "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+        "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+        "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+        "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+        "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
+      }
+    ],
+    "product": "COMPLETE",
+    "productSummary": "Only PNI E1-E6 first useful personnel import milestone accepted; E7, stable identity, team mapping, sync and original D2-D5/full product acceptance remain separately owned",
+    "acceptance": [
+      {
+        "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+        "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+        "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+        "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+        "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+        "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
+      }
+    ],
+    "owner": "Root closer"
   }
 }
 ```
+
+
+## Kết quả đợt nhập Excel — 2026-11-08
+
+E1–E6 đã nghiệm thu: xem trước/loại dòng/hủy/thêm có xác nhận, nhập lại không trùng, chọn người mới để lưu ca, thoát/mở lại và xuất Excel.191 kiểm thử Python không bỏ qua,6 nhóm JavaScript,4 kiểm thử workspace, build/smoke và luồng headed EXE đều đạt trong phạm vi hồ sơ. Reviewer độc lập: [native-e6-review.json](../reviews/personnel-import-20261108/native-e6-review.json). EXE giữ nguồn7ce0305b6000; cập nhật tài liệu ngoài EXE không đổi binary.
+
+Hộp thoại chọn file Windows, Python3.9, tự mở trình duyệt mặc định, in và nghiệm thu nghiệp vụ chưa được chứng minh. So sánh nhập tay/Excel chỉ đo thao tác tự động một lượt, không kết luận tiết kiệm thời gian cho người thật. E7/gợi ý tổ chỉ mở sau quyết định ánh xạ riêng; định danh mã nhân viên, bảng phân công, đồng bộ và D2–D5 của roadmap gốc chưa làm. Orchestrator tiếp tục quản lý các phần còn lại theo roadmap gốc; không tự mở BUILD mới từ hồ sơ đóng này.

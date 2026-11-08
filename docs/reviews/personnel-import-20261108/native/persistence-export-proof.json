@@ -1,0 +1,23 @@
+{
+  "exactPeople": [
+    "PNI Đã Có",
+    "PNI Người Mới A",
+    "PNI Người Mới B"
+  ],
+  "noDuplicates": true,
+  "oldReportAndRevisionUnchanged": true,
+  "otherFourFilesUnchanged": {
+    "CONG_VIEC.txt": true,
+    "MAU_PHAN_CONG.json": true,
+    "TO_NHAN_SU.json": true,
+    "VI_TRI.txt": true
+  },
+  "newReportId": "2026-11-08_NIGHT",
+  "newShift": "NIGHT",
+  "newChief": "PNI Người Mới A",
+  "exportSha256": "88b7f47d470dc7ed0fd864acf4d114cafc9f157b374288bfc0e1fc90000b8166",
+  "exportSize": 6940,
+  "exportContainsImportedChief": true,
+  "exportContainsSavedNotes": true,
+  "sessionFileRemoved": true
+}

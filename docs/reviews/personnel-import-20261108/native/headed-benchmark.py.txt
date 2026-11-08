@@ -1,0 +1,38 @@
+from pathlib import Path
+import json,time,subprocess,sqlite3,sys
+from playwright.sync_api import sync_playwright
+sys.stdout.reconfigure(encoding='utf-8')
+ROOT=Path('.').resolve();base=ROOT/'.cvf/runtime/personnel-import-20261108'
+fixture=base/'native-preparation/PNI_SYNTHETIC.xlsx'
+results=[]
+with sync_playwright() as p:
+ browser=p.chromium.launch(channel='chrome',headless=False)
+ for mode in ['manual','import']:
+  run=base/('benchmark2-'+mode);run.mkdir(exist_ok=False)
+  data=run/'data/DU_LIEU';data.parent.mkdir()
+  proc=subprocess.Popen([str(ROOT/'SO_BAO_CAO_CA.exe'),'--no-browser','--data-dir',str(data)],cwd=run,creationflags=subprocess.CREATE_NO_WINDOW)
+  for _ in range(200):
+   if (data/'PHIEN_DANG_CHAY.json').exists():break
+   time.sleep(.05)
+  state=json.loads((data/'PHIEN_DANG_CHAY.json').read_text());ctx=browser.new_context(viewport={'width':1440,'height':1000});page=ctx.new_page();page.on('dialog',lambda d:d.accept())
+  page.goto('http://127.0.0.1:'+str(state['port'])+'/?launch='+state['token']);page.locator('summary:text-is("Cài đặt")').click();page.locator('button:text-is("Danh mục nhân sự / công việc")').click()
+  page.locator('#catalog_people').fill('PNI Đã Có');page.locator('button:text-is("Lưu danh mục")').click();page.locator('#modal.hide').wait_for(state='attached')
+  start=time.perf_counter()
+  page.locator('button:text-is("Danh mục nhân sự / công việc")').click()
+  if mode=='manual':
+   page.locator('#catalog_people').fill('PNI Đã Có\nPNI Người Mới A\nPNI Người Mới B')
+   page.locator('button:text-is("Lưu danh mục")').click();steps=3
+  else:
+   page.locator('button:text-is("Nhập nhân viên Excel")').click();page.locator('#personnelFile').set_input_files(str(fixture));page.locator('#personnelHeader').wait_for()
+   page.locator('button:text-is("Xem trước")').click();page.locator('button:text-is("Xác nhận thêm nhân viên")').click();steps=5
+  page.locator('#modal.hide').wait_for(state='attached');elapsed=time.perf_counter()-start
+  page.screenshot(path=str(run/'completed.png'),full_page=True)
+  with sqlite3.connect('file:'+str(data/'BAO_CAO_CA.db')+'?mode=ro',uri=True) as c:
+   names=[r[0] for r in c.execute('select name from people')]
+   assert sorted(names)==sorted(['PNI Đã Có','PNI Người Mới A','PNI Người Mới B'])
+  page.locator('button:text-is("Thoát tool")').click();proc.wait(timeout=15)
+  results.append(dict(mode=mode,elapsedSeconds=elapsed,userInteractions=steps,expectedAndActualPeople=names,processExitCode=proc.returncode))
+  ctx.close()
+ browser.close()
+(base/'manual-import-benchmark.json').write_text(json.dumps(dict(method='Two separate fresh disposable roots on same EXE/Chrome with same one-existing/two-new synthetic list. Timed from catalog-opening click through successful modal-close. Automated fill is instantaneous, excludes human reading/typing and spreadsheet preparation; one run per route, no performance superiority claim.',results=results),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(json.dumps(results,ensure_ascii=False))

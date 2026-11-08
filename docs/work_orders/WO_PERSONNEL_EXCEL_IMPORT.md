@@ -1,6 +1,6 @@
 # Personnel Excel catalog import
 
-Status: DISPATCH_READY
+Status: CLOSED_ACCEPTED
 docType: work_order
 dispatchKind: INITIAL
 Risk: R2
@@ -114,9 +114,9 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "decision": "Require all E1-E6 scope/evidence and exact admission; keep E7 and unrelated product gaps open"
     }
   },
-  "phase": "DISPATCH",
+  "phase": "REVIEW",
   "action": {
-    "kind": "IMPLEMENT",
+    "kind": "REVIEW",
     "selected": [
       "E1",
       "E2",
@@ -125,125 +125,246 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "E5",
       "E6"
     ],
-    "owner": "Sol build compatibility repair/native proof; Terra returned source frozen; Astra independent review",
-    "output": "PNI implementation, full technical proof and exact committed Windows EXE headed-consumer evidence",
-    "budgetMinutes": 180,
-    "stop": "Stop on budget boundary, scope/effect escape, unresolved substantial design drift, failed required gate or unavailable native proof; preserve partial evidence",
-    "next": "Review the bounded compatibility delta, Root new clean candidate, Sol exact E6 build/native evidence and terminal review"
+    "owner": "Root CLOSER/COMMIT_STEWARD with independent Astra terminal review",
+    "output": "Terminal PNI E1-E6 acceptance and synchronized continuity; no future BUILD grant",
+    "budgetMinutes": 15,
+    "stop": "Stop on failed terminal checks, source drift or missing independent acceptance; original budget ceilings continue without reset",
+    "next": "Commit reviewed terminal records; E7 and original D2-D5 require separate future governed scope"
   },
   "rows": [
     {
       "id": "E1",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     },
     {
       "id": "E2",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     },
     {
       "id": "E3",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     },
     {
       "id": "E4",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     },
     {
       "id": "E5",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     },
     {
       "id": "E6",
-      "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
-      "owner": "Terra integration / Sol reader and native proof / Astra independent review",
-      "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "state": "VERIFIED",
+      "gap": "",
+      "owner": "Root closer with Astra independent acceptance",
+      "destination": "docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+          "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+          "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+          "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
         }
       ]
     }
   ],
   "supportingWork": [],
   "conclusions": {
-    "tranche": "PENDING",
-    "trancheSummary": "Application source accepted; real first build exposed incompatible altgraph/setuptools graph; bounded compatibility repair awaiting exact action admission",
-    "trancheEvidence": [],
-    "product": "PENDING",
-    "productSummary": "PNI E1-E6 pending; E7 and original product roadmap gaps separately owned",
-    "acceptance": [],
-    "owner": "Root orchestrator"
+    "tranche": "COMPLETE",
+    "trancheSummary": "PNI E1-E6 implemented, independent source and actual packaged headed flow accepted at7ce0305b6000; doc-only terminal updates external to EXE",
+    "trancheEvidence": [
+      {
+        "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+        "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+        "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+        "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+        "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+        "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
+      }
+    ],
+    "product": "COMPLETE",
+    "productSummary": "Only PNI E1-E6 first useful personnel import milestone accepted; E7, stable identity, team mapping, sync and original D2-D5/full product acceptance remain separately owned",
+    "acceptance": [
+      {
+        "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+        "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+        "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/committed-candidate-r3.json",
+        "sha256": "7b1c7cd2c78494377af5e3ee8e24882a26723b763dcf85348e1de3c08b7ae498"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/native-e6-review.json",
+        "sha256": "98e54f967ab83bdbb483eb024d90d48ec8a4f732ee668a7d60135a0ed73ad66c"
+      },
+      {
+        "path": "docs/reviews/personnel-import-20261108/native/artifact-manifest.json",
+        "sha256": "257e6e4c58b2f2ecbf02b5d73e8d4b99873c05292b50eca70451fb150c49309b"
+      }
+    ],
+    "owner": "Root closer"
   }
 }
 ```
+
+
+## Terminal disposition — 2026-11-08
+
+Root assumes CLOSER/SESSION_SYNC_STEWARD after independent Astra native E6 acceptance. Exact source candidate7ce0305b6000 (1.9.2) built offline and passed packaged smoke;191Python0skip,6JavaScript groups and4workspace checks passed. Actual headed Chrome import/exclude/cancel/confirm/repeat/picker/report-save/exit/restart/export flow retained synthetic oracle and unchanged old report/revision/four unrelated catalog files. All37 native artifact hashes verified. Native Windows file dialog and Python3.9 runtime are NOT_TESTED; default-browser auto-open, printing, business acceptance and the original full product roadmap are unproved. No human speed improvement is claimed.
+
+Only external HUONG_DAN/changelog prose changed after candidate; neither is packaged.16other accepted source/build/test files and exact EXE stay frozen. Prior r3 packet/receipt, initial build/test/harness failures and frozen source manifests remain preserved. Terminal REVIEW action is documentary reconciliation, not a future BUILD grant. The15minute terminal allowance is a bounded subset of the original180minute execution/45minute support ceilings, never a reset. Root owns local commit; no push/deployment.

@@ -1,0 +1,19 @@
+{
+  "exeSha256": "08636207c3af1f2637f2f1cbb50c659d4d16e8390e2d55fb224895e090403484",
+  "frozenSourceFunctionsEqualAfterFilenameNormalization": {
+    "_library": true,
+    "_workbook": true,
+    "inspect_workbook": true,
+    "build_plan": true
+  },
+  "metadataEntries": {
+    "defusedxml-0.7.1.dist-info\\METADATA": "369d3cef64870daf849fba711cb8d05a7efe3c8d9ab0f763adc34079fe378bb1",
+    "et_xmlfile-2.0.0.dist-info\\METADATA": "0e97d7ea909ed0fbe03d88bc8b6f58677cee1b07bd3353ce361cd2405915204e",
+    "openpyxl-3.1.5.dist-info\\METADATA": "23f80ca9830dd89435da1710f26deda8f81e5409287e74540210c72627a4ad96"
+  },
+  "defusedxmlElementTreePresent": true,
+  "openpyxlXmlFunctionsPresent": true,
+  "lxmlAbsent": true,
+  "thirdPartyNoticeBundled": true,
+  "runtimeEvidence": "Headed exact-EXE inspect/preview/import succeeded. The extracted identical _library guard checks exact distribution versions, openpyxl LXML=False/DEFUSEDXML=True and fromstring/iterparse object identity to defusedxml before workbook loading. Successful guarded operations therefore establish parser selection in this exercised frozen path; this is a code-and-observation inference, not debugger introspection of process memory."
+}
