@@ -10,6 +10,8 @@ Dùng file này làm cơ sở chia việc. Mỗi hạng mục có tiêu chí ngh
 
 ## 1. Định hướng đã chốt với chủ dự án
 
+**Đề xuất bổ sung đang đánh giá (2026-11-08):** [Đối chiếu tan-thuan-port và roadmap nhân sự](../docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md). Ưu tiên đề xuất là nhập danh mục nhân sự Excel có xem trước, tái sử dụng tổ/mẫu hiện có. Tài liệu ở trạng thái DRAFT; chưa thêm quyền BUILD, phiên bản cam kết hoặc mở rộng phạm vi nghiệp vụ của roadmap này.
+
 | Câu hỏi | Trả lời | Hệ quả cho roadmap |
 |---|---|---|
 | Có nhu cầu web thật không? | Có, vì thuận tiện | Bản web là đích đến; bản desktop là giai đoạn chuyển tiếp |

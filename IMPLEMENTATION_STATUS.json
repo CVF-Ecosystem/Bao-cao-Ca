@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
   "overallStatus": "CURRENT_CORE_WORKSPACE_ACCEPTED",
-  "currentPhase": "FREEZE",
+  "currentPhase": "DESIGN",
   "completedCapabilities": [
     "Pinned public Core68a7446 and canonical profile1.4 install with preserved workflow",
     "Current-Core project delegate with exact29 native checks and trusted explicit-packet bootstrap",
@@ -12,6 +12,7 @@
   ],
   "activeWorkOrders": [],
   "knownLimitations": [
+    "tan-thuan-port suitability/Excel-personnel adoption roadmap is DRAFT in docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md; proposed criteria are not admitted and no Excel import, dependency, schema change or product BUILD is accepted",
     "Application implementation and EXE/product acceptance are not reassessed by Core recovery",
     "Antigravity returned headless DOM/DB evidence is qualified in runtime receiving reviews; headed/native UI proof remains open",
     "Future action bytes and selected criteria require their own current assessment",
@@ -26,5 +27,5 @@
     "docs/reviews/core-reconciliation/clean-material-full-flow.json",
     "docs/reviews/core-reconciliation/clean-material-tests.txt"
   ],
-  "updatedAt": "2026-11-07"
+  "updatedAt": "2026-11-08"
 }

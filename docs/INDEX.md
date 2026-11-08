@@ -24,9 +24,10 @@ Machine-readable source: `docs/catalog/ARTIFACT_REGISTRY.json`
 - Current-Core recovery design, exact-action reviews, immutable observations and preserved prior authority.: `docs/reviews/core-reconciliation/`
 - Decisions.: `docs/decisions/`
 - Shared project learning, value-filtered parent intake and returned adoption.: `docs/reviews/learnings/`
+- Source and workbook-structure observations for the draft tan-thuan-port adoption assessment; no runtime or product acceptance.: `docs/reviews/tan-thuan-port-fit/`
 - Existing product roadmap, API, assessments and prior evidence; preserve as product authority.: `tai_lieu/`
 - Reviews and evidence.: `docs/reviews/`
-- Roadmaps.: `docs/roadmaps/`
+- Roadmaps, including the draft tan-thuan-port suitability and personnel-import proposal; no implementation grant.: `docs/roadmaps/`
 - Specifications.: `docs/specs/`
 - Work orders.: `docs/work_orders/`
 

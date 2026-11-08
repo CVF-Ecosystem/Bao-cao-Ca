@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-08",
   "claimBoundary": "Registers project development and existing product-document entrypoints; capability acceptance remains bounded to separately reviewed evidence.",
   "artifacts": [
     {
@@ -100,7 +100,7 @@
       "family": "governed_artifact_family",
       "path": "docs/roadmaps",
       "status": "ACTIVE",
-      "description": "Roadmaps."
+      "description": "Roadmaps, including the draft tan-thuan-port suitability and personnel-import proposal; no implementation grant."
     },
     {
       "id": "family-specs",
@@ -150,6 +150,13 @@
       "path": "tai_lieu",
       "status": "ACTIVE",
       "description": "Existing product roadmap, API, assessments and prior evidence; preserve as product authority."
+    },
+    {
+      "id": "family-personnel-adoption-assessment",
+      "family": "governed_artifact_family",
+      "path": "docs/reviews/tan-thuan-port-fit",
+      "status": "ACTIVE",
+      "description": "Source and workbook-structure observations for the draft tan-thuan-port adoption assessment; no runtime or product acceptance."
     },
     {
       "id": "family-core-reconciliation",

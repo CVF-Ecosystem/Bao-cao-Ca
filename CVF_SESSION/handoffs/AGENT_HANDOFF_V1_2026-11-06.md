@@ -5,10 +5,10 @@ Status: ACTIVE
 ## Current State
 
 - Project: SO_BAO_CAO_CA_V1_9
-- Current mode: FREEZE
-- Active phase: FREEZE
+- Current mode: DESIGN
+- Active phase: DESIGN
 - Active role: ORCHESTRATOR
-- Next allowed move: Resume product roadmap through a fresh assessed work order; existing CRC terminal receipt grants no product BUILD.
+- Next allowed move: Review the draft tan-thuan-port adoption roadmap, resolve source/business scope and author a bounded SPEC; no product BUILD is admitted.
 - Parked operator checkpoint: none
 
 ## Accepted current workspace
@@ -28,6 +28,16 @@ See docs/reviews/core-reconciliation/implementation-review.md, clean-material-pr
 The settled terminal REVIEW receipt grants no unknown future BUILD. Rehydrate current authority, declare roles and assess a new exact action before product implementation. Product authority is tai_lieu/ROADMAP_SAU_V1_9.md; application source/data were excluded from recovery changes. Antigravity's headless DOM/DB evidence and Addendum remain qualified receiving evidence, not headed/native Windows or full-product acceptance. Receiving records are in .cvf/runtime/project-resume-20261107/; both original bundles are preserved.
 
 No provider call, live AI governance, deployment, hosted CI, universal agent compliance or host auto-loading is proven. No decision currently waits on the operator.
+
+## Planning intake acknowledgment — 2026-11-08
+
+Tranche TTP-FIT-20261108 receives the operator request to compare tan-thuan-port and produce a suitability assessment/roadmap before implementation. Root rehydrated the canonical continuity surfaces and acknowledged this handoff. Scope is finite read-only source/workbook-structure inspection plus project planning and continuity documents (R1); no application BUILD, migration, provider/network use, dependency installation or operational-data import is admitted. Existing CRC acceptance remains settled and grants no action on the product. The proposed adoption scope will remain DRAFT until design/acceptance and an exact subsequent work order are admitted. BOOTSTRAP_MIGRATION_PENDING: the compact bootstrap read model is absent; canonical state was read directly.
+
+Intake led to a DESIGN draft at docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md with local observation custody in docs/reviews/tan-thuan-port-fit/source-observations.json. Existing employee search/team filtering/previewed staffing templates already cover several reference patterns. The actual gap is previewed flat personnel-list import. The provided employee template uses Chức danh, which the active reference parser does not map to department. The other three workbooks have report-specific layouts; one contains151formula nodes. These are structural/source observations, not runtime compatibility or correctness proof. Reference working files are dirty and bound by hashes. No personal row values are retained.
+
+Root holds ORCHESTRATOR for intake/design; R1 documentary review may use an explicit same-agent REVIEWER transition with limitations disclosed. Future application/file-import implementation is at least R2 and requires an independent implementation reviewer. No worker was dispatched for this planning request. Scope/acceptance gaps and proposed E1-E7 are owned in the draft; proposed product criteria are not admitted authority. No implementation action or product milestone is closed by this planning delivery.
+
+Role receipt: Root rehydrated DESIGN continuity and transitioned to REVIEWER for R1 documentary review, disclosed same-agent limits in docs/reviews/tan-thuan-port-fit/design-review.md, then returned to ORCHESTRATOR/SESSION_SYNC_STEWARD and COMMIT_STEWARD for only this documentation set. Evidence of document checks belongs in docs/reviews/tan-thuan-port-fit/document-checks.json. The proposal remains DRAFT and no new implementation action is admitted.
 
 ## Historical setup
 

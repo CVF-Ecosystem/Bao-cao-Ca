@@ -5,8 +5,8 @@ Memory class: POINTER_RECORD
 ## Current Truth
 
 - Contract: cvf.downstreamContinuityContract@1.0.0
-- Current mode: FREEZE
-- Active phase: FREEZE
+- Current mode: DESIGN
+- Active phase: DESIGN
 - Active handoff: CVF_SESSION/handoffs/AGENT_HANDOFF_V1_2026-11-06.md
 
 ## Startup and continuation
@@ -20,6 +20,8 @@ Core68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6, profile1.4, PINNED_CORE execution 
 CRC1-CRC4 implementation was independently accepted and actual clean committed source passed at 5fec5a122339486f5a85afa4276362e76691d61b. See docs/reviews/core-reconciliation/ and terminal work order. The current terminal REVIEW receipt grants no future BUILD; changed action bytes/criteria need fresh assessment. No operator checkpoint is parked.
 
 ## Product and preserved history
+
+The operator requested a suitability comparison and roadmap before implementation on 2026-11-08. Draft: docs/roadmaps/TAN_THUAN_PORT_ADOPTION.md; source/workbook-structure observations: docs/reviews/tan-thuan-port-fit/source-observations.json. Proposed first slice is previewed Excel personnel-catalog import, reusing current catalog/staffing owners. Group labels and DAY/NIGHT report periods are distinct. Three report workbooks are not flat personnel lists. Stable employee identity, assignment-sheet ingestion, multi-department expansion and cross-project synchronization remain separate proposals. No new product capability, dependency, migration or BUILD is admitted. Next: review draft, resolve business-source scope and author a bounded SPEC, then independently assess the exact implementation order. No operator checkpoint is parked. BOOTSTRAP_MIGRATION_PENDING: compact bootstrap absent; canonical state rehydrated directly.
 
 Product authority remains tai_lieu/ROADMAP_SAU_V1_9.md. Application/EXE acceptance and headed/native UI proof remain open. Antigravity headless DOM/DB evidence and Addendum were received with qualifications in .cvf/runtime/project-resume-20261107/antigravity-addendum-review.json; both original bundles remain unchanged. Prior supplemental setup, receipts, failures and learning are historical: docs/reviews/activation-history/, docs/reviews/core-reconciliation/history/ and docs/reviews/learnings/WSA_BOOTSTRAP_CONVERGENCE.md.
 
