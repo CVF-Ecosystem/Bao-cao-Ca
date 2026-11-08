@@ -1,0 +1,10 @@
+{
+  "mode": "PRECHECK",
+  "planSha256": "44f88abe93a21b933036837b8c045b99edbbf17e6972726ef7e9097765795a8d",
+  "files": 16,
+  "plannedBytes": 20028223488,
+  "freeBefore": 7333482496,
+  "deleted": [],
+  "skipped": [],
+  "preservation": "Only listed synthetic files. No recursion/process termination/operational DB access. Durable evidence and fixture generators remain; removed bulk payloads no longer retained for replay."
+}

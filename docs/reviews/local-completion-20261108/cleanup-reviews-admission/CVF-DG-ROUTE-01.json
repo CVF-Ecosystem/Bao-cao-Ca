@@ -1,0 +1,46 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+    "sha256": "845f3c527b51c85741f1fbfe442cfffe7e21361c4161f7a2b8e3a75e29e94589",
+    "criteria": [
+      "C1"
+    ]
+  },
+  "controlId": "CVF-DG-ROUTE-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Astra 6 Medium / independent REVIEWER",
+  "authority": "Explicit operator request to remove disk junk; exact CLN/C1 bounded cleanup only. Root worker and commit owner.",
+  "decision": "ACCEPTED",
+  "reason": "Explicit operator disk-cleanup request authorizes disposal of completed generated synthetic payloads. Exact unique16-file allowlist totals20028223488bytes under two owned runtime roots; no recursive deletion. Root must enforce resolved containment, all ancestor reparse checks, regular/untracked files, exact size/mtime and inactive fixture command lines before exact unlink; locked or changed files skipped. No operational DB access, process termination, workbook modification, source changes, new tests or network. Durable evidence/scripts/logs/EXE retained; disposed raw synthetic DB bytes are no longer available for replay. Fifteen-minute bounded housekeeping scope and Root execution/commit ownership accepted; independent reviewer does not execute deletion. Actual trusted pre-receipt control observation PASS; action binding pending fresh receipt. Inspected exact execution script: hardcoded plan digest, all16 resolved/ancestor/reparse/tracked/size/mtime checks, process command-line refusal, exact unlink only and per-file metadata recheck/skips. Actual PRECHECK recorded16 eligible targets and7333482496bytes free. Local quiescent generated-fixture context accepted; no concurrent fixture worker authorized.",
+  "evidence": [
+    {
+      "path": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+      "sha256": "845f3c527b51c85741f1fbfe442cfffe7e21361c4161f7a2b8e3a75e29e94589"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/runtime-cleanup-plan.json",
+      "sha256": "44f88abe93a21b933036837b8c045b99edbbf17e6972726ef7e9097765795a8d"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/cleanup-before-receipt.json",
+      "sha256": "d4ed31e434696633071b93c1a179b34f10a4f951a094f0a9598e5db1c88dd038"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+      "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json",
+      "sha256": "a7382b56ae8439b48b5b6867ce0b2a12eb99c5d7a40a80660644b7da71b9f27f"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/cleanup-executed.py",
+      "sha256": "fb26ee3a221c29b3736afe8f1ee9bd4bca486436302899bce3be74258de9a657"
+    },
+    {
+      "path": "docs/reviews/local-completion-20261108/runtime-cleanup-precheck.json",
+      "sha256": "e1bc182b20d2e33c5a6161bef407f61cc9f588bad09364a78c4bd11262c0740d"
+    }
+  ],
+  "limits": "Admission only, not deletion success. Fresh exact activation/pre-dispatch required before deletion; inspect actual deleted/skipped counts and bytes/free-space afterward. Mechanical controls are not provider governance proof."
+}

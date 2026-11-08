@@ -12,21 +12,14 @@
     "sourceRoute": "PINNED_CORE"
   },
   "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
-  "reviewer": "Astra independent terminal REVIEWER",
-  "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
+  "reviewer": "Astra independent cleanup terminal REVIEWER",
+  "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
   "actions": [
     {
-      "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-      "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
+      "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+      "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
       "criteria": [
-        "L1",
-        "L2",
-        "L3",
-        "L4",
-        "L5",
-        "L6",
-        "L7",
-        "L8"
+        "C1"
       ]
     }
   ],
@@ -37,13 +30,13 @@
       "sourceSha256": "b2acf0b3d3bf52e6feb58fb71ac61227b71d29cc98d61f6781f4fbd71aea4125",
       "owner": "Root orchestrator",
       "actions": [
-        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
       ],
       "disposition": "ASSESSED",
       "reviewEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json",
-          "sha256": "a7382b56ae8439b48b5b6867ce0b2a12eb99c5d7a40a80660644b7da71b9f27f"
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "d8acf3709161ef9bca51e987bdbae358d7bd88d268326db3b3821de9ac89c539"
         }
       ]
     }
@@ -52,300 +45,216 @@
     {
       "id": "CVF-DG-INST-01",
       "owner": "Root orchestrator",
-      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
-      "reason": "Actual terminal control PASS independently reviewed on exact644f action; local mechanical INVOKED evidence only, no provider governance.",
+      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
+      "reason": "Actual current terminal non-ACT control PASS independently reviewed on exact1a9d; local mechanical only.",
       "actions": [
-        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
       ],
       "criteria": [
-        "L1",
-        "L2",
-        "L3",
-        "L4",
-        "L5",
-        "L6",
-        "L7",
-        "L8"
+        "C1"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
-        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
+        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
+        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
           "criteria": [
-            "L1",
-            "L2",
-            "L3",
-            "L4",
-            "L5",
-            "L6",
-            "L7",
-            "L8"
+            "C1"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
-        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-INST-01.json",
-          "sha256": "7ebde70e4663725f0ab2724ddf869cf9a3b6c09a2f4c30e906911eb7635e4598"
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-INST-01.json",
+          "sha256": "73575cd000e62c167776b7c25d4e6180d49bcdadfd41c8de48cdf21a143df4d0"
         }
       ]
     },
     {
       "id": "CVF-DG-CONT-01",
       "owner": "Root orchestrator",
-      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
-      "reason": "Actual terminal control PASS independently reviewed on exact644f action; local mechanical INVOKED evidence only, no provider governance.",
+      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
+      "reason": "Actual current terminal non-ACT control PASS independently reviewed on exact1a9d; local mechanical only.",
       "actions": [
-        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
       ],
       "criteria": [
-        "L1",
-        "L2",
-        "L3",
-        "L4",
-        "L5",
-        "L6",
-        "L7",
-        "L8"
+        "C1"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
-        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
+        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
+        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
           "criteria": [
-            "L1",
-            "L2",
-            "L3",
-            "L4",
-            "L5",
-            "L6",
-            "L7",
-            "L8"
+            "C1"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
-        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-CONT-01.json",
-          "sha256": "b15c5c258802da92d0626271225f0988c524ebbc8899a9789c8f54a4c229df13"
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-CONT-01.json",
+          "sha256": "dc41477006557709d7fa35e4cf19c8ad76ee864d5b473d6713e6a1e80bb27836"
         }
       ]
     },
     {
       "id": "CVF-DG-RANGE-01",
       "owner": "Root orchestrator",
-      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
-      "reason": "Actual terminal control PASS independently reviewed on exact644f action; local mechanical INVOKED evidence only, no provider governance.",
+      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
+      "reason": "Actual current terminal non-ACT control PASS independently reviewed on exact1a9d; local mechanical only.",
       "actions": [
-        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
       ],
       "criteria": [
-        "L1",
-        "L2",
-        "L3",
-        "L4",
-        "L5",
-        "L6",
-        "L7",
-        "L8"
+        "C1"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
-        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
+        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
+        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
           "criteria": [
-            "L1",
-            "L2",
-            "L3",
-            "L4",
-            "L5",
-            "L6",
-            "L7",
-            "L8"
+            "C1"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
-        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-RANGE-01.json",
-          "sha256": "e31e00a9b28651c6d7549128281eff8772b2d53ad5488e6592427897f249a59a"
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-RANGE-01.json",
+          "sha256": "1e76a3b1ca99fa71090d26e47fdb3b7fd41ff34022edd6c7fd2d3fbc84f3a864"
         }
       ]
     },
     {
       "id": "CVF-DG-APPL-01",
       "owner": "Root orchestrator",
-      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
-      "reason": "Closed packet explicitly NOT_APPLICABLE_WITH_REASON; status grammar observed, closeability NOT checked. Accepted truthful invocation, no closeability PASS.",
+      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
+      "reason": "Closed cleanup packet explicitly N/A; status grammar checked, closeability not checked, no false PASS.",
       "actions": [
-        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
       ],
       "criteria": [
-        "L1",
-        "L2",
-        "L3",
-        "L4",
-        "L5",
-        "L6",
-        "L7",
-        "L8"
+        "C1"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
-        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
+        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
+        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
           "criteria": [
-            "L1",
-            "L2",
-            "L3",
-            "L4",
-            "L5",
-            "L6",
-            "L7",
-            "L8"
+            "C1"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
-        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-APPL-01.json",
-          "sha256": "1fa5193d9033bad6ff28119abbf5921db95fcee2d7e4996964ffbbf52a35b436"
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-APPL-01.json",
+          "sha256": "0a9426e05eaad7dab88fb813603ab62c31fc646e05ced8acc723a4e8a3da6c79"
         }
       ]
     },
     {
       "id": "CVF-DG-ROUTE-01",
       "owner": "Root orchestrator",
-      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
-      "reason": "Actual terminal control PASS independently reviewed on exact644f action; local mechanical INVOKED evidence only, no provider governance.",
+      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
+      "reason": "Actual current terminal non-ACT control PASS independently reviewed on exact1a9d; local mechanical only.",
       "actions": [
-        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
       ],
       "criteria": [
-        "L1",
-        "L2",
-        "L3",
-        "L4",
-        "L5",
-        "L6",
-        "L7",
-        "L8"
+        "C1"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
-        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
+        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
+        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
           "criteria": [
-            "L1",
-            "L2",
-            "L3",
-            "L4",
-            "L5",
-            "L6",
-            "L7",
-            "L8"
+            "C1"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
-        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-ROUTE-01.json",
-          "sha256": "ec7fa8b2ad1d417788aa66b0ed56c7dc96a0ed2868a6be77197929b3e8d94969"
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-ROUTE-01.json",
+          "sha256": "19bf03b45909e2f2876b5de4099bc7e379bc1267af09d31f91f67ec68110c218"
         }
       ]
     },
     {
       "id": "CVF-DG-COV-01",
       "owner": "Root orchestrator",
-      "authority": "Operator local-before-web delivery and reduced QA request; exact644f terminal independent review. Local revised engineering only, no future BUILD/site/business/provider grant.",
-      "reason": "Actual terminal control PASS independently reviewed on exact644f action; local mechanical INVOKED evidence only, no provider governance.",
+      "authority": "Explicit operator cleanup request; completed16-file synthetic runtime cleanup independently accepted, closed terminal action only; no further delete/BUILD grant.",
+      "reason": "Actual current terminal non-ACT control PASS independently reviewed on exact1a9d; local mechanical only.",
       "actions": [
-        "docs/work_orders/WO_LOCAL_COMPLETION.md"
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
       ],
       "criteria": [
-        "L1",
-        "L2",
-        "L3",
-        "L4",
-        "L5",
-        "L6",
-        "L7",
-        "L8"
+        "C1"
       ],
       "disposition": "APPLIED",
       "evidence": {
-        "path": "docs/reviews/local-completion-20261108/terminal-before-receipt-delivery.json",
-        "sha256": "b2d0453946a8f69ea647c4da5c64f97b5a4bb43ff0fa35c88d2de969dfb6ba4e"
+        "path": "docs/reviews/local-completion-20261108/cleanup-terminal-before-receipt.json",
+        "sha256": "cb90204f445091830ab697c99a761ffdef78f92f5e08e41cdce36cab1cd914a1"
       },
       "actionBindings": [
         {
-          "packet": "docs/work_orders/WO_LOCAL_COMPLETION.md",
-          "sha256": "644f6ce34d0824f8c213bd2cc429b57374dfc8f8455ff0638a6cf957925960dd",
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "1a9dc06da787a92ab157edcfcf9268584a35b47acec61f7a2ff4da6522f76244",
           "criteria": [
-            "L1",
-            "L2",
-            "L3",
-            "L4",
-            "L5",
-            "L6",
-            "L7",
-            "L8"
+            "C1"
           ]
         }
       ],
       "configuredInvocation": {
-        "path": "docs/reviews/local-completion-20261108/configured-admission.json",
-        "sha256": "adb42f072f3182f0f94eeb5a6df762b62de644f1965ecf63ea4f4ee9ed8630c3"
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
       },
       "invocationEvidence": [
         {
-          "path": "docs/reviews/local-completion-20261108/reviews-terminal/CVF-DG-COV-01.json",
-          "sha256": "60787d95f27754d31d2adc9cfb847efb0b81574c23ea0474567169c27e5ab279"
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-terminal/CVF-DG-COV-01.json",
+          "sha256": "65a372845999ab0a5a5cc07e0eb6965eb81e0038a523244ac3e9ef0728ed9c24"
         }
       ]
     }

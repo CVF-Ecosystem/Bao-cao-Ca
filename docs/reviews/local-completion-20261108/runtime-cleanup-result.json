@@ -1,0 +1,80 @@
+{
+  "mode": "EXECUTE",
+  "planSha256": "44f88abe93a21b933036837b8c045b99edbbf17e6972726ef7e9097765795a8d",
+  "files": 16,
+  "plannedBytes": 20028223488,
+  "freeBefore": 7333425152,
+  "deleted": [
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/baseline-data/DU_LIEU/BAO_CAO_CA.db",
+      "bytes": 1251184640
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/do_hieu_nang_k2rzn8ud/DU_LIEU/BAO_CAO_CA.db",
+      "bytes": 1251680256
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/do_hieu_nang_k2rzn8ud/DU_LIEU/SAO_LUU_AN_TOAN/1fffcce2400d0fc79f09cd85c076151f/BAO_CAO_CA_20261108_153337_714463_eef83b.db",
+      "bytes": 1251647488
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/do_hieu_nang_k2rzn8ud/DU_LIEU/SAO_LUU_AN_TOAN/1fffcce2400d0fc79f09cd85c076151f/BAO_CAO_CA_20261108_154036_232032_0450ea.db",
+      "bytes": 1251647488
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/do_hieu_nang_k2rzn8ud/DU_LIEU/SAO_LUU_AN_TOAN/1fffcce2400d0fc79f09cd85c076151f/BAO_CAO_CA_20261108_154135_164142_7e8183.db",
+      "bytes": 1251647488
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/do_hieu_nang_k2rzn8ud/DU_LIEU/SAO_LUU_AN_TOAN/1fffcce2400d0fc79f09cd85c076151f/BAO_CAO_CA_20261108_154310_466297_1e27b1.db",
+      "bytes": 1251647488
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/do_hieu_nang_k2rzn8ud/DU_LIEU/SAO_LUU_AN_TOAN/1fffcce2400d0fc79f09cd85c076151f/BAO_CAO_CA_20261108_154358_105332_2a7956.db",
+      "bytes": 1251680256
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/do_hieu_nang_k2rzn8ud/DU_LIEU/SAO_LUU_AN_TOAN/1fffcce2400d0fc79f09cd85c076151f/BAO_CAO_CA_20261108_155532_360215_5d0e98.db",
+      "bytes": 1251680256
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/fixtures-terra/benchmark/do_hieu_nang_k2rzn8ud/DU_LIEU/SAO_LUU_AN_TOAN/1fffcce2400d0fc79f09cd85c076151f/BAO_CAO_CA_20261108_155616_956145_cedbad.db",
+      "bytes": 1251680256
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/large-ui-d8de489/large-portable.db",
+      "bytes": 1252007936
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/large-ui-d8de489/DU_LIEU/BAO_CAO_CA.db",
+      "bytes": 1252007936
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/large-ui-d8de489/DU_LIEU/DB_KIEM_TRA/ban_sao_548c0d4c68b72380.db",
+      "bytes": 1252007936
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/large-ui-d8de489/DU_LIEU/SAO_LUU_AN_TOAN/1fffcce2400d0fc79f09cd85c076151f/BAO_CAO_CA_20261108_165025_621750_0b675a.db",
+      "bytes": 1251680256
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/large-ui-d8de489/DU_LIEU/SAO_LUU_AN_TOAN/1fffcce2400d0fc79f09cd85c076151f/BAO_CAO_CA_20261108_165400_826325_8d39f7.db",
+      "bytes": 1252007936
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/large-ui-d8de489/DU_LIEU/SAO_LUU_AN_TOAN/1fffcce2400d0fc79f09cd85c076151f/BAO_CAO_CA_20261108_171126_310890_04f6ae.db",
+      "bytes": 1252007936
+    },
+    {
+      "path": ".cvf/runtime/local-completion-20261108/large-ui-d8de489/DU_LIEU/SAO_LUU_MANG_DI/BAO_CAO_CA_20261108_165310_457d.db",
+      "bytes": 1252007936
+    }
+  ],
+  "skipped": [],
+  "preservation": "Only listed synthetic files. No recursion/process termination/operational DB access. Durable evidence and fixture generators remain; removed bulk payloads no longer retained for replay.",
+  "deletedBytes": 20028223488,
+  "freeAfter": 27361681408,
+  "freeDelta": 20028256256,
+  "remainingTargets": [],
+  "deliveredExeSha256": "10aaf013cabee0fc3b3139a0ae2605bd5f0393bbfecb9d42ff3ca6a32a648917"
+}

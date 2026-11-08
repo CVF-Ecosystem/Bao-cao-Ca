@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "cvf.workspaceActivation@1.0.0",
+  "identity": {
+    "projectRootSha256": "320d7a94c6415c596972609e3ed4fc87cc3754f690b2640bc75bb444401f3fc7",
+    "manifestSha256": "dd3e52630ef2ded2982569250516da5e96a8a32d7116e946ce2fb0d535ae7c12",
+    "policySha256": "4b0e460ace2337afcc7ad126f05f4e97571374303196e1851a758d34cdcc1dcc",
+    "lockSha256": "8d5b9561f8c97e4250fc9d06a7de851ade917a12f42d84efc2ea4325fa2ff936",
+    "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+    "profileId": "cvf.downstreamGateProfile@1.4.0",
+    "profileSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+    "deliveryFingerprint": "97c98cc51d571cdb928fa00a9a8380770bed27cc057e54067ffd6f4d6310bfd8",
+    "sourceRoute": "PINNED_CORE"
+  },
+  "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
+  "reviewer": "Astra independent cleanup REVIEWER",
+  "authority": "Operator explicit disk-cleanup request2026-11-08, independently assessed exact16 generated synthetic runtime DB files only; production/durable evidence excluded.",
+  "actions": [
+    {
+      "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+      "sha256": "845f3c527b51c85741f1fbfe442cfffe7e21361c4161f7a2b8e3a75e29e94589",
+      "criteria": [
+        "C1"
+      ]
+    }
+  ],
+  "supplemental": [
+    {
+      "id": "SUPPLEMENTAL_ASSESSMENT",
+      "mode": "INSPECTED",
+      "sourceSha256": "b2acf0b3d3bf52e6feb58fb71ac61227b71d29cc98d61f6781f4fbd71aea4125",
+      "owner": "Root orchestrator",
+      "actions": [
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+      ],
+      "disposition": "ASSESSED",
+      "reviewEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-admission/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "3f66ec610baca23949c170830f49f3eb95d9c24324d9c763de4bd7ad7c374f47"
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "id": "CVF-DG-INST-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator explicit disk-cleanup request2026-11-08, independently assessed exact16 generated synthetic runtime DB files only; production/durable evidence excluded.",
+      "reason": "Actual non-ACT cleanup pre-dispatch PASS independently reviewed on exact845f; mechanical invocation only, no live AI-governance claim.",
+      "actions": [
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+      ],
+      "criteria": [
+        "C1"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-before-receipt.json",
+        "sha256": "d4ed31e434696633071b93c1a179b34f10a4f951a094f0a9598e5db1c88dd038"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "845f3c527b51c85741f1fbfe442cfffe7e21361c4161f7a2b8e3a75e29e94589",
+          "criteria": [
+            "C1"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-admission/CVF-DG-INST-01.json",
+          "sha256": "03f9231152c3a487c4499f1df459de9819d584dffb0e643c41dafad21e7e4871"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-CONT-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator explicit disk-cleanup request2026-11-08, independently assessed exact16 generated synthetic runtime DB files only; production/durable evidence excluded.",
+      "reason": "Actual non-ACT cleanup pre-dispatch PASS independently reviewed on exact845f; mechanical invocation only, no live AI-governance claim.",
+      "actions": [
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+      ],
+      "criteria": [
+        "C1"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-before-receipt.json",
+        "sha256": "d4ed31e434696633071b93c1a179b34f10a4f951a094f0a9598e5db1c88dd038"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "845f3c527b51c85741f1fbfe442cfffe7e21361c4161f7a2b8e3a75e29e94589",
+          "criteria": [
+            "C1"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-admission/CVF-DG-CONT-01.json",
+          "sha256": "60dccebd6c699e443c843eadc54be11e112b0189acf069484614d84c5b9f9187"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-RANGE-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator explicit disk-cleanup request2026-11-08, independently assessed exact16 generated synthetic runtime DB files only; production/durable evidence excluded.",
+      "reason": "Actual non-ACT cleanup pre-dispatch PASS independently reviewed on exact845f; mechanical invocation only, no live AI-governance claim.",
+      "actions": [
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+      ],
+      "criteria": [
+        "C1"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-before-receipt.json",
+        "sha256": "d4ed31e434696633071b93c1a179b34f10a4f951a094f0a9598e5db1c88dd038"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "845f3c527b51c85741f1fbfe442cfffe7e21361c4161f7a2b8e3a75e29e94589",
+          "criteria": [
+            "C1"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-admission/CVF-DG-RANGE-01.json",
+          "sha256": "e9948ac5b22587e1509ea73750d88910b7be492f6eaa856484ea5a1670bbd433"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-APPL-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator explicit disk-cleanup request2026-11-08, independently assessed exact16 generated synthetic runtime DB files only; production/durable evidence excluded.",
+      "reason": "Actual non-ACT cleanup pre-dispatch PASS independently reviewed on exact845f; mechanical invocation only, no live AI-governance claim.",
+      "actions": [
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+      ],
+      "criteria": [
+        "C1"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-before-receipt.json",
+        "sha256": "d4ed31e434696633071b93c1a179b34f10a4f951a094f0a9598e5db1c88dd038"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "845f3c527b51c85741f1fbfe442cfffe7e21361c4161f7a2b8e3a75e29e94589",
+          "criteria": [
+            "C1"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-admission/CVF-DG-APPL-01.json",
+          "sha256": "357d4c7ac839c80b8fb60351411909f2074dbc7918938eb1d69c9a0192a97afc"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-ROUTE-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator explicit disk-cleanup request2026-11-08, independently assessed exact16 generated synthetic runtime DB files only; production/durable evidence excluded.",
+      "reason": "Actual non-ACT cleanup pre-dispatch PASS independently reviewed on exact845f; mechanical invocation only, no live AI-governance claim.",
+      "actions": [
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+      ],
+      "criteria": [
+        "C1"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-before-receipt.json",
+        "sha256": "d4ed31e434696633071b93c1a179b34f10a4f951a094f0a9598e5db1c88dd038"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "845f3c527b51c85741f1fbfe442cfffe7e21361c4161f7a2b8e3a75e29e94589",
+          "criteria": [
+            "C1"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-admission/CVF-DG-ROUTE-01.json",
+          "sha256": "9d33dc11e05c216f078eac9cce592ca306db596da195f35ca783796f9ea31de8"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-COV-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator explicit disk-cleanup request2026-11-08, independently assessed exact16 generated synthetic runtime DB files only; production/durable evidence excluded.",
+      "reason": "Actual non-ACT cleanup pre-dispatch PASS independently reviewed on exact845f; mechanical invocation only, no live AI-governance claim.",
+      "actions": [
+        "docs/work_orders/WO_RUNTIME_CLEANUP.md"
+      ],
+      "criteria": [
+        "C1"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-before-receipt.json",
+        "sha256": "d4ed31e434696633071b93c1a179b34f10a4f951a094f0a9598e5db1c88dd038"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+          "sha256": "845f3c527b51c85741f1fbfe442cfffe7e21361c4161f7a2b8e3a75e29e94589",
+          "criteria": [
+            "C1"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/local-completion-20261108/cleanup-configured.json",
+        "sha256": "e2d8d7053dd756bc38fe55acd5df9abdaa9b6a0b7f7b89e461ef821e96a94ad4"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/local-completion-20261108/cleanup-reviews-admission/CVF-DG-COV-01.json",
+          "sha256": "a722c6d1e5c27e315b4c745c4edbb109f23f2f09dec336c092dda9b486136917"
+        }
+      ]
+    }
+  ]
+}

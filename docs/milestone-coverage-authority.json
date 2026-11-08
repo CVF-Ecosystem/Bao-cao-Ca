@@ -16,6 +16,10 @@
     "LOCAL": {
       "path": "docs/roadmaps/LOCAL_COMPLETION.md",
       "heading": "## Acceptance criteria — LOCAL"
+    },
+    "CLN": {
+      "path": "docs/work_orders/WO_RUNTIME_CLEANUP.md",
+      "heading": "## Acceptance criteria — CLN"
     }
   },
   "repairControls": {
