@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "SO_BAO_CAO_CA_V1_9",
-  "overallStatus": "PNI_SOURCE_ACCEPTED_NATIVE_PENDING",
+  "overallStatus": "PNI_R3_SOURCE_ACCEPTED_NATIVE_PENDING",
   "currentPhase": "REVIEW",
   "completedCapabilities": [
     "Pinned public Core68a7446 and canonical profile1.4 install with preserved workflow",
@@ -14,7 +14,7 @@
     "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
   ],
   "knownLimitations": [
-    "PNI E1-E5 source independently accepted and full technical suite189Python/6JS/4workspace/sourceSmoke passed zero skips. Exact clean committed Windows EXE/native E6 remains required before product acceptance; E7 and later adoption outside scope.",
+    "Corrected build graph source independently accepted with191PythonPASS0skip and unchanged6JS/4workspace/sourceSmoke evidence; first actual build failure retained. New clean EXE/smoke/nativeE6 pending; E7/later adoption outside scope.",
     "Application implementation and EXE/product acceptance are not reassessed by Core recovery",
     "Antigravity returned headless DOM/DB evidence is qualified in runtime receiving reviews; headed/native UI proof remains open",
     "Future action bytes and selected criteria require their own current assessment",
@@ -30,7 +30,10 @@
     "docs/reviews/core-reconciliation/clean-material-tests.txt",
     "docs/reviews/personnel-import-20261108/source-candidate-review.json",
     "docs/reviews/personnel-import-20261108/release-final.json",
-    "docs/reviews/personnel-import-20261108/native/report-structure-refusals.json"
+    "docs/reviews/personnel-import-20261108/native/report-structure-refusals.json",
+    "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+    "docs/reviews/personnel-import-20261108/release-r3-final.json",
+    "docs/reviews/personnel-import-20261108/build-failure-round1.json"
   ],
   "updatedAt": "2026-11-08"
 }

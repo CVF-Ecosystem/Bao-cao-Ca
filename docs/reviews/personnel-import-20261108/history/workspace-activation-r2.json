@@ -1,0 +1,327 @@
+{
+  "schemaVersion": "cvf.workspaceActivation@1.0.0",
+  "identity": {
+    "projectRootSha256": "320d7a94c6415c596972609e3ed4fc87cc3754f690b2640bc75bb444401f3fc7",
+    "manifestSha256": "dd3e52630ef2ded2982569250516da5e96a8a32d7116e946ce2fb0d535ae7c12",
+    "policySha256": "4b0e460ace2337afcc7ad126f05f4e97571374303196e1851a758d34cdcc1dcc",
+    "lockSha256": "8d5b9561f8c97e4250fc9d06a7de851ade917a12f42d84efc2ea4325fa2ff936",
+    "coreCommit": "68a7446cc35b7f4bfd2e6ca4029d4ee389c8a5b6",
+    "profileId": "cvf.downstreamGateProfile@1.4.0",
+    "profileSha256": "cef123ab02f3c4610e14c8b610ef9f2c00d8312d28ff8b72bd3968cb70d09998",
+    "deliveryFingerprint": "97c98cc51d571cdb928fa00a9a8380770bed27cc057e54067ffd6f4d6310bfd8",
+    "sourceRoute": "PINNED_CORE"
+  },
+  "sourcePolicy": "CORE_AND_SUPPLEMENTAL",
+  "reviewer": "Astra independent PNI action reviewer",
+  "authority": "Operator2026-11-08 audit-and-proceed request; independently accepted exact PNI E1-E6 packet and actual control observations",
+  "actions": [
+    {
+      "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+      "criteria": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ]
+    }
+  ],
+  "supplemental": [
+    {
+      "id": "SUPPLEMENTAL_ASSESSMENT",
+      "mode": "INSPECTED",
+      "sourceSha256": "b2acf0b3d3bf52e6feb58fb71ac61227b71d29cc98d61f6781f4fbd71aea4125",
+      "owner": "Root orchestrator",
+      "actions": [
+        "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+      ],
+      "disposition": "ASSESSED",
+      "reviewEvidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/SUPPLEMENTAL_ASSESSMENT.json",
+          "sha256": "344df634e3a9637c77dae1dcaf5ea13ee55027d856236d4859649d92577884f4"
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "id": "CVF-DG-INST-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
+      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "actions": [
+        "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+      ],
+      "criteria": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+          "criteria": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5",
+            "E6"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/personnel-import-20261108/configured-admission.json",
+        "sha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-INST-01.json",
+          "sha256": "82ad2711e994e4687602ebf926b20dfa8315b607440f08f5f6e077661c3093d4"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-CONT-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
+      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "actions": [
+        "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+      ],
+      "criteria": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+          "criteria": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5",
+            "E6"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/personnel-import-20261108/configured-admission.json",
+        "sha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-CONT-01.json",
+          "sha256": "745c85d50c9cc7dcacf01a831d88a547739bfccb1899e0cfe00664e1f38638c5"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-RANGE-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
+      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "actions": [
+        "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+      ],
+      "criteria": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+          "criteria": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5",
+            "E6"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/personnel-import-20261108/configured-admission.json",
+        "sha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-RANGE-01.json",
+          "sha256": "1822c22521fa732433214b57c551b14a5d8336e41cce62fa3814503ac0517889"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-APPL-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
+      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "actions": [
+        "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+      ],
+      "criteria": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+          "criteria": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5",
+            "E6"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/personnel-import-20261108/configured-admission.json",
+        "sha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-APPL-01.json",
+          "sha256": "33a018ddf5d2d2940df7f2965d614313e0be17187f751dd5af3e1ca36419a5e6"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-ROUTE-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
+      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "actions": [
+        "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+      ],
+      "criteria": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+          "criteria": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5",
+            "E6"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/personnel-import-20261108/configured-admission.json",
+        "sha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-ROUTE-01.json",
+          "sha256": "f40a05fc651ac47a6c087f323ab192a8f6979e2f14094bbe6efff87c4c76db21"
+        }
+      ]
+    },
+    {
+      "id": "CVF-DG-COV-01",
+      "owner": "Root orchestrator",
+      "authority": "Operator2026-11-08 request and independent Astra exact-action review",
+      "reason": "Actual corrected trusted pre-admission observation PASS, independently reviewed for this packet; local mechanical evidence only, no provider/runtime governance claim.",
+      "actions": [
+        "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md"
+      ],
+      "criteria": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "disposition": "APPLIED",
+      "evidence": {
+        "path": "docs/reviews/personnel-import-20261108/predispatch-r2-before-receipt.json",
+        "sha256": "6d5a744b8f07122acd33d767352581ff75f83cd1dcc1544a82a361195b0a6687"
+      },
+      "actionBindings": [
+        {
+          "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+          "sha256": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+          "criteria": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5",
+            "E6"
+          ]
+        }
+      ],
+      "configuredInvocation": {
+        "path": "docs/reviews/personnel-import-20261108/configured-admission.json",
+        "sha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c"
+      },
+      "invocationEvidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-COV-01.json",
+          "sha256": "46a8a090c5716ac7507f965d0b9f98a241c8f87ce7f02cedda178eab2e3dc303"
+        }
+      ]
+    }
+  ]
+}

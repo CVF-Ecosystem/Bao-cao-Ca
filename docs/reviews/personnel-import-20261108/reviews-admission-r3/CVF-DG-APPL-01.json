@@ -1,0 +1,79 @@
+{
+  "action": {
+    "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+    "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+    "criteria": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ]
+  },
+  "controlId": "CVF-DG-APPL-01",
+  "purpose": "INVOCATION",
+  "reviewer": "Astra 6 Medium / independent REVIEWER",
+  "authority": "Operator audit-and-proceed authority; Root exact r3 bounded build compatibility amendment; original R2 effects, budget and commit owner retained.",
+  "decision": "ACCEPTED",
+  "reason": "Independent narrow r3 review confirms actual candidate build failure at altgraph pkg_resources import; official metadata/tagged-source evidence supports altgraph0.17.5 as minimal build-only replacement. Exact wheel hash, isolated wheel-only install, real dependency-graph preflight/regression, unchanged runtime pins, independent delta review/full tests/new clean candidate and E6 remain required. All18 accepted source hashes currently match; no premature repair/install. This exact control has actual PASS in retained trusted r3 pre-dispatch preview; this is mechanical invocation evidence, not provider-governance proof.",
+  "evidence": [
+    {
+      "path": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+      "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c"
+    },
+    {
+      "path": "docs/decisions/ADR_PERSONNEL_EXCEL_BUILD_COMPATIBILITY.md",
+      "sha256": "cc6879401a0cee3b7359708714eee6046cd5c560f5cabdfc4e94d02ecc55d8f4"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/dependency-altgraph-0.17.5-review.json",
+      "sha256": "ed78589a85d07ca245e2939dc1ee87f2e031bf82b1ef44bf8242ded452a683df"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/predispatch-r3-before-receipt.json",
+      "sha256": "ea8a01f4c171aeefa897f4a069400b4a49b29d583b518255d887c25be1c78886"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/build-failure-round1.json",
+      "sha256": "3c9984503a40d668336b1cdb39d7121598e02ddbaed53c8809dc20fb6d4d56be"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/release/exe-build-round1-failed.txt",
+      "sha256": "d2f579e70914dcd793ccdf37e98d799887b5a04fe58eebc0e831088e184fa282"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+      "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/release-final.json",
+      "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/configured-admission.json",
+      "sha256": "3656a6bc53572a0c4c22138a46677332daaaab28a76c1f6acecb82ce8e97bd8c"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/comparison-admission.json",
+      "sha256": "19c4d882360a626cec8068b0b768f5cda39b29805d524dbbd9f67879a7c6fe88"
+    },
+    {
+      "path": "docs/specs/PERSONNEL_EXCEL_IMPORT.md",
+      "sha256": "521f14e93ddf0b6d0db873f791138d544df3eb0ac832be6edad09081991b28a7"
+    },
+    {
+      "path": "docs/decisions/ADR_PERSONNEL_EXCEL_READER.md",
+      "sha256": "fb6811f2e41a54c714d4eead7ae2fafc4a7df8eafd84b3d572d58f9aecafb57c"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "865ed7a335b5e08d38de50836a7de5eb92b7e03f9deef8dcba24232912b99855"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/reviews-admission-r2/CVF-DG-APPL-01.json",
+      "sha256": "33a018ddf5d2d2940df7f2965d614313e0be17187f751dd5af3e1ca36419a5e6"
+    }
+  ],
+  "limits": "Preview overall FAIL from expected stale prior action receipt is preserved. Root must bind r3 receipt and obtain fresh full pre-dispatch and doctor before Sol writes/downloads/installs. Source review is retained; no EXE, native workflow, milestone closure, security certification or provider-governance acceptance. Original support/execution ceilings and repair convergence do not reset."
+}

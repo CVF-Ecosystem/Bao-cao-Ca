@@ -10,7 +10,7 @@
       "path": "ma_nguon/PERSONNEL_XLSX.py",
       "status": "PARTIAL",
       "description": "Bounded XLSX reader, server preview/confirm/cancel, additive catalog owner and UI implemented and independently source-reviewed. Exact packaged E6 consumer proof pending; no employee-ID or team mapping migration.",
-      "evidence": "docs/reviews/personnel-import-20261108/source-candidate-review.json; release-final.json:189 Python,6 JavaScript groups,4 workspace tests and source smoke passed with zero skips."
+      "evidence": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json; release-r3-final.json:191 Python plus unchanged6 JavaScript/4workspace and source smoke evidence accepted; exact packaged consumer proof pending."
     }
   ]
 }

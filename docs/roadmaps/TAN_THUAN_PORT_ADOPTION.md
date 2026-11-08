@@ -181,102 +181,102 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
     {
       "id": "E1",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source independently accepted and full technical suite passed; packaged/native E6 corroboration and product criterion disposition pending",
+      "gap": "Application source accepted and unchanged during build-only correction;191Python plus inherited6JS/4workspace source proof accepted; packaged/native corroboration pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
         }
       ]
     },
     {
       "id": "E2",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source independently accepted and full technical suite passed; packaged/native E6 corroboration and product criterion disposition pending",
+      "gap": "Application source accepted and unchanged during build-only correction;191Python plus inherited6JS/4workspace source proof accepted; packaged/native corroboration pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
         }
       ]
     },
     {
       "id": "E3",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source independently accepted and full technical suite passed; packaged/native E6 corroboration and product criterion disposition pending",
+      "gap": "Application source accepted and unchanged during build-only correction;191Python plus inherited6JS/4workspace source proof accepted; packaged/native corroboration pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
         }
       ]
     },
     {
       "id": "E4",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source independently accepted and full technical suite passed; packaged/native E6 corroboration and product criterion disposition pending",
+      "gap": "Application source accepted and unchanged during build-only correction;191Python plus inherited6JS/4workspace source proof accepted; packaged/native corroboration pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
         }
       ]
     },
     {
       "id": "E5",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Source independently accepted and full technical suite passed; packaged/native E6 corroboration and product criterion disposition pending",
+      "gap": "Application source accepted and unchanged during build-only correction;191Python plus inherited6JS/4workspace source proof accepted; packaged/native corroboration pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
         }
       ]
     },
     {
       "id": "E6",
       "state": "IMPLEMENTED_UNPROVED",
-      "gap": "Build tooling/source accepted; exact clean committed Windows EXE and headed consumer/persistence/export/time evidence not yet executed",
+      "gap": "First real build failure retained; corrected graph/source accepted with191PythonPASS; new exact committed EXE and native consumer proof pending",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
       "evidence": [
         {
-          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
-          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-r3-review.json",
+          "sha256": "f68bc54faa1c3433d78a1210fcd2c62b935652090f65e3b474bbbaf5e803fa8d"
         },
         {
-          "path": "docs/reviews/personnel-import-20261108/release-final.json",
-          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+          "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+          "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f"
         }
       ]
     }
@@ -284,7 +284,7 @@ Milestone này chỉ nhận đợt nhập danh mục E1–E6, không thay kết 
   "supportingWork": [],
   "conclusions": {
     "tranche": "PENDING",
-    "trancheSummary": "Source candidate independently accepted; clean commit, exact EXE and E6 native evidence remain required before terminal disposition",
+    "trancheSummary": "Corrected build-only source candidate independently accepted; new clean commit, exact EXE and E6 native evidence still required",
     "trancheEvidence": [],
     "product": "PENDING",
     "productSummary": "PNI first slice not yet product-accepted; E7 and original roadmap gaps separately owned",

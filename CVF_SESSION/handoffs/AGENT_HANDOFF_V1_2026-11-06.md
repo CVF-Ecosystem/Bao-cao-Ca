@@ -8,7 +8,7 @@ Status: ACTIVE
 - Current mode: REVIEW
 - Active phase: REVIEW
 - Active role: ORCHESTRATOR
-- Next allowed move: Root commits exact independently accepted clean source candidate; Sol builds that HEAD and completes E6 headed Windows import/picker/report/save/restart/export proof, then Astra reviews terminal evidence before closure.
+- Next allowed move: Root commits exact accepted r3 source; Sol rebuilds that clean HEAD and executes E6 Windows consumer proof; Astra terminal evidence review before criterion/product closure.
 - Parked operator checkpoint: none
 
 ## Accepted current workspace
@@ -80,3 +80,19 @@ Terra returned F6/F7 with23focusedPythonPASS0skip and deterministic deferred UI 
 ## PNI accepted source candidate / commit stewardship — 2026-11-08
 
 Astra independently accepted the exact18-file LF source manifest source-candidate-review.json; Root verified every raw SHA. Full technical release189Python,6JSgroups,4workspace and source launcher1.9.2 passed with0skips; durable release-final.json/logs bind results and prior failures remain retained. Doctor-source-candidate.json CORE_ASSESSED29/29 plus4explicitbootstrap passes. Root assumes COMMIT_STEWARD for the reviewed local candidate commit, retaining ORCHESTRATOR/session sync responsibility. Native build/consumer E6 has not executed; no milestone/product closure. Module registry is PARTIAL until exact packaged proof. Root records candidate SHA to Sol immediately after commit; no new tracked edits before Sol clean build.
+
+## PNI build compatibility intake/design/spec/work-order acknowledgment — 2026-11-08
+
+Actual source candidate378dab6149d5 build failed before EXE: altgraph0.17.4 imports removed pkg_resources under setuptools84.1.0. Raw/durable failure retained; no smoke/native launched and no product code changed. Root inherits accepted application design and bounds a build-only amendment: altgraph0.17.5 official upstream removes the dependency; runtime pins/SPEC/original ADR remain frozen. INTAKE observed failure -> DESIGN minimal build pin -> SPEC actual graph-import preflight -> WORK_ORDER exact amendment pending Astra admission. Original budget/stop conditions continue, no reset or operator checkpoint. Root acts ORCHESTRATOR/WORK_ORDER_AUTHOR/SESSION_SYNC_STEWARD; Sol waits for fresh exact admission, no installation yet.
+
+## PNI r3 compatibility BUILD acknowledgment — 2026-11-08
+
+Astra independently accepted exact r3 action7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c and build-only locked amendment. Fresh predispatch7/7 plus doctor29/29 with4explicitbootstrapPASS admitted the action. All18 earlier accepted source hashes remained unchanged before repair. Root acknowledges BUILD for Sol build-only correction/import-probe tests; no application/runtime pin changes, no budget reset and no EXE/native claim. Old action/receipt/failure evidence retained. Root holds ORCHESTRATOR/SESSION_SYNC_STEWARD; Sol declares REPAIR_WORKER before writes; Astra remains independent.
+
+## PNI r3 repair return / REVIEW acknowledgment — 2026-11-08
+
+Sol acknowledged r3 BUILD/REPAIR_WORKER in its appended return, changed only requirements-build/DONG_GOI/license notice/release tests, and returned16focusedPASS0skip including actual dependency graph imports. Exactlyone official altgraph0.17.5 wheel verified and installed offline in the existing isolated environment. Root receives LF source hashes and returns phase to REVIEW for Astra independent bounded delta review plus full current-toolchain suite. Application/runtime pins and reader/source semantics unchanged. No new EXE/smoke/native yet; original candidate failure retained and original budget continues.
+
+## PNI r3 accepted source / new candidate stewardship — 2026-11-08
+
+Astra accepted source-candidate-r3-review.json exact18LF files (4build/test/license changes,14unchanged) and release-r3-final.json191PythonPASS0skip with unchanged6JS/4workspace and actual source-smoke execution. Root verified all raw hashes. First candidate378dab6 build failure remains retained; no EXE/native claim. Root resumes COMMIT_STEWARD for the corrected clean local candidate then ORCHESTRATOR for Sol E6; original r3action7bf5cb remains exact and original budgets/stop conditions continue. No tracked evidence writes before clean build/smoke.

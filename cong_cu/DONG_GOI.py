@@ -9,9 +9,10 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import importlib
 from importlib.metadata import PackageNotFoundError, version
 
-BUILD_PINS = {'pyinstaller': '6.14.2', 'altgraph': '0.17.4', 'packaging': '24.2',
+BUILD_PINS = {'pyinstaller': '6.14.2', 'altgraph': '0.17.5', 'packaging': '24.2',
               'pefile': '2023.2.7', 'pyinstaller-hooks-contrib': '2025.5',
               'pywin32-ctypes': '0.2.3', 'setuptools': '84.1.0',
               'openpyxl': '3.1.5', 'defusedxml': '0.7.1', 'et_xmlfile': '2.0.0'}
@@ -27,6 +28,11 @@ def check_toolchain():
                 raise RuntimeError('Sai phien ban ' + name + '; dung requirements-build.txt trong moi truong rieng.')
     except PackageNotFoundError as error:
         raise RuntimeError('Thieu thu vien dong goi; dung requirements-build.txt trong moi truong rieng.') from error
+    try:
+        importlib.import_module('altgraph')
+        importlib.import_module('PyInstaller.building.build_main')
+    except ImportError as error:
+        raise RuntimeError('Do thi thu vien dong goi khong nap duoc; kiem tra moi truong rieng da khoa phien ban.') from error
 
 
 def clean_commit(root):

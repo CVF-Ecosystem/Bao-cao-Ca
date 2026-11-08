@@ -28,7 +28,7 @@ Required useful result: in a disposable Windows consumer flow the user selects a
 | Terra | `docs/reviews/personnel-import-20261108/worker-terra.md` | Slice return with requirement/proof results and actual changed set. |
 | Sol | `docs/reviews/personnel-import-20261108/worker-sol.md`, `docs/reviews/personnel-import-20261108/native/` | Reader/packaging return and sanitized E6 evidence/fixture oracle/export/hash manifest. Keep raw session tokens/private local details in ignored runtime only. |
 | Astra | `docs/reviews/personnel-import-20261108/` | Independent design/action/control/implementation reviews, narrowly permitted reviewer-local corrections disclosed under existing rules. Do not author broad implementation and review it as independent. |
-| Root | This work order, adopted roadmap, SPEC/ADR status/lock, `docs/milestone-coverage-authority.json`, `.cvf/workspace-activation.json`, `docs/reviews/personnel-import-20261108/`, `CVF_SESSION_MEMORY.md`, canonical state/active handoff, `IMPLEMENTATION_STATUS.json`, catalog registries/generated docs index, `.gitattributes` (only PNI raw-evidence custody), `tai_lieu/ROADMAP_SAU_V1_9.md` | Assessment records, phase/criterion/remaining-work synchronization, reviewed local commits and candidate/terminal action rebinding. Core/policy/profile/runner code unchanged. |
+| Root | This work order, adopted roadmap, SPEC/ADR status/lock and `docs/decisions/ADR_PERSONNEL_EXCEL_BUILD_COMPATIBILITY.md` compatibility amendment, `docs/milestone-coverage-authority.json`, `.cvf/workspace-activation.json`, `docs/reviews/personnel-import-20261108/`, `CVF_SESSION_MEMORY.md`, canonical state/active handoff, `IMPLEMENTATION_STATUS.json`, catalog registries/generated docs index, `.gitattributes` (only PNI raw-evidence custody), `tai_lieu/ROADMAP_SAU_V1_9.md` | Assessment records, phase/criterion/remaining-work synchronization, reviewed local commits and candidate/terminal action rebinding. Core/policy/profile/runner code unchanged. |
 
 No directory-wide product rewrite, schema/auth/report-format change, deletion of source/history/evidence, operational DB/catalog read/write, provider API/secret use, public release, deployment, remote Git push, shared Core/rule-pack mutation or gate bypass. Read reference template/workbook structures only when needed; no personal row values in committed evidence. Tests and GUI data/catalogs/protection files must all stay under unique disposable roots; `--data-dir` has a sibling DANH_MUC, so its parent must never be the actual project root.
 
@@ -56,6 +56,10 @@ The SPEC owns paths/JSON fields/types/statuses/row indices/limits/nonce/error se
 | E6 / P6 | Complete applicable release suite, exact clean committed Windows EXE/build metadata/hash, headed import/picker/report/save/restart/export + old-report invariants, time/step comparison with same synthetic list. | Sol consumer proof; Terra full release integration | Independent Astra evidence review; native versus headless/file-picker scope disclosed, skip is NOT_TESTED. |
 
 Workers return actual files and requirement/proof rows, commands/exit codes, test/skip identifiers, source hashes, findings and remaining work. Root reconciles the aggregate. The pinned public Core references an acceptance-ledger addendum not delivered in Core or the inspected pack; the explicit table and return manifest provide the readable contract without inventing an unavailable machine-fulfillment checker. Installed closeability, milestone and phase checks remain mandatory and unchanged.
+
+## Build compatibility amendment — actual E6 failure
+
+The actual clean candidate378dab6149d5 build failed because altgraph0.17.4 requires pkg_resources removed from setuptools84.1.0; runtime/build-failure-round1.json and exe-build.log retain the observed failure, with no EXE/native claim. Admit only the build-transitive altgraph0.17.5 replacement under `docs/decisions/ADR_PERSONNEL_EXCEL_BUILD_COMPATIBILITY.md` SHA256 `cc6879401a0cee3b7359708714eee6046cd5c560f5cabdfc4e94d02ecc55d8f4` and `docs/reviews/personnel-import-20261108/dependency-altgraph-0.17.5-review.json` SHA256 `ed78589a85d07ca245e2939dc1ee87f2e031bf82b1ef44bf8242ded452a683df`. This explicit amendment supersedes only the original ADR altgraph pin; original ADR/SPEC/dependency-source bytes remain frozen. The new official wheel SHA256 is `f3a22400bce1b0c701683820ac4f3b159cd301acab067c51c653e06961600597`; only this newly reviewed wheel may be fetched and installed in the existing isolated build-venv. All other pins and runtime/application semantics remain unchanged. Sol changes only existing assigned build requirements, BUILD_PINS, license notice and release tests, including real dependency-graph import preflight and failure regression. Terra application paths are frozen to the accepted candidate unless a separately accepted finding requires repair. Root preserves old action/receipt, rebinds exact r3 assessment, then requires fresh successful pre-dispatch/doctor before the Sol repair. After independent delta review/full tests, Root creates a new clean candidate before any rebuild. Original180minute execution/45minute support ceilings and repair convergence continue; no reset.
 
 ## Execution, budget and stop conditions
 
@@ -121,66 +125,120 @@ foreseeableFileSplitDisposition: COVERED_BY_BOUNDED_PATH_FAMILY
       "E5",
       "E6"
     ],
-    "owner": "Terra integration and Sol reader-packaging workers",
+    "owner": "Sol build compatibility repair/native proof; Terra returned source frozen; Astra independent review",
     "output": "PNI implementation, full technical proof and exact committed Windows EXE headed-consumer evidence",
     "budgetMinutes": 180,
     "stop": "Stop on budget boundary, scope/effect escape, unresolved substantial design drift, failed required gate or unavailable native proof; preserve partial evidence",
-    "next": "Return worker evidence for independent Astra review, Root reviewed candidate commit, Sol exact EXE proof and final criterion reconciliation"
+    "next": "Review the bounded compatibility delta, Root new clean candidate, Sol exact E6 build/native evidence and terminal review"
   },
   "rows": [
     {
       "id": "E1",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     },
     {
       "id": "E2",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     },
     {
       "id": "E3",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     },
     {
       "id": "E4",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     },
     {
       "id": "E5",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     },
     {
       "id": "E6",
-      "state": "NOT_STARTED",
-      "gap": "Implementation and exact-version acceptance evidence pending under admitted work order",
+      "state": "IMPLEMENTED_UNPROVED",
+      "gap": "Source accepted at378dab6; only bounded build graph repair and exact E6 native proof remain before product disposition",
       "owner": "Terra integration / Sol reader and native proof / Astra independent review",
       "destination": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
-      "evidence": []
+      "evidence": [
+        {
+          "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+          "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+        },
+        {
+          "path": "docs/reviews/personnel-import-20261108/release-final.json",
+          "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+        }
+      ]
     }
   ],
   "supportingWork": [],
   "conclusions": {
     "tranche": "PENDING",
-    "trancheSummary": "Audited design and first implementation packet being admitted; no product acceptance yet",
+    "trancheSummary": "Application source accepted; real first build exposed incompatible altgraph/setuptools graph; bounded compatibility repair awaiting exact action admission",
     "trancheEvidence": [],
     "product": "PENDING",
     "productSummary": "PNI E1-E6 pending; E7 and original product roadmap gaps separately owned",

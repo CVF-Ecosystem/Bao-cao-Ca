@@ -10,3 +10,4 @@ docs/reviews/core-reconciliation/** -text
 docs/reviews/personnel-import-20261108/** -text
 docs/specs/PERSONNEL_EXCEL_IMPORT.md -text
 docs/decisions/ADR_PERSONNEL_EXCEL_READER.md -text
+docs/decisions/ADR_PERSONNEL_EXCEL_BUILD_COMPATIBILITY.md -text

@@ -1,0 +1,170 @@
+{
+  "status": "SOURCE_CANDIDATE_ACCEPTED",
+  "risk": "R2",
+  "worker": "Sol REPAIR_WORKER",
+  "reviewer": "Astra independent REVIEWER",
+  "action": {
+    "packet": "docs/work_orders/WO_PERSONNEL_EXCEL_IMPORT.md",
+    "sha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+    "criteria": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6"
+    ]
+  },
+  "source": [
+    {
+      "path": "ma_nguon/MAY_CHU.py",
+      "sha256": "ca55728d8dc6e7204a5fdcdcbd5b29d16276b49fce334318f87324bf5e74d1c9",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "ma_nguon/QUAN_LY_DANH_MUC.py",
+      "sha256": "681a3c102d8155bfb6d676c615e6b9d09e37e6e7411089ce9b2e41c412e75924",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "ma_nguon/THIET_LAP.py",
+      "sha256": "bf5164a7a8bfe6736c4cd12f550579beb4d2716853ea12a9b6d3cc90976fdeaf",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "ma_nguon/PERSONNEL_XLSX.py",
+      "sha256": "58f083074587553f3d62e66ba01105143c9e5576dc0ff397245d53bd23d563d2",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "giao_dien/tai_nguyen/danh_muc.js",
+      "sha256": "8bb55f2045c4d8ce1b603075da076f6fb7c7774f2c807bb5a2693990d118a097",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_API.py",
+      "sha256": "87b25e55b88606f3dc34b1669f09532770a2f97e78bdf7b0101a33709054d798",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_UI.js",
+      "sha256": "5b69324837679c73ab47e882498e10cf4ee848354f548433d53989a7ca4efd0a",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PERSONNEL_XLSX.py",
+      "sha256": "c37e4499ed5b28863e2088fa1366c1f58a1f4ea23d1cdff02e4b61bce1e6ede9",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "kiem_thu/KIEM_THU_PHAT_HANH.py",
+      "sha256": "1f0b9b83176cd7b696b454721a588ebfadd041bd3e9083f7134a4cefba2eba04",
+      "changedSinceAcceptedCandidate": true,
+      "containsCRLF": false
+    },
+    {
+      "path": "cong_cu/DONG_GOI.py",
+      "sha256": "2ddad11b77d3a9c3bf6bbc24fe70ecb4687c26c097e105e7133452be4d801479",
+      "changedSinceAcceptedCandidate": true,
+      "containsCRLF": false
+    },
+    {
+      "path": "cong_cu/TAO_FILE_EXE.bat",
+      "sha256": "823e72787bf8a61fabd41798425e8f0f601865f720a37ebd6077242c42af82b4",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "6277d17aa658a18f49d19ef8e43b8a5be0477a072ae19bf52e0613fec23b74e9",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "requirements-build.txt",
+      "sha256": "5464a122989898d0649ac2c703311ca64b0a480b0754be5b20835e0cccfe6818",
+      "changedSinceAcceptedCandidate": true,
+      "containsCRLF": false
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "c64796b63340e6fbd0bf50a7ca7548bd2bbe698941cabd61d9ce958dcffb5c4f",
+      "changedSinceAcceptedCandidate": true,
+      "containsCRLF": false
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "0e1f9df3707ec1a335d1ceb30829c9ef63a49f4c5cab9972bb92456625fb481e",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "tai_lieu/API.md",
+      "sha256": "9b2550f3efc92b82fa6ba093dba61bac3a2919eb774457661c1868aaae535ecd",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "tai_lieu/THAY_DOI_V1_9_2.txt",
+      "sha256": "57bacd1f3022728e56e464a329727f4d373bdd414a15ddfa72652c8feccee3c4",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    },
+    {
+      "path": "HUONG_DAN.txt",
+      "sha256": "637b764ab56acacfb6c5c8b89c78425c5f2163f6d3ef18f0e27e370f86aa1bac",
+      "changedSinceAcceptedCandidate": false,
+      "containsCRLF": false
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/reviews/personnel-import-20261108/source-candidate-review.json",
+      "sha256": "ae28f86112f1a4a649efeeddba6d0cecb878d03030bf13632d118b3ae6652563"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/worker-sol.md",
+      "sha256": "52b55a18f226f3a0202620e8ecb7f45409bb734585bb45faea75a2b6e026216d"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/build-failure-round1.json",
+      "sha256": "3c9984503a40d668336b1cdb39d7121598e02ddbaed53c8809dc20fb6d4d56be"
+    },
+    {
+      "path": "docs/decisions/ADR_PERSONNEL_EXCEL_BUILD_COMPATIBILITY.md",
+      "sha256": "cc6879401a0cee3b7359708714eee6046cd5c560f5cabdfc4e94d02ecc55d8f4"
+    },
+    {
+      "path": "docs/reviews/personnel-import-20261108/dependency-altgraph-0.17.5-review.json",
+      "sha256": "ed78589a85d07ca245e2939dc1ee87f2e031bf82b1ef44bf8242ded452a683df"
+    },
+    {
+      "path": ".cvf/runtime/personnel-import-20261108/sol-r3-focused-tests.txt",
+      "sha256": "7a4cdee1511fb3c4008c82993b06bd935a2f9dee9484638a3381963773c11b05"
+    },
+    {
+      "path": ".cvf/runtime/personnel-import-20261108/altgraph-r3-wheel.json",
+      "sha256": "3ce3bbbe2a9f76a450e339d6418b5d4efc4552d22f549d4c8cc1c5e58714fef9"
+    }
+  ],
+  "findings": [],
+  "assessment": "Four-file delta implements only admitted altgraph0.17.5 pin/hash/license replacement and real graph-import preflight before metadata or build. Both Git clean gates, offline builder, frozen parser collection and runtime pins retained. Failure tests prove metadata/subprocess not reached on missing graph imports; actual installed graph test and 16 focused tests passed. Remaining14 source hashes equal accepted378dab6 bytes.",
+  "remaining": [
+    "Required commit gates and new clean candidate",
+    "E6 exact committed Windows EXE and headed consumer proof"
+  ],
+  "claimBoundary": "Independent source delta acceptance only. Prior source manifest/build failure retained. No E6/product/release/provider-governance acceptance.",
+  "aggregateEvidence": {
+    "path": "docs/reviews/personnel-import-20261108/release-r3-final.json",
+    "sha256": "c96935c73002e6de4298a51960bdf2d67fcae97b8b891ac9d6c69e745ee15d4f",
+    "result": "191 current-toolchain Python tests PASS zero skips; six JS groups and four workspace tests inherited on unchanged sources; source smoke repeated in full suite; referenced logs verified"
+  }
+}

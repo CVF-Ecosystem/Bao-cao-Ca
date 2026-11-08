@@ -1,0 +1,68 @@
+{
+  "observedAt": "2026-11-08T06:25:45.130Z",
+  "actionSha256": "7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c",
+  "platform": "Windows/Python3.11.9 isolated updated build-venv",
+  "python": {
+    "command": "-B -m unittest discover -s kiem_thu -t . -p KIEM_THU*.py -v",
+    "ran": 191,
+    "exitCode": 0,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 35.89,
+    "log": {
+      "path": "docs/reviews/personnel-import-20261108/release/python-r3-final.txt",
+      "sha256": "d99ebde30fa1adb7ec2fd729c62cfa281d0283d178b236763ba88ac93fc8b031"
+    }
+  },
+  "javascript": {
+    "command": "node each kiem_thu/KIEM_THU*.js",
+    "files": [
+      "KIEM_THU_BAO_VE.js",
+      "KIEM_THU_GIAO_DIEN.js",
+      "KIEM_THU_MAU_CA.js",
+      "KIEM_THU_PERSONNEL_UI.js",
+      "KIEM_THU_PHAN_CONG.js",
+      "KIEM_THU_V1_9.js"
+    ],
+    "groups": 6,
+    "exitCode": 0,
+    "skips": 0,
+    "log": {
+      "path": "docs/reviews/personnel-import-20261108/release/javascript-final.txt",
+      "sha256": "04a1cb2dbdb913b072a0f8e1637e77114d2bba73f41cf651240bc4c393224f56"
+    },
+    "inheritance": "Same exact accepted production/UI-test JS hashes, verified unchanged; six-group passed evidence reused, no redundant rerun"
+  },
+  "workspaceTests": {
+    "ran": 4,
+    "exitCode": 0,
+    "log": {
+      "path": "docs/reviews/personnel-import-20261108/release/workspace-tests.txt",
+      "sha256": "b5de7d51f995aae77c6bd1e69d9b16a983b319fd6ac344a198714251193a8112"
+    }
+  },
+  "sourceSmoke": {
+    "exitCode": 0,
+    "version": "1.9.2",
+    "scope": "Executed again inside the full191 ReleaseTests.test_source_launcher_smoke_and_logs; explicit previous source-smoke log retained",
+    "previousLog": {
+      "path": "docs/reviews/personnel-import-20261108/release/source-smoke.txt",
+      "sha256": "57807186c01c7f69b288cf683d2066610776c7fc372cb74e10798dea3477c0d3"
+    }
+  },
+  "dependencies": {
+    "path": "docs/reviews/personnel-import-20261108/verified-wheels-r3.json",
+    "sha256": "5b2eacd275d5c831cff35d89a67701d1cefc4637da98a79993358df49b02c625"
+  },
+  "inheritedRelease": {
+    "path": "docs/reviews/personnel-import-20261108/release-final.json",
+    "sha256": "88c6174142b1c3ad1bf52c02d06ee16456f906078bafa61a302938b08f25a2e2"
+  },
+  "actualFailedBuildRetained": {
+    "path": "docs/reviews/personnel-import-20261108/build-failure-round1.json",
+    "sha256": "3c9984503a40d668336b1cdb39d7121598e02ddbaed53c8809dc20fb6d4d56be"
+  },
+  "remaining": "Independent r3 merged-source acceptance, new clean candidate, actual EXE/smoke/native E6",
+  "claimBoundary": "Technical suite and unchanged source evidence only; no E6/product/live-provider governance acceptance"
+}

@@ -133,13 +133,36 @@ class ReleaseTests(unittest.TestCase):
             DONG_GOI.check_toolchain()
         with patch.object(DONG_GOI, 'version', return_value='wrong'), self.assertRaises(RuntimeError):
             DONG_GOI.check_toolchain()
-        with patch.object(DONG_GOI, 'version', side_effect=lambda name: DONG_GOI.BUILD_PINS[name]):
+        with patch.object(DONG_GOI, 'version', side_effect=lambda name: DONG_GOI.BUILD_PINS[name]), \
+                patch.object(DONG_GOI.importlib, 'import_module') as imports:
             DONG_GOI.check_toolchain()
+            self.assertEqual([call.args[0] for call in imports.call_args_list],
+                             ['altgraph', 'PyInstaller.building.build_main'])
         with patch.object(DONG_GOI, 'clean_commit', return_value='abcdef123456'), \
                 patch.object(DONG_GOI, 'check_toolchain', side_effect=RuntimeError('missing')), \
                 patch.object(DONG_GOI.subprocess, 'run') as run, self.assertRaises(RuntimeError):
             DONG_GOI.package(Path('.'))
         run.assert_not_called()
+
+    def test_missing_graph_import_fails_before_metadata_or_build(self):
+        for missing in ('altgraph', 'PyInstaller.building.build_main'):
+            def graph_import(name):
+                if name == missing:
+                    raise ModuleNotFoundError('missing transitive dependency')
+            with self.subTest(missing=missing), \
+                    patch.object(DONG_GOI, 'clean_commit', return_value='abcdef123456'), \
+                    patch.object(DONG_GOI, 'version', side_effect=lambda name: DONG_GOI.BUILD_PINS[name]), \
+                    patch.object(DONG_GOI.importlib, 'import_module', side_effect=graph_import), \
+                    patch.object(DONG_GOI, 'metadata') as metadata, \
+                    patch.object(DONG_GOI.subprocess, 'run') as run, self.assertRaisesRegex(RuntimeError, 'Do thi'):
+                DONG_GOI.package(Path('.'))
+            metadata.assert_not_called()
+            run.assert_not_called()
+
+    def test_actual_installed_toolchain_graph_imports(self):
+        # Deliberately real: exact isolated build environment is a release prerequisite.
+        # Version mocks alone missed the altgraph0.17.4/setuptools84 incompatibility.
+        DONG_GOI.check_toolchain()
 
     def test_source_launcher_smoke_and_logs(self):
         self.assertEqual(smoke()['build']['commit'], 'nguon')

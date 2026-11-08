@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<project>\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\PyInstaller\__main__.py", line 321, in <module>
+    run()
+  File "<project>\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\PyInstaller\__main__.py", line 172, in run
+    parser = generate_parser()
+             ^^^^^^^^^^^^^^^^^
+  File "<project>\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\PyInstaller\__main__.py", line 137, in generate_parser
+    import PyInstaller.building.build_main
+  File "<project>\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\PyInstaller\building\build_main.py", line 28, in <module>
+    from PyInstaller.building.api import COLLECT, EXE, MERGE, PYZ
+  File "<project>\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\PyInstaller\building\api.py", line 34, in <module>
+    from PyInstaller.building.splash import Splash  # argument type validation in EXE
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<project>\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\PyInstaller\building\splash.py", line 24, in <module>
+    from PyInstaller.utils.hooks.tcl_tk import tcltk_info
+  File "<project>\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\PyInstaller\utils\hooks\__init__.py", line 26, in <module>
+    from PyInstaller.depend.imphookapi import PostGraphAPI
+  File "<project>\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\PyInstaller\depend\imphookapi.py", line 21, in <module>
+    from PyInstaller.lib.modulegraph.modulegraph import (RuntimeModule, RuntimePackage)
+  File "<project>\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 43, in <module>
+    from altgraph.ObjectGraph import ObjectGraph
+  File "<project>\.cvf\runtime\personnel-import-20261108\build-venv\Lib\site-packages\altgraph\__init__.py", line 142, in <module>
+    import pkg_resources
+ModuleNotFoundError: No module named 'pkg_resources'
+Command '['D:\\UNG DUNG AI\\TOOL AI 2026\\CVF-Workspace\\SO_BAO_CAO_CA_V1_9\\.cvf\\runtime\\personnel-import-20261108\\build-venv\\Scripts\\python.exe', '-m', 'PyInstaller', '--noconfirm', '--clean', '--onefile', '--windowed', '--name', 'SO_BAO_CAO_CA', '--paths', 'ma_nguon', '--add-data', 'giao_dien:giao_dien', '--add-data', 'mau:mau', '--add-data', 'THIRD_PARTY_NOTICES.md:.', '--copy-metadata', 'openpyxl', '--copy-metadata', 'defusedxml', '--copy-metadata', 'et_xmlfile', '--hidden-import', 'defusedxml.ElementTree', '--exclude-module', 'lxml', '--add-data', 'C:\\Users\\DELL\\AppData\\Local\\Temp\\bao_cao_build_pbme15n0\\PHIEN_BAN.json:.', 'MO_BAO_CAO_CA.pyw']' returned non-zero exit status 1.

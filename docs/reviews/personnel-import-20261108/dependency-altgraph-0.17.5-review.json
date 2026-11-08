@@ -1,0 +1,24 @@
+{
+  "observedAt": "2026-11-08T06:17:20.642672+00:00",
+  "metadataUrl": "https://pypi.org/pypi/altgraph/0.17.5/json",
+  "name": "altgraph",
+  "version": "0.17.5",
+  "license": "MIT",
+  "requiresPython": null,
+  "requiresDist": null,
+  "vulnerabilitiesReported": [],
+  "wheels": [
+    {
+      "filename": "altgraph-0.17.5-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/a9/ba/000a1996d4308bc65120167c21241a3b205464a2e0b58deda26ae8ac21d1/altgraph-0.17.5-py2.py3-none-any.whl",
+      "sha256": "f3a22400bce1b0c701683820ac4f3b159cd301acab067c51c653e06961600597",
+      "size": 21228,
+      "yanked": false
+    }
+  ],
+  "sourceUrl": "https://raw.githubusercontent.com/ronaldoussoren/altgraph/v0.17.5/altgraph/__init__.py",
+  "sourceSha256": "1a5bb6a040bd534a192c310825eb9d8a0d7a8a7c13bd28832b0f00bf5eff68d1",
+  "sourceHasPkgResourcesReference": false,
+  "upstreamFix": "https://github.com/ronaldoussoren/altgraph/commit/3719ef2",
+  "limits": "Metadata/source review only; no wheel download or installation yet; empty advisory list is not a security certification"
+}

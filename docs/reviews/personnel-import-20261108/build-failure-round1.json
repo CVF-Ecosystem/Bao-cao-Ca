@@ -1,0 +1,22 @@
+{
+  "observation": {
+    "candidateCommit": "378dab6149d5c6734e07b912b15e3f501b845fbd",
+    "version": "1.9.2",
+    "action": "fbc56001358dc6ada77207a780b9d213d8c152b8ee808b95a5a9efdce7419f20",
+    "command": ".cvf/runtime/personnel-import-20261108/build-venv/Scripts/python.exe -B cong_cu/DONG_GOI.py",
+    "exitCode": 1,
+    "stage": "PyInstaller module import before archive analysis/EXE output",
+    "failure": "altgraph0.17.4 imports pkg_resources; setuptools84.1.0 does not provide it; ModuleNotFoundError",
+    "logSha256": "41a0a7d77616140762cd0ef5b54135de56ca992d6a0afc847034e97b7a3d24e2",
+    "workingTreeStatusAfter": "",
+    "nativeStarted": false,
+    "smokeStarted": false,
+    "sourceEdited": false,
+    "next": "Root independent dependency assessment and reviewed clean candidate before any rebuild"
+  },
+  "durableLog": {
+    "path": "docs/reviews/personnel-import-20261108/release/exe-build-round1-failed.txt",
+    "sha256": "d2f579e70914dcd793ccdf37e98d799887b5a04fe58eebc0e831088e184fa282"
+  },
+  "disposition": "New independently assessed build-only compatibility amendment; original failed candidate preserved, no EXE/native proof"
+}

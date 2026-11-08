@@ -86,3 +86,23 @@ Focused command: isolated build-venv Python3.11.9 `-B -m unittest kiem_thu.KIEM_
 | `ma_nguon/PERSONNEL_XLSX.py` | `58f083074587553f3d62e66ba01105143c9e5576dc0ff397245d53bd23d563d2` |
 | `docs/reviews/personnel-import-20261108/native/report-structure-refusals.json` | `218fea2a34d39766dfd283a284441402b2b2bacc966754ff2e2a9822dd0be7be` |
 | `docs/reviews/personnel-import-20261108/native/F8-reader-tests.txt` | `e3e4eb16442d336505fab4fb84a211e3fc0e72ceaaa30ad48cbe61fe3bf57b00` |
+
+## r3 build-graph compatibility repair return
+
+Status: DELTA_SOURCE_READY_NATIVE_PENDING
+Repair narrative Risk: R2
+Repair narrative Worker: Sol REPAIR_WORKER
+Repair narrative Reviewer: Astra independent review pending
+
+Rehydrated BUILD continuity and acknowledged exact r3 work order7bf5cb359e772a81d836278cecd81dede12aee8b1f494fb01961bcb6e5c25a9c before writes. Original failed candidate378dab6149d5 and its log/observation remain retained. Actual failure established altgraph0.17.4 imported pkg_resources absent from setuptools84.1.0; original test-version-only gap is preserved, not relabeled successful. Applied only the admitted locked build compatibility amendment: altgraph0.17.5 official wheel SHA-256 f3a22400bce1b0c701683820ac4f3b159cd301acab067c51c653e06961600597, length21228, verified before install. Downloaded exactly one official files.pythonhosted.org wheel from reviewed metadata; installed using existing isolated venv pip `--no-index --find-links <reviewed-wheelhouse> --only-binary=:all: --require-hashes --no-deps -r <single-pin-lock>`, exit0. No other pin or global environment changed.
+
+Changed only four admitted build/test files below: exact requirement/version/license notice replacement, actual import preflight of altgraph and PyInstaller.building.build_main after exact version checks and before metadata/build, meaningful missing-import regressions proving no metadata/subprocess build effects, and a real installed full graph import test. Both clean-tree gates, offline builder and frozen runtime collection remain intact. Full application/runtime/reader/SPEC/ADR bytes untouched by this worker.
+
+Focused command: isolated Python3.11.9 `-B -m unittest kiem_thu.KIEM_THU_PHAT_HANH kiem_thu.KIEM_THU_MA_NGUON -v`:16tests PASS,0skip,1.260seconds; includes actual installed-toolchain import and source launcher smoke. No EXE build, packaged smoke or native launch performed during repair; awaiting new independently reviewed clean candidate. Raw local evidence: sol-r3-focused-tests.txt, altgraph-r3-install.log and altgraph-r3-wheel.json under ignored runtime. Original180/45 ceilings and repair history continue; no reset. Root owns aggregate release/gates/commit and Astra independent delta review.
+
+| Current raw artifact | SHA-256 |
+|---|---|
+| `requirements-build.txt` | `5464a122989898d0649ac2c703311ca64b0a480b0754be5b20835e0cccfe6818` |
+| `cong_cu/DONG_GOI.py` | `2ddad11b77d3a9c3bf6bbc24fe70ecb4687c26c097e105e7133452be4d801479` |
+| `THIRD_PARTY_NOTICES.md` | `c64796b63340e6fbd0bf50a7ca7548bd2bbe698941cabd61d9ce958dcffb5c4f` |
+| `kiem_thu/KIEM_THU_PHAT_HANH.py` | `1f0b9b83176cd7b696b454721a588ebfadd041bd3e9083f7134a4cefba2eba04` |

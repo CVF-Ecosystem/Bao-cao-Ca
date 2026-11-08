@@ -1075,12 +1075,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-## altgraph 0.17.4
+## altgraph 0.17.5
 
-Official distribution: https://files.pythonhosted.org/packages/4d/3f/3bc3f1d83f6e4a7fcb834d3720544ca597590425be5ba9db032b2bf322a2/altgraph-0.17.4-py2.py3-none-any.whl
-Wheel SHA-256: 642743b4750de17e655e6711601b077bc6598dbfa3ba5fa2b2a35ce12b508dff
+Official distribution: https://files.pythonhosted.org/packages/a9/ba/000a1996d4308bc65120167c21241a3b205464a2e0b58deda26ae8ac21d1/altgraph-0.17.5-py2.py3-none-any.whl
+Wheel SHA-256: f3a22400bce1b0c701683820ac4f3b159cd301acab067c51c653e06961600597
 
-### altgraph-0.17.4.dist-info/LICENSE
+### altgraph-0.17.5.dist-info/LICENSE
 
 ```text
 Copyright (c) 2004 Istvan Albert unless otherwise noted.

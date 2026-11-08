@@ -1,0 +1,12 @@
+{
+  "owner": "Root SESSION_SYNC_STEWARD",
+  "beforeSha256": "8c6bb9fc3333a5fd4e5974011a3b5c96c689a50cb9c3d3d8535963049d96414d",
+  "beforeSnapshot": "docs/reviews/personnel-import-20261108/history/worker-sol-r3-before-metadata-label-repair.snapshot",
+  "after": {
+    "path": "docs/reviews/personnel-import-20261108/worker-sol.md",
+    "sha256": "52b55a18f226f3a0202620e8ecb7f45409bb734585bb45faea75a2b6e026216d"
+  },
+  "change": "Only duplicate Risk/Worker/Reviewer labels in appended repair narrative prefixed; original authoritative header and narrative meaning unchanged",
+  "sourceCodeUnchanged": true,
+  "failedGate": "worker-return-r3.json"
+}
